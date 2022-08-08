@@ -1,0 +1,231 @@
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .banner {
+        // height: 588.81px;
+        width: 90%;
+        margin-right: auto;
+        display: flex;
+        // flex-wrap: wrap;
+        border-bottom: 2px solid #009BC0;
+        justify-content: center;
+        align-items: stretch;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            display: block;
+            border: 0;
+        }
+
+        .info_holder_mobile {
+            display: none;
+            background: transparent;
+
+            .info {
+                width: 100%;
+                margin: 50px 0 30px auto;
+                text-align: center;
+                // background-color: #009BC0;
+
+                div {
+                    // width: max-content;
+                    // margin-left: auto;
+                    text-align: center;
+
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 1.5rem;
+                        line-height: 22px;
+                        text-align: center;
+                        color: #009BC0;
+
+                        @media screen and (max-width: 576px) {
+                            font-size: 1.2rem;
+                            line-height: 1.3rem;
+                        }
+                    }
+                }
+
+                h1 {
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 40px;
+                    line-height: 120%;
+                    text-transform: capitalize;
+                    color: #223D55;
+                    margin-bottom: 20px;
+                    @media screen and (max-width: 576px) {
+                        font-size: 2.1rem;
+                        line-height: 2.2rem;
+                    }
+                }
+
+            }
+
+            @media screen and (max-width: 768px) {
+                display: block;
+            }
+        }
+
+        .imageHolder {
+            // position: relative;
+            // overflow: hidden;
+            // height: 100px;
+            // align-self: stretch;
+            width: 55%;
+            // top: 0px;
+            // bottom: 0px;
+            // background: url('/assets/about/staff-image/oyelakin.png');
+            background-repeat: no-repeat;
+            background-position: bottom center;
+
+            @media screen and (max-width: 768px) {
+                background-size: contain;
+                width: 100%;
+                height: 500px;
+                border-bottom: 2px solid #009BC0;
+                position: static;
+            }
+            
+            @media screen and (max-width: 768px) {
+                height: 300px;
+            }
+        }
+
+        .right {
+            width: auto;
+            // position: relative;
+
+            @media screen and (max-width: 768px) {
+                padding: 50px 0;
+            }
+
+            .info_holder {
+                height: 200px;
+                margin-left: auto;
+                // width: 50vw;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+
+                .info {
+                    position: absolute;
+                    top: 100px;
+                    right: 4%;
+                    min-width: max-content;
+                    margin: 50px 0 50px auto;
+                    text-align: start;
+
+                    div {
+                        width: max-content;
+                        margin-left: auto;
+                        text-align: center;
+
+                        p {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 1.2rem;
+                            line-height: 22px;
+                            text-align: center;
+                            color: #009BC0;
+                        }
+                    }
+
+                    h1 {
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 40px;
+                        line-height: 120%;
+                        text-transform: capitalize;
+                        color: #223D55;
+                        margin-bottom: 20px;
+                    }
+
+                }
+            }
+
+            .descriptions {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                // padding: 20px 0px;
+                align-items: center;
+
+                @media screen and (max-width: 576px) {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                .descriptions_body {
+                    height: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .description_group {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h1 {
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 2.2rem;
+                            line-height: 120%;
+                            text-transform: capitalize;
+                            color: #009BC0;
+                            text-decoration: underline;
+                            margin-bottom: 16px;
+                            @media screen and (max-width: 576px) {
+                                font-size: 1.9rem;
+                                line-height: 2.2rem;
+                            }
+                        }
+
+
+                        .description {
+                            margin-bottom: 20px;
+
+                            h2 {
+                                color: #223D55;
+                                font-size: 1.4rem;
+                                font-weight: 700;
+                                line-height: 26px;
+                                letter-spacing: 0em;
+                            }
+
+                            p {
+                                color: #223D55;
+                                font-size: 1.4rem;
+                                font-weight: 500;
+                                line-height: 34px;
+                                letter-spacing: 0em;
+                            }
+
+                            @media screen and (max-width: 576px) {
+                                p{
+                                    font-size: 1.3rem;
+                                line-height: 1.4rem;
+                                }
+                                h2{
+                                    font-size: 1.2rem;
+                                line-height: 1.3rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .fruit{
+        display: flex;
+        align-items: center;
+    }
+}

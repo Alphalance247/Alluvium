@@ -37,8 +37,9 @@ export default function Home({ products, features, ourServices, milestones, trus
         </section>
         <section className={styles.hero}>
           <div className={styles.us}>
-            <h1>We are</h1>
-            <h1> problem solvers</h1>
+            <h1>We are atlassian</h1>
+            {/* <h1> atlassian</h1> */}
+            <h1> migration experts</h1>
           </div>
           {/* <div className={styles.img}>
             <Image
@@ -59,7 +60,7 @@ export default function Home({ products, features, ourServices, milestones, trus
           <h3 className={styles.featuresTitle}>Our Values</h3>
           <div className={styles.features}>
             <div className={styles.featureSectionImg} data-aos="zoom-in">
-              <Image src="/assets/home/values.svg" width={654.26} height={625.37} />
+              <Image src="/assets/home/values.svg" width={654.26} height={625.37} priority loading='eager' />
               {/* <Image src="/assets/featuresImg.png" width={672} height={486} /> */}
             </div>
           </div>
