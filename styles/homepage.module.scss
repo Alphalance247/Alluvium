@@ -184,12 +184,12 @@
         .featuresTitle {
             font-style: normal;
             font-weight: 600;
-            // font-size: 48px;
-            font-size: 4.8vw;
-            // line-height: 62px;
+            font-size: 40px;
+            // font-size: 4.8vw;
+            line-height: 52px;
             line-height: 6.2vw;
             text-align: center;
-            margin: 1rem 0 5rem 0;
+            margin: 1rem 0 2rem 0;
 
             @include media("<phone") {
                 text-align: center;
