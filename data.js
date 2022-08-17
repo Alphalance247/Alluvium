@@ -526,13 +526,22 @@ export const ourServicesData = [
     id: 1,
     title: "Atlassian Tools Migration",
     icon: "/assets/service1.svg",
-    subtitle: "We have deep experience across all migration use cases like Server to Cloud, Cloud to Data Center, Server to Data Center, Cloud to Cloud"
+    subtitle: "We have deep experience across all migration use cases like Server to Cloud, Cloud to Data Center, Server to Data Center, Cloud to Cloud",
+    link: "/reel/case-studies",
   },
   {
     id: 2,
     title: "Atlassian Engineering Team",
     icon: "/assets/service2.svg",
-    subtitle: "We provide distributed Atlassian Engineering teams and embedded Engineers to major Atlassian partners and Enterprise users"
+    subtitle: "We provide distributed Atlassian Engineering teams and embedded Engineers to major Atlassian partners and Enterprise users",
+    link: "/about",
+  },
+  {
+    id: 3,
+    title: "Atlassian Marketplace Plugins",
+    icon: "/assets/service3.svg",
+    subtitle: "We engineer and support migration and implementation plugins like Scrum Companion, Cloud Counter, Compare Jira Resources",
+    link: "https://marketplace.atlassian.com/vendors/1218751/alluvium",
   },
 ]
 
