@@ -334,6 +334,11 @@
             line-height: 52px;
             color: #FFFFFF;
 
+            @media screen and (max-width: 1600px) {
+                font-size: 34px;
+                line-height: 28px;
+            }
+
             @include media("<=phone"){
                 font-size: 28px;
                 line-height: 36px;
