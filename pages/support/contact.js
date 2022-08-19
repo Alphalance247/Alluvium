@@ -63,7 +63,7 @@ export default function Contact({ products }) {
                             <Image src='/assets/contact/call.svg' width={51.8} height={54.15} priority loading='eager' />
                             <div className='container-fluid'>
                                 <h3 className='text-capitalize'>Give us a ring at:</h3>
-                                <a href='tel:+11110000000'>+11110000000</a>
+                                <a href='tel:01375758030'>01375758030</a>
                             </div>
                         </div>
                         <div className='col-md-5 col-lg-4 text-center'>

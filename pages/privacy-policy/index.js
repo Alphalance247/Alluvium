@@ -13,7 +13,7 @@ const PrivacyPolicy = ({products}) => {
   return (
     <div>
       <Head>
-        <title>Privacy Policy | Alluvium University</title>
+        <title>Privacy Policy | Alluvium</title>
 
         <meta name="description" content="Alluvium University privacy policy" />
         <link rel="icon" href="/favicon.ico" />
@@ -23,8 +23,14 @@ const PrivacyPolicy = ({products}) => {
         <section className="">
         <Navigation products={products}/>
         </section>
+		{/* <section className={styles.welcome}>
+			<div>
+				<h1>Privacy Policy</h1>
+				<p>How we handle your data</p>
+			</div>
+		</section> */}
         <section>
-          <div className=""><BannerRotate title="Privacy Policy" text="How we handle your data" /></div>
+          <BannerRotate bg="url(assets/privacy-policy/banner.png)" title="Privacy Policy" text="" />
         </section>
 		<section className="container pb-5">
 		<div className={styles.privacy}>
@@ -99,5 +105,5 @@ export const getStaticProps = async () =>{
         products: productData
       }
     }
-  }
+}
   

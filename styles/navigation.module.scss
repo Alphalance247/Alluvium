@@ -12,8 +12,8 @@
     padding: 1.5rem 2.5rem;
     color: #000;
     background-color: #fff;
-    border-bottom: 1px solid #C4C4C4;
-    // box-shadow: 3px 0px 4px rgb(255, 255, 255);
+    // border-bottom: 1px solid #C4C4C4;
+    box-shadow: 3px 0px 4px #C4C4C4;
 
     @include media("<phone") {
         padding: 1.5rem 1.5rem;
