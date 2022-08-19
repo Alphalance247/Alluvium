@@ -1,17 +1,21 @@
 import Head from "next/head";
 import Image from "next/image";
-import { getStaffUrls, getStaffData } from "../../lib/staff.ts";
+import { getStaffUrls, getStaffData, fruits } from "../../lib/staff.ts";
 import Navigation from "components/navigation";
 import { productData } from "data";
 import Services from "components/services";
 import styles from '../../styles/staff.module.scss';
+import { useEffect } from "react";
 
-const StaffPage = ({ staffData, products }) => {
+const StaffPage = ({ staffData, products, imagePath, fruitPath }) => {
 
     const getImagePath = name => {
-        let smallName = name.split(' ')[0].toLowerCase()
+        let names = name.split(' ');
+        let smallName = names[0] + '_' + names[1];
+        smallName = smallName.toLowerCase();
         return `/assets/about/staff-image/${smallName}.png`
     }
+
 
     return (
         <div className="container-fluid p-0">
@@ -22,28 +26,31 @@ const StaffPage = ({ staffData, products }) => {
             <Navigation theme={"dark"} products={products} />
             <main className={styles.main}>
                 <div className={styles.banner}>
-                <div className={styles.info_holder_mobile}>
+                    <div className={styles.info_holder_mobile}>
                         <div className={styles.info}>
-                            <h1>Hello ! I am {staffData.name}</h1>
+                            <h1>Hello! <br className="d-sm-none" /> I am {staffData.name}</h1>
                             <div>
                                 <p>{staffData.role}</p>
-                                <p>Cosmetics Team</p>
+                                <p>{staffData.team} Team</p>
                             </div>
                         </div>
                     </div>
-                    <div className={styles.imageHolder} style={{ backgroundImage: 'url("/assets/about/staff-image/oyelakin.png")' }}>
+                    {/* <div className={styles.imageHolder} style={{ backgroundImage: 'url("/assets/about/staff-image/babade_adetise.png")' }}> */}
+                    <div className={styles.imageHolder}>
+                        <div style={{ backgroundImage: `url("${imagePath}")` }}></div>
+                        {/* <div className={styles.imageHolder} style={{ backgroundImage: 'url("/assets/about/staff-image/oyelakin.png")' }}> */}
                         {/* <Image src="/assets/about/staff-image/oyelakin.png" quality={100} height={510.66} width={575} layout="responsive" priority /> */}
                     </div>
                     <div className={styles.right}>
-                    <div className={styles.info_holder}>
-                        <div className={styles.info}>
-                            <h1>Hello ! I am {staffData.name}</h1>
-                            <div>
-                                <p>{staffData.role}</p>
-                                <p>Cosmetics Team</p>
+                        <div className={styles.info_holder}>
+                            <div className={styles.info}>
+                                <h1>Hello ! I am {staffData.name}</h1>
+                                <div>
+                                    <p>{staffData.role}</p>
+                                    <p>{staffData.team} Team</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
                         <div className={styles.descriptions}>
                             <div className={styles.descriptions_body}>
                                 <div className={styles.description_group}>
@@ -51,9 +58,10 @@ const StaffPage = ({ staffData, products }) => {
                                     <div className={styles.description}>
                                         <h2>If you were a fruit what would you be?</h2>
                                         <div className={styles.fruit}>
-                                        <p>{staffData.fruit}</p> 
-                                        <img width='40px' height='40px' className="img-fluid img-responsive" src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-guava-fruit-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"/>
-                                        {/* <Image src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-guava-fruit-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" quality={100} height={60} width={60} priority /> */}
+                                            <p>{staffData.fruit}</p>
+                                            <img width='40px' height='40px' className="img-fluid img-responsive" src={fruitPath} />
+                                            {/* <img width='40px' height='40px' className="img-fluid img-responsive" src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-guava-fruit-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" /> */}
+                                            {/* <Image src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-guava-fruit-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png" quality={100} height={60} width={60} priority /> */}
                                         </div>
                                         <p>{staffData.q1}</p>
                                     </div>
@@ -90,9 +98,17 @@ export const getStaticProps = ({
     params,
 }) => {
     const staffData = getStaffData(params.staff);
+    let names = staffData.name.split(' ');
+    let smallName = names[0] + '_' + names[1];
+    smallName = smallName.toLowerCase();
+    let imagePath = `/assets/about/staff-image/${smallName}.png`;
+    let fruitName = staffData.fruit?.toLowerCase();
+    let fruitPath = fruits.includes(fruitName) ? `/assets/about/fruits/${fruitName}.png` : '';
     return {
         props: {
             staffData,
+            imagePath,
+            fruitPath,
             products: productData
         },
     };
