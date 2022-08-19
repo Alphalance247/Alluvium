@@ -50,7 +50,7 @@ export default function Home({ products, features, ourServices, milestones, trus
           <h3 className={styles.featuresTitle}>Our Values</h3>
           <div className={styles.features}>
             <div className={styles.featureSectionImg} data-aos="zoom-in">
-              <Image src="/assets/home/values.png" width={654.26/1.5} height={625.37/1.5} />
+            <Image src="/assets/home/values.png" width={654.26/1.5} height={625.37/1.5} priority loading='eager' />
             </div>
           </div>
         </section>

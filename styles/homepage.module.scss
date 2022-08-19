@@ -231,11 +231,14 @@
             @include media("<phone") {
                 text-align: center;
                 // font-size: 30px;
+            margin: 1rem 0 1rem 0;
+
             }
 
             @include media(">=phone", "<=custom-view-2") {
                 text-align: center;
-                // font-size: 40px;
+            margin: 1rem 0 1rem 0;
+            // font-size: 40px;
             }
         }
 
@@ -243,18 +246,18 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            width: 35%;
             align-self: center;
+            margin: 2rem auto;
 
-            @include media(">=phone", "<=custom-view-2") {
+            @media screen and (max-width: 768px) {
                 flex-direction: column;
                 width: 60%;
-                margin: 1.4rem 0;
+                margin: 1.4rem auto;
             }
 
-            @include media("<phone") {
-                flex-direction: column;
-                margin: 1.4rem 0;
+            @media screen and (max-width: 576px) {
+            flex-direction: column;
+                margin: .4rem 0;
             }
 
         }
