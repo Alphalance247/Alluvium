@@ -46,8 +46,9 @@
 
 	@include media("<=tablet", "<desktop") {
 		height: 555px !important;
-	}
 
+	}
+	
 	div {
 		position: absolute;
 		top: 100px;
