@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/homepage.module.scss'
 import Navigation from '../components/navigation';
+import ProductPreview from '../components/productPreview';
+import News from "../components/news-and-trends/news";
 import { Carousel } from 'react-responsive-carousel'
 
 // Import css files
@@ -62,6 +64,7 @@ export default function Home({ products, features, ourServices, milestones, trus
     console.log(lightTheme)
   }, []);
 
+  
   return (
     <div>
       <Head>
@@ -173,6 +176,9 @@ export default function Home({ products, features, ourServices, milestones, trus
               }
             </div>
           </div>
+        </section>
+        <section className={styles.news} id="news">
+          <News />
         </section>
       </main>
       <script async id="slcLiveChat" src="https://widget.sonetel.com/SonetelWidget.min.js" data-account-id="207734638"></script>
