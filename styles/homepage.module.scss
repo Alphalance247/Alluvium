@@ -7,6 +7,76 @@
         background-color: #132230;
     }
 
+    .eventBg {
+        // background-image: url('/assets/home/graduation_bg.png');
+        // background-size: 100vw auto;
+        background-repeat: no-repeat;
+        // background-position: 0 -100px;
+        position: relative;
+        height: 700px;
+        padding: 0 200px;
+
+        @media screen and (max-width: 1100px) {
+            height: 600px;
+            padding: 0 100px;
+        }
+
+        @media screen and (max-width: 769px) {
+            padding: 0 80px;
+            height: 500px;
+        }
+
+        @media screen and (max-width: 576px) {
+            padding: 0 20px;
+        }
+        .blazer {
+            position: absolute;
+            top: 14rem;
+            color: #FFFFFF !important;
+            text-align: left;
+            @media screen and (max-width: 1100px) {
+                top: 10rem;
+            }
+            @media screen and (max-width: 769px) {
+                top: 12rem;
+            }
+    
+            h2 {
+                margin-top: 2rem;
+                margin-bottom: 5.3rem;
+                font-size: 40px;
+                font-weight: 800;
+                line-height: 56px;
+                letter-spacing: 0em;
+                text-align: left;
+                @media screen and (max-width: 1100px) {
+                    margin-bottom: 3.5rem;
+                }
+                @media screen and (max-width: 769px) {
+                    margin: 1rem 0;
+                }
+                @media screen and (max-width: 576px) {
+                    line-height: 32px;
+                    margin: 2rem 0;
+                }
+            }
+
+            .reg {
+                margin-top: 100rem !important;
+                padding: 0.8rem 1.6rem;
+                color: #FFFFFF;
+                border-radius: 5px;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 24px;
+                background-color: #009BC0;
+            }
+        }
+
+
+    }
+
+
     .hero {
         // padding: 50px 0px 0px 0px;
         // padding-top: 70rem;
@@ -19,19 +89,21 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        
+
         @media screen and (max-width: 1100px) {
             min-height: 68vw;
             background-size: contain;
             padding-top: 40rem;
             // margin-top: 20rem;
         }
+
         @media screen and (max-width: 769px) {
             max-height: 55vw;
             background-size: contain;
             padding-top: 40rem;
             // margin-top: 20rem;
         }
+
         @media screen and (max-width: 576px) {
             background-size: 800px !important;
             // background-color: red;
@@ -41,23 +113,28 @@
             padding-top: 0rem;
             // margin-top: 20rem;
         }
+
         // background-color: #212121;
         .us {
             position: absolute;
             top: 70px;
             right: 8vw;
+
             @media screen and (max-width: 1600px) {
                 // top: 50px;
                 right: 6vw;
             }
+
             @media screen and (max-width: 1200px) {
                 top: 50px;
                 right: 3vw;
             }
+
             @media screen and (max-width: 1100px) {
                 top: 4vw;
                 right: 3vw;
             }
+
             @media screen and (max-width: 576px) {
                 top: 50px;
                 // width: 100%;
@@ -67,7 +144,8 @@
             h1 {
                 font-style: normal;
                 font-weight: 900;
-                font-size: 3.5vw;
+                // font-size: 3.5vw;
+                font-size: 48px;
                 line-height: 120%;
                 text-transform: capitalize;
                 color: #FFFFFF;
@@ -75,14 +153,18 @@
                 text-shadow: 0px 0px 4px #009BC0;
                 -webkit-text-stroke-width: 2px;
                 -webkit-text-stroke-color: #009BC0;
+
                 @media screen and (max-width: 1600px) {
-                    display: inline;
-                    // font-size: 54px;
+                    //     display: inline;
+                    font-size: 42px;
                 }
+
                 @media screen and (max-width: 1100px) {
                     font-size: 4.6vw;
                     line-height: 120%;
+                    display: block;
                 }
+
                 @media screen and (max-width: 576px) {
                     text-shadow: 0px 3px 2px #009BC0;
                     -webkit-text-stroke-width: 1px;
@@ -107,59 +189,81 @@
         // width: 700px;
         width: 70vw;
         margin: 0 auto;
+
         @media screen and (max-width: 576px) {
             width: 90%;
         }
-        
-        &>p{
+
+        &>p {
             margin-bottom: 30px;
         }
-        
-        p{
+
+        p {
             font-style: normal;
             font-weight: 500;
-            font-size: 2vw;
-            line-height: 2.8vw;
+            font-size: 30px;
+            // line-height: 42px;
             text-align: center;
             color: rgba(0, 0, 0, 0.9);
+
+            @media screen and (max-width: 1600px) {
+                font-size: 24px;
+                line-height: 28px;
+            }
+
             @media screen and (max-width: 769px) {
                 font-size: 20px;
                 line-height: 28px;
             }
+
             @media screen and (max-width: 576px) {
                 font-size: 18px;
             }
         }
-        
+
         .migration {
             font-style: normal;
             font-weight: 900;
-            font-size: 3vw;
-            line-height: 2.8vw;
+            font-size: 40px;
+            line-height: 52px;
             text-align: center;
             color: #223D55;
+
+            @media screen and (max-width: 1600px) {
+                font-size: 34px;
+                line-height: 28px;
+            }
+
             @media screen and (max-width: 769px) {
                 line-height: 28px;
                 font-size: 30px;
             }
+
             @media screen and (max-width: 576px) {
                 font-size: 24px;
             }
         }
-        
+
         .half {
             font-style: normal;
             font-weight: 900;
             // font-size: 30px;
-            font-size: 3vw;
-            line-height: 2.8vw;
+            font-size: 40px;
+            line-height: 52px;
             // line-height: 28px;
             text-align: center;
             color: #009BC0;
+
+            @media screen and (max-width: 1600px) {
+                font-size: 34px;
+                line-height: 28px;
+            }
+
             @media screen and (max-width: 769px) {
                 line-height: 28px;
                 font-size: 30px;
             }
+
             @media screen and (max-width: 576px) {
                 font-size: 24px;
             }
@@ -184,21 +288,27 @@
         .featuresTitle {
             font-style: normal;
             font-weight: 600;
-            // font-size: 48px;
-            font-size: 4.8vw;
-            // line-height: 62px;
-            line-height: 6.2vw;
+            font-size: 40px;
+            line-height: 52px;
             text-align: center;
-            margin: 1rem 0 5rem 0;
+            margin: 1rem 0 2rem 0;
+
+            @media screen and (max-width: 1600px) {
+                font-size: 34px;
+                line-height: 28px;
+            }
 
             @include media("<phone") {
                 text-align: center;
-                font-size: 30px;
+                // font-size: 30px;
+                margin: 1rem 0 1rem 0;
+
             }
 
             @include media(">=phone", "<=custom-view-2") {
                 text-align: center;
-                font-size: 40px;
+                margin: 1rem 0 1rem 0;
+                // font-size: 40px;
             }
         }
 
@@ -206,18 +316,18 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
-            width: 40%;
             align-self: center;
+            margin: 2rem auto;
 
-            @include media(">=phone", "<=custom-view-2") {
+            @media screen and (max-width: 768px) {
                 flex-direction: column;
                 width: 60%;
-                margin: 1.4rem 0;
+                margin: 1.4rem auto;
             }
 
-            @include media("<phone") {
+            @media screen and (max-width: 576px) {
                 flex-direction: column;
-                margin: 1.4rem 0;
+                margin: .4rem 0;
             }
 
         }
@@ -288,9 +398,11 @@
         align-items: center;
         background: #F7F9FC;
         padding: 5rem 3vw;
+
         @media screen and (max-width: 1300px) {
             padding: 5rem 0;
         }
+
         @media screen and (max-width: 769px) {
             padding: 5rem 3vw;
         }
@@ -307,6 +419,11 @@
                 line-height: 52px;
                 color: #212121;
                 text-align: center;
+
+                @media screen and (max-width: 1600px) {
+                    font-size: 34px;
+                    line-height: 28px;
+                }
             }
 
             .ourServicesSubtitle {
@@ -333,15 +450,18 @@
             padding: 1rem 0rem;
             // width: 100%;
             margin: 0 auto;
+
             @media screen and (max-width: 1300px) {
                 justify-content: space-around;
                 column-gap: 2rem;
             }
+
             @media screen and (max-width: 769px) {
                 justify-content: space-around;
             }
+
             .service {
-                
+
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -351,15 +471,16 @@
                 max-width: 350px;
                 margin-top: 1.5rem;
                 border: 8px solid #ffffff00;
-                
+
                 &:hover {
                     box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
                     border-top: 8px solid #132230;
                 }
+
                 @media screen and (max-width: 1300px) {
                     max-width: 300px;
                 }
-                
+
                 .serviceIcon {
                     margin: 1rem 0;
                 }
@@ -370,14 +491,14 @@
                     align-items: center;
                     text-align: center;
                     margin: 0 0 1rem 0;
-                    
+
                     .serviceTitle {
                         font-weight: 500;
                         font-size: 20px;
                         line-height: 24px;
                         color: #212121;
                     }
-                    
+
                     .serviceSubtitle {
                         font-style: normal;
                         font-weight: normal;
@@ -386,6 +507,7 @@
                         color: rgba(93, 93, 93, 0.9);
                         margin: 1rem 0;
                         max-width: 90%;
+
                         @media screen and (max-width: 1300px) {
                             // max-width: 96%;
                         }
@@ -414,6 +536,11 @@
                 font-size: 40px;
                 line-height: 52px;
                 color: #212121;
+
+                @media screen and (max-width: 1600px) {
+                    font-size: 34px;
+                    line-height: 28px;
+                }
             }
 
             .ourMilestonesSubtitle {
@@ -476,6 +603,11 @@
             font-size: 40px;
             line-height: 52px;
             color: #212121;
+
+            @media screen and (max-width: 1600px) {
+                font-size: 34px;
+                line-height: 28px;
+            }
         }
 
         .trustedCompaniesList {

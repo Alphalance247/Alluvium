@@ -1,0 +1,118 @@
+
+    .ourServices {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #F7F9FC;
+        padding: 5rem 3vw;
+        @media screen and (max-width: 1300px) {
+            padding: 5rem 0;
+        }
+        @media screen and (max-width: 769px) {
+            padding: 5rem 3vw;
+        }
+
+        .ourServicesHeader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem 0;
+
+            .ourServicesTitle {
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 52px;
+                color: #212121;
+                text-align: center;
+            }
+
+            .ourServicesSubtitle {
+                display: none; //to remove placeholder text
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 200%;
+                text-align: center;
+                color: rgba(61, 61, 61, 0.9);
+                max-width: 70%;
+                margin: 1rem 0;
+            }
+        }
+
+        .ourServicesList {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            // justify-content: center;
+            justify-content: space-around;
+            column-gap: 3rem;
+            // background-color: #009BC0;
+            padding: 1rem 0rem;
+            // width: 100%;
+            margin: 0 auto;
+            @media screen and (max-width: 1300px) {
+                justify-content: space-around;
+                column-gap: 2rem;
+            }
+            @media screen and (max-width: 769px) {
+                justify-content: space-around;
+            }
+            .service {
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #FFFFFF;
+                border-radius: 5px;
+                padding: 0.2rem;
+                max-width: 350px;
+                margin-top: 1.5rem;
+                border: 8px solid #ffffff00;
+                
+                &:hover {
+                    box-shadow: 0px 16px 40px rgba(112, 144, 176, 0.2);
+                    border-top: 8px solid #132230;
+                }
+                @media screen and (max-width: 1300px) {
+                    max-width: 300px;
+                }
+                
+                .serviceIcon {
+                    margin: 1rem 0;
+                }
+
+                .serviceInfo {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    margin: 0 0 1rem 0;
+                    
+                    .serviceTitle {
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #212121;
+                    }
+                    
+                    .serviceSubtitle {
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 14px;
+                        line-height: 170%;
+                        color: rgba(93, 93, 93, 0.9);
+                        margin: 1rem 0;
+                        max-width: 90%;
+                        @media screen and (max-width: 1300px) {
+                            // max-width: 96%;
+                        }
+
+                        .serviceProductLink{
+                            color: #009BC0;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }

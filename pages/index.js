@@ -6,23 +6,65 @@ import Image from 'next/image'
 import styles from '../styles/homepage.module.scss'
 import Navigation from '../components/navigation';
 import ProductPreview from '../components/productPreview';
+import News from "../components/news-and-trends/news";
+import { Carousel } from 'react-responsive-carousel'
+
+// Import css files
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 // import useSWR from 'swr';
 // import { baseURL } from '../config'
-import { productData, featuresData, ourServicesData, milestonesData, trustedCompaniesData } from '../data'
+import { productData, featuresData, ourServicesData, milestonesData, trustedCompaniesData } from '../data';
+
+const HeroBanner = () => {
+  return (
+    <>
+      <div className={styles.hero}>
+        <div className={styles.us}>
+          <h1>We are atlassian</h1>
+          {/* <h1> atlassian</h1> */}
+          <h1> migration experts</h1>
+        </div>
+        <div className={styles.message}>
+          <p>We are Atlassian Products <span className={styles.migration}>Migration Lab.</span> </p>
+          <p>We produce Tools, Systems and Services that deliver complete data migration in <span className={styles.half}>half the time for half the cost.</span> </p>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const EventAd = () => {
+  return (
+    <>
+      <div className={styles.eventBg}>
+        {/* <Image src={'/assets/home/graduation_bg.png'} height={1440} width={512} layout="fill" priority loading='eager' /> */}
+        <Image src={'/assets/home/alluve-bg.jpg'} layout="fill" priority loading='eager' />
+        <div className={styles.blazer}>
+          <Image src={'/assets/home/trailblazer.png'} height={97} width={150} priority loading='eager' />
+          <h2>Graduation Ceremony</h2>
+          <Link href="http://university.alluvium.net/event">
+            <a className={styles.reg}>Register for this Event</a>
+          </Link>
+        </div>
+      </div>
+    </>
+  )
+}
+
+const slideArr = [<HeroBanner />, <EventAd />];
 
 
 export default function Home({ products, features, ourServices, milestones, trustedCompanies }) {
   const [lightTheme, setLightTheme] = useState('')
 
-
   useEffect(() => {
     const theme = localStorage.getItem("light-mode");
     setLightTheme(JSON.parse(theme))
     console.log(lightTheme)
-  }, [])
+  }, []);
 
-
-
+  
   return (
     <div>
       <Head>
@@ -35,58 +77,22 @@ export default function Home({ products, features, ourServices, milestones, trus
         <section className={styles.nav}>
           <Navigation products={products} />
         </section>
-        <section className={styles.hero}>
-          <div className={styles.us}>
-            <h1>We are</h1>
-            <h1> problem solvers</h1>
-          </div>
-          {/* <div className={styles.img}>
-            <Image
-              src='/assets/home/downCaret.svg'
-              width={65.63}
-              height={69.46}
-              loading='eager'
-              priority
-              alt='Welcome'
-            />
-          </div> */}
-        <div className={styles.message}>
-          <p>We are Atlassian Products <span className={styles.migration}>Migration Lab.</span> </p>
-          <p>We produce Tools, Systems and Services that deliver complete data migration in <span className={styles.half}>half the time for half the cost.</span> </p>
-        </div>
-        </section>
+        <Carousel autoPlay infiniteLoop interval={3000} showStatus={false} showThumbs={false} dynamicHeight={true}>
+          {slideArr.map((x, i) => {
+            return <div key={i}>
+              {x}
+            </div>
+          })}
+        </Carousel>
+        {/* <HeroBanner /> */}
         <section className={styles.featureSection}>
           <h3 className={styles.featuresTitle}>Our Values</h3>
           <div className={styles.features}>
             <div className={styles.featureSectionImg} data-aos="zoom-in">
-              <Image src="/assets/home/values.svg" width={654.26} height={625.37} />
-              {/* <Image src="/assets/featuresImg.png" width={672} height={486} /> */}
+              <Image src="/assets/home/values.png" width={654.26 / 1.5} height={625.37 / 1.5} priority loading='eager' />
             </div>
           </div>
         </section>
-        {/* <section className={styles.projects}>
-            <div className={styles.projectList}>
-                {
-                  products.slice(0,2).map((project,index)=>{
-                    return(
-                      <ProductPreview 
-                        title={ project.title } 
-                        subtitle={ project.subtitle } 
-                        imgLink={ project.imgLink }
-                        previewImgLink={ project.previewImgLink }
-                        productName={ project.projectName }
-                        key={ index }
-                        location={"home"}
-                        index={ index }
-                      />
-                    )
-                  })
-                }
-            </div>
-            <div className={styles.allProjectsBtn}>
-              <Link href="/products">+ See more works</Link>
-            </div>
-        </section> */}
         <section className={styles.ourServices} id="services">
           <div className={styles.ourServicesHeader}>
             <h1 className={styles.ourServicesTitle}>Our Services</h1>
@@ -95,40 +101,28 @@ export default function Home({ products, features, ourServices, milestones, trus
           <div className={styles.ourServicesList}>
             {
               ourServices.map((service) => {
-                const { id, title, icon, subtitle } = service;
+                const { id, title, icon, subtitle, link } = service;
 
                 return (
-                  <div className={styles.service} key={id}>
-                    <div className={styles.serviceIcon}>
-                      <img src={icon} alt={title} />
-                    </div>
-                    <div className={styles.serviceInfo}>
-                      <h3 className={styles.serviceTitle}>{title}</h3>
-                      <p className={styles.serviceSubtitle}>{subtitle}</p>
-                    </div>
-                    <div className={styles.serviceLink}>
+                  <Link href={link} key={id}>
+                    <a className=''>
+                      <div className={styles.service}>
+                        <div className={styles.serviceIcon}>
+                          <img src={icon} alt={title} />
+                        </div>
+                        <div className={styles.serviceInfo}>
+                          <h3 className={styles.serviceTitle}>{title}</h3>
+                          <p className={styles.serviceSubtitle}>{subtitle}</p>
+                        </div>
+                        <div className={styles.serviceLink}>
 
-                    </div>
-                  </div>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
                 )
               })
             }
-            <div className={styles.service} >
-              <div className={styles.serviceIcon}>
-                <img src={"/assets/service3.svg"} alt="Plugins" />
-              </div>
-              <div className={styles.serviceInfo}>
-                <h3 className={styles.serviceTitle}>Atlassian Marketplace Plugins</h3>
-                <p className={styles.serviceSubtitle}>We engineer and support migration and implementation plugins like
-                  <span className={styles.serviceProductLink}><Link href="/products/sc"> Scrum Companion</Link></span>,
-                  <span className={styles.serviceProductLink}><Link href="/products/cloud-counter"> Cloud Counter</Link></span>,
-                  <span className={styles.serviceProductLink}><Link href="/products/cjr"> Compare Jira Resources</Link></span>,
-                </p>
-              </div>
-              <div className={styles.serviceLink}>
-
-              </div>
-            </div>
           </div>
         </section>
         <section className={styles.ourMilestones}>
@@ -182,6 +176,9 @@ export default function Home({ products, features, ourServices, milestones, trus
               }
             </div>
           </div>
+        </section>
+        <section className={styles.news} id="news">
+          <News />
         </section>
       </main>
       <script async id="slcLiveChat" src="https://widget.sonetel.com/SonetelWidget.min.js" data-account-id="207734638"></script>
