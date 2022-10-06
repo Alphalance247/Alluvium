@@ -9,8 +9,8 @@ export const fruits = ['guava', 'pineapple','banana','lychee','coconut','waterme
 
 export const teams: TeamMember[][] = [
     [
-        { name: 'Taiwo Ojo', role: 'Co Founder | Technical Lead', team: 'Cosmetics | Engineering', fruit: 'Orange', q1: 'handsome to look at and sweet to taste', q2: 'Coding, Football, and Food' },
-        { name: 'Wale Olojo', role: 'Co Founder | Technical Lead', team: 'Cosmetics | Engineering', fruit: 'Orange', q1: 'handsome to look at and sweet to taste', q2: 'Coding, Football, and Food'}
+        // { name: 'Taiwo Ojo', role: 'Co Founder | Technical Lead', team: 'Cosmetics | Engineering', fruit: 'Orange', q1: 'handsome to look at and sweet to taste', q2: 'Coding, Football, and Food' },
+        // { name: 'Wale Olojo', role: 'Co Founder | Technical Lead', team: 'Cosmetics | Engineering', fruit: 'Orange', q1: 'handsome to look at and sweet to taste', q2: 'Coding, Football, and Food'}
     ],
     [
         { name: 'Adeola Lawal', role: 'Tools and System Migration', team: 'Engineering', fruit: 'Pineapple', q2: 'Music, Games, Book, food', q3: 'Using Atlassian tools/product', q4: 'Jira, Confluence' },
