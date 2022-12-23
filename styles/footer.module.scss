@@ -6,6 +6,7 @@
     font-family: 'IBM Plex Sans', sans-serif;
     // margin: 0.8rem;
     overflow-x: hidden;
+    
 
     @include media("<=phone"){
         margin: 0;
@@ -366,6 +367,9 @@
 
     .altFooterMainSection{
         background: #223D55;
+        background-image: url("/assets/christmas-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 3rem 5rem 1rem 5rem;
         
         @include media("<=phone"){

@@ -1,0 +1,32 @@
+.newsheader {
+  height: 10%;
+  width: 100%;
+  // display: flex;
+
+  h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 52px;
+    /* identical to box height, or 132% */
+    color: #132230;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+
+.headerlink {
+  float: right;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  // line-height: 22px;
+  /* identical to box height, or 138% */
+
+  color: #009bc0;
+  padding-right: 2%;
+  padding-top: 2%;
+}
