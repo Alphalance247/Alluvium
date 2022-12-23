@@ -36,3 +36,11 @@ ul{
   background-color: #223D55 ;
   color: white;
 }
+
+.christmas-cap {
+  width: 31px !important;
+  height: 22px !important;
+  position: absolute;
+  left: 41px;
+  top: 21px;
+}

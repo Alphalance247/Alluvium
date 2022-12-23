@@ -11,9 +11,6 @@ import { Carousel } from 'react-responsive-carousel'
 
 // Import css files
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
-// import useSWR from 'swr';
-// import { baseURL } from '../config'
 import { productData, featuresData, ourServicesData, milestonesData, trustedCompaniesData } from '../data';
 
 const HeroBanner = () => {
