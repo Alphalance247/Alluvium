@@ -37,7 +37,6 @@ export default function Navigation({ theme, products }) {
                     } */}
                     {/* <Image src="/assets/alluvium-logo.svg" width={150} height={29.06} alt="logo"/> */}
                 </Link>
-                <img src="/assets/cap.png" className="christmas-cap" alt="logo" />
             </div>
             <nav className={styles.navigation}>
                 <ul className={theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu}>
