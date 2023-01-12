@@ -132,7 +132,8 @@ export function AltFooter() {
                         </div>
                         <ul className={styles.altFooterContactList}>
                             <li className={styles.contactListItem}>
-                                <b>Address:</b> Kemp House 160, City Road London, EC1V 2NX.
+                                <p><b>Headquarter:</b> Kemp House 160, City Road London, EC1V 2NX.</p>
+                                <p><b>Ekiti Branch:</b> No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti, Ekiti State.</p>
                             </li>
                             <li className={styles.contactListItem}>
                                 <b>Email:</b>
