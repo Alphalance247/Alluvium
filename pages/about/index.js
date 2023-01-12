@@ -65,21 +65,22 @@ export default function Products({ products, teams }) {
                                     (
                                         teams.map((team, index) => {
                                             if (index === 0) {
-                                                return <div className={styles.foundersSection} key={index}>
-                                                    {
-                                                        team.map((individual, index2) =>
-                                                            <Link href={`/about/${individual.url}`} key={index2}>
-                                                                <a className='text-white'>
-                                                                    <div className={styles.founderSection} key={index2}>
-                                                                        <Image src={getImagePath(individual.name)} width={207.38} height={207.38} alt={individual.name} loading="eager" priority />
-                                                                        <p>{individual.name}</p>
-                                                                        <p><b>{individual.role}</b></p>
-                                                                    </div>
-                                                                </a>
-                                                            </Link>
-                                                        )
-                                                    }
-                                                </div>
+                                                // return <div className={styles.foundersSection} key={index}>
+                                                //     {
+                                                //         team.map((individual, index2) =>
+                                                //             <Link href={`/about/${individual.url}`} key={index2}>
+                                                //                 <a className='text-white'>
+                                                //                     <div className={styles.founderSection} key={index2}>
+                                                //                         <Image src={getImagePath(individual.name)} width={207.38} height={207.38} alt={individual.name} loading="eager" priority />
+                                                //                         <p>{individual.name}</p>
+                                                //                         <p><b>{individual.role}</b></p>
+                                                //                     </div>
+                                                //                 </a>
+                                                //             </Link>
+                                                //         )
+                                                //     }
+                                                // </div>
+                                                return <span key={index}></span>
                                             }
                                             if (index === 1) {
                                                 return <div className={styles.firstStaffsSection} key={index}>
