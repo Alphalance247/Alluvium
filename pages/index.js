@@ -96,7 +96,7 @@ export default function Home({ products, features, ourServices, milestones, trus
         <section className={styles.ourServices} id="services">
           <div className={styles.ourServicesHeader}>
             <h1 className={styles.ourServicesTitle}>Our Services</h1>
-            {/* <p className={styles.ourServicesSubtitle}>Unlock the full potential of your business with our comprehensive suite of services</p> */}
+            <p className={styles.ourServicesSubtitle}>Unlock the full potential of your business with our comprehensive suite of services</p>
           </div>
           <div className={styles.ourServicesList}>
             {
