@@ -427,13 +427,13 @@
             }
 
             .ourServicesSubtitle {
-                display: none; //to remove placeholder text
+                // display: none; //to remove placeholder text
                 font-weight: normal;
                 font-size: 16px;
                 line-height: 200%;
                 text-align: center;
                 color: rgba(61, 61, 61, 0.9);
-                max-width: 70%;
+                // max-width: 70%;
                 margin: 1rem 0;
             }
         }
@@ -442,7 +442,8 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            align-items: center;
+            align-items: stretch;
+            
             // justify-content: center;
             justify-content: space-around;
             column-gap: 3rem;
@@ -465,10 +466,11 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                flex-grow: 1;
                 background: #FFFFFF;
                 border-radius: 5px;
                 padding: 0.2rem;
-                max-width: 350px;
+                min-width: 350px;
                 margin-top: 1.5rem;
                 border: 8px solid #ffffff00;
 
@@ -507,6 +509,7 @@
                         color: rgba(93, 93, 93, 0.9);
                         margin: 1rem 0;
                         max-width: 90%;
+                        list-style: none;
 
                         @media screen and (max-width: 1300px) {
                             // max-width: 96%;

@@ -524,24 +524,27 @@ export const caseStudiesData = [
 export const ourServicesData = [
   {
     id: 1,
-    title: "Atlassian Tools Migration",
+    title: "Atlassian Services",
     icon: "/assets/service1.svg",
-    subtitle: "We have deep experience across all migration use cases like Server to Cloud, Cloud to Data Center, Server to Data Center, Cloud to Cloud",
-    link: "/reel/case-studies",
+    subtitle: "We have deep experience and expertise across the following Atlassian services",
+    services: ["Migration", "Training", "Hosting", "Implementation", "Integration"],
+    // link: "/reel/case-studies",
   },
   {
     id: 2,
-    title: "Atlassian Engineering Team",
+    title: "Consulting",
     icon: "/assets/service2.svg",
     subtitle: "We provide distributed Atlassian Engineering teams and embedded Engineers to major Atlassian partners and Enterprise users",
-    link: "/about",
+    services: ["DevOps", "ITSM", "Data Migration", "Process and Service Modernisation"],
+    // link: "/about",
   },
   {
     id: 3,
-    title: "Atlassian Marketplace Plugins",
+    title: "Software Development",
     icon: "/assets/service3.svg",
     subtitle: "We engineer and support migration and implementation plugins like Scrum Companion, Cloud Counter, Compare Jira Resources",
-    link: "https://marketplace.atlassian.com/vendors/1218751/alluvium",
+    services: ["Applications Development and Optimization", "Web Development"],
+    // link: "https://marketplace.atlassian.com/vendors/1218751/alluvium",
   },
 ]
 
