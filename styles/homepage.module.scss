@@ -1,6 +1,8 @@
 @import "lib/breakpoints.scss";
+@import "lib/fonts.scss";
 
 .landingPage {
+    font-family: serif;
     .nav {
         position: relative;
         min-height: unset;
