@@ -75,7 +75,7 @@ export default function Home({ products, features, ourServices, milestones, trus
       </Head>
       <main className={styles.landingPage}>
         <section className={styles.nav}>
-          <Navigation products={products} />
+          <Navigation />
         </section>
         <Carousel autoPlay infiniteLoop interval={3000} showStatus={false} showThumbs={false} dynamicHeight={true}>
           {slideArr.map((x, i) => {
@@ -173,9 +173,9 @@ export default function Home({ products, features, ourServices, milestones, trus
             </div>
             <div className={styles.trustedCompanies}>
               {
-                trustedCompanies.map((company, idx) => {
+                trustedCompanies.map((company, idxy) => {
                   return (
-                    <div className={styles.trustedCompany} key={idx}>
+                    <div className={styles.trustedCompany} key={idxy}>
                       <img src={company.logoIcon} alt={company.name} />
                     </div>
                   )
