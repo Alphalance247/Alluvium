@@ -1,0 +1,103 @@
+.ourCaseStudies {
+    min-height: 1000px;
+    background: #0D1117;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &>div{
+        flex: 1;
+        margin: 100px 0;
+    }
+
+    .topSection {
+
+        @media screen and (max-width: 576px) {
+            text-align: center;
+        }
+        h2 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 18px;
+            color: #009BC0;
+        }
+
+        h3 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 140%;
+            color: #FFFFFF;
+        }
+
+        p {
+            font-style: italic;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #99A0B5;
+        }
+    }
+
+    .caseStudyList{
+        display: flex;
+        column-gap: 2em;
+        justify-content: center;
+
+        &>div{
+            width: 413px;
+        }
+
+        @media screen and (max-width: 576px) {
+            display: block;
+            &>div{
+                width: 100%;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+.caseStudy {
+    background: #0F1A25;
+    border-radius: 15px;
+
+    @media screen and (max-width: 576px) {
+            margin-bottom: 20px !important;
+    }
+
+    .head {
+        background: #121F2D;
+        border-radius: 15px 15px 0 0;
+        padding: 30px 41px;
+    }
+
+    .body {
+        padding: 30px 41px;
+
+        h6 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 20px;
+            text-decoration-line: underline;
+            color: #AEAEAE;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 150%;
+            color: #FFFFFF;
+            opacity: 0.9;
+        }
+
+        a {
+            color: rgba(0, 155, 192, 1) !important;
+            margin-top: 40px;
+        }
+    }
+}
