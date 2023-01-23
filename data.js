@@ -469,6 +469,7 @@ export const caseStudiesData = [
     downloadLink: "/files/AgroBiz-Server-to-Cloud.pdf",
     filename: "A Successful Server to Cloud Migration for an Agricultural business",
     caseStudyPageName: "a-successful-server-to-cloud-migration-for-an-agricultural-business",
+    clientLogo: "/assets/case-studies2/edf-energy.png",
     details:{
       caseStudyTitle: 'A Successful Server to Cloud Migration for an Agricultural business',
       caseStudyImg: "/assets/case-studies/case-study-1-img.png",
@@ -499,6 +500,7 @@ export const caseStudiesData = [
     downloadLink: "/files/Server to Data Center Migration for Major Insurer.pdf",
     filename: "Server to Data Center Migration for Major Insurer",
     caseStudyPageName: "server-to-data-center-migration-for-major-insurer",
+    clientLogo: "/assets/case-studies2/edf-energy.png",
     details:{
       caseStudyTitle: 'Server to Data Center Migration for Major Insurer',
       caseStudyImg: "/assets/case-studies/case-study-2-img.png",
@@ -524,27 +526,27 @@ export const caseStudiesData = [
 export const ourServicesData = [
   {
     id: 1,
-    title: "Atlassian Services",
-    icon: "/assets/service1.svg",
-    subtitle: "We have deep experience and expertise across the following Atlassian services",
-    services: ["Migration", "Training", "Hosting", "Implementation", "Integration"],
-    // link: "/reel/case-studies",
+    title: "Consulting",
+    icon: "/assets/services/consulting.png",
+    subtitle: "We provide distributed Atlassian Engineering teams and embedded Engineers to major Atlassian partners and Enterprise users",
+    services: ["DevOps", "ITSM", "Data Migration", "Process and Service Modernisation"],
+    link: "#",
   },
   {
     id: 2,
-    title: "Consulting",
-    icon: "/assets/service2.svg",
-    subtitle: "We provide distributed Atlassian Engineering teams and embedded Engineers to major Atlassian partners and Enterprise users",
-    services: ["DevOps", "ITSM", "Data Migration", "Process and Service Modernisation"],
-    // link: "/about",
+    title: "Atlassian Services",
+    icon: "/assets/services/atlassian-services.png",
+    subtitle: "We have deep experience and expertise across the following Atlassian services",
+    services: ["Migration", "Training", "Hosting", "Implementation", "Integration"],
+    link: "#",
   },
   {
     id: 3,
     title: "Software Development",
-    icon: "/assets/service3.svg",
+    icon: "/assets/services/software-development.png",
     subtitle: "We engineer and support migration and implementation plugins like Scrum Companion, Cloud Counter, Compare Jira Resources",
     services: ["Applications Development and Optimization", "Web Development"],
-    // link: "https://marketplace.atlassian.com/vendors/1218751/alluvium",
+    link: "#",
   },
 ]
 

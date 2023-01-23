@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getStaffUrls, getStaffData, fruits } from "../../lib/staff.ts";
 import Navigation from "components/navigation";
 import { productData } from "data";
-import Services from "components/services";
+import Services from "components/services-components/services";
 import styles from '../../styles/staff.module.scss';
 import { useEffect } from "react";
 
