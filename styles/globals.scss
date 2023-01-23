@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700,800,900&display=swap');
-
+@import "./lib/fonts.scss";
 
 *,
 html,
@@ -7,19 +7,19 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', Segoe UI, Roboto, Oxygen,
+  font-family:  -apple-system, BlinkMacSystemFont, 'Montserrat', Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-family: 'IBM Plex Sans', sans-serif;
-  scroll-behavior: smooth;
-  transition: 0.2s;
-}
-
-a {
-  color: inherit !important;
-  text-decoration: none !important;
-}
-
-* {
+    scroll-behavior: smooth;
+    transition: 0.2s;
+    font-family: 'Graphik', 'IBM Plex Sans', sans-serif;
+  }
+  
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+  
+  * {
   box-sizing: border-box;
 }
 
