@@ -34,10 +34,6 @@ export default function Navigation({ theme, ourServices }) {
                 <div className={styles.logo}>
                     <Link href="/">
                         <img src="/assets/alluvium-logo-dark.svg" alt="logo" />
-                        {/* {
-                        theme === "dark" ? <img src="/assets/alluvium-logo-dark.svg" alt="logo" /> : <img src="/assets/alluvium-logo.svg" alt="logo" />
-                    } */}
-                        {/* <Image src="/assets/alluvium-logo.svg" width={150} height={29.06} alt="logo"/> */}
                     </Link>
                 </div>
                 <nav className={styles.navigation}>
@@ -108,13 +104,11 @@ export default function Navigation({ theme, ourServices }) {
                                 </div>
                             </div>
                         </li>
-                        {/* <li><Link href="/support">Support (FAQs)</Link></li> */}
                         <li>
                             <Link href="/support/contact">
                                 <a className={styles.contactUsButton}>Contact Us</a>
                             </Link>
                         </li>
-                        {/* <li><Link href="/onboarding">Onboarding</Link></li> */}
                     </ul>
                     <div className={displayMobileMenu === true ? styles.mobileMenu : styles.hideMobileMenu}>
                         <ul>
@@ -134,7 +128,7 @@ export default function Navigation({ theme, ourServices }) {
                     </div>
                 </nav>
                 {
-                    displayMobileMenu && <button onClick={toggleMenu} className={styles.closeBtn}>
+                    <button onClick={toggleMenu} className={displayMobileMenu ? styles.closeBtn : ''}>
                         {/* <div className={theme === "dark" ? styles.menuBtnDark : styles.menuBtn}> */}
                         <div className={styles.menuBtnDark}>
                             <div className={styles.barOne}></div>

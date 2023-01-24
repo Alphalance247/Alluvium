@@ -1,27 +1,27 @@
-export const productData = 
-[
+export const productData =
+  [
     {
-      id:1,
-      title:"Cloud Counter",
-      subtitle:"Employ our fast and efficient Cloud Counter to keep count of your resources.",
-      previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_9_ylxuxh.png",
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_vazuey.jpg",
-      projectName:"cloud-counter",
-      details:{
-        productHeader:"The future is cloud",
-        productBg:"#009BC0",
-        videosBtnBg:"#1B3854",
-        productName:"Cloud Counter",
-        productTitle:"Resource count? No worries.",
+      id: 1,
+      title: "Cloud Counter",
+      subtitle: "Employ our fast and efficient Cloud Counter to keep count of your resources.",
+      previewImgLink: "https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_9_ylxuxh.png",
+      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_vazuey.jpg",
+      projectName: "cloud-counter",
+      details: {
+        productHeader: "The future is cloud",
+        productBg: "#009BC0",
+        videosBtnBg: "#1B3854",
+        productName: "Cloud Counter",
+        productTitle: "Resource count? No worries.",
         productSubtitle: "Get The Most out of Jira Software Cloud with our Quick and Easy Resource Counter.",
-        productLead:"Taiwo Ojo",
-        client:"alluvium",
+        productLead: "Taiwo Ojo",
+        client: "alluvium",
         date: "September 2020",
         productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1620327020/Alluvium%20Website/Projects/Product%20Images/Laptop_avn5u8.png',
         productInfo: "Employ our fast and efficient Cloud Counter to keep count of your resources.",
-        ytLink:"https://youtube.com",
-        productLink:"https://marketplace.atlassian.com/apps/1223585/cloud-counter?hosting=cloud&tab=overview",
-        moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1620327024/Alluvium%20Website/Projects/Product%20Images/Mask_Group_bcrdcv.png" ],
+        ytLink: "https://youtube.com",
+        productLink: "https://marketplace.atlassian.com/apps/1223585/cloud-counter?hosting=cloud&tab=overview",
+        moreImgs: ["https://res.cloudinary.com/geniesys/image/upload/v1620327024/Alluvium%20Website/Projects/Product%20Images/Mask_Group_bcrdcv.png"],
         keyPoints: [
           {
             title: "One Click Count",
@@ -29,37 +29,37 @@ export const productData =
           },
           {
             title: "Schemes Count",
-            body:  "Avoid pain: Do you know how painful it is to have multiple duplicate schemes and resources?"
+            body: "Avoid pain: Do you know how painful it is to have multiple duplicate schemes and resources?"
           },
           {
             title: "JIRA Service Desk Count",
-            body:  "Save cost: To count all Jira schemes and database items, you need to call more than two dozens API endpoints."
+            body: "Save cost: To count all Jira schemes and database items, you need to call more than two dozens API endpoints."
           },
         ],
       },
     },
     {
-      id:2,
-      title:"CJR: Compare Jira Resources",
-      subtitle:"Compare Jira Resources is an efficient way to check that you have fully migrated",
-      previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_8_nzueg1.png",
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_clfwev.jpg",
-      projectName:"cjr",
-      details:{
-        productHeader:"Compare Now and Thank Us later!",
-        productBg:"#1B3854",
-        videosBtnBg:"#009BC0",
-        productName:"CJR",
-        productTitle:"Compare Jira Resources",
+      id: 2,
+      title: "CJR: Compare Jira Resources",
+      subtitle: "Compare Jira Resources is an efficient way to check that you have fully migrated",
+      previewImgLink: "https://res.cloudinary.com/geniesys/image/upload/v1619789155/Alluvium%20Website/Projects/Preview%20Images/Group_8_nzueg1.png",
+      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1619786010/Alluvium%20Website/Projects/Product%20Images/Mask_Group_clfwev.jpg",
+      projectName: "cjr",
+      details: {
+        productHeader: "Compare Now and Thank Us later!",
+        productBg: "#1B3854",
+        videosBtnBg: "#009BC0",
+        productName: "CJR",
+        productTitle: "Compare Jira Resources",
         productSubtitle: "Validate success of your migration, Compare Source & For Accuracy of Jira.",
-        productLead:"Taiwo Ojo",
-        client:"alluvium",
+        productLead: "Taiwo Ojo",
+        client: "alluvium",
         date: "November 2020",
         productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Group_8_1_pmmdib.png',
         productInfo: "Compare Jira Resources is an efficient way to check that you have fully migrated.",
-        ytLink:"https://youtube.com",
-        productLink:"https://marketplace.atlassian.com/apps/1223507/compare-jira-resource?hosting=cloud&tab=overview",
-        moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_g5xrph.png" ],
+        ytLink: "https://youtube.com",
+        productLink: "https://marketplace.atlassian.com/apps/1223507/compare-jira-resource?hosting=cloud&tab=overview",
+        moreImgs: ["https://res.cloudinary.com/geniesys/image/upload/v1620327161/Alluvium%20Website/Projects/Product%20Images/Mask_Group_1_g5xrph.png"],
         keyPoints: [
           {
             title: "Validate Success of your Migration",
@@ -77,27 +77,27 @@ export const productData =
       },
     },
     {
-      id:3,
-      title:"Scrum Companion",
-      subtitle:"Scrum Companion is a modern and efficient collaborative platform which enables your team to view and manage raw data all in one single click.",
-      previewImgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623696322/Alluvium%20Website/Projects/Preview%20Images/SC_img_preview_had8g1.png",
-      imgLink:"https://res.cloudinary.com/geniesys/image/upload/v1623697052/Alluvium%20Website/Projects/Product%20Images/Screenshot_149_h0v05r.png",
-      projectName:"sc",
-      details:{
-        productHeader:"View and manage your team's raw data.",
-        productBg:"#1D1554",
-        videosBtnBg:"#2B11E1",
-        productName:"Scrum Companion",
-        productTitle:"Scrum Companion",
+      id: 3,
+      title: "Scrum Companion",
+      subtitle: "Scrum Companion is a modern and efficient collaborative platform which enables your team to view and manage raw data all in one single click.",
+      previewImgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623696322/Alluvium%20Website/Projects/Preview%20Images/SC_img_preview_had8g1.png",
+      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623697052/Alluvium%20Website/Projects/Product%20Images/Screenshot_149_h0v05r.png",
+      projectName: "sc",
+      details: {
+        productHeader: "View and manage your team's raw data.",
+        productBg: "#1D1554",
+        videosBtnBg: "#2B11E1",
+        productName: "Scrum Companion",
+        productTitle: "Scrum Companion",
         productSubtitle: "Transform your workflow and improve your productivity with Scrum Companion today.",
-        productLead:"Taiwo Ojo",
-        client:"alluvium",
+        productLead: "Taiwo Ojo",
+        client: "alluvium",
         date: "November 2020",
         productImg: 'https://res.cloudinary.com/geniesys/image/upload/v1623696343/Alluvium%20Website/Projects/Product%20Images/SC_img_h9rj3w.png',
         productInfo: "Scrum Companion is a modern and efficient collaborative platform which enables your team to view and manage raw data all in one single click.",
-        ytLink:"https://youtube.com",
-        productLink:"https://scrumcompanion.net/",
-        moreImgs: [ "https://res.cloudinary.com/geniesys/image/upload/v1623696973/Alluvium%20Website/Projects/Product%20Images/Screenshot_148_nkv1xo.png","https://res.cloudinary.com/geniesys/image/upload/v1623696973/Alluvium%20Website/Projects/Product%20Images/Screenshot_153_b2xfw7.png" ],
+        ytLink: "https://youtube.com",
+        productLink: "https://scrumcompanion.net/",
+        moreImgs: ["https://res.cloudinary.com/geniesys/image/upload/v1623696973/Alluvium%20Website/Projects/Product%20Images/Screenshot_148_nkv1xo.png", "https://res.cloudinary.com/geniesys/image/upload/v1623696973/Alluvium%20Website/Projects/Product%20Images/Screenshot_153_b2xfw7.png"],
         keyPoints: [
           {
             title: "Visualize your workflow",
@@ -118,78 +118,78 @@ export const productData =
         ],
       },
     },
-]
+  ]
 
 
-export const featuresData = 
-[
+export const featuresData =
+  [
     {
-        title:"Data Security",
-        subtitle:"Data Security is so important to us that Everyone in our company is GDPR certified, even the janitor.",
-        iconLink:"https://res.cloudinary.com/geniesys/image/upload/v1638339237/Alluvium%20Website/Rectangle_2083_sdahun.png"
+      title: "Data Security",
+      subtitle: "Data Security is so important to us that Everyone in our company is GDPR certified, even the janitor.",
+      iconLink: "https://res.cloudinary.com/geniesys/image/upload/v1638339237/Alluvium%20Website/Rectangle_2083_sdahun.png"
     },
     {
-        title:"Simple UX",
-        subtitle:"We do our best to make sure the customer do not notice changes in their user experience, post migration",
-        iconLink:"https://res.cloudinary.com/geniesys/image/upload/v1638339236/Alluvium%20Website/Rectangle_2082_tpiyra.png"
+      title: "Simple UX",
+      subtitle: "We do our best to make sure the customer do not notice changes in their user experience, post migration",
+      iconLink: "https://res.cloudinary.com/geniesys/image/upload/v1638339236/Alluvium%20Website/Rectangle_2082_tpiyra.png"
     },
     {
-        title:"Scalable",
-        subtitle:"Build, rinse, repeat",
-        iconLink:"https://res.cloudinary.com/geniesys/image/upload/v1638339235/Alluvium%20Website/Rectangle_2084_bjcqsl.png"
-    },
-]
-  
-export const galleryLinks = 
-[
-  {
-    productName: "Scrum Companion",
-    imgs: [
-      {
-        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_150_uy4lto.png",
-        imgAlt: "SC"        
-      },
-      {
-        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_155_udrnhb.png",
-        imgAlt: "SC"        
-      },
-      {
-        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_167_u9k5d5.png",
-        imgAlt: "SC"        
-      }
-    ]
-  },
-  {
-  productName: "Compare Jira Resources",
-  imgs: [
-    {
-      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_8_qsipfn.png",
-      imgAlt: "CJR"        
-    },
-    {
-      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
-      imgAlt: "CJR"        
-    },
-    {
-      imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
-      imgAlt: "CJR"        
+      title: "Scalable",
+      subtitle: "Build, rinse, repeat",
+      iconLink: "https://res.cloudinary.com/geniesys/image/upload/v1638339235/Alluvium%20Website/Rectangle_2084_bjcqsl.png"
     },
   ]
-  },
-  {
-    productName: "Cloud Counter",
-    imgs: [
-      {
-        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_1_jzxm17.jpg",
-        imgAlt: "CC"        
-      },
-      {
-        imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_9_fekb5e.png",
-        imgAlt: "CC"        
-      },
-    ]
-  },
-]
+
+export const galleryLinks =
+  [
+    {
+      productName: "Scrum Companion",
+      imgs: [
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_150_uy4lto.png",
+          imgAlt: "SC"
+        },
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_155_udrnhb.png",
+          imgAlt: "SC"
+        },
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342995/Alluvium%20Website/Reel%20Media/Screenshot_167_u9k5d5.png",
+          imgAlt: "SC"
+        }
+      ]
+    },
+    {
+      productName: "Compare Jira Resources",
+      imgs: [
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_8_qsipfn.png",
+          imgAlt: "CJR"
+        },
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
+          imgAlt: "CJR"
+        },
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_n9q1pk.png",
+          imgAlt: "CJR"
+        },
+      ]
+    },
+    {
+      productName: "Cloud Counter",
+      imgs: [
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Mask_Group_1_jzxm17.jpg",
+          imgAlt: "CC"
+        },
+        {
+          imgLink: "https://res.cloudinary.com/geniesys/image/upload/v1623342861/Alluvium%20Website/Reel%20Media/Group_9_fekb5e.png",
+          imgAlt: "CC"
+        },
+      ]
+    },
+  ]
 
 
 export const teamData =
@@ -247,7 +247,7 @@ export const teamData =
       dept: "Cosmetics team",
       fruit: "dates",
       hobbies: "music, series, basketball",
-      alluvianTag: "stanleyonwuka" 
+      alluvianTag: "stanleyonwuka"
     },
     {
       firstName: "sherif",
@@ -259,7 +259,7 @@ export const teamData =
       fruit: "Watermelon - Rich in minerals and a great post workout snack",
       hobbies: "Hiking, Movies, Podcasts, Games",
       alluvianTag: "sherifsiyanbola"
-    
+
     },
     {
       firstName: "rebecca",
@@ -284,10 +284,10 @@ export const teamData =
       alluvianTag: "adeolalawal"
     },
     {
-      firstName:"isaac",
-      lastName:"adebayo",
-      role:"Jira Expert",
-      email:"isaac@geniesys.co.uk",
+      firstName: "isaac",
+      lastName: "adebayo",
+      role: "Jira Expert",
+      email: "isaac@geniesys.co.uk",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634237742/Alluvium%20Website/Team%28new%29/isaac.png",
       dept: "Engineering team",
       fruit: "Banana",
@@ -295,43 +295,43 @@ export const teamData =
       alluvianTag: "isaacadebayo"
     },
     {
-      firstName:"precious",
-      lastName:"charles",
-      role:"Tools and Systems Support",
-      email:"charlespreciousa@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/precious.png",
+      firstName: "precious",
+      lastName: "charles",
+      role: "Tools and Systems Support",
+      email: "charlespreciousa@gmail.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/precious.png",
       dept: "Engineering team",
       fruit: "Apple - Fresh, Beautiful, Sweet, Easy going and Sociable",
       hobbies: "Tech, Movies, Music, Cooking",
       alluvianTag: "preciouscharles"
     },
     {
-      firstName:"yusuf",
-      lastName:"braimoh",
-      role:"Software Engineer",
-      email:"yusuf@alluvium.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228180/Alluvium%20Website/Team%28new%29/yusuf.png",
+      firstName: "yusuf",
+      lastName: "braimoh",
+      role: "Software Engineer",
+      email: "yusuf@alluvium.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228180/Alluvium%20Website/Team%28new%29/yusuf.png",
       dept: "Engineering team",
       fruit: "Apple",
       hobbies: "Books, Anime, Podcasts",
       alluvianTag: "yusufbraimoh"
     },
     {
-      firstName:"georgette",
-      lastName:"idrissou",
-      role:"Sales and Marketing",
-      email:"georgette@alluvium.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1635971307/Alluvium%20Website/Team%28new%29/georgette.png",
+      firstName: "georgette",
+      lastName: "idrissou",
+      role: "Sales and Marketing",
+      email: "georgette@alluvium.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1635971307/Alluvium%20Website/Team%28new%29/georgette.png",
       dept: "Marketing team",
       fruit: "Coconut - hard outside and soft inside. Plus, it’s useful in all aspects.",
       hobbies: "Food, Travel, Sports, People",
       alluvianTag: "georgetteidrissou"
     },
     {
-      firstName:"anjola",
-      lastName:"oyelakin",
-      role:"Graphic Designer",
-      email:"anjolly@alluvium.com",
+      firstName: "anjola",
+      lastName: "oyelakin",
+      role: "Graphic Designer",
+      email: "anjolly@alluvium.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228181/Alluvium%20Website/Team%28new%29/anjola.png",
       dept: "Cosmetics team",
       fruit: "Guava - It thrives in any soil ",
@@ -339,10 +339,10 @@ export const teamData =
       alluvianTag: "anjolaoyelakin"
     },
     {
-      firstName:"folakemi",
-      lastName:"adedayo",
-      role:"Graphic designer (intern)",
-      email:"adedayofolakemi23@gmail.com",
+      firstName: "folakemi",
+      lastName: "adedayo",
+      role: "Graphic designer (intern)",
+      email: "adedayofolakemi23@gmail.com",
       imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228179/Alluvium%20Website/Team%28new%29/folakemi.png",
       dept: "Cosmetics team",
       fruit: "Watermelon ",
@@ -350,22 +350,22 @@ export const teamData =
       alluvianTag: "folakemiadedayo"
     },
     {
-      firstName:"oluwatishe",
-      lastName:"afolabi",
-      role:"Sales and Marketing",
-      email:"afolabitemitay64@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/tishe.png",
+      firstName: "oluwatishe",
+      lastName: "afolabi",
+      role: "Sales and Marketing",
+      email: "afolabitemitay64@gmail.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228183/Alluvium%20Website/Team%28new%29/tishe.png",
       dept: "Marketing team",
       fruit: "Pineapple",
       hobbies: "Learning, Cooking, Traveling, Singing",
       alluvianTag: "oluwatisheafolabi"
     },
     {
-      firstName:"babade",
-      lastName:"adewole",
-      role:"Software developer",
-      email:"adesiteadewole@gmail.com",
-      imgUrl:"https://res.cloudinary.com/geniesys/image/upload/v1634228184/Alluvium%20Website/Team%28new%29/babade.png",
+      firstName: "babade",
+      lastName: "adewole",
+      role: "Software developer",
+      email: "adesiteadewole@gmail.com",
+      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228184/Alluvium%20Website/Team%28new%29/babade.png",
       dept: "Engineering team",
       fruit: "Pineapple",
       hobbies: "Traveling",
@@ -382,46 +382,46 @@ export const teamData =
     //   hobbies: "Games, Learning, Coding",
     //   alluvianTag: "fataiogundele"
     // },
-]
+  ]
 
-export const faqData = 
-[
+export const faqData =
+  [
     {
       id: 1,
-      question:"How do I use Alluvium products?",
-      answer:"You can view and purchase our applications on the Atlassian marketplace"
+      question: "How do I use Alluvium products?",
+      answer: "You can view and purchase our applications on the Atlassian marketplace"
     },
     {
-      id:2,
-      question:"Can I trust my data is in safe hands?",
-      answer:"Yes, you can be assured that your data is being handled by professionals who have GDPR certifications. Our staff from top to bottom fully understand the responsibility of third party data processing."
+      id: 2,
+      question: "Can I trust my data is in safe hands?",
+      answer: "Yes, you can be assured that your data is being handled by professionals who have GDPR certifications. Our staff from top to bottom fully understand the responsibility of third party data processing."
     },
     {
-      id:3,
-      question:"How can I contact Alluvium?",
-      answer:"Send us an e-mail at contact@alluvium.net."
+      id: 3,
+      question: "How can I contact Alluvium?",
+      answer: "Send us an e-mail at contact@alluvium.net."
     },
     {
-      id:4,
-      question:"How does Alluvium bill its clients?",
-      answer:"We use a workflow system on Jira that tracks the process and time spent on your projects which allows for transparency."
+      id: 4,
+      question: "How does Alluvium bill its clients?",
+      answer: "We use a workflow system on Jira that tracks the process and time spent on your projects which allows for transparency."
     },
   ]
 
 export const statusInitialData = [
   {
     product: "Scrum Companion",
-    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625165749/Alluvium%20Website/Products%20Logos/logo_icon_hcw0gl.png",
+    productIcon: "https://res.cloudinary.com/geniesys/image/upload/v1625165749/Alluvium%20Website/Products%20Logos/logo_icon_hcw0gl.png",
     statusLink: "https://api.scrumcompanion.net/health-check",
   },
   {
     product: "Compare Jira Resources",
-    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625166016/Alluvium%20Website/Products%20Logos/cjr_logo_mnk5vy_vcivz9.svg",
+    productIcon: "https://res.cloudinary.com/geniesys/image/upload/v1625166016/Alluvium%20Website/Products%20Logos/cjr_logo_mnk5vy_vcivz9.svg",
     statusLink: "https://api.comparejiraresources.net/health-check",
   },
   {
     product: "Cloud Counter",
-    productIcon:"https://res.cloudinary.com/geniesys/image/upload/v1625165783/Alluvium%20Website/Products%20Logos/Logo_cbqpo6.svg",
+    productIcon: "https://res.cloudinary.com/geniesys/image/upload/v1625165783/Alluvium%20Website/Products%20Logos/Logo_cbqpo6.svg",
     statusLink: "https://api.jiracounter.net/health-check",
   },
 ]
@@ -430,7 +430,7 @@ export const clientTestimonies = [
   {
     name: 'Client A',
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-    imgLink : 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+    imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
   },
   {
     name: 'Client B',
@@ -445,7 +445,7 @@ export const clientTestimonies = [
   {
     name: 'Client D',
     review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna',
-    imgLink : 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
+    imgLink: 'https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png'
   },
   {
     name: 'Client E',
@@ -470,7 +470,7 @@ export const caseStudiesData = [
     filename: "A Successful Server to Cloud Migration for an Agricultural business",
     caseStudyPageName: "a-successful-server-to-cloud-migration-for-an-agricultural-business",
     clientLogo: "/assets/case-studies2/edf-energy.png",
-    details:{
+    details: {
       caseStudyTitle: 'A Successful Server to Cloud Migration for an Agricultural business',
       caseStudyImg: "/assets/case-studies/case-study-1-img.png",
       caseStudyHeaderText: "Atlassian`s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
@@ -501,7 +501,7 @@ export const caseStudiesData = [
     filename: "Server to Data Center Migration for Major Insurer",
     caseStudyPageName: "server-to-data-center-migration-for-major-insurer",
     clientLogo: "/assets/case-studies2/edf-energy.png",
-    details:{
+    details: {
       caseStudyTitle: 'Server to Data Center Migration for Major Insurer',
       caseStudyImg: "/assets/case-studies/case-study-2-img.png",
       caseStudyHeaderText: "A major insurance and asset management company needed to improve Atlassian product user experiences and optimize the product`s performances across their entire company, they turned to our team of certified experts with Jira and Confluence knowledge base for a solution.",
@@ -556,68 +556,124 @@ export const milestonesData = [
     id: 1,
     value: "30+",
     icon: "/assets/milestone_client.svg",
-    category: "Clients"
+    category: "Happy Clients"
   },
   {
     id: 2,
-    value: "2700",
+    value: "500+",
     icon: "/assets/milestone_project.svg",
     category: "Projects"
   },
   {
     id: 3,
-    value: "10",
+    value: "20+",
     icon: "/assets/milestone_countries.svg",
     category: "Countries"
   },
   {
     id: 4,
-    value: "96%",
+    value: "100%",
     icon: "/assets/milestone_success.svg",
     category: "Success rate"
   },
-
+  {
+    id: 5,
+    value: "15+",
+    icon: "/assets/milestone_success.svg",
+    category: "Migration Experts"
+  },
+  {
+    id: 6,
+    value: "4.5",
+    icon: "/assets/milestone_success.svg",
+    category: "Customer Rating"
+  }
 ]
 
 export const trustedCompaniesData = [
   {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-1.svg"
+    name: "Atlassian",
+    logoIcon: "/assets/company-logos/atlassian.png"
   },
   {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-2.svg"
-  },
-  // {
-  //   name: "Company",
-  //   logoIcon: "/assets/company-logos/company-3.svg"
-  // },
-  {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-4.svg"
+    name: "EDF Energy",
+    logoIcon: "/assets/company-logos/edf.png"
   },
   {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-5.svg"
+    name: "Lloyd Banking Groups",
+    logoIcon: "/assets/company-logos/lloyds-bank.png"
   },
   {
-    name: "STL",
-    logoIcon: "/assets/company-logos/stl.png"
+    name: "WTW",
+    logoIcon: "/assets/company-logos/wtw.png"
   },
   {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-7.svg"
+    name: "Vonage",
+    logoIcon: "/assets/company-logos/vonage.png"
+  }
+]
+
+export const whyChooseAlluvium = [
+  "Why You Should Choose Alluvium",
+  "Reduced risk",
+  "Better Data Quality",
+  "Expertise",
+  "Streamlined process",
+  "Scalability",
+  "Security",
+  "Flexibility"
+];
+
+export const industries = [
+  {
+    industry: "Travel",
+    icon: '/assets/solution/travel.png'
   },
   {
-    name: "Company",
-    logoIcon: "/assets/company-logos/company-8.svg"
+    industry: "Agriculture",
+    icon: '/assets/solution/agriculture.png'
   },
   {
-    name: "Stack Intelligence",
-    logoIcon: "/assets/company-logos/stack.png"
+    industry: "Health",
+    icon: '/assets/solution/health.png'
   },
   {
-    name: "HyperVelocity",
-    logoIcon: "/assets/company-logos/hyper.png"
+    industry: "Real Estate",
+    icon: '/assets/solution/real-estate.png'
   },
+  {
+    industry: "Education",
+    icon: '/assets/solution/education.png'
+  },
+  {
+    industry: "Telecommunication",
+    icon: '/assets/solution/telecommunication.png'
+  },
+  {
+    industry: "IT",
+    icon: '/assets/solution/it.png'
+  },
+  {
+    industry: "Finance",
+    icon: '/assets/solution/finance.png'
+  }
+];
+
+export const ourSolutions = [
+  {
+    title: "Atlassian Discovery",
+    description: "Our experts work directly with your team to determine which products you need, and provide the most cost-effective licensing model."
+  },
+  {
+    title: "Atlassian Product Implementation",
+    description: "New to Atlassian or not, we offer full implementations and health checks for Atlassian products such as Jira Software, Jira Service Management and Confluence. "
+  },
+  {
+    title: "Atlassian Cloud Migration",
+    description: "A process based approach to move existing data and configuration into the destination cloud environment with zero data loss. From complex data models to rewiring existing apps - we handle it all. "
+  },
+  {
+    title: "Atlassian Training",
+    description: "Training offering for customers who need foundational Atlassian training and enablement OR advanced configuration and add-on specific workshops."
+  }
 ]

@@ -5,18 +5,26 @@ import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/homepage.module.scss'
 import Navigation from '../components/navigation';
-import ProductPreview from '../components/productPreview';
-import { Carousel } from 'react-responsive-carousel';
 import Services from 'components/services-components/services';
 import CaseStudies from 'components/case-studies/case-studies';
-import News from '../components/news-and-trends/news'
+import News from '../components/news-and-trends/news';
+import WhyAlluvium from 'components/whyAlluvium';
+import Hero from 'components/Hero';
+import OurSolution from 'components/ourSolutions';
+import OurPartners from 'components/ourPartners';
+import WelcomeToAlluvium from 'components/welcomeToAlluvium';
 
 const Home = () => {
     return (
         <>
             <div className='container-fluid p-0 m-0'>
                 <Navigation />
+                <Hero />
                 <Services />
+                <WelcomeToAlluvium />
+                <OurSolution />
+                <WhyAlluvium />
+                <OurPartners />
                 <CaseStudies />
                 <News />
             </div>

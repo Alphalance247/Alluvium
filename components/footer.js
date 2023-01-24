@@ -1,155 +1,40 @@
-import React,{useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Switch from 'react-input-switch';
 import styles from '../styles/footer.module.scss';
 import { useToasts } from 'react-toast-notifications';
-
-
-export default function Footer() {
-    // const [value, setValue] = useState(true);
-    // useEffect(()=>{
-    //     localStorage.setItem("light-mode", JSON.stringify(value))
-    // }, [value])
-    const { addToast } = useToasts();
-    
-
-    return(
-        <footer className={ styles.footer }>
-            <div className={styles.newsletterSection}>
-                <div className={styles.newsletter}>
-                    <p className={styles.newsletterTitle} data-aos="fade-right">Get access to our Newsletter</p>
-                    <div className={styles.newsletterInput} data-aos="fade-left">
-                        <input type="email" placeholder="Enter your e-mail address"/>
-                        <button
-                         onClick={ ()=>addToast("Currently unavailable, Check back later",{appearance:'info',autoDismiss:true}) }   
-                         className={styles.newsletterSubmitBtn}>
-                            <p>Shoot</p>
-                            <div className={styles.btnArrow}>
-                                <Image src="/assets/arrow.svg" width={ 19 } height={ 8 }/>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-                <div className={styles.background}>
-                    <Image src="/assets/footer.png" width={ 1392 } height={ 623 } />
-                </div>
-            </div>
-            <div className={styles.footerMain}>
-                <div className={styles.footerBody}>
-                    <Link href="/" >
-                        <img className={styles.footerLogo} src="/assets/alluvium-logo-dark.svg" alt="logo"/>
-                    </Link>
-                    <div className={styles.footerLists}>
-                        <div className={styles.footerList} data-aos="fade-up">
-                            <h4 className={styles.footerListTitle}>What we do</h4>
-                            <ul>
-                                <li className={styles.footerListItem}><Link href="/products">Our Products</Link></li>
-                                <li className={styles.footerListItem}><Link href="/reel">Projects Reel</Link></li>
-                                <li className={styles.footerListItem}><Link href="/products/statuspage">Products Status</Link></li>
-                            </ul>
-                        </div>
-                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="300">
-                            <h4 className={styles.footerListTitle}>Who are we?</h4>
-                            <ul>
-                                <li className={styles.footerListItem}><Link href="/products">About us</Link></li>
-                                <li className={styles.footerListItem}><Link href="/team">Alluvians</Link></li>
-                            </ul>
-                        </div>
-                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="400">
-                            <h4 className={styles.footerListTitle}>Follow us</h4>
-                            <ul>
-                                <li className={styles.footerListItem}><a href="https://www.linkedin.com/company/alluvium-hq/">LinkedIn</a></li>
-                                <li className={styles.footerListItem}><a href="https://www.facebook.com/alluviumhq/?ti=as">Facebook</a></li>
-                                <li className={styles.footerListItem}><a href="https://twitter.com/alluviumhq?s=08">Twitter</a></li>
-                                {/* <li className={styles.footerListItem}><Link href="/reel">Instagram</Link></li> */}
-                            </ul>
-                        </div>
-                        <div className={styles.footerList} data-aos="fade-up" data-aos-delay="500">
-                            <h4 className={styles.footerListTitle}>Support</h4>
-                            <ul>
-                                <li className={styles.footerListItem}><Link href="/support/contact">Contact us</Link></li>
-                                <li className={styles.footerListItem}><Link href="/support">FAQs</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div className={styles.pageFooter}>
-                    {/* <div className={styles.themeSwitch}>
-                        <Switch
-                            on={true} 
-                            off={false}
-                            value={value}
-                            onChange={setValue}
-                            styles={{
-                                track: {
-                                    backgroundColor: 'white'
-                                },
-                                trackChecked: {
-                                    backgroundColor: 'black'
-                                },
-                                button: {
-                                    backgroundColor: 'black'
-                                },
-                                buttonChecked: {
-                                    backgroundColor: 'white'
-                                }
-                            }}
-                        />
-                    </div> */}
-                    <hr className={styles.underline}/>
-                    <div className={styles.copyrights}>
-                        <p>©2022 Alluvium | All rights reserved</p>
-                    </div>
-                </div>
-            </div>
-            
-        </footer>
-    )
-}
-
+import { ImFacebook, ImLinkedin2 } from 'react-icons/im';
+import { AiFillInstagram, AiOutlineTwitter } from 'react-icons/ai';
 
 export function AltFooter() {
 
     const { addToast } = useToasts();
 
-    function submitNewsletterForm (e) {
+    function submitNewsletterForm(e) {
         e.preventDefault();
         addToast("Currently unavailable, Check back later", { appearance: 'info', autoDismiss: true });
     }
-    
-    return(
+
+    return (
         <footer className={styles.altFooter}>
-            <div className={styles.getInTouchSection}>
-                <h1 className={styles.getInTouchSectionTitle}>Have a Project in mind?</h1>
-                <Link href="/support/contact">Get in touch</Link>
-            </div>
-            <div className={styles.altFooterMainSection}>
+            <div className={`container ${styles.altFooterMainSection}`}>
                 <div className={styles.altFooterMainSectionComponents}>
                     <div className={styles.altFooterMainSectionComponent}>
                         <div className={styles.altFooterLogo}>
-                            <img src={"/assets/alluvium-footer-logo.svg"} alt="Footer logo"/>
+                            <img src={"/assets/alluvium-logo-dark.svg"} alt="Footer logo" />
                         </div>
-                        <ul className={styles.altFooterContactList}>
-                            <li className={styles.contactListItem}>
-                                <p><b>Headquarter:</b> Kemp House 160, City Road London, EC1V 2NX.</p>
-                                <p><b>Ekiti Branch:</b> No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti, Ekiti State.</p>
-                            </li>
-                            <li className={styles.contactListItem}>
-                                <b>Email:</b>
-                                <a href="mailto:contact@alluvium.net"> contact@alluvium.net</a>
-                            </li>
-                            {/* <li className={styles.contactListItem}>
-                                <b>Phone:</b>
-                                <Link href="/"> +44 85001 92539</Link>
-                            </li> */}
-                        </ul>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing..
+                            </p>
+                        </div>
+                        <div>
+                            <h3>DOWNLOAD BROCHURE</h3>
+
+                            <a className={styles.download}>Download</a>
+                        </div>
                         <ul className={styles.footerSocials}>
-                            {/* <li className={styles.footerSocialIcon}>
-                                <a href="" >
-                                    <img src="/assets/socials/instagram.svg" alt='instagram' />
-                                </a>
-                            </li> */}
                             <li className={styles.footerSocialIcon}>
                                 <a href="https://twitter.com/alluviumhq?s=08" target="_blank">
                                     <img src="/assets/socials/twitter.svg" alt='twitter' />
@@ -174,13 +59,19 @@ export function AltFooter() {
                                 <Link href="/about">About us</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/reel">Project Reel</Link>
+                                <Link href="#">Leadership</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/reel/case-studies">Case Studies</Link>
+                                <Link href="https://blog.alluvium.net/">
+                                    <a target="_blank" rel="norefferer">
+                                        Blog
+                                    </a>
+                                </Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/support">Support</Link>
+                                <Link href="#">
+                                    Success Stories
+                                </Link>
                             </li>
                             <li className={styles.contactListItem}>
                                 <Link href="/showing-interest">Show interest</Link>
@@ -191,31 +82,71 @@ export function AltFooter() {
                         </ul>
                     </div>
                     <div className={styles.altFooterMainSectionComponent}>
-                        <h3 className={styles.altFooterMainSectionComponentTitle}>Our Services</h3>
+                        <h3 className={styles.altFooterMainSectionComponentTitle}>SERVICES</h3>
                         <ul className={styles.altFooterContactList}>
                             <li className={styles.contactListItem}>
-                                <Link href="/#services">Atlassian Tools Migration</Link>
+                                <Link href="/#services">Atlassian Services</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/#services">Atlassian Engineering Team</Link>
+                                <Link href="/#services">Consulting</Link>
                             </li>
                             <li className={styles.contactListItem}>
-                                <Link href="/products">Atlassian Marketplace PlugIns</Link>
+                                <Link href="/#services">Software Development</Link>
                             </li>
                         </ul>
                     </div>
-                    <div className={styles.newsLetterComponent}>
-                        <h2 className={styles.newsLetterTitle}>Get Access to our Newsletter</h2>
-                        <p className={styles.newsLetterSubtitle}>Join hundreds of business and technology in subcribing to Alluvium’s newsletter</p>
-                        <form className={styles.newsLetterForm} onSubmit={submitNewsletterForm}>
-                            <input type="email" className={styles.emailInput} name="emailInput" placeholder='Email Address'/>
-                            <input type="submit" className={styles.formSubmitBtn} value="Sign me up"/>
-                        </form>
+                    <div className={styles.divider}>
+                        <hr />
+                    </div>
+                    <div className={styles.altFooterMainSectionComponent}>
+                        <h3 className={styles.altFooterMainSectionComponentTitle}>SUPPORT</h3>
+                        <ul className={styles.altFooterContactList}>
+                            <li className={styles.contactListItem}>
+                                <Link href="/support">FAQ</Link>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <Link href="/#">Trouble Shooting</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className={styles.altFooterMainSectionComponent}>
+                        <h3 className={styles.altFooterMainSectionComponentTitle}>CONTACT US</h3>
+                        <ul className={styles.altFooterContactList}>
+                            <li className={styles.contactListItem}>
+                                <p><b>Headquarter:</b> Kemp House 160, City Road London, EC1V 2NX.</p>
+                                <p><b>Ekiti Branch:</b> No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti, Ekiti State.</p>
+                            </li>
+                            <li className={styles.contactListItem}>
+                                <b>Email:</b>
+                                <a href="mailto:contact@alluvium.net"> contact@alluvium.net</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <hr className={styles.underline}/>
-                <div className={styles.copyrights}>
-                    <p>© 2022 Alluvium | <span>All rights reserved</span></p>
+                <div className='row'>
+                    <div className='col-md-5'>
+                        <hr />
+                    </div>
+                    <div className='col-md-2 px-4 mx-md-auto d-flex justify-content-between align-items-center'>
+                        <ImFacebook />
+                        <AiFillInstagram />
+                        <AiOutlineTwitter />
+                        <ImLinkedin2 />
+                    </div>
+                    <div className='col-md-5'>
+                        <hr />
+                    </div>
+
+                </div>
+                <div className='d-md-flex justify-content-between mt-4'>
+                    <div className={styles.copyrights}>
+                        <p>© {new Date().getFullYear()} Alluvium Corporation. All rights reserved.</p>
+                    </div>
+                    <div className={styles.extralinks}>
+                        <a href='#' className='me-3'>Cookie Settings</a>
+                        <a href='#' className='me-3'>Legal Information</a>
+                        <a href='#'>Privacy Policy</a>
+                    </div>
                 </div>
             </div>
         </footer>
