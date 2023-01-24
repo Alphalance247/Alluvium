@@ -14,6 +14,14 @@
             height: unset !important;
         }
 
+        h2 {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 40px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
         .welcome {
             height: 700px;
             width: 100%;
@@ -123,6 +131,12 @@
             strong {
                 color: #ffffff;
             }
+        }
+
+        .achievements {
+            position: relative;
+            padding: 3.5rem 0;
+            background-color: #0D1117;
         }
     }
 }

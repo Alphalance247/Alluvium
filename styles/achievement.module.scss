@@ -1,0 +1,26 @@
+.counter{
+    background: #132130;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    column-gap: 15px;
+    margin: 2rem 0;
+
+    h3{
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 44px;
+        text-align: center;
+        color: #E37915;
+        margin: 0;
+    }
+
+    p {
+        color: #ffffff;
+        font-weight: bold;
+        margin: 2px 0;
+    }
+}

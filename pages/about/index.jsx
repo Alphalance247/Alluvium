@@ -2,17 +2,13 @@ import Head from 'next/head'
 import Link from 'next/link'
 import Navigation from '../../components/navigation'
 import styles from '../../styles/about.module.scss'
-import { productData } from '../../data'
-import { teamsData } from 'lib/staff.ts';
 import Image from 'next/image'
+import {AchievementCounter, achievements } from 'components/Achievement'
+import BookingCTA from 'components/Booking'
 
 
-export default function Products({ products, teams }) {
+export default function AboutUs() {
 
-    const getImagePath = name => {
-        let smallName = name.split(' ')[0].toLowerCase()
-        return `/assets/about/team/${smallName}.png`
-    }
     const imagePath = "/assets/about/"
 
     return (
@@ -21,7 +17,7 @@ export default function Products({ products, teams }) {
                 <title>About us | Alluvium</title>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navigation theme={"dark"} products={products} />
+            <Navigation />
             <main>
                 <section className={styles.welcome}>
                     <div className={styles.shape}></div>
@@ -77,18 +73,24 @@ export default function Products({ products, teams }) {
                         </div>
                     </div>
                 </section>
+
+                <section className={styles.achievements}>
+                    <div className="container">
+                        <h2>Our Achievements</h2>
+                        <div className="row">
+                            {
+                                achievements.map((achievement) => (
+                                    <div className="col-md-2 col-sm-4 col-6">
+                                        <AchievementCounter name={achievement.name} value={achievement.value} />
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+                       <BookingCTA />
+                    </div>
+                </section>
             </main>
         </div>
     )
-}
-
-
-export const getStaticProps = async () => {
-    const teams = teamsData();
-    return {
-        props: {
-            products: productData,
-            teams
-        }
-    }
 }
