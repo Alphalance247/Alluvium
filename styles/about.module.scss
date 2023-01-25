@@ -19,7 +19,11 @@
             font-size: 34px;
             line-height: 40px;
             color: #ffffff;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            height: 50px;
         }
 
         .welcome {
@@ -71,20 +75,14 @@
                 color: #B3BAD1;
             }
 
-            @include media(">desktop") {
+            @include media("<=tablet") {
+                height: 500px;
 
-            }
-
-            @include media("<tablet") {
-            }
-
-            @include media("<phone") {
-            }
-            
-            @include media("<custom-view-2") {
-            }
-
-            @include media(">=phone", "<=tablet") {
+                h1 {
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 120%;
+                }
             }
         }
 
@@ -100,14 +98,6 @@
                 color: #009BC0;
             }
 
-            h2 {
-                font-weight: 700;
-                font-size: 34px;
-                line-height: 40px;
-                color: #ffffff;
-                margin-bottom: 20px;
-            }
-
             p {
                 font-weight: 400;
                 font-size: 16px;
@@ -120,6 +110,13 @@
             position: relative;
             padding: 3.5rem 0;
             background: #0F1A25;
+
+            span {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+                color: #009BC0;
+            }
 
             p {
                 font-weight: 400;
@@ -137,6 +134,58 @@
             position: relative;
             padding: 3.5rem 0;
             background-color: #0D1117;
+        }
+
+        .values {
+            position: relative;
+            padding: 3.5rem 0;
+            background-color: #F0F2F3;
+            background-image: url("/assets/Alluvium-logo-bg.png");
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-size: 20%;
+
+            h2{
+                color: #0D1117;
+                text-align: center;
+            }
+        }
+
+        .cta{
+            background-color: #0D1117;
+            padding: 3.5rem 0;
+        }
+
+        .impact {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 50px;
+            background-color: #0D1117;
+            padding: 3.5rem 0;
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            strong {
+                color: #ffffff;
+            }
+
+            .content {
+                padding-left: 50px;
+            }
+
+            @include media("<tablet") {
+                grid-template-columns: 1fr;
+
+                .content {
+                    padding: 20px;
+                }
+            }
         }
     }
 }

@@ -32,11 +32,28 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .bg-pri {
-  background-color: #009BC0;
+  background-color: #E37915;
   color: white;
 }
 
 .bg-sec{
   background-color: #223D55 ;
   color: white;
+}
+
+.btn {
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.btn-pri {
+  background: #E37915;
+  border: 1.5px solid #E37915;
+  color: #FFFFFF !important;
 }
