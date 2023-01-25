@@ -545,7 +545,7 @@ export const ourServicesData = [
     title: "Software Development",
     icon: "/assets/services/software-development.png",
     subtitle: "We engineer and support migration and implementation plugins like Scrum Companion, Cloud Counter, Compare Jira Resources",
-    services: ["Applications Development and Optimization", "Web Development"],
+    services: ["Applications Development", "Applications Optimization", "Web Development", "Software Consulting"],
     link: "#",
   },
 ]

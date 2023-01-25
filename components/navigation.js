@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from 'next/link';
 import styles from '../styles/navigation.module.scss';
 import { MdOutlineKeyboardArrowDown, MdOutlineKeyboardArrowUp } from 'react-icons/md';
-import { ourServicesData } from "data";
+import { ourServicesData, caseStudiesData } from "data";
 
 
 export default function Navigation({ theme, ourServices }) {
@@ -44,7 +44,7 @@ export default function Navigation({ theme, ourServices }) {
                                     <span>Company</span>
                                     {
                                         (dropdownActive && (currentDropdown === 'company')) ?
-                                            <MdOutlineKeyboardArrowUp size={'1.5em'} className="fw-bold text-white" />
+                                            <MdOutlineKeyboardArrowUp size={'1.5em'} className="fw-bold text-dark" />
                                             :
                                             <MdOutlineKeyboardArrowDown size={'1.5em'} className="fw-bold text-dark" />
 
@@ -53,9 +53,11 @@ export default function Navigation({ theme, ourServices }) {
                                 <div className={(dropdownActive && (currentDropdown === 'company')) ? styles.dropdownDiv : styles.dropdownHidden}>
                                     <ul>
                                         <li><Link href="/about">About us</Link></li>
-                                        {/* <li><Link href="/products">Our Products</Link></li> */}
-                                        <li><Link href="/#services">Our Services</Link></li>
+                                        <li><a href="http://university.alluvium.net" target='_blank'>Alluvium University (AU)</a></li>
+                                        <li><Link href="/showing-interest">Show Interest (AU)</Link></li>
                                         <li><Link href="/reel">Project Reel</Link></li>
+                                        <li><Link href="/support/contact">Contact Us</Link></li>
+                                        {/* <li><Link href="/#services">Our Services</Link></li> */}
                                     </ul>
                                 </div>
                             </div>
@@ -66,7 +68,7 @@ export default function Navigation({ theme, ourServices }) {
                                     <span>Services</span>
                                     {
                                         (dropdownActive && (currentDropdown === 'services')) ?
-                                            <MdOutlineKeyboardArrowUp size={'1.5em'} className="fw-bold text-white" />
+                                            <MdOutlineKeyboardArrowUp size={'1.5em'} className="fw-bold text-dark" />
                                             :
                                             <MdOutlineKeyboardArrowDown size={'1.5em'} className="fw-bold text-dark" />
 
@@ -75,8 +77,8 @@ export default function Navigation({ theme, ourServices }) {
                                 <div className={(dropdownActive && (currentDropdown === 'services')) ? styles.dropdownDiv : styles.dropdownHidden}>
                                     <ul>
                                         {
-                                            ourServices && ourServices.map((service)=>(
-                                                <li key={service.id}><Link href="/#">{service.title}</Link></li>
+                                            ourServicesData?.length && ourServicesData.map((service) => (
+                                                <li key={service.id}><Link href="/#services">{service.title}</Link></li>
                                             ))
                                         }
                                     </ul>
@@ -86,24 +88,30 @@ export default function Navigation({ theme, ourServices }) {
                         <li><a href="https://marketplace.atlassian.com/vendors/1218751/alluvium" target="_blank">Our Products</a></li>
                         <li><a href="https://blog.alluvium.net/" rel="Alluvium" target="_blank">Blog</a></li>
                         <li>
+                            <Link href="/#case-studies">Case Studies</Link>
+                        </li>
+                        {/* <li>
                             <div>
-                                <p onClick={() => toggleDropdown('university')} className={(dropdownActive && (currentDropdown === 'university')) ? styles.dropdownActive : styles.dropdownToggler}>
-                                    <span>University</span>
+                                <p onClick={() => toggleDropdown('Case Studies')} className={(dropdownActive && (currentDropdown === 'Case Studies')) ? styles.dropdownActive : styles.dropdownToggler}>
+                                    <span>Case Studies</span>
                                     {
-                                        (dropdownActive && (currentDropdown === 'university')) ?
-                                            <MdOutlineKeyboardArrowUp size={'1.5em'} className="fw-bold text-white" />
+                                        (dropdownActive && (currentDropdown === 'Case Studies')) ?
+                                            <MdOutlineKeyboardArrowUp size={'1.5em'} className="fw-bold text-dark" />
                                             :
                                             <MdOutlineKeyboardArrowDown size={'1.5em'} className="fw-bold text-dark" />
                                     }
                                 </p>
-                                <div className={(dropdownActive && (currentDropdown === 'university')) ? styles.dropdownDiv : styles.dropdownHidden}>
+                                <div className={(dropdownActive && (currentDropdown === 'Case Studies')) ? styles.dropdownDiv : styles.dropdownHidden}>
                                     <ul>
-                                        <li><Link href="/showing-interest">Show Interest (AU)</Link></li>
-                                        <li><a href="http://university.alluvium.net" target='_blank'>Alluvium University (AU)</a></li>
+                                        {
+                                            caseStudiesData?.length && caseStudiesData.map((caseStudy) => (
+                                                <li key={caseStudy.id}><Link href="/#case-studies">{caseStudy.title}</Link></li>
+                                            ))
+                                        }
                                     </ul>
                                 </div>
                             </div>
-                        </li>
+                        </li> */}
                         <li>
                             <Link href="/support/contact">
                                 <a className={styles.contactUsButton}>Contact Us</a>
@@ -114,13 +122,22 @@ export default function Navigation({ theme, ourServices }) {
                         <ul>
                             <li><Link href="/">+ Home</Link></li>
                             {/* <li><Link href="/products">+ Our Products</Link></li> */}
-                            <li><Link href="/#services">+ Our Services</Link></li>
-                            <li><Link href="/reel">+ Project Reel</Link></li>
                             <li><Link href="/about">+ About us</Link></li>
-                            {/* <li><Link href="/team">+ Our Team</Link></li> */}
                             <li><a href="http://university.alluvium.net" target='_blank'>+ Alluvium University (AU)</a></li>
                             <li><Link href="/showing-interest">+ Show Interest (AU)</Link></li>
+                            <li><Link href="/reel">+ Project Reel</Link></li>
+                            {/* <li><Link href="/support/contact">Contact Us</Link></li> */}
+                            <li><Link href="/#services">+ Our Services</Link></li>
                             <li><a href="https://marketplace.atlassian.com/vendors/1218751/alluvium" target="_blank">+ Our Products</a></li>
+                            <li><a href="https://blog.alluvium.net/" rel="Alluvium" target="_blank">+ Blog</a></li>
+                            {/* <li><Link href="/reel">+ Project Reel</Link></li> */}
+                            <li>
+                                <Link href="/#case-studies">+ Case Studies</Link>
+                            </li>
+                            {/* <li><Link href="/about">+ About us</Link></li> */}
+                            {/* <li><Link href="/team">+ Our Team</Link></li> */}
+                            {/* <li><a href="http://university.alluvium.net" target='_blank'>+ Alluvium University (AU)</a></li> */}
+                            {/* <li><Link href="/showing-interest">+ Show Interest (AU)</Link></li> */}
                             {/* <li><Link href="/onboarding">+ Onboarding</Link></li> */}
                             <li><Link href="/support">+ Support (FAQs)</Link></li>
                             <li><Link href="/support/contact">+ Contact Us</Link></li>
@@ -146,9 +163,9 @@ export default function Navigation({ theme, ourServices }) {
 
 export const getStaticProps = async () => {
     return {
-      props: {
-        products: productData,
-        ourServices: ourServicesData
-      }
+        props: {
+            products: productData,
+            ourServices: ourServicesData
+        }
     }
-  }
+}

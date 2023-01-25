@@ -23,7 +23,7 @@ const OurSolution = () => {
                                 industries.map(industry => (
                                     <div className={styles.industry} key={industry.industry}>
                                         <div className="yellow-bg">
-                                            <Image src={industry.icon} width={56} height={47} priority loading="eager" />
+                                            <Image src={industry.icon} alt={industry.industry} width={56} height={47} priority loading="eager" />
                                         </div>
                                         <span>{industry.industry}</span>
                                     </div>

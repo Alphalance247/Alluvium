@@ -9,7 +9,7 @@ const CaseStudy = ({caseStudy}) => {
         <>
         <div className={`container-fluid p-0 m-0 ${styles.caseStudy}`}>
             <div className={styles.head}>
-                <Image src={caseStudy?.clientLogo} height={102} width={214} priority loading='eager' />
+                <Image src={caseStudy?.clientLogo} alt={caseStudy?.title} height={102} width={214} priority loading='eager' />
             </div>
             <div className={styles.body}>
                 <h6>{caseStudy?.title}</h6>

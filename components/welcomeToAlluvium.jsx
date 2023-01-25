@@ -18,10 +18,10 @@ const WelcomeToAlluvium = () => {
                             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient </p>
 
                             <Link href={'/about'}>
-                                <a className={styles.learnButton}>Learn More</a>
+                                <a aria-label="Learn more about Alluvium" className={styles.learnButton}>Learn More</a>
                             </Link>
                         </div>
-                        <div className="col-md-6 ps-lg-5">
+                        <div className="col-md-6 ps-xl-5">
                             <div className={styles.stats}>
                                 {
                                     milestonesData.map(milestone=>(

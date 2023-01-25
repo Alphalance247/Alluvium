@@ -10,9 +10,9 @@ const Service = ({ icon, service }) => {
         <>
             <div className={`container-fluid mb-5 mb-sm-0 ${styles.service}`}>
                 <div className="d-flex align-items-center mb-4">
-                    <Image src={icon} height={50} width={50} priority loading='eager' />
+                    <Image src={icon} alt={service?.title} height={50} width={50} priority loading='eager' />
                     <div className="ms-3">
-                        <h6>{service?.title}</h6>
+                        <h5>{service?.title}</h5>
                         <span>{service?.services?.length || '0'} Services</span>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ const Service = ({ icon, service }) => {
 
                 {
                     service?.link && <Link href={service?.link}>
-                        <a>
+                        <a aria-label={`Learn more on ${service?.title}`}>
                             Learn More <MdDoubleArrow />
                         </a>
                     </Link>

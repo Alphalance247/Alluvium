@@ -32,7 +32,7 @@ export function AltFooter() {
                         <div>
                             <h3>DOWNLOAD BROCHURE</h3>
 
-                            <a className={styles.download}>Download</a>
+                            <a aria-label='Download our brochure' download='#' className={styles.download}>Download</a>
                         </div>
                     </div>
                     <div className={styles.altFooterMainSectionComponent}>
@@ -111,14 +111,14 @@ export function AltFooter() {
                         <hr />
                     </div>
                     <div className='col-md-2 px-4 mx-md-auto d-flex justify-content-between align-items-center'>
-                        <a href="https://www.facebook.com/alluviumhq/?ti=as" target="_blank">
+                        <a href="https://www.facebook.com/alluviumhq/?ti=as" aria-label='facebook' target="_blank">
                             <ImFacebook />
                         </a>
                         {/* <AiFillInstagram /> */}
-                        <a href="https://twitter.com/alluviumhq?s=08" target="_blank">
+                        <a href="https://twitter.com/alluviumhq?s=08" aria-label='twitter' target="_blank">
                             <AiOutlineTwitter />
                         </a>
-                        <a href="https://www.linkedin.com/company/alluvium-hq/" target="_blank">
+                        <a href="https://www.linkedin.com/company/alluvium-hq/" aria-label='linkedIn' target="_blank">
                             <ImLinkedin2 />
                         </a>
                     </div>

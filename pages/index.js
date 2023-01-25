@@ -7,7 +7,10 @@ import styles from '../styles/homepage.module.scss'
 import Navigation from '../components/navigation';
 import ProductPreview from '../components/productPreview';
 import News from "../components/news-and-trends/news";
-import { Carousel } from 'react-responsive-carousel'
+import { Carousel } from 'react-responsive-carousel';
+import Services from 'components/services-components/services';
+import CaseStudies from 'components/case-studies/case-studies';
+
 
 // Import css files
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -93,45 +96,8 @@ export default function Home({ products, features, ourServices, milestones, trus
             </div>
           </div>
         </section>
-        <section className={styles.ourServices} id="services">
-          <div className={styles.ourServicesHeader}>
-            <h1 className={styles.ourServicesTitle}>Our Services</h1>
-            <p className={styles.ourServicesSubtitle}>Unlock the full potential of your business with our comprehensive suite of services</p>
-          </div>
-          <div className={styles.ourServicesList}>
-            {
-              ourServices.map((service) => {
-                const { id, title, icon, services, subtitle, link } = service;
-
-                return (
-                  // <Link href={link} key={id}>
-                    // <a className=''>
-                      <div className={styles.service}>
-                        <div className={styles.serviceIcon}>
-                          <img src={icon} alt={title} />
-                        </div>
-                        <div className={styles.serviceInfo}>
-                          <h3 className={styles.serviceTitle}>{title}</h3>
-                          {/* <p className={styles.serviceSubtitle}>{subtitle}</p> */}
-                          <ul className={styles.serviceSubtitle}>
-                            {
-                              services.map((serv, id)=>(
-                                <li key={serv+id}>{serv}</li>
-                              ))
-                            }
-                          </ul>
-                        </div>
-                        <div className={styles.serviceLink}>
-
-                        </div>
-                      </div>
-                    // </a>
-                  // </Link>
-                )
-              })
-            }
-          </div>
-        </section>
+        <Services />
+        <CaseStudies />
         <section className={styles.ourMilestones}>
           <div className={styles.ourMilestonesHeader} >
             <h1 className={styles.ourMilestonesTitle}>Our Major Milestones</h1>
