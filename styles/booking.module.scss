@@ -4,10 +4,16 @@
     background-color: #0F1A25;
     align-items: center;
     background-image: url("/assets/about/booking-bg.png");
+    background-attachment: fixed;
     border-radius: 10px;
     width: 100%;
     padding: 20px;
     margin: 2rem 0;
+
+    @media screen and (max-width: 576px) {
+        display: block;
+        text-align: center;
+    }
 
     h3{
         font-weight: 700;
@@ -15,6 +21,11 @@
         line-height: 30px;
         letter-spacing: 0.0125em;
         color: #FFFFFF;
+        margin: 0;
+
+        @media screen and (max-width: 576px) {
+            margin-bottom: 40px !important;
+        }
     }
 
     a {
@@ -28,5 +39,6 @@
         color: #FFFFFF !important;
         font-weight: 600;
         padding: 10px 50px;
+        text-align: center;
     }
 }

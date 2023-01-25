@@ -2,6 +2,7 @@ import React from "react";
 import styles from '../../styles/case-studies.module.scss';
 import { caseStudiesData } from "data";
 import CaseStudy from "./case-study";
+import BookingCTA from "components/Booking";
 
 const CaseStudies = () => {
     return (
@@ -28,6 +29,7 @@ const CaseStudies = () => {
                                 })
                             }
                     </div>
+                    <BookingCTA />
                 </div>
             </section>
         </>

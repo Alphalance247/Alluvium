@@ -13,6 +13,7 @@ import Hero from 'components/Hero';
 import OurSolution from 'components/ourSolutions';
 import OurPartners from 'components/ourPartners';
 import WelcomeToAlluvium from 'components/welcomeToAlluvium';
+import ToolsAndPlatforms from 'components/toolsAndPlatforms'
 
 const Home = () => {
     return (
@@ -22,10 +23,11 @@ const Home = () => {
                 <Hero />
                 <Services />
                 <WelcomeToAlluvium />
-                <OurSolution />
+                <ToolsAndPlatforms />
                 <WhyAlluvium />
                 <OurPartners />
                 <CaseStudies />
+                <OurSolution />
                 <News />
             </div>
         </>

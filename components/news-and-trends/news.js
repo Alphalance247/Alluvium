@@ -15,10 +15,10 @@ const News = () => {
 
 	return (
 		<div className={`container-fluid p-md-0 m-0 ${styles.news}`}>
-		<div className='container mx-auto'>
-		<NewsHeader />
-		{ (news.length > 0) ? <Trendlist trends={news.slice(0, 3)} /> : "" }
-		</div>
+			<div className='container mx-auto'>
+				<NewsHeader />
+				{(news.length > 0) ? <Trendlist trends={news.slice(0, 3)} /> : ""}
+			</div>
 		</div>
 	);
 };

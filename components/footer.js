@@ -34,23 +34,6 @@ export function AltFooter() {
 
                             <a className={styles.download}>Download</a>
                         </div>
-                        <ul className={styles.footerSocials}>
-                            <li className={styles.footerSocialIcon}>
-                                <a href="https://twitter.com/alluviumhq?s=08" target="_blank">
-                                    <img src="/assets/socials/twitter.svg" alt='twitter' />
-                                </a>
-                            </li>
-                            <li className={styles.footerSocialIcon}>
-                                <a href="https://www.facebook.com/alluviumhq/?ti=as" target="_blank">
-                                    <img src="/assets/socials/facebook.svg" alt='facebook' />
-                                </a>
-                            </li>
-                            <li className={styles.footerSocialIcon}>
-                                <a href="https://www.linkedin.com/company/alluvium-hq/" target="_blank">
-                                    <img src="/assets/socials/linkedin.svg" alt='linkedin' />
-                                </a>
-                            </li>
-                        </ul>
                     </div>
                     <div className={styles.altFooterMainSectionComponent}>
                         <h3 className={styles.altFooterMainSectionComponentTitle}>Company</h3>
@@ -128,10 +111,16 @@ export function AltFooter() {
                         <hr />
                     </div>
                     <div className='col-md-2 px-4 mx-md-auto d-flex justify-content-between align-items-center'>
-                        <ImFacebook />
-                        <AiFillInstagram />
-                        <AiOutlineTwitter />
-                        <ImLinkedin2 />
+                        <a href="https://www.facebook.com/alluviumhq/?ti=as" target="_blank">
+                            <ImFacebook />
+                        </a>
+                        {/* <AiFillInstagram /> */}
+                        <a href="https://twitter.com/alluviumhq?s=08" target="_blank">
+                            <AiOutlineTwitter />
+                        </a>
+                        <a href="https://www.linkedin.com/company/alluvium-hq/" target="_blank">
+                            <ImLinkedin2 />
+                        </a>
                     </div>
                     <div className='col-md-5'>
                         <hr />

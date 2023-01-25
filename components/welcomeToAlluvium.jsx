@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import styles from "../styles/welcomeToAlluvium.module.scss";
 import { milestonesData } from "data";
+import BookingCTA from "./Booking";
 
 
 const WelcomeToAlluvium = () => {
@@ -9,7 +10,7 @@ const WelcomeToAlluvium = () => {
         <>
             <div className={`container-fluid ${styles.cover}`}>
                 <div className="container">
-                    <div className="row">
+                    <div className="row mb-5">
                         <div className="col-md-6">
                             <h2>Welcome to Alluvium</h2>
                             <h3>Leading the Way in Data Migration Solutions</h3>
@@ -33,6 +34,7 @@ const WelcomeToAlluvium = () => {
                             </div>
                         </div>
                     </div>
+                    <BookingCTA />
                 </div>
             </div>
         </>
