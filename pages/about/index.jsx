@@ -7,6 +7,9 @@ import {AchievementCounter, achievements } from 'components/Achievement'
 import {BookingCTA, ConsultationForm} from 'components/Consultation'
 import { CoreValue, values } from 'components/about-us/CoreValues'
 import Services from 'components/services-components/services';
+import WhyAlluvium from 'components/whyAlluvium';
+import OurSolution from 'components/ourSolutions';
+import OurPartners from 'components/ourPartners';
 
 export default function AboutUs() {
 
@@ -97,6 +100,8 @@ export default function AboutUs() {
                 </section>
 
                 <Services />
+                <WhyAlluvium />
+                <OurPartners />
 
                 <section className={styles.values}>
                     <div className="container">
@@ -118,6 +123,8 @@ export default function AboutUs() {
                         <BookingCTA />
                     </div>
                 </section>
+
+                <OurSolution />
 
                 <section className={styles.impact}>
                     <div className={styles.content}>
