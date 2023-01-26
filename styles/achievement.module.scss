@@ -1,3 +1,4 @@
+@import'lib/breakpoints.scss';
 .counter{
     background: #132130;
     border-radius: 5px;
@@ -22,5 +23,9 @@
         color: #ffffff;
         font-weight: bold;
         margin: 2px 0;
+    }
+
+    @include media("<=tablet") {
+        margin: 0.8rem 0;
     }
 }

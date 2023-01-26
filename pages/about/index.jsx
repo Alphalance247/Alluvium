@@ -33,19 +33,22 @@ export default function AboutUs() {
                         
                     </div>
                 </section>
+
                 <section className={styles.about}>
                     <div className="container">
-                        <div className="row">
+                        <div className="row gap-5 justify-content-between align-items-center">
                             <div className="col-md-6">
                                 <div className={styles.content}>
-                                    <span>About us</span>
-                                    <h2>About Alluvium</h2>
+                                    <div className="header">
+                                        <h2>About us</h2>
+                                        <h3>About Alluvium</h3>
+                                    </div>
                                     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p> 
                                     <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p> <p>Cum sociis natoque penatibus et magnis dis parturient. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient. </p>
                                 </div>
                             </div>
-                            <div className="position-relative">
-                                <Image src={'/assets/about/atlassian-tools-icon.png'} className={styles.image} layout="fill" alt='Atlassian tools'/>
+                            <div className="position-relative col-md-5">
+                                <Image src={'/assets/about/atlassian-tools-icon.png'} width={500} height={450} objectFit='contain' alt='Atlassian tools'/>
                             </div>
                         </div>
                     </div>
@@ -54,23 +57,25 @@ export default function AboutUs() {
                 <section className={styles.story}>
                     <div className="container">
                         <div className="text-center">
-                            <span>Our Story</span>
-                            <h2>How it All started</h2>
+                            <h2>Our Story</h2>
+                            <h3>How it All started</h3>
                         </div>
-                        <div className="d-flex">
-                            <div className="col-md-6">
-                                <div className="d-flex">
-                                    <div className='position-relative'>
-                                        <Image src={imagePath+"Image-2.png"} layout="fill" className={styles.image} />
+                        <div className="row align-items-center">
+                            <div className="col-lg-6">
+                                <div className="row">
+                                    <div className='col-6 position-relative'>
+                                        <Image src={imagePath+"Image-2.png"} objectFit="cover" width={250} height={200}  />
                                     </div>
-                                    <div className='position-relative'>
-                                        <Image src={imagePath+"Image-3.png"} layout="fill" className={styles.image} />
+                                    <div className='col-6 position-relative'>
+                                        <Image src={imagePath+"Image-3.png"} objectFit="cover" width={250} height={200} />
+                                    </div>
+                                    <div className='position-relative col-12'>
+                                        <Image src={imagePath+"Image-1.png"} objectFit="cover" width={532} height={283} />
                                     </div>
                                 </div>
                                 
-                                <Image src={imagePath+"Image-1.png"} layout="fill" className={styles.image}/>
                             </div>
-                            <div className="col-md-6">
+                            <div className="col-lg-6">
                                 <p>It was the summer of 2016, Taiwo, formerly of the Big Four, had been brought into a large UK Bank digital transformation programme to consolidate their project management tool estate into one consolidated Atlassian toolset, was joined by Wale, also formerly of the Big Four, to establish an Agile Way of Working. The synergy was instant and long lasting. </p>
                                 <p><strong>The tools supported the controls, deployment and scaling of the new way of working while the methodology utilised and maximised the Atlassian toolset.</strong> </p>
                                 <p>We had to consolidate data and configuration from several third-party application, couple of Jira instances to a single new Jira instance. Same for documentation storage and Devops tools. All the while building, integrating to, and reporting from a new data lake.</p>
@@ -88,7 +93,7 @@ export default function AboutUs() {
                         <div className="row">
                             {
                                 achievements.map((achievement) => (
-                                    <div className="col-md-2 col-sm-4 col-6" key={achievemnetKeys++}>
+                                    <div className="col-lg-2 col-md-4 col-sm-6 col-6" key={achievemnetKeys++}>
                                         <AchievementCounter name={achievement.name} value={achievement.value} />
                                     </div>
                                 ))
@@ -100,7 +105,9 @@ export default function AboutUs() {
                 </section>
 
                 <Services />
+
                 <WhyAlluvium />
+
                 <OurPartners />
 
                 <section className={styles.values}>
