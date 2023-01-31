@@ -39,7 +39,7 @@ export default function AboutUs() {
                         <div className="row gap-5 justify-content-between align-items-center">
                             <div className="col-md-6">
                                 <div className={styles.content}>
-                                    <div className="header">
+                                    <div className={styles.heading}>
                                         <h2>About us</h2>
                                         <h3>About Alluvium</h3>
                                     </div>
@@ -55,25 +55,24 @@ export default function AboutUs() {
                 </section>
 
                 <section className={styles.story}>
-                    <div className="container">
-                        <div className="text-center">
+                    <div className={`${styles.content}  container`}>
+                        <div className={` text-center ${styles.heading}`}>
                             <h2>Our Story</h2>
                             <h3>How it All started</h3>
                         </div>
                         <div className="row align-items-center">
-                            <div className="col-lg-6">
-                                <div className="row">
-                                    <div className='col-6 position-relative'>
-                                        <Image src={imagePath+"Image-2.png"} objectFit="cover" width={250} height={200}  />
+                            <div className={`col-lg-6 p-5`}>
+                                <div className="d-flex flex-wrap">
+                                    <div className='col-6 pe-1'>
+                                        <Image src={imagePath+"Image-2.png"} width={256 * 1.2} height={241 * 1.2}  />
                                     </div>
-                                    <div className='col-6 position-relative'>
-                                        <Image src={imagePath+"Image-3.png"} objectFit="cover" width={250} height={200} />
+                                    <div className='col-6 ps-1'>
+                                        <Image src={imagePath+"Image-3.png"} width={256 * 1.2} height={241 * 1.2} />
                                     </div>
-                                    <div className='position-relative col-12'>
-                                        <Image src={imagePath+"Image-1.png"} objectFit="cover" width={532} height={283} />
+                                    <div className='col-12'>
+                                        <Image src={imagePath+"Image-1.png"} width={532 * 1.2} height={283 * 1.2} />
                                     </div>
                                 </div>
-                                
                             </div>
                             <div className="col-lg-6">
                                 <p>It was the summer of 2016, Taiwo, formerly of the Big Four, had been brought into a large UK Bank digital transformation programme to consolidate their project management tool estate into one consolidated Atlassian toolset, was joined by Wale, also formerly of the Big Four, to establish an Agile Way of Working. The synergy was instant and long lasting. </p>
@@ -89,7 +88,7 @@ export default function AboutUs() {
 
                 <section className={styles.achievements}>
                     <div className="container">
-                        <h2>Our Achievements</h2>
+                        <h2 className={styles.h2}>Our Achievements</h2>
                         <div className="row">
                             {
                                 achievements.map((achievement) => (
@@ -112,7 +111,7 @@ export default function AboutUs() {
 
                 <section className={styles.values}>
                     <div className="container">
-                        <h2>Our Core Values</h2>
+                        <h2 className={styles.h2}>Our Core Values</h2>
                         <div className="row">
                             {
                                 values.map((value) => (
@@ -135,7 +134,7 @@ export default function AboutUs() {
 
                 <section className={styles.impact}>
                     <div className={styles.content}>
-                        <h2>Our Impact in the Society</h2>
+                        <h2 className={styles.h2}>Our Impact in the Society</h2>
                         <p><strong> JayTee Ojo Foundation</strong> is a non-profit organisation set up from Ekiti to help make the young person globally competitive and help our communities towards self-sustenance.</p> 
                         <p>We have, among other projects, donated solar streetlights to light up communities at night, we have donated borehole water fountains, we have sponsored several medical interventions, food banks, sports intervention as well as farmer empowerment and local farming interventions.</p> 
                         <p>For all the intervention projects and works mentioned above and many more besides, we are prouder of the investments we make into the future via educational interventions from donating books to students, to multiple scholarship programmes that cover school fees, various examination registration fees, accommodation, and projects support.</p>

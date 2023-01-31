@@ -11,9 +11,27 @@
             object-fit: contain;
             width: 100% !important;
             position: relative !important;
+            height: unset;
         }
 
-        h2 {
+        .heading {
+            h3 {
+                font-weight: 700;
+                font-size: 34px;
+                line-height: 40px;
+                color: #ffffff;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+                color: #009BC0;
+            }
+        }
+
+        .h2 {
             font-weight: 700;
             font-size: 34px;
             line-height: 40px;
@@ -43,7 +61,7 @@
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                z-index: 9;
+                z-index: 3;
             }
             
             .content {
@@ -107,9 +125,16 @@
         }
 
         .story {
-            position: relative;
+            // position: relative;
             padding: 3.5rem 0;
             background: #0F1A25;
+
+            .content {
+                background-image: url('/assets/about/Image.png');
+                background-repeat: no-repeat;
+                background-size: 20%;
+                background-position: left 100px;
+            }
 
             span {
                 font-weight: 600;
