@@ -61,7 +61,7 @@
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                z-index: 3;
+                z-index: 1;
             }
             
             .content {
@@ -73,7 +73,6 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                z-index: 2;
                 color: #ffffff;
                 text-align: center;
             }

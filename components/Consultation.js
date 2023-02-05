@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from "react";
-import Email from '../lib/smtp.js';
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import Link from 'next/link';
 import styles from '../styles/booking.module.scss';
@@ -22,7 +21,6 @@ export const ConsultationForm = () => {
     const [company , setCompany] = useState('')
     const [phone , setPhone] = useState('')
     const [message , setMessage] = useState('')
-    const [error , setError] = useState('')
     const { addToast } = useToasts();
 
     const onsubmit = async (e) => {
@@ -39,37 +37,26 @@ export const ConsultationForm = () => {
             phone: phone,
             message: message,
         };
-        let response = await fetch("/api/consultation", {
-            method: "POST",
-            headers: {
-                'Accept': 'application/json, text/plain, */*',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData),
-        });
-        let result = await response.json();
-        const status = result.status;
-        // show message based on status
-        addToast(result.message, { appearance: status });
-    
-        // send email
-        const body = `
-                    <p><strong> Name: </strong> ${fullname} </p>
-                    <p><strong>Comapny:</strong> ${company ?? "-"} </p>
-                    <p><strong>Email:</strong> ${email} </p>
-                    <p><strong>Telephone:</strong> ${phone} </p>
-                    <p><strong>Message:</strong> ${message} </p>`
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "lekanvgbg@gmail.com",
-            Password : "jngpaymefwfndmfx",
-            To : "lekanvgbg@gmail.com",
-            From : email,
-            Subject : "New consultation form submission from Alluvium.net",
-            Body : body
-        }).then(
-            message => addToast('Saved Successfully: '+ message, { appearance: 'success' })
-        );
+       
+        try{
+            let response = await fetch("/api/consultation", {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData),
+            });
+
+            let result = await response.json();
+            const status = result.status;
+            // show message based on status
+            addToast(result.message, { appearance: status });
+        }catch (e) {
+            console.log(e);
+            addToast('Oops something went wrong. Please try again.', { appearance: "error" });
+        }
+
         setFullname("")
         setEmail("")
         setPhone("")
@@ -92,7 +79,7 @@ export const ConsultationForm = () => {
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="">Email <span className='text-danger'>*</span></label>
-                                        <input onChange={(e) => setEmail(e.target.value)} value={email}  type="text" className="form-control" name="email" placeholder="" />
+                                        <input onChange={(e) => setEmail(e.target.value)} value={email}  type="email" className="form-control" name="email" placeholder="" />
                                     </div>
                                 </div>
 
@@ -111,8 +98,6 @@ export const ConsultationForm = () => {
                                     <label for="">How can we help you? <span className='text-danger'>*</span></label>
                                     <textarea onChange={(e) => setMessage(e.target.value)} value={message}  name="message" id="message" className='form-control' rows="7"></textarea>
                                 </div>
-                                <div className='notificationAlert'>{error}</div>
-                                <div className='notificationAlert'>{error}</div>
                                 <div class="form-group mt-5">
                                     <button type="submit" class="btn btn-pri">Submit</button>
                                 </div>
