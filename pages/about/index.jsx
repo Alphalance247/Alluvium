@@ -43,8 +43,9 @@ export default function AboutUs() {
                                         <h2>About us</h2>
                                         <h3>About Alluvium</h3>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p> 
-                                    <p>Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p> <p>Cum sociis natoque penatibus et magnis dis parturient. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient. </p>
+                                    <p>Welcome to Alluvium, where <strong>innovation meets expertise.</strong>  We are a team of passionate professionals dedicated to providing businesses with cutting-edge solutions leveraging the Atlassian suite of tools. <strong>Our aim is to simplify the complexity of digital transformation and help our clients achieve their goals with ease and efficiency.</strong> </p> 
+                                    <p>At Alluvium, we believe in delivering more than just products and services. We strive to provide a unique and personalised experience for each of our clients, understanding their specific needs and providing customised solutions. <strong>Our unique value proposition lies in our extensive expertise in the Atlassian platform, combined with a focus on innovation and a commitment to excellence.</strong> </p> <p>Our mission is to empower businesses with the tools and support they need to succeed in today’s digital landscape. We understand the importance of staying ahead of the curve and are constantly exploring new ways to enhance our services and products. </p>
+                                    <p>We invite you to learn more about Alluvium and our commitment to excellence. Our team is dedicated to helping you succeed, and we look forward to the opportunity to work with you.</p>
                                 </div>
                             </div>
                             <div className="position-relative col-md-5">
@@ -112,10 +113,11 @@ export default function AboutUs() {
                 <section className={styles.values}>
                     <div className="container">
                         <h2 className={styles.h2}>Our Core Values</h2>
+                        <p className={styles.p}>At Alluvium, we are guided by three core values - <strong>Ownership, Leadership,</strong> and <strong>Excellence</strong>. These values serve as the foundation of everything we do and are central to our mission of delivering exceptional services and products to our clients. This drive us towards a common goal - to empower businesses with the tools and support they need to succeed in today’s digital landscape.</p>
                         <div className="row">
                             {
                                 values.map((value) => (
-                                    <div className="col-lg-3 col-md-6" key={achievemnetKeys++}>
+                                    <div className="col-lg-4 col-md-6" key={achievemnetKeys++}>
                                         <CoreValue title={value.title} description={value.description} image={value.image} bg={value.backgroundImage} />
                                     </div>
                                 ))

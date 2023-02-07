@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { validateEmail } from 'lib/validation';
 import Link from 'next/link';
 import styles from '../styles/booking.module.scss';
 
@@ -27,6 +28,10 @@ export const ConsultationForm = () => {
         e.preventDefault()
         if(!fullname || !email || !phone || !message){
             addToast("All fields marked with askteriks are required", { appearance: 'error' });
+            return
+        }
+        if(!validateEmail(email)) {
+            addToast("Please enter a valid email address", { appearance: 'error' });
             return
         }
 
