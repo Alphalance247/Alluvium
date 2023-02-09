@@ -20,7 +20,7 @@ const Service = ({ icon, service }) => {
                     {
                         service?.services?.map(subService => (
                             <li className="list-group-item m-0 px-0 bg-transparent d-flex align-items-center" key={subService}>
-                                <HiOutlineArrowNarrowRight className="me-2" /> <span>{subService}</span>
+                                <HiOutlineArrowNarrowRight className="me-2" />{subService}
                             </li>
                         ))
                     }
