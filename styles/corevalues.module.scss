@@ -1,0 +1,24 @@
+.value {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 25px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 20%;
+    margin-top: 20px;
+
+    h3{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        color: #0D1117;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #252525;
+        opacity: 0.7;
+    }
+}

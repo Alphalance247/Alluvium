@@ -35,7 +35,7 @@ const handler = async (req, res) => {
             success: true,
             users
         })})
-        .catch(err=>{
+        .catch(err => {
             console.log(err);
             return res.status(500).json({
             message: `Error: Users fetch unsuccessful. ${err.message}`,

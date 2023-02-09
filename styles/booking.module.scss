@@ -1,3 +1,4 @@
+@import'lib/breakpoints.scss';
 .booking {
     display: inline-flex;
     justify-content: space-between;
@@ -49,4 +50,64 @@
         border: 1.5px solid #E37915;
         color: #FFFFFF;
     }
+}
+
+.contact {
+    position: relative;
+    background-color: rgba(15, 26, 37, 1);
+    padding: 3.5rem 0;
+
+    h2 {
+        font-weight: 700;
+        font-size: 34px;
+        line-height: 40px;
+        color: #ffffff;
+        margin-bottom: 30px;
+    }
+    
+    .content {
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        column-gap: 100px;
+
+        label {
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 15px;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            color: #FFFFFF;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 160%;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        strong {
+            color: #ffffff;
+        }
+    }
+
+    @include media("<=tablet") {
+        .content {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+
+            form {
+                margin-bottom: 30px;
+            }
+        }
+
+    }
+
+   
 }
