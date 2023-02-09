@@ -78,33 +78,33 @@ export const ConsultationForm = () => {
                         <div>
                             <form method='POST' onSubmit={onsubmit}>
                                 <div className="row my-4">
-                                    <div class="form-group col-md-6">
-                                        <label for="">Full Name <span className='text-danger'>*</span></label>
-                                        <input onChange={(e) => setFullname(e.target.value)} value={fullname}  type="text" class="form-control" name="fullname" placeholder="" />
+                                    <div className="form-group col-md-6">
+                                        <label htmlFor="">Full Name <span className='text-danger'>*</span></label>
+                                        <input onChange={(e) => setFullname(e.target.value)} value={fullname}  type="text" className="form-control" name="fullname" placeholder="" />
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="">Email <span className='text-danger'>*</span></label>
+                                    <div className="form-group col-md-6">
+                                        <label htmlFor="">Email <span className='text-danger'>*</span></label>
                                         <input onChange={(e) => setEmail(e.target.value)} value={email}  type="email" className="form-control" name="email" placeholder="" />
                                     </div>
                                 </div>
 
                                 <div className="row my-4">
-                                    <div class="form-group col-md-6">
-                                        <label for="">Company <span className='text-danger'>*</span></label>
-                                        <input onChange={(e) => setCompany(e.target.value)} value={company}  type="text" class="form-control" name="company" placeholder="" />
+                                    <div className="form-group col-md-6">
+                                        <label htmlFor="">Company <span className='text-danger'>*</span></label>
+                                        <input onChange={(e) => setCompany(e.target.value)} value={company}  type="text" className="form-control" name="company" placeholder="" />
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="">Phone <span className='text-danger'>*</span></label>
+                                    <div className="form-group col-md-6">
+                                        <label htmlFor="">Phone <span className='text-danger'>*</span></label>
                                         <input onChange={(e) => setPhone(e.target.value)} value={phone}  type="text" className="form-control" name="telephone" placeholder="" />
                                     </div>
                                 </div>
 
-                                <div class="form-group col-md-12">
-                                    <label for="">How can we help you? <span className='text-danger'>*</span></label>
+                                <div className="form-group col-md-12">
+                                    <label htmlFor="">How can we help you? <span className='text-danger'>*</span></label>
                                     <textarea onChange={(e) => setMessage(e.target.value)} value={message}  name="message" id="message" className='form-control' rows="7"></textarea>
                                 </div>
-                                <div class="form-group mt-5">
-                                    <button type="submit" class="btn btn-pri">Submit</button>
+                                <div className="form-group mt-5">
+                                    <button type="submit" className="btn btn-pri">Submit</button>
                                 </div>
 
                             </form>
