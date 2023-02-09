@@ -1,63 +1,63 @@
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 100;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikThin.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikThin.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 200;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikExtralight.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikExtralight.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 300;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikLight.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikLight.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 400;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikRegular.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikRegular.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 500;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikMedium.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikMedium.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 600;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikSemibold.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikSemibold.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 700;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikBold.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikBold.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 900;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikBlack.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikBlack.otf') format('opentype');
   }
 @font-face {
     font-family: 'Graphik';
+    font-display: fallback;
     font-style: normal;
     font-weight: 950;
-    src: local(''),
-      url('/assets/fonts/Graphik/GraphikSuper.otf') format('otf')
+    src: url('/assets/fonts/Graphik/GraphikSuper.otf') format('opentype');
   }
