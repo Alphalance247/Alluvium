@@ -1,20 +1,24 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'
 import * as ga from '../lib/ga'
-import '../styles/globals.css'
 import Layout from '../components/layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ToastProvider } from 'react-toast-notifications';
-
+import "bootstrap/dist/css/bootstrap.css";
+import '../styles/globals.scss';
 
 
 function MyApp({ Component, pageProps }) {
 
-  useEffect(()=>{
+  useEffect(() => {
+    import("bootstrap/dist/js/bootstrap");
+  }, []);
+
+  useEffect(() => {
     AOS.init();
   }, [])
-  
+
   const router = useRouter();
 
   useEffect(() => {
@@ -27,7 +31,7 @@ function MyApp({ Component, pageProps }) {
     }
   }, [router.events])
 
-  return( 
+  return (
     <ToastProvider placement="top-center">
       <Layout>
         <Component {...pageProps} />

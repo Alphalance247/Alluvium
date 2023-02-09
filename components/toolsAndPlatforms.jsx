@@ -1,0 +1,47 @@
+import React, { useState } from "react";
+import styles from "../styles/toolsAndPlatforms.module.scss";
+import { toolsAndPlatforms } from "data";
+import Image from "next/image";
+
+const ToolsAndPlatforms = () => {
+    const [selectedItem, setSelectedItem] = useState(toolsAndPlatforms[0]);
+    return (
+        <>
+            <div className={`container-fluid ${styles.cover}`}>
+                <div className="container">
+                    <h3>Our Tools and Platforms</h3>
+                    <div className="row">
+                        <div className="col-lg-4 pe-5">
+
+                            <div className={styles.buttons}>
+                                {
+                                    toolsAndPlatforms.map((platform, id) => (
+                                        <button type="button" key={id} onClick={() => setSelectedItem(platform)} className={`list-group-item list-group-item-action ${selectedItem.name == platform.name ? styles.active : 'disabled'}`} aria-current="true">
+                                            {platform.name}
+                                            {(selectedItem.name == platform.name) && (<div></div>)}
+                                        </button>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                        <div className="col-lg-8 mt-5">
+                            <div className={styles.icons}>
+                                {
+                                    selectedItem.tools.map((tool, id) => (
+                                        <div key={id}>
+                                            <Image src={tool.icon} width={86} height={86} alt={tool.name} />
+                                            <p>{tool.name}</p>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
+
+
+export default ToolsAndPlatforms;

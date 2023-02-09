@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import styles from "../../styles/news.module.scss";
-import NewsTrends from "./newsTrends";
 import NewsHeader from "./newsHeader";
+import Trendlist from './trendList';
 
 const News = () => {
 	const [news, setNews] = useState([]);
@@ -14,9 +14,11 @@ const News = () => {
 	}, [])
 
 	return (
-		<div className={`container ${styles.news}`}>
-		<NewsHeader />
-		{ (news.length > 0) ? <NewsTrends data={news} /> : "" }
+		<div className={`container-fluid p-md-0 m-0 ${styles.news}`}>
+			<div className='container mx-auto'>
+				<NewsHeader />
+				{(news.length > 0) ? <Trendlist trends={news.slice(0, 3)} /> : ""}
+			</div>
 		</div>
 	);
 };

@@ -20,7 +20,7 @@ export default function Support({faqs,products}) {
 	    <BannerRotate bg="url(assets/support/banner.png)" title="Frequently Asked Questions" text="" />
       <main>
         {/* <SupportSubmenu/> */}
-        <div className={styles.supportDisplay}>
+        <div className={styles.supportDisplay} id="faq">
           	<FaqPage faqs={ faqs } />
         </div>
       </main>
