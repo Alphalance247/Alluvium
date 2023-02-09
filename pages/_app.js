@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router'
 import * as ga from '../lib/ga'
-import Layout from '../components/layout';
+// import Layout from '../components/layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { ToastProvider } from 'react-toast-notifications';
@@ -33,9 +33,9 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ToastProvider placement="top-center">
-      <Layout>
+      {/* <Layout> */}
         <Component {...pageProps} />
-      </Layout>
+      {/* </Layout> */}
     </ToastProvider>
   )
 }
