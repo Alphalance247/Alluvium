@@ -1,7 +1,6 @@
-import React from 'react';
+// import React from 'react';
 // import * as arrays from "../data";
 import Head from 'next/head';
-import Navigation from '../components/navigation';
 import Services from 'components/services-components/services';
 import CaseStudies from 'components/case-studies/case-studies';
 import News from '../components/news-and-trends/news';
@@ -22,7 +21,6 @@ const Home = () => {
                 <meta name="keywords" content="Alluvium, alluvium, team alluvium, atlassian products migration lab, atlassian, jira" />
             </Head>
             <div className='container-fluid p-0 m-0'>
-                <Navigation />
                 <Hero />
                 <Services />
                 <WelcomeToAlluvium />
