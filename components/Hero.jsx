@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styles from "../styles/hero.module.scss";
 
 const Hero = () => {
@@ -15,7 +16,9 @@ const Hero = () => {
                 honed our skills and expertise in providing end-to-end solutions
                 for businesses leveraging the Atlassian suite of tools{" "}
               </p>
-              <button>Schedule a Call</button>
+              <Link href={'#consultationForm'}>
+                <a>Schedule a Call</a>
+              </Link>
             </div>
           </div>
         </div>
