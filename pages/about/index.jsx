@@ -90,7 +90,7 @@ export default function AboutUs() {
                 <section className={styles.achievements}>
                     <div className="container">
                         <h2 className={styles.h2}>Our Achievements</h2>
-                        <div className="row">
+                        <div className="row mb-5">
                             {
                                 achievements.map((achievement) => (
                                     <div className="col-lg-2 col-md-4 col-sm-6 col-6" key={achievemnetKeys++}>
