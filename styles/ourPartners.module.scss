@@ -1,10 +1,15 @@
 .cover {
     min-height: 547px;
-    background: #0F1A25;
+    background-color: #0F1A25;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-image: url('/assets/company-logos/mapbase.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 
     @media screen and (max-width: 576px) {
         padding-top: 100px !important;
