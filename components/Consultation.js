@@ -10,7 +10,7 @@ export const BookingCTA = () => {
         <div className={styles.booking}>
             <h3>Talk to an Expert About Your Project</h3>
             <Link href="#consultationForm">
-                <a>Book Consultation</a>
+                <a className={`${styles.button} ${styles.defaultButton}`}>Book Consultation</a>
             </Link>
         </div>
     )
