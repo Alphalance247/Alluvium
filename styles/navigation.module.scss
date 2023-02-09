@@ -22,6 +22,12 @@
         // margin: 0 0.5rem 1rem 0.5rem;
     }
 
+    a{
+        &:hover{
+            color: inherit;
+        }
+    }
+
     .contactUsButton {
         // background-color: rgba(29, 52, 73, 1);
         color: rgba(0, 155, 192, 1) !important;
@@ -74,9 +80,17 @@
         margin-left: auto;
         // padding: 0 0.5rem;
 
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 769px) {
             // padding: 1.5rem 0;
             width: 65%;
+            // display: none;
+            // margin: 0 0 1rem 0;
+        }
+        
+        @media screen and (max-width: 768px) {
+            // padding: 1.5rem 0;
+            // width: 65%;
+            display: none;
             // margin: 0 0 1rem 0;
         }
 
@@ -189,6 +203,7 @@
         display: none;
         padding: 0;
         transition: 0.2s;
+        // background-color: red;
 
         @media screen and (max-width: 992px) {
             display: flex;
@@ -212,7 +227,7 @@
     }
 
     .menuBtn {
-        display: block;
+        display: none;
         width: 30px;
         flex-direction: column;
         margin: 0.5rem;
@@ -230,10 +245,13 @@
             background: #fff;
             border-radius: 50px;
         }
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
     }
 
     .menuBtnDark {
-        display: block;
+        display: none;
         width: 30px;
         flex-direction: column;
         margin: 0.5rem;
@@ -254,6 +272,9 @@
             background: #172f46;
             border-radius: 50px;
         }
+        @media screen and (max-width: 992px) {
+            display: block;
+        }
     }
 
     .hideMobileMenu {
@@ -263,7 +284,7 @@
         left: 0;
         height: 0;
         overflow-x: hidden;
-        z-index: -1;
+        z-index: 1;
         padding: 0;
         width: 0;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.411);

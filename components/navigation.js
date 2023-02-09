@@ -7,12 +7,13 @@ import {
 } from "react-icons/md";
 import { ourServicesData } from "data";
 
-export default function Navigation({ theme, ourServices }) {
+export default function Navigation({ theme }) {
   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
   const [currentDropdown, setCurrentDropdown] = useState("");
   const [dropdownActive, setDropdownActive] = useState(false);
+
   const toggleMenu = () => {
-    setDisplayMobileMenu(!displayMobileMenu);
+    setDisplayMobileMenu(prev=>!prev);
   };
 
   const toggleDropdown = (title) => {
@@ -27,7 +28,7 @@ export default function Navigation({ theme, ourServices }) {
       setCurrentDropdown(title);
       setDropdownActive(!dropdownActive);
     }
-    setDisplayMobileMenu(!displayMobileMenu);
+    // setDisplayMobileMenu(prev=>!prev);
   };
 
   return (
@@ -43,7 +44,7 @@ export default function Navigation({ theme, ourServices }) {
             <img src="/assets/alluvium-logo-dark.svg" alt="logo" />
           </Link>
         </div>
-        <nav className={styles.navigation}>
+        {!displayMobileMenu && <nav className={styles.navigation}>
           <ul
             className={
               theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu
@@ -191,11 +192,10 @@ export default function Navigation({ theme, ourServices }) {
               </Link>
             </li>
           </ul>
-        </nav>
-        {
+        </nav>}
           <button
-            onClick={toggleMenu}
-            className={displayMobileMenu ? styles.closeBtn : ""}
+            onClick={()=>toggleMenu()}
+            className={displayMobileMenu ? ` ${styles.closeBtn}` : styles.menuBtnDark}
           >
             {/* <div className={theme === "dark" ? styles.menuBtnDark : styles.menuBtn}> */}
             <div className={styles.menuBtnDark}>
@@ -204,7 +204,6 @@ export default function Navigation({ theme, ourServices }) {
               <div className={styles.barThree}></div>
             </div>
           </button>
-        }
       </div>
       <div className="container">
         <div
@@ -279,8 +278,7 @@ export default function Navigation({ theme, ourServices }) {
 export const getStaticProps = async () => {
   return {
     props: {
-      products: productData,
-      ourServices: ourServicesData,
+      products: productData
     },
   };
 };
