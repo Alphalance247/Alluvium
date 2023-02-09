@@ -281,9 +281,9 @@ export default function AboutUs() {
             </div>
           </section>
 
-          <section>
+          {/* <section>
             <ConsultationForm />
-          </section>
+          </section> */}
         </main>
       </div>
     </Layout>
