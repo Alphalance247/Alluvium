@@ -178,7 +178,9 @@ export function AltFooter() {
             <a href="#" className="me-3">
               Legal Information
             </a>
-            <a href="#">Privacy Policy</a>
+            <Link href={'/privacy-policy'}>
+            <a aria-label="privacy-policy">Privacy Policy</a>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,202 +1,261 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from '../styles/onboardingList.module.scss'
-import Navigation from "components/navigation";
+import styles from "../styles/onboardingList.module.scss";
+import Layout from "components/layout";
 import { productData } from "data";
-import { CSVLink } from 'react-csv';
-import { useState, useRef, useEffect } from 'react';
+import { CSVLink } from "react-csv";
+import { useState, useRef, useEffect } from "react";
 // import { connectToDatabase, saveToDB } from "lib/mongo";
-import axios from 'axios'
+import axios from "axios";
 
 const ShowingInterestLink = ({ products }) => {
-    const [data, setData] = useState(null);
-    const [usersInfo, setUsersInfo] = useState(null);
-    const [usersInfoPrint, setUsersInfoPrint] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [access, setAccess] = useState(false);
+  const [data, setData] = useState(null);
+  const [usersInfo, setUsersInfo] = useState(null);
+  const [usersInfoPrint, setUsersInfoPrint] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [access, setAccess] = useState(false);
 
-    const headers = [
-        { label: 'Full Name', key: 'fullname' },
-        { label: 'First Name', key: 'firstname' },
-        { label: 'Last Name', key: 'lastname' },
-        { label: 'Email', key: 'email' },
-        { label: 'Phone Number', key: 'phoneNumber' },
-        { label: 'Location', key: 'location' },
-        { label: 'Current Engagement', key: 'currentEngagement' },
-        { label: 'Applying For Trainee Program?', key: 'traineeProgram' },
-        { label: '3 Years Availability?', key: 'threeYearsAvailability' },
-        { label: 'Expirience Level?', key: 'experienceLevel' },
-        { label: 'date', key: 'createdAt' },
-        // { label: 'Date', key: 'date' },
-    ]
+  const headers = [
+    { label: "Full Name", key: "fullname" },
+    { label: "First Name", key: "firstname" },
+    { label: "Last Name", key: "lastname" },
+    { label: "Email", key: "email" },
+    { label: "Phone Number", key: "phoneNumber" },
+    { label: "Location", key: "location" },
+    { label: "Current Engagement", key: "currentEngagement" },
+    { label: "Applying For Trainee Program?", key: "traineeProgram" },
+    { label: "3 Years Availability?", key: "threeYearsAvailability" },
+    { label: "Expirience Level?", key: "experienceLevel" },
+    { label: "date", key: "createdAt" },
+    // { label: 'Date', key: 'date' },
+  ];
 
-    useEffect(() => {
-        setData(null);
+  useEffect(() => {
+    setData(null);
+    setUsersInfo(null);
+    setLoading(true);
+    axios
+      .get("/api/user")
+      .then((res) => {
+        // console.log(res);
+        setData(res.data);
+        setUsersInfo(res.data.users);
+        setLoading(false);
+      })
+      .catch((err) => {
+        // console.log(err);
         setUsersInfo(null);
-        setLoading(true);
-        axios.get('/api/user')
-            .then(res => {
-                // console.log(res);
-                setData(res.data);
-                setUsersInfo(res.data.users);
-                setLoading(false);
-            })
-            .catch(err => {
-                // console.log(err);
-                setUsersInfo(null);
-                setData({ message: err.response.data.message, success: false })
-                setLoading(false);
-            });
-        const password = prompt("Enter Password");
-        if (password !== "alluviumhq123") {
-            alert('Wrong Password');
-            setAccess(false);
-            setLoading(false);
-            setData({ message: 'Wrong Password, Kindly refresh your browser to try again', success: false })
-        } else {
-            setAccess(true);
-            // let responseData = null;
-            // console.log(responseData);
-            // setUsersInfo(null);
-        }
-    }, [])
-
-    useEffect(() => {
-        if (usersInfo) {
-            const tempData = usersInfo.map(({ email, firstname, fullname, lastname, phoneNumber, location, currentEngagement, traineeProgram, threeYearsAvailability, experienceLevel, createdAt }) => ({ email, firstname, fullname, lastname, phoneNumber, location, currentEngagement, traineeProgram, threeYearsAvailability, experienceLevel, createdAt }))
-            setUsersInfoPrint(tempData);
-        }
-    }, [usersInfo])
-
-    const deleteUser = async (id) => {
-        await axios.delete(`/api/user/${id}`)
-            .then(res => {
-                // console.log(res);
-                setUsersInfo(prev => prev.filter(user => user._id !== id));
-                setData(res.data);
-                setLoading(false);
-            })
-            .catch(err => {
-                // console.log(err);
-                // setUsersInfo(null);
-                setData({ message: err.response.data.message, success: false })
-                setLoading(false);
-            });
+        setData({ message: err.response.data.message, success: false });
+        setLoading(false);
+      });
+    const password = prompt("Enter Password");
+    if (password !== "alluviumhq123") {
+      alert("Wrong Password");
+      setAccess(false);
+      setLoading(false);
+      setData({
+        message: "Wrong Password, Kindly refresh your browser to try again",
+        success: false,
+      });
+    } else {
+      setAccess(true);
+      // let responseData = null;
+      // console.log(responseData);
+      // setUsersInfo(null);
     }
+  }, []);
 
+  useEffect(() => {
+    if (usersInfo) {
+      const tempData = usersInfo.map(
+        ({
+          email,
+          firstname,
+          fullname,
+          lastname,
+          phoneNumber,
+          location,
+          currentEngagement,
+          traineeProgram,
+          threeYearsAvailability,
+          experienceLevel,
+          createdAt,
+        }) => ({
+          email,
+          firstname,
+          fullname,
+          lastname,
+          phoneNumber,
+          location,
+          currentEngagement,
+          traineeProgram,
+          threeYearsAvailability,
+          experienceLevel,
+          createdAt,
+        })
+      );
+      setUsersInfoPrint(tempData);
+    }
+  }, [usersInfo]);
 
-    return (
-        <div>
-            <Head>
-                <title>Showing Interest List | Alluvium University</title>
-                <link rel="icon" href="/favicon.ico" />
-                <meta
-                    name="description"
-                    content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
-                />
-                <meta
-                    name="keywords"
-                    content="alluvium, team alluvium, atlassian products migration lab, atlassian, jira"
-                />
-            </Head>
-            <Navigation products={products} />
-            <main id={styles.main}>
-                <div className={styles.header}>
-                    <div>
-                        <Image
-                            priority
-                            alt="Alluvium university logo"
-                            src="/assets/AULogoWhite.svg"
-                            quality={100}
-                            height={74}
-                            width={79.69}
-                        />
-                    </div>
-                    <div><h1>Showing Interest List</h1></div>
+  const deleteUser = async (id) => {
+    await axios
+      .delete(`/api/user/${id}`)
+      .then((res) => {
+        // console.log(res);
+        setUsersInfo((prev) => prev.filter((user) => user._id !== id));
+        setData(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        // console.log(err);
+        // setUsersInfo(null);
+        setData({ message: err.response.data.message, success: false });
+        setLoading(false);
+      });
+  };
+
+  return (
+    <Layout>
+      <div>
+        <Head>
+          <title>Showing Interest List | Alluvium University</title>
+          <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="description"
+            content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          />
+          <meta
+            name="keywords"
+            content="alluvium, team alluvium, atlassian products migration lab, atlassian, jira"
+          />
+        </Head>
+        <main id={styles.main}>
+          <div className={styles.header}>
+            <div>
+              <Image
+                priority
+                alt="Alluvium university logo"
+                src="/assets/AULogoWhite.svg"
+                quality={100}
+                height={74}
+                width={79.69}
+              />
+            </div>
+            <div>
+              <h1>Showing Interest List</h1>
+            </div>
+          </div>
+          {(data || loading) && (
+            <div
+              className={`${styles.response} ${
+                data ? (data.success ? styles.success : styles.danger) : ""
+              }`}
+            >
+              <div
+                className={`${styles.responseData} ${
+                  data
+                    ? data.success
+                      ? styles.successBG
+                      : styles.dangerBG
+                    : ""
+                }`}
+              >
+                <h3>{loading ? "Loading..." : data.message}</h3>{" "}
+                <button onClick={() => setData(null)}>x</button>
+              </div>
+            </div>
+          )}
+
+          {access && usersInfo && (
+            <>
+              {usersInfoPrint && (
+                <div
+                  className="container"
+                  style={{ width: "80%", margin: "10px auto" }}
+                >
+                  <div style={{ width: "max-content", marginLeft: "auto" }}>
+                    <CSVLink
+                      data={usersInfoPrint}
+                      headers={headers}
+                      filename="Showing-Interest.csv"
+                    >
+                      {/* Download Data */}
+                      <button
+                        className="btn btn-primary text-decoration-none"
+                        style={{
+                          padding: "10px",
+                          outline: "none",
+                          backgroundColor: "skyblue",
+                          borderRadius: "4px",
+                          fontWeight: "700",
+                        }}
+                      >
+                        Download Data
+                      </button>
+                    </CSVLink>
+                  </div>
                 </div>
-                {
-                    (data || loading) && (
-                        <div className={`${styles.response} ${data ? (data.success ? styles.success : styles.danger) :
-                            ''}`}>
-                            <div className={`${styles.responseData} ${data ? (data.success ? styles.successBG : styles.dangerBG) : ''}`}>
-                                <h3>{loading ? 'Loading...' : data.message}</h3> <button onClick={() => setData(null)}>x</button>
-                            </div>
-                        </div>
-                    )
-                }
-
-                {
-                    (access && usersInfo) && (
-                        <>
-                            {usersInfoPrint &&
-                                <div className="container" style={{ width: '80%', margin: '10px auto' }}>
-                                    <div style={{width: 'max-content', marginLeft: 'auto'}}>
-                                    <CSVLink data={usersInfoPrint} headers={headers} filename="Showing-Interest.csv">
-                                        {/* Download Data */}
-                                        <button className="btn btn-primary text-decoration-none" style={{ padding: '10px', outline: 'none', backgroundColor: 'skyblue', borderRadius: '4px', fontWeight: '700' }}>Download Data</button>
-                                    </CSVLink>
-                                    </div>
-                                </div>
-                            }
-                            <div className={styles.tableHolder}>
-                                <table style={{margin: '0px auto'}}>
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>FullName</th>
-                                            <th>FirstName</th>
-                                            <th>LastName</th>
-                                            <th>Phone</th>
-                                            <th>Email</th>
-                                            <th>Location</th>
-                                            <th>Current Engagement</th>
-                                            <th>Applying For Trainee Program?</th>
-                                            <th>3 Years Availability?</th>
-                                            <th>Experience Level?</th>
-                                            <th>date</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        {
-                                            usersInfo.map((user, index) => (
-                                                <tr key={index}>
-                                                    <td>{index + 1}</td>
-                                                    <td>{user.fullname}</td>
-                                                    <td>{user.firstname}</td>
-                                                    <td>{user.lastname}</td>
-                                                    <td>{user.phoneNumber}</td>
-                                                    <td>{user.email}</td>
-                                                    <td>{user.location}</td>
-                                                    <td>{user.currentEngagement}</td>
-                                                    <td>{user.traineeProgram}</td>
-                                                    <td>{user.threeYearsAvailability}</td>
-                                                    <td>{user.experienceLevel}</td>
-                                                    <td>{user.createdAt}</td>
-                                                    <td><button onClick={() => deleteUser(user._id)}>Delete</button></td>
-                                                </tr>
-                                            ))
-                                        }
-                                    </tbody>
-                                </table>
-                            </div>
-                        </>
-                    )
-                }
-
-            </main>
-        </div>
-    );
+              )}
+              <div className={styles.tableHolder}>
+                <table style={{ margin: "0px auto" }}>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>FullName</th>
+                      <th>FirstName</th>
+                      <th>LastName</th>
+                      <th>Phone</th>
+                      <th>Email</th>
+                      <th>Location</th>
+                      <th>Current Engagement</th>
+                      <th>Applying For Trainee Program?</th>
+                      <th>3 Years Availability?</th>
+                      <th>Experience Level?</th>
+                      <th>date</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {usersInfo.map((user, index) => (
+                      <tr key={index}>
+                        <td>{index + 1}</td>
+                        <td>{user.fullname}</td>
+                        <td>{user.firstname}</td>
+                        <td>{user.lastname}</td>
+                        <td>{user.phoneNumber}</td>
+                        <td>{user.email}</td>
+                        <td>{user.location}</td>
+                        <td>{user.currentEngagement}</td>
+                        <td>{user.traineeProgram}</td>
+                        <td>{user.threeYearsAvailability}</td>
+                        <td>{user.experienceLevel}</td>
+                        <td>{user.createdAt}</td>
+                        <td>
+                          <button onClick={() => deleteUser(user._id)}>
+                            Delete
+                          </button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </>
+          )}
+        </main>
+      </div>
+    </Layout>
+  );
 };
 
 export default ShowingInterestLink;
 
-
 export const getStaticProps = async () => {
-    return {
-        props: {
-            products: productData,
-            //   responseData
-        }
-    }
-}
+  return {
+    props: {
+      products: productData,
+      //   responseData
+    },
+  };
+};

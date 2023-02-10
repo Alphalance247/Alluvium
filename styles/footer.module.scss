@@ -7,6 +7,13 @@
     align-items: center;
     justify-content: center;
 
+    a{
+        color: #000;
+        &:hover{
+            color: inherit;
+        }
+    }
+
     @media screen and (max-width: 576px) {
         padding-top: 50px !important;
         padding-bottom: 50px !important;

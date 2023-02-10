@@ -28,28 +28,33 @@
             margin-bottom: 40px !important;
         }
     }
+}
 
-    .button {
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: 0.04em;
-        // padding: 10px 50px;
-        min-width: 277px;
-        min-height: 56px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+.button {
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    // padding: 10px 50px;
+    min-width: 277px;
+    min-height: 56px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    .defaultButton{
-        background: #E37915;
-        border: 1.5px solid #E37915;
-        color: #FFFFFF;
+    &.consultButton{
+        min-width: 177px;
+        min-height: 46px;
     }
+}
+
+.defaultButton{
+    background: #E37915;
+    border: 1.5px solid #E37915;
+    color: #FFFFFF;
 }
 
 .contact {
@@ -85,7 +90,7 @@
             line-height: 30px;
         }
 
-        p {
+        p, a {
             font-weight: 400;
             font-size: 16px;
             line-height: 160%;
