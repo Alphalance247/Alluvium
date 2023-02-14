@@ -618,7 +618,7 @@ export const milestonesData = [
   },
   {
     id: 6,
-    value: "4.5",
+    value: "5*",
     icon: "/assets/milestone_success.svg",
     category: "Customer Rating"
   }
