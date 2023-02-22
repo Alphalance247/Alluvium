@@ -196,6 +196,9 @@ export default function Navigation({ theme }) {
           <button
             onClick={()=>toggleMenu()}
             className={displayMobileMenu ? ` ${styles.closeBtn}` : styles.menuBtnDark}
+            arial-label="Toggle Menu"
+            id="toggleMenu"
+            title={`${displayMobileMenu ? 'open menu' : 'close menu'}`}
           >
             {/* <div className={theme === "dark" ? styles.menuBtnDark : styles.menuBtn}> */}
             <div className={styles.menuBtnDark}>
