@@ -712,270 +712,334 @@ export const ourSolutions = [
   }
 ]
 
+// not in use anymore, kept in case it will be needed in future versions
+// export const oldToolsAndPlatforms = [
+//   {
+//     name: "Programming Language",
+//     tools: [
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "C#",
+//         icon: "/assets/tools/c.png"
+//       },
+//       {
+//         name: "PHP",
+//         icon: "/assets/tools/php.png"
+//       },
+//       {
+//         name: "NodeJs",
+//         icon: "/assets/tools/nodejs.png"
+//       },
+//       {
+//         name: "React",
+//         icon: "/assets/tools/react.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       }
+//     ]
+//   },
+//   {
+//     name: "Web Framework",
+//     tools: [
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "C#",
+//         icon: "/assets/tools/c.png"
+//       },
+//       {
+//         name: "PHP",
+//         icon: "/assets/tools/php.png"
+//       },
+//       {
+//         name: "NodeJs",
+//         icon: "/assets/tools/nodejs.png"
+//       },
+//       {
+//         name: "React",
+//         icon: "/assets/tools/react.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       }
+//     ]
+//   },
+//   {
+//     name: "Databases",
+//     tools: [
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "C#",
+//         icon: "/assets/tools/c.png"
+//       },
+//       {
+//         name: "PHP",
+//         icon: "/assets/tools/php.png"
+//       },
+//       {
+//         name: "NodeJs",
+//         icon: "/assets/tools/nodejs.png"
+//       },
+//       {
+//         name: "React",
+//         icon: "/assets/tools/react.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       }
+//     ]
+//   },
+//   {
+//     name: "Other Frameworks",
+//     tools: [
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "C#",
+//         icon: "/assets/tools/c.png"
+//       },
+//       {
+//         name: "PHP",
+//         icon: "/assets/tools/php.png"
+//       },
+//       {
+//         name: "NodeJs",
+//         icon: "/assets/tools/nodejs.png"
+//       },
+//       {
+//         name: "React",
+//         icon: "/assets/tools/react.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       }
+//     ]
+//   },
+//   {
+//     name: "Platforms",
+//     tools: [
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "C#",
+//         icon: "/assets/tools/c.png"
+//       },
+//       {
+//         name: "PHP",
+//         icon: "/assets/tools/php.png"
+//       },
+//       {
+//         name: "NodeJs",
+//         icon: "/assets/tools/nodejs.png"
+//       },
+//       {
+//         name: "React",
+//         icon: "/assets/tools/react.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       },
+//       {
+//         name: "Python",
+//         icon: "/assets/tools/python.png"
+//       }
+//     ]
+//   }
+// ]
+
 export const toolsAndPlatforms = [
-  {
-    name: "Programming Language",
-    tools: [
+      {
+        name: "Jira",
+        icon: "/assets/tools/jira.png"
+      },
+      {
+        name: "Confluence",
+        icon: "/assets/tools/confluence.png"
+      },
+      {
+        name: "Bitbucket",
+        icon: "/assets/tools/bit-bucket.png"
+      },
+      {
+        name: "Trello",
+        icon: "/assets/tools/trello.png"
+      },
+      {
+        name: "Java",
+        icon: "/assets/tools/java.png"
+      },
       {
         name: "Python",
         icon: "/assets/tools/python.png"
       },
       {
-        name: "C#",
-        icon: "/assets/tools/c.png"
-      },
-      {
-        name: "PHP",
-        icon: "/assets/tools/php.png"
-      },
-      {
-        name: "NodeJs",
-        icon: "/assets/tools/nodejs.png"
+        name: "JavaScript",
+        icon: "/assets/tools/javascript.png"
       },
       {
         name: "React",
         icon: "/assets/tools/react.png"
       },
       {
-        name: "Python",
-        icon: "/assets/tools/python.png"
+        name: "Next.js",
+        icon: "/assets/tools/next.png"
       },
       {
-        name: "Python",
-        icon: "/assets/tools/python.png"
+        name: "Premiere Pro",
+        icon: "/assets/tools/premiere-pro.png"
       },
       {
-        name: "Python",
-        icon: "/assets/tools/python.png"
+        name: "Figma",
+        icon: "/assets/tools/figma.png"
       },
       {
-        name: "Python",
-        icon: "/assets/tools/python.png"
+        name: "Adobe XD",
+        icon: "/assets/tools/adobe-xd.png"
       },
       {
-        name: "Python",
-        icon: "/assets/tools/python.png"
+        name: "Illustrator",
+        icon: "/assets/tools/adobe-illustrator.png"
       },
       {
-        name: "Python",
-        icon: "/assets/tools/python.png"
+        name: "Photoshop",
+        icon: "/assets/tools/adobe-photoshop.png"
       },
       {
-        name: "Python",
-        icon: "/assets/tools/python.png"
+        name: "After Effect",
+        icon: "/assets/tools/after-effects.png"
       }
-    ]
-  },
-  {
-    name: "Web Framework",
-    tools: [
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "C#",
-        icon: "/assets/tools/c.png"
-      },
-      {
-        name: "PHP",
-        icon: "/assets/tools/php.png"
-      },
-      {
-        name: "NodeJs",
-        icon: "/assets/tools/nodejs.png"
-      },
-      {
-        name: "React",
-        icon: "/assets/tools/react.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      }
-    ]
-  },
-  {
-    name: "Databases",
-    tools: [
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "C#",
-        icon: "/assets/tools/c.png"
-      },
-      {
-        name: "PHP",
-        icon: "/assets/tools/php.png"
-      },
-      {
-        name: "NodeJs",
-        icon: "/assets/tools/nodejs.png"
-      },
-      {
-        name: "React",
-        icon: "/assets/tools/react.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      }
-    ]
-  },
-  {
-    name: "Other Frameworks",
-    tools: [
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "C#",
-        icon: "/assets/tools/c.png"
-      },
-      {
-        name: "PHP",
-        icon: "/assets/tools/php.png"
-      },
-      {
-        name: "NodeJs",
-        icon: "/assets/tools/nodejs.png"
-      },
-      {
-        name: "React",
-        icon: "/assets/tools/react.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      }
-    ]
-  },
-  {
-    name: "Platforms",
-    tools: [
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "C#",
-        icon: "/assets/tools/c.png"
-      },
-      {
-        name: "PHP",
-        icon: "/assets/tools/php.png"
-      },
-      {
-        name: "NodeJs",
-        icon: "/assets/tools/nodejs.png"
-      },
-      {
-        name: "React",
-        icon: "/assets/tools/react.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      },
-      {
-        name: "Python",
-        icon: "/assets/tools/python.png"
-      }
-    ]
-  }
 ]
