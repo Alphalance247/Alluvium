@@ -12,7 +12,7 @@ const Service = ({ icon, service }) => {
                 <div className="d-flex align-items-center mb-4">
                     <Image src={icon} alt={service?.title} height={50} width={50} priority loading='eager' />
                     <div className="ms-3">
-                        <h5>{service?.title}</h5>
+                        <h4>{service?.title}</h4>
                         <span>{service?.services?.length || '0'} Services</span>
                     </div>
                 </div>

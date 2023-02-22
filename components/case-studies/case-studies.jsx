@@ -15,9 +15,9 @@ const CaseStudies = () => {
                             <div className="col-md-6 ps-0">
                                 <h3>How We've Helped Our Clients Achieve Data Migration Goals</h3>
                             </div>
-                            <div className="col-md-6 ps-md-5">
+                            {/* <div className="col-md-6 ps-md-5">
                                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient </p>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className={`container mx-auto ${styles.caseStudyList}`}>

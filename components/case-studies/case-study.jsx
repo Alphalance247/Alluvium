@@ -12,7 +12,7 @@ const CaseStudy = ({caseStudy}) => {
                 <Image src={caseStudy?.clientLogo} alt={caseStudy?.title} height={102} width={214} priority loading='eager' />
             </div>
             <div className={styles.body}>
-                <h6>{caseStudy?.title}</h6>
+                <h4>{caseStudy?.title}</h4>
                 <p>{caseStudy?.description.slice(0, 60)}...</p>
                 {
                     caseStudy?.caseStudyPageName && <Link href={'/reel/case-studies/'+caseStudy?.caseStudyPageName}>

@@ -79,32 +79,32 @@ export const ConsultationForm = () => {
                             <form method='POST' onSubmit={onsubmit}>
                                 <div className="row my-4">
                                     <div className="form-group col-md-6">
-                                        <label htmlFor="">Full Name <span className='text-danger'>*</span></label>
-                                        <input onChange={(e) => setFullname(e.target.value)} value={fullname}  type="text" className="form-control" name="fullname" placeholder="" />
+                                        <label htmlFor="fullname">Full Name <span className='text-danger'>*</span></label>
+                                        <input onChange={(e) => setFullname(e.target.value)} value={fullname}  type="text" className="form-control" name="fullname" id='fullname' placeholder="" />
                                     </div>
                                     <div className="form-group col-md-6">
-                                        <label htmlFor="">Email <span className='text-danger'>*</span></label>
-                                        <input onChange={(e) => setEmail(e.target.value)} value={email}  type="email" className="form-control" name="email" placeholder="" />
+                                        <label htmlFor="email">Email <span className='text-danger'>*</span></label>
+                                        <input onChange={(e) => setEmail(e.target.value)} value={email}  type="email" className="form-control" name="email" id='email' placeholder="" />
                                     </div>
                                 </div>
 
                                 <div className="row my-4">
                                     <div className="form-group col-md-6">
-                                        <label htmlFor="">Company <span className='text-danger'>*</span></label>
-                                        <input onChange={(e) => setCompany(e.target.value)} value={company}  type="text" className="form-control" name="company" placeholder="" />
+                                        <label htmlFor="company">Company <span className='text-danger'>*</span></label>
+                                        <input onChange={(e) => setCompany(e.target.value)} value={company}  type="text" className="form-control" name="company" id='company' placeholder="" />
                                     </div>
                                     <div className="form-group col-md-6">
-                                        <label htmlFor="">Phone <span className='text-danger'>*</span></label>
-                                        <input onChange={(e) => setPhone(e.target.value)} value={phone}  type="text" className="form-control" name="telephone" placeholder="" />
+                                        <label htmlFor="telephone">Phone <span className='text-danger'>*</span></label>
+                                        <input onChange={(e) => setPhone(e.target.value)} value={phone}  type="text" className="form-control" name="telephone" id='telephone' placeholder="" />
                                     </div>
                                 </div>
 
                                 <div className="form-group col-md-12">
-                                    <label htmlFor="">How can we help you? <span className='text-danger'>*</span></label>
+                                    <label htmlFor="message">How can we help you? <span className='text-danger'>*</span></label>
                                     <textarea onChange={(e) => setMessage(e.target.value)} value={message}  name="message" id="message" className='form-control' rows="7"></textarea>
                                 </div>
                                 <div className="form-group mt-5">
-                                    <button type="submit" className={`${styles.button} ${styles.defaultButton} ${styles.consultButton}`}>Submit</button>
+                                    <button type="submit" aria-label='submit' className={`${styles.button} ${styles.defaultButton} ${styles.consultButton}`}>Submit</button>
                                 </div>
 
                             </form>
