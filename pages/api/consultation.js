@@ -4,8 +4,8 @@ export default function (req, res) {
         port: 465,
         host: "jayteeojo.com",
         auth: {
-          user: process.env.SMTP_USERNAME,
-          pass: process.env.SMTP_PASS,
+          user: process.env.NEXT_PUBLIC_SMTP_USERNAME,
+          pass: process.env.NEXT_PUBLIC_SMTP_PASS,
         },
         secure: true,
     });
@@ -14,8 +14,6 @@ export default function (req, res) {
     const email = req.body.email;
     const phone = req.body.phone;
     const message = req.body.message;
-
-    console.log('userName: ', process.env.SMTP_USERNAME);
     
     const body = `<div>
     <p><strong> Name: </strong> ${fullname} </p>
@@ -33,10 +31,7 @@ export default function (req, res) {
     }
 
     try{
-        console.log('userName2: ', process.env.SMTP_USERNAME);
         transporter.sendMail(mailData, function (err, info) {
-            console.log('mailData: ', mailData);
-            console.log('mailInfo: ', info);
             if(err)
                 res.status(500).json({ message: `Failed: Try Again ${err}`, status: "error"})
             else
