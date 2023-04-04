@@ -1,4 +1,4 @@
-// import React from 'react';
+import React, {useEffect} from 'react';
 // import * as arrays from "../data";
 import Head from "next/head";
 import Services from "components/services-components/services";
@@ -13,6 +13,11 @@ import ToolsAndPlatforms from "components/toolsAndPlatforms";
 import Layout from "components/layout";
 
 const Home = () => {
+  
+  useEffect(()=>{
+  console.log('userName: ', process.env.SMTP_USERNAME);
+  }, []);
+  
   return (
     <>
       <Layout>
