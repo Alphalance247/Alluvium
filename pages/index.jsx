@@ -15,7 +15,7 @@ import Layout from "components/layout";
 const Home = () => {
   
   useEffect(()=>{
-  console.log('userName: ', process.env.SMTP_USERNAME);
+  console.log('userName: ', process.env.NEXT_PUBLIC_SMTP_USERNAME);
   }, []);
   
   return (
