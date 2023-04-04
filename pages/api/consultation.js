@@ -15,7 +15,7 @@ export default function (req, res) {
     const phone = req.body.phone;
     const message = req.body.message;
 
-    console.log(process.env.SMTP_USERNAME);
+    console.log('userName: ', process.env.SMTP_USERNAME);
     
     const body = `<div>
     <p><strong> Name: </strong> ${fullname} </p>
@@ -26,20 +26,23 @@ export default function (req, res) {
 
     const mailData = {
         from: 'info@jayteeojo.com',
-        to: 'atlassian@alluvium.net',
+        to: 'ayorinde@alluvium.net',
         subject: `New Consultation Request From ${req.body.fullname}`,
         text: body,
         html: body
     }
 
     try{
+        console.log('userName2: ', process.env.SMTP_USERNAME);
         transporter.sendMail(mailData, function (err, info) {
+            console.log('mailData: ', mailData);
+            console.log('mailInfo: ', info);
             if(err)
                 res.status(500).json({ message: `Failed: Try Again ${err}`, status: "error"})
             else
                 res.status(250).json({ message: `Message Sent Successfully. You will be contacted soon`, status: "success" })
         })
     }catch(err) {
-        res.status(500).json({ message: `Error Occured`, status: "error"})
+        res.status(500).json({ message: `Error Occured: ${err}`, status: "error"})
     }
 }
