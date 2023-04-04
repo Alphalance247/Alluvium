@@ -8,13 +8,15 @@ export default function (req, res) {
           pass: process.env.SMTP_PASS,
         },
         secure: true,
-    })
+    });
     const fullname = req.body.fullname;
     const company = req.body.company;
     const email = req.body.email;
     const phone = req.body.phone;
     const message = req.body.message;
 
+    console.log(process.env.SMTP_USERNAME);
+    
     const body = `<div>
     <p><strong> Name: </strong> ${fullname} </p>
     <p><strong>Comapny:</strong> ${company ?? "-"} </p>
