@@ -23,8 +23,8 @@ export default function (req, res) {
     <p><strong>Message:</strong> ${message} </p> </div>`
 
     const mailData = {
-        from: email,
-        to: 'info@jayteeojo.com',
+        from: 'info@jayteeojo.com',
+        to: 'atlassian@alluvium.net',
         subject: `New Consultation Request From ${req.body.fullname}`,
         text: body,
         html: body
