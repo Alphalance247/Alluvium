@@ -7,401 +7,217 @@
     main {
         width: 100%;
 
+        .image {
+            object-fit: contain;
+            width: 100% !important;
+            position: relative !important;
+            height: unset;
+        }
+
+        .heading {
+            h3 {
+                font-weight: 700;
+                font-size: 34px;
+                line-height: 40px;
+                color: #ffffff;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+                color: #009BC0;
+            }
+        }
+
+        .h2 {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 40px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        input {
+            height: 50px;
+        }
+
         .welcome {
-            height: 950px;
+            height: 700px;
             width: 100%;
-            background-image: url('/assets/about/about-bg.svg');
-            background-position-y: bottom;
+            background-image: url('/assets/about/banner.png');
             background-repeat: no-repeat;
-            // background-size: cover;
+            background-size: cover;
+            background-position: top;
             position: relative;
-            
-            @include media(">desktop") {
-                height: 80vw;
+
+            .shape{
+                height: 200px;
+                background-image: url('/assets/about/banner-shape.png');
+                background-repeat: no-repeat;
                 background-size: cover;
-            }
-
-            @include media("<phone") {
-                background-position-y: top;
-                height: 900px;
-                background-position-x: -200px;
-                background-size: auto;
-                background-repeat: no-repeat;
-                width: 100%;
-                // margin: 2rem 0.5rem;
-
-            }
-
-            @include media(">=phone", "<=tablet") {
-                background-position-y: top;
-                height: 900px;
-                background-position-x: -200px;
-                background-size: auto;
-                background-repeat: no-repeat;
-                width: 100%;
-                // margin: 2rem 0.5rem;
-            }
-
-            div {
+                background-position: center;
                 position: absolute;
-                top: 100px;
-                right: 100px;
+                bottom: 0;
+                width: 100%;
+                z-index: 1;
+            }
+            
+            .content {
+                background: #1D3449;
+                opacity: 0.9;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                text-align: center;
+            }
+            
+            h1 {
+                font-weight: bold;
+                font-size: 64px;
+                line-height: 130%;
+            }
 
-                @include media("<custom-view-2") {
-                    top: 50px;
-                    right: 70px;
-                }
+            p{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 150%;
+                color: #B3BAD1;
+            }
 
-                @include media("<tablet") {
-                    top: 50px;
-                    width: 100%;
-                    right: auto;
-                    text-align: center;
-                    //    left: 20px;
-                    //    right: auto;
-                }
+            @include media("<=tablet") {
+                height: 500px;
 
                 h1 {
-                    // font-family: 'Montserrat';
-                    font-style: normal;
-                    font-weight: 900;
-                    font-size: 60px;
+                    font-weight: bold;
+                    font-size: 48px;
                     line-height: 120%;
-                    letter-spacing: -3px;
-                    text-transform: capitalize;
-                    color: #FFFFFF;
-                    -webkit-text-stroke: 5px #009BC0;
                 }
             }
         }
 
-        .ourStory {
-            margin: 1.5rem 0;
-            padding: 2rem;
-            // background: rgba(27, 56, 84, 0.09);
+        .about {
+            position: relative;
+            background: #0D1117;
+            padding: 3.5rem 0;
 
-            @include media("<tablet") {
-                padding: 2rem 0.5rem;
-            }
-
-            .ourStoryTitle {
-                font-style: normal;
+            span {
                 font-weight: 600;
-                font-size: 25px;
-                line-height: 52px;
-                color: rgba(19, 34, 48, 0.84);
-                text-align: center;
-
-                @include media("<phone") {
-                    // font-size: 25px;
-                    line-height: 48px;
-
-                }
-
-                @include media(">=phone", "<=desktop") {
-                    // font-size: 30px;
-                    line-height: 80px;
-                    // text-align: center;
-                }
+                font-size: 16px;
+                line-height: 18px;
+                color: #009BC0;
             }
 
-            .ourStoryBody {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-
-
-                .ourStoryContent {
-                    text-align: justify;
-                    width: 70%;
-                    padding: 1rem;
-                    // background-color: #009BC0;
-
-                    @include media("<phone") {
-                        width: 100%;
-                    }
-                    
-                                        @include media("<custom-view-2") {
-                                            width: 80%;
-                                        }
-
-                    @include media(">=phone", "<=tablet") {
-                        width: 100%;
-                    }
-
-                    p {
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 20px;
-                        line-height: 24px;
-                        text-align: justify;
-                        color: rgba(19, 34, 48, 0.72);
-                        margin: 0.4rem 0;
-
-                        @include media("<=desktop") {
-                            // text-align: center;
-                            margin-bottom: 1rem;
-                            font-size: 18px;
-                            line-height: 25px;
-                        }
-                    }
-
-                }
-
-                .ourStoryImg {
-                    max-width: 623px;
-                    margin: 1rem;
-
-                    @include media("<phone") {
-                        display: none;
-                    }
-
-                    @include media(">=phone", "<=desktop") {
-                        display: none;
-
-                    }
-
-                    img {
-                        width: 100%;
-                    }
-                }
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.7);
             }
         }
 
+        .story {
+            // position: relative;
+            padding: 3.5rem 0;
+            background: #0F1A25;
 
-        .teamsSection {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 2rem 0;
-
-            @include media("<tablet") {
-                padding: 0.5rem;
-            }
-
-            .teamsSectionTitle {
-                font-style: normal;
-                font-weight: 600;
-                font-size: 20px;
-                // line-height: 42px;
-                color: #223D55;
-                text-align: center;
-                text-transform: capitalize;
-
-                span {
-                    display: block;
-                    // margin: 0px;
-
-                    @include media("<tablet") {
-                        display: inline;
-                    }
-                }
-            }
-
-            .teams {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                // background-color: #009BC0;
-                width: 100%;
-                padding-top: 20px;
-                // margin: 3rem auto;
-                justify-content: space-around;
-                background-image: url('/assets/about/team/teams-bg.png');
-                background-size: 100vw auto;
+            .content {
+                background-image: url('/assets/about/Image.png');
                 background-repeat: no-repeat;
-                background-position-x: center;
+                background-size: 20%;
+                background-position: left 100px;
+            }
 
-                @include media("<phone") {
-                    width: 100%;
-                    flex-direction: column;
+            span {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+                color: #009BC0;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            strong {
+                color: #ffffff;
+            }
+        }
+
+        .achievements {
+            position: relative;
+            padding: 3.5rem 0;
+            background-color: #0D1117;
+        }
+
+        .values {
+            position: relative;
+            padding: 3.5rem 0;
+            background-color: #F0F2F3;
+            background-image: url("/assets/Alluvium-logo-bg.png");
+            background-position: bottom right;
+            background-repeat: no-repeat;
+            background-size: 20%;
+
+            h2{
+                color: #0D1117;
+                text-align: center;
+            }
+
+            .p {
+                color: #787878;
+                text-align: center;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                letter-spacing: 0.005em;
+            }
+        }
+
+        .cta{
+            background-color: #0D1117;
+            padding: 3.5rem 0;
+        }
+
+        .impact {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 50px;
+            background-color: #0D1117;
+            padding: 3.5rem 0;
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.7);
+            }
+
+            strong {
+                color: #ffffff;
+            }
+
+            .content {
+                padding-left: 50px;
+            }
+
+            @include media("<tablet") {
+                grid-template-columns: 1fr;
+
+                .content {
+                    padding: 20px;
                 }
-
-                @include media(">=phone", "<tablet") {
-                    width: 100%;
-                    flex-direction: column;
-                }
-
-                .team {
-                    margin: 1rem auto;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    width: 768px;
-                    // width: 80%;
-                    // background-color: #223D55;
-
-                    @include media(">desktop") {
-                        width: 70%;
-                        margin: 2rem 0.5rem;
-                    }
-
-                    @include media("<phone") {
-                        width: 100%;
-                        margin: 2rem 0.5rem;
-                    }
-
-                    @include media(">=phone", "<=tablet") {
-                        width: 90%;
-                        margin: 2rem 0.5rem;
-                    }
-
-
-                    .foundersSection {
-                        width: 50%;
-                        display: flex;
-                        justify-content: space-around;
-                        margin-bottom: 30px;
-
-                        @include media("<phone") {
-                            width: 100%;
-                            // margin: 2rem 0.5rem;
-                        }
-                        
-                                                @include media("<custom-view-2") {
-                                                    width: 60%;
-                                                }
-
-                        @include media(">=phone", "<tablet") {
-                            width: 100%;
-                            // margin: 2rem 0.5rem;
-                        }
-
-                        .founderSection {
-                            margin: 0px 10px;
-
-                            @include media("<phone") {
-                                width: 48%;
-                                // margin: 2rem 0.5rem;
-                            }
-
-                            @include media(">=phone", "<=tablet") {
-                                width: 48%;
-                                margin: 0 auto;
-                            }
-
-                            p {
-                                font-style: normal;
-                                font-weight: 500;
-                                font-size: 13.0487px;
-                                line-height: 152%;
-                                text-align: center;
-                                text-transform: capitalize;
-                                color: rgba(19, 34, 48, 0.84);
-                            }
-                        }
-                    }
-
-                    .firstStaffsSection {
-                        width: 100%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        row-gap: 30px;
-                        margin-bottom: 30px;
-                        justify-content: space-around;
-
-                        @include media("<phone") {
-                            width: 100%;
-                            // margin: 2rem 0.5rem;
-                        }
-
-                        @include media(">=phone", "<=tablet") {
-                            width: 100%;
-                            // margin: 2rem 0.5rem;
-                        }
-
-                        .firstStaffSection {
-                            margin: 0px 10px;
-                            width: 25%;
-
-                            @include media("<phone") {
-                                width: 48%;
-                                // margin: 2rem 0.5rem;
-                            }
-                            
-                                                        @include media(">custom-view-5") {
-                                                            margin: 0 auto;
-                                                            width: 23%;
-                                                        }
-
-                                                        @include media("<custom-view-2") {
-                                                            margin: 0 auto;
-                                                            width: 25%;
-                                                        }
-
-                            @include media(">=phone", "<tablet") {
-                                width: 48%;
-                                margin: 0 auto;
-                                // margin: 2rem 0.5rem;
-                            }
-
-                            p {
-                                font-style: normal;
-                                font-weight: 500;
-                                font-size: 12.0487px;
-                                line-height: 152%;
-                                text-align: center;
-                                text-transform: capitalize;
-                                color: rgba(19, 34, 48, 0.84);
-                            }
-                        }
-                    }
-
-                    .secondStaffsSection {
-                        margin-bottom: 30px;
-                        width: 80%;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-around;
-
-                        @include media("<phone") {
-                            width: 100%;
-                            // margin: 2rem 0.5rem;
-                        }
-
-                        @include media(">=phone", "<tablet") {
-                            width: 100%;
-                            // margin: 2rem 0.5rem;
-                        }
-
-                        .secondStaffSection {
-                            margin: 0px 10px;
-                            width: 33%;
-
-                            @include media("<phone") {
-                                width: 100%;
-                                // margin: 2rem 0.5rem;
-                            }
-                            @include media(">custom-view-5") {
-                                margin: 0 auto;
-                                width: 29%;
-                            }
-                                                        @include media("<custom-view-2") {
-                                                            margin: 0 auto;
-                                                            width: 33%;
-                                                        }
-
-                            @include media(">=phone", "<=tablet") {
-                                width: 48%;
-                                margin: 0 auto;
-                            }
-
-                            p {
-                                font-style: normal;
-                                font-weight: 500;
-                                font-size: 12.0487px;
-                                line-height: 152%;
-                                text-align: center;
-                                text-transform: capitalize;
-                                color: rgba(19, 34, 48, 0.84);
-                            }
-                        }
-                    }
-
-
-                }
-
             }
         }
     }

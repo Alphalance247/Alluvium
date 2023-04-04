@@ -1,12 +1,15 @@
 .news {
   display: flex;
   flex-direction: column;
-  max-height: 100%;
-  max-width: 90%;
-  margin: 50px auto;
+  min-height: 697px;
+  background: #0D1117;
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
 
   @media screen and (max-width: 576px) {
     display: block;
     max-width: 100%;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
   }
 }

@@ -1,0 +1,64 @@
+@import "./lib/fonts.scss";
+
+*,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  transition: 0.2s;
+  font-family: 'Graphik', 'IBM Plex Sans', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: inherit !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Graphik', sans-serif;
+  font-style: normal;
+}
+
+.bg-pri {
+  background-color: #E37915;
+  color: white;
+}
+
+.bg-sec {
+  background-color: #223D55;
+  color: white;
+}
+
+.btn {
+  margin: 10px 0;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  padding: 10px 30px;
+}
+
+.btn-pri {
+  background: #E37915;
+  border: 1.5px solid #E37915;
+  color: #FFFFFF !important;
+}

@@ -58,6 +58,12 @@ module.exports = withImages({
 })
 
 module.exports = {
+  env: {
+    SMTP_PASS: 'y,~vA=No-,M4uh',
+  },
+}
+
+module.exports = {
   images:{
     // loader:"cloudinary",
     // path:"https://res.cloudinary.com/geniesys",
