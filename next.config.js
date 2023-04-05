@@ -59,7 +59,8 @@ module.exports = withImages({
 
 module.exports = {
   env: {
-    SMTP_PASS: 'y,~vA=No-,M4uh',
+    NEXT_PUBLIC_SMTP_USERNAME: process.env.NEXT_PUBLIC_SMTP_USERNAME,
+    NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS
   },
 }
 
