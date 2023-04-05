@@ -20,7 +20,7 @@ export default async function handler(req, res) {
     const email = req.body.email;
     const phone = req.body.phone;
     const message = req.body.message;
-
+    
     const body = `<div>
     <p><strong> Name: </strong> ${fullname} </p>
     <p><strong>Comapny:</strong> ${company ?? "-"} </p>
