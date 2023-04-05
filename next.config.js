@@ -26,38 +26,39 @@ module.exports = {
   basePath: '/docs',
 }
 
+// module.exports = {
+//   webpack(config) {
+//     config.module.rules.push({
+//       test: /\.svg$/,
+//       issuer: {
+//         test: /\.(js|ts)x?$/,
+//       },
+//       use: ['@svgr/webpack'],
+//     });
+
+//     return config;
+//   },
+// };
+
+
+// module.exports = withImages({
+//   exclude: path.resolve(__dirname, 'public/assets'),
+//   webpack(config, options) {
+
+//     // config.module.rules.push({
+//     //   test: /\.svg$/,
+//     //   issuer: {
+//     //     test: /\.(js|ts)x?$/,
+//     //   },
+//     //   use: ["@svgr/webpack"],
+//     // });
+
+//     return config
+//   }
+// })
+
 module.exports = {
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/,
-      },
-      use: ['@svgr/webpack'],
-    });
-
-    return config;
-  },
-};
-
-
-module.exports = withImages({
-  exclude: path.resolve(__dirname, 'public/assets'),
-  webpack(config, options) {
-
-    // config.module.rules.push({
-    //   test: /\.svg$/,
-    //   issuer: {
-    //     test: /\.(js|ts)x?$/,
-    //   },
-    //   use: ["@svgr/webpack"],
-    // });
-
-    return config
-  }
-})
-
-module.exports = {
+  swcMinify: true,
   env: {
     NEXT_PUBLIC_SMTP_USERNAME: process.env.NEXT_PUBLIC_SMTP_USERNAME,
     NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS,
