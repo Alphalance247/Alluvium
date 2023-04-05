@@ -60,7 +60,8 @@ module.exports = withImages({
 module.exports = {
   env: {
     NEXT_PUBLIC_SMTP_USERNAME: process.env.NEXT_PUBLIC_SMTP_USERNAME,
-    NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS
+    NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS,
+    AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE: process.env.AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE
   },
 }
 
