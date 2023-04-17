@@ -10,7 +10,9 @@ const News = () => {
 	useEffect(() => {
 		axios.get("https://blog.alluvium.net/wp-json/wp/v2/posts").then(res => {
 			setNews(res.data)
-		})
+		}).catch(err => {
+			console.log(err.message);
+		});
 	}, [])
 
 	return (
