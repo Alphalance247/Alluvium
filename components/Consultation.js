@@ -55,8 +55,8 @@ export const ConsultationForm = () => {
 
             let result = await response.json();
             const status = result.status;
+            console.log(result);
             // show message based on status
-            console.log('got to backend: ', result?.iError);
             addToast(result.message, { appearance: status });
         }catch (e) {
             console.log(e.message);
