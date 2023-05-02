@@ -127,7 +127,7 @@ export function AltFooter() {
               </li>
               <li className={styles.contactListItem}>
                 <b>Phone Number:</b>
-                <a href="tel:+234 812 345 6789"> +234 812 345 6789</a>
+                <a href="tel:+442035762028"> +442035762028</a>
               </li>
             </ul>
           </div>

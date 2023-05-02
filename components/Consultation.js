@@ -115,7 +115,7 @@ export const ConsultationForm = () => {
                             <p> <strong> Headquarter:</strong> Kemp House 160, City Road London, EC1V 2NX.</p>
                             <p><strong>Ekiti Branch:</strong> No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti, Ekiti State.</p>
                             <p><strong>Email:</strong> <a href="mailto:contact@alluvium.net">contact@alluvium.net</a> </p>
-                            <p><strong>Phone Number:</strong> <a href="tel:+234 812 345 6789"> +234 812 345 6789</a> </p>
+                            <p><strong>Phone Number:</strong> <a href="tel:+442035762028"> +442035762028</a> </p>
                         </div>
                     </div>
                 </div>
