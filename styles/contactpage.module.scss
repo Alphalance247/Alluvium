@@ -126,6 +126,13 @@
             width: 90%;
         }
 
+        a{
+            color: inherit !important;
+            &:hover{
+                color: initial !important;
+            }
+        }
+
 
     }
 

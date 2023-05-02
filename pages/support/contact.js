@@ -87,7 +87,7 @@ export default function Contact({ products }) {
                 />
                 <div className="container-fluid">
                   <h3 className="text-capitalize">Give us a ring at:</h3>
-                  <a href="tel:01375758030">01375758030</a>
+                  <a href="tel:+442035762028">+442035762028</a>
                 </div>
               </div>
               <div className="col-md-5 col-lg-4 text-center">
@@ -111,39 +111,7 @@ export default function Contact({ products }) {
               </div>
             </div>
           </div>
-          <div className="container-fluid mt-5 pt-5">
-            <h2 className="text-center">We'd Love To Help</h2>
-            <p className="text-center">
-              We’ll get back to you within one business day.
-            </p>
-            <div className="row justify-content-center">
-              <div className="col-md-9">
-                <iframe
-                  frameBorder="0"
-                  className={styles.contactus}
-                  src="https://forms.zohopublic.com/admin1711/form/ContactUs/formperma/ywG1UqqTEfcSggqvjWrl_fTDGN6tS6l8KxBzlvUhZUU"
-                ></iframe>
-                {/* <Form handleInput={handleInput} handleSubmit={handleSubmit} /> */}
-              </div>
-            </div>
-          </div>
         </section>
-        {/* <main className={styles.contactUsPage}>
-                <div className={styles.contactImg}>
-                    <Image src='/assets/contactImg.png' width={1392} height={461} />
-                </div>
-                <div className={styles.contactDetails}>
-                    <div className={styles.emailContact} data-aos="fade-right">
-                        <h3>Launching a new product? Got enquiries?</h3>
-                        <p>Send a mail to: <a target="_blank" href="mailto:contact@alluvium.net" rel="noopener noreferrer">contact@alluvium.net</a></p>
-                    </div>
-                    <div className={styles.mailingAddress} data-aos="fade-left">
-                        <h3>Mailing Address:</h3>
-                        <p>Kemp House 160, City Road London, EC1V 2NX</p>
-                    </div>
-                </div>
-
-            </main> */}
       </div>
     </Layout>
   );
