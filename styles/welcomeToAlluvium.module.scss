@@ -62,7 +62,7 @@
         transition: all .2s ease-in;
 
         &:hover {
-            padding: 17px 34px;
+            // padding: 17px 34px;
             color: white !important;
             background: #009BC0;
         }
@@ -72,8 +72,8 @@
         width: 80%;
         margin-left: auto;
         display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: repeat(2, minmax(0, 1fr));
         gap: 1rem;
 
         @media screen and (max-width: 1200px) {

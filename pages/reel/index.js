@@ -54,7 +54,7 @@ export default function Reel({ products }) {
         </Head>
         <main>
           <div className={styles.hireUsLink}>
-            <Link href="/reel/case-studies"> + View Our Case Studies</Link>
+            <Link href="/#case-studies"> + View Our Case Studies</Link>
           </div>
           <section className={styles.reelPageHeader}>
             <div className={styles.header}>

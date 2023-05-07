@@ -26,13 +26,13 @@ const Service = ({ icon, service }) => {
                     }
                 </ul>
 
-                {
+                {/* {
                     service?.link && <Link href={service?.link}>
                         <a aria-label={`Learn more on ${service?.title}`}>
                             Learn More <MdDoubleArrow />
                         </a>
                     </Link>
-                }
+                } */}
             </div>
         </>
     )

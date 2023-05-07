@@ -43,7 +43,7 @@
         transition: all .2s ease-in;
 
         &:hover {
-            padding: 17px 34px;
+            // padding: 17px 34px;
             color: white !important;
             background: #009BC0;
         }
@@ -190,11 +190,11 @@
             //     margin: 0 6%;
             // }
 
-            &:hover {
-                font-weight: 900;
-                transform: translateY(-2px);
+            // &:hover {
+            //     font-weight: 600;
+            //     // transform: translateY(-2px);
 
-            }
+            // }
         }
     }
 

@@ -34,7 +34,7 @@ export function AltFooter() {
               </p>
             </div>
             <div>
-              <h3>DOWNLOAD BROCHURE</h3>
+              <h3>DOWNLOAD BROCHURE (Coming Soon)</h3>
 
               <a
                 aria-label="Download our brochure"
@@ -47,15 +47,15 @@ export function AltFooter() {
           </div>
           <div className={styles.altFooterMainSectionComponent}>
             <h3 className={styles.altFooterMainSectionComponentTitle}>
-              Company
+            COMPANY
             </h3>
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
                 <Link href="/about">About us</Link>
               </li>
-              <li className={styles.contactListItem}>
+              {/* <li className={styles.contactListItem}>
                 <Link href="#">Leadership</Link>
-              </li>
+              </li> */}
               <li className={styles.contactListItem}>
                 <Link href="https://blog.alluvium.net/">
                   <a target="_blank" rel="norefferer">
@@ -64,6 +64,13 @@ export function AltFooter() {
                 </Link>
               </li>
               <li className={styles.contactListItem}>
+                <Link href="/support/contact">
+                  <a>
+                  Contact us
+                  </a>
+                </Link>
+              </li>
+              {/* <li className={styles.contactListItem}>
                 <Link href="#">Success Stories</Link>
               </li>
               <li className={styles.contactListItem}>
@@ -71,7 +78,7 @@ export function AltFooter() {
               </li>
               <li className={styles.contactListItem}>
                 <Link href="/showing-interest-list">Login</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className={styles.altFooterMainSectionComponent}>
@@ -101,9 +108,9 @@ export function AltFooter() {
               <li className={styles.contactListItem}>
                 <Link href="/support">FAQ</Link>
               </li>
-              <li className={styles.contactListItem}>
+              {/* <li className={styles.contactListItem}>
                 <Link href="/#">Trouble Shooting</Link>
-              </li>
+              </li> */}
             </ul>
           </div>
           <div className={styles.altFooterMainSectionComponent}>
@@ -172,12 +179,12 @@ export function AltFooter() {
             </p>
           </div>
           <div className={styles.extralinks}>
-            <a href="#" className="me-3">
+            {/* <a href="#" className="me-3">
               Cookie Settings
             </a>
             <a href="#" className="me-3">
               Legal Information
-            </a>
+            </a> */}
             <Link href={'/privacy-policy'}>
             <a aria-label="privacy-policy">Privacy Policy</a>
             </Link>

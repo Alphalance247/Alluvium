@@ -1,4 +1,5 @@
 @import'lib/breakpoints.scss';
+
 .booking {
     display: inline-flex;
     justify-content: space-between;
@@ -28,6 +29,10 @@
             margin-bottom: 40px !important;
         }
     }
+
+    a:hover {
+        color: initial;
+    }
 }
 
 .button {
@@ -45,16 +50,22 @@
     align-items: center;
     justify-content: center;
 
-    &.consultButton{
+    &.consultButton {
         min-width: 177px;
         min-height: 46px;
     }
 }
 
-.defaultButton{
+.defaultButton {
     background: #E37915;
     border: 1.5px solid #E37915;
     color: #FFFFFF;
+
+    &:hover {
+        color: #FFFFFF !important;
+        background: #c46308;
+        border: 1.5px solid #c46308;
+    }
 }
 
 .contact {
@@ -69,11 +80,15 @@
         color: #ffffff;
         margin-bottom: 30px;
     }
-    
+
     .content {
         display: grid;
         grid-template-columns: 2.5fr 1fr;
         column-gap: 100px;
+
+        input{
+            height: 59px;
+        }
 
         label {
             color: #ffffff;
@@ -90,7 +105,8 @@
             line-height: 30px;
         }
 
-        p, a {
+        p,
+        a {
             font-weight: 400;
             font-size: 16px;
             line-height: 160%;
@@ -114,5 +130,5 @@
 
     }
 
-   
+
 }
