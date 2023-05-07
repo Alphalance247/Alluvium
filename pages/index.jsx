@@ -25,7 +25,7 @@ const Home = () => {
           />
           <meta
             name="keywords"
-            content="Alluvium, alluvium, team alluvium, atlassian products migration lab, atlassian, jira"
+            content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
           />
         </Head>
         <div className="container-fluid p-0 m-0">

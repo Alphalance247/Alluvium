@@ -104,6 +104,9 @@ export default function Navigation({ theme }) {
               </div>
             </li>
             <li>
+              <Link href="/#services">Services</Link>
+            </li>
+            {/* <li>
               <div>
                 <p
                   onClick={() => toggleDropdown("services")}
@@ -143,7 +146,7 @@ export default function Navigation({ theme }) {
                   </ul>
                 </div>
               </div>
-            </li>
+            </li> */}
             <li>
               <a
                 href="https://marketplace.atlassian.com/vendors/1218751/alluvium"
