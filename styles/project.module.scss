@@ -1,0 +1,130 @@
+@import'lib/breakpoints.scss';
+
+.ourProject {
+    // background-color: #fafafa;
+    width: 100%;
+    .defaultButton{
+        background: #E37915;
+        border: 1.5px solid #E37915;
+        color: #FFFFFF;
+    }
+
+    .button {
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 0.04em;
+        padding: 15px 50px;
+        text-align: center;
+        margin: 25px;
+    }
+
+    main {
+        width: 100%;
+
+        .image {
+            object-fit: contain;
+            width: 100% !important;
+            position: relative !important;
+            height: unset;
+        }
+
+        .heading {
+            h2 {
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 40px;
+                color: #ffffff;
+                margin-bottom: 30px;
+            }
+
+        }
+
+        .h2 {
+            font-weight: 700;
+            font-size: 34px;
+            line-height: 40px;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+
+        input {
+            height: 50px;
+        }
+
+        .welcome {
+            height: 633px;
+            width: 100%;
+            background-image: url('/assets/our-project/bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            
+            .content {
+                background: #1D3449;
+                opacity: 0.9;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+                text-align: center;
+            }
+            
+            h1 {
+                font-weight: bold;
+                font-size: 64px;
+                line-height: 130%;
+            }
+
+            p{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 150%;
+                color: #B3BAD1;
+            }
+
+            @include media("<=tablet") {
+                height: 500px;
+
+                h1 {
+                    font-weight: bold;
+                    font-size: 48px;
+                    line-height: 120%;
+                }
+            }
+        }
+
+        .about {
+            position: relative;
+            background: #0D1117;
+            padding: 3.5rem 0;
+
+            span {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 18px;
+                color: #009BC0;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        .cta{
+            background-color: #0D1117;
+            padding: 3.5rem 0;
+        }
+    }
+}

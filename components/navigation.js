@@ -93,7 +93,7 @@ export default function Navigation({ theme }) {
                       <Link href="/showing-interest">Show Interest (AU)</Link>
                     </li>
                     <li>
-                      <Link href="/reel">Project Reel</Link>
+                      <Link href="/our-project">Project Reel</Link>
                     </li>
                     <li>
                       <Link href="/support/contact">Contact Us</Link>
@@ -236,7 +236,7 @@ export default function Navigation({ theme }) {
               <Link href="/showing-interest">+ Show Interest (AU)</Link>
             </li>
             <li>
-              <Link href="/reel">+ Project Reel</Link>
+              <Link href="/our-project">+ Project Reel</Link>
             </li>
             {/* <li><Link href="/support/contact">Contact Us</Link></li> */}
             <li>
