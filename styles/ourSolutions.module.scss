@@ -15,8 +15,9 @@
         //     background-color: #0F1A25;
         // }
         
-        @media screen and (max-width: 768px) {
-        background-position: bottom right;
+        @media screen and (min-width: 1600px) {
+        background-color: #0f1a25 !important;
+        background-image: none !important;
     }
 
         @media screen and (max-width: 768px) {
