@@ -1,0 +1,60 @@
+@import './variables.scss';
+
+.button {
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    // padding: 10px 50px;
+    min-width: 277px;
+    min-height: 56px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.consultButton {
+        min-width: 177px;
+        min-height: 46px;
+    }
+
+    &_aluvium_light {
+        &_blue {
+            background: $alluvium-light-blue;
+            border: 1.5px solid $alluvium-light-blue;
+            color: #FFFFFF;
+
+            &:hover {
+                color: $alluvium-light-blue !important;
+                background: #FFFFFF !important;
+                border: 1.5px solid $alluvium-light-blue;
+            }
+            
+            &_invert {
+                color: $alluvium-light-blue !important;
+                background: #FFFFFF !important;
+                border: 1.5px solid $alluvium-light-blue;
+
+                &:hover {
+                    background: $alluvium-light-blue !important;
+                    border: 1.5px solid $alluvium-light-blue;
+                    color: #FFFFFF !important;
+                }
+            }
+        }
+    }
+}
+
+.defaultButton {
+    background: #E37915;
+    border: 1.5px solid #E37915;
+    color: #FFFFFF;
+
+    &:hover {
+        color: #FFFFFF !important;
+        background: #c46308;
+        border: 1.5px solid #c46308;
+    }
+}

@@ -1,0 +1,58 @@
+@import './lib/buttons.scss';
+
+.main {
+    min-height: 1111px;
+
+    &_small {
+        min-height: 100vh;
+    }
+
+    &_bg {
+        background-image: url('/assets/lagos-startup-expo/attendees.png');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &_content {
+        // margin: 149px auto 149px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .form {
+            &_input {
+                width: 100%;
+            }
+        }
+    }
+    .priority{
+        color: red;
+    }
+
+    .btn{
+        height: 38px;
+        border: 1px solid #ced4da;
+        &:hover, &:focus, &:active{
+            background: initial !important;
+        }
+    }
+
+    .dropdown_menu{
+        min-width: 80px !important;
+        max-height: 200px !important;
+        overflow-y: scroll;
+    }
+
+    .country_icon {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+.button {
+    min-width: 167px;
+    min-height: 56px;
+}
