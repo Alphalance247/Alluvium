@@ -108,6 +108,9 @@ export function AltFooter() {
               <li className={styles.contactListItem}>
                 <Link href="/support">FAQ</Link>
               </li>
+              <li className={styles.contactListItem}>
+                <Link href="/event/lagos-startup-expo">Lagos Startup Expo</Link>
+              </li>
               {/* <li className={styles.contactListItem}>
                 <Link href="/#">Trouble Shooting</Link>
               </li> */}

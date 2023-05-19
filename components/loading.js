@@ -1,7 +1,7 @@
 import React from "react";
 import styles from '../styles/loading.module.scss';
 
-export default function LoadingScreen() {
+export default function LoadingScreen({message}) {
     return (
         <div className={styles.loadingScreen}>
             <div className={styles.loadingIcon}>
@@ -9,7 +9,7 @@ export default function LoadingScreen() {
             </div>
             <div className={styles.loadingText}>
                 {/* <p>Loading...</p> */}
-                <p>Fetching data...</p>
+                <p>{message || `Fetching data...`}</p>
             </div>
         </div>
     )
