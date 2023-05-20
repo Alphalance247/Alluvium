@@ -132,6 +132,19 @@ const FormComponent = ({ userData, setUserData, handleSubmit, loading }) => {
                         }
                     </select>
                 </div>
+                <div className="mb-3">
+                    <label htmlFor="companyName" className="form-label">Company Name </label>
+                    <input type="text" value={userData?.companyName || ''} name="companyName" className="form-control" id="companyName" onChange={handleChange} />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="servicesOrProducts" className="form-label">Services/Products </label>
+                    <input type="text" value={userData?.servicesOrProducts || ''} name="servicesOrProducts" className="form-control" id="servicesOrProducts" onChange={handleChange} />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="message">Message</label>
+                    <textarea onChange={handleChange} value={userData?.message || ''} name="message" id="message" className='form-control' rows="7"></textarea>
+                </div>
+
                 <div className="mt-5">
                     <button type="submit" disabled={loading} className={`${styles.button} ${styles.button_aluvium_light_blue}`}>Submit Form</button>
                 </div>
