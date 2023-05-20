@@ -28,6 +28,18 @@ const followUpSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
+    companyName: {
+        type: String,
+        trim: true
+    },
+    servicesOrProducts: {
+        type: String,
+        trim: true
+    },
+    message: {
+        type: String,
+        trim: true
+    },
     eventType: {
         type: String,
         required: true,
