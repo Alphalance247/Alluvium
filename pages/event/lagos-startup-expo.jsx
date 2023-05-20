@@ -40,14 +40,16 @@ const FormComponent = ({ userData, setUserData, handleSubmit, loading }) => {
     const [allStates, setAllStates] = useState([]);
 
     const handleChange = useCallback((event) => {
+        console.log(allCountries);
         const { name, value } = event.target;
         if (name === 'country') {
-            let theCountry = allCountries.find(country => country.name.toLowerCase().includes(value.toLowerCase()));
-            const states = State.getStatesOfCountry(theCountry.isoCode);
-            if (states.length > 0) {
+            console.log(value);
+            let theCountry = allCountries.find(country => (country.name.toLowerCase().includes(value.toLowerCase()) || country.isoCode.toLowerCase().includes(value.toLowerCase())));
+            // value = theCountry?.name;
+            const states = State.getStatesOfCountry(theCountry?.isoCode);
+            if (states?.length > 0) {
                 setAllStates(states.map(state => state.name));
             }
-            value = theCountry.name;
         }
         setUserData(prev => ({ ...prev, [name]: value }));
     }, []);
