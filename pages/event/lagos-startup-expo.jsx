@@ -1,209 +1,43 @@
-import React, { useEffect, useState, useMemo, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 
 import Layout from "components/layout";
 import Head from "next/head";
 import Image from "next/image";
-import countries, { NG } from "country-flag-icons/react/3x2";
-import { getCountryByCode } from "country-phonenumber";
-import { Country, State } from 'country-state-city';
+import Link from "next/link";
+import dynamic from "next/dynamic";
 import axios from "axios";
+import moment from "moment";
 import { ToastProvider, useToasts } from 'react-toast-notifications';
-import LoadingScreen from "components/loading";
 
 
-import logo from 'public/assets/lagos-startup-expo/logo.png';
+import logo from 'public/assets/techpoint-startup-expo/logo.png';
+import logo2 from 'public/assets/techpoint-startup-expo/Heading.png';
 
 import styles from 'styles/lagos-startup-expo.module.scss';
 // import { countries } from "country-flag-icons";
 
-
-const ThankYouComponent = ({ setShowForm, message }) => {
-    return (
-        <>
-            <div className="container mx-auto text-center d-flex flex-column justify-content-center align-items-center" style={{ height: '100%' }}>
-                <div>
-                    <Image src={logo} priority loading="eager" />
-                </div>
-                <h2>{message?.message || 'Thank You!'}</h2>
-                <p>Your submission has been received.</p>
-                <button type="submit" onClick={() => setShowForm(true)} className={`${styles.button} ${styles.button_aluvium_light_blue} mx-auto`}>Back to Form</button>
-            </div>
-        </>
-    )
-}
-
-const FormComponent = ({ userData, setUserData, handleSubmit, loading }) => {
-    const [selectedIcon, setSelectedIcon] = useState({ icon: <NG title="Nigeira" />, code: "NG" });
-    const [phoneCode, setPhoneCode] = useState('');
-    const countryCodes = useMemo(() => Object.keys(countries), [countries]);
-    const allCountries = Country.getAllCountries();
-    const [allStates, setAllStates] = useState([]);
-
-    const handleChange = useCallback((event) => {
-        console.log(allCountries);
-        const { name, value } = event.target;
-        if (name === 'country') {
-            console.log(value);
-            let theCountry = allCountries.find(country => (country.name.toLowerCase().includes(value.toLowerCase()) || country.isoCode.toLowerCase().includes(value.toLowerCase())));
-            // value = theCountry?.name;
-            const states = State.getStatesOfCountry(theCountry?.isoCode);
-            if (states?.length > 0) {
-                setAllStates(states.map(state => state.name));
-            }
-        }
-        setUserData(prev => ({ ...prev, [name]: value }));
-    }, []);
-
-
-    useEffect(() => {
-        setPhoneCode(getCountryByCode(selectedIcon.code)?.phone);
-    }, [selectedIcon]);
-
-    useEffect(() => {
-        setUserData(prev => ({ ...prev, phone: `(+${phoneCode}) ` }));
-    }, [phoneCode]);
-
-    useEffect(() => {
-        setUserData(prev => ({ ...prev, state: allStates[0] || '' }))
-    }, [allStates]);
-
-    useEffect(() => {
-        if (Object.keys(userData).length < 1) {
-            setPhoneCode('');
-            setSelectedIcon({ icon: <NG title="Nigeira" />, code: "NG" });
-        }
-    }, [userData]);
-
-    return (
-        <div className="container mx-auto">
-            <Image src={logo} priority loading="eager" />
-            <h2>Online Registration Form</h2>
-            <p>We make it easy for you to unlock your personal/team’s potential by connecting with us and it all starts from here!</p>
-
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="firstName" className="form-label">First Name <sup className={styles.priority}>*</sup></label>
-                    <input type="text" value={userData?.firstName || ''} className="form-control" id="firstName" name="firstName" onChange={handleChange} required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="lastName" className="form-label">Last Name <sup className={styles.priority}>*</sup></label>
-                    <input type="text" value={userData?.lastName || ''} className="form-control" id="lastName" name="lastName" onChange={handleChange} required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email <sup className={styles.priority}>*</sup></label>
-                    <input type="email" value={userData?.email || ''} className="form-control" id="email" name="email" onChange={handleChange} required />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="phone" className="form-label">Phone Number</label>
-                    <div className="w-100 d-flex ms-0">
-                        <div className="px-0">
-                            <div className="dropdown">
-                                <button className={`btn btn-outline-secondary dropdown-toggle rounded-0 rounded-start m-0 ${styles.btn}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {selectedIcon.icon}
-                                </button>
-                                <ul className={`dropdown-menu ${styles.dropdown_menu}`} aria-labelledby="dropdownMenuButton1">
-                                    {
-                                        countryCodes.map((countryCode, index) => {
-                                            let Comp = countries[countryCode];
-                                            return (
-                                                <li key={index} className="d-flex justify-content-center" onClick={() => setSelectedIcon({ icon: <Comp title={countryCode} />, code: countryCode })} style={{ cursor: 'pointer', width: '100%' }}>
-                                                    <Comp key={countryCode} title={countryCode} className={styles.country_icon} />
-                                                </li>
-                                            )
-                                        })
-                                    }
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="px-0 flex-grow-1">
-                            <input type="tel" value={userData?.phone || ''} className="form-control rounded-0 rounded-end" id="phone" name="phone" onChange={handleChange} />
-                        </div>
-                    </div>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="country" className="form-label">Country </label>
-                    <input type="text" value={userData?.country || ''} name="country" className="form-control" id="country" onChange={handleChange} />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="state" className="form-label">State</label>
-                    <select defaultValue={userData?.state || allStates[0] || ''} className="form-select" onChange={handleChange} id="state" name="state" aria-label="Default select example">
-                        {
-                            allStates.map(state => (
-                                <option key={state} value={state}>{state}</option>
-                            ))
-                        }
-                    </select>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="companyName" className="form-label">Company Name </label>
-                    <input type="text" value={userData?.companyName || ''} name="companyName" className="form-control" id="companyName" onChange={handleChange} />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="servicesOrProducts" className="form-label">Services/Products </label>
-                    <input type="text" value={userData?.servicesOrProducts || ''} name="servicesOrProducts" className="form-control" id="servicesOrProducts" onChange={handleChange} />
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="message">Message</label>
-                    <textarea onChange={handleChange} value={userData?.message || ''} name="message" id="message" className='form-control' rows="7"></textarea>
-                </div>
-
-                <div className="mt-5">
-                    <button type="submit" disabled={loading} className={`${styles.button} ${styles.button_aluvium_light_blue}`}>Submit Form</button>
-                </div>
-            </form>
-        </div>
-    )
-}
+const images = ['background.png', 'DSC_2918.jpg', 'DSC_3033.jpg', 'DSC_2921.jpg', 'image-9-1 2.png', 'DSC_2890.jpg', 'DSC_2928.jpg', 'DSC_2932.jpg', 'DSC_2952.jpg', 'DSC_2954.jpg', 'DSC_2967.jpg', 'DSC_2973.jpg']
 
 const LagosStartUpExpoPage = () => {
-    const [showForm, setShowForm] = useState(true);
-    const [userData, setUserData] = useState({});
-    const [message, setMessage] = useState({});
-    const [loading, setLoading] = useState(false);
-    const eventType = useMemo(() => 'Lagos StartUp Expo', []);
-    const { addToast } = useToasts();
-
-    const handleSubmit = useCallback(async (event) => {
-        setLoading(true);
-        event.preventDefault();
-        const { firstName, lastName, email } = userData;
-        if (!firstName || !lastName || !email) {
-            setMessage({
-                success: false,
-                message: 'Missing required fields!'
-            });
-            setLoading(false);
-            addToast('Missing required fields!', { appearance: 'error' });
-            return;
-        }
-        await axios
-            .post("/api/event/follow-up", { ...userData, eventType })
-            .then((res) => {
-                setLoading(false);
-                setMessage(res.data);
-                if (!res.data.success) {
-                    addToast('Unable to process data, kindly reach out to our agent.', { appearance: 'error' });
-                } else {
-                    setShowForm(false);
-                }
-                return;
-            })
-            .catch((err) => {
-                setLoading(false);
-                let errMessage = 'Oops something went wrong. Please try again.';
-                setMessage({ message: errMessage, success: false });
-                addToast(errMessage, { appearance: 'error' });
-                console.log(err.response.data);
-                return;
-            });
-    }, [eventType, userData, setMessage]);
+    const [news, setNews] = useState([]);
+    const [eventImages, setEventImages] = useState([]);
 
     useEffect(() => {
-        if (showForm) {
-            setUserData({});
-        }
-    }, [showForm]);
+        axios.get("https://blog.alluvium.net/wp-json/wp/v2/posts", { params: { categories: [10] } }).then(res => {
+            setNews(res.data)
+            console.log(res.data);
+        }).catch(err => {
+            console.log(err.message);
+        });
+    }, [])
 
+    useEffect(() => {
+        let locImage = images.map(imageName => import(`public/assets/techpoint-startup-expo/${imageName}`));
+        Promise.all(locImage).then(val => {
+            setEventImages(val);
+            console.log(val);
+        })
+    }, [images])
 
     return (
         <>
@@ -221,24 +55,101 @@ const LagosStartUpExpoPage = () => {
                             content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
                         />
                     </Head>
-                    <div className={`container-fluid row position-relative p-0 m-0 ${showForm ? styles.main : styles.main_small}`}>
-                        <div className="col-lg-7 d-none d-lg-inline"></div>
-                        <div className={`col-lg-5 d-none d-lg-inline ${styles.main_bg}`}></div>
-                        <div className="container-fluid p-0 m-0 position-absolute top-0 bottom-0">
-                            <div className="container row mx-auto" style={{ height: '100%' }}>
-                                <div className={`col-lg-6 ${styles.main_content}`}>
-                                    {
-                                        loading ?
-                                            <LoadingScreen message={"Loading..."} />
-                                            : (
-                                                showForm ?
-                                                    <FormComponent setShowForm={setShowForm} loading={loading} userData={userData} setUserData={setUserData} handleSubmit={handleSubmit} />
-                                                    :
-                                                    <ThankYouComponent setShowForm={setShowForm} message={message} />
-                                            )
-                                    }
+                    <div className={`container-fluid p-0 m-0 ${styles.main}`}>
+                        <div className={`position-relative ${styles.main_bg}`}>
+                            <div className={`d-flex flex-wrap flex-md-nowrap justify-content-center mx-auto ${styles.location}`}>
+                                <div className="">
+                                    <span>Place</span>
+                                    <p>Lagos - Landmark event centre</p>
                                 </div>
-                                <div className="col-lg-6"></div>
+                                <div className="">
+                                    <span>Date/Time</span>
+                                    <p>May 20th, 2023, @09am WAT</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={`container mx-auto py-5 ${styles.summary}`}>
+                            <div className="row mt-5">
+                                <div className="col-md-4 mb-3 pe-md-5">
+                                    <Image src={logo} alt="Techpoint Expo Event logo" loading="eager" priority />
+                                </div>
+                                <div className="col-md-8">
+                                    <p>
+                                        The Lagos Startup Expo is the premier event for entrepreneurs, investors, and tech enthusiasts held on May 20th, 2023 to network with top startups, see innovative products and learn about the latest industry trends.
+                                    </p>
+                                    <p>
+                                        This is the perfect platform to grow a business, make connections, and take startups to new heights.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="row mt-5">
+                                <div className="col-md-4 mb-4 d-flex flex-column justify-content-between pe-md-5">
+                                    <Image src={logo} alt="Techpoint Expo Event logo" loading="eager" priority />
+                                    <Image src={logo} className="mt-auto" alt="Techpoint Expo Event logo" loading="eager" priority />
+                                </div>
+                                <div className="col-md-8">
+                                    <p className={styles.summary_head}>
+                                        Alluvium shines at Lagos Startup Expo, delivers top range tech solutions
+                                    </p>
+                                    <div className={styles.summary_underline}></div>
+                                    <p>
+                                        Leading Tech firm and and fast rising startup, Alluvium; parent company of REMOTEWORKNG says it’s time for Africans to maximize cloud democracy in solving myriads of problems peculiar to each African nation.
+                                    </p>
+                                    <p className="mb-5">
+                                        Alluvium and over 200 startups and tech firms converged on the Landmark Event Centre in Victoria Island, Lagos Nigeria over the weekend to discuss a push for Africa and Nigeria in the Fourth Industrial revolution at the Lagos Startup Expo.
+                                    </p>
+                                    <p>
+                                        The event, one of the largest innovation startups’ conferences to showcase innovative products, was organized by a leading technology media platform Techpoint Africa, parent company of Altschool and TalentQl, Techpoint inspired and Techpoint build, known for training world class engineering teams.
+                                    </p>
+                                    <p>
+                                        The Lagos Startup expo had investors, entrepreneurs, tech firms, cloud engineers, programmers and specialists using technology solve the myriads of problems facing the continent ranging from health, finance, agriculture ,cloud services, security, among other sectors of the economy. <span>...continue reading</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className={`container mx-auto py-5 ${styles.gallery}`}>
+                            <div className={`mx-auto d-flex flex-wrap flex-md-no-wrap align-items-center justify-content-center ${styles.gallery_title}`}>
+                                <p className="">
+                                    We were live at
+                                </p>
+                                <div className="holder">
+                                    <Image src={logo2} alt="Techpoint Expo Event logo" loading="eager" priority />
+                                </div>
+                            </div>
+                            <div className={`row ${styles.gallery_content}`}>
+                                {eventImages.length > 0 &&
+                                    eventImages.map((eventImage, index) => (
+                                        <div key={index}>
+                                            <Image src={eventImage?.default} key={index} alt="Techpoint Expo Event logo" loading="eager" priority />
+                                        </div>
+                                    ))}
+                            </div>
+                            <div className="mx-auto d-flex align-items-center justify-content-center">
+                                <p className={styles.gallery_title2}>
+                                    Alluvians shares their experience at the Lagos Startup Expo
+                                </p>
+                            </div>
+                            <div className={`row ${styles.gallery_content}`}>
+                                {news.length > 0 &&
+                                    news.map(info => (<Link href={info?.link} key={info?.id}>
+                                        <a target="_blank" rel="norefferer">
+                                            <div className={styles.trend} key={info?.id}>
+                                                <div className={styles.trend_image}>
+                                                    {
+                                                        (info?.jetpack_featured_media_url == "") ? "" : <Image priority loading="eager" layout="fill" src={info?.jetpack_featured_media_url} alt={info?.slug} />
+                                                    }
+                                                </div>
+                                                <div className={styles.trend_content}>
+                                                    <div>
+                                                        <p className={styles.trend_month}>{moment(info?.date).format("MMM")}</p>
+                                                        <p className={styles.trend_day}>{moment(info?.date).format("DD")}</p>
+
+                                                    </div>
+                                                    <span className={styles.trend_title}>{info?.title.rendered}</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </Link>))}
                             </div>
                         </div>
                     </div>

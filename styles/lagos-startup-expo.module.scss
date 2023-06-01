@@ -1,58 +1,190 @@
-@import './lib/buttons.scss';
+@import './lib/variables.scss';
+@import './lib/fonts.scss';
 
 .main {
-    min-height: 1311px;
-
-    &_small {
-        min-height: 100vh;
-    }
-
     &_bg {
-        background-image: url('/assets/lagos-startup-expo/attendees.png');
-        background-position: bottom right;
+        background: url('/assets/techpoint-startup-expo/background.png');
+        background-size: auto;
+        background-position: bottom center;
+        height: 899px;
         background-repeat: no-repeat;
-        background-size: cover;
-    }
 
-    &_content {
-        // margin: 149px auto 149px auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+        @media screen and (min-width: 1600px) {
+            background-size: cover;
+        }
 
-        .form {
-            &_input {
-                width: 100%;
+        .location {
+            position: absolute;
+            bottom: 5px;
+            width: 85%;
+            left: 7.5%;
+            background: #FFFFFF;
+            border: 1px solid rgba(0, 0, 0, 0.31);
+            border-radius: 20px;
+            padding: 30px;
+            gap: 20px;
+
+            span {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                color: $alt-text-color;
+            }
+
+            p {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 27px;
+                color: $alluvium-light-orange;
+                text-decoration: underline;
             }
         }
     }
-    .priority{
-        color: red;
-    }
 
-    .btn{
-        height: 38px;
-        border: 1px solid #ced4da;
-        &:hover, &:focus, &:active{
-            background: initial !important;
+    .summary {
+        &_head {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 23px !important;
+            line-height: 28px;
+            color: #11202D;
+            margin-bottom: 0px !important;
+        }
+
+        &_underline {
+            height: 3px;
+            width: 100%;
+            background-color: $alluvium-light-orange;
+            margin: 10px 0 30px 0;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 29px;
+            text-align: justify;
+            color: #000000;
+            margin-bottom: 30px;
+
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+
+            span {
+                font-size: 32px;
+                font-weight: 500;
+                line-height: 39px;
+                color: $alluvium-light-blue;
+            }
         }
     }
 
-    .dropdown_menu{
-        min-width: 80px !important;
-        max-height: 200px !important;
-        overflow-y: scroll;
+    .gallery {
+        &_title {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 47.8367px;
+            line-height: 58px;
+            margin-bottom: 118px;
+            margin-top: 118px;
+            @media screen and (max-width: 576px) {
+                text-align: center;
+                margin-bottom: 70px;
+            }
+        }
+
+        &_title2 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 49px;
+            color: #11202D;
+            margin-bottom: 54px;
+            margin-top: 81px;
+
+            @media screen and (max-width: 576px) {
+                text-align: center;
+            }
+        }
+
+        &_content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: 89px;
+            row-gap: 89px;
+
+            @media screen and (max-width: 1400px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            @media screen and (max-width: 576px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .trend {
+            width: 100%;
+
+            &_content {
+                width: 100%;
+                padding: 20px;
+                display: flex;
+
+                @media screen and (max-width: 1200px) {
+                    padding: 10px;
+                }
+            }
+
+            &_image {
+                height: 300px;
+                width: 100%;
+                position: relative;
+                object-fit: contain;
+                object-position: center;
+                @media screen and (max-width: 768px) {
+                    height: 200px;
+                }
+            }
+
+            &_day {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 32.1547px;
+                line-height: 39px;
+                // color: #000000;
+                margin: 0;
+            }
+
+            &_month {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 12.8619px;
+                line-height: 16px;
+                text-align: center;
+                color: #3D37F1;
+                margin: 0;
+            }
+
+            &_title {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 18.0966px;
+                line-height: 22.14px;
+                // color: #000000;
+                margin-left: 20px;
+                @media screen and (max-width: 1200px) {
+                    margin-left: 10px;
+                }
+            }
+
+            &:hover {
+                .trend_title {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
-
-    .country_icon {
-        width: 20px;
-        height: 20px;
-    }
-
-}
-
-.button {
-    min-width: 167px;
-    min-height: 56px;
 }
