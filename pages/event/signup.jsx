@@ -9,12 +9,14 @@ import { Country, State } from 'country-state-city';
 import axios from "axios";
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import LoadingScreen from "components/loading";
+import { lockEventsFollowUpForm, currentEventName } from "config/index";
 
 
 import logo from 'public/assets/lagos-startup-expo/logo.png';
 
 import styles from 'styles/event-signup.module.scss';
 // import { countries } from "country-flag-icons";
+
 
 
 const ThankYouComponent = ({ setShowForm, message }) => {
@@ -40,12 +42,9 @@ const FormComponent = ({ userData, setUserData, handleSubmit, loading }) => {
     const [allStates, setAllStates] = useState([]);
 
     const handleChange = useCallback((event) => {
-        console.log(allCountries);
         const { name, value } = event.target;
         if (name === 'country') {
-            console.log(value);
             let theCountry = allCountries.find(country => (country.name.toLowerCase().includes(value.toLowerCase()) || country.isoCode.toLowerCase().includes(value.toLowerCase())));
-            // value = theCountry?.name;
             const states = State.getStatesOfCountry(theCountry?.isoCode);
             if (states?.length > 0) {
                 setAllStates(states.map(state => state.name));
@@ -160,12 +159,17 @@ const EventSignUpPage = () => {
     const [userData, setUserData] = useState({});
     const [message, setMessage] = useState({});
     const [loading, setLoading] = useState(false);
-    const eventType = useMemo(() => 'Lagos StartUp Expo', []);
+    const eventType = useMemo(() => currentEventName, []);
+    const notFollowingUpMessage = useMemo(() => "Sorry, We are not accepting follow up request at the moment until next event. Kindly use the contact us page or consultation request form.", []);
     const { addToast } = useToasts();
 
     const handleSubmit = useCallback(async (event) => {
-        setLoading(true);
         event.preventDefault();
+        if (lockEventsFollowUpForm) {
+            addToast(notFollowingUpMessage, { appearance: 'error' });
+            return;
+        }
+        setLoading(true);
         const { firstName, lastName, email } = userData;
         if (!firstName || !lastName || !email) {
             setMessage({
@@ -202,7 +206,11 @@ const EventSignUpPage = () => {
         if (showForm) {
             setUserData({});
         }
-    }, [showForm]);
+        if (lockEventsFollowUpForm) {
+            addToast(notFollowingUpMessage, { appearance: 'warning' });
+            return;
+        }
+    }, [showForm, lockEventsFollowUpForm, notFollowingUpMessage]);
 
 
     return (
@@ -210,7 +218,7 @@ const EventSignUpPage = () => {
             <ToastProvider>
                 <Layout withoutForm={true}>
                     <Head>
-                        <title>Home | Alluvium</title>
+                        <title>Event Follow Up Form | Alluvium</title>
                         <link rel="icon" href="/favicon.ico" />
                         <meta
                             name="description"
