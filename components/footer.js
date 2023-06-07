@@ -34,12 +34,14 @@ export function AltFooter() {
               </p>
             </div>
             <div>
-              <h3>DOWNLOAD BROCHURE (Coming Soon)</h3>
+              <h3>DOWNLOAD BROCHURE</h3>
 
               <a
                 aria-label="Download our brochure"
-                download="#"
+                download="Alluvium brochure.pdf"
+                href="/files/Alluvium brochure.pdf"
                 className={styles.download}
+                title="Alluvium brochure.pdf"
               >
                 Download
               </a>
