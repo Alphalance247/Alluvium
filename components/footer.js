@@ -38,10 +38,9 @@ export function AltFooter() {
 
               <a
                 aria-label="Download our brochure"
-                download="Alluvium brochure.pdf"
-                href="/files/Alluvium brochure.pdf"
+                href="https://blog.alluvium.net/wp-content/uploads/2023/06/Alluvium-brochure.pdf"
                 className={styles.download}
-                title="Alluvium brochure.pdf"
+                target="_blank"
               >
                 Download
               </a>
@@ -49,7 +48,7 @@ export function AltFooter() {
           </div>
           <div className={styles.altFooterMainSectionComponent}>
             <h3 className={styles.altFooterMainSectionComponentTitle}>
-            COMPANY
+              COMPANY
             </h3>
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
@@ -68,7 +67,7 @@ export function AltFooter() {
               <li className={styles.contactListItem}>
                 <Link href="/support/contact">
                   <a>
-                  Contact us
+                    Contact us
                   </a>
                 </Link>
               </li>
@@ -125,12 +124,21 @@ export function AltFooter() {
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
                 <p>
-                  <b>Headquarter:</b> Kemp House 160, City Road London, EC1V
+                  <b>Headquarter:</b> No.1 JayTee Ojo Crescent, Off Okemesi
+                  Road, Ikoro Ekiti, Ekiti State.
+                </p>
+                <p>
+                  <b>Europe:</b> Kemp House 160, City Road London, EC1V
                   2NX.
                 </p>
                 <p>
-                  <b>Ekiti Branch:</b> No.1 JayTee Ojo Crescent, Off Okemesi
-                  Road, Ikoro Ekiti, Ekiti State.
+                  <b>America:</b> Ohio: 2000 Auburn Drive
+                  One Chagrin Highlands
+                  Suite 200
+                  Beachwood, Ohio 44122 USA
+                </p>
+                <p>
+                  <b>Africa:</b> Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104
                 </p>
               </li>
               <li className={styles.contactListItem}>
@@ -191,7 +199,7 @@ export function AltFooter() {
               Legal Information
             </a> */}
             <Link href={'/privacy-policy'}>
-            <a aria-label="privacy-policy">Privacy Policy</a>
+              <a aria-label="privacy-policy">Privacy Policy</a>
             </Link>
           </div>
         </div>
