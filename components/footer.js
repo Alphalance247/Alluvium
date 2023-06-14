@@ -132,7 +132,7 @@ export function AltFooter() {
                   2NX.
                 </p>
                 <p>
-                  <b>America:</b> Ohio: 2000 Auburn Drive
+                  <b>America:</b> 2000 Auburn Drive
                   One Chagrin Highlands
                   Suite 200
                   Beachwood, Ohio 44122 USA
