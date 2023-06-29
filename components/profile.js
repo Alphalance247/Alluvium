@@ -7,7 +7,7 @@ export default function Profile({alluvian}){
     const { firstName, lastName, role, email, imgUrl, dept, alluvianTag } = alluvian;
 
     return (
-        <Link href="/team/[alluvianTag]" as={`/team/${alluvianTag}`} className={styles.profileContainer}>
+        <Link href="/about/[alluvianTag]" as={`/about/${alluvianTag}`} className={styles.profileContainer}>
             <div className={styles.profile}>
                 <div className={styles.profilePicture}>
                     <img src={imgUrl} alt={`${firstName +" "+ lastName}`}/>

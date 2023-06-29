@@ -118,7 +118,7 @@ export const ConsultationForm = () => {
                             </p>
                             <p>
                                 <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
-                                2NX.
+                                2NX, UK.
                             </p>
                             <p>
                                 <strong>America:</strong> 2000 Auburn Drive

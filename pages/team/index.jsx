@@ -19,7 +19,7 @@ export default function AboutUs() {
     <Layout>
       <div className={styles.aboutUsPage}>
         <Head>
-          <title>About us | Alluvium</title>
+          <title>Team | Alluvium</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         {/* <Navigation /> */}

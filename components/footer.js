@@ -128,11 +128,11 @@ export function AltFooter() {
               <li className={styles.contactListItem}>
                 <p>
                   <b>Headquarter:</b> No.1 JayTee Ojo Crescent, Off Okemesi
-                  Road, Ikoro Ekiti, Ekiti State.
+                  Road, Ikoro Ekiti, Ekiti State, Nigeria.
                 </p>
                 <p>
                   <b>Europe:</b> Kemp House 160, City Road London, EC1V
-                  2NX.
+                  2NX, UK.
                 </p>
                 <p>
                   <b>America:</b> 2000 Auburn Drive
@@ -141,7 +141,7 @@ export function AltFooter() {
                   Beachwood, Ohio 44122 USA
                 </p>
                 <p>
-                  <b>Africa:</b> Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104
+                  <b>Africa:</b> Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104, Nigeria.
                 </p>
               </li>
               <li className={styles.contactListItem}>
