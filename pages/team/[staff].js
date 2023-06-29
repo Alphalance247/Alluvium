@@ -4,22 +4,24 @@ import { getStaffUrls, getStaffData, fruits } from "../../lib/staff.ts";
 import { productData } from "data";
 import Services from "components/services-components/services";
 import styles from "../../styles/staff.module.scss";
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 import Layout from "components/layout";
 
 const StaffPage = ({ staffData, products, imagePath, fruitPath }) => {
   const getImagePath = (name) => {
-    let names = name.split(" ");
+    let names = name?.split(" ");
     let smallName = names[0] + "_" + names[1];
-    smallName = smallName.toLowerCase();
+    smallName = smallName?.toLowerCase();
     return `/assets/about/staff-image/${smallName}.png`;
   };
+
+  const pageTitle = useMemo(()=>staffData?.name+" | Alluvium", [staffData]);
 
   return (
     <Layout>
       <div className="container-fluid p-0">
         <Head>
-          <title>About us | Alluvium</title>
+          <title className="text-capitalize">{pageTitle}</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <main className={styles.main}>
@@ -27,7 +29,7 @@ const StaffPage = ({ staffData, products, imagePath, fruitPath }) => {
             <div className={styles.info_holder_mobile}>
               <div className={styles.info}>
                 <h1>
-                  Hello! <br className="d-sm-none" /> I am {staffData.name}
+                  Hello!  <br className="d-sm-none" /> I am {staffData.name}
                 </h1>
                 <div>
                   <p>{staffData.role}</p>

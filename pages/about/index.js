@@ -19,7 +19,7 @@ export default function Team({ team, products }) {
             <div className={styles.pageTitle}>
               <h4></h4>
               <div className={styles.hireUsLink}>
-                <Link href="/team#schedule">+ Hire us</Link>
+                <Link href="/about#schedule">+ Hire us</Link>
               </div>
             </div>
             <h2 className={styles.title} data-aos="fade-down">
