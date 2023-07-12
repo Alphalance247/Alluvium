@@ -6,14 +6,12 @@ import moment from "moment";
 
 const Trend = (props) => {
 	const { trendNews, index } = props;
+	console.log(trendNews.jetpack_featured_media_url);
 	return (
 		<Link href={trendNews.link}>
 			<a target="_blank" rel="norefferer">
 				<div className={styles.trend} key={index}>
-					<div className={styles.imageStyle}>
-						{
-							(trendNews.jetpack_featured_media_url == "") ? "" : <Image priority loading="eager" layout="responsive" src={trendNews.jetpack_featured_media_url} height={209} width={228} alt={trendNews.slug} />
-						}
+					<div className={styles.imageStyle} style={{background: `url(${trendNews.jetpack_featured_media_url})`, backgroundPosition: 'center', backgroundSize: 'contain', height: '209px'}}>
 					</div>
 					<div className={styles.trendContent}>
 
