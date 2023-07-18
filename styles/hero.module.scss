@@ -89,8 +89,13 @@
             .badges {
                 display: flex;
                 justify-content: center;
-                align-items: flex-start;
+                align-items: center;
                 gap: 57px;
+
+                .aws_cloud{
+                    width: 98px !important;
+                    height: 98px !important;
+                }
 
                 @media screen and (max-width: 576px) {
                     flex-wrap: wrap;
