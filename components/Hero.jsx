@@ -5,6 +5,7 @@ import styles from "../styles/hero.module.scss";
 
 import atlImg from "public/assets/atlassian-badges/atl.png";
 import atlCloudImg from "public/assets/atlassian-badges/atl-cloud.png";
+import atlJiraProjectImg from "public/assets/atlassian-badges/atl-jira-project.png";
 import awsCloudImg from "public/assets/atlassian-badges/aws-cloud.png";
 import marketPlaceImg from "public/assets/atlassian-badges/market-place.png";
 
@@ -33,8 +34,9 @@ const Hero = () => {
               <Image src={atlCloudImg} alt={"Atlassian Certified Confluence Administrator for Cloud"} />
               <Image src={awsCloudImg} alt={"AWS Certified Cloud Practitioner"} />
             </div>
-            <div className="badges">
+            <div className={styles.badges}>
               <Image src={marketPlaceImg} alt={"Atlassian Platinum Market Place Partner"} />
+              <Image src={atlJiraProjectImg} alt={"Atlassian Platinum Market Place Partner"} />
             </div>
           </div>
         </div>
