@@ -3,12 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../styles/hero.module.scss";
 
-import atlImg from "public/assets/atlassian-badges/atl.png";
-import atlCloudImg from "public/assets/atlassian-badges/atl-cloud.png";
-import atlJiraProjectImg from "public/assets/atlassian-badges/atl-jira-project.png";
-import awsCloudImg from "public/assets/atlassian-badges/aws-cloud.png";
-import marketPlaceImg from "public/assets/atlassian-badges/market-place.png";
-
 const Hero = () => {
   return (
     <>
@@ -30,13 +24,13 @@ const Hero = () => {
         <div className={`col-lg-6 px-5 ${styles.badges_container}`}>
           <div className={styles.badges_cover}>
             <div className={styles.badges}>
-              <Image src={atlImg} alt={"Atlassian Certified Jira Administrator for Cloud"} />
-              <Image src={atlCloudImg} alt={"Atlassian Certified Confluence Administrator for Cloud"} />
-              <Image src={awsCloudImg} alt={"AWS Certified Cloud Practitioner"} />
+              <Image src={"/assets/atlassian-badges/market-place.png"} width={385} height={123} alt={"Atlassian Platinum Market Place Partner"} />
+              <Image src={"/assets/atlassian-badges/aws-cloud.png"} width={198} height={198} alt={"AWS Certified Cloud Practitioner"} />
             </div>
             <div className={styles.badges}>
-              <Image src={marketPlaceImg} alt={"Atlassian Platinum Market Place Partner"} />
-              <Image src={atlJiraProjectImg} alt={"Atlassian Platinum Market Place Partner"} />
+              <Image src={"/assets/atlassian-badges/atl.png"} width={198} height={198} alt={"Atlassian Certified Jira Administrator for Cloud"} />
+              <Image src={"/assets/atlassian-badges/atl-cloud.png"} width={198} height={198} alt={"Atlassian Certified Confluence Administrator for Cloud"} />
+              <Image src={"/assets/atlassian-badges/atl-jira-project.png"} width={198} height={198} alt={"Atlassian Platinum Market Place Partner"} />
             </div>
           </div>
         </div>
