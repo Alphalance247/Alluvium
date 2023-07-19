@@ -227,28 +227,28 @@ export const teamData =
       hobbies: "Learning, Manga, Anime",
       alluvianTag: "ibukunakilo"
     },
-    {
-      firstName: "enyioma",
-      lastName: "osondu",
-      role: "Software engineer",
-      email: "enyioma.osondu@geniesys.co.uk",
-      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png",
-      dept: "Engineering team",
-      fruit: "pineapple",
-      hobbies: "Automation, Gaming, Anime",
-      alluvianTag: "enyiomaosondu"
-    },
-    {
-      firstName: "stanley",
-      lastName: "onwuka",
-      role: "Frontend engineer",
-      email: "stanley@geniesys.co.uk",
-      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/stanley.png",
-      dept: "Cosmetics team",
-      fruit: "dates",
-      hobbies: "music, series, basketball",
-      alluvianTag: "stanleyonwuka"
-    },
+    // {
+    //   firstName: "enyioma",
+    //   lastName: "osondu",
+    //   role: "Software engineer",
+    //   email: "enyioma.osondu@geniesys.co.uk",
+    //   imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1637672383/Alluvium%20Website/Placeholder-circle_1_kpeq8p.png",
+    //   dept: "Engineering team",
+    //   fruit: "pineapple",
+    //   hobbies: "Automation, Gaming, Anime",
+    //   alluvianTag: "enyiomaosondu"
+    // },
+    // {
+    //   firstName: "stanley",
+    //   lastName: "onwuka",
+    //   role: "Frontend engineer",
+    //   email: "stanley@geniesys.co.uk",
+    //   imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1634228178/Alluvium%20Website/Team%28new%29/stanley.png",
+    //   dept: "Cosmetics team",
+    //   fruit: "dates",
+    //   hobbies: "music, series, basketball",
+    //   alluvianTag: "stanleyonwuka"
+    // },
     {
       firstName: "sherif",
       lastName: "siyanbola",
@@ -316,17 +316,17 @@ export const teamData =
       hobbies: "Books, Anime, Podcasts",
       alluvianTag: "yusufbraimoh"
     },
-    {
-      firstName: "georgette",
-      lastName: "idrissou",
-      role: "Sales and Marketing",
-      email: "georgette@alluvium.com",
-      imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1635971307/Alluvium%20Website/Team%28new%29/georgette.png",
-      dept: "Marketing team",
-      fruit: "Coconut - hard outside and soft inside. Plus, it’s useful in all aspects.",
-      hobbies: "Food, Travel, Sports, People",
-      alluvianTag: "georgetteidrissou"
-    },
+    // {
+    //   firstName: "georgette",
+    //   lastName: "idrissou",
+    //   role: "Sales and Marketing",
+    //   email: "georgette@alluvium.com",
+    //   imgUrl: "https://res.cloudinary.com/geniesys/image/upload/v1635971307/Alluvium%20Website/Team%28new%29/georgette.png",
+    //   dept: "Marketing team",
+    //   fruit: "Coconut - hard outside and soft inside. Plus, it’s useful in all aspects.",
+    //   hobbies: "Food, Travel, Sports, People",
+    //   alluvianTag: "georgetteidrissou"
+    // },
     {
       firstName: "anjola",
       lastName: "oyelakin",
