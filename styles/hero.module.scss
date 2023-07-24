@@ -1,104 +1,113 @@
-.cover {
-    background-color: #FFFFFF;
-    min-height: 700px;
-
-    &>div {
+.parent{
+    background-image: url('/assets/hero/main-bg.png');
+    background-position-x: -100px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    .cover {
+        background: linear-gradient(0deg, rgba(15, 26, 37, 0.5), rgba(15, 26, 37, 0.5));
+        min-height: 800px;
         display: flex;
         align-items: center;
-        align-items: center;
-
+        justify-content: center;
+    
         @media screen and (max-width: 992px) {
             padding-top: 100px !important;
             padding-bottom: 100px !important;
         }
-    }
-
-    h1 {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 45px;
-        line-height: 130%;
-        color: #0D1117;
-
-        @media screen and (max-width: 576px) {
-            font-size: 34px;
+    
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 130%;
+            color: #FFFFFF;
+    
+            @media screen and (max-width: 576px) {
+                font-size: 34px;
+            }
         }
-    }
-
-    p {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-        color: #0F1A25;
-        margin-top: 30px;
-
-        @media screen and (max-width: 576px) {
-            margin-right: 2rem;
+    
+        p {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            color: #FFFFFF;
+            margin-top: 30px;
+    
+            @media screen and (max-width: 576px) {
+                margin-right: 2rem;
+            }
         }
-    }
-
-    a {
-        margin-top: 40px;
-        border: 0;
-        box-sizing: border-box;
-        width: fit-content;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 16px 32px;
-        gap: 10px;
-
-        // position: absolute;
-        // width: 187px;
-        // height: 56px;
-        // left: 160px;
-        // top: 495px;
-
-        background: #E37915;
-        border-radius: 5px;
-
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        color: #FFFFFF;
-        transition: all .2s ease-in;
-
-        &:hover {
-            // padding: 17px 34px;
-            background: #cb6608;
-        }
-    }
-
-    .badges_container {
-        // display: inline-flex;
-        // padding: 135px 64px 154px 64px;
-        justify-content: center;
-        align-items: center;
-        background-color: #EEF0F3;
-
-        .badges_cover {
+    
+        a {
+            margin-top: 40px;
+            border: 0;
+            box-sizing: border-box;
+            width: fit-content;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 56px;
-
-            .badges {
+            padding: 16px 32px;
+            gap: 10px;
+    
+            // position: absolute;
+            // width: 187px;
+            // height: 56px;
+            // left: 160px;
+            // top: 495px;
+    
+            background: #E37915;
+            border-radius: 5px;
+    
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFFFFF;
+            transition: all .2s ease-in;
+    
+            &:hover {
+                // padding: 17px 34px;
+                background: #cb6608;
+            }
+        }
+    
+        .badges_container {
+            // display: inline-flex;
+            // padding: 135px 64px 154px 64px;
+            justify-content: center;
+            align-items: center;
+    
+            .badges_cover {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                gap: 57px;
-
-                .aws_cloud{
-                    width: 98px !important;
-                    height: 98px !important;
-                }
-
-                @media screen and (max-width: 576px) {
-                    flex-wrap: wrap;
+                gap: 56px;
+    
+                .badges {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 24px;
+    
+                    .aws_cloud {
+                        width: 98px !important;
+                        height: 98px !important;
+                    }
+    
+                    .stroke {
+                        border: 3px solid white !important;
+                        border-radius: 50%;
+                    }
+    
+                    @media screen and (max-width: 576px) {
+                        flex-wrap: wrap;
+                        gap: 56px;
+                    }
                 }
             }
         }
