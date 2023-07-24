@@ -7,13 +7,13 @@ import Image from "next/image";
 const CaseStudy = ({caseStudy}) => {
     return (
         <>
-        <div className={`container-fluid p-0 m-0 ${styles.caseStudy}`}>
-            <div className={styles.head}>
+        <div className={`container-fluid p-0 m-0 ${styles.caseStudy}`} style={{backgroundImage: `url(${caseStudy?.clientLogo})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center -100px'}}>
+            {/* <div className={styles.head}>
                 <Image src={caseStudy?.clientLogo} alt={caseStudy?.title} height={102} width={214} priority loading='eager' />
-            </div>
+            </div> */}
             <div className={styles.body}>
                 <h4>{caseStudy?.title}</h4>
-                <p>{caseStudy?.description.slice(0, 60)}...</p>
+                <p>{caseStudy?.description.slice(0, 50)}...</p>
                 {
                     caseStudy?.caseStudyPageName && <Link href={'/reel/case-studies/'+caseStudy?.caseStudyPageName}>
                         <a>

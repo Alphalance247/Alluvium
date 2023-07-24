@@ -469,7 +469,7 @@ export const caseStudiesData = [
     downloadLink: "/files/AgroBiz-Server-to-Cloud.pdf",
     filename: "A Successful Server to Cloud Migration for an Agricultural business",
     caseStudyPageName: "a-successful-server-to-cloud-migration-for-an-agricultural-business",
-    clientLogo: "/assets/case-studies2/edf-energy.png",
+    clientLogo: "/assets/case-studies2/case-study-01/situation.png",
     details: {
       displayImage: "/assets/case-studies2/case-study-01/header.png",
       caseStudyTitle: 'A Successful Server to Cloud Migration for an Agricultural business',
@@ -517,7 +517,7 @@ export const caseStudiesData = [
     downloadLink: "/files/Server to Data Center Migration for Major Insurer.pdf",
     filename: "Server to Data Center Migration for Major Insurer",
     caseStudyPageName: "server-to-data-center-migration-for-major-insurer",
-    clientLogo: "/assets/case-studies2/edf-energy.png",
+    clientLogo: "/assets/case-studies2/case-study-02/situation.png",
     details: {
       displayImage: "/assets/case-studies2/case-study-02/header.png",
       caseStudyTitle: 'Server to Data Center Migration for Major Insurer',

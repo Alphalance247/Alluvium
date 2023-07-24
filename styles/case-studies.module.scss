@@ -70,8 +70,11 @@
 }
 
 .caseStudy {
-    background: #0F1A25;
+    // background: #0F1A25;
     border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    height: 381px;
 
     @media screen and (max-width: 576px) {
             margin-bottom: 20px !important;
@@ -84,6 +87,7 @@
     }
 
     .body {
+        background: #0F1A25;
         padding: 30px 41px;
 
         h4 {
