@@ -13,7 +13,7 @@ const Hero = () => {
               <div className="col-lg-8">
                 <h1>We are Trusted Atlassian Tools Migration Experts</h1>
                 <p>
-                  We supply the highest quality remote and onsite engineers" AND "We deliver some of the highest quality Jira, Confluence and Bitbucket migrations, faster and at much lower cost, for some of the biggest Atlassian partners and Enterprise companies.{" "}
+                  We supply the highest quality remote and onsite engineers AND We deliver some of the highest quality Jira, Confluence and Bitbucket migrations, faster and at much lower cost, for some of the biggest Atlassian partners and Enterprise companies.{" "}
                 </p>
                 <Link href={'#consultationForm'}>
                   <a>Schedule a Call</a>
@@ -21,7 +21,7 @@ const Hero = () => {
                 <div className={`${styles.badges_container} mt-5 mt-sm-4`}>
                   <div className={styles.badges_cover}>
                     <div className={styles.badges}>
-                      <Image src={"/assets/atlassian-badges/market-place.png"} width={400} height={138} alt={"Atlassian Platinum Market Place Partner"} />
+                      <Image src={"/assets/atlassian-badges/market-place-white.png"} width={400} height={138} alt={"Atlassian Platinum Market Place Partner"} />
                       <Image src={"/assets/atlassian-badges/aws-cloud.png"} width={198} height={198} alt={"AWS Certified Cloud Practitioner"} />
                       <Image src={"/assets/atlassian-badges/atl.png"} className={styles.stroke} width={198} height={198} alt={"Atlassian Certified Jira Administrator for Cloud"} />
                       <Image src={"/assets/atlassian-badges/atl-cloud.png"} className={styles.stroke} width={198} height={198} alt={"Atlassian Certified Confluence Administrator for Cloud"} />
