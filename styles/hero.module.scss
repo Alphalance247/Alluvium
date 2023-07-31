@@ -1,15 +1,19 @@
 .parent{
     background-image: url('/assets/hero/main-bg.png');
-    background-position-x: -100px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    @media (max-width: 1900px) {  
+        background-position-x: -100px;
+    }
+    
     .cover {
-        background: linear-gradient(0deg, rgba(15, 26, 37, 0.5), rgba(15, 26, 37, 0.5));
+        background: linear-gradient(0deg, rgba(15, 26, 37, 0.3), rgba(15, 26, 37, 0.3));
         min-height: 800px;
         display: flex;
         align-items: center;
         justify-content: center;
+
     
         @media screen and (max-width: 992px) {
             padding-top: 100px !important;
