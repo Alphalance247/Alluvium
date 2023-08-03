@@ -28,9 +28,7 @@ export function AltFooter() {
             </div>
             <div>
               <p>
-                We are a team of passionate professionals dedicated to providing
-                businesses with cutting-edge solutions leveraging the Atlassian
-                suite of tools.
+                We supply the highest quality remote and onsite engineers AND We deliver some of the highest quality Jira, Confluence and Bitbucket migrations, faster and at much lower cost, for some of the biggest Atlassian partners and Enterprise companies.
               </p>
             </div>
             <div>
