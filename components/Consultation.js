@@ -74,7 +74,7 @@ export const ConsultationForm = () => {
         <ToastProvider>
             <section id='consultationForm' className={styles.contact}>
                 <div className="container">
-                    <h2>Looking for a Consultation?</h2>
+                    <h2>How can we help?</h2>
                     <div className={styles.content}>
                         <div>
                             <form method='POST' onSubmit={onsubmit}>

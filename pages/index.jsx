@@ -7,7 +7,7 @@ import News from "../components/news-and-trends/news";
 import WhyAlluvium from "components/whyAlluvium";
 import Hero from "components/Hero";
 import OurSolution from "components/ourSolutions";
-import OurPartners from "components/ourPartners";
+// import OurPartners from "components/ourPartners";
 import WelcomeToAlluvium from "components/welcomeToAlluvium";
 import ToolsAndPlatforms from "components/toolsAndPlatforms";
 import Layout from "components/layout";
@@ -39,7 +39,7 @@ const Home = () => {
           <WelcomeToAlluvium />
           <ToolsAndPlatforms />
           <WhyAlluvium />
-          <OurPartners />
+          {/* <OurPartners /> */}
           <CaseStudies />
           <OurSolution />
           <News />

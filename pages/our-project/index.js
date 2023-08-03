@@ -8,7 +8,6 @@ import { CoreValue, values } from "components/about-us/CoreValues";
 import Services from "components/services-components/services";
 import WhyAlluvium from "components/whyAlluvium";
 import OurSolution from "components/ourSolutions";
-import OurPartners from "components/ourPartners";
 import Layout from "components/layout";
 
 export default function OurProject() {
