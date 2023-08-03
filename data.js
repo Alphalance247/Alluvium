@@ -594,13 +594,13 @@ export const milestonesData = [
   },
   {
     id: 2,
-    value: "500+",
+    value: "50+",
     icon: "/assets/milestone_project.svg",
     category: "Projects"
   },
   {
     id: 3,
-    value: "20+",
+    value: "8+",
     icon: "/assets/milestone_countries.svg",
     category: "Countries"
   },
