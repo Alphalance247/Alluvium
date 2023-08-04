@@ -49,7 +49,7 @@
     .caseStudyList{
         display: flex;
         column-gap: 2em;
-        justify-content: center;
+        justify-content: flex-start;
 
         @media screen and (max-width: 576px) {
             margin-top: 20px;
