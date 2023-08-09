@@ -1,16 +1,15 @@
 import Head from "next/head";
-import Link from "next/link";
-import Navigation from "../../components/navigation";
 import styles from "../../styles/about.module.scss";
 import Image from "next/image";
-import { AchievementCounter, achievements } from "components/Achievement";
-import { BookingCTA, ConsultationForm } from "components/Consultation";
+import { AchievementCounter } from "components/Achievement";
+import { BookingCTA } from "components/Consultation";
 import { CoreValue, values } from "components/about-us/CoreValues";
 import Services from "components/services-components/services";
 import WhyAlluvium from "components/whyAlluvium";
 import OurSolution from "components/ourSolutions";
 // import OurPartners from "components/ourPartners";
 import Layout from "components/layout";
+import { milestonesData } from "data";
 
 export default function AboutUs() {
   const imagePath = "/assets/about/";
@@ -180,14 +179,14 @@ export default function AboutUs() {
             <div className="container">
               <h2 className={styles.h2}>Our Achievements</h2>
               <div className="row mb-5">
-                {achievements.map((achievement) => (
+                {milestonesData.map(({value, category}) => (
                   <div
                     className="col-lg-2 col-md-4 col-sm-6 col-6"
                     key={achievemnetKeys++}
                   >
                     <AchievementCounter
-                      name={achievement.name}
-                      value={achievement.value}
+                      name={category}
+                      value={value}
                     />
                   </div>
                 ))}

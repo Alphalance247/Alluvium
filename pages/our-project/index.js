@@ -2,12 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../../styles/project.module.scss";
 import Image from "next/image";
-import { AchievementCounter, achievements } from "components/Achievement";
-import { BookingCTA, ConsultationForm } from "components/Consultation";
-import { CoreValue, values } from "components/about-us/CoreValues";
-import Services from "components/services-components/services";
-import WhyAlluvium from "components/whyAlluvium";
-import OurSolution from "components/ourSolutions";
+import { BookingCTA } from "components/Consultation";
 import Layout from "components/layout";
 
 export default function OurProject() {
