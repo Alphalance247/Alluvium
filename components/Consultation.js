@@ -112,10 +112,10 @@ export const ConsultationForm = () => {
                         </div>
                         <div>
                             <h3>Our Locations</h3>
-                            <p>
+                            {/* <p>
                                 <strong>Headquarter:</strong> No.1 JayTee Ojo Crescent, Off Okemesi
                                 Road, Ikoro Ekiti, Ekiti State.
-                            </p>
+                            </p> */}
                             <p>
                                 <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
                                 2NX, UK.

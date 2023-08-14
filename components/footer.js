@@ -121,10 +121,10 @@ export function AltFooter() {
             </h3>
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
-                <p>
+                {/* <p>
                   <b>Headquarter:</b> No.1 JayTee Ojo Crescent, Off Okemesi
                   Road, Ikoro Ekiti, Ekiti State, Nigeria.
-                </p>
+                </p> */}
                 <p>
                   <b>Europe:</b> Kemp House 160, City Road London, EC1V
                   2NX, UK.
