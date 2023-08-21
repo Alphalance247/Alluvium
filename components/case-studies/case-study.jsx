@@ -2,7 +2,6 @@ import React from "react";
 import {MdDoubleArrow} from 'react-icons/md';
 import styles from '../../styles/case-studies.module.scss';
 import Link from "next/link";
-import Image from "next/image";
 
 const CaseStudy = ({caseStudy}) => {
     return (
@@ -12,8 +11,8 @@ const CaseStudy = ({caseStudy}) => {
                 <Image src={caseStudy?.clientLogo} alt={caseStudy?.title} height={102} width={214} priority loading='eager' />
             </div> */}
             <div className={styles.body}>
-                <h4>{caseStudy?.title}</h4>
-                <p>{caseStudy?.description.slice(0, 50)}...</p>
+                <h4>{caseStudy?.details?.title}</h4>
+                <p>{caseStudy?.details?.description.slice(0, 50)}...</p>
                 {
                     caseStudy?.caseStudyPageName && <Link href={'/reel/case-studies/'+caseStudy?.caseStudyPageName}>
                         <a>
