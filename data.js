@@ -666,62 +666,62 @@ export const caseStudiesData = [
       hasPie: true
     }
   },
-  {
-    id: 5,
-    downloadLink: "/files/Server to Data Center Migration for Major Insurer.pdf",
-    filename: "Server to Data Center Migration for Major Insurer",
-    caseStudyPageName: "Thirst-for-better-Agile-Environment-Pivotal-tracker-to-Jira-Cloud",
-    clientLogo: "/assets/case-studies2/case-study-05/situation.png",
-    details: {
-      displayImage: "/assets/case-studies2/case-study-05/header.png",
-      caseStudyTitle: 'Thirst for better Agile Environment: Pivotal tracker to Jira Cloud',
-      tools: "Jira, Jira service Management",
-      duration: "2 months",
-      users: "500 - 1,000",
-      serviceProvided: "Data migration, Training",
-      industry: "Software Development",
-      teamComposition: "3 members",
-      caseStudyAchievements: [
-        {
-          goal: "Seamless Atlassian Products Integration",
-          icon: "/assets/case-studies2/icons/icon1.png"
-        },
-        {
-          goal: "Effective use of Jira Service Management",
-          icon: "/assets/case-studies2/icons/icon2.png"
-        },
-        {
-          goal: "Successful data migration",
-          icon: "/assets/case-studies2/icons/icon3.png"
-        }
-      ],
-      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
-      description: "The client is a US-based fintech company that provides automated investment accounting, performance, compliance, reporting services to a diverse client base including financial and government institutions. The company needed to migrate its entire Atlassian Suite (Jira, Confluence, Bitbucket, Statuspage, and Opsgenie) from its datacenter to Atlassian Cloud.",
-      caseStudySituation: "Creating solutions that protect organizations against cybersecurity issues is the primary objectives of our client company. With their team of experts, they have successfully assisted their customers to in mitigating potential breaches and cyber attacks. They decided to moved their data from Pivotal Tracker to Jira cloud to enjoy numerous advantages Jira cloud provides",
-      caseStudySituationImage: "/assets/case-studies2/case-study-05/situation.png",
-      caseStudyChallenge: "The client's main challenge on Pivotal is the inability to practice agile development tracking at scale at low charges. They needed a platform that lets them practice agile software development at scale but with low prices. Additionally, they required a high-security mindset to ensure their data is secure during migration and got migrated seamlessly. ",
-      // caseStudyChallengePoints: [
-      //   "Decrease time and effort associated with server maintenance",
-      //   "Enhance the user experience by taking advantage of Atlassian Cloud features",
-      //   "Enhance site security"
-      // ],
-      caseStudySolutionSubtitle: "Throughout the project, a systematic approach was adopted to ensure effective migration.",
-      caseStudySolutions: [
-        "Biweekly meetings and stand-ups were conducted to gather requirements and refine feedback for continuous improvement.", 
-        "Python was utilized to extend the capabilities of the Atlassian REST API, while structured Query Language (SQL) was employed to query the applications' databases for data collection and analysis.",
-       "The migration of Jira was completed by utilizing the site import feature to migrate the bulk of the application data, combined with Atlassian's automated migration tool; Jira Cloud Migration Assistance (JCMA), to migrate attachments and most of the installed plugin data.", 
-       "Confluence and Bitbucket migrations were also completed by employing Atlassian's automated migration tools for each application, Confluence Cloud Migration Assistant (CCMA) and Bitbucket Cloud Migration Assistant (BCMA).", 
-       "Custom scripts from the Alluvium script library were deployed to handle multiple migrations tasks including the migration of calendars, automation rules and to automate the cloning of Bitbucket repositories to the target cloud instance.", 
-        ],
-      caseStudyResultsImage: "/assets/case-studies2/case-study-05/result.png",
-      caseStudyResults: [
-        "Successfully launch them on Jira cloud with better agile development tracking system.",
-        "The migration provided the client access to an extensive marketplace of add-ons and integrations, allowing them to customize Jira Cloud to suit their specific needs.",
-        "The client's team received training on how to effectively use Jira and its best practices, ensuring they could fully leverage the platform for their software development and project management needs."
-      ],
-      hasPie: true
-    }
-  },
+  // {
+  //   id: 5,
+  //   downloadLink: "/files/Server to Data Center Migration for Major Insurer.pdf",
+  //   filename: "Server to Data Center Migration for Major Insurer",
+  //   caseStudyPageName: "Thirst-for-better-Agile-Environment-Pivotal-tracker-to-Jira-Cloud",
+  //   clientLogo: "/assets/case-studies2/case-study-05/situation.png",
+  //   details: {
+  //     displayImage: "/assets/case-studies2/case-study-05/header.png",
+  //     caseStudyTitle: 'Thirst for better Agile Environment: Pivotal tracker to Jira Cloud',
+  //     tools: "Jira, Jira service Management",
+  //     duration: "2 months",
+  //     users: "500 - 1,000",
+  //     serviceProvided: "Data migration, Training",
+  //     industry: "Software Development",
+  //     teamComposition: "3 members",
+  //     caseStudyAchievements: [
+  //       {
+  //         goal: "Seamless Atlassian Products Integration",
+  //         icon: "/assets/case-studies2/icons/icon1.png"
+  //       },
+  //       {
+  //         goal: "Effective use of Jira Service Management",
+  //         icon: "/assets/case-studies2/icons/icon2.png"
+  //       },
+  //       {
+  //         goal: "Successful data migration",
+  //         icon: "/assets/case-studies2/icons/icon3.png"
+  //       }
+  //     ],
+  //     caseStudyImg: "/assets/case-studies/case-study-2-img.png",
+  //     description: "The client is a US-based fintech company that provides automated investment accounting, performance, compliance, reporting services to a diverse client base including financial and government institutions. The company needed to migrate its entire Atlassian Suite (Jira, Confluence, Bitbucket, Statuspage, and Opsgenie) from its datacenter to Atlassian Cloud.",
+  //     caseStudySituation: "Creating solutions that protect organizations against cybersecurity issues is the primary objectives of our client company. With their team of experts, they have successfully assisted their customers to in mitigating potential breaches and cyber attacks. They decided to moved their data from Pivotal Tracker to Jira cloud to enjoy numerous advantages Jira cloud provides",
+  //     caseStudySituationImage: "/assets/case-studies2/case-study-05/situation.png",
+  //     caseStudyChallenge: "The client's main challenge on Pivotal is the inability to practice agile development tracking at scale at low charges. They needed a platform that lets them practice agile software development at scale but with low prices. Additionally, they required a high-security mindset to ensure their data is secure during migration and got migrated seamlessly. ",
+  //     // caseStudyChallengePoints: [
+  //     //   "Decrease time and effort associated with server maintenance",
+  //     //   "Enhance the user experience by taking advantage of Atlassian Cloud features",
+  //     //   "Enhance site security"
+  //     // ],
+  //     caseStudySolutionSubtitle: "Throughout the project, a systematic approach was adopted to ensure effective migration.",
+  //     caseStudySolutions: [
+  //       "Biweekly meetings and stand-ups were conducted to gather requirements and refine feedback for continuous improvement.", 
+  //       "Python was utilized to extend the capabilities of the Atlassian REST API, while structured Query Language (SQL) was employed to query the applications' databases for data collection and analysis.",
+  //      "The migration of Jira was completed by utilizing the site import feature to migrate the bulk of the application data, combined with Atlassian's automated migration tool; Jira Cloud Migration Assistance (JCMA), to migrate attachments and most of the installed plugin data.", 
+  //      "Confluence and Bitbucket migrations were also completed by employing Atlassian's automated migration tools for each application, Confluence Cloud Migration Assistant (CCMA) and Bitbucket Cloud Migration Assistant (BCMA).", 
+  //      "Custom scripts from the Alluvium script library were deployed to handle multiple migrations tasks including the migration of calendars, automation rules and to automate the cloning of Bitbucket repositories to the target cloud instance.", 
+  //       ],
+  //     caseStudyResultsImage: "/assets/case-studies2/case-study-05/result.png",
+  //     caseStudyResults: [
+  //       "Successfully launch them on Jira cloud with better agile development tracking system.",
+  //       "The migration provided the client access to an extensive marketplace of add-ons and integrations, allowing them to customize Jira Cloud to suit their specific needs.",
+  //       "The client's team received training on how to effectively use Jira and its best practices, ensuring they could fully leverage the platform for their software development and project management needs."
+  //     ],
+  //     hasPie: true
+  //   }
+  // },
 ]
 
 export const ourServicesData = [
