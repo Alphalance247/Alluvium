@@ -24,7 +24,7 @@ export default function CaseStudy({ caseStudy }) {
     <Layout>
       <div className={styles.caseStudyPage}>
         <Head>
-          <title>{caseStudy.title} | Alluvium</title>
+          <title>{caseStudy?.title + ' | Alluvium'}</title>
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
@@ -131,13 +131,13 @@ export default function CaseStudy({ caseStudy }) {
                     <h4 className="mb-3">Tech Stack</h4>
                     <ul className="list-unstyled">
                       <li className="mb-lg-3">
-                        <span>Team Composition : </span>5 members
+                        <span>Team Composition : </span>{details.teamComposition}
                       </li>
                       <li className="mb-lg-3">
-                        <span>Tools : </span>Jira, Jira Service Management
+                        <span>Tools : </span> {details.tools}
                       </li>
                       <li className="mb-lg-3">
-                        <span>Duration : </span>5 months
+                        <span>Duration : </span>  {details.duration}
                       </li>
                     </ul>
                   </div>
@@ -145,14 +145,14 @@ export default function CaseStudy({ caseStudy }) {
                     <h4 className="mb-3">Company</h4>
                     <ul className="list-unstyled">
                       <li className="mb-lg-3">
-                        <span>Client Name : </span>5 members
+                        
+                        <span>Number of User : </span> {details.users}
                       </li>
                       <li className="mb-lg-3">
-                        <span>Service Provided : </span>Data Migration, Cloud
-                        Instance Training
+                        <span>Service Provided : </span> {details.serviceProvided}
                       </li>
                       <li className="mb-lg-3">
-                        <span>Industry : </span>Agriculture
+                        <span>Industry : </span> {details.industry}
                       </li>
                     </ul>
                   </div>
@@ -196,12 +196,17 @@ export default function CaseStudy({ caseStudy }) {
                   <h3 className={styles.sectionHeader}>The Challenge</h3>
                   <div>
                     <p>{details.caseStudyChallenge}</p>
+                    <ul className="list-group list-group-flush ms-3">
+                      {details.caseStudyChallengePoints?.map((challenge) => (
+                        <li key={challenge}>{challenge}</li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
                 <div className="">
                   <h3 className={styles.sectionHeader}>The Solution</h3>
                   <div>
-                    <span>{details.caseStudySolutionSubtitle}</span>
+                    <p>{details.caseStudySolutionSubtitle}</p>
                     <ul className="list-group list-group-flush ms-3">
                       {details.caseStudySolutions?.map((solution) => (
                         <li key={solution}>{solution}</li>
