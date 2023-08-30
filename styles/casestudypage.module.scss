@@ -68,6 +68,11 @@
             justify-content: flex-start;
             text-align: start;
 
+            @media screen and (max-width: 576px) {
+              align-items: center;
+              margin-top: 15px;
+            }
+
             img {
               width: 25px;
               padding-top: 20px;
@@ -75,6 +80,9 @@
 
             p {
               margin-left: 10px;
+              @media screen and (max-width: 576px) {
+                margin-bottom: 0px;
+              }
             }
           }
         }
