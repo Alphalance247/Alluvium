@@ -14,7 +14,7 @@ const CaseStudy = ({caseStudy}) => {
                 <h4>{caseStudy?.details?.title}</h4>
                 <p>{caseStudy?.details?.description.slice(0, 50)}...</p>
                 {
-                    caseStudy?.caseStudyPageName && <Link href={'/reel/case-studies/'+caseStudy?.caseStudyPageName}>
+                    caseStudy?.caseStudyPageName && <Link href={'/case-studies/'+caseStudy?.caseStudyPageName}>
                         <a>
                         View Case Study <MdDoubleArrow />
                         </a>

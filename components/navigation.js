@@ -165,7 +165,7 @@ export default function Navigation({ theme }) {
               </a>
             </li>
             <li>
-              <Link href="/#case-studies">Case Studies</Link>
+              <Link href="/case-studies">Case Studies</Link>
             </li>
             {/* <li>
                             <div>
@@ -261,7 +261,7 @@ export default function Navigation({ theme }) {
             </li>
             {/* <li><Link href="/reel">+ Project Reel</Link></li> */}
             <li>
-              <Link href="/#case-studies">+ Case Studies</Link>
+              <Link href="/case-studies">+ Case Studies</Link>
             </li>
             {/* <li><Link href="/about">+ About us</Link></li> */}
             {/* <li><Link href="/team">+ Our Team</Link></li> */}

@@ -22,7 +22,7 @@ const CaseStudies = () => {
                     </div>
                     <div className={`container mx-auto ${styles.caseStudyList}`}>
                             {
-                                caseStudiesData.map((caseStudy) => {
+                                caseStudiesData.slice(-3).map((caseStudy) => {
                                     return (
                                         !!caseStudy && <CaseStudy caseStudy={caseStudy} key={caseStudy.id} />
                                     )

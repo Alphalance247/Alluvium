@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { MdDownload } from "react-icons/md";
 import { InView } from "react-intersection-observer";
-import styles from "../../../styles/casestudypage.module.scss";
-import { caseStudiesData } from "../../../data";
+import styles from "../../styles/casestudypage.module.scss";
+import { caseStudiesData } from "../../data";
 import BookingCTA from "components/Booking";
 import Layout from "components/layout";
 
@@ -145,7 +145,7 @@ export default function CaseStudy({ caseStudy }) {
                     <h4 className="mb-3">Company</h4>
                     <ul className="list-unstyled">
                       <li className="mb-lg-3">
-                        
+
                         <span>Number of User : </span> {details.users}
                       </li>
                       <li className="mb-lg-3">
@@ -205,21 +205,24 @@ export default function CaseStudy({ caseStudy }) {
                 </div>
                 <div className="">
                   <h3 className={styles.sectionHeader}>The Solution</h3>
-                  <div>
-                    <p>{details.caseStudySolutionSubtitle}</p>
-                    <ul className="list-group list-group-flush ms-3">
-                      {details.caseStudySolutions?.map((solution) => (
-                        <li key={solution}>{solution}</li>
-                      ))}
-                    </ul>
-                    <span>
-                      {details.caseStudySolutionsParagraphs?.map(
-                        (paragraph) => (
-                          <span key={paragraph}>{paragraph}</span>
-                        )
-                      )}
-                    </span>
-                  </div>
+                  {details.solution.length > 0 && details.solution.map((solution, index) => (
+                    <div key={index} className="mb-3">
+                      <p className={details.solution.length > 1 ? 'fw-medium' : ''}>{solution.caseStudySolutionSubtitle}</p>
+                      <span>{solution.caseStudySubParagraph}</span>
+                      <ul className="list-group list-group-flush ms-3">
+                        {solution.caseStudySolutions?.map((solution) => (
+                          <li key={solution}>{solution}</li>
+                        ))}
+                      </ul>
+                      <span>
+                        {solution.caseStudySolutionsParagraphs?.map(
+                          (paragraph) => (
+                            <span key={paragraph}>{paragraph}</span>
+                          )
+                        )}
+                      </span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </InView>
