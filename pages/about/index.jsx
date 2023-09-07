@@ -270,13 +270,7 @@ export default function AboutUs() {
                 Visit Website
               </a>
             </div>
-            <div className="position-relative">
-              <Image
-                src={"/assets/about/our-impact.png"}
-                layout="fill"
-                alt="our impact"
-                className={styles.impactImage}
-              />
+            <div className={styles.contentRight}>
             </div>
           </section>
 

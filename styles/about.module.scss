@@ -212,6 +212,15 @@
                 padding-left: 50px;
             }
 
+            .contentRight {
+                position: relative;
+                // width: 752px;
+                // height: 538px;
+                background-image: url('/assets/about/imp.png');
+                background-size: contain;
+                background-repeat: repeat-x;
+            }
+
             @include media("<tablet") {
                 grid-template-columns: 1fr;
 

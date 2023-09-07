@@ -35,7 +35,7 @@ const ToolsAndPlatforms = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-12 mt-5">
+            <div className="col-10 mx-auto col-sm-12 mt-5">
               <div className={styles.icons}>
                 {toolsAndPlatforms.map((tool, id) => (
                   <div key={id}>
