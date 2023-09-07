@@ -4,18 +4,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
-
-    @media screen and (max-width: 768px) {
-        padding-top: 70px !important;
-        padding-bottom: 70px !important;
-    }
-
-    @media screen and (max-width: 576px) {
-        padding-top: 100px !important;
-        padding-bottom: 100px !important;
-    }
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
 
     h2 {
         font-style: normal;

@@ -12,7 +12,7 @@ const CaseStudies = () => {
                     <div className={styles.topSection}>
                         <h2>Case Studies</h2>
                         <div className="row p-0 m-0">
-                            <div className="col-md-6 ps-0">
+                            <div className="col-md-8 col-xl-6 ps-0">
                                 <h3>How We've Helped Our Clients Achieve Data Migration Goals</h3>
                             </div>
                             {/* <div className="col-md-6 ps-md-5">

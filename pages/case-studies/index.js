@@ -50,8 +50,8 @@ export const getStaticProps = async () => {
 const CaseStudyCard = ({ caseStudy }) => {
   return (
     <div key={caseStudy.id} className={styles.card}>
-      <div className={styles.card_image}>
-        <img style={{ width: "100%" }} src={caseStudy.details.displayImage} />
+      <div className={styles.card_image} style={{backgroundImage: `url(${caseStudy?.clientLogo})`}}>
+        {/* <img style={{ width: "100%" }} src={caseStudy.details.displayImage} /> */}
       </div>
       <div className={styles.card_body}>
         <h2 className={styles.card_title}>{caseStudy.details.caseStudyTitle}</h2>

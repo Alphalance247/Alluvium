@@ -10,7 +10,7 @@ const WelcomeToAlluvium = () => {
       <div className={`container-fluid ${styles.cover}`}>
         <div className="container">
           <div className="row mb-5">
-            <div className="col-md-6">
+            <div className="col-md-6 mb-5 mb-md-0">
               <h2>Welcome to Alluvium</h2>
               <h3>Leading the Way in Data Migration Solutions</h3>
 

@@ -6,7 +6,7 @@ import Link from "next/link";
 const CaseStudy = ({caseStudy}) => {
     return (
         <>
-        <div className={`container-fluid p-0 m-0 ${styles.caseStudy}`} style={{backgroundImage: `url(${caseStudy?.clientLogo})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center -100px'}}>
+        <div className={`container-fluid p-0 m-0 mb-4 ${styles.caseStudy}`} style={{backgroundImage: `url(${caseStudy?.clientLogo})`, backgroundRepeat: 'no-repeat', backgroundPosition: 'center -100px'}}>
             {/* <div className={styles.head}>
                 <Image src={caseStudy?.clientLogo} alt={caseStudy?.title} height={102} width={214} priority loading='eager' />
             </div> */}

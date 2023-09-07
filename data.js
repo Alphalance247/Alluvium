@@ -762,7 +762,7 @@ export const caseStudiesData = [
     clientLogo: "/assets/case-studies2/case-study-06/situation.png",
     details: {
       displayImage: "/assets/case-studies2/case-study-06/header.png",
-      caseStudyTitle: 'Thirst for better Agile Environment: Pivotal tracker to Jira Cloud',
+      caseStudyTitle: 'Server to Cloud migration for top rated software development company',
       tools: "Confluence",
       duration: "8 months",
       users: "-",
