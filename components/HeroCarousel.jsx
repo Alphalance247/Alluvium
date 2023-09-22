@@ -11,7 +11,10 @@ export default function () {
     return (
         <>
             <div className="container-fluid p-0">
-                <Slider fade speed={5000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true}>
+                <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true}>
+                    <div>
+                        <Hero />
+                    </div>
                     <div className="container-fluid p-0">
                         <div className={`${styles.h2}`}>
                             <h1>Let’s take you to the Cloud</h1>
@@ -26,9 +29,6 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <Hero />
                     </div>
                     <div>
                         <div className={`${styles.h3}`}>
