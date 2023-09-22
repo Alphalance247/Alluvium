@@ -11,6 +11,7 @@ import OurSolution from "components/ourSolutions";
 import WelcomeToAlluvium from "components/welcomeToAlluvium";
 import ToolsAndPlatforms from "components/toolsAndPlatforms";
 import Layout from "components/layout";
+import HeroCarousel from 'components/HeroCarousel';
 
 const Home = () => {
   
@@ -34,7 +35,7 @@ const Home = () => {
           />
         </Head>
         <div className="container-fluid p-0 m-0">
-          <Hero />
+          <HeroCarousel />
           <Services />
           <WelcomeToAlluvium />
           <ToolsAndPlatforms />
