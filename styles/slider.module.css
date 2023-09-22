@@ -1,0 +1,28 @@
+/* styles.css */
+.slider {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cardContainer {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .cardSlide {
+    flex: 0 0 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .active {
+    transform: translateX(0);
+  }
+  
+  .card {
+    width: 300px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    margin: 8px;
+    text-align: center;
+  }
+  

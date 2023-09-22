@@ -3,13 +3,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    @media (max-width: 1900px) {  
-        background-position-x: -100px;
-    }
+    // @media (max-width: 1900px) {  
+    //     background-position-x: -100px;
+    // }
     
     .cover {
         background: linear-gradient(0deg, rgba(15, 26, 37, 0.3), rgba(15, 26, 37, 0.3));
-        min-height: 800px;
+        min-height: 733px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -79,40 +79,40 @@
             }
         }
     
-        .badges_container {
-            // display: inline-flex;
-            // padding: 135px 64px 154px 64px;
+    }
+}
+.badges_container {
+    // display: inline-flex;
+    // padding: 135px 64px 154px 64px;
+    justify-content: center;
+    align-items: center;
+
+    .badges_cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 56px;
+
+        .badges {
+            display: flex;
             justify-content: center;
             align-items: center;
-    
-            .badges_cover {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            gap: 24px;
+
+            .aws_cloud {
+                width: 98px !important;
+                height: 98px !important;
+            }
+
+            .stroke {
+                border: 3px solid white !important;
+                border-radius: 50%;
+            }
+
+            @media screen and (max-width: 576px) {
+                flex-wrap: wrap;
                 gap: 56px;
-    
-                .badges {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 24px;
-    
-                    .aws_cloud {
-                        width: 98px !important;
-                        height: 98px !important;
-                    }
-    
-                    .stroke {
-                        border: 3px solid white !important;
-                        border-radius: 50%;
-                    }
-    
-                    @media screen and (max-width: 576px) {
-                        flex-wrap: wrap;
-                        gap: 56px;
-                    }
-                }
             }
         }
     }
