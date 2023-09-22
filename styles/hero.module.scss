@@ -79,40 +79,40 @@
             }
         }
     
-        .badges_container {
-            // display: inline-flex;
-            // padding: 135px 64px 154px 64px;
+    }
+}
+.badges_container {
+    // display: inline-flex;
+    // padding: 135px 64px 154px 64px;
+    justify-content: center;
+    align-items: center;
+
+    .badges_cover {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 56px;
+
+        .badges {
+            display: flex;
             justify-content: center;
             align-items: center;
-    
-            .badges_cover {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            gap: 24px;
+
+            .aws_cloud {
+                width: 98px !important;
+                height: 98px !important;
+            }
+
+            .stroke {
+                border: 3px solid white !important;
+                border-radius: 50%;
+            }
+
+            @media screen and (max-width: 576px) {
+                flex-wrap: wrap;
                 gap: 56px;
-    
-                .badges {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 24px;
-    
-                    .aws_cloud {
-                        width: 98px !important;
-                        height: 98px !important;
-                    }
-    
-                    .stroke {
-                        border: 3px solid white !important;
-                        border-radius: 50%;
-                    }
-    
-                    @media screen and (max-width: 576px) {
-                        flex-wrap: wrap;
-                        gap: 56px;
-                    }
-                }
             }
         }
     }
