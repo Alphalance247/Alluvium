@@ -1,0 +1,86 @@
+import React, { useState, useEffect } from "react";
+
+import Layout from "components/layout";
+import CountdownTimer from 'components/CountdownTimer';
+import EventHero from 'components/EventHero';
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+import axios from "axios";
+import moment from "moment";
+import { ToastProvider, useToasts } from 'react-toast-notifications';
+
+
+const Register = () => {
+    return (
+        <>
+        <Layout>
+        <div className="container my-5">
+      <div className="row">
+        <div className="col-md-6">
+          {/* Registration Form */}
+          <form>
+            <div className="mb-3 mt-5">
+              <h4>Quick Registration</h4>
+            </div>
+
+            {/* Basic Information Section */}
+            <div className="mb-3">
+              <h6>Basic Information</h6>
+              <div className="mb-3">
+                <input type="text" className="form-control" placeholder="First Name" />
+              </div>
+              <div className="mb-3">
+                <input type="text" className="form-control" placeholder="Last Name" />
+              </div>
+              <div className="mb-3">
+                <input type="tel" className="form-control" placeholder="Phone Number" />
+              </div>
+              <div className="mb-3">
+                <input type="text" className="form-control" placeholder="Country of Residence" />
+              </div>
+              <div className="mb-3">
+                <input type="email" className="form-control" placeholder="Email" />
+              </div>
+            </div>
+
+            {/* Additional Information Section */}
+            <div className="mb-3">
+              <h6>Additional Information</h6>
+              <div className="form-check">
+                <input type="radio" className="form-check-input" id="inPerson" name="attendanceType" value="In-Person" />
+                <label className="form-check-label" htmlFor="inPerson">In-Person</label>
+              </div>
+              <div className="form-check">
+                <input type="radio" className="form-check-input" id="online" name="attendanceType" value="Online" />
+                <label className="form-check-label" htmlFor="online">Online</label>
+              </div>
+              <div className="mb-3">
+                <div className="form-check">
+                  <input type="radio" className="form-check-input" id="agreeYes" name="agreeReceiveEmails" value="Yes" />
+                  <label className="form-check-label" htmlFor="agreeYes">Yes</label>
+                </div>
+                <div className="form-check">
+                  <input type="radio" className="form-check-input" id="agreeNo" name="agreeReceiveEmails" value="No" />
+                  <label className="form-check-label" htmlFor="agreeNo">No</label>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" className="btn btn-warning">Register</button>
+          </form>
+        </div>
+        <div className="col-md-6 mt-5">
+          {/* Event Picture */}
+          {/* <div className="col-md-3"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div> */}
+          <img src="/assets/register_image.png" alt="Event Image" className="img-fluid" />
+        </div>
+      </div>
+    </div>
+        </Layout>
+        </>
+    )
+};
+
+export default Register;

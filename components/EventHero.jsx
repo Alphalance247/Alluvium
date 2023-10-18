@@ -25,7 +25,7 @@ const EventHero = () => {
               <p className="event-desc">Harnessing global synergy to forge collaboration for digital<br />
               opportunities
               </p>
-              <a href="#" className="btn btn-warning">REGISTER</a>
+              <a href="/event/register" className="btn btn-warning">REGISTER</a>
             </div>
           </div>
         </div>
