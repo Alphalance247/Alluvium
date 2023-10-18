@@ -16,7 +16,7 @@ const EventHero = () => {
         <div className="col-md-6 mb-4">
           <div className={`card ${styles.cardWithBackground}`}>
             <img
-              src="/assets/cloudpic.png" // Replace with the actual image URL or path
+              src="/assets/cloudpic.png"
               className="card-img-top"
               alt="Image 1"
             />
@@ -32,14 +32,13 @@ const EventHero = () => {
         <div className="col-md-6 mb-4">
         <div className={`card ${styles.cardWithBackground}`}>
             <img
-              src="/assets/eventheaderimage.png" // Replace with the actual image URL or path
+              src="/assets/eventheaderimage.png"
               className="card-img-top"
               alt="Image 2"
             />
             <div className="card-body">
               <h5 className="card-title">Event Image 2</h5>
               <p className="card-text">Description of the event.</p>
-              {/* No "REGISTER" button in the second card */}
             </div>
           </div>
         </div>
