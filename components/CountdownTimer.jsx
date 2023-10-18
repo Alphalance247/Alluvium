@@ -45,7 +45,7 @@ const CountdownTimer = ({ targetDate }) => {
   };
 
   const unitStyles = {
-    fontSize: '1.5rem',
+    fontSize: '3rem',
     fontWeight: 'bold',
     margin: '0 10px', // Adjust the spacing between units as needed
   };

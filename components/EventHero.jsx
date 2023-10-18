@@ -50,15 +50,8 @@ const EventHero = () => {
     <div className="bg-warning">
     <section className="container">
       <div className="row">
-        {/* First Card */}
-        <div className="col-md-6 mb-4">
-        <CountdownTimer targetDate="2023-12-31T23:59:59" />
-        </div>
-
-        {/* Second Card */}
-        <div className="col-md-6 mb-4">
-          {/* ... (your card code) */}
-        </div>
+        <br/><br/><br/><br/><br/><br/>
+      <CountdownTimer targetDate="2023-11-10T23:59:59" />
       </div>
     </section>
       <hr className={styles.hr} />
