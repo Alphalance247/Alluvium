@@ -126,6 +126,7 @@
 }
 
 .cardWithBackground {
-    background-color: #0F1922;
-    color: #fff; /* Optionally set text color to white */
+    background-color: transparent !important; 
+    // background-color: #0F1922;
+    // color: #fff; /* Optionally set text color to white */
   }
