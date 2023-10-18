@@ -22,7 +22,7 @@ const EventHero = () => {
             />
             <div className="card-body">
               <h5 className="card-title text-warning">ONLINE & IN-PERSON</h5>
-              <p className="event-desc">Harnessing global synergy to forge collaboration for digital<br></br>
+              <p className="event-desc">Harnessing global synergy to forge collaboration for digital<br />
               opportunities
               </p>
               <a href="#" className="btn btn-warning">REGISTER</a>
@@ -51,11 +51,42 @@ const EventHero = () => {
     <section className="container">
       <div className="row">
         <br/><br/><br/><br/><br/><br/>
-      <CountdownTimer targetDate="2023-11-10T23:59:59" />
+      <CountdownTimer targetDate="2023-11-30T23:59:59" />
       </div>
     </section>
       <hr className={styles.hr} />
-      gdyiwyg
+      <div className="row mt-5 text-center">
+        <div className="col-md-4">
+          <p> <img
+              src="/assets/location.svg"
+              className="card-img-top"
+              alt="Image 2"
+              width={'20px'}
+              height={'20px'}
+            />
+            <strong>Location:</strong> <br /> Ikogosi resort center, Ekiti, Nigeria</p>
+        </div>
+        <div className="col-md-4">
+          <p> <img
+              src="/assets/date.svg"
+              className="card-img-top"
+              alt="Image 2"
+              width={'20px'}
+              height={'20px'}
+            />
+            <strong>Date & Time:</strong> <br /> 23rd - 24th Thursday, 2023, 9AM (WAT)</p>
+        </div>
+        <div className="col-md-4 mb-5">
+          <p><img
+              src="/assets/email.svg"
+              className="card-img-top"
+              alt="Image 2"
+              width={'20px'}
+              height={'20px'}
+            />
+            <strong>Email:</strong> <br /> contact@alluvium.net</p>
+        </div>
+      </div>
     </div>
     </>
   );
