@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
 const CountdownTimer = ({ targetDate }) => {
-  const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining(targetDate));
+  const [timeRemaining, setTimeRemaining] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
 
   function calculateTimeRemaining(targetDate) {
     const now = new Date();
@@ -31,9 +36,13 @@ const CountdownTimer = ({ targetDate }) => {
   }
 
   useEffect(() => {
-    const timer = setInterval(() => {
+    const updateTimer = () => {
       setTimeRemaining(calculateTimeRemaining(targetDate));
-    }, 1000);
+    };
+
+    // Update the timer immediately and then every second
+    updateTimer();
+    const timer = setInterval(updateTimer, 1000);
 
     return () => clearInterval(timer);
   }, [targetDate]);
@@ -47,7 +56,7 @@ const CountdownTimer = ({ targetDate }) => {
   const unitStyles = {
     fontSize: '3rem',
     fontWeight: 'bold',
-    margin: '0 10px', // Adjust the spacing between units as needed
+    margin: '0 10px',
   };
 
   return (

@@ -47,13 +47,13 @@ const EventHero = () => {
 
     </div>
 
-    <div className="bg-warning">
-    <section className="container">
+    <div className=" container-fluid bg-warning">
+    <div className="container">
       <div className="row">
         <br/><br/><br/><br/><br/><br/>
-      <CountdownTimer targetDate="2023-11-30T23:59:59" />
+        <CountdownTimer targetDate="2023-11-30T23:59:59" />
       </div>
-    </section>
+    </div>
       <hr className={styles.hr} />
       <div className="row mt-5 text-center">
         <div className="col-md-4">

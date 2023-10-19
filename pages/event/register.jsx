@@ -16,10 +16,6 @@ const Register = () => {
     return (
         <>
         <Layout>
-        <div className="container">
-            <a href="javascript:history.back()" className="btn btn-link btn-secondary">Back</a>
-            <hr />
-        </div>
         <div className="container mt-2">
       <div className="row">
         <div className="col-md-9">
