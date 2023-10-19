@@ -33,23 +33,33 @@ const Register = () => {
 
             {/* Basic Information Section */}
             <div className="mb-3">
-              <h6>Basic Information</h6>
-              <div className="mb-3">
-                <input type="text" className="form-control" placeholder="First Name" />
-              </div>
-              <div className="mb-3">
-                <input type="text" className="form-control" placeholder="Last Name" />
-              </div>
-              <div className="mb-3">
-                <input type="tel" className="form-control" placeholder="Phone Number" />
-              </div>
-              <div className="mb-3">
-                <input type="text" className="form-control" placeholder="Country of Residence" />
-              </div>
-              <div className="mb-3">
-                <input type="email" className="form-control" placeholder="Email" />
-              </div>
-            </div>
+  <h6>Basic Information</h6>
+  <div className="row mt-4">
+    <div className="col-md-6 mb-3">
+        <label>First Name</label>
+      <input type="text" className="form-control" placeholder="First Name" />
+    </div>
+    <div className="col-md-6 mb-3">
+    <label>Last Name</label>
+      <input type="text" className="form-control" placeholder="Last Name" />
+    </div>
+  </div>
+  <div className="row">
+    <div className="col-md-6 mb-3">
+    <label>Phone Number</label>
+      <input type="tel" className="form-control" placeholder="Phone Number" />
+    </div>
+    <div className="col-md-6 mb-3">
+    <label>Country of Residence</label>
+      <input type="text" className="form-control" placeholder="Country of Residence" />
+    </div>
+  </div>
+  <div className="mb-3">
+  <label>Email</label>
+    <input type="email" className="form-control" placeholder="Email" />
+  </div>
+</div>
+
 
             {/* Additional Information Section */}
             <div className="mb-3">
