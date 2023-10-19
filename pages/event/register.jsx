@@ -16,7 +16,12 @@ const Register = () => {
     return (
         <>
         <Layout>
-        <div className="container mt-2">
+    <div className="container mt-2">
+    <a href="/event/eventpage">
+        <img src="/assets/back-arrow.png" alt="back to previous page" className="img-fluid" />
+    </a>
+
+        <hr />
       <div className="row">
         <div className="col-md-9">
           {/* Registration Form */}
