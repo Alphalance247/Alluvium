@@ -16,13 +16,23 @@ const Register = () => {
     return (
         <>
         <Layout>
-        <div className="container my-5">
+        <div className="container">
+            <a href="javascript:history.back()" className="btn btn-link btn-secondary">Back</a>
+            <hr />
+        </div>
+        <div className="container mt-2">
       <div className="row">
-        <div className="col-md-6">
+        <div className="col-md-9">
           {/* Registration Form */}
           <form>
             <div className="mb-3 mt-5">
               <h4>Quick Registration</h4>
+
+              <span className="text-secondary">
+                Secure your spot and join us for an unforgettable learning experience: register for the Atlassian partner<br />
+                event to connect with industry experts and gain insights into the latest trends and development.
+
+              </span>
             </div>
 
             {/* Basic Information Section */}
@@ -71,10 +81,12 @@ const Register = () => {
             <button type="submit" className="btn btn-warning">Register</button>
           </form>
         </div>
-        <div className="col-md-6 mt-5">
+        <div className="col-md-3 mt-5">
           {/* Event Picture */}
           {/* <div className="col-md-3"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div> */}
           <img src="/assets/register_image.png" alt="Event Image" className="img-fluid" />
+          <h3 className="mt-2">Cloud Connect</h3>
+          <h6 className="text-secondary">Nov 30th, 10:00AM (WAT)</h6>
         </div>
       </div>
     </div>
