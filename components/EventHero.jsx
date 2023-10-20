@@ -14,7 +14,7 @@ const EventHero = () => {
       <div className="row">
         {/* First Card */}
         <div className="col-md-6 mb-4">
-          <div className={`card ${styles.cardWithBackground}`}>
+          <div className={`card ${styles.heroCard}`}>
             <img
               src="/assets/cloudpic.png"
               className="card-img-top"
@@ -32,7 +32,7 @@ const EventHero = () => {
 
         {/* Second Card */}
         <div className="col-md-6 mb-4">
-        <div className={`card ${styles.cardWithBackground}`}>
+        <div className={`card ${styles.heroCard}`}>
             <img
               src="/assets/eventheaderimage.png"
               className="card-img-top"
@@ -47,7 +47,7 @@ const EventHero = () => {
 
     </div>
 
-    <div className=" container-fluid bg-warning">
+    <div className={`container-fluid ${styles.countdownCard}`}>
     <div className="container">
       <div className="row">
         <br/><br/><br/><br/><br/><br/>

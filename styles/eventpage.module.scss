@@ -4,7 +4,7 @@
     align-items: center;
     color: #FFFFFF;
     background-color: #0f1a25 !important;
-    background: url('/assets/solution/Solution.png') !important;
+    // background: url('/assets/solution/Solution.png') !important;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -125,11 +125,18 @@
     }
 }
 
-.cardWithBackground {
+.heroCard {
     background-color: transparent !important; 
     border: none;
     // background-color: #0F1922;
     color: #fff;
+  }
+
+.countdownCard {
+    background-color: #FFBE26 !important; 
+    border: none;
+    // background-color: #0F1922;
+    color: #000;
   }
 
   .hr {
