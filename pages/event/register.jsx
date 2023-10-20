@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import Layout from "components/layout";
-import CountdownTimer from 'components/CountdownTimer';
-import EventHero from 'components/EventHero';
+import CountdownTimer from 'components/cloud-connect/CountdownTimer';
+import EventHero from 'components/cloud-connect/EventHero';
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";

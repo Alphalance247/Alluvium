@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Layout from "components/layout";
-import EventHero from 'components/EventHero';
+import EventHero from 'components/cloud-connect/EventHero';
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
