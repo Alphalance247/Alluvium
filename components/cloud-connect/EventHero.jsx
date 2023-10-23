@@ -3,11 +3,6 @@ import Image from "next/image";
 import styles from "../../styles/eventpage.module.scss";
 import CountdownTimer from "./CountdownTimer";
 
-// import cloud_image from 'public/assets/cloud_image.jpg';
-// import event_header_image from 'public/assets/event_header_image';
-{
-  /* <Image src={logo} alt="Techpoint Expo Event logo" loading="eager" priority /> */
-}
 const EventHero = () => {
   return (
     <>
@@ -62,7 +57,7 @@ const EventHero = () => {
             <br />
             <br />
             <br />
-            {/* <CountdownTimer targetDate="2023-11-30T23:59:59" /> */}
+            <CountdownTimer targetDate="2023-11-30T23:59:59" />
           </div>
         </div>
         <hr className={styles.hr} />
