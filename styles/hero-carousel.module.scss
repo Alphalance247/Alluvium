@@ -20,8 +20,9 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
+
     /* 36px */
-    @media (min-width: 1900px) {  
+    @media (min-width: 1900px) {
         background-size: 100% auto;
     }
 
@@ -36,6 +37,7 @@
         font-size: 64px;
         font-style: normal;
         font-weight: 800;
+
         @media screen and (max-width: 576px) {
             font-size: 53px;
         }
@@ -61,6 +63,7 @@
             font-style: normal;
             font-weight: 500;
             line-height: 150%;
+
             /* 36px */
             @media screen and (max-width: 576px) {
                 font-size: 20px;
@@ -84,7 +87,7 @@
     padding: 111px 160px;
     /* 36px */
 
-    @media (min-width: 1900px) {  
+    @media (min-width: 1900px) {
         background-size: 100% 100%;
     }
 
@@ -100,6 +103,7 @@
     .top {
         width: 444px;
         height: 262px;
+
         @media screen and (max-width: 576px) {
             width: max-content;
         }
@@ -114,6 +118,7 @@
             letter-spacing: 12.16px;
             text-transform: uppercase;
             margin-bottom: 24px;
+
             @media screen and (max-width: 576px) {
                 font-size: 53px;
                 letter-spacing: 6px;
@@ -130,6 +135,7 @@
             letter-spacing: 23.36px;
             text-transform: uppercase;
             margin-bottom: 24px;
+
             @media screen and (max-width: 576px) {
                 font-size: 53px;
                 letter-spacing: 11px;
@@ -142,6 +148,7 @@
             background: #009BC0;
             padding: 6px 24px;
             width: max-content;
+
             @media screen and (max-width: 576px) {
                 margin: auto;
             }
@@ -154,11 +161,91 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 150%;
+
                 /* 36px */
                 @media screen and (max-width: 576px) {
                     font-size: 20px;
                 }
             }
         }
+    }
+}
+
+.h4 {
+    background: rgba(0, 155, 192, 1);
+    background-image: url('/assets/hero/bg5.png');
+    background-position-x: 100%;
+    background-position-y: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 733px;
+    padding: 120px 80px;
+
+    @media (min-width: 1900px) {
+        background-position-x: 100%;
+    }
+
+    @media screen and (max-width: 1400px) {
+        // padding: 90px 40px;
+        background-position-x: 125%;
+    }
+    
+    @media screen and (max-width: 1300px) {
+        // padding: 90px 40px;
+        background-position-x: 150%;
+    }
+
+    @media screen and (max-width: 1199px) {
+        padding: 90px 40px;
+        background-position-x: 170%;
+    }
+
+    @media screen and (max-width: 1100px) {
+        background-image: none;
+    }
+
+    @media screen and (max-width: 576px) {
+        padding: 50px 20px;
+    }
+
+
+    .text {
+        gap: 25px;
+        margin-bottom: 52px;
+        width: 635px;
+
+        @media screen and (max-width: 576px) {
+            gap: 15px;
+            width: auto;
+            margin-bottom: 32px;
+        }
+    }
+
+    h1 {
+        color: #FFF;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 130%;
+
+        span {
+            color: rgba(13, 17, 23, 1);
+        }
+
+        @media screen and (max-width: 576px) {
+            font-size: 53px;
+            letter-spacing: 6px;
+            line-height: 130%;
+        }
+    }
+
+    p {
+        // margin: 25px 0 52px 0;
+        color: #0F1A25;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        /* 27px */
     }
 }
