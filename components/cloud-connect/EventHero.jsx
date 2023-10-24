@@ -52,7 +52,7 @@ const EventHero = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-3"></div>
-            <div className="col-md-6"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div>
+            <div className="col-md-6 m-5"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div>
             <div className="col-md-3"></div>
           </div>
         </div>

@@ -16,7 +16,7 @@ const Register = () => {
     return (
         <>
         <Layout>
-<div className="container-fluid" style={{ backgroundColor: '#0F1922' }}>
+<div className="container-fluid p-3" style={{ backgroundColor: '#0F1922' }}>
   <div className="row container align-items-center">
     <div className="col-md-4 text-center">
       <h2 className="text-white">Cloud Connect</h2>
@@ -41,71 +41,71 @@ const Register = () => {
         <div className="col-md-9">
           {/* Registration Form */}
           <form>
-            <div className="mb-3 mt-5">
-              <h4>Quick Registration</h4>
+  <div className="mb-5 mt-5">
+    <h4>Quick Registration</h4>
+    <span className="text-secondary">
+      Secure your spot and join us for an unforgettable learning experience: register for the Atlassian partner event to connect with industry experts and gain insights into the latest trends and development.
+    </span>
+  </div>
 
-              <span className="text-secondary">
-                Secure your spot and join us for an unforgettable learning experience: register for the Atlassian partner<br />
-                event to connect with industry experts and gain insights into the latest trends and development.
-
-              </span>
-            </div>
-
-            {/* Basic Information Section */}
-            <div className="mb-3">
-  <h6>Basic Information</h6>
-  <div className="row mt-4">
-    <div className="col-md-6 mb-3">
+  {/* Basic Information Section */}
+  <div className="mb-4">
+    <h6>Basic Information</h6>
+    <div className="row mt-4">
+      <div className="col-md-6 mb-3">
         <label>First Name</label>
-      <input type="text" className="form-control" placeholder="First Name" />
+        <input type="text" className="form-control" placeholder="First Name" />
+      </div>
+      <div className="col-md-6 mb-3">
+        <label>Last Name</label>
+        <input type="text" className="form-control" placeholder="Last Name" />
+      </div>
     </div>
-    <div className="col-md-6 mb-3">
-    <label>Last Name</label>
-      <input type="text" className="form-control" placeholder="Last Name" />
+    <div className="row">
+      <div className="col-md-6 mb-3">
+        <label>Phone Number</label>
+        <input type="tel" className="form-control" placeholder="Phone Number" />
+      </div>
+      <div className="col-md-6 mb-3">
+        <label>Country of Residence</label>
+        <input type="text" className="form-control" placeholder="Country of Residence" />
+      </div>
+    </div>
+    <div className="mb-3">
+      <label>Email</label>
+      <input type="email" className="form-control" placeholder="Email" />
     </div>
   </div>
-  <div className="row">
-    <div className="col-md-6 mb-3">
-    <label>Phone Number</label>
-      <input type="tel" className="form-control" placeholder="Phone Number" />
+
+  {/* Additional Information Section */}
+  <div className="mb-4">
+    <h6>Additional Information</h6>
+    <label>How are you attending?</label>
+    <div className="form-check">
+      <input type="radio" className="form-check-input" id="inPerson" name="attendanceType" value="In-Person" />
+      <label className="form-check-label" htmlFor="inPerson">In-Person</label>
     </div>
-    <div className="col-md-6 mb-3">
-    <label>Country of Residence</label>
-      <input type="text" className="form-control" placeholder="Country of Residence" />
+    <div className="form-check">
+    <input type="radio" className="form-check-input" id="online" name="attendanceType" value="Online" />
+
+      <label className="form-check-label" htmlFor="online">Online</label>
+    </div>
+    <div className="mb-3">
+      <label>I agree to receive email updates from Alluvium about future events, news, and announcements</label>
+      <div className="form-check">
+        <input type="radio" className="form-check-input" id="agreeYes" name="agreeReceiveEmails" value="Yes" />
+        <label className="form-check-label" htmlFor="agreeYes">Yes</label>
+      </div>
+      <div className="form-check">
+        <input type="radio" className="form-check-input" id="agreeNo" name="agreeReceiveEmails" value="No" />
+        <label className="form-check-label" htmlFor="agreeNo">No</label>
+      </div>
     </div>
   </div>
-  <div className="mb-3">
-  <label>Email</label>
-    <input type="email" className="form-control" placeholder="Email" />
-  </div>
-</div>
 
+  <button type="submit" className="btn btn-warning">Register</button>
+</form>
 
-            {/* Additional Information Section */}
-            <div className="mb-3">
-              <h6>Additional Information</h6>
-              <div className="form-check">
-                <input type="radio" className="form-check-input" id="inPerson" name="attendanceType" value="In-Person" />
-                <label className="form-check-label" htmlFor="inPerson">In-Person</label>
-              </div>
-              <div className="form-check">
-                <input type="radio" className="form-check-input" id="online" name="attendanceType" value="Online" />
-                <label className="form-check-label" htmlFor="online">Online</label>
-              </div>
-              <div className="mb-3">
-                <div className="form-check">
-                  <input type="radio" className="form-check-input" id="agreeYes" name="agreeReceiveEmails" value="Yes" />
-                  <label className="form-check-label" htmlFor="agreeYes">Yes</label>
-                </div>
-                <div className="form-check">
-                  <input type="radio" className="form-check-input" id="agreeNo" name="agreeReceiveEmails" value="No" />
-                  <label className="form-check-label" htmlFor="agreeNo">No</label>
-                </div>
-              </div>
-            </div>
-
-            <button type="submit" className="btn btn-warning">Register</button>
-          </form>
         </div>
         <div className="col-md-3 mt-5">
           {/* Event Picture */}
