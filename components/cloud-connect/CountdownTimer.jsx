@@ -54,7 +54,7 @@ const CountdownTimer = ({ targetDate }) => {
   };
 
   const unitStyles = {
-    fontSize: '3rem',
+    fontSize: '2.5rem',
     fontWeight: 'bold',
     margin: '0 10px',
   };
@@ -63,19 +63,19 @@ const CountdownTimer = ({ targetDate }) => {
 <div className="container text-center">
   <div className="row">
     <div className="col-md-3">
-      <span style={unitStyles}>{timeRemaining.days}</span>
+      <span style={unitStyles}>{timeRemaining.days}</span> <br />
       <span>days</span>
     </div>
     <div className="col-md-3">
-      <span style={unitStyles}>{timeRemaining.hours}</span>
+      <span style={unitStyles}>{timeRemaining.hours}</span> <br />
       <span>hours</span>
     </div>
     <div className="col-md-3">
-      <span style={unitStyles}>{timeRemaining.minutes}</span>
+      <span style={unitStyles}>{timeRemaining.minutes}</span> <br />
       <span>minutes</span>
     </div>
     <div className="col-md-3">
-      <span style={unitStyles}>{timeRemaining.seconds}</span>
+      <span style={unitStyles}>{timeRemaining.seconds}</span> <br />
       <span>seconds</span>
     </div>
   </div>

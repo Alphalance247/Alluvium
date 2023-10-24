@@ -16,6 +16,21 @@ const Register = () => {
     return (
         <>
         <Layout>
+<div className="container-fluid" style={{ backgroundColor: '#0F1922' }}>
+  <div className="row container align-items-center">
+    <div className="col-md-4 text-center">
+      <h2 className="text-white">Cloud Connect</h2>
+    </div>
+    <div className="col-md-3 text-warning">
+      
+    </div>
+    <div className="col-md-5 text-warning">
+      <CountdownTimer targetDate="2023-11-30T23:59:59" />
+    </div>
+  </div>
+</div>
+
+
     <div className="container mt-2">
     <a href="/event/eventpage">
         <img src="/assets/back-arrow.png" alt="back to previous page" className="img-fluid" />
