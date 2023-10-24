@@ -60,12 +60,27 @@ const CountdownTimer = ({ targetDate }) => {
   };
 
   return (
-    <div style={countdownStyles}>
-      <span style={unitStyles}>{timeRemaining.days}</span> days
-      <span style={unitStyles}>{timeRemaining.hours}</span> hours
-      <span style={unitStyles}>{timeRemaining.minutes}</span> minutes
-      <span style={unitStyles}>{timeRemaining.seconds}</span> seconds
+<div className="container text-center">
+  <div className="row">
+    <div className="col-md-3">
+      <span style={unitStyles}>{timeRemaining.days}</span>
+      <span>days</span>
     </div>
+    <div className="col-md-3">
+      <span style={unitStyles}>{timeRemaining.hours}</span>
+      <span>hours</span>
+    </div>
+    <div className="col-md-3">
+      <span style={unitStyles}>{timeRemaining.minutes}</span>
+      <span>minutes</span>
+    </div>
+    <div className="col-md-3">
+      <span style={unitStyles}>{timeRemaining.seconds}</span>
+      <span>seconds</span>
+    </div>
+  </div>
+</div>
+
   );
 };
 

@@ -51,12 +51,6 @@ const EventHero = () => {
       <div className={`container-fluid ${styles.countdownCard}`}>
         <div className="container">
           <div className="row">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
             <CountdownTimer targetDate="2023-11-30T23:59:59" />
           </div>
         </div>
