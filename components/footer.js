@@ -69,6 +69,15 @@ export function AltFooter() {
                   </a>
                 </Link>
               </li>
+              <li className={styles.contactListItem}>
+                <Link href="/event/lagos-startup-expo">Lagos Startup Expo</Link>
+              </li>
+              <li className={styles.contactListItem}>
+                <Link href="/event/cloud-connect">Cloud Connect</Link>
+              </li>
+              <li className={styles.contactListItem}>
+                <Link href="/event/register">Cloud Connect Event Registration</Link>
+              </li>
               {/* <li className={styles.contactListItem}>
                 <Link href="#">Success Stories</Link>
               </li>
@@ -106,12 +115,6 @@ export function AltFooter() {
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
                 <Link href="/support">FAQ</Link>
-              </li>
-              <li className={styles.contactListItem}>
-                <Link href="/event/lagos-startup-expo">Lagos Startup Expo</Link>
-              </li>
-              <li className={styles.contactListItem}>
-                <Link href="/event/signup">Event Follow Up Form</Link>
               </li>
               {/* <li className={styles.contactListItem}>
                 <Link href="/#">Trouble Shooting</Link>

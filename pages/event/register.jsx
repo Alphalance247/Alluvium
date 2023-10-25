@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 import Layout from "components/layout";
 import CountdownTimer from 'components/cloud-connect/CountdownTimer';
@@ -18,7 +19,7 @@ const Register = () => {
   const handleChange = useCallback((event) => {
     let { name, value } = event.target;
     if (name === 'canReceiveFurtherEmail') {
-      value = value == 'on';
+      value = value == 'true';
     }
     setUserData(prev => ({ ...prev, [name]: value }));
   }, [setUserData]);
@@ -113,11 +114,11 @@ const Register = () => {
         <div className="mb-3">
           <label>I agree to receive email updates from Alluvium about future events, news, and announcements</label>
           <div className="form-check">
-            <input type="radio" className="form-check-input" id="agreeYes" checked={userData?.canReceiveFurtherEmail === true} name="canReceiveFurtherEmail" required onChange={handleChange} />
+            <input type="radio" className="form-check-input" id="agreeYes" checked={userData?.canReceiveFurtherEmail === true} name="canReceiveFurtherEmail" required onChange={handleChange} value={true} />
             <label className="form-check-label" htmlFor="agreeYes">Yes</label>
           </div>
           <div className="form-check">
-            <input type="radio" className="form-check-input" id="agreeNo" checked={userData?.canReceiveFurtherEmail === false} name="canReceiveFurtherEmail" required onChange={handleChange} />
+            <input type="radio" className="form-check-input" id="agreeNo" checked={userData?.canReceiveFurtherEmail === false} name="canReceiveFurtherEmail" required onChange={handleChange} value={false} />
             <label className="form-check-label" htmlFor="agreeNo">No</label>
           </div>
         </div>
