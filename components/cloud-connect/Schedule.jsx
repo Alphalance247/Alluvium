@@ -63,9 +63,9 @@ const Schedule = () => {
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/Image.jpg"
                     className={styles.img}
-                    alt="image2"
+                    alt="speaker"
                   />
                   <div className={styles.inner}>
                     <p>Nick:Agimudie</p>
