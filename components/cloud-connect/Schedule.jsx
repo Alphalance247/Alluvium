@@ -52,7 +52,7 @@ const Schedule = () => {
                 src="/cloudImg/divider.jpg"
                 height="1130px"
                 width="12px"
-                alt="image1"
+                alt="divider"
               />
             </div>
 
@@ -63,9 +63,9 @@ const Schedule = () => {
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/Image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="speaker"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
                     <p>Nick:Agimudie</p>
@@ -77,9 +77,9 @@ const Schedule = () => {
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image3"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
                     <p>Nick:Agimudie</p>
@@ -94,9 +94,9 @@ const Schedule = () => {
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image5"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
                     <p>Nick:Agimudie</p>
@@ -116,9 +116,9 @@ const Schedule = () => {
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image6"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
                     <p>Nick:Agimudie</p>
@@ -139,9 +139,9 @@ const Schedule = () => {
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image7"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
                     <p>Nick: Abdul Azeez</p>
