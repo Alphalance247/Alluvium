@@ -50,7 +50,7 @@ const Schedule = () => {
               <img
                 className={styles.divider}
                 src="/cloudImg/divider.jpg"
-                height="1112px"
+                height="1130px"
                 width="12px"
                 alt="image1"
               />
