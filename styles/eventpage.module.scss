@@ -1,0 +1,502 @@
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #0f1a25 !important;
+  // background: url('/assets/solution/Solution.png') !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 120px !important;
+  padding-bottom: 120px !important;
+  // background-blend-mode: normal;
+
+  // &>div{
+  //     background-color: #0F1A25;
+  // }
+
+  @media screen and (min-width: 1600px) {
+    background-color: #0f1a25 !important;
+    background-image: none !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-position: bottom right;
+  }
+
+  @media screen and (max-width: 576px) {
+    background-position: bottom right;
+  }
+
+  h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    color: #ffffff;
+    margin-bottom: 78px;
+    @media screen and (max-width: 576px) {
+      margin: 40px 0;
+    }
+  }
+
+  .topContent {
+    width: 65%;
+
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+
+    ul {
+      // list-style: none;
+      margin-left: 30px;
+
+      li {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 180%;
+        color: #ffffff;
+        margin-bottom: 20px;
+
+        span {
+          font-weight: 300;
+        }
+      }
+    }
+
+    h4 {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      margin: 60px 0;
+
+      @media screen and (max-width: 576px) {
+        margin: 40px 0;
+      }
+    }
+
+    .industries {
+      display: grid;
+      grid-template-columns: auto auto;
+      column-gap: 2rem;
+      row-gap: 1rem;
+      width: 70%;
+
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        margin-bottom: 60px;
+      }
+
+      .industry {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+
+        @media screen and (max-width: 576px) {
+          column-gap: 0.5rem;
+        }
+
+        & > div {
+          background-color: rgba(227, 121, 21, 1);
+          width: 57px;
+          height: 57px;
+          padding: 7px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media screen and (max-width: 576px) {
+            width: 22px;
+            height: 22px;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.heroCard {
+  background-color: transparent !important;
+  border: none;
+  // background-color: #0F1922;
+  color: #fff;
+}
+
+.countdownCard {
+  background-color: #ffbe26 !important;
+  border: none;
+  // background-color: #0F1922;
+  color: #000;
+}
+
+.hr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.custom-bg-color {
+  background-color: #0F1922;
+}
+
+
+////////////////////////ABOUT SCHEDULE, SPEAKER AND REGISTER STYLING////////////////////////////
+
+.container {
+  margin: 2rem 5rem;
+  color: #000000;
+  .text {
+    font-family: "Graphik";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+  }
+}
+
+.conference > h1 {
+  color: #009bc0;
+  font-family: Graphik;
+  font-size: 36px;
+  font-weight: 600;
+  border-bottom: 0.3rem solid #009bc0;
+  width: fit-content;
+}
+
+.conference > h2 {
+  color: #11202d;
+  font-family: Graphik;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.progamEvent > h2 {
+  margin-bottom: 2rem;
+  font-family: Graphik;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 42px;
+  letter-spacing: -0.004em;
+}
+
+.highlight {
+  font-family: "Graphik";
+  font-weight: 500;
+  font-family: Graphik;
+  font-size: 20px;
+}
+
+.about {
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 20rem auto;
+  margin-bottom: 2rem;
+}
+
+.time {
+  margin-bottom: 4rem;
+}
+
+.speech1 {
+  margin-bottom: 3rem;
+}
+.speech2 {
+  margin-bottom: 2.5rem;
+}
+.speech3 {
+  margin-bottom: 7.3rem;
+}
+.speech4 {
+  margin-bottom: 7.9rem;
+}
+.speech5 {
+  margin-bottom: 10rem;
+}
+.speech6 {
+  margin-bottom: 15.3rem;
+}
+
+.speechs {
+  margin-bottom: 1rem;
+}
+.speech {
+  margin-bottom: 2.5rem;
+}
+.inner > p {
+  margin-bottom: 0.5rem;
+}
+.inner {
+  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.aboutPage {
+  margin-bottom: 2rem;
+}
+
+.schedule {
+  display: grid;
+  grid-template-columns: 22rem auto;
+  margin-top: 3rem;
+}
+
+.highlight {
+  display: flex;
+  gap: 5rem;
+}
+
+.encompass {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* //////////////////////speakers style////////////////////////////////////// */
+.visitorsPage {
+  background: #e3e3e3;
+  padding: 2rem 0;
+  cursor: pointer;
+  font-family: "Graphik";
+  @media screen and (max-width: 576px) {
+    padding: 4rem 0;
+  }
+}
+
+.speakers {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 73px;
+  text-align: center;
+  color: #11202d;
+}
+
+.guest {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.5rem;
+  color: white;
+  font-weight: 500;
+  line-height: 20px;
+  padding: 4rem;
+  justify-content: space-between;
+}
+
+.specific1 {
+  // width: 294px;
+  width: 100%;
+  height: 316px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 1rem;
+  font-size: 16px;
+}
+.specific1:hover {
+  text-decoration: underline;
+}
+.specific {
+  position: relative;
+  top: 11.5rem;
+}
+.specific1 > h3 {
+  font-family: "Graphik";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+/* ////////////////Registration page//////////////////// */
+
+.register {
+  padding: 5rem;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #009bc0 0%, #11202d 100%);
+  margin: 3rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 6rem;
+}
+
+.register > h1 {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.004em;
+  text-align: left;
+  color: white;
+}
+
+.btn {
+  width: 160px;
+  height: 56px;
+  padding: 1rem 3rem 1rem 3rem;
+  white-space: nowrap;
+  border-radius: 5px;
+  background: #fcb101;
+  cursor: pointer;
+  border: none;
+  font-family: "Graphik";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
+
+/* /////////////////Responsiveness//////////////////////// */
+/* @media screen and (max-width: 1199px) {
+  } */
+
+@media screen and (max-width: 992px) {
+  .container {
+    margin: 2rem 2rem;
+  }
+
+  .about {
+    gap: 1rem;
+    grid-template-columns: 15rem 1fr;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+  }
+
+  .text {
+    font-size: 15px;
+    font-weight: 200;
+  }
+
+  .conference > h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .conference > h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .guest {
+    gap: 3rem;
+    font-size: 16px;
+    padding: 0 4.5rem;
+  }
+
+  .speakers {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 0px;
+    margin-bottom: 4rem;
+  }
+
+  .register {
+    padding: 60px 120px 60px 56px;
+    margin: 3rem 5rem;
+    grid-gap: 4rem;
+  }
+
+  .register > h1 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .register > .btn {
+    padding: 16px, 32px, 16px, 32px;
+  }
+
+  .schedule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+  }
+
+  .highlight {
+    gap: 6rem;
+  }
+
+  .progamEvent {
+    width: 80%;
+    margin: auto;
+  }
+
+  .progamEvent > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .inner {
+    line-height: 17px;
+  }
+  .inner > p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    margin: 1rem 1rem;
+  }
+
+  .about {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+  }
+
+  .highlight {
+    gap: 2rem;
+    font-size: 10px;
+  }
+
+  .progamEvent {
+    width: 100%;
+  }
+
+  .guest {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .register {
+    padding: 3rem 1rem;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.5rem;
+  }
+
+  .register > h1 {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .register {
+      .btn {
+      padding: none;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 46px;
+    }
+  }
+
+  .inner {
+    line-height: 17px;
+  }
+}
