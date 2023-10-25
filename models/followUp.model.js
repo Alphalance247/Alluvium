@@ -40,6 +40,15 @@ const followUpSchema = new mongoose.Schema({
         type: String,
         trim: true
     },
+    modeOfAttendance: {
+        type: String,
+        trim: true
+    },
+    canReceiveFurtherEmail: {
+        type: Boolean,
+        trim: true,
+        default: false
+    },
     eventType: {
         type: String,
         required: true,
