@@ -269,6 +269,9 @@
   padding: 2rem 0;
   cursor: pointer;
   font-family: "Graphik";
+  @media screen and (max-width: 576px) {
+    padding: 4rem 0;
+  }
 }
 
 .speakers {
@@ -325,6 +328,7 @@
   margin: 3rem 4rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   grid-gap: 6rem;
 }
 
@@ -339,7 +343,7 @@
 .btn {
   width: 160px;
   height: 56px;
-  padding: 1rem 9rem 1rem 3rem;
+  padding: 1rem 3rem 1rem 3rem;
   white-space: nowrap;
   border-radius: 5px;
   background: #fcb101;
@@ -407,7 +411,7 @@
     font-weight: 500;
   }
 
-  .register > button {
+  .register > .btn {
     padding: 16px, 32px, 16px, 32px;
   }
 
@@ -467,7 +471,7 @@
   }
 
   .register {
-    padding: 1rem;
+    padding: 3rem 1rem;
     margin: 2rem;
     display: flex;
     flex-direction: column;
@@ -477,11 +481,19 @@
   .register > h1 {
     font-size: 16px;
     font-weight: 500;
+    text-align: center;
   }
 
-  .register > button {
-    padding: none;
-    margin-top: 1rem;
+  .register {
+      .btn {
+      padding: none;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 46px;
+    }
   }
 
   .inner {

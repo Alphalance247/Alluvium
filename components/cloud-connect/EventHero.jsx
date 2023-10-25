@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 import styles from "../../styles/eventpage.module.scss";
 import CountdownTimer from "./CountdownTimer";
+import Link from "next/link";
 
 const EventHero = () => {
   return (
@@ -26,9 +26,9 @@ const EventHero = () => {
                     <br />
                     opportunities
                   </p>
-                  <a href="/event/register" className="btn btn-warning">
-                    REGISTER
-                  </a>
+                  <Link href="/event/register">
+                    <a className="btn btn-warning">REGISTER</a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -52,7 +52,7 @@ const EventHero = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-3"></div>
-            <div className="col-md-6 m-5"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div>
+            <div className="col-md-6 my-5"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div>
             <div className="col-md-3"></div>
           </div>
         </div>

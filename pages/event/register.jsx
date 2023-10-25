@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useCallback } from "react";
+import Link from "next/link";
 
 import Layout from "components/layout";
 import CountdownTimer from 'components/cloud-connect/CountdownTimer';
@@ -146,9 +147,9 @@ const Register = () => {
 
 
           <div className="container mt-4">
-            <a href="/event/eventpage">
+            <Link href="/event/cloud-connect">
               <img src="/assets/back-arrow.png" alt="back to previous page" className="img-fluid" />
-            </a>
+            </Link>
 
             <hr />
             <div className="row pb-5">
