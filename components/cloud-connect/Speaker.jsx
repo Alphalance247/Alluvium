@@ -1,6 +1,10 @@
 import styles from "../../styles/eventpage.module.scss";
+import Modal from "./Modal";
+import { useState } from "react";
 
 const Speaker = () => {
+  const [modal, setModal] = useState(false);
+  const [modaltoShow, setModaltoShow] = useState(null);
   const guestData = [
     {
       id: 1,
@@ -63,9 +67,18 @@ const Speaker = () => {
     },
   ];
 
+  const closeModal = () => {
+    setModal(false);
+  };
+
+  const showModal = () => {
+    setModal(true);
+    setModaltoShow(guestData);
+  };
+
   return (
     <>
-      <div className={styles.visitorsPage}>
+      <div className={styles.visitorsPage} onClick={showModal}>
         <h1 className={styles.speakers}>Speakers</h1>
         <div className={styles.guest}>
           {guestData.map((guest) => {
@@ -82,7 +95,13 @@ const Speaker = () => {
           })}
         </div>
       </div>
-      ;
+      {modal && (
+        <Modal
+          guestData={guestData}
+          onClose={closeModal}
+          modaltoShow={modaltoShow}
+        />
+      )}
     </>
   );
 };
