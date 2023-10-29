@@ -52,7 +52,7 @@ const EventHero = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-3"></div>
-            <div className="col-md-6 my-5"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div>
+            <div className="col-md-6 my-5"><CountdownTimer targetDate="2023-11-30T10:00:00" /></div>
             <div className="col-md-3"></div>
           </div>
         </div>
@@ -82,8 +82,8 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-              <strong>Date & Time:</strong> <br /> 23rd - 24th Thursday, 2023,
-              9AM (WAT)
+              <strong>Date & Time:</strong> <br /> 30th Thursday, 2023,
+              10AM (WAT)
             </p>
           </div>
           <div className="col-md-4 mb-5">
