@@ -68,8 +68,8 @@ const Schedule = () => {
                     alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
-                    <p>Topic:Remote Work and Digital Nomadism in Africa</p>
+                    <p>Nick: Agimudie</p>
+                    <p><span className={styles.topic}>Topic:</span> Remote Work and Digital Nomadism in Africa</p>
                   </div>
                 </div>
               </div>
@@ -82,9 +82,9 @@ const Schedule = () => {
                     alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
+                    <p>Nick: Agimudie</p>
                     <p>
-                      Topic: Building High-Performing Remote Teams: Best
+                      <span className={styles.topic}>Topic:</span> Building High-Performing Remote Teams: Best
                       Practices and Strategies
                     </p>
                   </div>
@@ -99,8 +99,8 @@ const Schedule = () => {
                     alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
-                    <p>Topic:</p>
+                    <p>Nick: Agimudie</p>
+                    <p><span className={styles.topic}>Topic:</span> </p>
                     <p>
                       1. Optimizing Service Desk Operations in ITSM
                       Implementation
@@ -121,8 +121,8 @@ const Schedule = () => {
                     alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
-                    <p>Topic:</p>
+                    <p>Nick: Agimudie</p>
+                    <p><span className={styles.topic}>Topic:</span></p>
                     <p>
                       1. Customization and Localization: Adapting Atlassian
                       Tools to African Business Context
@@ -145,7 +145,7 @@ const Schedule = () => {
                   />
                   <div className={styles.inner}>
                     <p>Nick: Abdul Azeez</p>
-                    <p>Topic:</p>
+                    <p><span className={styles.topic}>Topic:</span></p>
                     <p>
                       1.Customization and Localization: Adapting Atlassian Tools
                       to African Business Context

@@ -57,8 +57,8 @@ const EventHero = () => {
           </div>
         </div>
         <hr className={styles.hr} />
-        <div className="row mt-5 text-center">
-          <div className="col-md-4">
+        <div className="row mt-5 text-center justify-content-around">
+          <div className="col-md-3">
             <p>
               {" "}
               <img
@@ -68,11 +68,10 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-              <strong>Location:</strong> <br /> Ikogosi resort center, Ekiti,
-              Nigeria
+              <strong>Location:</strong> <br /> Arowolo Gardens,  adjacent fajuyi Pavillion, home to Ayoba Fm ,beside Ekiti state fire service.  Fajuyi Ado Ekiti.
             </p>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <p>
               {" "}
               <img
@@ -82,11 +81,11 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-              <strong>Date & Time:</strong> <br /> 30th Thursday, 2023,
+              <strong>Date & Time:</strong> <br /> November, 30th Thursday, 2023,
               10AM (WAT)
             </p>
           </div>
-          <div className="col-md-4 mb-5">
+          <div className="col-md-3 mb-5">
             <p>
               <img
                 src="/assets/email.svg"
