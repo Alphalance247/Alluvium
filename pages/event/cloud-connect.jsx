@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React from "react";
 import Head from "next/head";
 
 import Layout from "components/layout";
@@ -6,17 +6,8 @@ import EventHero from "components/cloud-connect/EventHero";
 import Register from "components/cloud-connect/Register";
 import Schedule from "components/cloud-connect/Schedule";
 import Speaker from "components/cloud-connect/Speaker";
-import axios from "axios";
-import { currentEventName } from "config";
 
 const CloudConnect = () => {
-  const eventType = useMemo(() => currentEventName, []);
-
-  useEffect(()=>{
-    axios.get(`/api/event/follow-up?eventType=${eventType}`).then((response) =>{
-      console.log(response.data);
-    });
-  },[])
   return (
     <>
       <Layout>
