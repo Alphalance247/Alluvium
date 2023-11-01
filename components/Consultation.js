@@ -122,7 +122,7 @@ export const ConsultationForm = () => {
                                 Suite 200
                                 Beachwood, Ohio 44122 USA
                             </p>
-                            <p>
+                            <div>
                                 <strong>Africa:</strong>
                                 <p>
                                     Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104, Nigeria.
@@ -131,7 +131,7 @@ export const ConsultationForm = () => {
                                     Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi
                                     Road, Ikoro Ekiti, Ekiti State, Nigeria.
                                 </p>
-                            </p>
+                            </div>
                             <p><strong>Email:</strong> <a href="mailto:contact@alluvium.net">contact@alluvium.net</a> </p>
                             <p><strong>Phone Number:</strong> <a href="tel:+442035762028"> +442035762028</a> </p>
                         </div>
