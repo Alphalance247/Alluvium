@@ -153,7 +153,7 @@
 ////////////////////////ABOUT SCHEDULE, SPEAKER AND REGISTER STYLING////////////////////////////
 
 .container {
-  margin: 2rem 5rem;
+  // margin: 2rem 5rem;
   color: #000000;
 
   .text {
@@ -202,11 +202,6 @@
 }
 
 .about {
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: 20rem auto;
   margin-bottom: 2rem;
 }
 
@@ -220,28 +215,69 @@
   text-align: right;
 }
 
-.speech1 {
+.divider {
+  margin-top: 10px;
+
+  @media screen and (max-width: 576px) {
+    height: 99% !important;
+  }
+}
+
+.time1 {
+  margin-bottom: 3.2rem;
+  margin-top: 3px;
+}
+
+.time2 {
   margin-bottom: 3rem;
 }
 
-.speech2 {
-  margin-bottom: 2.9rem;
-}
-
-.speech3 {
+.time3 {
   margin-bottom: 8.2rem;
 }
 
-.speech4 {
-  margin-bottom: 8.4rem;
+.time4 {
+  margin-bottom: 8rem;
 }
 
-.speech5 {
-  margin-bottom: 10rem;
+.time5 {
+  margin-bottom: 11.8rem;
 }
 
-.speech6 {
-  margin-bottom: 15.3rem;
+.time6 {
+  margin-bottom: 13.3rem;
+}
+
+.time7 {
+  margin-bottom: 13.2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .time{
+    margin-bottom: 0px;
+    height: 100%;
+    &1{
+      margin-bottom: 5rem;
+    }
+    &2{
+      margin-bottom: 4.8rem;
+    }
+    &3{
+      margin-bottom: 12.7rem;
+    }
+    &4{
+      margin-bottom: 11.5rem;
+    }
+    &5{
+      margin-bottom: 17.7rem;
+    }
+    &6{
+      margin-bottom: 19.5rem;
+    }
+    &7{
+      margin-bottom: 19.5rem;
+    }
+  }
 }
 
 .speechs {
@@ -255,15 +291,81 @@
 
 }
 
-.speech {
-  margin-bottom: 2.9rem;
+.speech_cover{
   font-family: 'Graphik';
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.004em;
   text-align: left;
+}
 
+.speech {
+  margin-bottom: 2.9rem;
+
+  &0 {
+    margin-bottom: 2.6rem;
+  }
+
+  &1 {
+    margin-bottom: 3.1rem;
+  }
+
+  &2 {
+    margin-bottom: 3rem;
+  }
+
+  &3 {
+    margin-bottom: 3.5rem;
+  }
+
+  &4 {
+    margin-bottom: 1.7rem;
+  }
+
+  &5 {
+    margin-bottom: 1.6rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    margin-bottom: 5rem;
+    &0{
+      margin-bottom: 4.6rem;
+    }
+    &1{
+      margin-bottom: 5.4rem;
+    }
+    &2{
+      margin-bottom: 3.1rem;
+    }
+    &3{
+      margin-bottom: 3.6rem;
+    }
+    &4{
+      margin-bottom: 1rem;
+    }
+    &5{
+      margin-bottom: 0.7rem;
+    }
+  }
+
+  @media screen and (min-width: 1281px) {
+    &2 {
+      margin-bottom: 1.9rem;
+    }
+  
+    &3 {
+      margin-bottom: 1rem;
+    }
+  
+    &4 {
+      margin-bottom: .2rem;
+    }
+  
+    &5 {
+      margin-bottom: .2rem;
+    }
+  }
 }
 
 .inner>p {
@@ -280,17 +382,17 @@
 
 }
 
-.topic{
+.topic {
   font-weight: 400;
 }
 
 .aboutPage {
-  margin-bottom: 75px;
-  margin-top: 110px;
+  margin-bottom: 16px;
+  margin-top: 0px;
   font-family: 'Graphik';
   font-size: 56px;
   font-weight: 700;
-  line-height: 72.3px;
+  // line-height: 72.3px;
   letter-spacing: -0.004em;
   text-align: left;
 
@@ -298,8 +400,18 @@
 
 .schedule {
   display: grid;
-  grid-template-columns: 22rem auto;
-  margin-top: 3rem;
+  grid-template-columns: 30rem auto;
+  margin: 110px auto;
+  gap: 80px;
+
+
+  @media screen and (max-width: 1280px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+  }
 }
 
 .highlight {
@@ -379,7 +491,7 @@
   padding: 5rem;
   border-radius: 10px;
   background: linear-gradient(90deg, #009bc0 0%, #11202d 100%);
-  margin: 3rem 4rem;
+  margin: 3rem auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -471,6 +583,7 @@
 
   .schedule {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-top: 6rem;
@@ -481,7 +594,7 @@
   }
 
   .progamEvent {
-    width: 80%;
+    width: 100%;
     margin: auto;
   }
 
@@ -512,7 +625,7 @@
   }
 
   .highlight {
-    gap: 2rem;
+    gap: .5rem;
     font-size: 10px;
   }
 
@@ -553,5 +666,106 @@
 
   .inner {
     line-height: 17px;
+  }
+}
+
+.registraion {
+  h4 {
+    color: #262626;
+    font-family: 'Graphik';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 16px;
+    margin-top: 48px;
+    /* 125% */
+  }
+
+  h6 {
+    color: #262626;
+    font-family: 'Graphik';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px;
+    /* 142.857% */
+    text-transform: uppercase;
+  }
+
+  .form {
+
+    margin-bottom: 99px;
+
+    &_header {
+      margin-bottom: 40px;
+    }
+
+    &_description {
+      color: #11202D;
+      font-family: 'Graphik';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      margin-bottom: 40px;
+      /* 25.6px */
+
+      span {
+        font-weight: 600;
+      }
+    }
+
+    &_check {
+      label {
+        margin-top: 8px;
+        margin-left: 5px;
+      }
+    }
+
+    &_row {
+      margin-bottom: 32px;
+
+      label {
+        color: #666;
+        font-family: 'Graphik';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        // margin: 0;
+        /* 114.286% */
+      }
+
+      input {
+        border-radius: 5px;
+        border: 1px solid #E0E0E0;
+        padding: 10px !important;
+      }
+
+      ::placeholder {
+        /* Edge 12-18 */
+        color: #C2C2C2 !important;
+        font-family: 'Graphik';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 125% */
+        letter-spacing: 0.32px;
+      }
+
+      ::-ms-input-placeholder {
+        /* Edge 12-18 */
+        color: #C2C2C2 !important;
+        font-family: 'Graphik';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 125% */
+        letter-spacing: 0.32px;
+      }
+    }
   }
 }

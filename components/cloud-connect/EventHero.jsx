@@ -7,7 +7,7 @@ const EventHero = () => {
   return (
     <>
       <div className={`container-fluid ${styles.cover}`}>
-        <section className="container">
+        <section className="container mx-auto">
           <div className="row">
             {/* First Card */}
             <div className="col-md-6 mb-4">
@@ -49,7 +49,7 @@ const EventHero = () => {
       </div>
 
       <div className={`container-fluid ${styles.countdownCard}`}>
-        <div className="container">
+        <div className="container mx-auto">
           <div className="row">
             <div className="col-md-3"></div>
             <div className="col-md-6 my-5"><CountdownTimer targetDate="2023-11-30T10:00:00" /></div>
@@ -57,7 +57,7 @@ const EventHero = () => {
           </div>
         </div>
         <hr className={styles.hr} />
-        <div className="row mt-5 text-center justify-content-around">
+        <div className="container mx-auto row mt-5 text-center justify-content-around">
           <div className="col-md-3">
             <p>
               {" "}

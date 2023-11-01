@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import styles from "../../styles/eventpage.module.scss";
 
 import Layout from "components/layout";
 import CountdownTimer from 'components/cloud-connect/CountdownTimer';
@@ -62,38 +63,38 @@ const Register = () => {
   const formView = useMemo(() => loading ?
     <LoadingScreen message={"Loading..."} />
     :
-    (<form onSubmit={handleSubmit} onReset={handleReset}>
-      <div className="mb-5 mt-5">
+    (<form className={styles.form} onSubmit={handleSubmit} onReset={handleReset}>
+      <div className={styles.form_header}>
         <h4>Quick Registration</h4>
-        <span className="text-secondary">
-          Secure your spot and join us for an unforgettable learning experience: register for the Atlassian partner event to connect with industry experts and gain insights into the latest trends and development.
+        <span className={styles.form_description}>
+          Secure your spot and join us for an unforgettable learning experience: Register for the <span>Cloud Connect</span> event to connect with industry experts and gain Insights into the latest trends and developments.
         </span>
       </div>
 
       {/* Basic Information Section */}
-      <div className="mb-4">
-        <h6>Basic Information</h6>
-        <div className="row mt-4">
-          <div className="col-md-6 mb-3">
+      <div className="">
+        <h6 className={styles.form_row}>Basic Information</h6>
+        <div className={`row ${styles.form_row}`}>
+          <div className="col-md-6">
             <label>First Name</label>
             <input type="text" className="form-control" value={userData?.firstName || ''} name="firstName" placeholder="First Name" required onChange={handleChange} />
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6">
             <label>Last Name</label>
             <input type="text" className="form-control" value={userData?.lastName || ''} name="lastName" placeholder="Last Name" required onChange={handleChange} />
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-6 mb-3">
+        <div className={`row ${styles.form_row}`}>
+          <div className="col-md-6">
             <label>Phone Number</label>
             <input type="tel" className="form-control" value={userData?.phone || ''} name="phone" placeholder="Phone Number" onChange={handleChange} />
           </div>
-          <div className="col-md-6 mb-3">
+          <div className="col-md-6">
             <label>Country of Residence</label>
             <input type="text" className="form-control" value={userData?.country || ''} name="country" placeholder="Country of Residence" onChange={handleChange} />
           </div>
         </div>
-        <div className="mb-3">
+        <div className={styles.form_row}>
           <label>Email</label>
           <input type="email" className="form-control" value={userData?.email || ''} name="email" placeholder="Email" required onChange={handleChange} />
         </div>
@@ -101,24 +102,26 @@ const Register = () => {
 
       {/* Additional Information Section */}
       <div className="mb-4">
-        <h6>Additional Information</h6>
-        <label>How are you attending?</label>
-        <div className="form-check">
-          <input type="radio" className="form-check-input" id="inPerson" checked={userData?.modeOfAttendance == "In-Person"} name="modeOfAttendance" value="In-Person" required onChange={handleChange} />
-          <label className="form-check-label" htmlFor="inPerson">In-Person</label>
+        <h6 className={styles.form_row}>Additional Information</h6>
+        <div className={styles.form_row}>
+          <label>How are you attending?</label>
+          <div className={styles.form_check}>
+            <input type="checkbox" className="form-check-input" id="inPerson" checked={userData?.modeOfAttendance == "In-Person"} name="modeOfAttendance" value="In-Person" required onChange={handleChange} />
+            <label className="form-check-label" htmlFor="inPerson">In-Person</label>
+          </div>
+          <div className={styles.form_check}>
+            <input type="checkbox" className="form-check-input" id="online" checked={userData?.modeOfAttendance == "Online"} name="modeOfAttendance" value="Online" required onChange={handleChange} />
+            <label className="form-check-label" htmlFor="online">Online</label>
+          </div>
         </div>
-        <div className="form-check">
-          <input type="radio" className="form-check-input" id="online" checked={userData?.modeOfAttendance == "Online"} name="modeOfAttendance" value="Online" required onChange={handleChange} />
-          <label className="form-check-label" htmlFor="online">Online</label>
-        </div>
-        <div className="mb-3">
+        <div className={styles.form_row}>
           <label>I agree to receive email updates from Alluvium about future events, news, and announcements</label>
-          <div className="form-check">
-            <input type="radio" className="form-check-input" id="agreeYes" checked={userData?.canReceiveFurtherEmail === true} name="canReceiveFurtherEmail" required onChange={handleChange} value={true} />
+          <div className={styles.form_check}>
+            <input type="checkbox" className="form-check-input" id="agreeYes" checked={userData?.canReceiveFurtherEmail === true} name="canReceiveFurtherEmail" required onChange={handleChange} value={true} />
             <label className="form-check-label" htmlFor="agreeYes">Yes</label>
           </div>
-          <div className="form-check">
-            <input type="radio" className="form-check-input" id="agreeNo" checked={userData?.canReceiveFurtherEmail === false} name="canReceiveFurtherEmail" required onChange={handleChange} value={false} />
+          <div className={styles.form_check}>
+            <input type="checkbox" className="form-check-input" id="agreeNo" checked={userData?.canReceiveFurtherEmail === false} name="canReceiveFurtherEmail" required onChange={handleChange} value={false} />
             <label className="form-check-label" htmlFor="agreeNo">No</label>
           </div>
         </div>
@@ -132,7 +135,7 @@ const Register = () => {
     <>
       <ToastProvider>
         <Layout>
-          <div className="container-fluid p-3" style={{ backgroundColor: '#0F1922' }}>
+          <div className={`container-fluid p-3`} style={{ backgroundColor: '#0F1922' }}>
             <div className="row container mx-auto align-items-center">
               <div className="col-md-4 text-center text-md-start">
                 <h2 className="text-white">Cloud Connect</h2>
@@ -147,9 +150,9 @@ const Register = () => {
           </div>
 
 
-          <div className="container mt-4">
+          <div className={`container mt-4 ${styles.registraion}`}>
             <Link href="/event/cloud-connect">
-              <img src="/assets/back-arrow.png" alt="back to previous page" className="img-fluid" />
+              <img src="/assets/back-arrow.png" alt="back to previous page" style={{cursor: 'pointer'}} className="img-fluid" />
             </Link>
 
             <hr />
