@@ -137,7 +137,7 @@ export function AltFooter() {
                   Suite 200
                   Beachwood, Ohio 44122 USA
                 </p>
-                <p>
+                <div>
                   <b>Africa:</b>
                   <p>
                     Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104, Nigeria.
@@ -146,7 +146,7 @@ export function AltFooter() {
                     Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi
                     Road, Ikoro Ekiti, Ekiti State, Nigeria.
                   </p>
-                </p>
+                </div>
               </li>
               <li className={styles.contactListItem}>
                 <b>Email:</b>
