@@ -34,7 +34,7 @@ const Register = () => {
       addToast('Missing required fields!', { appearance: 'error' });
       return;
     }
-    console.log(userData);
+    // console.log(userData);
     await axios
       .post("/api/event/follow-up", { ...userData, eventType })
       .then((res) => {
@@ -106,22 +106,22 @@ const Register = () => {
         <div className={styles.form_row}>
           <label>How are you attending?</label>
           <div className={styles.form_check}>
-            <input type="checkbox" className="form-check-input" id="inPerson" checked={userData?.modeOfAttendance == "In-Person"} name="modeOfAttendance" value="In-Person" required onChange={handleChange} />
+            <input type="radio" className="form-check-input" id="inPerson" checked={userData?.modeOfAttendance == "In-Person"} name="modeOfAttendance" value="In-Person" required onChange={handleChange} />
             <label className="form-check-label" htmlFor="inPerson">In-Person</label>
           </div>
           <div className={styles.form_check}>
-            <input type="checkbox" className="form-check-input" id="online" checked={userData?.modeOfAttendance == "Online"} name="modeOfAttendance" value="Online" required onChange={handleChange} />
+            <input type="radio" className="form-check-input" id="online" checked={userData?.modeOfAttendance == "Online"} name="modeOfAttendance" value="Online" required onChange={handleChange} />
             <label className="form-check-label" htmlFor="online">Online</label>
           </div>
         </div>
         <div className={styles.form_row}>
           <label>I agree to receive email updates from Alluvium about future events, news, and announcements</label>
           <div className={styles.form_check}>
-            <input type="checkbox" className="form-check-input" id="agreeYes" checked={userData?.canReceiveFurtherEmail === true} name="canReceiveFurtherEmail" required onChange={handleChange} value={true} />
+            <input type="radio" className="form-check-input" id="agreeYes" checked={userData?.canReceiveFurtherEmail === true} name="canReceiveFurtherEmail" required onChange={handleChange} value={true} />
             <label className="form-check-label" htmlFor="agreeYes">Yes</label>
           </div>
           <div className={styles.form_check}>
-            <input type="checkbox" className="form-check-input" id="agreeNo" checked={userData?.canReceiveFurtherEmail === false} name="canReceiveFurtherEmail" required onChange={handleChange} value={false} />
+            <input type="radio" className="form-check-input" id="agreeNo" checked={userData?.canReceiveFurtherEmail === false} name="canReceiveFurtherEmail" required onChange={handleChange} value={false} />
             <label className="form-check-label" htmlFor="agreeNo">No</label>
           </div>
         </div>
