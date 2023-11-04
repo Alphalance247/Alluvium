@@ -68,7 +68,7 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-              <strong>Location:</strong> <br /> Arowolo Gardens,  adjacent fajuyi Pavillion, home to Ayoba Fm ,beside Ekiti state fire service.  Fajuyi Ado Ekiti.
+              <strong>Location:</strong> <br /> Arowolo Gardens,  adjacent Fajuyi Pavillion, home to Ayoba FM, beside Ekiti State Fire Service.  Fajuyi Ado Ekiti.
             </p>
           </div>
           <div className="col-md-3">
