@@ -89,10 +89,12 @@ const Speaker = () => {
               <div
                 className={styles.specific1}
                 key={guest.id}
-                style={{ backgroundImage: `url(${guest.src})`, backgroundPosition: `top`}}
+                style={{ backgroundImage: `url(${guest.src})`, backgroundPosition: `top` }}
               >
-                <h3 className={styles.specific}>{guest.name}</h3>
-                <p className={styles.specific}>{guest.content}</p>
+                <div className={styles.specific}>
+                  <h3>{guest.name}</h3>
+                  <p>{guest.content}</p>
+                </div>
               </div>
             );
           })}

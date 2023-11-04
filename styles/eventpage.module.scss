@@ -463,8 +463,9 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 16px;
+  position: relative;
 }
 
 .specific1:hover {
@@ -472,8 +473,13 @@
 }
 
 .specific {
-  position: relative;
-  top: 11.5rem;
+  position: absolute;
+  // top: 11.5rem;
+  bottom: 0px;
+  background-color: #00000058;
+  // border-radius: 8px;
+  padding: 8px;
+  width: 100%;
 }
 
 .specific1>h3 {

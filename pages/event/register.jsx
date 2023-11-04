@@ -9,11 +9,13 @@ import LoadingScreen from "components/loading";
 import { currentEventName } from "config";
 import axios from "axios";
 import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { Country } from 'country-state-city';
 
 
 const Register = () => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(false);
+  const allCountries = Country.getAllCountries();
   const eventType = useMemo(() => currentEventName, []);
   const { addToast } = useToasts();
 
@@ -91,7 +93,12 @@ const Register = () => {
           </div>
           <div className="col-md-6">
             <label>Country of Residence</label>
-            <input type="text" className="form-control" value={userData?.country || ''} name="country" placeholder="Country of Residence" onChange={handleChange} />
+            <select type="text" className="form-control" defaultValue="" value={userData?.country || ''} name="country" onChange={handleChange}>
+              <option value="" disabled>Country of Residence</option>
+              {
+                allCountries.map(country => (<option key={country?.name} value={country?.name}>{country?.name}</option>))
+              }
+            </select>
           </div>
         </div>
         <div className={styles.form_row}>
