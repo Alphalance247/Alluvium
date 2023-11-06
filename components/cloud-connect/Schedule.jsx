@@ -2,105 +2,99 @@ import styles from "../../styles/eventpage.module.scss";
 
 const Schedule = () => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.aboutPage}>About</h1>
-
-      <div className={styles.about}>
-        <div className={styles.conference}>
-          <h1>Conference</h1>
-          <h2>Alluvium</h2>
-        </div>
-        <div className={styles.text}>
-          This is an Atlassian Partner Event focused on remote work. It conveys
-          the idea of collaboration, growth, and adaptability in the context of
-          a remote and distributed work landscape. The event highlights the role
-          of Atlassian in helping teams to collectively embrace the
-          opportunities and challenges of remote work, striving for excellence
-          in a distributed work environment.
-        </div>
-      </div>
+    <div className={`container mx-auto ${styles.container}`}>
 
       <div className={styles.schedule}>
-        <div className={styles.empty}></div>
+        <div className={styles.empty}>
+          <h1 className={styles.aboutPage}>Agenda</h1>
+          <div className={styles.about}>
+            <div className={styles.text}>
+              Cloud Connect brings together Atlassian Partners, customers, and industry experts to explore the latest developments in the Atlassian ecosystem, with a primary focus on cloud solutions and their significance in shaping the future of collaboration and productivity.
+              The event also shows  how Atlassian products can help in Africa’s Journey to the cloud.
+            </div>
+          </div>
+        </div>
         <div className={styles.progamEvent}>
-          <h2>Schedule</h2>
 
           <div className={styles.highlight}>
             <div className={styles.time}>
-              <p className={styles.speech1}>8:00AM</p>
-              <p className={styles.speech2}>8:15AM</p>
-              <div className={styles.speech3}>
+              <p className={styles.time1}>8:00AM</p>
+              <p className={styles.time2}>8:15AM</p>
+              <div className={styles.time3}>
                 <span>10:00AM</span>
               </div>
-              <div className={styles.speech4}>
+              <div className={styles.time4}>
                 <span>12:00PM</span>
               </div>
 
-              <div className={styles.speech5}>
+              <div className={styles.time5}>
                 <span>1:00PM</span>
               </div>
-              <div className={styles.speech6}>
+              <div className={styles.time6}>
                 <span>2:00PM</span>
               </div>
-              <div className={styles.speech7}>
+              <div className={styles.time7}>
                 <span>4:00PM</span>
+              </div>
+              <div className={styles.time8}>
+                <span>7:00PM</span>
               </div>
             </div>
             <div>
               <img
                 className={styles.divider}
-                src="/cloudImg/divider.jpg"
+                src="/cloudImg/divider2.png"
                 height="1130px"
                 width="12px"
-                alt="image1"
+                alt="divider"
               />
             </div>
 
-            <div className={styles.speech}>
+            <div className={styles.speech_cover}>
               <p className={styles.speech}>Welcome Address</p>
-              <p className={styles.speech}>Migration Run through</p>
-              <div className={styles.speech}>
+              <p className={styles.speech0}>Migration Run through</p>
+              <div className={styles.speech1}>
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image2"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
-                    <p>Topic:Remote Work and Digital Nomadism in Africa</p>
+                    <p>Nick: Agimudie</p>
+                    <p><span className={styles.topic}>Topic:</span> Remote Work and Digital Nomadism in Africa</p>
                   </div>
                 </div>
               </div>
-              <div className={styles.speech}>
+              <div className={styles.speech2}>
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image3"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
+                    <p>Nick: Agimudie</p>
                     <p>
-                      Topic: Building High-Performing Remote Teams: Best
+                      <span className={styles.topic}>Topic:</span> Building High-Performing Remote Teams: Best
                       Practices and Strategies
                     </p>
                   </div>
                 </div>
               </div>
-              <div className={styles.speech}>
+              <div className={styles.speech3}>
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image5"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
-                    <p>Topic:</p>
+                    <p>Nick: Agimudie</p>
+                    <p><span className={styles.topic}>Topic:</span> </p>
                     <p>
                       1. Optimizing Service Desk Operations in ITSM
                       Implementation
@@ -112,17 +106,17 @@ const Schedule = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.speech}>
+              <div className={styles.speech4}>
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image6"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
-                    <p>Nick:Agimudie</p>
-                    <p>Topic:</p>
+                    <p>Nick: Agimudie</p>
+                    <p><span className={styles.topic}>Topic:</span></p>
                     <p>
                       1. Customization and Localization: Adapting Atlassian
                       Tools to African Business Context
@@ -135,17 +129,17 @@ const Schedule = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.speech}>
+              <div className={styles.speech5}>
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
-                    src="/cloudImg/image.jpg"
+                    src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
-                    alt="image7"
+                    alt="Speaker"
                   />
                   <div className={styles.inner}>
                     <p>Nick: Abdul Azeez</p>
-                    <p>Topic:</p>
+                    <p><span className={styles.topic}>Topic:</span></p>
                     <p>
                       1.Customization and Localization: Adapting Atlassian Tools
                       to African Business Context
@@ -157,6 +151,9 @@ const Schedule = () => {
                     <p>3. ITSM implementation in Africa - On point</p>
                   </div>
                 </div>
+              </div>
+              <div className={styles.speech6}>
+                <p className="m-0">Closing remark</p>
               </div>
             </div>
           </div>

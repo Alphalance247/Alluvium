@@ -16,9 +16,9 @@ const handler = async (req, res) => {
             return res.status(400).json({ message: err.message, success: false })
     })
     } else if (req.method === 'GET') {
-        console.log(mongoose.connection.collections);
+        // console.log(mongoose.connection.collections);
         await FollowUp.find({
-            eventType: req.param.eventType
+            eventType: req.query.eventType
         }).sort({ createdAt: 'desc' })
             .then(users => {
                 return res.status(200).json({

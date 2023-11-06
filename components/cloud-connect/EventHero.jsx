@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import React from "react";
 import styles from "../../styles/eventpage.module.scss";
 import CountdownTimer from "./CountdownTimer";
+import Link from "next/link";
 
 const EventHero = () => {
   return (
     <>
       <div className={`container-fluid ${styles.cover}`}>
-        <section className="container">
+        <section className="container mx-auto">
           <div className="row">
             {/* First Card */}
             <div className="col-md-6 mb-4">
@@ -26,9 +26,9 @@ const EventHero = () => {
                     <br />
                     opportunities
                   </p>
-                  <a href="/event/register" className="btn btn-warning">
-                    REGISTER
-                  </a>
+                  <Link href="/event/register">
+                    <a className="btn btn-warning">REGISTER</a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -49,20 +49,16 @@ const EventHero = () => {
       </div>
 
       <div className={`container-fluid ${styles.countdownCard}`}>
-        <div className="container">
+        <div className="container mx-auto">
           <div className="row">
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <CountdownTimer targetDate="2023-11-30T23:59:59" />
+            <div className="col-md-3"></div>
+            <div className="col-md-6 my-5"><CountdownTimer targetDate="2023-11-30T10:00:00" /></div>
+            <div className="col-md-3"></div>
           </div>
         </div>
         <hr className={styles.hr} />
-        <div className="row mt-5 text-center">
-          <div className="col-md-4">
+        <div className="container mx-auto row mt-5 text-center justify-content-around">
+          <div className="col-md-3">
             <p>
               {" "}
               <img
@@ -72,11 +68,10 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-              <strong>Location:</strong> <br /> Ikogosi resort center, Ekiti,
-              Nigeria
+              <strong>Location:</strong> <br /> Arowolo Gardens, Beside Ekiti State Fire Service, Fajuyi Ado Ekiti.
             </p>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-3">
             <p>
               {" "}
               <img
@@ -86,11 +81,11 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-              <strong>Date & Time:</strong> <br /> 23rd - 24th Thursday, 2023,
-              9AM (WAT)
+              <strong>Date & Time:</strong> <br /> November, 30th Thursday, 2023,
+              10AM (WAT)
             </p>
           </div>
-          <div className="col-md-4 mb-5">
+          <div className="col-md-3 mb-5">
             <p>
               <img
                 src="/assets/email.svg"
