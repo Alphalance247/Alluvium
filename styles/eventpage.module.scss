@@ -452,20 +452,22 @@
   color: white;
   font-weight: 500;
   line-height: 20px;
-  padding: 4rem;
-  justify-content: space-between;
+  padding: 4rem 0;
+  justify-content: flex-start;
 }
 
 .specific1 {
   // width: 294px;
   width: 100%;
+  max-width: 294px;
   height: 316px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 1rem 0;
+  // padding: 1rem 0;
   font-size: 16px;
   position: relative;
+  background-color: #000;
 }
 
 .specific1:hover {
@@ -476,19 +478,25 @@
   position: absolute;
   // top: 11.5rem;
   bottom: 0px;
-  background-color: #00000058;
+  background-color: #000000bc;
   // border-radius: 8px;
   padding: 8px;
+  padding-bottom: 0;
   width: 100%;
 }
 
-.specific1>h3 {
-  font-family: "Graphik";
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  letter-spacing: 0em;
-  text-align: left;
+.specific1 {
+  h3 {
+    font-family: "Graphik";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  p{
+    font-size: 12px;
+  }
 }
 
 /* ////////////////Registration page//////////////////// */

@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo, useCallback, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/eventpage.module.scss";
@@ -15,9 +15,33 @@ import { Country } from 'country-state-city';
 const Register = () => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(false);
+  const [lockInPersonRegistrations, setLockInPersonRegistrations] = useState(false);
   const allCountries = Country.getAllCountries();
   const eventType = useMemo(() => currentEventName, []);
   const { addToast } = useToasts();
+
+  const checkLockInPersonRegistrations = useCallback(async () => {
+    setLoading(true);
+    await axios.get(`/api/event/follow-up?eventType=${eventType}`).then((response) => {
+      setLoading(false);
+      const { success, users } = response?.data;
+      if (!success) setLockInPersonRegistrations(false);
+      const inPersonUsersLength = users?.filter((user) => user?.modeOfAttendance === "In-Person")?.length;
+      if (inPersonUsersLength >= 55) {
+        addToast("We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.", { appearance: 'info' });
+        setLockInPersonRegistrations(true);
+      };
+      // console.log(response.data);
+      // return;
+    }).catch((err) => {
+      setLoading(false);
+      // console.log(err);
+      let errMessage = err?.response?.data?.message || 'I can only get online attendee form. Please try again or reach out for support if you want to attend physically.';
+      addToast(errMessage, { appearance: 'error' });
+      // console.log(err?.response?.data);
+      // return;
+    });
+  }, [])
 
   const handleChange = useCallback((event) => {
     let { name, value } = event.target;
@@ -37,14 +61,19 @@ const Register = () => {
       return;
     }
     // console.log(userData);
+    const data = userData;
+    if (lockInPersonRegistrations) {
+      data.modeOfAttendance = "Online";
+    }
     await axios
-      .post("/api/event/follow-up", { ...userData, eventType })
+      .post("/api/event/follow-up", { ...data, eventType })
       .then((res) => {
         setLoading(false);
         if (!res.data.success) {
           addToast('Unable to process data, kindly reach out to our agent.', { appearance: 'error' });
         } else {
-          addToast(`${res?.data?.message} Your registration has been well received, see you at the event.`, { appearance: 'success' });
+          addToast(`${res?.data?.message} Your registration has been well received, see you at the event.`, { appearance: 'success', autoDismiss: true });
+          checkLockInPersonRegistrations();
           handleReset();
         }
         return;
@@ -53,7 +82,7 @@ const Register = () => {
         setLoading(false);
         let errMessage = err?.response?.data?.message || 'Oops something went wrong. Please try again.';
         addToast(errMessage, { appearance: 'error' });
-        console.log(err?.response?.data);
+        // console.log(err?.response?.data);
         return;
       });
   }, [eventType, userData]);
@@ -61,6 +90,10 @@ const Register = () => {
   const handleReset = useCallback((event) => {
     setUserData({});
   }, [setUserData]);
+
+  useEffect(() => {
+    checkLockInPersonRegistrations();
+  }, [checkLockInPersonRegistrations]);
 
   const formView = useMemo(() => loading ?
     <LoadingScreen message={"Loading..."} />
@@ -93,7 +126,7 @@ const Register = () => {
           </div>
           <div className="col-md-6">
             <label>Country of Residence</label>
-            <select type="text" className="form-control" defaultValue="" value={userData?.country || ''} name="country" onChange={handleChange}>
+            <select type="text" className="form-control" defaultValue="" name="country" onChange={handleChange}>
               <option value="" disabled>Country of Residence</option>
               {
                 allCountries.map(country => (<option key={country?.name} value={country?.name}>{country?.name}</option>))
@@ -110,17 +143,21 @@ const Register = () => {
       {/* Additional Information Section */}
       <div className="mb-4">
         <h6 className={styles.form_row}>Additional Information</h6>
-        <div className={styles.form_row}>
-          <label>How are you attending?</label>
-          <div className={styles.form_check}>
-            <input type="radio" className="form-check-input" id="inPerson" checked={userData?.modeOfAttendance == "In-Person"} name="modeOfAttendance" value="In-Person" required onChange={handleChange} />
-            <label className="form-check-label" htmlFor="inPerson">In-Person</label>
-          </div>
-          <div className={styles.form_check}>
-            <input type="radio" className="form-check-input" id="online" checked={userData?.modeOfAttendance == "Online"} name="modeOfAttendance" value="Online" required onChange={handleChange} />
-            <label className="form-check-label" htmlFor="online">Online</label>
-          </div>
-        </div>
+        {
+          !lockInPersonRegistrations && (
+            <div className={styles.form_row}>
+              <label>How are you attending?</label>
+              <div className={styles.form_check}>
+                <input type="radio" className="form-check-input" id="inPerson" checked={userData?.modeOfAttendance == "In-Person"} name="modeOfAttendance" value="In-Person" required onChange={handleChange} />
+                <label className="form-check-label" htmlFor="inPerson">In-Person</label>
+              </div>
+              <div className={styles.form_check}>
+                <input type="radio" className="form-check-input" id="online" checked={userData?.modeOfAttendance == "Online"} name="modeOfAttendance" value="Online" required onChange={handleChange} />
+                <label className="form-check-label" htmlFor="online">Online</label>
+              </div>
+            </div>
+          )
+        }
         <div className={styles.form_row}>
           <label>I agree to receive email updates from Alluvium about future events, news, and announcements</label>
           <div className={styles.form_check}>
@@ -140,7 +177,7 @@ const Register = () => {
 
   return (
     <>
-      <ToastProvider>
+      <ToastProvider autoDismissTimeout={5000} autoDismiss={true}>
         <Layout>
           <div className={`container-fluid p-3`} style={{ backgroundColor: '#0F1922' }}>
             <div className="row container mx-auto align-items-center">
@@ -159,7 +196,7 @@ const Register = () => {
 
           <div className={`container mt-4 ${styles.registraion}`}>
             <Link href="/event/cloud-connect">
-              <img src="/assets/back-arrow.png" alt="back to previous page" style={{cursor: 'pointer'}} className="img-fluid" />
+              <img src="/assets/back-arrow.png" alt="back to previous page" style={{ cursor: 'pointer' }} className="img-fluid" />
             </Link>
 
             <hr />
