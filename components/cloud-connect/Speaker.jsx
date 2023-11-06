@@ -2,42 +2,43 @@ import styles from "../../styles/eventpage.module.scss";
 
 const Speaker = () => {
   const guestData = [
-    // {
-    //   id: 1,
-    //   name: "Tala Saleh",
-    //   content:
-    //     "Atlassian Partner Manager| Southern Europe, Middle East, Turkey and Africa",
-    //   src: "/cloudImg/mine1.jpg",
-    //   alt: "Tala Saleh",
-    // },
-    // {
-    //   id: 2,
-    //   name: "Tyler Venable",
-    //   content: "Atlas Bench Head of Operations and Talent Solutions",
-    //   src: "/cloudImg/mine2.png",
-    //   alt: "Tyler Venable",
-    // },
-    // {
-    //   id: 3,
-    //   name: "Mat May",
-    //   content: "E7 Solutions, LLC, System Administrator",
-    //   src: "/cloudImg/mine3.png",
-    //   alt: "Mat May",
-    // },
-    // {
-    //   id: 4,
-    //   name: "Ted Henry",
-    //   content: "Principal Atlassian Solutions Architect at Forty8Fifty Labs",
-    //   src: "/cloudImg/mine4.png",
-    //   alt: "Ted Henry",
-    // },
-    // {
-    //   id: 5,
-    //   name: "Katakyie Kojo Desu",
-    //   content: "Business Development Manager at On Point, Africa",
-    //   src: "/cloudImg/mine5.jpg",
-    //   alt: "Katakyie Kojo Desu",
-    // },
+    {
+      id: 1,
+      name: "Kevin Tuei",
+      content:
+        "Cloud Developer | Certified Educator | ALX Gold Fellow | AWS Community Builder | ODeL Coordinator | Atlassian Community Leader | Technology Mentor",
+      src: "/cloudImg/1.png",
+      alt: "Kevin Tuei",
+    },
+    {
+      id: 2,
+      name: "Hon Seun Fakuode",
+      content: "Atlas Bench Head of Operations and Talent Solutions",
+      src: "/cloudImg/2.png",
+      alt: "Hon Seun Fakuode",
+    },
+    {
+      id: 3,
+      name: "Katarzyna Zofia Pawlak",
+      content: "Chief Product Officer & Co-founder @Appsvio | Atlassian Marketplace Partner | 🙌 Jira, Confluence & Jira Service Management enthusiast | 🙌 Atlassian Community Leader",
+      src: "/cloudImg/3.png",
+      alt: "Katarzyna Zofia Pawlak",
+      align: "top"
+    },
+    {
+      id: 4,
+      name: "Rodney Nissen",
+      content: "Sr. Atlassian Toolsmith | Blogger | Atlassian Certified Expert",
+      src: "/cloudImg/4.png",
+      alt: "Rodney Nissen",
+    },
+    {
+      id: 5,
+      name: "Naj Irshrad",
+      content: "CEO at Stack Intelligence",
+      src: "/cloudImg/5.png",
+      alt: "Naj Irshrad",
+    },
     {
       id: 6,
       name: "Erica Larson",
@@ -82,22 +83,28 @@ const Speaker = () => {
   return (
     <>
       <div className={styles.visitorsPage}>
-        <h1 className={styles.speakers}>Speakers</h1>
-        <div className={styles.guest}>
-          {guestData.map((guest) => {
-            return (
-              <div
-                className={styles.specific1}
-                key={guest.id}
-                style={{ backgroundImage: `url(${guest.src})`, backgroundPosition: `top` }}
-              >
-                <div className={styles.specific}>
-                  <h3>{guest.name}</h3>
-                  <p>{guest.content}</p>
+        <div className={`container`}>
+          <h1 className={styles.speakers}>Speakers</h1>
+          <div className={styles.guest}>
+            {guestData.map((guest) => {
+              return (
+                <div
+                  className={styles.specific1}
+                  key={guest.id}
+                  // style={{ background: `url(${guest.src}), linear-gradient(90deg, rgb(255,255,255) 0%, rgb(0,0,0,255) 100%)`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: `${!!guest?.align ? 'center -30px' : "top"}` }}
+                >
+                  <div className=""
+                  style={{ background: `url(${guest.src})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: `${!!guest?.align ? 'center -30px' : "top"}`, height: '100%', width: '100%'}}
+                  >
+                  </div>
+                  <div className={styles.specific}>
+                    <h3>{guest.name}</h3>
+                    <p>{guest.content}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
       ;
