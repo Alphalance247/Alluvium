@@ -40,14 +40,14 @@ const Schedule = () => {
                 <span>7:00PM</span>
               </div> */}
             </div>
-            <div>
-              <img
+            <div className={styles.divider}>
+              {/* <img
                 className={styles.divider}
                 src="/cloudImg/divider2.png"
                 height="1130px"
                 width="12px"
                 alt="divider"
-              />
+              /> */}
             </div>
 
             <div className={styles.speech_cover}>

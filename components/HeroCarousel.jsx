@@ -5,6 +5,7 @@ import heroStyles from "../styles/hero.module.scss";
 
 import Hero from "./Hero";
 import Badges from "./badges";
+import EventHero from "./cloud-connect/EventHero";
 
 export default function () {
 
@@ -12,6 +13,9 @@ export default function () {
         <>
             <div className="container-fluid p-0">
                 <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true}>
+                    <div>
+                        <EventHero showCountdown={false} />
+                    </div>
                     <div>
                         <Hero />
                     </div>

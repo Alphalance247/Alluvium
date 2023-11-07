@@ -3,21 +3,28 @@ import styles from "../../styles/eventpage.module.scss";
 import CountdownTimer from "./CountdownTimer";
 import Link from "next/link";
 
-const EventHero = () => {
+const EventHero = ({ showCountdown = true }) => {
   return (
     <>
       <div className={`container-fluid ${styles.cover}`}>
         <section className="container mx-auto">
-          <div className="row">
+          <div className="row p-0">
             {/* First Card */}
-            <div className="col-md-6 mb-4">
+            <div className="col-md-6 mb-2 mb-md-0">
               <div className={`card ${styles.heroCard}`}>
                 <img
                   src="/assets/cloudpic.png"
                   className="card-img-top"
                   alt="Image 1"
                 />
-                <div className="card-body">
+                <div className="card-body p-0 mt-3">
+                  <div className={!showCountdown ? `d-md-none card mb-4 ${styles.heroCard} ${styles.heroCard2}`: 'd-none'}>
+                    <img
+                      src="/assets/eventheaderimage.png"
+                      className="card-img-top"
+                      alt="Image 2"
+                    />
+                  </div>
                   <h5 className="card-title text-warning">
                     ONLINE & IN-PERSON
                   </h5>
@@ -27,28 +34,27 @@ const EventHero = () => {
                     opportunities
                   </p>
                   <Link href="/event/register">
-                    <a className="btn btn-warning">REGISTER</a>
+                    <a className="btn btn-warning mt-4">REGISTER</a>
                   </Link>
                 </div>
               </div>
             </div>
 
             {/* Second Card */}
-            <div className="col-md-6 mb-4">
+            <div className={!showCountdown ? 'd-none d-md-flex col-md-6 p-0' : `col-md-6 mt-4 mt-md-0`}>
               <div className={`card ${styles.heroCard}`}>
                 <img
                   src="/assets/eventheaderimage.png"
                   className="card-img-top"
                   alt="Image 2"
                 />
-                <div className="card-body"></div>
               </div>
             </div>
           </div>
         </section>
       </div>
 
-      <div className={`container-fluid ${styles.countdownCard}`}>
+      {showCountdown && <div className={`container-fluid ${styles.countdownCard}`}>
         <div className="container mx-auto">
           <div className="row">
             <div className="col-md-3"></div>
@@ -59,7 +65,7 @@ const EventHero = () => {
         <hr className={styles.hr} />
         <div className="container mx-auto row mt-5 text-center justify-content-around">
           <div className="col-md-3">
-            <p>
+            <div>
               {" "}
               <img
                 src="/assets/location.svg"
@@ -68,16 +74,16 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-            <strong>Location:</strong>
-          <p className="m-0">Arowolo Gardens,</p>
-          <p className="m-0">Beside Ekiti State Fire Service,</p>
-          <p className="m-0">Fajuyi, Ado Ekiti.</p>
+              <strong>Location:</strong>
+              <p className="m-0">Arowolo Gardens,</p>
+              <p className="m-0">Beside Ekiti State Fire Service,</p>
+              <p className="m-0">Fajuyi, Ado Ekiti.</p>
               {/* <strong>Location:</strong> <br /> Arowolo Gardens, Beside Ekiti State Fire Service, Fajuyi Ado Ekiti. */}
-            </p>
+            </div>
 
           </div>
           <div className="col-md-3">
-            <p>
+            <div>
               {" "}
               <img
                 src="/assets/date.svg"
@@ -88,10 +94,10 @@ const EventHero = () => {
               />
               <strong>Date & Time:</strong> <br /> November, 30th Thursday, 2023,
               10AM (WAT)
-            </p>
+            </div>
           </div>
           <div className="col-md-3 mb-5">
-            <p>
+            <div>
               <img
                 src="/assets/email.svg"
                 className="card-img-top"
@@ -100,10 +106,10 @@ const EventHero = () => {
                 height={"20px"}
               />
               <strong>Email:</strong> <br /> contact@alluvium.net
-            </p>
+            </div>
           </div>
         </div>
-      </div>
+      </div>}
     </>
   );
 };
