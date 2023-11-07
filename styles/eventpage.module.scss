@@ -105,7 +105,7 @@
           column-gap: 0.5rem;
         }
 
-        &>div {
+        & > div {
           background-color: rgba(227, 121, 21, 1);
           width: 57px;
           height: 57px;
@@ -146,9 +146,8 @@
 }
 
 .custom-bg-color {
-  background-color: #0F1922;
+  background-color: #0f1922;
 }
-
 
 ////////////////////////ABOUT SCHEDULE, SPEAKER AND REGISTER STYLING////////////////////////////
 
@@ -165,9 +164,9 @@
   }
 }
 
-.conference>h1 {
+.conference > h1 {
   color: #009bc0;
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 36px;
   font-weight: 600;
   border-bottom: 0.3rem solid #009bc0;
@@ -175,23 +174,22 @@
   margin-bottom: 32px;
 }
 
-.conference>h2 {
+.conference > h2 {
   color: #11202d;
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 36px;
   line-height: 46.8px;
   font-weight: 600;
 }
 
-.progamEvent>h2 {
+.progamEvent > h2 {
   margin-bottom: 32px;
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 28px;
   font-weight: 600;
   line-height: 36px;
   letter-spacing: -0.004em;
   text-align: left;
-
 }
 
 .highlight {
@@ -207,7 +205,7 @@
 
 .time {
   margin-bottom: 4rem;
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -253,28 +251,28 @@
 }
 
 @media screen and (max-width: 576px) {
-  .time{
+  .time {
     margin-bottom: 0px;
     height: 100%;
-    &1{
+    &1 {
       margin-bottom: 5rem;
     }
-    &2{
+    &2 {
       margin-bottom: 4.8rem;
     }
-    &3{
+    &3 {
       margin-bottom: 12.7rem;
     }
-    &4{
+    &4 {
       margin-bottom: 11.5rem;
     }
-    &5{
+    &5 {
       margin-bottom: 17.7rem;
     }
-    &6{
+    &6 {
       margin-bottom: 19.5rem;
     }
-    &7{
+    &7 {
       margin-bottom: 19.5rem;
     }
   }
@@ -282,17 +280,16 @@
 
 .speechs {
   margin-bottom: 1rem;
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.004em;
   text-align: left;
-
 }
 
-.speech_cover{
-  font-family: 'Graphik';
+.speech_cover {
+  font-family: "Graphik";
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
@@ -329,22 +326,22 @@
 
   @media screen and (max-width: 576px) {
     margin-bottom: 5rem;
-    &0{
+    &0 {
       margin-bottom: 4.6rem;
     }
-    &1{
+    &1 {
       margin-bottom: 5.4rem;
     }
-    &2{
+    &2 {
       margin-bottom: 3.1rem;
     }
-    &3{
+    &3 {
       margin-bottom: 3.6rem;
     }
-    &4{
+    &4 {
       margin-bottom: 1rem;
     }
-    &5{
+    &5 {
       margin-bottom: 0.7rem;
     }
   }
@@ -353,33 +350,32 @@
     &2 {
       margin-bottom: 1.9rem;
     }
-  
+
     &3 {
       margin-bottom: 1rem;
     }
-  
+
     &4 {
-      margin-bottom: .2rem;
+      margin-bottom: 0.2rem;
     }
-  
+
     &5 {
-      margin-bottom: .2rem;
+      margin-bottom: 0.2rem;
     }
   }
 }
 
-.inner>p {
+.inner > p {
   margin-bottom: 0.5rem;
 }
 
 .inner {
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
   letter-spacing: -0.004em;
   text-align: left;
-
 }
 
 .topic {
@@ -389,13 +385,12 @@
 .aboutPage {
   margin-bottom: 16px;
   margin-top: 0px;
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 56px;
   font-weight: 700;
   // line-height: 72.3px;
   letter-spacing: -0.004em;
   text-align: left;
-
 }
 
 .schedule {
@@ -403,7 +398,6 @@
   grid-template-columns: 30rem auto;
   margin: 110px auto;
   gap: 80px;
-
 
   @media screen and (max-width: 1280px) {
     display: flex;
@@ -494,7 +488,7 @@
     letter-spacing: 0em;
     text-align: left;
   }
-  p{
+  p {
     font-size: 12px;
   }
 }
@@ -512,7 +506,7 @@
   grid-gap: 6rem;
 }
 
-.register>h1 {
+.register > h1 {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -0.004em;
@@ -618,12 +612,12 @@
     font-weight: 200;
   }
 
-  .conference>h1 {
+  .conference > h1 {
     font-size: 30px;
     font-weight: 600;
   }
 
-  .conference>h2 {
+  .conference > h2 {
     font-size: 30px;
     font-weight: 600;
   }
@@ -647,12 +641,12 @@
     grid-gap: 4rem;
   }
 
-  .register>h1 {
+  .register > h1 {
     font-size: 18px;
     font-weight: 500;
   }
 
-  .register>.btn {
+  .register > .btn {
     padding: 16px, 32px, 16px, 32px;
   }
 
@@ -673,7 +667,7 @@
     margin: auto;
   }
 
-  .progamEvent>h2 {
+  .progamEvent > h2 {
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -682,7 +676,7 @@
     line-height: 17px;
   }
 
-  .inner>p {
+  .inner > p {
     margin-bottom: 0.5rem;
   }
 
@@ -751,7 +745,7 @@
   }
 
   .highlight {
-    gap: .5rem;
+    gap: 0.5rem;
     font-size: 10px;
   }
 
@@ -772,7 +766,7 @@
     grid-gap: 0.5rem;
   }
 
-  .register>h1 {
+  .register > h1 {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -854,7 +848,7 @@
 .registraion {
   h4 {
     color: #262626;
-    font-family: 'Graphik';
+    font-family: "Graphik";
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -866,7 +860,7 @@
 
   h6 {
     color: #262626;
-    font-family: 'Graphik';
+    font-family: "Graphik";
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -876,7 +870,6 @@
   }
 
   .form {
-
     margin-bottom: 99px;
 
     &_header {
@@ -884,8 +877,8 @@
     }
 
     &_description {
-      color: #11202D;
-      font-family: 'Graphik';
+      color: #11202d;
+      font-family: "Graphik";
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -910,7 +903,7 @@
 
       label {
         color: #666;
-        font-family: 'Graphik';
+        font-family: "Graphik";
         font-size: 14px;
         font-style: normal;
         font-weight: 500;
@@ -921,14 +914,14 @@
 
       input {
         border-radius: 5px;
-        border: 1px solid #E0E0E0;
+        border: 1px solid #e0e0e0;
         padding: 10px !important;
       }
 
       ::placeholder {
         /* Edge 12-18 */
-        color: #C2C2C2 !important;
-        font-family: 'Graphik';
+        color: #c2c2c2 !important;
+        font-family: "Graphik";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -939,8 +932,8 @@
 
       ::-ms-input-placeholder {
         /* Edge 12-18 */
-        color: #C2C2C2 !important;
-        font-family: 'Graphik';
+        color: #c2c2c2 !important;
+        font-family: "Graphik";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
