@@ -68,8 +68,13 @@ const EventHero = () => {
                 width={"20px"}
                 height={"20px"}
               />
-              <strong>Location:</strong> <br /> Arowolo Gardens, Beside Ekiti State Fire Service, Fajuyi Ado Ekiti.
+            <strong>Location:</strong>
+          <p className="m-0">Arowolo Gardens,</p>
+          <p className="m-0">Beside Ekiti State Fire Service,</p>
+          <p className="m-0">Fajuyi, Ado Ekiti.</p>
+              {/* <strong>Location:</strong> <br /> Arowolo Gardens, Beside Ekiti State Fire Service, Fajuyi Ado Ekiti. */}
             </p>
+
           </div>
           <div className="col-md-3">
             <p>
