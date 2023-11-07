@@ -8,9 +8,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding-top: 120px !important;
-  padding-bottom: 120px !important;
-  // background-blend-mode: normal;
+  min-height: 733px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding-top: 120px !important;
+  // padding-bottom: 120px !important;
 
   // &>div{
   //     background-color: #0F1A25;
@@ -132,6 +135,14 @@
   // background-color: #0F1922;
   color: #fff;
 }
+.heroCard2 {
+  @media screen and (max-width: 576px) {
+    width: 70%;
+    margin-right: auto;
+    // height: 22px;
+    padding: 0;
+  }
+}
 
 .countdownCard {
   background-color: #ffbe26 !important;
@@ -217,6 +228,9 @@
 
 .divider {
   margin-top: 10px;
+  height: auto;
+  width: 2px;
+  background-color: #000;
 
   @media screen and (max-width: 576px) {
     height: 99% !important;
@@ -648,8 +662,9 @@
   }
 
   .guest {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    padding: 0px;
   }
 
   .register {

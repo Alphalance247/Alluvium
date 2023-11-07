@@ -18,83 +18,90 @@ const Schedule = () => {
 
           <div className={styles.highlight}>
             <div className={styles.time}>
-              <p className={styles.time1}>8:00AM</p>
-              <p className={styles.time2}>8:15AM</p>
+              <p className={styles.time1}>10:00AM</p>
+              {/* <p className={styles.time2}>10:40AM</p> */}
               <div className={styles.time3}>
-                <span>10:00AM</span>
+                <span>10:40AM</span>
               </div>
               <div className={styles.time4}>
-                <span>12:00PM</span>
+                <span>12:20PM</span>
               </div>
 
               <div className={styles.time5}>
-                <span>1:00PM</span>
+                <span>1:40PM</span>
               </div>
               <div className={styles.time6}>
-                <span>2:00PM</span>
+                <span>3:20PM</span>
               </div>
-              <div className={styles.time7}>
+              {/* <div className={styles.time7}>
                 <span>4:00PM</span>
               </div>
               <div className={styles.time8}>
                 <span>7:00PM</span>
-              </div>
+              </div> */}
             </div>
-            <div>
-              <img
+            <div className={styles.divider}>
+              {/* <img
                 className={styles.divider}
                 src="/cloudImg/divider2.png"
                 height="1130px"
                 width="12px"
                 alt="divider"
-              />
+              /> */}
             </div>
 
             <div className={styles.speech_cover}>
               <p className={styles.speech}>Welcome Address</p>
-              <p className={styles.speech0}>Migration Run through</p>
+             
+              {/* <p className={styles.speech0}>Migration Run through</p> */}
               <div className={styles.speech1}>
-                <p className={styles.speechs}>Speaker Session</p>
+                <p className={styles.speechs}>Migrations and Cloud</p>
                 <div className={styles.encompass}>
-                  <img
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
-                    <p><span className={styles.topic}>Topic:</span> Remote Work and Digital Nomadism in Africa</p>
+                    <p>Speaker 1: <b>Erica Larson</b></p>
+                    <p>Speaker 2: <b>Rodney Nissen</b></p>
+                    <p>Speaker 2: <b>Naj Irshrad</b></p>
+                    {/* <p><span className={styles.topic}>Topic:</span> Remote Work and Digital Nomadism in Africa</p> */}
                   </div>
                 </div>
               </div>
               <div className={styles.speech2}>
-                <p className={styles.speechs}>Speaker Session</p>
+                <p className={styles.speechs}>AI and ITSM</p>
                 <div className={styles.encompass}>
-                  <img
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
+                    <p>Speaker 1: <b>Olaniyan Remilekun Desmond</b></p>
+                    <p>Speaker 2: <b>Katarzyna Zofia Pawlak</b></p>
+                    <p>Speaker 3: <b>David Oladeji</b></p>
                     <p>
-                      <span className={styles.topic}>Topic:</span> Building High-Performing Remote Teams: Best
-                      Practices and Strategies
+                      {/* <span className={styles.topic}>Topic:</span> Building High-Performing Remote Teams: Best
+                      Practices and Strategies */}
                     </p>
                   </div>
                 </div>
               </div>
               <div className={styles.speech3}>
-                <p className={styles.speechs}>Speaker Session</p>
+                <p className={styles.speechs}>African & Atlassian</p>
                 <div className={styles.encompass}>
-                  <img
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
-                    <p><span className={styles.topic}>Topic:</span> </p>
+                    <p>Speaker 1: <b>Hon. Seun Fakuode</b></p>
+                    <p>Speaker 2: <b>Katakyie Kojo Desu</b></p>
+                    <p>Speaker 3: <b>Kevin Tuei</b></p>
+                    {/* <p><span className={styles.topic}>Topic:</span> </p>
                     <p>
                       1. Optimizing Service Desk Operations in ITSM
                       Implementation
@@ -102,21 +109,22 @@ const Schedule = () => {
                     <p>
                       2. ITSM Integration with DevOps and Agile: Enhancing
                       Service Deliver
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
               <div className={styles.speech4}>
-                <p className={styles.speechs}>Speaker Session</p>
+                <p className={styles.speechs}>Panel</p>
                 <div className={styles.encompass}>
-                  <img
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
-                    <p><span className={styles.topic}>Topic:</span></p>
+                    <p>Panel 1: Benefits of modern Infastructure: <br /> Host - <b>Adeola Lawal</b></p>
+                    <p>Panel 2: African innovation to solve Africa's Problems: <br /> Host - <b>Babade Adewole</b></p>
+                    {/* <p><span className={styles.topic}>Topic:</span></p>
                     <p>
                       1. Customization and Localization: Adapting Atlassian
                       Tools to African Business Context
@@ -125,11 +133,11 @@ const Schedule = () => {
                       2. Unleashing the Potential: Growing Atlassian's Presence
                       in the African Market
                     </p>
-                    <p>3. ITSM implementation in Africa - On point</p>
+                    <p>3. ITSM implementation in Africa - On point</p> */}
                   </div>
                 </div>
               </div>
-              <div className={styles.speech5}>
+              {/* <div className={styles.speech5}>
                 <p className={styles.speechs}>Speaker Session</p>
                 <div className={styles.encompass}>
                   <img
@@ -151,7 +159,7 @@ const Schedule = () => {
                     <p>3. ITSM implementation in Africa - On point</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className={styles.speech6}>
                 <p className="m-0">Closing remark</p>
               </div>
