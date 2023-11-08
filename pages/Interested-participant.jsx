@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import Layout from "components/layout";
 import Login from "components/Interested-cloudConnect/LogIn";
+import Table from "components/Interested-cloudConnect/table-show";
 
 const participant = () => {
   return (
@@ -21,6 +22,7 @@ const participant = () => {
           />
         </Head>
         <Login />
+        {/* <Table /> */}
       </Layout>
     </>
   );
