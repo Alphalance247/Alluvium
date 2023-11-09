@@ -2,8 +2,8 @@
   padding: 2rem;
   .form {
     background: #11202d;
-    width: 400px;
-    margin: auto;
+    width: 600px;
+    margin: 2rem auto;
     color: white;
     border-radius: 10px;
     padding: 2rem 1rem;
@@ -107,6 +107,11 @@
 @media screen and (max-width: 992px) {
   .container {
     padding: 1rem;
+
+    .form {
+      width: 500px;
+      margin: 3rem auto;
+    }
   }
 }
 
@@ -114,6 +119,7 @@
   .container {
     .form {
       width: 310px;
+      margin: 3rem 0;
     }
   }
 }
