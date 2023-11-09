@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useCallback, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import styles from "../../styles/eventpage.module.scss";
 
 import Layout from "components/layout";
@@ -10,7 +9,8 @@ import { currentEventName } from "config";
 import axios from "axios";
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import { Country } from 'country-state-city';
-
+import { getCountryByCode } from "country-phonenumber";
+import countries, { NG } from "country-flag-icons/react/3x2";
 
 const Register = () => {
   const [userData, setUserData] = useState({});
@@ -19,6 +19,9 @@ const Register = () => {
   const allCountries = Country.getAllCountries();
   const eventType = useMemo(() => currentEventName, []);
   const { addToast } = useToasts();
+  const [selectedIcon, setSelectedIcon] = useState({ icon: <NG title="Nigeira" className={styles.country_icon} />, code: "NG" });
+  const [phoneCode, setPhoneCode] = useState('');
+  const countryCodes = useMemo(() => Object.keys(countries), [countries]);
 
   const checkLockInPersonRegistrations = useCallback(async () => {
     setLoading(true);
@@ -31,15 +34,10 @@ const Register = () => {
         addToast("We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.", { appearance: 'info' });
         setLockInPersonRegistrations(true);
       };
-      // console.log(response.data);
-      // return;
     }).catch((err) => {
       setLoading(false);
-      // console.log(err);
       let errMessage = err?.response?.data?.message || 'I can only get online attendee form. Please try again or reach out for support if you want to attend physically.';
       addToast(errMessage, { appearance: 'error' });
-      // console.log(err?.response?.data);
-      // return;
     });
   }, [])
 
@@ -51,6 +49,17 @@ const Register = () => {
     setUserData(prev => ({ ...prev, [name]: value }));
   }, [setUserData]);
 
+  useEffect(() => {
+    setPhoneCode(getCountryByCode(selectedIcon.code)?.phone);
+  }, [selectedIcon]);
+
+  useEffect(() => {
+    if (Object.keys(userData).length < 1) {
+        setPhoneCode('');
+        setSelectedIcon({ icon: <NG title="Nigeira" className={styles.country_icon} />, code: "NG" });
+    }
+}, [userData]);
+
   const handleSubmit = useCallback(async (event) => {
     event.preventDefault();
     setLoading(true);
@@ -60,11 +69,11 @@ const Register = () => {
       addToast('Missing required fields!', { appearance: 'error' });
       return;
     }
-    // console.log(userData);
     const data = userData;
     if (lockInPersonRegistrations) {
       data.modeOfAttendance = "Online";
     }
+    data.phone = `(+${phoneCode}) ${data.phone}`;
     await axios
       .post("/api/event/follow-up", { ...data, eventType })
       .then((res) => {
@@ -85,11 +94,12 @@ const Register = () => {
         // console.log(err?.response?.data);
         return;
       });
-  }, [eventType, userData]);
+  }, [eventType, userData, phoneCode]);
 
   const handleReset = useCallback((event) => {
     setUserData({});
-  }, [setUserData]);
+    setSelectedIcon({ icon: <NG title="Nigeira" className={styles.country_icon} />, code: "NG" });
+  }, [setUserData, setSelectedIcon]);
 
   useEffect(() => {
     checkLockInPersonRegistrations();
@@ -122,11 +132,34 @@ const Register = () => {
         <div className={`row ${styles.form_row}`}>
           <div className="col-md-6">
             <label>Phone Number</label>
-            <input type="tel" className="form-control" value={userData?.phone || ''} name="phone" placeholder="Phone Number" onChange={handleChange} />
+            <div className="w-100 d-flex ms-0">
+              <div className="px-0">
+                <div className="dropdown">
+                  <button className={`btn btn-outline-secondary text-black dropdown-toggle rounded-0 rounded-start m-0 px-2 ${styles.btn_drop}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    {selectedIcon.icon} {` (+${phoneCode})`}
+                  </button>
+                  <ul className={`dropdown-menu ${styles.dropdown_menu}`} aria-labelledby="dropdownMenuButton1">
+                    {
+                      countryCodes.map((countryCode, index) => {
+                        let Comp = countries[countryCode];
+                        return (
+                          <li key={index} className="d-flex justify-content-center" aria-label={countryCode} title={countryCode} onClick={() => setSelectedIcon({ icon: <Comp title={countryCode} className={styles.country_icon} />, code: countryCode })} style={{ cursor: 'pointer', width: '100%' }}>
+                            <Comp key={countryCode} title={countryCode} className={styles.country_icon} /> {` ${countryCode}`}
+                          </li>
+                        )
+                      })
+                    }
+                  </ul>
+                </div>
+              </div>
+              <div className="px-0 flex-grow-1">
+                <input type="number" value={userData?.phone || ''} className="form-control rounded-0 rounded-end" id="phone" maxLength={10} name="phone" onChange={handleChange} />
+              </div>
+            </div>
           </div>
           <div className="col-md-6">
             <label>Country of Residence</label>
-            <select type="text" className="form-control" defaultValue="" name="country" onChange={handleChange}>
+            <select type="text" className="form-control" value={userData?.country || ''} name="country" onChange={handleChange}>
               <option value="" disabled>Country of Residence</option>
               {
                 allCountries.map(country => (<option key={country?.name} value={country?.name}>{country?.name}</option>))
@@ -173,7 +206,7 @@ const Register = () => {
 
       <button type="submit" className="btn btn-warning" disabled={loading}>Register</button>
       <button type="reset" className="btn btn-outline-danger ms-3" disabled={loading}>Clear</button>
-    </form>), [loading, userData, handleChange, handleReset, handleSubmit]);
+    </form>), [loading, userData, countryCodes, phoneCode, selectedIcon, lockInPersonRegistrations, allCountries, handleChange, handleReset, handleSubmit]);
 
   return (
     <>

@@ -12,10 +12,10 @@ const Speaker = () => {
     },
     {
       id: 2,
-      name: "Hon Seun Fakuode",
-      content: "Atlas Bench Head of Operations and Talent Solutions",
+      name: "Hon Seun Fakuade",
+      content: "Commissioner for Innovation, Science & Digital Economy in Ekiti State",
       src: "/cloudImg/2.png",
-      alt: "Hon Seun Fakuode",
+      alt: "Hon Seun Fakuade",
     },
     {
       id: 3,

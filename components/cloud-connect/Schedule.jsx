@@ -98,7 +98,7 @@ const Schedule = () => {
                     alt="Speaker"
                   /> */}
                   <div className={styles.inner}>
-                    <p>Speaker 1: <b>Hon. Seun Fakuode</b></p>
+                    <p>Speaker 1: <b>Hon. Seun Fakuade</b></p>
                     <p>Speaker 2: <b>Katakyie Kojo Desu</b></p>
                     <p>Speaker 3: <b>Kevin Tuei</b></p>
                     {/* <p><span className={styles.topic}>Topic:</span> </p>
