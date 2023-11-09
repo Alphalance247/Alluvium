@@ -103,3 +103,48 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 2rem;
+    .form {
+      width: 310px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 0.2rem;
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      font-size: 15px;
+    }
+    .table {
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+
+      th {
+        font-size: 7px;
+      }
+      td {
+        font-size: 7px;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 0.1rem;
+      }
+    }
+  }
+}
