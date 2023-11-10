@@ -1,6 +1,10 @@
 import styles from "../../styles/eventpage.module.scss";
+import Modal from "./Modal";
+import { useState } from "react";
 
 const Speaker = () => {
+  const [modal, setModal] = useState(false);
+  const [modaltoShow, setModaltoShow] = useState(null);
   const guestData = [
     {
       id: 1,
@@ -80,6 +84,15 @@ const Speaker = () => {
     },
   ];
 
+  const closeModal = () => {
+    setModal(false);
+  };
+
+  const showModal = () => {
+    setModal(true);
+    setModaltoShow(guestData);
+  };
+
   return (
     <>
       <div className={styles.visitorsPage}>
@@ -93,10 +106,19 @@ const Speaker = () => {
                   key={guest.id}
                   // style={{ background: `url(${guest.src}), linear-gradient(90deg, rgb(255,255,255) 0%, rgb(0,0,0,255) 100%)`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: `${!!guest?.align ? 'center -30px' : "top"}` }}
                 >
-                  <div className=""
-                  style={{ background: `url(${guest.src})`, backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: `${!!guest?.align ? 'center -30px' : "top"}`, height: '100%', width: '100%'}}
-                  >
-                  </div>
+                  <div
+                    className=""
+                    style={{
+                      background: `url(${guest.src})`,
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: `${
+                        !!guest?.align ? "center -30px" : "top"
+                      }`,
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  ></div>
                   <div className={styles.specific}>
                     <h3>{guest.name}</h3>
                     <p>{guest.content}</p>
@@ -107,7 +129,13 @@ const Speaker = () => {
           </div>
         </div>
       </div>
-      ;
+      {modal && (
+        <Modal
+          guestData={guestData}
+          onClose={closeModal}
+          modaltoShow={modaltoShow}
+        />
+      )}
     </>
   );
 };
