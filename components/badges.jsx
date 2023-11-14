@@ -6,6 +6,7 @@ export default function () {
             <div className="d-none d-md-block">
                 <div className={styles.badges_cover}>
                     <div className={styles.badges}>
+                        <Image src={"/assets/atlassian-badges/solution-partner.png"} loading="eager" priority width={400} height={138} alt={"Atlassian Solution Partner"} />
                         <Image src={"/assets/atlassian-badges/market-place-white.png"} loading="eager" priority width={400} height={138} alt={"Atlassian Platinum Market Place Partner"} />
                         {/* <Image src={"/assets/atlassian-badges/aws-cloud.png"} loading="eager" priority width={198} height={198} alt={"AWS Certified Cloud Practitioner"} /> */}
                         <Image src={"/assets/atlassian-badges/aws-partner.png"} loading="eager" priority width={198} height={198} alt={"AWS Partner"} />
@@ -21,6 +22,7 @@ export default function () {
             <div className="d-md-none">
                 <div className={styles.badges_cover}>
                     <div className={styles.badges}>
+                        <Image src={"/assets/atlassian-badges/solution-partner.png"} loading="eager" priority width={400/2} height={138/2} alt={"Atlassian Solution Partner"} />
                         <Image src={"/assets/atlassian-badges/market-place-white.png"} loading="eager" priority width={400/2} height={138/2} alt={"Atlassian Platinum Market Place Partner"} />
                         {/* <Image src={"/assets/atlassian-badges/aws-cloud.png"} loading="eager" priority width={198} height={198} alt={"AWS Certified Cloud Practitioner"} /> */}
                         <Image src={"/assets/atlassian-badges/aws-partner.png"} loading="eager" priority width={198/2} height={198/2} alt={"AWS Partner"} />

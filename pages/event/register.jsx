@@ -46,6 +46,10 @@ const Register = () => {
     if (name === 'canReceiveFurtherEmail') {
       value = value == 'true';
     }
+    if(name === 'phone' && value?.length > 10){
+      addToast("Maximum phone number legth is 10. Kindly exclude country code", { appearance: 'error' });
+      return;
+    }
     setUserData(prev => ({ ...prev, [name]: value }));
   }, [setUserData]);
 
@@ -153,7 +157,7 @@ const Register = () => {
                 </div>
               </div>
               <div className="px-0 flex-grow-1">
-                <input type="number" value={userData?.phone || ''} className="form-control rounded-0 rounded-end" id="phone" maxLength={10} name="phone" onChange={handleChange} />
+                <input type="number" value={userData?.phone || ''} className="form-control rounded-0 rounded-end" id="phone" name="phone" onChange={handleChange} />
               </div>
             </div>
           </div>
