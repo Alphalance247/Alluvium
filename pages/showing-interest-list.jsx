@@ -4,116 +4,98 @@ import styles from "../styles/onboardingList.module.scss";
 import Layout from "components/layout";
 import { productData } from "data";
 import { CSVLink } from "react-csv";
-import { useState, useRef, useEffect } from "react";
+import { useState, useMemo, useEffect } from "react";
 // import { connectToDatabase, saveToDB } from "lib/mongo";
 import axios from "axios";
+import { currentEventName } from "config";
+import Login from "components/Interested-cloudConnect/LogIn";
 
 const ShowingInterestLink = ({ products }) => {
   const [data, setData] = useState(null);
   const [usersInfo, setUsersInfo] = useState(null);
   const [usersInfoPrint, setUsersInfoPrint] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [access, setAccess] = useState(false);
+  const eventType = useMemo(() => currentEventName, []);
 
   const headers = [
-    { label: "Full Name", key: "fullname" },
-    { label: "First Name", key: "firstname" },
-    { label: "Last Name", key: "lastname" },
+    // { label: "Full Name", key: "fullname" },
+    { label: "First Name", key: "firstName" },
+    { label: "Last Name", key: "lastName" },
     { label: "Email", key: "email" },
-    { label: "Phone Number", key: "phoneNumber" },
-    { label: "Location", key: "location" },
-    { label: "Current Engagement", key: "currentEngagement" },
-    { label: "Applying For Trainee Program?", key: "traineeProgram" },
-    { label: "3 Years Availability?", key: "threeYearsAvailability" },
-    { label: "Expirience Level?", key: "experienceLevel" },
-    { label: "date", key: "createdAt" },
+    { label: "Phone Number", key: "phone" },
+    { label: "Country", key: "country" },
+    // { label: "Current Engagement", key: "currentEngagement" },
+    // { label: "Applying For Trainee Program?", key: "traineeProgram" },
+    { label: "Mode Of Attendance", key: "modeOfAttendance" },
+    { label: "Can Receive Further Email", key: "canReceiveFurtherEmail" },
+    // { label: "date", key: "createdAt" },
     // { label: 'Date', key: 'date' },
   ];
 
   useEffect(() => {
-    setData(null);
-    setUsersInfo(null);
-    setLoading(true);
-    axios
-      .get("/api/user")
-      .then((res) => {
-        // console.log(res);
-        setData(res.data);
-        setUsersInfo(res.data.users);
-        setLoading(false);
-      })
-      .catch((err) => {
-        // console.log(err);
-        setUsersInfo(null);
-        setData({ message: err.response.data.message, success: false });
-        setLoading(false);
-      });
-    const password = prompt("Enter Password");
-    if (password !== "alluviumhq123") {
-      alert("Wrong Password");
-      setAccess(false);
-      setLoading(false);
-      setData({
-        message: "Wrong Password, Kindly refresh your browser to try again",
-        success: false,
-      });
-    } else {
-      setAccess(true);
-      // let responseData = null;
-      // console.log(responseData);
-      // setUsersInfo(null);
+    if (access) {
+      setData(null);
+      setUsersInfo(null);
+      setLoading(true);
+      axios
+        .get(`/api/event/follow-up?eventType=${eventType}`)
+        .then((res) => {
+          // console.log(res);
+          setData(res.data);
+          setUsersInfo(res.data.users);
+          setLoading(false);
+        })
+        .catch((err) => {
+          // console.log(err);
+          setUsersInfo(null);
+          setData({ message: err.response.data.message, success: false });
+          setLoading(false);
+        });
     }
-  }, []);
+  }, [access]);
 
   useEffect(() => {
     if (usersInfo) {
       const tempData = usersInfo.map(
         ({
           email,
-          firstname,
-          fullname,
+          firstName,
           lastname,
-          phoneNumber,
-          location,
-          currentEngagement,
-          traineeProgram,
-          threeYearsAvailability,
-          experienceLevel,
-          createdAt,
+          phone,
+          country,
+          modeOfAttendance,
+          canReceiveFurtherEmail
         }) => ({
           email,
-          firstname,
-          fullname,
+          firstName,
           lastname,
-          phoneNumber,
-          location,
-          currentEngagement,
-          traineeProgram,
-          threeYearsAvailability,
-          experienceLevel,
-          createdAt,
+          phone,
+          country,
+          modeOfAttendance,
+          canReceiveFurtherEmail: canReceiveFurtherEmail ? 'Yes' : 'No'
         })
       );
       setUsersInfoPrint(tempData);
     }
   }, [usersInfo]);
 
-  const deleteUser = async (id) => {
-    await axios
-      .delete(`/api/user/${id}`)
-      .then((res) => {
-        // console.log(res);
-        setUsersInfo((prev) => prev.filter((user) => user._id !== id));
-        setData(res.data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        // console.log(err);
-        // setUsersInfo(null);
-        setData({ message: err.response.data.message, success: false });
-        setLoading(false);
-      });
-  };
+  // const deleteUser = async (id) => {
+  //   await axios
+  //     .delete(`/api/user/${id}`)
+  //     .then((res) => {
+  //       // console.log(res);
+  //       setUsersInfo((prev) => prev.filter((user) => user._id !== id));
+  //       setData(res.data);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       // console.log(err);
+  //       // setUsersInfo(null);
+  //       setData({ message: err.response.data.message, success: false });
+  //       setLoading(false);
+  //     });
+  // };
 
   return (
     <Layout>
@@ -146,20 +128,21 @@ const ShowingInterestLink = ({ products }) => {
               <h1>Showing Interest List</h1>
             </div>
           </div>
+          {
+            !access && <Login setAccess={setAccess} />
+          }
           {(data || loading) && (
             <div
-              className={`${styles.response} ${
-                data ? (data.success ? styles.success : styles.danger) : ""
-              }`}
+              className={`${styles.response} ${data ? (data.success ? styles.success : styles.danger) : ""
+                }`}
             >
               <div
-                className={`${styles.responseData} ${
-                  data
+                className={`${styles.responseData} ${data
                     ? data.success
                       ? styles.successBG
                       : styles.dangerBG
                     : ""
-                }`}
+                  }`}
               >
                 <h3>{loading ? "Loading..." : data.message}</h3>{" "}
                 <button onClick={() => setData(null)}>x</button>
@@ -202,40 +185,32 @@ const ShowingInterestLink = ({ products }) => {
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>FullName</th>
                       <th>FirstName</th>
                       <th>LastName</th>
                       <th>Phone</th>
                       <th>Email</th>
-                      <th>Location</th>
-                      <th>Current Engagement</th>
-                      <th>Applying For Trainee Program?</th>
-                      <th>3 Years Availability?</th>
-                      <th>Experience Level?</th>
-                      <th>date</th>
-                      <th></th>
+                      <th>Country</th>
+                      <th>Mode Of Attendance</th>
+                      <th>Can Receive Further Email</th>
+                      {/* <th></th> */}
                     </tr>
                   </thead>
                   <tbody>
                     {usersInfo.map((user, index) => (
                       <tr key={index}>
                         <td>{index + 1}</td>
-                        <td>{user.fullname}</td>
-                        <td>{user.firstname}</td>
-                        <td>{user.lastname}</td>
-                        <td>{user.phoneNumber}</td>
+                        <td>{user.firstName}</td>
+                        <td>{user.lastName}</td>
+                        <td>{user.phone}</td>
                         <td>{user.email}</td>
-                        <td>{user.location}</td>
-                        <td>{user.currentEngagement}</td>
-                        <td>{user.traineeProgram}</td>
-                        <td>{user.threeYearsAvailability}</td>
-                        <td>{user.experienceLevel}</td>
-                        <td>{user.createdAt}</td>
-                        <td>
+                        <td>{user.country}</td>
+                        <td>{user.modeOfAttendance}</td>
+                        <td>{user.canReceiveFurtherEmail}</td>
+                        {/* <td>
                           <button onClick={() => deleteUser(user._id)}>
                             Delete
                           </button>
-                        </td>
+                        </td> */}
                       </tr>
                     ))}
                   </tbody>

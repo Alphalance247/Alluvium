@@ -13,3 +13,4 @@ export const mailTo = process.env.MAIL_TO;
 export const nodemailerTransportHost = process.env.NODEMAILER_TRANSPORT_HOST;
 export const lockEventsFollowUpForm = process.env.NEXT_PUBLIC_LOCK_EVENTS_FOLLOW_UP_FORM == 'true';
 export const currentEventName = process.env.NEXT_PUBLIC_CURRENT_EVENT_NAME;
+export const password = process.env.NEXT_PUBLIC_PASSWORD;

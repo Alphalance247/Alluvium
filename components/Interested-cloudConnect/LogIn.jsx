@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styles from "../../styles/participant.module.scss";
 import { FaEyeSlash } from "react-icons/fa";
 import Table from "./table-show";
+import { password } from "config";
 
-const Login = () => {
+const Login = ({setAccess}) => {
   const [form, setForm] = useState({ username: "", password: "" });
   const [submit, setSubmit] = useState(true);
   const [passwordError, setpasswordError] = useState(false);
@@ -21,8 +22,8 @@ const Login = () => {
     e.preventDefault();
 
     if (
-      form.username === "abdulazeez@alluvium.net" &&
-      form.password === "12345"
+      // form.username === "abdulazeez@alluvium.net" &&
+      form.password === password
     ) {
       setForm({
         username: "",
@@ -30,6 +31,7 @@ const Login = () => {
       });
       setpasswordError(false);
       setSubmit(false);
+      setAccess(true);
     } else {
       console.log("please input correct password or userbame");
       setpasswordError(true);
@@ -47,12 +49,11 @@ const Login = () => {
     //   setpasswordError(false);
     // }
 
-    console.log(form);
+    // console.log(form);
   };
 
   return (
     <div className={styles.container}>
-      {submit ? (
         <form action="" className={styles.form} onSubmit={handleSubmit}>
           <h2>Welcome</h2>
           <p>log in by entering the information below</p>
@@ -96,16 +97,11 @@ const Login = () => {
 
           <input className={styles.submit} type="submit" />
 
-          <div className={styles.account}>
+          {/* <div className={styles.account}>
             Don't have an account
             <a href="#">SIGN UP</a>
-          </div>
+          </div> */}
         </form>
-      ) : (
-        <>
-          <Table />
-        </>
-      )}
     </div>
   );
 };
