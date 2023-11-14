@@ -39,7 +39,7 @@ const Speaker = () => {
     {
       id: 5,
       name: "Naj Irshrad",
-      content: "CEO at Stack Intelligence",
+      content: "Vice President of Federal Sales at ISOS",
       src: "/cloudImg/5.png",
       alt: "Naj Irshrad",
     },
