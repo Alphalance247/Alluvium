@@ -51,7 +51,14 @@ const Schedule = () => {
             </div>
 
             <div className={styles.speech_cover}>
-              <p className={styles.speech}>Welcome Address</p>
+              <div className={styles.speech}>
+              <p className={styles.speechs}>Welcome / Keynote</p>
+              <div className={styles.encompass}>
+                  <div className={styles.inner}>
+                    <p><b>Taiwo Ojo</b></p>
+                  </div>
+                </div>
+              </div>
              
               {/* <p className={styles.speech0}>Migration Run through</p> */}
               <div className={styles.speech1}>
@@ -137,31 +144,14 @@ const Schedule = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className={styles.speech5}>
-                <p className={styles.speechs}>Speaker Session</p>
+              <div className={styles.speech6}>
+                <p className={styles.speechs}>Closing remark</p>
                 <div className={styles.encompass}>
-                  <img
-                    src="/cloudImg/speakerImage.jpg"
-                    className={styles.img}
-                    alt="Speaker"
-                  />
                   <div className={styles.inner}>
-                    <p>Nick: Abdul Azeez</p>
-                    <p><span className={styles.topic}>Topic:</span></p>
-                    <p>
-                      1.Customization and Localization: Adapting Atlassian Tools
-                      to African Business Context
-                    </p>
-                    <p>
-                      2. Unleashing the Potential: Growing Atlassian's Presence
-                      in the African Market
-                    </p>
-                    <p>3. ITSM implementation in Africa - On point</p>
+                    <b>Wale Olojo</b>
+                    {/* <p>Speaker: <b>Wale Olojo</b></p> */}
                   </div>
                 </div>
-              </div> */}
-              <div className={styles.speech6}>
-                <p className="m-0">Closing remark</p>
               </div>
             </div>
           </div>
