@@ -33,9 +33,15 @@ const EventHero = ({ showCountdown = true }) => {
                     <br />
                     opportunities
                   </p>
+                  <div className="d-flex flex-wrap">
                   <Link href="/event/register">
-                    <a className="btn btn-warning mt-4">REGISTER</a>
+                    <a className="btn btn-warning mt-4 me-3">REGISTER</a>
                   </Link>
+                  { !showCountdown &&
+                    <Link href="/event/cloud-connect">
+                    <a className="btn btn-warning mt-4">READ MORE</a>
+                  </Link>}
+                  </div>
                 </div>
               </div>
             </div>
@@ -54,7 +60,7 @@ const EventHero = ({ showCountdown = true }) => {
         </section>
       </div>
 
-      {showCountdown && <div className={`container-fluid ${styles.countdownCard}`}>
+      {showCountdown && <div className={`container-fluid pb-4 ${styles.countdownCard}`}>
         <div className="container mx-auto">
           <div className="row">
             <div className="col-md-3"></div>

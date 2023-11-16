@@ -11,6 +11,7 @@ import { ToastProvider, useToasts } from 'react-toast-notifications';
 import { Country } from 'country-state-city';
 import { getCountryByCode } from "country-phonenumber";
 import countries, { NG } from "country-flag-icons/react/3x2";
+import { useRouter } from "next/router";
 
 const Register = () => {
   const [userData, setUserData] = useState({});
@@ -22,6 +23,9 @@ const Register = () => {
   const [selectedIcon, setSelectedIcon] = useState({ icon: <NG title="Nigeira" className={styles.country_icon} />, code: "NG" });
   const [phoneCode, setPhoneCode] = useState('');
   const countryCodes = useMemo(() => Object.keys(countries), [countries]);
+  const [showOther, setShowOther] = useState(false);
+  const attendeeTypes = useMemo(() => ["IT Professional", "Remote Workers", "Business / NBA Leader", "Other"], []);
+  const rounter = useRouter();
 
   const checkLockInPersonRegistrations = useCallback(async () => {
     setLoading(true);
@@ -46,12 +50,21 @@ const Register = () => {
     if (name === 'canReceiveFurtherEmail') {
       value = value == 'true';
     }
-    if(name === 'phone' && value?.length > 10){
+    if (name === 'phone' && value?.length > 10) {
       addToast("Maximum phone number legth is 10. Kindly exclude country code", { appearance: 'error' });
       return;
     }
+    if(name === 'attendeeType'){
+      if(value == 'Other'){
+        setShowOther(true);
+      } else {
+        setShowOther(false);
+        setUserData(prev => ({ ...prev, altAttendeeType: '' }))
+      }
+
+    }
     setUserData(prev => ({ ...prev, [name]: value }));
-  }, [setUserData]);
+  }, [setUserData, setShowOther]);
 
   useEffect(() => {
     setPhoneCode(getCountryByCode(selectedIcon.code)?.phone);
@@ -59,10 +72,10 @@ const Register = () => {
 
   useEffect(() => {
     if (Object.keys(userData).length < 1) {
-        setPhoneCode('');
-        setSelectedIcon({ icon: <NG title="Nigeira" className={styles.country_icon} />, code: "NG" });
+      setPhoneCode('');
+      setSelectedIcon({ icon: <NG title="Nigeira" className={styles.country_icon} />, code: "NG" });
     }
-}, [userData]);
+  }, [userData]);
 
   const handleSubmit = useCallback(async (event) => {
     event.preventDefault();
@@ -86,8 +99,9 @@ const Register = () => {
           addToast('Unable to process data, kindly reach out to our agent.', { appearance: 'error' });
         } else {
           addToast(`${res?.data?.message} Your registration has been well received, see you at the event.`, { appearance: 'success', autoDismiss: true });
-          checkLockInPersonRegistrations();
+          // checkLockInPersonRegistrations();
           handleReset();
+          rounter.push("/event/cloud-connect");
         }
         return;
       })
@@ -196,6 +210,24 @@ const Register = () => {
           )
         }
         <div className={styles.form_row}>
+          <label>Which attendee type best describes you?</label>
+          <div className={styles.form_check}>
+          <select type="text" className="form-control" value={userData?.attendeeType || ''} name="attendeeType" onChange={handleChange}>
+              {/* <option value="" disabled>Country of Residence</option> */}
+              {
+                attendeeTypes.map(attendee => (<option key={attendee} value={attendee}>{attendee}</option>))
+              }
+            </select>
+          {showOther && <input type="text" className="form-control mt-3" value={userData?.altAttendeeType || ''} name="altAttendeeType" placeholder="Others" required onChange={handleChange} />}
+          </div>
+        </div>
+        <div className={styles.form_row}>
+          <label>Tell us about yourself</label>
+          <div className={styles.form_check}>
+            <textarea className="form-control" value={userData?.description || ''} name="description" required onChange={handleChange} rows="7"></textarea>
+          </div>
+        </div>
+        <div className={styles.form_row}>
           <label>I agree to receive email updates from Alluvium about future events, news, and announcements</label>
           <div className={styles.form_check}>
             <input type="radio" className="form-check-input" id="agreeYes" checked={userData?.canReceiveFurtherEmail === true} name="canReceiveFurtherEmail" required onChange={handleChange} value={true} />
@@ -210,7 +242,7 @@ const Register = () => {
 
       <button type="submit" className="btn btn-warning" disabled={loading}>Register</button>
       <button type="reset" className="btn btn-outline-danger ms-3" disabled={loading}>Clear</button>
-    </form>), [loading, userData, countryCodes, phoneCode, selectedIcon, lockInPersonRegistrations, allCountries, handleChange, handleReset, handleSubmit]);
+    </form>), [loading, userData, countryCodes, phoneCode, selectedIcon, lockInPersonRegistrations, allCountries, showOther, attendeeTypes, handleChange, handleReset, handleSubmit]);
 
   return (
     <>
