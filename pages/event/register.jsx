@@ -34,7 +34,7 @@ const Register = () => {
       const { success, users } = response?.data;
       if (!success) setLockInPersonRegistrations(false);
       const inPersonUsersLength = users?.filter((user) => user?.modeOfAttendance === "In-Person")?.length;
-      if (inPersonUsersLength >= 55) {
+      if (inPersonUsersLength >= 90) {
         addToast("We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.", { appearance: 'info' });
         setLockInPersonRegistrations(true);
       };
