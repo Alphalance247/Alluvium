@@ -62,7 +62,7 @@ const ShowingInterestLink = ({ products }) => {
         ({
           email,
           firstName,
-          lastname,
+          lastName,
           phone,
           country,
           modeOfAttendance,
@@ -73,7 +73,7 @@ const ShowingInterestLink = ({ products }) => {
         }) => ({
           email,
           firstName,
-          lastname,
+          lastName,
           phone,
           country,
           modeOfAttendance,
