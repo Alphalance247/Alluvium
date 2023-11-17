@@ -25,8 +25,9 @@ const ShowingInterestLink = ({ products }) => {
     { label: "Email", key: "email" },
     { label: "Phone Number", key: "phone" },
     { label: "Country", key: "country" },
-    // { label: "Current Engagement", key: "currentEngagement" },
-    // { label: "Applying For Trainee Program?", key: "traineeProgram" },
+    { label: "Attendee Type", key: "attendeeType" },
+    { label: "Attendee Type (Other)", key: "altAttendeeType" },
+    { label: "Description", key: "description" },
     { label: "Mode Of Attendance", key: "modeOfAttendance" },
     { label: "Can Receive Further Email", key: "canReceiveFurtherEmail" },
     // { label: "date", key: "createdAt" },
@@ -65,6 +66,9 @@ const ShowingInterestLink = ({ products }) => {
           phone,
           country,
           modeOfAttendance,
+          attendeeType,
+          altAttendeeType,
+          description,
           canReceiveFurtherEmail
         }) => ({
           email,
@@ -73,6 +77,9 @@ const ShowingInterestLink = ({ products }) => {
           phone,
           country,
           modeOfAttendance,
+          attendeeType,
+          altAttendeeType,
+          description,
           canReceiveFurtherEmail: canReceiveFurtherEmail ? 'Yes' : 'No'
         })
       );
@@ -191,6 +198,9 @@ const ShowingInterestLink = ({ products }) => {
                       <th>Email</th>
                       <th>Country</th>
                       <th>Mode Of Attendance</th>
+                      <th>Attendee Type</th>
+                      <th>Attendee Type (Other)</th>
+                      <th>Description</th>
                       <th>Can Receive Further Email</th>
                       {/* <th></th> */}
                     </tr>
@@ -205,6 +215,9 @@ const ShowingInterestLink = ({ products }) => {
                         <td>{user.email}</td>
                         <td>{user.country}</td>
                         <td>{user.modeOfAttendance}</td>
+                        <td>{user.attendeeType}</td>
+                        <td>{user.altAttendeeType}</td>
+                        <td>{user.description}</td>
                         <td>{user.canReceiveFurtherEmail}</td>
                         {/* <td>
                           <button onClick={() => deleteUser(user._id)}>
