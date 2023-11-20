@@ -31,10 +31,9 @@ const Register = () => {
     setLoading(true);
     await axios.get(`/api/event/follow-up?eventType=${eventType}&modeOfAttendance=In-Person`).then((response) => {
       setLoading(false);
-      const { success, users } = response?.data;
+      const { success, usersLength } = response?.data;
       if (!success) setLockInPersonRegistrations(false);
-      const inPersonUsersLength = users?.filter((user) => user?.modeOfAttendance === "In-Person")?.length;
-      if (inPersonUsersLength >= 90) {
+      if (usersLength >= 90) {
         addToast("We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.", { appearance: 'info' });
         setLockInPersonRegistrations(true);
       };
