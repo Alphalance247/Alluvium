@@ -12,6 +12,37 @@ const Schedule = () => {
               Cloud Connect brings together Atlassian Partners, customers, and industry experts to explore the latest developments in the Atlassian ecosystem, with a primary focus on cloud solutions and their significance in shaping the future of collaboration and productivity.
               The event also shows  how Atlassian products can help in Africa’s Journey to the cloud.
             </div>
+            <h3 className="mt-4">Hosts</h3>
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="text-center">
+                  <img
+                src="/cloudImg/ogawale.png"
+                alt="Image 2"
+                width={"172px"}
+                height={"172px"}
+              />
+                    <h6 className="mt-3">Wale Olojo</h6>
+                    <p>Lead, Agile Practice</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="text-center">
+                  <img
+                src="/cloudImg/jaytee.png"
+                alt="Image 2"
+                width={"172px"}
+                height={"172px"}
+              />
+                    <h6 className="mt-3">Taiwo Ojo</h6>
+                    <p>Lead, Atlassian Practice</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <div className={styles.progamEvent}>
