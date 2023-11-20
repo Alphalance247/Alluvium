@@ -1,6 +1,7 @@
 import { connectToDatabase } from '../../../../lib/mongo';
 import FollowUp from 'models/followUp.model';
 import mongoose from 'mongoose';
+import { password } from 'config';
 
 const handler = async (req, res) => {
     if (req.method === 'POST') {
@@ -17,14 +18,17 @@ const handler = async (req, res) => {
     })
     } else if (req.method === 'GET') {
         // console.log(mongoose.connection.collections);
+        const {eventType, modeOfAttendance} = req.query;
+        console.log(modeOfAttendance);
         await FollowUp.find({
-            eventType: req.query.eventType
+            eventType, modeOfAttendance
         }).sort({ createdAt: 'desc' })
             .then(users => {
+                const usersLength = users.length;
                 return res.status(200).json({
                     message: `Users records fetched successfully`,
                     success: true,
-                    users
+                    usersLength
                 })
             })
             .catch(err => {
