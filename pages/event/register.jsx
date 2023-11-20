@@ -29,12 +29,11 @@ const Register = () => {
 
   const checkLockInPersonRegistrations = useCallback(async () => {
     setLoading(true);
-    await axios.get(`/api/event/follow-up?eventType=${eventType}`).then((response) => {
+    await axios.get(`/api/event/follow-up?eventType=${eventType}&modeOfAttendance=In-Person`).then((response) => {
       setLoading(false);
-      const { success, users } = response?.data;
+      const { success, usersLength } = response?.data;
       if (!success) setLockInPersonRegistrations(false);
-      const inPersonUsersLength = users?.filter((user) => user?.modeOfAttendance === "In-Person")?.length;
-      if (inPersonUsersLength >= 90) {
+      if (usersLength >= 90) {
         addToast("We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.", { appearance: 'info' });
         setLockInPersonRegistrations(true);
       };
@@ -265,7 +264,10 @@ const Register = () => {
 
           <div className={`container mt-4 ${styles.registraion}`}>
             <Link href="/event/cloud-connect">
+              <div className="d-flex align-items-center">
               <img src="/assets/back-arrow.png" alt="back to previous page" style={{ cursor: 'pointer' }} className="img-fluid" />
+              <span className="ms-2">Back</span>
+              </div>
             </Link>
 
             <hr />
