@@ -19,40 +19,36 @@ const handler = async (req, res) => {
         })
     }
     if (req.method === 'POST') {
+        let message, status = 400;
+        let success = false;
         const followUpUserData = new FollowUp({ ...req.body });
         console.log(followUpUserData);
         await followUpUserData.save().then(user => {
-            return res.status(201).json({
-                message: `Thank you ${user.firstName}!`,
-                success: true
-            })
+            message = `Thank you ${user.firstName}!`;
+            success = true;
+            status = 200;
         }).catch(err => {
             console.log(err);
-            return res.status(400).json({ message: err.message, success: false })
+            message = err.message;
+            success = false;
+            status = 400;
+        })
+        return res.status(status).json({
+            message,
+            success
         })
     } else if (req.method === 'GET') {
-        // console.log(mongoose.connection.collections);
         const { eventType, modeOfAttendance } = req.query;
-        await FollowUp.find({
-            eventType, modeOfAttendance
-        }).sort({ createdAt: 'desc' })
-            .then(users => {
-                const usersLength = users.length;
-                return res.status(200).json({
-                    message: `Users records fetched successfully`,
-                    success: true,
-                    usersLength
-                })
-            })
-            .catch(err => {
-                console.log(err);
-                return res.status(500).json({
-                    message: `Error: Users fetch unsuccessful. ${err.message}`,
-                    success: false,
-                    users: null
-                })
-            })
-
+        try{
+            const resp = await getUsersCount(eventType, modeOfAttendance);
+            if (resp !== undefined) {
+                const { status, ...rest } = resp;
+                return res.status(status).json(rest);
+            }
+        } catch(err){
+            console.log("err: ", err);
+            return res.status(500).json({success: false, message: err.message});
+        };
     }
     else {
         res.status(422).send({ message: 'req_method_not_supported', success: false });
@@ -60,3 +56,48 @@ const handler = async (req, res) => {
 }
 
 export default connectToDatabase(handler);
+
+export const getUsersCount = (eventType, modeOfAttendance) => {
+    return FollowUp.find({
+        eventType, modeOfAttendance
+    }).then(users => {
+        const usersLength = users.length;
+        return ({
+            message: `Users records fetched successfully`,
+            success: true,
+            usersLength,
+            status: 200
+        })
+    }).catch(err => {
+            console.log(err);
+            return ({
+                message: `Error: Users fetch unsuccessful. ${err.message}`,
+                success: false,
+                usersLength: null,
+                status: 500
+            })
+        })
+};
+
+export const extractUsers = (eventType) => {
+    return FollowUp.find({
+        eventType
+    }).sort({ createdAt: 'desc' })
+        .then(users => {
+            return ({
+                status: 200,
+                message: `Users records fetched successfully`,
+                success: true,
+                users
+            })
+        })
+        .catch(err => {
+            console.log(err);
+            return ({
+                status: 500,
+                message: `Error: Users fetch unsuccessful. ${err.message}`,
+                success: false,
+                users: null
+            })
+        })
+};

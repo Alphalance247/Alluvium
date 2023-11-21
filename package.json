@@ -19,6 +19,7 @@
     "country-flag-icons": "^1.5.7",
     "country-phonenumber": "^0.2.1",
     "country-state-city": "^3.1.4",
+    "crypto-js": "^4.2.0",
     "dotenv": "^10.0.0",
     "moment": "^2.29.4",
     "mongoose": "^6.10.5",
