@@ -2,21 +2,25 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/onboardingList.module.scss";
 import Layout from "components/layout";
-import { productData } from "data";
+// import { productData } from "data";
 import { CSVLink } from "react-csv";
 import { useState, useMemo, useEffect } from "react";
 // import { connectToDatabase, saveToDB } from "lib/mongo";
-import axios from "axios";
+// import axios from "axios";
 import { currentEventName } from "config";
 import Login from "components/Interested-cloudConnect/LogIn";
+import { extractUsers } from "./api/event/follow-up";
 
-const ShowingInterestLink = ({ products }) => {
-  const [data, setData] = useState(null);
-  const [usersInfo, setUsersInfo] = useState(null);
-  const [usersInfoPrint, setUsersInfoPrint] = useState(null);
+const ShowingInterestLink = ({ users, message, success }) => {
+  const [usersInfoPrint, setUsersInfoPrint] = useState([]);
+  const usersData = useMemo(()=>{ 
+    if(users != null){
+       return JSON.parse(users)
+    } 
+    return [];
+  }, [users])
   const [loading, setLoading] = useState(false);
   const [access, setAccess] = useState(false);
-  const eventType = useMemo(() => currentEventName, []);
 
   const headers = [
     // { label: "Full Name", key: "fullname" },
@@ -35,30 +39,8 @@ const ShowingInterestLink = ({ products }) => {
   ];
 
   useEffect(() => {
-    if (access) {
-      setData(null);
-      setUsersInfo(null);
-      setLoading(true);
-      axios
-        .get(`/api/event/follow-up?eventType=${eventType}`)
-        .then((res) => {
-          // console.log(res);
-          setData(res.data);
-          setUsersInfo(res.data.users);
-          setLoading(false);
-        })
-        .catch((err) => {
-          // console.log(err);
-          setUsersInfo(null);
-          setData({ message: err.response.data.message, success: false });
-          setLoading(false);
-        });
-    }
-  }, [access]);
-
-  useEffect(() => {
-    if (usersInfo) {
-      const tempData = usersInfo.map(
+    if (usersData) {
+      const tempData = usersData.map(
         ({
           email,
           firstName,
@@ -85,7 +67,7 @@ const ShowingInterestLink = ({ products }) => {
       );
       setUsersInfoPrint(tempData);
     }
-  }, [usersInfo]);
+  }, [usersData]);
 
   // const deleteUser = async (id) => {
   //   await axios
@@ -138,28 +120,22 @@ const ShowingInterestLink = ({ products }) => {
           {
             !access && <Login setAccess={setAccess} />
           }
-          {(data || loading) && (
+          {(loading) && (
             <div
-              className={`${styles.response} ${data ? (data.success ? styles.success : styles.danger) : ""
-                }`}
+              className={`${styles.response}`}
             >
               <div
-                className={`${styles.responseData} ${data
-                    ? data.success
-                      ? styles.successBG
-                      : styles.dangerBG
-                    : ""
-                  }`}
+                className={`${styles.responseData}`}
               >
-                <h3>{loading ? "Loading..." : data.message}</h3>{" "}
-                <button onClick={() => setData(null)}>x</button>
+                <h3>{loading ? "Loading..." : message}</h3>{" "}
+                {/* <button onClick={() => setData(null)}>x</button> */}
               </div>
             </div>
           )}
 
-          {access && usersInfo && (
+          {access && usersData && (
             <>
-              {usersInfoPrint && (
+              {usersData && (
                 <div
                   className="container"
                   style={{ width: "80%", margin: "10px auto" }}
@@ -170,7 +146,6 @@ const ShowingInterestLink = ({ products }) => {
                       headers={headers}
                       filename="Showing-Interest.csv"
                     >
-                      {/* Download Data */}
                       <button
                         className="btn btn-primary text-decoration-none"
                         style={{
@@ -206,7 +181,7 @@ const ShowingInterestLink = ({ products }) => {
                     </tr>
                   </thead>
                   <tbody>
-                    {usersInfo.map((user, index) => (
+                    {usersData.map((user, index) => (
                       <tr key={index}>
                         <td>{index + 1}</td>
                         <td>{user.firstName}</td>
@@ -239,11 +214,22 @@ const ShowingInterestLink = ({ products }) => {
 
 export default ShowingInterestLink;
 
-export const getStaticProps = async () => {
-  return {
-    props: {
-      products: productData,
-      //   responseData
-    },
-  };
-};
+export async function getServerSideProps() {
+  // Fetch data from external API
+  let users = null, message = null, success = false;
+  await extractUsers(currentEventName).then((response) => {
+    if (response !== undefined) {
+      users = JSON.stringify(response?.users);
+      message = response?.message;
+      success = response?.success;
+    }
+  }).catch((err) => {
+    console.log(err);
+    message = err?.response?.data?.message || err.message;
+    success = false;
+    users = null;
+  });
+
+  // Pass data to the page via props
+  return { props: { users, message, success } }
+}

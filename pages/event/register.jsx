@@ -12,11 +12,11 @@ import { Country } from 'country-state-city';
 import { getCountryByCode } from "country-phonenumber";
 import countries, { NG } from "country-flag-icons/react/3x2";
 import { useRouter } from "next/router";
+import { getUsersCount } from "pages/api/event/follow-up";
 
-const Register = () => {
+const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
   const [userData, setUserData] = useState({});
   const [loading, setLoading] = useState(false);
-  const [lockInPersonRegistrations, setLockInPersonRegistrations] = useState(false);
   const allCountries = Country.getAllCountries();
   const eventType = useMemo(() => currentEventName, []);
   const { addToast } = useToasts();
@@ -27,34 +27,28 @@ const Register = () => {
   const attendeeTypes = useMemo(() => ["IT Professional", "Remote Workers", "Business / NBA Leader", "Other"], []);
   const rounter = useRouter();
 
-  const checkLockInPersonRegistrations = useCallback(async () => {
-    setLoading(true);
-    await axios.get(`/api/event/follow-up?eventType=${eventType}&modeOfAttendance=In-Person`).then((response) => {
-      setLoading(false);
-      const { success, usersLength } = response?.data;
-      if (!success) setLockInPersonRegistrations(false);
-      if (usersLength >= 90) {
-        addToast("We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.", { appearance: 'info' });
-        setLockInPersonRegistrations(true);
-      };
-    }).catch((err) => {
-      setLoading(false);
-      let errMessage = err?.response?.data?.message || 'I can only get online attendee form. Please try again or reach out for support if you want to attend physically.';
-      addToast(errMessage, { appearance: 'error' });
-    });
-  }, [])
+  useEffect(() => {
+    if (message !== null) {
+      addToast(message, { appearance: messageStatus });
+    }
+  }, [message, messageStatus])
 
   const handleChange = useCallback((event) => {
     let { name, value } = event.target;
     if (name === 'canReceiveFurtherEmail') {
       value = value == 'true';
     }
-    if (name === 'phone' && value?.length > 10) {
-      addToast("Maximum phone number legth is 10. Kindly exclude country code", { appearance: 'error' });
-      return;
+    if (name === 'phone') {
+      if (value?.length > 10) {
+        addToast("Maximum phone number legth is 10. Kindly exclude country code", { appearance: 'error' });
+        return;
+      }
+      if (parseInt(value) < 0){
+        return;
+      }
     }
-    if(name === 'attendeeType'){
-      if(value == 'Other'){
+    if (name === 'attendeeType') {
+      if (value == 'Other') {
         setShowOther(true);
       } else {
         setShowOther(false);
@@ -80,16 +74,19 @@ const Register = () => {
     event.preventDefault();
     setLoading(true);
     const { firstName, lastName, email } = userData;
+
     if (!firstName || !lastName || !email) {
       setLoading(false);
       addToast('Missing required fields!', { appearance: 'error' });
       return;
     }
+
     const data = userData;
     if (lockInPersonRegistrations) {
       data.modeOfAttendance = "Online";
     }
     data.phone = `(+${phoneCode}) ${data.phone}`;
+
     await axios
       .post("/api/event/follow-up", { ...data, eventType })
       .then((res) => {
@@ -98,7 +95,6 @@ const Register = () => {
           addToast('Unable to process data, kindly reach out to our agent.', { appearance: 'error' });
         } else {
           addToast(`${res?.data?.message} Your registration has been well received, see you at the event.`, { appearance: 'success', autoDismiss: true });
-          // checkLockInPersonRegistrations();
           handleReset();
           rounter.push("/event/cloud-connect");
         }
@@ -108,7 +104,6 @@ const Register = () => {
         setLoading(false);
         let errMessage = err?.response?.data?.message || 'Oops something went wrong. Please try again.';
         addToast(errMessage, { appearance: 'error' });
-        // console.log(err?.response?.data);
         return;
       });
   }, [eventType, userData, phoneCode]);
@@ -117,10 +112,6 @@ const Register = () => {
     setUserData({});
     setSelectedIcon({ icon: <NG title="Nigeira" className={styles.country_icon} />, code: "NG" });
   }, [setUserData, setSelectedIcon]);
-
-  useEffect(() => {
-    checkLockInPersonRegistrations();
-  }, [checkLockInPersonRegistrations]);
 
   const formView = useMemo(() => loading ?
     <LoadingScreen message={"Loading..."} />
@@ -170,7 +161,7 @@ const Register = () => {
                 </div>
               </div>
               <div className="px-0 flex-grow-1">
-                <input type="number" value={userData?.phone || ''} className="form-control rounded-0 rounded-end" id="phone" name="phone" onChange={handleChange} />
+                <input type="number" value={userData?.phone || ''} className="form-control rounded-0 rounded-end" id="phone" name="phone" onChange={handleChange} required />
               </div>
             </div>
           </div>
@@ -211,13 +202,13 @@ const Register = () => {
         <div className={styles.form_row}>
           <label>Which attendee type best describes you?</label>
           <div className={styles.form_check}>
-          <select type="text" className="form-control" value={userData?.attendeeType || ''} name="attendeeType" onChange={handleChange}>
+            <select type="text" className="form-control" value={userData?.attendeeType || ''} name="attendeeType" onChange={handleChange}>
               {/* <option value="" disabled>Country of Residence</option> */}
               {
                 attendeeTypes.map(attendee => (<option key={attendee} value={attendee}>{attendee}</option>))
               }
             </select>
-          {showOther && <input type="text" className="form-control mt-3" value={userData?.altAttendeeType || ''} name="altAttendeeType" placeholder="Others" required onChange={handleChange} />}
+            {showOther && <input type="text" className="form-control mt-3" value={userData?.altAttendeeType || ''} name="altAttendeeType" placeholder="Others" required onChange={handleChange} />}
           </div>
         </div>
         <div className={styles.form_row}>
@@ -265,8 +256,8 @@ const Register = () => {
           <div className={`container mt-4 ${styles.registraion}`}>
             <Link href="/event/cloud-connect">
               <div className="d-flex align-items-center">
-              <img src="/assets/back-arrow.png" alt="back to previous page" style={{ cursor: 'pointer' }} className="img-fluid" />
-              <span className="ms-2">Back</span>
+                <img src="/assets/back-arrow.png" alt="back to previous page" style={{ cursor: 'pointer' }} className="img-fluid" />
+                <span className="ms-2">Back</span>
               </div>
             </Link>
 
@@ -295,3 +286,30 @@ const Register = () => {
 };
 
 export default Register;
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  let lockInPersonRegistrations = true, message = null, messageStatus = 'info';
+  await getUsersCount(currentEventName, 'In-Person').then((response) => {
+    if (response !== undefined) {
+      const {
+        success,
+        usersLength
+      } = response;
+      if (!success) lockInPersonRegistrations = true;
+      if (usersLength != null && usersLength >= 90) {
+        message = "We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.";
+        lockInPersonRegistrations = true;
+      } else {
+        lockInPersonRegistrations = false;
+      }
+    }
+  }).catch((err) => {
+    console.log(err);
+    message = err?.response?.data?.message || 'I can only get online attendee form. Please refresh the page or reach out for support if you want to attend physically.';
+  });
+
+
+  // Pass data to the page via props
+  return { props: { lockInPersonRegistrations, message, messageStatus } }
+}
