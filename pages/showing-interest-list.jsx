@@ -13,10 +13,10 @@ import { extractUsers } from "./api/event/follow-up";
 
 const ShowingInterestLink = ({ users, message, success }) => {
   const [usersInfoPrint, setUsersInfoPrint] = useState([]);
-  const usersData = useMemo(()=>{ 
-    if(users != null){
-       return JSON.parse(users)
-    } 
+  const usersData = useMemo(() => {
+    if (users != null) {
+      return JSON.parse(users)
+    }
     return [];
   }, [users])
   const [loading, setLoading] = useState(false);
@@ -215,20 +215,32 @@ const ShowingInterestLink = ({ users, message, success }) => {
 export default ShowingInterestLink;
 
 export async function getServerSideProps() {
-  // Fetch data from external API
   let users = null, message = null, success = false;
-  await extractUsers(currentEventName).then((response) => {
-    if (response !== undefined) {
-      users = JSON.stringify(response?.users);
-      message = response?.message;
-      success = response?.success;
-    }
-  }).catch((err) => {
-    console.log(err);
-    message = err?.response?.data?.message || err.message;
-    success = false;
-    users = null;
-  });
+  //Check DB connection
+  const dbStatus = connectToDatabaseOnly();
+  if (dbStatus == undefined) {
+    message = "DB connection is not established, Please connect support";
+    messageStatus = 'error';
+  }
+  if (!dbStatus.success) {
+    message = dbStatus.message;
+    messageStatus = 'error';
+  }
+  if (dbStatus.success) {
+    // Fetch data from external API
+    await extractUsers(currentEventName).then((response) => {
+      if (response !== undefined) {
+        users = JSON.stringify(response?.users);
+        message = response?.message;
+        success = response?.success;
+      }
+    }).catch((err) => {
+      console.log(err);
+      message = err?.response?.data?.message || err.message;
+      success = false;
+      users = null;
+    });
+  }
 
   // Pass data to the page via props
   return { props: { users, message, success } }
