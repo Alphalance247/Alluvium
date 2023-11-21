@@ -1,9 +1,23 @@
 import { connectToDatabase } from '../../../../lib/mongo';
 import FollowUp from 'models/followUp.model';
-import mongoose from 'mongoose';
-import { password } from 'config';
+// import { password } from 'config';
+// import CryptoJS from 'crypto-js';
 
 const handler = async (req, res) => {
+    // const tempPass = CryptoJS.AES.decrypt(req.headers.txt, process.env.NEXT_PUBLIC_MY_SECRET);
+    // const pass = tempPass.toString(CryptoJS.enc.Utf8);
+    // if (pass !== password) {
+    //     return res.status(401).json({
+    //         message: `Unauthorized!!`,
+    //         success: false
+    //     })
+    // }
+    if(req.headers["sec-fetch-site"] !== "same-origin" || req.headers["sec-fetch-site"] !== "same-site"){
+        return res.status(401).json({
+            message: `Unauthorized!!`,
+            success: false
+        })
+    }
     if (req.method === 'POST') {
         const followUpUserData = new FollowUp({ ...req.body });
         console.log(followUpUserData);
@@ -12,14 +26,13 @@ const handler = async (req, res) => {
                 message: `Thank you ${user.firstName}!`,
                 success: true
             })
-        }).catch(err =>{ 
+        }).catch(err => {
             console.log(err);
             return res.status(400).json({ message: err.message, success: false })
-    })
+        })
     } else if (req.method === 'GET') {
         // console.log(mongoose.connection.collections);
-        const {eventType, modeOfAttendance} = req.query;
-        console.log(modeOfAttendance);
+        const { eventType, modeOfAttendance } = req.query;
         await FollowUp.find({
             eventType, modeOfAttendance
         }).sort({ createdAt: 'desc' })
