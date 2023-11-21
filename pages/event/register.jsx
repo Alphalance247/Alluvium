@@ -13,6 +13,7 @@ import { getCountryByCode } from "country-phonenumber";
 import countries, { NG } from "country-flag-icons/react/3x2";
 import { useRouter } from "next/router";
 import { getUsersCount } from "pages/api/event/follow-up";
+import { connectToDatabaseOnly } from "lib/mongo";
 
 const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
   const [userData, setUserData] = useState({});
@@ -288,8 +289,19 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
 export default Register;
 
 export async function getServerSideProps() {
-  // Fetch data from external API
   let lockInPersonRegistrations = true, message = null, messageStatus = 'info';
+  //Check DB connection
+  const dbStatus = connectToDatabaseOnly();
+  if(dbStatus == undefined){
+    message = "DB connection is not established, Please connect support";
+    messageStatus = 'error';
+  }
+  if(!dbStatus.success){
+    message = dbStatus.message;
+    messageStatus = 'error';
+  }
+  if(dbStatus.success){
+    // Fetch data from external API
   await getUsersCount(currentEventName, 'In-Person').then((response) => {
     if (response !== undefined) {
       const {
@@ -308,6 +320,7 @@ export async function getServerSideProps() {
     console.log(err);
     message = err?.response?.data?.message || 'I can only get online attendee form. Please refresh the page or reach out for support if you want to attend physically.';
   });
+  }
 
 
   // Pass data to the page via props
