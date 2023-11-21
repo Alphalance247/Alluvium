@@ -12,7 +12,7 @@ const handler = async (req, res) => {
     //         success: false
     //     })
     // }
-    if(req.headers["sec-fetch-site"] !== "same-origin" || req.headers["sec-fetch-site"] !== "same-site"){
+    if(req.headers["sec-fetch-site"] !== "same-origin" && req.headers["sec-fetch-site"] !== "same-site"){
         return res.status(401).json({
             message: `Unauthorized!!`,
             success: false
