@@ -10,6 +10,7 @@ import { useState, useMemo, useEffect } from "react";
 import { currentEventName } from "config";
 import Login from "components/Interested-cloudConnect/LogIn";
 import { extractUsers } from "./api/event/follow-up";
+import { connectToDatabaseOnly } from "lib/mongo";
 
 const ShowingInterestLink = ({ users, message, success }) => {
   const [usersInfoPrint, setUsersInfoPrint] = useState([]);
