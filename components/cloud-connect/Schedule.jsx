@@ -1,4 +1,5 @@
 import styles from "../../styles/eventpage.module.scss";
+import Image from "next/image";
 
 const Schedule = () => {
   return (
@@ -12,33 +13,29 @@ const Schedule = () => {
               Cloud Connect brings together Atlassian Partners, customers, and industry experts to explore the latest developments in the Atlassian ecosystem, with a primary focus on cloud solutions and their significance in shaping the future of collaboration and productivity.
               The event also shows  how Atlassian products can help in Africa’s Journey to the cloud.
             </div>
-            <h3 className="mt-4">Hosts</h3>
-            <div class="container mt-5">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="text-center">
-                  <img
-                src="/cloudImg/ogawale.png"
-                alt="Image 2"
-                width={"172px"}
-                height={"172px"}
-              />
-                    <h6 className="mt-3">Wale Olojo</h6>
-                    <p>Lead, Agile Practice</p>
-                  </div>
+            <div className={styles.hosts}>
+              <h3 className="" style={{ marginBottom: '18px', color: 'black', fontSize: '20px', fontFamily: 'Graphik', fontWeight: 600, lineHeight: '24px' }}>Hosts</h3>
+              <div className="d-flex p-0 m-0" style={{ columnGap: '26.52px' }}>
+                <div className="">
+                  <Image
+                    src="/cloudImg/wale.png"
+                    alt="Wale Olojo"
+                    width={172}
+                    height={172}
+                  />
+                  <h6 className="m-0">Wale Olojo</h6>
+                  <p>Lead, Agile Practice</p>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="text-center">
-                  <img
-                src="/cloudImg/jaytee.png"
-                alt="Image 2"
-                width={"172px"}
-                height={"172px"}
-              />
-                    <h6 className="mt-3">Taiwo Ojo</h6>
-                    <p>Lead, Atlassian Practice</p>
-                  </div>
+                <div className="">
+                  <Image
+                    src="/cloudImg/taiwo.png"
+                    alt="Taiwo Ojo"
+                    width={160.025}
+                    height={172}
+                  />
+                  <h6 className="m-0">Taiwo Ojo</h6>
+                  <p>Lead, Atlassian Practice</p>
                 </div>
               </div>
             </div>
@@ -83,14 +80,14 @@ const Schedule = () => {
 
             <div className={styles.speech_cover}>
               <div className={styles.speech}>
-              <p className={styles.speechs}>Welcome / Keynote</p>
-              <div className={styles.encompass}>
+                <p className={styles.speechs}>Welcome / Keynote</p>
+                <div className={styles.encompass}>
                   <div className={styles.inner}>
                     <p><b>Taiwo Ojo</b></p>
                   </div>
                 </div>
               </div>
-             
+
               {/* <p className={styles.speech0}>Migration Run through</p> */}
               <div className={styles.speech1}>
                 <p className={styles.speechs}>Migrations and Cloud</p>

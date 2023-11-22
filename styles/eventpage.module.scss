@@ -108,7 +108,7 @@
           column-gap: 0.5rem;
         }
 
-        & > div {
+        &>div {
           background-color: rgba(227, 121, 21, 1);
           width: 57px;
           height: 57px;
@@ -135,6 +135,7 @@
   // background-color: #0F1922;
   color: #fff;
 }
+
 .heroCard2 {
   @media screen and (max-width: 576px) {
     width: 70%;
@@ -175,7 +176,7 @@
   }
 }
 
-.conference > h1 {
+.conference>h1 {
   color: #009bc0;
   font-family: "Graphik";
   font-size: 36px;
@@ -185,7 +186,7 @@
   margin-bottom: 32px;
 }
 
-.conference > h2 {
+.conference>h2 {
   color: #11202d;
   font-family: "Graphik";
   font-size: 36px;
@@ -193,7 +194,7 @@
   font-weight: 600;
 }
 
-.progamEvent > h2 {
+.progamEvent>h2 {
   margin-bottom: 32px;
   font-family: "Graphik";
   font-size: 28px;
@@ -380,7 +381,7 @@
   }
 }
 
-.inner > p {
+.inner>p {
   margin-bottom: 0.5rem;
 }
 
@@ -522,7 +523,7 @@
   grid-gap: 6rem;
 }
 
-.register > h1 {
+.register>h1 {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -0.004em;
@@ -628,12 +629,12 @@
     font-weight: 200;
   }
 
-  .conference > h1 {
+  .conference>h1 {
     font-size: 30px;
     font-weight: 600;
   }
 
-  .conference > h2 {
+  .conference>h2 {
     font-size: 30px;
     font-weight: 600;
   }
@@ -657,12 +658,12 @@
     grid-gap: 4rem;
   }
 
-  .register > h1 {
+  .register>h1 {
     font-size: 18px;
     font-weight: 500;
   }
 
-  .register > .btn {
+  .register>.btn {
     padding: 16px, 32px, 16px, 32px;
   }
 
@@ -683,7 +684,7 @@
     margin: auto;
   }
 
-  .progamEvent > h2 {
+  .progamEvent>h2 {
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -692,7 +693,7 @@
     line-height: 17px;
   }
 
-  .inner > p {
+  .inner>p {
     margin-bottom: 0.5rem;
   }
 
@@ -783,7 +784,7 @@
     grid-gap: 0.5rem;
   }
 
-  .register > h1 {
+  .register>h1 {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -986,7 +987,31 @@
     }
   }
 }
+
 .country_icon {
   width: 20px;
   height: 20px;
+}
+
+.hosts {
+  margin-top: 37px;
+  h6 {
+    color: #11202D;
+    font-family: 'Graphik';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    /* 122.222% */
+  }
+
+  p {
+    color: #11202D;
+    font-family: 'Graphik';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 !important;
+  }
 }
