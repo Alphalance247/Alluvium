@@ -203,7 +203,7 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
         <div className={styles.form_row}>
           <label>Which attendee type best describes you?</label>
           <div className={styles.form_check}>
-            <select type="text" className="form-control" value={userData?.attendeeType || ''} name="attendeeType" onChange={handleChange}>
+            <select type="text" className="form-control" value={userData?.attendeeType || ''} name="attendeeType" onChange={handleChange} required>
               {/* <option value="" disabled>Country of Residence</option> */}
               {
                 attendeeTypes.map(attendee => (<option key={attendee} value={attendee}>{attendee}</option>))
