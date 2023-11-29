@@ -44,7 +44,7 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
         addToast("Maximum phone number legth is 10. Kindly exclude country code", { appearance: 'error' });
         return;
       }
-      if (parseInt(value) < 0){
+      if (parseInt(value) < 0) {
         return;
       }
     }
@@ -242,13 +242,15 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
           <div className={`container-fluid p-3`} style={{ backgroundColor: '#0F1922' }}>
             <div className="row container mx-auto align-items-center">
               <div className="col-md-4 text-center text-md-start">
-                <h2 className="text-white">Cloud Connect</h2>
+                <Link href="/event/cloud-connect">
+                  <h2 className="text-white" style={{ cursor: 'pointer' }}>Cloud Connect</h2>
+                </Link>
               </div>
               <div className="col-md-3 text-warning">
 
               </div>
               <div className="col-md-5 text-warning">
-                <CountdownTimer targetDate="2023-11-30T23:59:59" />
+                <CountdownTimer targetDate="2023-11-30T10:00:00" />
               </div>
             </div>
           </div>
@@ -258,7 +260,7 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
             <Link href="/event/cloud-connect">
               <div className="d-flex align-items-center">
                 <img src="/assets/back-arrow.png" alt="back to previous page" style={{ cursor: 'pointer' }} className="img-fluid" />
-                <span className="ms-2">Back</span>
+                <span className="ms-2" style={{ cursor: 'pointer' }}>Back</span>
               </div>
             </Link>
 
@@ -273,10 +275,13 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
               </div>
               <div className="col-md-3 mt-5 order-1 order-md-2">
                 {/* Event Picture */}
-                {/* <div className="col-md-3"><CountdownTimer targetDate="2023-11-30T23:59:59" /></div> */}
-                <img src="/assets/register_image.png" alt="Event Image" className="img-fluid" />
-                <h3 className="mt-2">Cloud Connect</h3>
-                <h6 className="text-secondary">Nov 30th, 10:00AM (WAT)</h6>
+                <Link href="/event/cloud-connect">
+                  <>
+                    <img src="/assets/register_image.png" alt="Event Image" className="img-fluid" />
+                    <h3 className="mt-2" style={{cursor: 'pointer'}}>Cloud Connect</h3>
+                    <h6 className="text-secondary" style={{cursor: 'pointer'}}>Nov 30th, 10:00AM (WAT)</h6>
+                  </>
+                </Link>
               </div>
             </div>
           </div>
@@ -292,34 +297,34 @@ export async function getServerSideProps() {
   let lockInPersonRegistrations = true, message = null, messageStatus = 'info';
   //Check DB connection
   const dbStatus = connectToDatabaseOnly();
-  if(dbStatus == undefined){
+  if (dbStatus == undefined) {
     message = "DB connection is not established, Please connect support";
     messageStatus = 'error';
   }
-  if(!dbStatus.success){
+  if (!dbStatus.success) {
     message = dbStatus.message;
     messageStatus = 'error';
   }
-  if(dbStatus.success){
+  if (dbStatus.success) {
     // Fetch data from external API
-  await getUsersCount(currentEventName, 'In-Person').then((response) => {
-    if (response !== undefined) {
-      const {
-        success,
-        usersLength
-      } = response;
-      if (!success) lockInPersonRegistrations = true;
-      if (usersLength != null && usersLength >= 90) {
-        message = "We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.";
-        lockInPersonRegistrations = true;
-      } else {
-        lockInPersonRegistrations = false;
+    await getUsersCount(currentEventName, 'In-Person').then((response) => {
+      if (response !== undefined) {
+        const {
+          success,
+          usersLength
+        } = response;
+        if (!success) lockInPersonRegistrations = true;
+        if (usersLength != null && usersLength >= 90) {
+          message = "We have exceeded our capacity for In-person registration, all further registrations will be online by default. Thank you.";
+          lockInPersonRegistrations = true;
+        } else {
+          lockInPersonRegistrations = false;
+        }
       }
-    }
-  }).catch((err) => {
-    console.log(err);
-    message = err?.response?.data?.message || 'I can only get online attendee form. Please refresh the page or reach out for support if you want to attend physically.';
-  });
+    }).catch((err) => {
+      console.log(err);
+      message = err?.response?.data?.message || 'I can only get online attendee form. Please refresh the page or reach out for support if you want to attend physically.';
+    });
   }
 
 
