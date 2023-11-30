@@ -37,6 +37,7 @@ const EventHero = ({ showCountdown = true }) => {
                   <Link href="/event/register">
                     <a className="btn btn-warning mt-4 me-3">REGISTER</a>
                   </Link>
+                  <a href="https://us06web.zoom.us/j/82145050765?pwd=qd3bNXbpwlmxW341h0ltacqVMfjRk8.1#success" className="btn btn-warning mt-4 me-3" target="_blank" rel="noopener noreferrer">JOIN US LIVE</a>
                   { !showCountdown &&
                     <Link href="/event/cloud-connect">
                     <a className="btn btn-warning mt-4">READ MORE</a>
