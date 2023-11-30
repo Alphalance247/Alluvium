@@ -56,22 +56,22 @@ const handler = async (req, res) => {
                 status: "error"
             })
         })
-    } else if (req.method === 'GET') {
-        await Consultation.find({}).sort({ createdAt: 'desc' })
-            .then(consultationRequests => {
-                return res.status(200).json({
-                    message: 'Consultation Requests Fetched Successfully.',
-                    status: 'success',
-                    consultationRequests
-                })
-            })
-            .catch(err => {
-                console.log(err);
-                return res.status(500).json({
-                    message: `Failed: Unable to fetch Consultation Requests. ${err.message}`,
-                    status: "error"
-                })
-            });
+    // } else if (req.method === 'GET') {
+    //     await Consultation.find({}).sort({ createdAt: 'desc' })
+    //         .then(consultationRequests => {
+    //             return res.status(200).json({
+    //                 message: 'Consultation Requests Fetched Successfully.',
+    //                 status: 'success',
+    //                 consultationRequests
+    //             })
+    //         })
+    //         .catch(err => {
+    //             console.log(err);
+    //             return res.status(500).json({
+    //                 message: `Failed: Unable to fetch Consultation Requests. ${err.message}`,
+    //                 status: "error"
+    //             })
+    //         });
     } else {
         res.status(422).send({ message: 'req_method_not_supported', success: false });
     }

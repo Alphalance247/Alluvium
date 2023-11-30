@@ -26,22 +26,22 @@ const handler = async (req, res) => {
             success: true
         })
     }).catch(err=>res.status(400).json({message: err.message, success: false}))
-    } else if(req.method === 'GET'){
-        console.log(mongoose.connection.collections);
-        await Applicant.find({}).sort({createdAt: 'desc'})
-        .then(users=>{
-            return res.status(200).json({
-            message: `Users fetched successfully`,
-            success: true,
-            users
-        })})
-        .catch(err => {
-            console.log(err);
-            return res.status(500).json({
-            message: `Error: Users fetch unsuccessful. ${err.message}`,
-            success: false,
-            users: null
-        })})
+    // } else if(req.method === 'GET'){
+    //     console.log(mongoose.connection.collections);
+    //     await Applicant.find({}).sort({createdAt: 'desc'})
+    //     .then(users=>{
+    //         return res.status(200).json({
+    //         message: `Users fetched successfully`,
+    //         success: true,
+    //         users
+    //     })})
+    //     .catch(err => {
+    //         console.log(err);
+    //         return res.status(500).json({
+    //         message: `Error: Users fetch unsuccessful. ${err.message}`,
+    //         success: false,
+    //         users: null
+    //     })})
 
     } 
     else {
