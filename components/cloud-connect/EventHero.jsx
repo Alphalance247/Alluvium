@@ -34,10 +34,10 @@ const EventHero = ({ showCountdown = true }) => {
                     opportunities
                   </p>
                   <div className="d-flex flex-wrap">
-                  <Link href="/event/register">
+                  {/* <Link href="/event/register">
                     <a className="btn btn-warning mt-4 me-3">REGISTER</a>
-                  </Link>
-                  <a href="https://us06web.zoom.us/j/82145050765?pwd=qd3bNXbpwlmxW341h0ltacqVMfjRk8.1#success" className="btn btn-warning mt-4 me-3" target="_blank" rel="noopener noreferrer">JOIN US LIVE</a>
+                  </Link> */}
+                  {/* <a href="https://us06web.zoom.us/j/82145050765?pwd=qd3bNXbpwlmxW341h0ltacqVMfjRk8.1#success" className="btn btn-warning mt-4 me-3" target="_blank" rel="noopener noreferrer">JOIN US LIVE</a> */}
                   { !showCountdown &&
                     <Link href="/event/cloud-connect">
                     <a className="btn btn-warning mt-4">READ MORE</a>
@@ -62,13 +62,13 @@ const EventHero = ({ showCountdown = true }) => {
       </div>
 
       {showCountdown && <div className={`container-fluid pb-4 ${styles.countdownCard}`}>
-        <div className="container mx-auto">
+        {/* <div className="container mx-auto">
           <div className="row">
             <div className="col-md-3"></div>
             <div className="col-md-6 my-5"><CountdownTimer targetDate="2023-11-30T10:00:00" /></div>
             <div className="col-md-3"></div>
           </div>
-        </div>
+        </div> */}
         <hr className={styles.hr} />
         <div className="container mx-auto row mt-5 text-center justify-content-around">
           <div className="col-md-3">
