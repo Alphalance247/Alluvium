@@ -75,9 +75,9 @@ export function AltFooter() {
               <li className={styles.contactListItem}>
                 <Link href="/event/cloud-connect">Cloud Connect</Link>
               </li>
-              <li className={styles.contactListItem}>
+              {/* <li className={styles.contactListItem}>
                 <Link href="/event/register">Cloud Connect Event Registration</Link>
-              </li>
+              </li> */}
               {/* <li className={styles.contactListItem}>
                 <Link href="#">Success Stories</Link>
               </li>

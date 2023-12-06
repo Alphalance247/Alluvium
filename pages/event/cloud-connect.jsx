@@ -26,7 +26,7 @@ const CloudConnect = () => {
         <EventHero />
         <Schedule />
         <Speaker />
-        <Register />
+        {/* <Register /> */}
       </Layout>
     </>
   );
