@@ -29,6 +29,10 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
   const rounter = useRouter();
 
   useEffect(() => {
+    addToast('Sorry, We are no longer accepting registerations for this event has the event is over.', { appearance: 'error' });
+  }, [])
+
+  useEffect(() => {
     if (message !== null) {
       addToast(message, { appearance: messageStatus });
     }
@@ -73,7 +77,9 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
 
   const handleSubmit = useCallback(async (event) => {
     event.preventDefault();
-    setLoading(true);
+    addToast('Sorry, We are no longer accepting registerations for this event has the event is over.', { appearance: 'error' });
+    return;
+    // setLoading(true);
     const { firstName, lastName, email } = userData;
 
     if (!firstName || !lastName || !email) {
@@ -88,25 +94,25 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
     }
     data.phone = `(+${phoneCode}) ${data.phone}`;
 
-    await axios
-      .post("/api/event/follow-up", { ...data, eventType })
-      .then((res) => {
-        setLoading(false);
-        if (!res.data.success) {
-          addToast('Unable to process data, kindly reach out to our agent.', { appearance: 'error' });
-        } else {
-          addToast(`${res?.data?.message} Your registration has been well received, see you at the event.`, { appearance: 'success', autoDismiss: true });
-          handleReset();
-          rounter.push("/event/cloud-connect");
-        }
-        return;
-      })
-      .catch((err) => {
-        setLoading(false);
-        let errMessage = err?.response?.data?.message || 'Oops something went wrong. Please try again.';
-        addToast(errMessage, { appearance: 'error' });
-        return;
-      });
+    // await axios
+    //   .post("/api/event/follow-up", { ...data, eventType })
+    //   .then((res) => {
+    //     setLoading(false);
+    //     if (!res.data.success) {
+    //       addToast('Unable to process data, kindly reach out to our agent.', { appearance: 'error' });
+    //     } else {
+    //       addToast(`${res?.data?.message} Your registration has been well received, see you at the event.`, { appearance: 'success', autoDismiss: true });
+    //       handleReset();
+    //       rounter.push("/event/cloud-connect");
+    //     }
+    //     return;
+    //   })
+    //   .catch((err) => {
+    //     setLoading(false);
+    //     let errMessage = err?.response?.data?.message || 'Oops something went wrong. Please try again.';
+    //     addToast(errMessage, { appearance: 'error' });
+    //     return;
+    //   });
   }, [eventType, userData, phoneCode]);
 
   const handleReset = useCallback((event) => {
@@ -231,7 +237,7 @@ const Register = ({ lockInPersonRegistrations, message, messageStatus }) => {
         </div>
       </div>
 
-      <button type="submit" className="btn btn-warning" disabled={loading}>Register</button>
+      <button type="submit" className="btn btn-warning" disabled={loading || true}>Register</button>
       <button type="reset" className="btn btn-outline-danger ms-3" disabled={loading}>Clear</button>
     </form>), [loading, userData, countryCodes, phoneCode, selectedIcon, lockInPersonRegistrations, allCountries, showOther, attendeeTypes, handleChange, handleReset, handleSubmit]);
 

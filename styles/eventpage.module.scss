@@ -424,6 +424,14 @@
   }
 }
 
+.recap{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 0;
+}
+
 .highlight {
   display: flex;
   gap: 5rem;
