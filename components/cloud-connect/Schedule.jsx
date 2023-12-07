@@ -7,8 +7,8 @@ const Schedule = () => {
 
       <div className={`"container mx-auto ${styles.recap}`}>
         <div style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 16, display: 'inline-flex', marginBottom: '64px' }}>
-          <h1 style={{ color: '#11202D', textAlign: 'center', fontSize: '56px', fontFamily: 'Graphik', fontWeight: '700', lineHeight: '72.80px', wordWrap: 'break-word' }}>Event Recap</h1>
-          <p style={{ width: '75%', textAlign: 'center', color: '#11202D', fontSize: '16px', fontFamily: 'Graphik', fontWeight: '400', lineHeight: '25.60px', wordWrap: 'break-word' }}>Check out our video recap of Alluvium’s Cloud Connect, where industry leaders, innovators, and technology enthusiasts converged to explore the limitless possibilities of cloud computing. </p>
+          <h1 style={{ color: '#11202D', textAlign: 'center', fontSize: '56px', fontWeight: '700', lineHeight: '72.80px', wordWrap: 'break-word' }}>Event Recap</h1>
+          <p style={{ width: '75%', textAlign: 'center', color: '#11202D', fontSize: '16px', fontWeight: '400', lineHeight: '25.60px', wordWrap: 'break-word' }}>Check out our video recap of Alluvium’s Cloud Connect, where industry leaders, innovators, and technology enthusiasts converged to explore the limitless possibilities of cloud computing. </p>
         </div>
         <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7137781170448007168?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post" style={{ borderRadius: '8px' }}></iframe>
       </div>
