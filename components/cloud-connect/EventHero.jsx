@@ -34,13 +34,13 @@ const EventHero = ({ showCountdown = true }) => {
                     opportunities
                   </p>
                   <div className="d-flex flex-wrap">
-                  {/* <Link href="/event/register">
-                    <a className="btn btn-warning mt-4 me-3">REGISTER</a>
-                  </Link> */}
-                  {/* <a href="https://us06web.zoom.us/j/82145050765?pwd=qd3bNXbpwlmxW341h0ltacqVMfjRk8.1#success" className="btn btn-warning mt-4 me-3" target="_blank" rel="noopener noreferrer">JOIN US LIVE</a> */}
+                  <a href="https://support.portal.alluvium.net/servicedesk/customer/portal/41/group/130/create/479" className="btn btn-outline-warning mt-4 me-3 py-3" target="_blank" rel="noopener noreferrer">GIVE FEEDBACK</a>
+                  <Link href="/event/cloud-connect#recap">
+                    <a className="btn btn-warning mt-4 me-3 py-3">WATCH RECAP</a>
+                  </Link>
                   { !showCountdown &&
                     <Link href="/event/cloud-connect">
-                    <a className="btn btn-warning mt-4">READ MORE</a>
+                    <a className="btn btn-warning mt-4 py-3">LEARN MORE</a>
                   </Link>}
                   </div>
                 </div>
@@ -70,7 +70,7 @@ const EventHero = ({ showCountdown = true }) => {
           </div>
         </div> */}
         <hr className={styles.hr} />
-        <div className="container mx-auto row mt-5 text-center justify-content-around">
+        <div className="container mx-auto row mt-5 text-center justify-content-around py-4">
           <div className="col-md-3">
             <div>
               {" "}
