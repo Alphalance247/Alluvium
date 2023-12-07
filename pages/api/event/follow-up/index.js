@@ -19,32 +19,34 @@ const handler = async (req, res) => {
         })
     }
     if (req.method === 'POST') {
-        let message, status = 400;
+        let message = "Sorry, We are no longer accepting registerations for this event has the event is over.", status = 400;
         let success = false;
-        const followUpUserData = new FollowUp({ ...req.body });
-        console.log(followUpUserData);
-        await followUpUserData.save().then(user => {
-            message = `Thank you ${user.firstName}!`;
-            success = true;
-            status = 200;
-        }).catch(err => {
-            console.log(err);
-            message = err.message;
-            success = false;
-            status = 400;
-        })
+        // const followUpUserData = new FollowUp({ ...req.body });
+        // console.log(followUpUserData);
+        // await followUpUserData.save().then(user => {
+        //     message = `Thank you ${user.firstName}!`;
+        //     success = true;
+        //     status = 200;
+        // }).catch(err => {
+        //     console.log(err);
+        //     message = err.message;
+        //     success = false;
+        //     status = 400;
+        // })
         return res.status(status).json({
             message,
             success
         })
     } else if (req.method === 'GET') {
-        const { eventType, modeOfAttendance } = req.query;
+        // const { eventType, modeOfAttendance } = req.query;
+        let message = "Sorry, We are no longer accepting registerations for this event has the event is over.", status = 400;
+        let success = false;
         try{
-            const resp = await getUsersCount(eventType, modeOfAttendance);
-            if (resp !== undefined) {
-                const { status, ...rest } = resp;
-                return res.status(status).json(rest);
-            }
+            // const resp = await getUsersCount(eventType, modeOfAttendance);
+            // if (resp !== undefined) {
+                // const { status, ...rest } = resp;
+                return res.status(status).json({success, message});
+            // }
         } catch(err){
             console.log("err: ", err);
             return res.status(500).json({success: false, message: err.message});
