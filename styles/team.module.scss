@@ -1,0 +1,350 @@
+.hero {
+  height: 761px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: 992px) {
+    height: 600px;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: 450px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0.9;
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    z-index: 20;
+
+    @media screen and (max-width: 576px) {
+      width: 85%;
+    }
+
+    .imageBorder {
+      border-radius: 10px;
+    }
+
+    p {
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 20px;
+      margin-top: 3rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 14px;
+        margin-top: 2rem;
+      }
+      span {
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+      }
+    }
+
+    button {
+      margin-top: 4rem;
+      padding: 17px 41px;
+      outline: none;
+      border-radius: 10px;
+      border: none;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      color: #11202d;
+
+      @media screen and (max-width: 576px) {
+        font-size: 17px;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.section2 {
+  background: #11202d;
+  padding: 70px 102px;
+
+  @media screen and (max-width: 576px) {
+    padding: 1rem;
+  }
+  @media screen and (max-width: 992px) {
+    padding: 1.5rem;
+  }
+  p {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    word-spacing: 3%;
+
+    @media screen and (max-width: 576px) {
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+    }
+  }
+}
+
+.Event {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  padding: 5rem 0px 4rem 5rem;
+
+  @media screen and (max-width: 992px) {
+    padding: 1.5rem 0px 1.5rem 1.5rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .EventTheme {
+    h2 {
+      color: black;
+      font-size: 40px;
+      font-weight: bold;
+      line-height: 30px;
+      margin-bottom: 5rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.8rem;
+      margin-bottom: 1rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 992px) {
+        font-size: 14px;
+        margin-bottom: 1.3rem;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  .imagesPosition {
+    position: relative;
+    @media screen and (max-width: 576px) {
+      // position: absolute;
+      // right: 0;
+      // bottom: 11rem;
+
+      display: none;
+    }
+
+    .positioning1 {
+      position: absolute;
+      right: 0;
+      bottom: 11rem;
+      // @media screen and (max-width: 576px) {
+      //   position: absolute;
+      //   right: 0;
+      //   bottom: 11rem;
+      // }
+    }
+
+    .positioning2 {
+      position: absolute;
+      right: 0;
+      bottom: 4rem;
+      z-index: 30;
+    }
+
+    .positioning3 {
+      position: absolute;
+      right: 0;
+      top: 10rem;
+    }
+  }
+}
+
+.section3 {
+  background: #11202d;
+  padding: 4rem 12rem;
+
+  @media screen and (max-width: 992px) {
+    padding: 2rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 1rem;
+  }
+
+  h4 {
+    color: white;
+    font-size: 2rem;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 1rem;
+    @media screen and (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .secure {
+    font-size: 1rem;
+    color: white;
+    line-height: 160%;
+    width: 800px;
+    margin: auto;
+
+    @media screen and (max-width: 576px) {
+      width: fit-content;
+      font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      width: fit-content;
+    }
+  }
+
+  form {
+    .basic {
+      color: white;
+      font-weight: 600;
+      line-height: 20px;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .action {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 3rem;
+      row-gap: 2rem;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 576px) {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    label {
+      color: white;
+    }
+
+    .inputStyles {
+      width: 100%;
+      padding: 0.5rem;
+      outline: none;
+      border: 2px solid #c2c2c2;
+      border-radius: 0.5rem;
+      background: #11202d;
+      color: white;
+    }
+
+    .error {
+      border: 2px solid orangered;
+    }
+
+    .border {
+      border: 2px solid #c2c2c2;
+    }
+
+    .selectDiv {
+      display: flex;
+
+      .selectOption {
+        outline: none;
+        border: 2px solid #c2c2c2;
+        border-radius: 0.5rem 0 0 0.5rem;
+        background: #11202d;
+        color: white;
+        padding: 0.5rem;
+      }
+
+      .selectInput {
+        width: 100%;
+        padding: 0.5rem;
+        outline: none;
+        border: 2px solid #c2c2c2;
+        border-radius: 0 0.5rem 0.5rem 0;
+        background: #11202d;
+        color: white;
+      }
+
+      .error {
+        border: 2px solid orangered;
+      }
+    }
+
+    .countrySelect {
+      width: 100%;
+      padding: 0.7rem;
+      outline: none;
+      background: #11202d;
+      border: 2px solid #c2c2c2;
+      border-radius: 0.5rem;
+      color: white;
+    }
+    .error {
+      border: 2px solid orangered;
+    }
+    .button {
+      margin-top: 4rem;
+      text-align: center;
+
+      button {
+        padding: 17px 41px;
+        outline: none;
+        border-radius: 10px;
+        border: none;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+        color: #11202d;
+      }
+    }
+  }
+}
