@@ -6,7 +6,7 @@ import moment from "moment";
 
 const Trend = (props) => {
 	const { trendNews, index } = props;
-	console.log(trendNews.jetpack_featured_media_url);
+	// console.log(trendNews.jetpack_featured_media_url);
 	return (
 		<Link href={trendNews.link}>
 			<a target="_blank" rel="norefferer">

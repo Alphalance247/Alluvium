@@ -1,8 +1,19 @@
 import styles from "../../styles/eventpage.module.scss";
+import Image from "next/image";
 
 const Schedule = () => {
   return (
-    <div className={`container mx-auto ${styles.container}`}>
+    <div className={`container mx-auto ${styles.container}`} id="recap">
+
+      <div className={`"container mx-auto ${styles.recap}`}>
+        <div style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', gap: 16, display: 'inline-flex', marginBottom: '64px' }}>
+          <h1 style={{ color: '#11202D', textAlign: 'center', fontSize: '56px', fontWeight: '700', lineHeight: '72.80px', wordWrap: 'break-word' }}>Event Recap</h1>
+          <p style={{ width: '75%', textAlign: 'center', color: '#11202D', fontSize: '16px', fontWeight: '400', lineHeight: '25.60px', wordWrap: 'break-word' }}>Check out our video recap of Alluvium’s Cloud Connect, where industry leaders, innovators, and technology enthusiasts converged to explore the limitless possibilities of cloud computing. </p>
+        </div>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7137781170448007168?compact=1" height="399" width="710" frameborder="0" allowfullscreen="" title="Embedded post" style={{ borderRadius: '8px' }}></iframe>
+      </div>
+
+      <hr className={styles.hr} />
 
       <div className={styles.schedule}>
         <div className={styles.empty}>
@@ -12,89 +23,130 @@ const Schedule = () => {
               Cloud Connect brings together Atlassian Partners, customers, and industry experts to explore the latest developments in the Atlassian ecosystem, with a primary focus on cloud solutions and their significance in shaping the future of collaboration and productivity.
               The event also shows  how Atlassian products can help in Africa’s Journey to the cloud.
             </div>
+            <div className={styles.hosts}>
+              <h3 className="" style={{ marginBottom: '18px', color: 'black', fontSize: '20px', fontFamily: 'Graphik', fontWeight: 600, lineHeight: '24px' }}>Hosts</h3>
+              <div className="d-flex p-0 m-0" style={{ columnGap: '26.52px' }}>
+                <div className="">
+                  <Image
+                    src="/cloudImg/wale.png"
+                    alt="Wale Olojo"
+                    width={172}
+                    height={172}
+                  />
+                  <h6 className="m-0">Wale Olojo</h6>
+                  <p>Lead, Agile Practice</p>
+                </div>
+
+                <div className="">
+                  <Image
+                    src="/cloudImg/taiwo.png"
+                    alt="Taiwo Ojo"
+                    width={160.025}
+                    height={172}
+                  />
+                  <h6 className="m-0">Taiwo Ojo</h6>
+                  <p>Lead, Atlassian Practice</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         <div className={styles.progamEvent}>
 
           <div className={styles.highlight}>
             <div className={styles.time}>
-              <p className={styles.time1}>8:00AM</p>
-              <p className={styles.time2}>8:15AM</p>
+              <p className={styles.time1}>10:00AM</p>
+              {/* <p className={styles.time2}>10:40AM</p> */}
               <div className={styles.time3}>
-                <span>10:00AM</span>
+                <span>10:40AM</span>
               </div>
               <div className={styles.time4}>
-                <span>12:00PM</span>
+                <span>12:20PM</span>
               </div>
 
               <div className={styles.time5}>
-                <span>1:00PM</span>
+                <span>1:40PM</span>
               </div>
               <div className={styles.time6}>
-                <span>2:00PM</span>
+                <span>3:20PM</span>
               </div>
-              <div className={styles.time7}>
+              {/* <div className={styles.time7}>
                 <span>4:00PM</span>
               </div>
               <div className={styles.time8}>
                 <span>7:00PM</span>
-              </div>
+              </div> */}
             </div>
-            <div>
-              <img
+            <div className={styles.divider}>
+              {/* <img
                 className={styles.divider}
                 src="/cloudImg/divider2.png"
                 height="1130px"
                 width="12px"
                 alt="divider"
-              />
+              /> */}
             </div>
 
             <div className={styles.speech_cover}>
-              <p className={styles.speech}>Welcome Address</p>
-              <p className={styles.speech0}>Migration Run through</p>
-              <div className={styles.speech1}>
-                <p className={styles.speechs}>Speaker Session</p>
+              <div className={styles.speech}>
+                <p className={styles.speechs}>Welcome / Keynote</p>
                 <div className={styles.encompass}>
-                  <img
+                  <div className={styles.inner}>
+                    <p><b>Taiwo Ojo</b></p>
+                  </div>
+                </div>
+              </div>
+
+              {/* <p className={styles.speech0}>Migration Run through</p> */}
+              <div className={styles.speech1}>
+                <p className={styles.speechs}>Migrations and Cloud</p>
+                <div className={styles.encompass}>
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
-                    <p><span className={styles.topic}>Topic:</span> Remote Work and Digital Nomadism in Africa</p>
+                    <p>Speaker 1: <b>Erica Larson</b></p>
+                    <p>Speaker 2: <b>Rodney Nissen</b></p>
+                    <p>Speaker 2: <b>Naj Irshrad</b></p>
+                    {/* <p><span className={styles.topic}>Topic:</span> Remote Work and Digital Nomadism in Africa</p> */}
                   </div>
                 </div>
               </div>
               <div className={styles.speech2}>
-                <p className={styles.speechs}>Speaker Session</p>
+                <p className={styles.speechs}>AI and ITSM</p>
                 <div className={styles.encompass}>
-                  <img
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
+                    <p>Speaker 1: <b>Olaniyan Remilekun Desmond</b></p>
+                    <p>Speaker 2: <b>Katarzyna Zofia Pawlak</b></p>
+                    <p>Speaker 3: <b>David Oladeji</b></p>
                     <p>
-                      <span className={styles.topic}>Topic:</span> Building High-Performing Remote Teams: Best
-                      Practices and Strategies
+                      {/* <span className={styles.topic}>Topic:</span> Building High-Performing Remote Teams: Best
+                      Practices and Strategies */}
                     </p>
                   </div>
                 </div>
               </div>
               <div className={styles.speech3}>
-                <p className={styles.speechs}>Speaker Session</p>
+                <p className={styles.speechs}>African & Atlassian</p>
                 <div className={styles.encompass}>
-                  <img
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
-                    <p><span className={styles.topic}>Topic:</span> </p>
+                    <p>Speaker 1: <b>Hon. Seun Fakuade</b></p>
+                    <p>Speaker 2: <b>Katakyie Kojo Desu</b></p>
+                    <p>Speaker 3: <b>Kevin Tuei</b></p>
+                    {/* <p><span className={styles.topic}>Topic:</span> </p>
                     <p>
                       1. Optimizing Service Desk Operations in ITSM
                       Implementation
@@ -102,21 +154,22 @@ const Schedule = () => {
                     <p>
                       2. ITSM Integration with DevOps and Agile: Enhancing
                       Service Deliver
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </div>
               <div className={styles.speech4}>
-                <p className={styles.speechs}>Speaker Session</p>
+                <p className={styles.speechs}>Panel</p>
                 <div className={styles.encompass}>
-                  <img
+                  {/* <img
                     src="/cloudImg/speakerImage.jpg"
                     className={styles.img}
                     alt="Speaker"
-                  />
+                  /> */}
                   <div className={styles.inner}>
-                    <p>Nick: Agimudie</p>
-                    <p><span className={styles.topic}>Topic:</span></p>
+                    <p>Panel 1: Benefits of modern Infastructure: <br /> Host - <b>Adeola Lawal</b></p>
+                    <p>Panel 2: African innovation to solve Africa's Problems: <br /> Host - <b>Babade Adewole</b></p>
+                    {/* <p><span className={styles.topic}>Topic:</span></p>
                     <p>
                       1. Customization and Localization: Adapting Atlassian
                       Tools to African Business Context
@@ -125,35 +178,18 @@ const Schedule = () => {
                       2. Unleashing the Potential: Growing Atlassian's Presence
                       in the African Market
                     </p>
-                    <p>3. ITSM implementation in Africa - On point</p>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.speech5}>
-                <p className={styles.speechs}>Speaker Session</p>
-                <div className={styles.encompass}>
-                  <img
-                    src="/cloudImg/speakerImage.jpg"
-                    className={styles.img}
-                    alt="Speaker"
-                  />
-                  <div className={styles.inner}>
-                    <p>Nick: Abdul Azeez</p>
-                    <p><span className={styles.topic}>Topic:</span></p>
-                    <p>
-                      1.Customization and Localization: Adapting Atlassian Tools
-                      to African Business Context
-                    </p>
-                    <p>
-                      2. Unleashing the Potential: Growing Atlassian's Presence
-                      in the African Market
-                    </p>
-                    <p>3. ITSM implementation in Africa - On point</p>
+                    <p>3. ITSM implementation in Africa - On point</p> */}
                   </div>
                 </div>
               </div>
               <div className={styles.speech6}>
-                <p className="m-0">Closing remark</p>
+                <p className={styles.speechs}>Closing remark</p>
+                <div className={styles.encompass}>
+                  <div className={styles.inner}>
+                    <b>Wale Olojo</b>
+                    {/* <p>Speaker: <b>Wale Olojo</b></p> */}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

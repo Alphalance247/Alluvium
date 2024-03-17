@@ -8,9 +8,12 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  padding-top: 120px !important;
-  padding-bottom: 120px !important;
-  // background-blend-mode: normal;
+  min-height: 733px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // padding-top: 120px !important;
+  // padding-bottom: 120px !important;
 
   // &>div{
   //     background-color: #0F1A25;
@@ -105,7 +108,7 @@
           column-gap: 0.5rem;
         }
 
-        & > div {
+        &>div {
           background-color: rgba(227, 121, 21, 1);
           width: 57px;
           height: 57px;
@@ -131,6 +134,15 @@
   border: none;
   // background-color: #0F1922;
   color: #fff;
+}
+
+.heroCard2 {
+  @media screen and (max-width: 576px) {
+    width: 70%;
+    margin-right: auto;
+    // height: 22px;
+    padding: 0;
+  }
 }
 
 .countdownCard {
@@ -164,7 +176,7 @@
   }
 }
 
-.conference > h1 {
+.conference>h1 {
   color: #009bc0;
   font-family: "Graphik";
   font-size: 36px;
@@ -174,7 +186,7 @@
   margin-bottom: 32px;
 }
 
-.conference > h2 {
+.conference>h2 {
   color: #11202d;
   font-family: "Graphik";
   font-size: 36px;
@@ -182,7 +194,7 @@
   font-weight: 600;
 }
 
-.progamEvent > h2 {
+.progamEvent>h2 {
   margin-bottom: 32px;
   font-family: "Graphik";
   font-size: 28px;
@@ -215,6 +227,9 @@
 
 .divider {
   margin-top: 10px;
+  height: auto;
+  width: 2px;
+  background-color: #000;
 
   @media screen and (max-width: 576px) {
     height: 99% !important;
@@ -254,24 +269,31 @@
   .time {
     margin-bottom: 0px;
     height: 100%;
+
     &1 {
       margin-bottom: 5rem;
     }
+
     &2 {
       margin-bottom: 4.8rem;
     }
+
     &3 {
       margin-bottom: 12.7rem;
     }
+
     &4 {
       margin-bottom: 11.5rem;
     }
+
     &5 {
       margin-bottom: 17.7rem;
     }
+
     &6 {
       margin-bottom: 19.5rem;
     }
+
     &7 {
       margin-bottom: 19.5rem;
     }
@@ -289,7 +311,7 @@
 }
 
 .speech_cover {
-  font-family: "Graphik";
+  font-family: 'Graphik';
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
@@ -320,29 +342,27 @@
     margin-bottom: 1.7rem;
   }
 
-  &5 {
-    margin-bottom: 1.6rem;
-  }
-
   @media screen and (max-width: 576px) {
     margin-bottom: 5rem;
+
     &0 {
       margin-bottom: 4.6rem;
     }
+
     &1 {
       margin-bottom: 5.4rem;
     }
+
     &2 {
       margin-bottom: 3.1rem;
     }
+
     &3 {
       margin-bottom: 3.6rem;
     }
+
     &4 {
       margin-bottom: 1rem;
-    }
-    &5 {
-      margin-bottom: 0.7rem;
     }
   }
 
@@ -352,20 +372,16 @@
     }
 
     &3 {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     &4 {
-      margin-bottom: 0.2rem;
-    }
-
-    &5 {
-      margin-bottom: 0.2rem;
+      margin-bottom: 2rem;
     }
   }
 }
 
-.inner > p {
+.inner>p {
   margin-bottom: 0.5rem;
 }
 
@@ -406,6 +422,14 @@
     justify-content: center;
     margin-top: 6rem;
   }
+}
+
+.recap{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 0;
 }
 
 .highlight {
@@ -464,7 +488,7 @@
   background-color: #000;
 }
 
-.specific1:hover {
+.specific:hover {
   text-decoration: underline;
 }
 
@@ -488,6 +512,7 @@
     letter-spacing: 0em;
     text-align: left;
   }
+
   p {
     font-size: 12px;
   }
@@ -506,7 +531,7 @@
   grid-gap: 6rem;
 }
 
-.register > h1 {
+.register>h1 {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -0.004em;
@@ -547,44 +572,58 @@
   font-family: "Graphik";
 
   h3 {
+    color: #11202D;
+    font-family: 'Graphik';
     font-size: 32px;
+    font-style: normal;
     font-weight: 600;
     line-height: 40px;
-    color: #11202d;
+    /* 125% */
   }
 
   h4 {
+    color: #11202D;
+    font-family: 'Graphik';
     font-size: 20px;
+    font-style: normal;
     font-weight: 400;
     line-height: 25px;
-    color: #11202d;
+    margin-top: 8px;
+    margin-bottom: 0;
+    /* 125% */
   }
-
+  
   p {
+    margin-top: 24px;
+    color: #000;
+    font-family: 'Graphik';
     font-size: 16px;
+    font-style: normal;
     font-weight: 400;
     line-height: 30px;
-    color: black;
+    /* 187.5% */
   }
 
   .imgModal {
     position: absolute;
-    right: 9rem;
-    top: 6.2rem;
+    right: 2rem;
+    top: 1.2rem;
     cursor: pointer;
   }
 
   .biodata {
+    position: relative;
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
-    height: 90vh;
+    max-height: 90vh;
     margin: auto;
     gap: 2rem;
     background-color: white;
     padding: 4rem;
     overflow-y: scroll;
+    border-radius: 8px;
 
     span {
       color: red;
@@ -612,12 +651,12 @@
     font-weight: 200;
   }
 
-  .conference > h1 {
+  .conference>h1 {
     font-size: 30px;
     font-weight: 600;
   }
 
-  .conference > h2 {
+  .conference>h2 {
     font-size: 30px;
     font-weight: 600;
   }
@@ -641,12 +680,12 @@
     grid-gap: 4rem;
   }
 
-  .register > h1 {
+  .register>h1 {
     font-size: 18px;
     font-weight: 500;
   }
 
-  .register > .btn {
+  .register>.btn {
     padding: 16px, 32px, 16px, 32px;
   }
 
@@ -667,7 +706,7 @@
     margin: auto;
   }
 
-  .progamEvent > h2 {
+  .progamEvent>h2 {
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -676,7 +715,7 @@
     line-height: 17px;
   }
 
-  .inner > p {
+  .inner>p {
     margin-bottom: 0.5rem;
   }
 
@@ -701,7 +740,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 95vh;
+      max-height: 95vh;
       padding: 1.5rem;
       border-radius: 0.5rem;
     }
@@ -721,13 +760,6 @@
 
     .modalPic {
       margin-top: 8rem;
-    }
-
-    .imgModal {
-      position: absolute;
-      right: 9rem;
-      top: 6.2rem;
-      cursor: pointer;
     }
   }
 }
@@ -754,8 +786,9 @@
   }
 
   .guest {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    padding: 0px;
   }
 
   .register {
@@ -766,7 +799,7 @@
     grid-gap: 0.5rem;
   }
 
-  .register > h1 {
+  .register>h1 {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -806,22 +839,21 @@
     font-family: "Graphik";
 
     .biodata {
-      display: flex;
-      flex-direction: column;
+      display: block;
       width: 100%;
-      height: 95vh;
+      max-height: 95vh;
       padding: 1rem;
       border-radius: 0.5rem;
     }
 
     h3 {
-      font-size: 25px;
+      font-size: 24px;
       line-height: 30px;
       color: #11202d;
     }
 
     h4 {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 400;
       line-height: 25px;
       color: #11202d;
@@ -830,7 +862,7 @@
     .imgModal {
       position: absolute;
       right: 1rem;
-      top: 6.2rem;
+      top: 0.6rem;
     }
 
     .modalPic {
@@ -941,6 +973,60 @@
         /* 125% */
         letter-spacing: 0.32px;
       }
+
+      .btn_drop {
+        height: 46px;
+        border: 1px solid #ced4da;
+        font-family: 'Graphik';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 125% */
+        letter-spacing: 0.32px;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: initial !important;
+        }
+      }
+
+      .dropdown_menu {
+        min-width: 80px !important;
+        max-height: 200px !important;
+        overflow-y: scroll;
+      }
+
     }
+  }
+}
+
+.country_icon {
+  width: 20px;
+  height: 20px;
+}
+
+.hosts {
+  margin-top: 37px;
+
+  h6 {
+    color: #11202D;
+    font-family: 'Graphik';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    /* 122.222% */
+  }
+
+  p {
+    color: #11202D;
+    font-family: 'Graphik';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0 !important;
   }
 }

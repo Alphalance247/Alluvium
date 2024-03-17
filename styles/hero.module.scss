@@ -93,23 +93,23 @@
         justify-content: center;
         align-items: center;
         gap: 56px;
-    
+
         .badges {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 24px;
-    
+
             .aws_cloud {
                 width: 98px !important;
                 height: 98px !important;
             }
-    
+
             .stroke {
                 border: 3px solid white !important;
                 border-radius: 50%;
             }
-    
+
             @media screen and (max-width: 576px) {
                 flex-wrap: wrap;
                 gap: 56px;
