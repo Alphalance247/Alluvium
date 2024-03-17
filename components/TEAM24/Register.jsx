@@ -1,15 +1,23 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import styles from "../../styles/team.module.scss";
 import Input from "./Input";
+import { Country } from "country-state-city";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 const Register = () => {
+  const [country] = useState(Country.getAllCountries());
+
   const [form, setForm] = useState({
     firstname: "",
     lastname: "",
     email: "",
     country: "",
     number: "",
+    receiveMail: "",
   });
+
+  const [phoneNumber, setPhone] = useState();
 
   const [formError, setFormErrors] = useState({
     firstname: false,
@@ -18,6 +26,7 @@ const Register = () => {
     country: false,
     number: false,
   });
+  const { receiveMail } = form;
   console.log(form);
 
   const handleFormSubmit = (e) => {
@@ -45,7 +54,16 @@ const Register = () => {
     if (hasErrors) {
       setFormErrors(errors);
     } else {
-      alert("successfully submitted");
+      alert("Thank you, your response has been recorded...");
+      setForm({
+        ...form,
+        email: "",
+        firstname: "",
+        lastname: "",
+        number: "",
+        country: "",
+        receiveMail: "",
+      });
     }
   };
 
@@ -53,6 +71,10 @@ const Register = () => {
     const { name } = e.target;
     setForm({ ...form, [e.target.name]: e.target.value });
     setFormErrors({ ...formError, [name]: false });
+  };
+
+  const handleNumber = (value) => {
+    setPhone(value);
   };
 
   return (
@@ -63,6 +85,7 @@ const Register = () => {
         register for the Atlassian partner event to connect with industry
         experts and gain Insights into the latest trends and developments."
       </p>
+
       <form action="" onSubmit={handleFormSubmit}>
         <p className={styles.basic}>BASIC INFORMATION</p>
         <div className={styles.action}>
@@ -149,11 +172,13 @@ const Register = () => {
               value={form.country}
               onChange={handleChange}
             >
-              <option>Nigeria</option>
-              <option value="China">China</option>
-              <option value="Brazil">Brazil</option>
+              {country.map((el, i) => (
+                <option key={i} value={el.name}>
+                  {el.name}
+                </option>
+              ))}
             </select>
-
+            ;
             {formError.country && (
               <p style={{ color: "red" }}>Country is Required</p>
             )}
@@ -172,7 +197,6 @@ const Register = () => {
               formError={formError.email}
               onChange={handleChange}
             />
-
             {formError.email && (
               <p style={{ color: "red" }}>Please Input a valid mail</p>
             )}
@@ -186,13 +210,16 @@ const Register = () => {
           <div>
             <input
               type="radio"
-              name="yes"
+              name="receiveMail"
               id="Yes"
+              value="yes"
               style={{
                 fontSize: "16px",
                 lineHeight: "20px",
                 marginRight: ".3rem",
               }}
+              checked={receiveMail === "yes"}
+              onChange={handleChange}
             />
             <label htmlFor="Yes" style={{ color: "#666666" }}>
               Yes
@@ -201,19 +228,30 @@ const Register = () => {
           <div>
             <input
               type="radio"
-              name="no"
+              name="receiveMail"
               id="No"
+              value="no"
+              checked={receiveMail === "no"}
               style={{
                 fontSize: "16px",
                 lineHeight: "20px",
                 marginRight: ".3rem",
               }}
+              onChange={handleChange}
             />
             <label htmlFor="No" style={{ color: "#666666" }}>
               No
             </label>
           </div>
         </div>
+        <PhoneInput
+          placeholder="ENTER PHONE NUMBER"
+          international
+          defaultCountry="US"
+          value={phoneNumber}
+          onChange={handleNumber}
+          className={styles.phoneInputInput}
+        />
         <div className={styles.button}>
           <button>Register</button>
         </div>
