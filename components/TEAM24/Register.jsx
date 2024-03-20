@@ -148,34 +148,6 @@ const Register = () => {
             <label htmlFor="number">Phone Number</label>
 
             <br />
-            {/* <div className={styles.selectDiv}>
-              <select
-                name="select"
-                id="select"
-                value=""
-                className={styles.selectOption}
-                onChange={handleChange}
-              >
-                <option value="+234" className="text-[#313131]">
-                  (+234)
-                </option>
-                <option value="+237" className="text-[#313131]">
-                  (+237)
-                </option>
-              </select>
-              <input
-                type="number"
-                name="number"
-                id="number"
-                placeholder="08145686888"
-                value={form.number}
-                className={`${styles.selectInput} ${
-                  formError.number ? styles.error : ""
-                }`}
-                onChange={handleChange}
-              />
-            </div> */}
-            {/* <CountryCode /> */}
 
             <PhoneInput
               placeholder="8140686688"
@@ -283,13 +255,17 @@ const Register = () => {
         <div className={styles.incentives}>
           <div className={styles.forwardtext}>
             <div className={styles.souvenirHead}>
-              <Image
-                width={40}
-                height={40}
-                src="/assets/team2024/giftw.svg"
-                alt="gift"
-              />
-              <p className={styles.chooseSourvenir}>Choose Your Souvenir!</p>
+              <div>
+                <Image
+                  width={40}
+                  height={40}
+                  src="/assets/team2024/giftw.svg"
+                  alt="gift"
+                />
+              </div>
+              <div>
+                <p className={styles.chooseSourvenir}>Choose Your Souvenir!</p>
+              </div>
             </div>
             <p className={styles.appreciate}>
               Congratulations on taking the first step towards registering for
@@ -301,7 +277,7 @@ const Register = () => {
 
           <div className={styles.incentiveStyle}>
             {IncentiveData.map((data) => (
-              <div className={styles.encap}>
+              <div className={styles.encap} key={data.id}>
                 <div className={styles.wrapper}>
                   <img
                     width={442}
@@ -320,7 +296,7 @@ const Register = () => {
 
                   <input
                     type="checkbox"
-                    name="gele"
+                    name={data.inputName}
                     id="checkbox"
                     value={data.inputValue}
                     style={{ transform: "scale(2)" }}

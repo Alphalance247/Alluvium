@@ -40,13 +40,21 @@ const EventDetails = () => {
       <div className={styles.imagesPosition}>
         <div className={styles.positioning1}>
           <Image
-            src="/assets/team2024/bluerect.png"
+            src="/assets/team2024/PrevTeam.png"
             alt="event"
-            width={467}
-            height={407}
+            width={450}
+            height={450}
           />
         </div>
         <div className={styles.positioning2}>
+          <Image
+            src="/assets/team2024/prevshap.png"
+            alt="event"
+            width={295}
+            height={540}
+          />
+        </div>
+        {/* <div className={styles.positioning2}>
           <Image
             src="/assets/team2024/event.png"
             alt="event"
@@ -61,7 +69,7 @@ const EventDetails = () => {
             width={467}
             height={407}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

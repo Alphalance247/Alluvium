@@ -1,7 +1,7 @@
 const IncentiveData = [
   {
     id: 1,
-    image: "/assets/team2024/fila.png",
+    image: "/assets/team2024/gele.png",
     incentiveType: "GELE",
     incentiveDescription:
       "Traditional headpiece worn by women. Gele is not just afashion accessory but a cultural artifact that embodies the beauty, elegance, and heritage of a Woman",
