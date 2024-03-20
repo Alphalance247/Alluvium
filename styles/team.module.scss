@@ -346,15 +346,83 @@
         color: #11202d;
       }
     }
+
+    .incentives {
+      margin-top: 3rem;
+      .forwardtext {
+        color: white;
+        margin-bottom: 3rem;
+        .souvenirHead {
+          display: flex;
+          margin-bottom: 1rem;
+          align-items: center;
+          column-gap: 1rem;
+
+          .chooseSourvenir {
+            font-size: 20px;
+            line-height: 20px;
+            font-weight: 600;
+          }
+        }
+        .appreciate {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 600;
+        }
+      }
+
+      .incentiveStyle {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .encap {
+          width: 442px;
+          height: 683px;
+          margin: auto;
+        }
+
+        .incentiveContent {
+          display: flex;
+          background: white;
+          column-gap: 3rem;
+          align-items: flex-start;
+          color: black;
+          padding: 3rem 1.5rem 1.5rem 1.5rem;
+          margin-top: 0;
+
+          .firtsP {
+            font-size: 36px;
+            line-height: 35px;
+            font-weight: 600;
+          }
+
+          .secondP {
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 27px;
+          }
+        }
+      }
+    }
   }
 }
 
-// .phoneInputInput {
-//   width: 100%;
-//   padding: 0.5rem;
-//   outline: none;
-//   border: 2px solid #c2c2c2;
-//   border-radius: 0 0.5rem 0.5rem 0;
-//   background: #11202d;
-//   color: white;
-// }
+.PhoneInput input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 2px solid #c2c2c2;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: #11202d;
+  color: white;
+}
+
+.PhoneInput > div {
+  outline: none;
+  border: 2px solid #c2c2c2;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background: #11202d;
+  color: white;
+  padding: 0.5rem;
+  margin-right: 0;
+}

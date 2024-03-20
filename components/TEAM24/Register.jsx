@@ -3,31 +3,38 @@ import styles from "../../styles/team.module.scss";
 import Input from "./Input";
 import { Country } from "country-state-city";
 import "react-phone-number-input/style.css";
-import PhoneInput from "react-phone-number-input";
+import PhoneInput, { getCountryCallingCode } from "react-phone-number-input";
+import Image from "next/image";
+import IncentiveData from "./IncentiveData";
 
 const Register = () => {
   const [country] = useState(Country.getAllCountries());
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneError, setPhoneError] = useState(false);
+
+  const phonePattern = /^\+\d{1,13}$/;
 
   const [form, setForm] = useState({
     firstname: "",
     lastname: "",
     email: "",
     country: "",
-    number: "",
     receiveMail: "",
+    // phoneNumber: "",
   });
-
-  const [phoneNumber, setPhone] = useState();
 
   const [formError, setFormErrors] = useState({
     firstname: false,
     lastname: false,
     email: false,
     country: false,
-    number: false,
+    phoneNumberError: false,
   });
+
   const { receiveMail } = form;
+
   console.log(form);
+  console.log(form.phoneNumber);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -49,10 +56,22 @@ const Register = () => {
           hasErrors = true;
         }
       }
+
+      //check number format
+
+      // if (field === "phoneNumber" && form.phoneNumber) {
+      //   if (!phonePattern.test(form.phoneNumber)) {
+      //     errors[field] = true;
+      //     hasErrors = true;
+      //   }
+      // }
     }
+    if (!phonePattern.test(phoneNumber)) setPhoneError(true);
+    else setPhoneError(false);
 
     if (hasErrors) {
       setFormErrors(errors);
+      // setPhoneError(errors);
     } else {
       alert("Thank you, your response has been recorded...");
       setForm({
@@ -60,7 +79,7 @@ const Register = () => {
         email: "",
         firstname: "",
         lastname: "",
-        number: "",
+        // number: "",
         country: "",
         receiveMail: "",
       });
@@ -74,7 +93,8 @@ const Register = () => {
   };
 
   const handleNumber = (value) => {
-    setPhone(value);
+    setPhoneNumber(value);
+    setPhoneError(false);
   };
 
   return (
@@ -128,7 +148,7 @@ const Register = () => {
             <label htmlFor="number">Phone Number</label>
 
             <br />
-            <div className={styles.selectDiv}>
+            {/* <div className={styles.selectDiv}>
               <select
                 name="select"
                 id="select"
@@ -154,10 +174,27 @@ const Register = () => {
                 }`}
                 onChange={handleChange}
               />
-            </div>
-            {formError.number && (
-              <p style={{ color: "red" }}>Number is Required</p>
-            )}
+            </div> */}
+            {/* <CountryCode /> */}
+
+            <PhoneInput
+              placeholder="8140686688"
+              international
+              defaultCountry="NG"
+              value={phoneNumber}
+              onChange={handleNumber}
+              className={`${styles.PhoneInput} ${styles.PhoneInputCountry}`}
+              numberInputProps={{
+                className: phoneError ? styles.error : "",
+              }}
+              countrySelectProps={{
+                className: phoneError ? styles.error : "",
+              }}
+            />
+
+            <p style={{ color: "red" }}>
+              {phoneError ? "Please Enter a Valid Number" : ""}
+            </p>
           </div>
 
           <div>
@@ -178,7 +215,6 @@ const Register = () => {
                 </option>
               ))}
             </select>
-            ;
             {formError.country && (
               <p style={{ color: "red" }}>Country is Required</p>
             )}
@@ -244,14 +280,57 @@ const Register = () => {
             </label>
           </div>
         </div>
-        <PhoneInput
-          placeholder="ENTER PHONE NUMBER"
-          international
-          defaultCountry="US"
-          value={phoneNumber}
-          onChange={handleNumber}
-          className={styles.phoneInputInput}
-        />
+        <div className={styles.incentives}>
+          <div className={styles.forwardtext}>
+            <div className={styles.souvenirHead}>
+              <Image
+                width={40}
+                height={40}
+                src="/assets/team2024/giftw.svg"
+                alt="gift"
+              />
+              <p className={styles.chooseSourvenir}>Choose Your Souvenir!</p>
+            </div>
+            <p className={styles.appreciate}>
+              Congratulations on taking the first step towards registering for
+              Team 24! As a token of our appreciation for your interest and
+              participation, we're excited to offer you the opportunity to
+              select an incentive of your choice.
+            </p>
+          </div>
+
+          <div className={styles.incentiveStyle}>
+            {IncentiveData.map((data) => (
+              <div className={styles.encap}>
+                <div className={styles.wrapper}>
+                  <img
+                    width={442}
+                    height={430}
+                    src={data.image}
+                    alt={data.alt}
+                  />
+                </div>
+                <div className={styles.incentiveContent}>
+                  <div className={styles.content}>
+                    <p className={styles.firtsP}>{data.incentiveType}</p>
+                    <p className={styles.secondP}>
+                      {data.incentiveDescription}
+                    </p>
+                  </div>
+
+                  <input
+                    type="checkbox"
+                    name="gele"
+                    id="checkbox"
+                    value={data.inputValue}
+                    style={{ transform: "scale(2)" }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className={styles.button}>
           <button>Register</button>
         </div>

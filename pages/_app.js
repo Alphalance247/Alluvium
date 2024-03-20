@@ -6,7 +6,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { ToastProvider } from "react-toast-notifications";
 import "bootstrap/dist/css/bootstrap.css";
-import '../styles/globals.scss';
+import "../styles/globals.scss";
+import "../styles/globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
