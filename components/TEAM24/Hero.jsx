@@ -45,20 +45,6 @@ const Hero = ({}) => {
             </p>
             <button onClick={handdleClick}>Register</button>
           </div>
-          {/* <div
-            style={{
-              position: "absolute",
-              zIndex: "30",
-              bottom: "0",
-            }}
-          >
-            <Image
-              src="/assets/team2024/shap.png"
-              width={1400}
-              height={200}
-              alt="shapes"
-            />
-          </div> */}
         </div>
       </section>
       <section className={styles.section2}>
@@ -68,7 +54,7 @@ const Hero = ({}) => {
           teamwork and innovation at Vegas on April 30th - May 2nd. Discover our
           exceptional Atlassian solutions firsthand and engage with our
           passionate team, who will be ready to share insights, provide expert
-          guidance, and help you up your team game. Join us at team ‘24 where
+          guidance, and help you up your team game. Join us at team‘24 where
           cultures converge and ideas flourish. Together, let's create a
           memorable event filled with meaningful connections, transformative
           experiences, and a shared vision for a brighter future. We can't wait

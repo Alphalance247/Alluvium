@@ -50,26 +50,10 @@ const EventDetails = () => {
           <Image
             src="/assets/team2024/prevshap.png"
             alt="event"
-            width={295}
-            height={540}
+            width={300}
+            height={520}
           />
         </div>
-        {/* <div className={styles.positioning2}>
-          <Image
-            src="/assets/team2024/event.png"
-            alt="event"
-            width={467}
-            height={450}
-          />
-        </div>
-        <div className={styles.positioning3}>
-          <Image
-            src="/assets/team2024/orangerect.png"
-            alt="event"
-            width={467}
-            height={407}
-          />
-        </div> */}
       </div>
     </section>
   );

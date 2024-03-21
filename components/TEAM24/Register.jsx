@@ -3,7 +3,7 @@ import styles from "../../styles/team.module.scss";
 import Input from "./Input";
 import { Country } from "country-state-city";
 import "react-phone-number-input/style.css";
-import PhoneInput, { getCountryCallingCode } from "react-phone-number-input";
+import PhoneInput from "react-phone-number-input";
 import Image from "next/image";
 import IncentiveData from "./IncentiveData";
 
@@ -11,6 +11,7 @@ const Register = () => {
   const [country] = useState(Country.getAllCountries());
   const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneError, setPhoneError] = useState(false);
+  const [checkbox, setCheckbox] = useState("");
 
   const phonePattern = /^\+\d{1,13}$/;
 
@@ -19,8 +20,8 @@ const Register = () => {
     lastname: "",
     email: "",
     country: "",
-    receiveMail: "",
-    // phoneNumber: "",
+    receiveMail: "no",
+    // checkbox: "",
   });
 
   const [formError, setFormErrors] = useState({
@@ -34,7 +35,6 @@ const Register = () => {
   const { receiveMail } = form;
 
   console.log(form);
-  console.log(form.phoneNumber);
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -56,22 +56,12 @@ const Register = () => {
           hasErrors = true;
         }
       }
-
-      //check number format
-
-      // if (field === "phoneNumber" && form.phoneNumber) {
-      //   if (!phonePattern.test(form.phoneNumber)) {
-      //     errors[field] = true;
-      //     hasErrors = true;
-      //   }
-      // }
     }
     if (!phonePattern.test(phoneNumber)) setPhoneError(true);
     else setPhoneError(false);
 
     if (hasErrors) {
       setFormErrors(errors);
-      // setPhoneError(errors);
     } else {
       alert("Thank you, your response has been recorded...");
       setForm({
@@ -79,9 +69,8 @@ const Register = () => {
         email: "",
         firstname: "",
         lastname: "",
-        // number: "",
         country: "",
-        receiveMail: "",
+        receiveMail: "no",
       });
     }
   };
@@ -95,6 +84,10 @@ const Register = () => {
   const handleNumber = (value) => {
     setPhoneNumber(value);
     setPhoneError(false);
+  };
+
+  const handleIncentives = (e) => {
+    setCheckbox(e.target.value);
   };
 
   return (
@@ -278,14 +271,7 @@ const Register = () => {
           <div className={styles.incentiveStyle}>
             {IncentiveData.map((data) => (
               <div className={styles.encap} key={data.id}>
-                <div className={styles.wrapper}>
-                  <img
-                    width={442}
-                    height={430}
-                    src={data.image}
-                    alt={data.alt}
-                  />
-                </div>
+                <img width={442} height={430} src={data.image} alt={data.alt} />
                 <div className={styles.incentiveContent}>
                   <div className={styles.content}>
                     <p className={styles.firtsP}>{data.incentiveType}</p>
@@ -298,8 +284,11 @@ const Register = () => {
                     type="checkbox"
                     name={data.inputName}
                     id="checkbox"
+                    required={!checkbox}
+                    checked={checkbox === `${data.inputValue}`}
                     value={data.inputValue}
                     style={{ transform: "scale(2)" }}
+                    onChange={handleIncentives}
                   />
                 </div>
               </div>
