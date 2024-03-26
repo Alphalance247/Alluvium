@@ -21,7 +21,6 @@ const Register = () => {
     email: "",
     country: "",
     receiveMail: "no",
-    // checkbox: "",
   });
 
   const [formError, setFormErrors] = useState({
@@ -94,9 +93,8 @@ const Register = () => {
     <section className={styles.section3} id="register-section">
       <h4>Register Now</h4>
       <p className={styles.secure}>
-        Secure your spot and join us for an unforgettable learning experience:
-        register for the Atlassian partner event to connect with industry
-        experts and gain Insights into the latest trends and developments."
+        Secure your souvenir now and get the chance to experience the love from
+        Africa and the Alluvium difference.
       </p>
 
       <form action="" onSubmit={handleFormSubmit}>
@@ -261,9 +259,9 @@ const Register = () => {
               </div>
             </div>
             <p className={styles.appreciate}>
-              Congratulations on taking the first step towards registering for
-              Team 24! As a token of our appreciation for your interest and
-              participation, we're excited to offer you the opportunity to
+              Congratulations on taking the first step towards securing your
+              spot at Booth 53! As a token of our appreciation for your interest
+              and participation, we're excited to offer you the opportunity to
               select an incentive of your choice.
             </p>
           </div>

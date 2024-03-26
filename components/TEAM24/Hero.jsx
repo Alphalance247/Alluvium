@@ -1,7 +1,5 @@
-import { useRef } from "react";
 import styles from "../../styles/team.module.scss";
 import Image from "next/image";
-// import registerRef from './Register'
 
 const Hero = ({}) => {
   const handdleClick = (e) => {
@@ -21,7 +19,6 @@ const Hero = ({}) => {
           }}
         >
           <div
-            //   className="absolute top-0 left-0 w-[100%] h-[100%] z-[10]"
             className={styles.overlay}
             style={{
               backgroundColor: "#11202D",
@@ -29,21 +26,24 @@ const Hero = ({}) => {
           ></div>
 
           <div
-            //   className=" text-black text-center absolute z-20 top-[50%] left-[50%]"
             className={styles.content}
             style={{ transform: " translate(-50%, -50%)" }}
           >
-            <Image
-              src="/assets/team2024/team24.jpg"
-              alt="team"
-              width={410}
-              height={150}
-              className={styles.imageBorder}
-            />
+            <h1 className={styles.heading}>
+              Get Ready for Alluvium's Spectacular Presence at
+            </h1>
+            <div className={styles.imageBorders}>
+              <Image
+                src="/assets/team2024/team.png"
+                alt="team"
+                width={337}
+                height={96}
+                className={styles.imageBorder}
+              />
+            </div>
             <p>
               APRIL 30 - MAY 2 <span>|</span> Las Vegas and digitally
             </p>
-            <button onClick={handdleClick}>Register</button>
           </div>
         </div>
       </section>
@@ -64,8 +64,8 @@ const Hero = ({}) => {
         <div>
           <img
             src="/assets/team2024/Frame.png"
-            width={862}
-            height={88}
+            width={379}
+            height={105}
             alt="frames"
             className={styles.img}
           />
