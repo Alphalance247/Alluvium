@@ -10,6 +10,7 @@ const Input = ({ type, name, id, placeholder, value, formError, onChange }) => {
       value={value}
       className={`${styles.inputStyles} ${formError ? styles.error : ""}`}
       onChange={onChange}
+      autoComplete={"false"}
     />
   );
 };

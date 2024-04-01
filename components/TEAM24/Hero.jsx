@@ -26,7 +26,7 @@ const Hero = ({}) => {
           ></div>
 
           <div
-            className={styles.content}
+            className={`container mx-auto ${styles.content}`}
             style={{ transform: " translate(-50%, -50%)" }}
           >
             <h1 className={styles.heading}>

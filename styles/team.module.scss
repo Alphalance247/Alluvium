@@ -27,7 +27,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    // width: 100%;
     text-align: center;
     color: black;
     z-index: 20;
@@ -41,11 +41,18 @@
       font-weight: bold;
       line-height: 40px;
       color: white;
-      width: 716px;
+      // width: 716px;
       margin: auto;
+      @media screen and (max-width: 576px) {
+        font-size: 32px;
+        line-height: 36px;
+      }
     }
     .imageBorders {
       margin-bottom: 56px;
+      @media screen and (max-width: 576px) {
+        margin: 0;
+      }
     }
     .imageBorder {
       border-radius: 16px solid white;
@@ -65,7 +72,6 @@
 
       @media screen and (max-width: 576px) {
         font-size: 14px;
-        margin-top: 2rem;
       }
       span {
         margin-left: 0.7rem;
@@ -126,6 +132,7 @@
 
     @media screen and (max-width: 992px) {
       font-size: 18px;
+      line-height: 24px;
     }
 
     @media screen and (max-width: 576px) {
@@ -239,14 +246,21 @@
 
 .section3 {
   background: #11202d;
-  padding: 4rem 12rem;
 
-  @media screen and (max-width: 992px) {
-    padding: 2rem;
-  }
+  &>div{
+    padding: 4rem 12rem;
 
-  @media screen and (max-width: 576px) {
-    padding: 1rem;
+    @media screen and (max-width: 1400px) {
+      padding: 4rem;
+    }
+    
+    @media screen and (max-width: 992px) {
+      padding: 3rem 0;
+    }
+  
+    @media screen and (max-width: 576px) {
+      padding: 3rem 1rem;
+    }
   }
 
   h4 {
@@ -264,7 +278,6 @@
     font-size: 1rem;
     color: white;
     line-height: 160%;
-    width: 800px;
     margin: auto;
 
     @media screen and (max-width: 576px) {
@@ -308,8 +321,8 @@
       outline: none;
       border: 2px solid #c2c2c2;
       border-radius: 0.5rem;
-      background: #11202d;
-      color: white;
+      background: white;
+      color: #11202d !important;
     }
 
     .error {
@@ -351,10 +364,10 @@
       width: 100%;
       padding: 0.7rem;
       outline: none;
-      background: #11202d;
+      background: white;
       border: 2px solid #c2c2c2;
       border-radius: 0.5rem;
-      color: white;
+      color: #11202d;
     }
     .error {
       border: 2px solid orangered;
@@ -406,6 +419,7 @@
       .incentiveStyle {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
 
         @media screen and (max-width: 992px) {
           grid-template-columns: repeat(2, 1fr);
@@ -419,6 +433,10 @@
 
         .encap {
           width: 440px;
+
+          @media screen and (max-width: 1200px) {
+            width: 100%;
+          }
 
           @media screen and (max-width: 992px) {
             width: 100%;
@@ -490,16 +508,16 @@
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0 0.5rem 0.5rem 0;
-  background: #11202d;
-  color: white;
+  background: white;
+  color: #11202d;
 }
 
 .PhoneInput > div {
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0.5rem 0 0 0.5rem;
-  background: #11202d;
-  color: white;
+  background: white;
+  color: #11202d;
   padding: 0.5rem;
   margin-right: 0;
 }
