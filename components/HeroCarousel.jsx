@@ -13,9 +13,9 @@ export default function () {
         <>
             <div className="container-fluid p-0">
                 <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true} swipe >
-                    <div>
+                    {/* <div>
                         <EventHero showCountdown={false} />
-                    </div>
+                    </div> */}
                     <div>
                         <Hero />
                     </div>
