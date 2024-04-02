@@ -254,7 +254,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                     lineHeight: "20px",
                     marginRight: ".3rem",
                   }}
-                  checked={receiveMail === "yes"}
+                  // checked={receiveMail === "yes"}
                   onChange={handleChange}
                 />
                 <label htmlFor="Yes" style={{ color: "#666666" }}>
@@ -267,7 +267,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                   name="receiveMail"
                   id="No"
                   value="no"
-                  checked={receiveMail === "no"}
+                  // checked={receiveMail === "no"}
                   style={{
                     fontSize: "16px",
                     lineHeight: "20px",
