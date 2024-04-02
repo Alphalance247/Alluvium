@@ -6,7 +6,7 @@ const IncentiveData = [
     incentiveDescription:
       "Traditional headpiece worn by women. Gele is not just afashion accessory but a cultural artifact that embodies the beauty, elegance, and heritage of a Woman",
     inputType: "checkbox",
-    inputName: "checkbox",
+    inputName: "souvenir",
     inputValue: "gele",
     alt: "gele",
   },
@@ -17,7 +17,7 @@ const IncentiveData = [
     incentiveDescription:
       "A traditional head covering worn by men in the Yoruba culture of Nigeria and some other West African countries. Fila is a cultural emblem that embodies values.",
     inputType: "checkbox",
-    inputName: "checkbox",
+    inputName: "souvenir",
     inputValue: "fila",
     alt: "fila",
   },
