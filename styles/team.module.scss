@@ -43,6 +43,11 @@
       color: white;
       width: 716px;
       margin: auto;
+
+      @media screen and (max-width: 576px) {
+        width: fit-content;
+        font-size: 25px;
+      }
     }
     .imageBorders {
       margin-bottom: 56px;
@@ -394,6 +399,7 @@
             font-size: 20px;
             line-height: 20px;
             font-weight: 600;
+            margin-bottom: 0px;
           }
         }
         .appreciate {

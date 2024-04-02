@@ -249,14 +249,13 @@ const Register = () => {
               <div>
                 <Image
                   width={40}
-                  height={40}
+                  height={60}
                   src="/assets/team2024/giftw.svg"
                   alt="gift"
                 />
               </div>
-              <div>
-                <p className={styles.chooseSourvenir}>Choose Your Souvenir!</p>
-              </div>
+
+              <p className={styles.chooseSourvenir}>Choose Your Souvenir!</p>
             </div>
             <p className={styles.appreciate}>
               Congratulations on taking the first step towards securing your
