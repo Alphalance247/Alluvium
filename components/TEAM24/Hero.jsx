@@ -15,40 +15,81 @@ const Hero = ({}) => {
         <div
           className={styles.hero}
           style={{
-            backgroundImage: 'url("/assets/team2024/heroImg.png")',
+            background: "#11202D",
           }}
         >
           <div
-            className={styles.overlay}
-            style={{
-              backgroundColor: "#11202D",
-            }}
-          ></div>
-
-          <div
-            className={`container mx-auto ${styles.content}`}
-            style={{ transform: " translate(-50%, -50%)" }}
+            className={`container mx-auto position-relative ${styles.centercontent}`}
           >
-            <h1 className={styles.heading}>
-              Get Ready for Alluvium's Spectacular Presence at
-            </h1>
-            <div className={styles.imageBorders}>
-              <Image
-                src="/assets/team2024/team.png"
-                alt="team"
-                width={337}
-                height={96}
-                className={styles.imageBorder}
+            <div
+              className={`container mx-auto ${styles.content}`}
+              style={{ transform: " translate(-50%, -50%)" }}
+            >
+              <h1 className={styles.heading}>
+                Get Ready for Alluvium's Spectacular Presence at
+              </h1>
+              <div className={styles.imageBorders}>
+                <Image
+                  src="/assets/team2024/team.png"
+                  alt="team"
+                  width={337}
+                  height={96}
+                  className={styles.imageBorder}
+                />
+              </div>
+              <p>
+                APRIL 30 - MAY 2 <span>|</span> Las Vegas and digitally
+              </p>
+            </div>
+            <div style={{ position: "absolute", bottom: "0", left: "0" }}>
+              <img
+                src="/assets/team2024/men.png"
+                width={400}
+                height={350}
+                alt=""
+                className={styles.menCap}
               />
             </div>
-            <p>
-              APRIL 30 - MAY 2 <span>|</span> Las Vegas and digitally
-            </p>
+            <div style={{ position: "absolute", bottom: "0", right: "0" }}>
+              <img
+                src="/assets/team2024/ladies.png"
+                width={400}
+                height={350}
+                alt=""
+                className={styles.menCap}
+              />
+            </div>
+            <div
+              style={{ position: "absolute", top: "0", left: "17rem" }}
+              className={styles.curveright}
+            >
+              <img
+                src="/assets/team2024/right.png"
+                height={180}
+                alt=""
+                className={styles.curve}
+              />
+            </div>
+            <div
+              style={{ position: "absolute", top: "0", right: "17rem" }}
+              className={styles.curveleft}
+            >
+              <img
+                src="/assets/team2024/left.png"
+                height={180}
+                alt=""
+                className={styles.curve}
+              />
+            </div>
           </div>
         </div>
+        <div
+          style={{ background: "#009BC0", width: "100%", height: "48px" }}
+          className={styles.bordershape}
+        ></div>
       </section>
       <section className={styles.section2}>
-        <h2>Alluvium, With Love From Africa!</h2>
+        <h2>From Africa with Love</h2>
         <p>
           Experience the love from Africa as we unite to celebrate the power of
           teamwork and innovation at Vegas on April 30th - May 2nd. Discover our
@@ -64,8 +105,8 @@ const Hero = ({}) => {
         <div>
           <img
             src="/assets/team2024/Frame.png"
-            width={379}
-            height={105}
+            width={415}
+            height={69}
             alt="frames"
             className={styles.img}
           />
