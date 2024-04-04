@@ -89,7 +89,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
             phone_number: "",
             souvenir: "",
           });
-          setRegistrationLimitExceeded(res.data.max_count_reached);
+          // setRegistrationLimitExceeded(res.data.max_count_reached);
         })
         .catch((err) => {
           setLoading(false);
