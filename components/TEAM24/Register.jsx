@@ -246,15 +246,15 @@ const Register = ({ setRegistrationLimitExceeded }) => {
               <div>
                 <input
                   type="radio"
-                  name="receiveMail"
+                  name="email_sub"
                   id="Yes"
-                  value="yes"
+                  value={"true"}
                   style={{
                     fontSize: "16px",
                     lineHeight: "20px",
                     marginRight: ".3rem",
                   }}
-                  // checked={receiveMail === "yes"}
+                  checked={email_sub === true}
                   onChange={handleChange}
                 />
                 <label htmlFor="Yes" style={{ color: "#666666" }}>
@@ -264,10 +264,10 @@ const Register = ({ setRegistrationLimitExceeded }) => {
               <div>
                 <input
                   type="radio"
-                  name="receiveMail"
+                  name="email_sub"
                   id="No"
-                  value="no"
-                  // checked={receiveMail === "no"}
+                  value={"false"}
+                  checked={email_sub === false}
                   style={{
                     fontSize: "16px",
                     lineHeight: "20px",

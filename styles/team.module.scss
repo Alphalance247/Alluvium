@@ -194,11 +194,8 @@
     }
   }
 
-  .img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+  .imgframe {
+    text-align: center;
     @media screen and (max-width: 992px) {
       max-width: 100%;
     }
@@ -321,7 +318,7 @@
 .section3 {
   background: #11202d;
 
-  &>div {
+  & > div {
     padding: 4rem 12rem;
 
     @media screen and (max-width: 1400px) {
@@ -605,7 +602,7 @@
   color: #11202d;
 }
 
-.PhoneInput>div {
+.PhoneInput > div {
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -629,9 +626,8 @@
   }
 }
 
-
 .banner {
-  background-image: url('/assets/team2024/bg.png');
+  background-image: url("/assets/team2024/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -666,7 +662,7 @@
     margin-bottom: 25px;
 
     span {
-      color: #E37915;
+      color: #e37915;
     }
 
     @media screen and (max-width: 576px) {
@@ -679,7 +675,7 @@
     border-radius: 10px;
     padding: 17px 41px;
     text-align: center;
-    background-color: #E37915;
+    background-color: #e37915;
     color: white;
     font-size: 20px;
     letter-spacing: 0.5%;

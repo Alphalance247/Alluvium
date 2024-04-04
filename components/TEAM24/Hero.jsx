@@ -43,7 +43,7 @@ const Hero = ({}) => {
               </p>
             </div>
             <div style={{ position: "absolute", bottom: "0", left: "0" }}>
-              <img
+              <Image
                 src="/assets/team2024/men.png"
                 width={400}
                 height={350}
@@ -52,7 +52,7 @@ const Hero = ({}) => {
               />
             </div>
             <div style={{ position: "absolute", bottom: "0", right: "0" }}>
-              <img
+              <Image
                 src="/assets/team2024/ladies.png"
                 width={400}
                 height={350}
@@ -60,28 +60,6 @@ const Hero = ({}) => {
                 className={styles.menCap}
               />
             </div>
-            {/* <div
-              style={{ position: "absolute", top: "0", left: "17rem" }}
-              className={styles.curveright}
-            >
-              <img
-                src="/assets/team2024/right.png"
-                height={180}
-                alt=""
-                className={styles.curve}
-              />
-            </div>
-            <div
-              style={{ position: "absolute", top: "0", right: "17rem" }}
-              className={styles.curveleft}
-            >
-              <img
-                src="/assets/team2024/left.png"
-                height={180}
-                alt=""
-                className={styles.curve}
-              />
-            </div> */}
           </div>
         </div>
         <div
@@ -105,13 +83,12 @@ const Hero = ({}) => {
             exclusive souvenirs as a special gesture from Alluvium. See you
             there!
           </p>
-          <div>
-            <img
+          <div className={styles.imgframe}>
+            <Image
               src="/assets/team2024/Frame.png"
               width={415}
               height={69}
               alt="frames"
-              className={styles.img}
             />
           </div>
         </div>
