@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-number-input";
 import Image from "next/image";
 import IncentiveData from "./IncentiveData";
 import axios from "axios";
-import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { ToastProvider, useToasts } from "react-toast-notifications";
 
 const Register = ({ setRegistrationLimitExceeded }) => {
   const [country] = useState(Country.getAllCountries());
@@ -23,7 +23,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     email: "",
     country: country[0].name,
     email_sub: false,
-    phone_number: ""
+    phone_number: "",
   });
 
   const [formError, setFormErrors] = useState({
@@ -43,7 +43,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
 
     // Check each field for errors
     for (const field in form) {
-      if (!form[field] && field !== 'email_sub') {
+      if (!form[field] && field !== "email_sub") {
         errors[field] = true;
         hasErrors = true;
       }
@@ -69,10 +69,16 @@ const Register = ({ setRegistrationLimitExceeded }) => {
         .then((res) => {
           setLoading(false);
           if (res.status !== 201) {
-            addToast(res.data.error || "Error occured, please try again or contact Admin", { appearance: 'error' });
+            addToast(
+              res.data.error ||
+                "Error occured, please try again or contact Admin",
+              { appearance: "error" }
+            );
             return;
           }
-          addToast("Registration successful. Thank you, we'll be in touch.", { appearance: 'success' });
+          addToast("Registration successful. Thank you, we'll be in touch.", {
+            appearance: "success",
+          });
           setForm({
             ...form,
             email: "",
@@ -81,20 +87,24 @@ const Register = ({ setRegistrationLimitExceeded }) => {
             country: "",
             email_sub: false,
             phone_number: "",
-            souvenir: ""
+            souvenir: "",
           });
           setRegistrationLimitExceeded(res.data.max_count_reached);
         })
         .catch((err) => {
           setLoading(false);
-          let errMessage = 'Oops something went wrong. Please try again or contact Admin';
+          let errMessage =
+            "Oops something went wrong. Please try again or contact Admin";
           if (err.response.status < 500) {
-            errMessage = err?.response?.data?.error || 'Oops something went wrong. Please try again or contact Admin';
+            errMessage =
+              err?.response?.data?.error ||
+              "Oops something went wrong. Please try again or contact Admin";
             if (err?.response?.data?.max_count_reached) {
-              errMessage = 'Oops. Seems we are not allowed to accept anymore registrations at this time.'
+              errMessage =
+                "Oops. Seems we are not allowed to accept anymore registrations at this time.";
             }
           }
-          addToast(errMessage, { appearance: 'error' });
+          addToast(errMessage, { appearance: "error" });
           return;
         });
     }
@@ -102,8 +112,11 @@ const Register = ({ setRegistrationLimitExceeded }) => {
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
-    setForm((prev) => ({ ...prev, [name]: type === "radio" ? Boolean(value) : value }));
-    setFormErrors(prev => ({ ...prev, [name]: false }));
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === "radio" ? Boolean(value) : value,
+    }));
+    setFormErrors((prev) => ({ ...prev, [name]: false }));
   };
 
   const handleNumber = (value) => {
@@ -117,8 +130,8 @@ const Register = ({ setRegistrationLimitExceeded }) => {
         <div className="container mx-auto">
           <h4>Register Now</h4>
           <p className={styles.secure}>
-            Secure your souvenir now and get the chance to experience the love from
-            Africa and the Alluvium difference.
+            Secure your souvenir now and get the chance to experience the love
+            from Africa and the Alluvium difference.
           </p>
 
           <form action="" onSubmit={handleFormSubmit}>
@@ -190,8 +203,9 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                 <select
                   name="country"
                   id="Country"
-                  className={`${styles.countrySelect} ${formError.country ? styles.error : ""
-                    }`}
+                  className={`${styles.countrySelect} ${
+                    formError.country ? styles.error : ""
+                  }`}
                   value={form.country}
                   onChange={handleChange}
                 >
@@ -226,8 +240,8 @@ const Register = ({ setRegistrationLimitExceeded }) => {
             </div>
             <div>
               <p style={{ color: "white", marginBottom: ".5rem" }}>
-                I agree to receive emails updates from Alluvium about future events,
-                news and announcement
+                I agree to receive emails updates from Alluvium about future
+                events, news and announcement
               </p>
               <div>
                 <input
@@ -252,7 +266,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                   type="radio"
                   name="email_sub"
                   id="No"
-                  value={""}
+                  value={"false"}
                   checked={email_sub === false}
                   style={{
                     fontSize: "16px",
@@ -278,14 +292,16 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                     />
                   </div>
                   <div>
-                    <p className={styles.chooseSourvenir}>Choose Your Souvenir!</p>
+                    <p className={styles.chooseSourvenir}>
+                      Choose Your Souvenir!
+                    </p>
                   </div>
                 </div>
                 <p className={styles.appreciate}>
                   Congratulations on taking the first step towards securing your
-                  spot at Booth 53! As a token of our appreciation for your interest
-                  and participation, we're excited to offer you the opportunity to
-                  select an incentive of your choice.
+                  spot at Booth 53! As a token of our appreciation for your
+                  interest and participation, we're excited to offer you the
+                  opportunity to select an incentive of your choice.
                 </p>
               </div>
 
@@ -293,7 +309,13 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                 {IncentiveData.map((data) => (
                   <div className={styles.encap} key={data.id}>
                     <div className="w-100" height={430}>
-                      <Image width={442} height={430} layout="responsive" src={data.image} alt={data.alt} />
+                      <Image
+                        width={442}
+                        height={430}
+                        layout="responsive"
+                        src={data.image}
+                        alt={data.alt}
+                      />
                     </div>
                     <div className={styles.incentiveContent}>
                       <div className={styles.content}>
@@ -320,7 +342,9 @@ const Register = ({ setRegistrationLimitExceeded }) => {
             </div>
 
             <div className={styles.button}>
-              <button type="submit" disabled={loading}>{loading ? 'Loading...' : 'Register'}</button>
+              <button type="submit" disabled={loading}>
+                {loading ? "Loading..." : "Register"}
+              </button>
             </div>
           </form>
         </div>

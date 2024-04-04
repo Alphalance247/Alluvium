@@ -1,39 +1,82 @@
 .hero {
-  height: 668px;
+  height: 600px;
   position: relative;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 
   @media screen and (max-width: 992px) {
-    height: 600px;
+    height: 500px;
   }
 
   @media screen and (max-width: 576px) {
     height: 450px;
   }
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    opacity: 0.5;
+  .menCap {
+    @media screen and (max-width: 1024px) {
+      width: 200px;
+      height: 150px;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 140px;
+      height: 120px;
+    }
   }
 
+  .curve {
+    height: 130px;
+  }
+
+  .curveright {
+    @media screen and (max-width: 992px) {
+      position: absolute;
+      left: 35rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .curveleft {
+    @media screen and (max-width: 992px) {
+      left: 35rem;
+    }
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+  .centercontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
   .content {
     position: absolute;
     top: 50%;
     left: 50%;
-    // width: 100%;
+    width: 100%;
     text-align: center;
     color: black;
     z-index: 20;
 
-    @media screen and (max-width: 576px) {
-      width: 85%;
+    .withlove {
+      font-size: 2.5rem;
+      color: #ffa900;
+      font-weight: bold;
+      line-height: 2rem;
+
+      @media screen and (max-width: 992px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 1.4rem;
+      }
     }
 
     .heading {
@@ -41,20 +84,32 @@
       font-weight: bold;
       line-height: 40px;
       color: white;
-      // width: 716px;
+      width: 45%;
       margin: auto;
 
+      @media screen and (max-width: 992px) {
+        font-size: 30px;
+        width: 70%;
+      }
+
       @media screen and (max-width: 576px) {
-        font-size: 32px;
-        line-height: 36px;
+        font-size: 1.5rem;
+        width: 95%;
       }
     }
 
     .imageBorders {
       margin-bottom: 56px;
+      margin-top: 0.4rem;
+
+      @media screen and (max-width: 992px) {
+        width: 200px;
+        margin: auto;
+        margin-bottom: 1rem;
+      }
 
       @media screen and (max-width: 576px) {
-        margin: 0;
+        margin: auto;
       }
     }
 
@@ -62,7 +117,7 @@
       border-radius: 16px solid white;
     }
 
-    p {
+    .eventdate {
       color: black;
       font-size: 20px;
       font-weight: 600;
@@ -74,30 +129,21 @@
       border-radius: 2px;
       margin: auto;
 
+      @media screen and (max-width: 992px) {
+        font-size: 18px;
+        margin-top: 0.7rem;
+        padding: 0.8rem;
+        margin-bottom: 6rem;
+      }
+
       @media screen and (max-width: 576px) {
         font-size: 14px;
+        margin-bottom: 6rem;
       }
 
       span {
         margin-left: 0.7rem;
         margin-right: 0.7rem;
-      }
-    }
-
-    button {
-      margin-top: 4rem;
-      padding: 17px 41px;
-      outline: none;
-      border-radius: 10px;
-      border: none;
-      font-weight: 600;
-      font-size: 20px;
-      line-height: 20px;
-      color: #11202d;
-
-      @media screen and (max-width: 576px) {
-        font-size: 17px;
-        margin-top: 2rem;
       }
     }
   }
@@ -106,12 +152,11 @@
 .section2 {
   padding: 70px 102px;
 
-  @media screen and (max-width: 576px) {
-    padding: 1rem;
-  }
-
   @media screen and (max-width: 992px) {
     padding: 1.5rem;
+  }
+  @media screen and (max-width: 576px) {
+    padding: 1rem;
   }
 
   h2 {
@@ -149,11 +194,8 @@
     }
   }
 
-  .img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+  .imgframe {
+    text-align: center;
     @media screen and (max-width: 992px) {
       max-width: 100%;
     }
@@ -165,13 +207,10 @@
 }
 
 .Event {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 2rem;
   padding: 5rem 0px 4rem 5rem;
 
   @media screen and (max-width: 992px) {
-    padding: 1.5rem 0px 1.5rem 1.5rem;
+    padding: 4rem 0px 1.5rem 1.5rem;
   }
 
   @media screen and (max-width: 576px) {
@@ -180,45 +219,66 @@
     padding: 1rem;
   }
 
+  h2 {
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: 992px) {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .EventGuide {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6rem;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  }
+
   .EventTheme {
-    h2 {
-      color: black;
-      font-size: 40px;
-      font-weight: bold;
-      line-height: 30px;
-      margin-bottom: 5rem;
+    display: grid;
+    row-gap: 40px;
 
-      @media screen and (max-width: 576px) {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-      }
+    @media screen and (max-width: 576px) {
+      row-gap: 1.5rem;
+    }
 
-      @media screen and (max-width: 992px) {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
-      }
+    @media screen and (max-width: 992px) {
+      row-gap: 1rem;
     }
 
     h5 {
       font-size: 1.5rem;
       font-weight: 600;
       line-height: 1.8rem;
-      margin-bottom: 1rem;
-
-      @media screen and (max-width: 576px) {
-        font-size: 1rem;
-        margin-bottom: 0.5rem;
-      }
+      margin-bottom: 1.7rem;
 
       @media screen and (max-width: 992px) {
         font-size: 1.2rem;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
       }
     }
 
     p {
       font-size: 16px;
       line-height: 22px;
-      margin-bottom: 2rem;
 
       @media screen and (max-width: 992px) {
         font-size: 14px;
@@ -237,21 +297,20 @@
     position: relative;
 
     @media screen and (max-width: 576px) {
-      position: relative;
-      display: none;
-    }
-
-    .positioning1 {
-      position: absolute;
-      right: 0;
-      top: 5rem;
-      z-index: 10;
     }
 
     .positioning2 {
       position: absolute;
       right: 0;
-      top: 2rem;
+      top: -2.8rem;
+      z-index: -10;
+
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
     }
   }
 }
@@ -259,7 +318,7 @@
 .section3 {
   background: #11202d;
 
-  &>div {
+  & > div {
     padding: 4rem 12rem;
 
     @media screen and (max-width: 1400px) {
@@ -284,6 +343,7 @@
 
     @media screen and (max-width: 576px) {
       font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
   }
 
@@ -291,6 +351,8 @@
     font-size: 1rem;
     color: white;
     line-height: 160%;
+    margin: auto;
+    width: 80%;
     margin: auto;
 
     @media screen and (max-width: 576px) {
@@ -310,6 +372,10 @@
       line-height: 20px;
       margin-top: 4rem;
       margin-bottom: 2rem;
+
+      @media screen and (max-width: 576px) {
+        margin-top: 2rem;
+      }
     }
 
     .action {
@@ -425,6 +491,7 @@
             font-size: 20px;
             line-height: 20px;
             font-weight: 600;
+            margin-bottom: 0px;
           }
         }
 
@@ -432,6 +499,10 @@
           font-size: 16px;
           line-height: 20px;
           font-weight: 600;
+
+          @media screen and (max-width: 576px) {
+            font-size: 14px;
+          }
         }
       }
 
@@ -531,7 +602,7 @@
   color: #11202d;
 }
 
-.PhoneInput>div {
+.PhoneInput > div {
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -541,9 +612,22 @@
   margin-right: 0;
 }
 
+.bordershape {
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 10px;
+  }
+}
+
+.bordershape {
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 10px;
+  }
+}
 
 .banner {
-  background-image: url('/assets/team2024/bg.png');
+  background-image: url("/assets/team2024/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -578,7 +662,7 @@
     margin-bottom: 25px;
 
     span {
-      color: #E37915;
+      color: #e37915;
     }
 
     @media screen and (max-width: 576px) {
@@ -591,7 +675,7 @@
     border-radius: 10px;
     padding: 17px 41px;
     text-align: center;
-    background-color: #E37915;
+    background-color: #e37915;
     color: white;
     font-size: 20px;
     letter-spacing: 0.5%;
