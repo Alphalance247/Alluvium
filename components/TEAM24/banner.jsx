@@ -1,49 +1,50 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles/hero.module.scss";
-import Badges from "../badges"
+import styles from "../../styles/team.module.scss";
 
 const Banner = () => {
   return (
     <>
-      <div style={{color:"white", backgroundImage: "url('assets/team2024/b_g.png')", height:"733px"}}>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8">
+      <div className={styles.banner}>
+        <div className="container mx-auto">
+          <div className="row m-0 p-0">
+            <div className="col-lg-8 p-0">
               <Image
                 src="/assets/team2024/ateam.png"
                 alt="event"
                 width={337}
                 height={150}
-                
-                style={{marginTop:"20px"}}
+                priority
+                loading="eager"
+                style={{ marginBottom: "31px" }}
+                className={styles.back}
               />
 
-              <h1 className="text-bold" style={{width:"413px", fontSize:"64px", marginTop:"20px", letterSpacing:"-1%"}}>
-              Alluvium
-              </h1>
-              <h1 className="text-bold" style={{width:"413px", fontSize:"64px", letterSpacing:"-1%", color:"#E37915"}}>
-              from Africa With Love 
+              <h1 className={styles.heading}>
+                Alluvium,
+                <span> from Africa With Love</span>
               </h1>
 
-            <div>
-            <button className="btn" style={{color:"#fff", backgroundColor:"#E37915", marginBottom:"40px", width:"158px", height:"54px"}}>Register</button>
-            </div>
+              <Link href="/event/team24">
+                <a className={`d-block btn ${styles.btn}`}>
+                  Register
+                </a>
+              </Link>
 
-            <div style={{marginTop:"30px"}}>
-            <Image
-                src="/assets/team2024/badges.png"
-                alt="event"
-                width={415}
-                height={69}
-                
-                
-              />
-            </div>
+              <div>
+                <Image
+                  src="/assets/team2024/badges.png"
+                  alt="event"
+                  width={415}
+                  height={69}
+                  priority
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
+        </div>
       </div>
     </>
   );
