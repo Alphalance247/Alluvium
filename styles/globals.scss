@@ -6,11 +6,11 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   scroll-behavior: smooth;
   transition: 0.2s;
-  font-family: 'Graphik', 'IBM Plex Sans', sans-serif;
+  font-family: "Graphik", "IBM Plex Sans", sans-serif;
 }
 
 a {
@@ -32,17 +32,17 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Graphik', sans-serif;
+  font-family: "Graphik", sans-serif;
   font-style: normal;
 }
 
 .bg-pri {
-  background-color: #E37915;
+  background-color: #e37915;
   color: white;
 }
 
 .bg-sec {
-  background-color: #223D55;
+  background-color: #223d55;
   color: white;
 }
 
@@ -58,7 +58,7 @@ h6 {
 }
 
 .btn-pri {
-  background: #E37915;
-  border: 1.5px solid #E37915;
-  color: #FFFFFF !important;
+  background: #e37915;
+  border: 1.5px solid #e37915;
+  color: #ffffff !important;
 }
