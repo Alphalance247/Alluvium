@@ -53,6 +53,8 @@ const Banner = () => {
                     height={350}
                     alt=""
                     className={styles.menCap}
+                    priority
+                    loading="eager"
                   />
                 </div>
               </div>
