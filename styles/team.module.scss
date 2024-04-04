@@ -97,6 +97,7 @@
         width: 95%;
       }
     }
+
     .imageBorders {
       margin-bottom: 56px;
       margin-top: 0.4rem;
@@ -111,6 +112,7 @@
         margin: auto;
       }
     }
+
     .imageBorder {
       border-radius: 16px solid white;
     }
@@ -138,6 +140,7 @@
         font-size: 14px;
         margin-bottom: 6rem;
       }
+
       span {
         margin-left: 0.7rem;
         margin-right: 0.7rem;
@@ -162,13 +165,16 @@
     line-height: 30px;
     text-align: center;
     margin-bottom: 2rem;
+
     @media screen and (max-width: 992px) {
       font-size: 28px;
     }
+
     @media screen and (max-width: 576px) {
       font-size: 20px;
     }
   }
+
   p {
     color: black;
     font-size: 20px;
@@ -192,9 +198,11 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+
     @media screen and (max-width: 992px) {
       max-width: 100%;
     }
+
     @media screen and (max-width: 576px) {
       max-width: 100%;
     }
@@ -290,6 +298,7 @@
 
   .imagesPosition {
     position: relative;
+
     @media screen and (max-width: 576px) {
     }
 
@@ -312,7 +321,7 @@
 .section3 {
   background: #11202d;
 
-  & > div {
+  &>div {
     padding: 4rem 12rem;
 
     @media screen and (max-width: 1400px) {
@@ -334,6 +343,7 @@
     line-height: 30px;
     text-align: center;
     margin-bottom: 1rem;
+
     @media screen and (max-width: 576px) {
       font-size: 1.5rem;
       margin-bottom: 0.5rem;
@@ -377,6 +387,7 @@
       column-gap: 3rem;
       row-gap: 2rem;
       margin-bottom: 2rem;
+
       @media screen and (max-width: 576px) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -441,9 +452,11 @@
       border-radius: 0.5rem;
       color: #11202d;
     }
+
     .error {
       border: 2px solid orangered;
     }
+
     .button {
       margin-top: 4rem;
       text-align: center;
@@ -462,9 +475,11 @@
 
     .incentives {
       margin-top: 3rem;
+
       .forwardtext {
         color: white;
         margin-bottom: 3rem;
+
         .souvenirHead {
           display: flex;
           margin-bottom: 1rem;
@@ -482,6 +497,7 @@
             margin-bottom: 0px;
           }
         }
+
         .appreciate {
           font-size: 16px;
           line-height: 20px;
@@ -589,7 +605,7 @@
   color: #11202d;
 }
 
-.PhoneInput > div {
+.PhoneInput>div {
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -603,5 +619,72 @@
   @media screen and (max-width: 992px) {
     width: 100%;
     height: 10px;
+  }
+}
+
+.bordershape {
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 10px;
+  }
+}
+
+
+.banner {
+  background-image: url('/assets/team2024/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  color: white;
+  padding: 52px 0;
+  width: 100%;
+
+  @media screen and (min-width: 2600px) {
+    background-size: contain;
+  }
+
+  @media screen and (max-width: 1023px) {
+    background-position-y: center;
+  }
+
+  @media screen and (max-width: 576px) {
+    background-position-x: left;
+
+    .back {
+      background-color: #11202d6f;
+      border-radius: 10px;
+    }
+  }
+
+  .heading {
+    font-size: 64px;
+    line-height: auto;
+    letter-spacing: -1%;
+    font-weight: bold;
+    width: 413px;
+    margin-bottom: 25px;
+
+    span {
+      color: #E37915;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 56px;
+      width: 100%;
+    }
+  }
+
+  .btn {
+    border-radius: 10px;
+    padding: 17px 41px;
+    text-align: center;
+    background-color: #E37915;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.5%;
+    font-weight: 600;
+    margin-bottom: 77px;
+    width: max-content;
   }
 }
