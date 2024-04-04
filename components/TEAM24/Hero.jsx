@@ -49,6 +49,8 @@ const Hero = ({ }) => {
                   width={400}
                   height={350}
                   alt=""
+                  loading="eager"
+                  priority
                 />
               </div>
             </div>
@@ -59,6 +61,8 @@ const Hero = ({ }) => {
                 height={350}
                 alt=""
                 className={styles.menCap}
+                loading="eager"
+                priority
               />
             </div>
           </div>

@@ -315,6 +315,8 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                         layout="responsive"
                         src={data.image}
                         alt={data.alt}
+                        loading="eager"
+                        priority
                       />
                     </div>
                     <div className={styles.incentiveContent}>
