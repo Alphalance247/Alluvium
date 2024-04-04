@@ -1,7 +1,7 @@
 import styles from "../../styles/team.module.scss";
 import Image from "next/image";
 
-const Hero = ({}) => {
+const Hero = ({ }) => {
   const handdleClick = (e) => {
     e.preventDefault();
     const registerSection = document.getElementById("register-section");
@@ -42,16 +42,17 @@ const Hero = ({}) => {
                 APRIL 30 - MAY 2 <span>|</span> Las Vegas and digitally
               </p>
             </div>
-            <div style={{ position: "absolute", bottom: "0", left: "0" }}>
-              <Image
-                src="/assets/team2024/men.png"
-                width={400}
-                height={350}
-                alt=""
-                className={styles.menCap}
-              />
+            <div style={{ position: "absolute", bottom: "-7px", left: "0" }} className={styles.menCap}>
+              <div>
+                <Image
+                  src="/assets/team2024/men.png"
+                  width={400}
+                  height={350}
+                  alt=""
+                />
+              </div>
             </div>
-            <div style={{ position: "absolute", bottom: "0", right: "0" }}>
+            <div style={{ position: "absolute", bottom: "-7px", right: "0" }} className={styles.menCap}>
               <Image
                 src="/assets/team2024/ladies.png"
                 width={400}

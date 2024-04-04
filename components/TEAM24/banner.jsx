@@ -10,16 +10,30 @@ const Banner = () => {
         <div className="container mx-auto">
           <div className="row m-0 p-0">
             <div className="col-lg-8 p-0">
-              <Image
-                src="/assets/team2024/ateam.png"
-                alt="event"
-                width={337}
-                height={150}
-                priority
-                loading="eager"
-                style={{ marginBottom: "31px" }}
-                className={styles.back}
-              />
+              <div className="d-none d-md-block">
+                <Image
+                  src="/assets/team2024/ateam.png"
+                  alt="event"
+                  width={337}
+                  height={150}
+                  priority
+                  loading="eager"
+                  style={{ marginBottom: "31px" }}
+                  className={``}
+                />
+              </div>
+              <div className="d-md-none mx-auto" style={{ width: 'max-content' }}>
+                <Image
+                  src="/assets/team2024/ateam-middle.png"
+                  alt="event"
+                  width={201.99}
+                  height={73.9}
+                  priority
+                  loading="eager"
+                  style={{ marginBottom: "31px" }}
+                  className={`d-md-none mx-auto`}
+                />
+              </div>
 
               <h1 className={styles.heading}>
                 Alluvium,
@@ -31,8 +45,19 @@ const Banner = () => {
                   Register
                 </a>
               </Link>
+              <div style={{ position: "absolute", bottom: "-7px", right: "0" }} className={`d-md-none w-100`}>
+                <div className={styles.menCap}>
+                  <Image
+                    src="/assets/team2024/ladies.png"
+                    width={400}
+                    height={350}
+                    alt=""
+                    className={styles.menCap}
+                  />
+                </div>
+              </div>
 
-              <div>
+              <div className={styles.badges}>
                 <Image
                   src="/assets/team2024/badges.png"
                   alt="event"

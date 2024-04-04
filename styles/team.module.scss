@@ -16,12 +16,12 @@
   .menCap {
     @media screen and (max-width: 1024px) {
       width: 200px;
-      height: 150px;
+      // height: 150px;
     }
 
     @media screen and (max-width: 576px) {
       width: 140px;
-      height: 120px;
+      // height: 120px;
     }
   }
 
@@ -44,10 +44,12 @@
     @media screen and (max-width: 992px) {
       left: 35rem;
     }
+
     @media screen and (max-width: 576px) {
       display: none;
     }
   }
+
   .centercontent {
     display: flex;
     flex-direction: column;
@@ -55,6 +57,7 @@
     align-items: center;
     height: 100%;
   }
+
   .content {
     position: absolute;
     top: 50%;
@@ -155,6 +158,7 @@
   @media screen and (max-width: 992px) {
     padding: 1.5rem;
   }
+
   @media screen and (max-width: 576px) {
     padding: 1rem;
   }
@@ -196,6 +200,7 @@
 
   .imgframe {
     text-align: center;
+
     @media screen and (max-width: 992px) {
       max-width: 100%;
     }
@@ -270,6 +275,7 @@
       @media screen and (max-width: 992px) {
         font-size: 1.2rem;
       }
+
       @media screen and (max-width: 576px) {
         font-size: 1rem;
         margin-bottom: 0.5rem;
@@ -296,8 +302,7 @@
   .imagesPosition {
     position: relative;
 
-    @media screen and (max-width: 576px) {
-    }
+    @media screen and (max-width: 576px) {}
 
     .positioning2 {
       position: absolute;
@@ -308,6 +313,7 @@
       @media screen and (max-width: 576px) {
         display: none;
       }
+
       @media screen and (max-width: 992px) {
         display: none;
       }
@@ -318,7 +324,7 @@
 .section3 {
   background: #11202d;
 
-  & > div {
+  &>div {
     padding: 4rem 12rem;
 
     @media screen and (max-width: 1400px) {
@@ -602,7 +608,7 @@
   color: #11202d;
 }
 
-.PhoneInput > div {
+.PhoneInput>div {
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -635,6 +641,7 @@
   color: white;
   padding: 52px 0;
   width: 100%;
+  position: relative;
 
   @media screen and (min-width: 2600px) {
     background-size: contain;
@@ -644,13 +651,11 @@
     background-position-y: center;
   }
 
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
+    background-image: url("/assets/team2024/bg2.png");
+    padding-bottom: 0px;
+    padding-top: 63.27px;
     background-position-x: left;
-
-    .back {
-      background-color: #11202d6f;
-      border-radius: 10px;
-    }
   }
 
   .heading {
@@ -665,8 +670,16 @@
       color: #e37915;
     }
 
+    @media screen and (max-width: 768px) {
+      font-size: 44.56px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     @media screen and (max-width: 576px) {
-      font-size: 56px;
+      font-size: 44.56px;
+      text-align: center;
       width: 100%;
     }
   }
@@ -682,5 +695,32 @@
     font-weight: 600;
     margin-bottom: 77px;
     width: max-content;
+
+    @media screen and (max-width: 768px) {
+      margin: auto;
+      margin-bottom: 230px;
+    }
+  }
+
+  .badges {
+    @media screen and (max-width: 768px) {
+      &>span {
+        display: block !important;
+      }
+    }
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .menCap {
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 576px) {
+      width: 250px;
+    }
   }
 }
