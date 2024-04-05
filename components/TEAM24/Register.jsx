@@ -65,7 +65,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     } else {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/teams24/addrecord/", { ...form })
+        .post("https://vast.ec2.alluvium.net/teams24/addrecord/", { ...form, email: null })
         .then((res) => {
           setLoading(false);
           if (res.status !== 201) {
@@ -95,7 +95,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
           setLoading(false);
           let errMessage =
             "Oops something went wrong. Please try again or contact Admin";
-          if (err.response.status < 500) {
+          if (err?.response?.status < 500) {
             errMessage =
               err?.response?.data?.error ||
               "Oops something went wrong. Please try again or contact Admin";
