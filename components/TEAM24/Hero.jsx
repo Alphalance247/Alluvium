@@ -51,6 +51,7 @@ const Hero = ({ }) => {
                   alt=""
                   loading="eager"
                   priority
+                  className={styles.caps}
                 />
               </div>
             </div>
@@ -74,7 +75,7 @@ const Hero = ({ }) => {
       </section>
       <section className={styles.section2}>
         <div className="container mx-auto">
-          <h2>From Africa with Love</h2>
+          <h2>Alluvium at Team 24</h2>
           <p>
             Experience the love from Africa as we unite to celebrate the power
             of teamwork and innovation at Vegas on April 30th - May 2nd.
