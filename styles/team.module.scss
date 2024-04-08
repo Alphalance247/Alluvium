@@ -714,6 +714,12 @@
     }
   }
 
+  .caps{
+    &>span {
+      display: block !important;
+    }
+  }
+
   .menCap {
     margin: 0 auto;
 
