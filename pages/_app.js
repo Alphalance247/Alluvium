@@ -14,6 +14,9 @@ import "slick-carousel/slick/slick-theme.css";
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
+    var $zoho={ ...window?.$zoho} || { };
+    $zoho.salesiq = $zoho.salesiq || { widgetcode: "siqd802d9d0f485dfaac340ddc20306f3d11ecdc5f9d155bc34c062992d6745a323", values:{ },ready:function(){ }};
+    window.$zoho = { ...window?.$zoho, ...$zoho};
   }, []);
 
   useEffect(() => {
