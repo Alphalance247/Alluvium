@@ -633,6 +633,12 @@
   }
 }
 
+.caps{
+  &>span {
+    display: block !important;
+  }
+}
+
 .banner {
   background-image: url("/assets/team2024/bgn.png");
   background-size: cover;
@@ -714,11 +720,6 @@
     }
   }
 
-  .caps{
-    &>span {
-      display: block !important;
-    }
-  }
 
   .menCap {
     margin: 0 auto;
