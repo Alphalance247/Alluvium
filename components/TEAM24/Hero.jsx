@@ -42,20 +42,20 @@ const Hero = ({ }) => {
                 APRIL 30 - MAY 2 <span>|</span> Las Vegas and digitally
               </p>
             </div>
-            <div style={{ position: "absolute", bottom: "-7px", left: "0" }} className={styles.menCap}>
-              <div>
+            <div style={{ position: "absolute", bottom: "0px", left: "0" }} className={styles.menCap}>
+              <div className={styles.caps}>
                 <Image
                   src="/assets/team2024/men.png"
-                  width={400}
-                  height={350}
+                  width={400/1.1}
+                  height={350/1.1}
                   alt=""
                   loading="eager"
                   priority
-                  className={styles.caps}
+                  className=""
                 />
               </div>
             </div>
-            <div style={{ position: "absolute", bottom: "-7px", right: "0" }} className={styles.menCap}>
+            <div style={{ position: "absolute", bottom: "0px", right: "0" }} className={`${styles.menCap} ${styles.caps}`}>
               <Image
                 src="/assets/team2024/ladies.png"
                 width={400}
