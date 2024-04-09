@@ -18,8 +18,16 @@ export default function AboutUs() {
     <Layout>
       <div className={styles.aboutUsPage}>
         <Head>
-          <title>Team | Alluvium</title>
+          <title>About Us | Alluvium</title>
           <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="description"
+            content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          />
+          <meta
+            name="keywords"
+            content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+          />
         </Head>
         {/* <Navigation /> */}
         <main>
@@ -70,11 +78,7 @@ export default function AboutUs() {
                       </strong>{" "}
                     </p>{" "}
                     <p>
-                      Our mission is to empower businesses with the tools and
-                      support they need to succeed in today’s digital landscape.
-                      We understand the importance of staying ahead of the curve
-                      and are constantly exploring new ways to enhance our
-                      services and products.{" "}
+                      Alluvium Mission is to provide highly capable, experienced consultants and dependable managed services for a seamless digital transformation to give our clients and partners the advantage in their business environment.{" "}
                     </p>
                     <p>
                       We invite you to learn more about Alluvium and our
@@ -179,7 +183,7 @@ export default function AboutUs() {
             <div className="container">
               <h2 className={styles.h2}>Our Achievements</h2>
               <div className="row mb-5">
-                {milestonesData.map(({value, category}) => (
+                {milestonesData.map(({ value, category }) => (
                   <div
                     className="col-lg-2 col-md-4 col-sm-6 col-6"
                     key={achievemnetKeys++}
