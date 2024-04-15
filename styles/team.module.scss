@@ -83,20 +83,21 @@
     }
 
     .heading {
-      font-size: 44px;
+      font-size: 64px;
       font-weight: bold;
-      line-height: 40px;
+      line-height: 65px;
       color: white;
-      width: 45%;
+      width: 65%;
       margin: auto;
 
       @media screen and (max-width: 992px) {
-        font-size: 30px;
+        font-size: 50px;
         width: 70%;
       }
 
       @media screen and (max-width: 576px) {
         font-size: 1.5rem;
+        line-height: 34px;
         width: 95%;
       }
     }
@@ -164,18 +165,19 @@
   }
 
   h2 {
-    font-size: 48px;
+    font-size: 66.2px;
     font-weight: 700;
-    line-height: 30px;
+    line-height: 51.7px;
     text-align: center;
     margin-bottom: 2rem;
 
     @media screen and (max-width: 992px) {
-      font-size: 28px;
+      font-size: 40px;
     }
 
     @media screen and (max-width: 576px) {
-      font-size: 20px;
+      font-size: 30px;
+      line-height: 38px;
     }
   }
 

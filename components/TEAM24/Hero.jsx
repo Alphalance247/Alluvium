@@ -25,7 +25,7 @@ const Hero = ({ }) => {
               className={`container-fluid mx-auto ${styles.content}`}
               style={{ transform: " translate(-50%, -50%)" }}
             >
-              <p className={styles.withlove}>From Africa with Love</p>
+              {/* <p className={styles.withlove}>From Africa with Love</p> */}
               <h1 className={styles.heading}>
                 Get ready for an unforgettable moment at
               </h1>
@@ -75,7 +75,7 @@ const Hero = ({ }) => {
       </section>
       <section className={styles.section2}>
         <div className="container mx-auto">
-          <h2>Alluvium at Team 24</h2>
+          <h2>From Africa with Love</h2>
           <p>
             Experience the love from Africa as we unite to celebrate the power
             of teamwork and innovation at Vegas on April 30th - May 2nd.
