@@ -6,7 +6,8 @@ export const server = dev ? 'http://localhost:3000' : "https://alluvium.net";
 
 export const baseURL = 'http://localhost:3000';
 
-export const databaseURI = dev ? process.env.NEXT_PUBLIC_DB_URI_ORIGIN : process.env.NEXT_PUBLIC_ALLUVIUM_DB_URI;
+export const databaseURI = "mongodb://mongoAdmin:pEf5YbzvarY54KH4HrvG@deny.ec2.alluvium.net/alluvium?directConnection=true&authMechanism=SCRAM-SHA-256&authSource=admin";
+// export const databaseURI = dev ? process.env.NEXT_PUBLIC_DB_URI_ORIGIN : process.env.NEXT_PUBLIC_ALLUVIUM_DB_URI;
 
 export const mailFrom = process.env.MAIL_FROM;
 export const mailTo = "contact@alluvium.net";
