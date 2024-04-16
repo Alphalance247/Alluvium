@@ -43,19 +43,19 @@ const handler = async (req, res) => {
             html: body
         };
 
-        try{
-            await transporter.sendMail(mailData);
+        // try{
+            transporter.sendMail(mailData);
             return res.status(201).json({
-                message: 'Consultation Request Sent Successfully. You will be contacted soon',
+                message: "Consultation Request Sent. We'll be in contact",
                 status: 'success'
             })
-        } catch(e){
-            console.log(e);
-            return res.status(500).json({
-                message: `Failed: Unable to send mail. Please try again later`,
-                status: "error"
-            })
-        }
+        // } catch(e){
+        //     console.log(e);
+        //     return res.status(500).json({
+        //         message: `Failed: Unable to send mail. Please try again later`,
+        //         status: "error"
+        //     })
+        // }
         // const newConsultationRequest = new Consultation({ fullname, company, phone, email, message });
         // await newConsultationRequest.save().then(() => {
         //     return res.status(201).json({
