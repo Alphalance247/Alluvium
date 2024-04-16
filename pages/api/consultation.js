@@ -21,7 +21,8 @@ const handler = async (req, res) => {
                 },
                 secure: true,
                 greetingTimeout: 50000,
-                dnsTimeout: 5000
+                dnsTimeout: 5000,
+                tls: { rejectUnauthorized: false }
             });
         } catch (err) {
             console.log(err);
@@ -42,20 +43,32 @@ const handler = async (req, res) => {
             html: body
         };
 
-        const newConsultationRequest = new Consultation({ fullname, company, phone, email, message });
-        await newConsultationRequest.save().then(() => {
-            transporter.sendMail(mailData);
+        try{
+            await transporter.sendMail(mailData);
             return res.status(201).json({
                 message: 'Consultation Request Sent Successfully. You will be contacted soon',
                 status: 'success'
             })
-        }).catch(err => {
+        } catch(e){
+            console.log(e);
             return res.status(500).json({
-                message: `Failed: Unable to save to DB. 
-            ${err.message}`,
+                message: `Failed: Unable to send mail. Please try again later`,
                 status: "error"
             })
-        })
+        }
+        // const newConsultationRequest = new Consultation({ fullname, company, phone, email, message });
+        // await newConsultationRequest.save().then(() => {
+        //     return res.status(201).json({
+        //         message: 'Consultation Request Sent Successfully. You will be contacted soon',
+        //         status: 'success'
+        //     })
+        // }).catch(err => {
+        //     return res.status(500).json({
+        //         message: `Failed: Unable to save to DB. 
+        //     ${err.message}`,
+        //         status: "error"
+        //     })
+        // })
     // } else if (req.method === 'GET') {
     //     await Consultation.find({}).sort({ createdAt: 'desc' })
     //         .then(consultationRequests => {
