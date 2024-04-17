@@ -120,6 +120,11 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     setFormErrors((prev) => ({ ...prev, [name]: false }));
   };
 
+  const handleSouvenir = (name, value) => {
+    setForm(prev=>({ ...prev, [name]: value}));
+    setFormErrors((prev) => ({ ...prev, [name]:false }));
+  }
+
   const handleNumber = (value) => {
     setForm((prev) => ({ ...prev, phone_number: value }));
     setPhoneError(false);
@@ -141,7 +146,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
           <div className={styles.incentives}>
               <div className={styles.incentiveStyle}>
                 {IncentiveData.map((data) => (
-                  <div className={styles.encap} key={data.id}>
+                  <button type="button" onClick={()=>handleSouvenir(data?.inputName, data?.inputValue)} className={styles.encap} key={data.id}>
                     <div className="w-100" height={430}>
                       <Image
                         width={442}
@@ -172,7 +177,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                         onChange={handleChange}
                       />
                     </div>
-                  </div>
+                  </button>
                 ))}
               </div>
             </div>
