@@ -342,30 +342,39 @@
     }
   }
 
+  .icon{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+  }
+
   h4 {
     color: white;
-    font-size: 2rem;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 600;
     text-align: center;
-    margin-bottom: 1rem;
+    margin: 0px;
 
     @media screen and (max-width: 576px) {
       font-size: 1.5rem;
-      margin-bottom: 0.5rem;
     }
   }
 
   .secure {
-    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 600;
     color: white;
-    line-height: 160%;
+    line-height: 20px;
+    text-align: center;
     margin: auto;
     width: 80%;
-    margin: auto;
+    margin-top: 1rem;
 
     @media screen and (max-width: 576px) {
       width: fit-content;
       font-size: 0.8rem;
+      margin-top: 0.5rem;
     }
 
     @media screen and (max-width: 992px) {
@@ -478,42 +487,46 @@
         color: #11202d;
       }
     }
+    
+    .forwardtext {
+      color: white;
+      margin: 4rem auto 3rem auto;
+      text-align: center;
+
+      .souvenirHead {
+        display: flex;
+        margin-bottom: 1rem;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+
+        @media screen and (max-width: 576px) {
+          margin-bottom: 0.4rem;
+        }
+
+        .chooseSourvenir {
+          font-size: 32px;
+          line-height: 30px;
+          font-weight: 600;
+          margin-bottom: 0px;
+          text-align: center;
+        }
+      }
+
+      .appreciate {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 400;
+
+        @media screen and (max-width: 576px) {
+          font-size: 14px;
+        }
+      }
+    }
 
     .incentives {
       margin-top: 3rem;
 
-      .forwardtext {
-        color: white;
-        margin-bottom: 3rem;
-
-        .souvenirHead {
-          display: flex;
-          margin-bottom: 1rem;
-          align-items: center;
-          column-gap: 1rem;
-
-          @media screen and (max-width: 576px) {
-            margin-bottom: 0.4rem;
-          }
-
-          .chooseSourvenir {
-            font-size: 20px;
-            line-height: 20px;
-            font-weight: 600;
-            margin-bottom: 0px;
-          }
-        }
-
-        .appreciate {
-          font-size: 16px;
-          line-height: 20px;
-          font-weight: 600;
-
-          @media screen and (max-width: 576px) {
-            font-size: 14px;
-          }
-        }
-      }
 
       .incentiveStyle {
         display: grid;

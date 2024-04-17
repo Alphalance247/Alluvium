@@ -26,7 +26,7 @@ const Team24 = () => {
 
   return (
     <>
-      <Layout>
+      <Layout withoutForm={true}>
         <Head>
           <title>Team"24 | Alluvium</title>
           <link rel="icon" href="/favicon.ico" />
@@ -40,8 +40,8 @@ const Team24 = () => {
           />
         </Head>
         <Hero />
-        <EventDetails />
         <Register />
+        <EventDetails />
         {/* {!registrationLimitExceeded && <Register setRegistrationLimitExceeded={setRegistrationLimitExceeded} />} */}
       </Layout>
     </>

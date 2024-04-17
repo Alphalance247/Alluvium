@@ -8,6 +8,7 @@ import Image from "next/image";
 import IncentiveData from "./IncentiveData";
 import axios from "axios";
 import { ToastProvider, useToasts } from "react-toast-notifications";
+import { IoIosGift } from "react-icons/io";
 
 const Register = ({ setRegistrationLimitExceeded }) => {
   const [country] = useState(Country.getAllCountries());
@@ -71,7 +72,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
           if (res.status !== 201) {
             addToast(
               res.data.error ||
-                "Error occured, please try again or contact Admin",
+              "Error occured, please try again or contact Admin",
               { appearance: "error" }
             );
             return;
@@ -128,13 +129,66 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     <ToastProvider>
       <section className={styles.section3} id="register-section">
         <div className="container mx-auto">
-          <h4>Register Now</h4>
+          <div className="d-flex align-items-center gap-2 mx-auto" style={{ width: 'max-content' }}>
+            <IoIosGift className={styles.icon} />
+            <h4>Choose Your Souvenir!</h4>
+          </div>
           <p className={styles.secure}>
-            Secure your souvenir now and get the chance to experience the love
-            from Africa and the Alluvium difference.
+            Congratulations on taking the first step towards securing your spot at Booth 53! As a token of our appreciation for your interest and participation, we're excited to offer you the opportunity to select a souvenir of your choice.
           </p>
 
           <form action="" onSubmit={handleFormSubmit}>
+          <div className={styles.incentives}>
+              <div className={styles.incentiveStyle}>
+                {IncentiveData.map((data) => (
+                  <div className={styles.encap} key={data.id}>
+                    <div className="w-100" height={430}>
+                      <Image
+                        width={442}
+                        height={430}
+                        layout="responsive"
+                        src={data.image}
+                        alt={data.alt}
+                        loading="eager"
+                        priority
+                      />
+                    </div>
+                    <div className={styles.incentiveContent}>
+                      <div className={styles.content}>
+                        <p className={styles.firtsP}>{data.incentiveType}</p>
+                        <p className={styles.secondP}>
+                          {data.incentiveDescription}
+                        </p>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        name={data.inputName}
+                        id="checkbox"
+                        // required={!checkbox}
+                        checked={form[data.inputName] === data.inputValue}
+                        value={data.inputValue}
+                        style={{ transform: "scale(2)" }}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={styles.forwardtext}>
+                <div className={styles.souvenirHead}>
+                  <div>
+                    <p className={styles.chooseSourvenir}>
+                    Order here
+                    </p>
+                  </div>
+                </div>
+                <p className={styles.appreciate}>
+                Secure your souvenir now and get the chance to experience the love from Africa and the Alluvium difference.
+
+                </p>
+              </div>
             <p className={styles.basic}>BASIC INFORMATION</p>
             <div className={styles.action}>
               <div>
@@ -203,9 +257,8 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                 <select
                   name="country"
                   id="Country"
-                  className={`${styles.countrySelect} ${
-                    formError.country ? styles.error : ""
-                  }`}
+                  className={`${styles.countrySelect} ${formError.country ? styles.error : ""
+                    }`}
                   value={form.country}
                   onChange={handleChange}
                 >
@@ -278,68 +331,6 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                 <label htmlFor="No" style={{ color: "#666666" }}>
                   No
                 </label>
-              </div>
-            </div>
-            <div className={styles.incentives}>
-              <div className={styles.forwardtext}>
-                <div className={styles.souvenirHead}>
-                  <div>
-                    <Image
-                      width={40}
-                      height={40}
-                      src="/assets/team2024/giftw.svg"
-                      alt="gift"
-                    />
-                  </div>
-                  <div>
-                    <p className={styles.chooseSourvenir}>
-                      Choose Your Souvenir!
-                    </p>
-                  </div>
-                </div>
-                <p className={styles.appreciate}>
-                  Congratulations on taking the first step towards securing your
-                  spot at Booth 53! As a token of our appreciation for your
-                  interest and participation, we're excited to offer you the
-                  opportunity to select an incentive of your choice.
-                </p>
-              </div>
-
-              <div className={styles.incentiveStyle}>
-                {IncentiveData.map((data) => (
-                  <div className={styles.encap} key={data.id}>
-                    <div className="w-100" height={430}>
-                      <Image
-                        width={442}
-                        height={430}
-                        layout="responsive"
-                        src={data.image}
-                        alt={data.alt}
-                        loading="eager"
-                        priority
-                      />
-                    </div>
-                    <div className={styles.incentiveContent}>
-                      <div className={styles.content}>
-                        <p className={styles.firtsP}>{data.incentiveType}</p>
-                        <p className={styles.secondP}>
-                          {data.incentiveDescription}
-                        </p>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        name={data.inputName}
-                        id="checkbox"
-                        // required={!checkbox}
-                        checked={form[data.inputName] === data.inputValue}
-                        value={data.inputValue}
-                        style={{ transform: "scale(2)" }}
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
-                ))}
               </div>
             </div>
 

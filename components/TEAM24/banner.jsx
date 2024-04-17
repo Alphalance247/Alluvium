@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/team.module.scss";
 
-const Banner = () => {
+const Team24Banner = () => {
   return (
     <>
       <div className={styles.banner}>
@@ -36,13 +36,13 @@ const Banner = () => {
               </div>
 
               <h1 className={styles.heading}>
-                Alluvium,
-                <span> from Africa With Love</span>
+              Get your
+                <span> African Gele and Fila</span>
               </h1>
 
               <Link href="/event/team24">
                 <a className={`d-block btn ${styles.btn}`}>
-                  Register
+                Order here
                 </a>
               </Link>
               <div style={{ position: "absolute", bottom: "-7px", right: "0" }} className={`d-md-none w-100`}>
@@ -77,4 +77,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Team24Banner;
