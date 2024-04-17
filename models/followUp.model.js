@@ -68,6 +68,6 @@ const followUpSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
-const FollowUp = mongoose.models.FollowUp || mongoose.model('FollowUp', followUpSchema);
+const FollowUp = mongoose?.models?.FollowUp || mongoose.model('FollowUp', followUpSchema);
 
 export default FollowUp;

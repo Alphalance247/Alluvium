@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 // import * as arrays from "../data";
 import Head from "next/head";
 import Services from "components/services-components/services";
@@ -16,10 +16,6 @@ import styles from "../styles/hero.module.scss";
 import Badges from 'components/badges';
 
 const Home = () => {
-
-  useEffect(() => {
-    console.log('userName: ', process.env.NEXT_PUBLIC_SMTP_USERNAME);
-  }, []);
 
   return (
     <>
