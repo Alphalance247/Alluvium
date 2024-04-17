@@ -6,7 +6,7 @@ import heroStyles from "../styles/hero.module.scss";
 import Hero from "./Hero";
 import Badges from "./badges";
 // import EventHero from "./cloud-connect/EventHero";
-import Banner from "./TEAM24/banner"
+import Team24Banner from "./TEAM24/banner"
 
 export default function () {
 
@@ -16,7 +16,7 @@ export default function () {
                 <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true} swipe >
                     
                     <div>
-                        <Banner />
+                        <Team24Banner />
                     </div>
                     
                     {/* <div>
