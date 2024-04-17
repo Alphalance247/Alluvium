@@ -129,6 +129,8 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     <ToastProvider>
       <section className={styles.section3} id="register-section">
         <div className="container mx-auto">
+
+          <form action="" onSubmit={handleFormSubmit}>
           <div className="d-flex align-items-center gap-2 mx-auto" style={{ width: 'max-content' }}>
             <IoIosGift className={styles.icon} />
             <h4>Choose Your Souvenir!</h4>
@@ -136,8 +138,6 @@ const Register = ({ setRegistrationLimitExceeded }) => {
           <p className={styles.secure}>
             Congratulations on taking the first step towards securing your spot at Booth 53! As a token of our appreciation for your interest and participation, we're excited to offer you the opportunity to select a souvenir of your choice.
           </p>
-
-          <form action="" onSubmit={handleFormSubmit}>
           <div className={styles.incentives}>
               <div className={styles.incentiveStyle}>
                 {IncentiveData.map((data) => (
@@ -165,7 +165,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                         type="checkbox"
                         name={data.inputName}
                         id="checkbox"
-                        // required={!checkbox}
+                        required={!form[data.inputName]}
                         checked={form[data.inputName] === data.inputValue}
                         value={data.inputValue}
                         style={{ transform: "scale(2)" }}
@@ -336,7 +336,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
 
             <div className={styles.button}>
               <button type="submit" disabled={loading}>
-                {loading ? "Loading..." : "Register"}
+                {loading ? "Loading..." : "Order"}
               </button>
             </div>
           </form>
