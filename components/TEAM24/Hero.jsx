@@ -27,7 +27,7 @@ const Hero = ({ }) => {
             >
               {/* <p className={styles.withlove}>From Africa with Love</p> */}
               <h1 className={styles.heading}>
-                Get ready for an unforgettable moment at
+              Order now to get your African Gele/Fila at
               </h1>
               <div className={styles.imageBorders}>
                 <Image
@@ -39,7 +39,7 @@ const Hero = ({ }) => {
                 />
               </div>
               <p className={styles.eventdate}>
-                APRIL 30 - MAY 2 <span>|</span> Las Vegas and digitally
+              Pick up at Booth 53
               </p>
             </div>
             <div style={{ position: "absolute", bottom: "0px", left: "0" }} className={styles.menCap}>
@@ -69,35 +69,9 @@ const Hero = ({ }) => {
           </div>
         </div>
         <div
-          style={{ background: "#009BC0", width: "100%", height: "48px" }}
+          style={{ background: "#FFFFFF", width: "100%", height: "48px" }}
           className={styles.bordershape}
         ></div>
-      </section>
-      <section className={styles.section2}>
-        <div className="container mx-auto">
-          <h2>From Africa with Love</h2>
-          <p>
-            Experience the love from Africa as we unite to celebrate the power
-            of teamwork and innovation at Vegas on April 30th - May 2nd.
-            Discover our exceptional Atlassian solutions firsthand and engage
-            with our passionate team, who will be ready to share insights,
-            provide expert guidance, and help you up your team game. Join us at
-            team‘24 where cultures converge and ideas flourish. Together, let's
-            create a memorable event filled with meaningful connections,
-            transformative experiences, and a shared vision for a brighter
-            future. We can't wait to meet you at stand 53 and present to you our
-            exclusive souvenirs as a special gesture from Alluvium. See you
-            there!
-          </p>
-          <div className={styles.imgframe}>
-            <Image
-              src="/assets/team2024/Frame.png"
-              width={415}
-              height={69}
-              alt="frames"
-            />
-          </div>
-        </div>
       </section>
     </>
   );
