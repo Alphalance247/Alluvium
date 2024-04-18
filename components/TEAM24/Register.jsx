@@ -141,7 +141,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
             <h4>Choose Your Souvenir!</h4>
           </div>
           <p className={styles.secure}>
-            Congratulations on taking the first step towards securing your spot at Booth 53! As a token of our appreciation for your interest and participation, we're excited to offer you the opportunity to select a souvenir of your choice.
+          Congratulations! Please select your preferred souvenir and proceed to order your fila or gele by filling out the form below.
           </p>
           <div className={styles.incentives}>
               <div className={styles.incentiveStyle}>
@@ -189,10 +189,6 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                     </p>
                   </div>
                 </div>
-                <p className={styles.appreciate}>
-                Secure your souvenir now and get the chance to experience the love from Africa and the Alluvium difference.
-
-                </p>
               </div>
             <p className={styles.basic}>BASIC INFORMATION</p>
             <div className={styles.action}>
