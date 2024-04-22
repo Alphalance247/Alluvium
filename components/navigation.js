@@ -13,7 +13,7 @@ export default function Navigation({ theme }) {
   const [dropdownActive, setDropdownActive] = useState(false);
 
   const toggleMenu = () => {
-    setDisplayMobileMenu(prev=>!prev);
+    setDisplayMobileMenu(prev => !prev);
   };
 
   const toggleDropdown = (title) => {
@@ -38,7 +38,7 @@ export default function Navigation({ theme }) {
       data-aos="fade-down"
       onMouseLeave={() => toggleDropdown("")}
     >
-      <div className="container d-flex justify-content-between align-items-center">
+      <div className="container d-flex gap-5 justify-content-between align-items-center">
         <div className={styles.logo}>
           <Link href="/">
             <img src="/assets/alluvium-logo-dark.svg" alt="logo" />
@@ -189,27 +189,28 @@ export default function Navigation({ theme }) {
                                 </div>
                             </div>
                         </li> */}
-            <li>
-              <Link href="/support/contact">
-                <a className={styles.contactUsButton}>Contact Us</a>
-              </Link>
-            </li>
           </ul>
+          <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
+            <Link href="/support/contact">
+              <a className={styles.contactUsButton}>Email Us</a>
+            </Link>
+            <a href="https://calendly.com/alluvium-hq" target="_blank" rel="Alluvium" className={styles.scheduleButton}>Schedule a Call</a>
+          </div>
         </nav>}
-          <button
-            onClick={()=>toggleMenu()}
-            className={displayMobileMenu ? ` ${styles.closeBtn}` : styles.menuBtnDark}
-            arial-label="Toggle Menu"
-            id="toggleMenu"
-            title={`${displayMobileMenu ? 'open menu' : 'close menu'}`}
-          >
-            {/* <div className={theme === "dark" ? styles.menuBtnDark : styles.menuBtn}> */}
-            <div className={styles.menuBtnDark}>
-              <div className={styles.barOne}></div>
-              <div className={styles.barTwo}></div>
-              <div className={styles.barThree}></div>
-            </div>
-          </button>
+        <button
+          onClick={() => toggleMenu()}
+          className={displayMobileMenu ? ` ${styles.closeBtn}` : styles.menuBtnDark}
+          arial-label="Toggle Menu"
+          id="toggleMenu"
+          title={`${displayMobileMenu ? 'open menu' : 'close menu'}`}
+        >
+          {/* <div className={theme === "dark" ? styles.menuBtnDark : styles.menuBtn}> */}
+          <div className={styles.menuBtnDark}>
+            <div className={styles.barOne}></div>
+            <div className={styles.barTwo}></div>
+            <div className={styles.barThree}></div>
+          </div>
+        </button>
       </div>
       <div className="container">
         <div
@@ -273,6 +274,11 @@ export default function Navigation({ theme }) {
             </li>
             <li>
               <Link href="/support/contact">+ Contact Us</Link>
+            </li>
+            <li>
+              <a href="https://calendly.com/alluvium-hq"
+                rel="Alluvium"
+                target="_blank">+ Schedule a Call</a>
             </li>
           </ul>
         </div>
