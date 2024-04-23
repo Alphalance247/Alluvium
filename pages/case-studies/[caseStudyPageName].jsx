@@ -30,6 +30,10 @@ export default function CaseStudy({ caseStudy }) {
             name="description"
             content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
           />
+          <meta
+            name="keywords"
+            content={`${caseStudy?.title}, Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
+          />
         </Head>
         <main>
           <section

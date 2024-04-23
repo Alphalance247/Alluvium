@@ -22,6 +22,16 @@ export default function Teammate({ teamMate, products }) {
             | Alluvium{" "}
           </title>
           <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="description"
+            content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          />
+          <meta
+            name="keywords"
+            content={`${capitalizeFirstLetter(firstName)} ${capitalizeFirstLetter(
+              lastName
+            )} Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
+          />
         </Head>
         <main className={styles.teammatePage}>
           <section className={styles.teammate}>

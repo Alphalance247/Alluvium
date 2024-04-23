@@ -1,9 +1,9 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang='en'>
+      <Html lang="en">
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
@@ -22,13 +22,25 @@ export default class MyDocument extends Document {
             `,
             }}
           />
-
         </Head>
         <body>
           <Main />
+          {/* <script type="text/javascript" id="zsiqchat">
+            var $zoho=$zoho || { };
+            $zoho.salesiq = $zoho.salesiq || { widgetcode: "siqd802d9d0f485dfaac340ddc20306f3d11ecdc5f9d155bc34c062992d6745a323", values:{ },ready:function(){ }};
+            var d=document;
+            s=d.createElement("script");
+            s.type="text/javascript";
+            s.id="zsiqscript";
+            s.defer=true;
+            s.src="https://salesiq.zohopublic.com/widget";
+            t=d.getElementsByTagName("script")[0];
+            t.parentNode.insertBefore(s,t);
+          </script> */}
+          <script type="text/javascript" src="https://salesiq.zohopublic.com/widget" defer={true} id="zsiqscript"></script>
           <NextScript />
         </body>
       </Html>
-    )
+    );
   }
 }
