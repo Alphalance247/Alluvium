@@ -34,7 +34,6 @@ const Team24Banner = () => {
                   className={`d-md-none mx-auto`}
                 />
               </div>
-
               <h1 className={styles.heading}>
               Get your
                 <span> African Gele and Fila</span>
