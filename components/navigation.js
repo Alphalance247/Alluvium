@@ -191,10 +191,10 @@ export default function Navigation({ theme }) {
                         </li> */}
           </ul>
           <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
-            <Link href="/support/contact">
-              <a className={styles.contactUsButton}>Email Us</a>
+            <a href="mailto:contact@alluvium.net" className={styles.contactUsButton}>Email Us</a>
+            <Link href="/support/contact#schedule-a-call">
+              <a className={styles.scheduleButton}>Schedule a Call</a>
             </Link>
-            <a href="https://calendly.com/alluvium-hq" target="_blank" rel="Alluvium" className={styles.scheduleButton}>Schedule a Call</a>
           </div>
         </nav>}
         <button
