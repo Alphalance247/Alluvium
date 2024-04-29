@@ -16,12 +16,15 @@ const handler = async (req, res) => {
                 port: 465,
                 host: nodemailerTransportHost,
                 auth: {
-                    user: process.env.NEXT_PUBLIC_SMTP_USERNAME,
-                    pass: process.env.NEXT_PUBLIC_SMTP_PASS,
+                    user: "info@jayteeojo.com",
+                    // user: process.env.NEXT_PUBLIC_SMTP_USERNAME,
+                    pass: "y,~vA=No-,M4uh",
+                    // pass: process.env.NEXT_PUBLIC_SMTP_PASS,
                 },
                 secure: true,
                 greetingTimeout: 50000,
-                dnsTimeout: 5000
+                dnsTimeout: 5000,
+                tls: { rejectUnauthorized: false }
             });
         } catch (err) {
             console.log(err);
@@ -42,9 +45,21 @@ const handler = async (req, res) => {
             html: body
         };
 
+        try{
+            transporter.sendMail(mailData);
+            // return res.status(201).json({
+            //     message: "Consultation Request Sent. We'll be in contact",
+            //     status: 'success'
+            // })
+        } catch(e){
+            console.log(e);
+        //     return res.status(500).json({
+        //         message: `Failed: Unable to send mail. Please try again later`,
+        //         status: "error"
+        //     })
+        }
         const newConsultationRequest = new Consultation({ fullname, company, phone, email, message });
         await newConsultationRequest.save().then(() => {
-            transporter.sendMail(mailData);
             return res.status(201).json({
                 message: 'Consultation Request Sent Successfully. You will be contacted soon',
                 status: 'success'

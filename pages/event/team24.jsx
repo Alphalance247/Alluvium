@@ -4,29 +4,29 @@ import Layout from "components/layout";
 import Hero from "components/TEAM24/Hero";
 import EventDetails from "components/TEAM24/EventDetails";
 import Register from "components/TEAM24/Register";
-import axios from "axios";
+// import axios from "axios";
 
 const Team24 = () => {
-  const [registrationLimitExceeded, setRegistrationLimitExceeded] = useState(false);
+  // const [registrationLimitExceeded, setRegistrationLimitExceeded] = useState(false);
 
-  useEffect(() => {
-    axios.get("https://vast.ec2.alluvium.net/teams24/get-record-count").then((res)=>{
-      if(res.status !== 200){
-        console.error(err);
-        console.log("Unable to fetch registration record");
-      }
-      if(res.status === 200){
-        setRegistrationLimitExceeded(res?.data?.max_count_reached);
-      }
-    }).catch((err)=>{
-      console.error(err);
-      console.log("Unable to fetch registration record");
-    });
-  }, [])
+  // useEffect(() => {
+  //   axios.get("https://vast.ec2.alluvium.net/teams24/get-record-count").then((res)=>{
+  //     if(res.status !== 200){
+  //       console.error(err);
+  //       console.log("Unable to fetch registration record");
+  //     }
+  //     if(res.status === 200){
+  //       setRegistrationLimitExceeded(res?.data?.max_count_reached);
+  //     }
+  //   }).catch((err)=>{
+  //     console.error(err);
+  //     console.log("Unable to fetch registration record");
+  //   });
+  // }, [])
 
   return (
     <>
-      <Layout>
+      <Layout withoutForm={true}>
         <Head>
           <title>Team"24 | Alluvium</title>
           <link rel="icon" href="/favicon.ico" />
@@ -40,8 +40,9 @@ const Team24 = () => {
           />
         </Head>
         <Hero />
+        <Register />
         <EventDetails />
-        {!registrationLimitExceeded && <Register setRegistrationLimitExceeded={setRegistrationLimitExceeded} />}
+        {/* {!registrationLimitExceeded && <Register setRegistrationLimitExceeded={setRegistrationLimitExceeded} />} */}
       </Layout>
     </>
   );

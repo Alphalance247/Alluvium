@@ -1,52 +1,79 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles/hero.module.scss";
-import Badges from "../badges"
+import styles from "../../styles/team.module.scss";
 
-const Banner = () => {
+const Team24Banner = () => {
   return (
     <>
-      <div className="img-responsive" style={{color:"white", backgroundImage: "url('assets/team2024/b_g.png')"}}>
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-8">
-              <Image
-                src="/assets/team2024/ateam.png"
-                alt="event"
-                width={300}
-                height={150}
-                
-                style={{marginTop:"20px"}}
-              />
-
-              <h1 className="text-bold" style={{width:"413px", fontSize:"64px", marginTop:"20px", letterSpacing:"-1%"}}>
-              Alluvium
+      <div className={styles.banner}>
+        <div className="container mx-auto">
+          <div className="row m-0 p-0">
+            <div className="col-lg-8 p-0">
+              <div className="d-none d-md-block">
+                <Image
+                  src="/assets/team2024/ateam.png"
+                  alt="event"
+                  width={337}
+                  height={150}
+                  priority
+                  loading="eager"
+                  style={{ marginBottom: "31px" }}
+                  className={``}
+                />
+              </div>
+              <div className="d-md-none mx-auto" style={{ width: 'max-content' }}>
+                <Image
+                  src="/assets/team2024/ateam-middle.png"
+                  alt="event"
+                  width={201.99}
+                  height={73.9}
+                  priority
+                  loading="eager"
+                  style={{ marginBottom: "31px" }}
+                  className={`d-md-none mx-auto`}
+                />
+              </div>
+              <h1 className={styles.heading}>
+              Get your
+                <span> African Gele and Fila</span>
               </h1>
-              <h1 className="text-bold" style={{width:"413px", fontSize:"64px", letterSpacing:"-1%", color:"#E37915"}}>
-              from Africa With Love 
-              </h1>
 
-            <div>
-            <button className="btn" style={{color:"#fff", backgroundColor:"#E37915", marginBottom:"40px", width:"158px", height:"54px"}}>Register</button>
-            </div>
+              <Link href="/event/team24">
+                <a className={`d-block btn ${styles.btn}`}>
+                Order here
+                </a>
+              </Link>
+              <div style={{ position: "absolute", bottom: "-7px", right: "0" }} className={`d-md-none w-100`}>
+                <div className={styles.menCap}>
+                  <Image
+                    src="/assets/team2024/ladies.png"
+                    width={400}
+                    height={350}
+                    alt=""
+                    className={styles.menCap}
+                    priority
+                    loading="eager"
+                  />
+                </div>
+              </div>
 
-            <div style={{marginTop:"30px"}}>
-            <Image
-                src="/assets/team2024/badges.png"
-                alt="event"
-                width={415}
-                height={69}
-                
-                
-              />
-            </div>
+              <div className={styles.badges}>
+                <Image
+                  src="/assets/team2024/badges.png"
+                  alt="event"
+                  width={415}
+                  height={69}
+                  priority
+                  loading="eager"
+                />
               </div>
             </div>
           </div>
+        </div>
       </div>
     </>
   );
 };
 
-export default Banner;
+export default Team24Banner;

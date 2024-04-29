@@ -7,7 +7,8 @@ import PhoneInput from "react-phone-number-input";
 import Image from "next/image";
 import IncentiveData from "./IncentiveData";
 import axios from "axios";
-import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { ToastProvider, useToasts } from "react-toast-notifications";
+import { IoIosGift } from "react-icons/io";
 
 const Register = ({ setRegistrationLimitExceeded }) => {
   const [country] = useState(Country.getAllCountries());
@@ -23,7 +24,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     email: "",
     country: country[0].name,
     email_sub: false,
-    phone_number: ""
+    phone_number: "",
   });
 
   const [formError, setFormErrors] = useState({
@@ -43,7 +44,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
 
     // Check each field for errors
     for (const field in form) {
-      if (!form[field] && field !== 'email_sub') {
+      if (!form[field] && field !== "email_sub") {
         errors[field] = true;
         hasErrors = true;
       }
@@ -69,10 +70,16 @@ const Register = ({ setRegistrationLimitExceeded }) => {
         .then((res) => {
           setLoading(false);
           if (res.status !== 201) {
-            addToast(res.data.error || "Error occured, please try again or contact Admin", { appearance: 'error' });
+            addToast(
+              res.data.error ||
+              "Error occured, please try again or contact Admin",
+              { appearance: "error" }
+            );
             return;
           }
-          addToast("Registration successful. Thank you, we'll be in touch.", { appearance: 'success' });
+          addToast("Registration successful. Thank you, we'll be in touch.", {
+            appearance: "success",
+          });
           setForm({
             ...form,
             email: "",
@@ -81,20 +88,24 @@ const Register = ({ setRegistrationLimitExceeded }) => {
             country: "",
             email_sub: false,
             phone_number: "",
-            souvenir: ""
+            souvenir: "",
           });
-          setRegistrationLimitExceeded(res.data.max_count_reached);
+          // setRegistrationLimitExceeded(res.data.max_count_reached);
         })
         .catch((err) => {
           setLoading(false);
-          let errMessage = 'Oops something went wrong. Please try again or contact Admin';
-          if (err.response.status < 500) {
-            errMessage = err?.response?.data?.error || 'Oops something went wrong. Please try again or contact Admin';
+          let errMessage =
+            "Oops something went wrong. Please try again or contact Admin";
+          if (err?.response?.status < 500) {
+            errMessage =
+              err?.response?.data?.error ||
+              "Oops something went wrong. Please try again or contact Admin";
             if (err?.response?.data?.max_count_reached) {
-              errMessage = 'Oops. Seems we are not allowed to accept anymore registrations at this time.'
+              errMessage =
+                "Oops. Seems we are not allowed to accept anymore registrations at this time.";
             }
           }
-          addToast(errMessage, { appearance: 'error' });
+          addToast(errMessage, { appearance: "error" });
           return;
         });
     }
@@ -102,9 +113,17 @@ const Register = ({ setRegistrationLimitExceeded }) => {
 
   const handleChange = (e) => {
     const { name, value, type } = e.target;
-    setForm((prev) => ({ ...prev, [name]: type === "radio" ? Boolean(value) : value }));
-    setFormErrors(prev => ({ ...prev, [name]: false }));
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === "radio" ? Boolean(value) : value,
+    }));
+    setFormErrors((prev) => ({ ...prev, [name]: false }));
   };
+
+  const handleSouvenir = (name, value) => {
+    setForm(prev=>({ ...prev, [name]: value}));
+    setFormErrors((prev) => ({ ...prev, [name]:false }));
+  }
 
   const handleNumber = (value) => {
     setForm((prev) => ({ ...prev, phone_number: value }));
@@ -115,13 +134,62 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     <ToastProvider>
       <section className={styles.section3} id="register-section">
         <div className="container mx-auto">
-          <h4>Register Now</h4>
-          <p className={styles.secure}>
-            Secure your souvenir now and get the chance to experience the love from
-            Africa and the Alluvium difference.
-          </p>
 
           <form action="" onSubmit={handleFormSubmit}>
+          <div className="d-flex align-items-center gap-2 mx-auto" style={{ width: 'max-content' }}>
+            <IoIosGift className={styles.icon} />
+            <h4>Choose Your Souvenir!</h4>
+          </div>
+          <p className={styles.secure}>
+          Congratulations! Please select your preferred souvenir and proceed to order your fila or gele by filling out the form below.
+          </p>
+          <div className={styles.incentives}>
+              <div className={styles.incentiveStyle}>
+                {IncentiveData.map((data) => (
+                  <button type="button" onClick={()=>handleSouvenir(data?.inputName, data?.inputValue)} className={styles.encap} key={data.id}>
+                    <div className="w-100" height={430}>
+                      <Image
+                        width={442}
+                        height={430}
+                        layout="responsive"
+                        src={data.image}
+                        alt={data.alt}
+                        loading="eager"
+                        priority
+                      />
+                    </div>
+                    <div className={styles.incentiveContent}>
+                      <div className={styles.content}>
+                        <p className={styles.firtsP}>{data.incentiveType}</p>
+                        <p className={styles.secondP}>
+                          {data.incentiveDescription}
+                        </p>
+                      </div>
+
+                      <input
+                        type="checkbox"
+                        name={data.inputName}
+                        id="checkbox"
+                        required={!form[data.inputName]}
+                        checked={form[data.inputName] === data.inputValue}
+                        value={data.inputValue}
+                        style={{ transform: "scale(2)" }}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+            <div className={styles.forwardtext}>
+                <div className={styles.souvenirHead}>
+                  <div>
+                    <p className={styles.chooseSourvenir}>
+                    Order here
+                    </p>
+                  </div>
+                </div>
+              </div>
             <p className={styles.basic}>BASIC INFORMATION</p>
             <div className={styles.action}>
               <div>
@@ -226,8 +294,8 @@ const Register = ({ setRegistrationLimitExceeded }) => {
             </div>
             <div>
               <p style={{ color: "white", marginBottom: ".5rem" }}>
-                I agree to receive emails updates from Alluvium about future events,
-                news and announcement
+                I agree to receive emails updates from Alluvium about future
+                events, news and announcement
               </p>
               <div>
                 <input
@@ -252,7 +320,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                   type="radio"
                   name="email_sub"
                   id="No"
-                  value={""}
+                  value={"false"}
                   checked={email_sub === false}
                   style={{
                     fontSize: "16px",
@@ -266,61 +334,11 @@ const Register = ({ setRegistrationLimitExceeded }) => {
                 </label>
               </div>
             </div>
-            <div className={styles.incentives}>
-              <div className={styles.forwardtext}>
-                <div className={styles.souvenirHead}>
-                  <div>
-                    <Image
-                      width={40}
-                      height={40}
-                      src="/assets/team2024/giftw.svg"
-                      alt="gift"
-                    />
-                  </div>
-                  <div>
-                    <p className={styles.chooseSourvenir}>Choose Your Souvenir!</p>
-                  </div>
-                </div>
-                <p className={styles.appreciate}>
-                  Congratulations on taking the first step towards securing your
-                  spot at Booth 53! As a token of our appreciation for your interest
-                  and participation, we're excited to offer you the opportunity to
-                  select an incentive of your choice.
-                </p>
-              </div>
-
-              <div className={styles.incentiveStyle}>
-                {IncentiveData.map((data) => (
-                  <div className={styles.encap} key={data.id}>
-                    <div className="w-100" height={430}>
-                      <Image width={442} height={430} layout="responsive" src={data.image} alt={data.alt} />
-                    </div>
-                    <div className={styles.incentiveContent}>
-                      <div className={styles.content}>
-                        <p className={styles.firtsP}>{data.incentiveType}</p>
-                        <p className={styles.secondP}>
-                          {data.incentiveDescription}
-                        </p>
-                      </div>
-
-                      <input
-                        type="checkbox"
-                        name={data.inputName}
-                        id="checkbox"
-                        // required={!checkbox}
-                        checked={form[data.inputName] === data.inputValue}
-                        value={data.inputValue}
-                        style={{ transform: "scale(2)" }}
-                        onChange={handleChange}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
             <div className={styles.button}>
-              <button type="submit" disabled={loading}>{loading ? 'Loading...' : 'Register'}</button>
+              <button type="submit" disabled={loading}>
+                {loading ? "Loading..." : "Order"}
+              </button>
             </div>
           </form>
         </div>
