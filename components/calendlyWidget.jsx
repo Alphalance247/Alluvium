@@ -7,6 +7,7 @@ const CalendlyWidget = () => {
     // Load Calendly script
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
     document.body.appendChild(script);
 
     // Clean up
@@ -16,11 +17,9 @@ const CalendlyWidget = () => {
   }, []);
 
   return (
-    <div
-      className="calendly-inline-widget"
-      data-url="https://calendly.com/your-account/your-event"
-      style={{ minWidth: '320px', height: '580px' }}
-    />
+    <>
+      <div className="calendly-inline-widget" data-url="https://calendly.com/alluvium-hq" style={{ minWidth: '320px', height: '700px' }}></div>
+    </>
   );
 };
 

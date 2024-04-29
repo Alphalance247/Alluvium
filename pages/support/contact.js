@@ -7,6 +7,7 @@ import SupportSubmenu from "../../components/supportSubmenu";
 import styles from "../../styles/contactpage.module.scss";
 import { productData } from "../../data";
 import "bootstrap/dist/css/bootstrap.min.css";
+import CalendlyWidget from "components/calendlyWidget";
 
 export default function Contact({ products }) {
   return (
@@ -119,6 +120,9 @@ export default function Contact({ products }) {
               </div>
             </div>
           </div>
+        </section>
+        <section id="schedule-a-call" className="container-fluid my-5">
+          <CalendlyWidget />
         </section>
       </div>
     </Layout>
