@@ -117,7 +117,7 @@ export default function Boot53() {
     };
 
     return (
-        <Layout>
+        <Layout withoutForm={true}>
             <div>
                 <Head>
                     <title>Booth 53 | Alluvium</title>
@@ -141,11 +141,11 @@ export default function Boot53() {
                                 <h1 className="text-white">Welcome to booth <span className="text-warning">53</span></h1>
                                 <h1 className="text-white">Unlock the full potential of your Atlassian products</h1>
                                 <div className="row">
-                                    <div className="col-md-6" style={{ marginTop: "60px" }}>
-                                        <img src="/assets/part.png" className="img-fluid" />
+                                    <div className="col-md-6 p-0" style={{ marginTop: "60px" }}>
+                                        <Image src="/assets/part.png" width={466.56} height={77.67} className="img-fluid" alt="Badges" />
                                     </div>
                                     <div className="col-md-6" style={{ paddingLeft: "0" }}>
-                                        <img src="/assets/mark.png" className="img-fluid" />
+                                        <Image src="/assets/mark.png" width={270.62} height={189.93} className="img-fluid" alt="direction" />
                                     </div>
                                 </div>
                             </div>
