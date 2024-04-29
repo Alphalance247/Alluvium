@@ -4,3 +4,39 @@ $custom-btn-color: #E37915;
     background-color: $custom-btn-color;
     color: #fff; // Text color
 }
+
+.PhoneInput input {
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid #c2c2c2;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: white;
+    color: #11202d;
+  }
+  
+  .PhoneInput>div {
+    outline: none;
+    border: 2px solid #c2c2c2;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background: white;
+    color: #11202d;
+    padding: 0.5rem;
+    margin-right: 0;
+  }
+
+  .error {
+      &>div, & input{
+        box-shadow: 0px 0px 2px orangered inset;
+        border: 2px solid orangered;
+    }
+  }
+
+  .an_heading{
+    font-size: 3rem;
+    font-weight: bold;
+
+    @media screen and (max-width: 576px) {
+        font-size: 1rem;
+    }
+  }
