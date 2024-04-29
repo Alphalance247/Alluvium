@@ -7,14 +7,14 @@ import Badges from "../badges"
 const Banner = () => {
   return (
     <>
-      <div style={{color:"white", backgroundImage: "url('assets/team2024/b_g.png')", height:"733px"}}>
+      <div className="img-responsive" style={{color:"white", backgroundImage: "url('assets/team2024/b_g.png')"}}>
           <div className="container">
             <div className="row">
               <div className="col-lg-8">
               <Image
                 src="/assets/team2024/ateam.png"
                 alt="event"
-                width={337}
+                width={300}
                 height={150}
                 
                 style={{marginTop:"20px"}}
