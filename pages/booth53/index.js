@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../../styles/boot53.module.scss";
 // import styles from "../../styles/team.module.scss";
+
 import Image from "next/image";
 import CaseStudies from "components/case-studies/case-studies";
 import Layout from "components/layout";
@@ -10,8 +11,41 @@ import { Country } from "country-state-city";
 import { ToastProvider, useToasts } from "react-toast-notifications";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { IoIosGift } from "react-icons/io";
+// import IncentiveDataa from "./IncentiveDataa";
+import BoothData from "components/TEAM24/BoothData"
+import Input from "components/TEAM24/Input";
 
 export default function Boot53() {
+
+    const [showModal, setShowModal] = useState(false);
+    const [api, setApi] = useState("https://vast.ec2.alluvium.net/teams24/lead-conversion/");
+    const handleButtonClick = () => {
+        setShowModal(true);
+        setApi("https://vast.ec2.alluvium.net/teams24/shippment/");
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+        setApi("https://vast.ec2.alluvium.net/teams24/lead-conversion/");
+        setForm({
+            ...form,
+            first_name: "",
+            last_name: "",
+            name: "",
+            contact_number: "",
+            zip_code: "",
+            postage_address: "",
+            email: "",
+            company: "",
+            country: "",
+            phone_number: "",
+            message_to_alluvium: "",
+            souvenir: ""
+        });
+    };
+
+
     const [country] = useState(Country.getAllCountries());
     const [phoneError, setPhoneError] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -28,10 +62,10 @@ export default function Boot53() {
         postage_address: "",
         email: "",
         company: "",
-        // country: country[0].name,
-        email_sub: false,
+        country: "",
         phone_number: "",
-        message_to_alluvium: ""
+        message_to_alluvium: "",
+        souvenir: ""
     });
 
     const handleFormSubmit = useCallback(async (e) => {
@@ -42,11 +76,17 @@ export default function Boot53() {
         else {
             setPhoneError((prev) => false)
         };
+        if(api.includes("shippment")){
+            if(!form.souvenir){
+                addToast("Please select a souvenir on the page", {appearance: "error"});
+                return;
+            }
+        }
 
         if (!phoneError) {
             setLoading(true);
             await axios
-                .post("https://vast.ec2.alluvium.net/teams24/lead-conversion/", { ...form })
+                .post(api, { ...form })
                 .then((res) => {
                     setLoading(false);
                     if (res.status !== 201) {
@@ -70,12 +110,11 @@ export default function Boot53() {
                         postage_address: "",
                         email: "",
                         company: "",
-                        // country: country[0].name,
-                        email_sub: false,
+                        country: "",
                         phone_number: "",
-                        message_to_alluvium: ""
+                        message_to_alluvium: "",
+                        souvenir: ""
                     });
-                    // setRegistrationLimitExceeded(res.data.max_count_reached);
                 })
                 .catch((err) => {
                     setLoading(false);
@@ -95,7 +134,7 @@ export default function Boot53() {
                 });
         }
 
-    }, [phoneError, phonePattern, form]);
+    }, [phoneError, phonePattern, form, api]);
 
     const handleChange = (e) => {
         const { name, value, type } = e.target;
@@ -115,6 +154,11 @@ export default function Boot53() {
             setPhoneError((prev) => false)
         };
     };
+
+    const handleSouvenir = (name, value) => {
+        setForm(prev => ({ ...prev, [name]: value }));
+        // setFormErrors((prev) => ({ ...prev, [name]:false }));
+    }
 
     return (
         <Layout withoutForm={true}>
@@ -197,7 +241,7 @@ export default function Boot53() {
                                         <textarea className="form-control" required value={form?.message_to_alluvium} onChange={handleChange} name="message_to_alluvium" id="message" rows="5"></textarea>
                                     </div>
                                     <div className="d-grid">
-                                        <button type="submit" className="btn" style={{ backgroundColor: "#E37915", color: "#fff" }}>Submit</button>
+                                        <button type="submit" disabled={loading} className="btn" style={{ backgroundColor: "#E37915", color: "#fff" }}>{loading? 'Loading...' : 'Submit'}</button>
                                     </div>
                                 </form>
                             </div>
@@ -252,28 +296,179 @@ export default function Boot53() {
                 </div>
             </div>
 
-            {/* sourvenirs */}
+            {/* test */}
+            <section className={styles.section3} id="register-section">
+                <div className="container mx-auto">
+                    <form action="" className="w-100" onSubmit={handleFormSubmit}>
+                        <div className={styles.incentives}>
+
+                            <div className="d-flex flex-wrap mx-auto gap-4">
+                                {BoothData.slice(0, 4).map(data => (
+                                    <button
+                                        type="button"
+                                        onClick={() => handleSouvenir(data?.inputName, data?.inputValue)}
+                                        className={`${styles.encap}`}
+                                        key={data.id}
+                                    >
+                                        <div className="w-100" height={430}>
+                                            <Image
+                                                width={442}
+                                                height={430}
+                                                layout="responsive"
+                                                src={data.image}
+                                                alt={data.inputValue}
+                                                loading="eager"
+                                                priority
+                                            />
+                                        </div>
+                                        <div className={styles.incentiveContent}>
+                                            <div className={styles.content}>
+                                                <p className={styles.firtsP}>{data.inputValue}</p>
+                                            </div>
+
+                                            <input
+                                                type="checkbox"
+                                                name={data.inputName}
+                                                id="checkbox"
+                                                required={!form[data.inputName]}
+                                                checked={form[data.inputName] === data.inputValue}
+                                                value={data.inputValue}
+                                                style={{ transform: "scale(2)" }}
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+                            <div className="d-flex flex-wrap mx-auto gap-4">
+                                {BoothData.slice(4).map(data => (
+                                    <button
+                                        type="button"
+                                        onClick={() => handleSouvenir(data?.inputName, data?.inputValue)}
+                                        className={`${styles.encap}`}
+                                        key={data.id}
+                                    >
+                                        <div className="w-100" height={430}>
+                                            <Image
+                                                width={442}
+                                                height={430}
+                                                layout="responsive"
+                                                src={data.image}
+                                                alt={data.inputValue}
+                                                loading="eager"
+                                                priority
+                                            />
+                                        </div>
+                                        <div className={styles.incentiveContent}>
+                                            <div className={styles.content}>
+                                                <p className={styles.firtsP}>{data.inputValue}</p>
+                                            </div>
+
+                                            <input
+                                                type="checkbox"
+                                                name={data.inputName}
+                                                id="checkbox"
+                                                required={!form[data.inputName]}
+                                                checked={form[data.inputName] === data.inputValue}
+                                                value={data.inputValue}
+                                                style={{ transform: "scale(2)" }}
+                                                onChange={handleChange}
+                                            />
+                                        </div>
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            {/* test */}
+            {/* send me */}
             <div className="container-fluid" style={{ backgroundColor: "#11202D" }}>
                 <div className="container mx-auto row align-items-center gap-5 gap-md-0" style={{ padding: "100px 0" }}>
-                    <div className="col-md-6">
-                        <div className="container d-flex justify-content-center align-items-center">
-                            <div className="d-flex flex-column align-items-center">
-                                <Image width={442} height={457} src="/assets/fila.png" className="img-fluid" alt="Fila Image" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                         <div className="container d-flex justify-content-center align-items-center" style={{ backgroundImage: "url('/assets/sourvbg.png')", backgroundSize: "cover", minHeight: "457px" }}>
                             <div className="d-flex flex-column align-items-center">
-                                <button type="submit" className="btn" style={{ backgroundColor: "#E37915", color: "#fff", borderRadius: "5px" }}>Send me souvenirs (coming soon)</button>
+                                {/* Button to open modal */}
+                                <button type="button" onClick={handleButtonClick} className="btn" style={{ backgroundColor: "#E37915", color: "#fff", borderRadius: "5px" }}>Send me souvenirs</button>
                             </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
+                {/* Modal */}
+                {showModal && (
+                    <div className={`modal ${styles.modal}`} tabIndex="-1" role="dialog" style={{ display: "block" }}>
+                        <div className="modal-dialog" role="document">
+                            <div className="modal-content">
+                                <div className="modal-header border-0">
+                                    <h5 className="modal-title"></h5>
+                                    <button type="button" className={styles.close} onClick={handleCloseModal} aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div className="modal-body border-0">
 
+                                    <form onSubmit={handleFormSubmit} className={styles.form}>
+                                        <div className="row">
+                                            <div className="mb-1 col-md-6">
+                                                <label htmlFor="firstName" className="form-label mb-0">Name</label>
+                                                <input type="text" name="name" required value={form?.name} onChange={handleChange} className="form-control" id="firstName" />
+                                            </div>
+                                            <div className="mb-1 col-md-6">
+                                                <label htmlFor="Email" className="form-label mb-0">Email</label>
+                                                <input type="text" name="email" required value={form?.email} onChange={handleChange} className="form-control" id="lastName" />
+                                            </div>
+                                        </div>
+                                        <div className="row">
+                                        </div>
+                                        <div className="mb-1">
+                                            <label htmlFor="message" className="form-label mb-0">Postage Address</label>
+                                            <textarea className="form-control" required value={form?.postage_address} onChange={handleChange} name="postage_address" id="message" rows="5"></textarea>
+                                        </div>
+
+                                        <div className="row">
+                                            <div className="mb-1 col-md-6">
+                                                <label htmlFor="phoneNumber" className="form-label mb-0">Contact</label>
+                                                <PhoneInput
+                                                    international
+                                                    defaultCountry="US"
+                                                    value={form.phone_number ?? ""}
+                                                    onChange={handleNumber}
+                                                    className={`${styles.PhoneInput} ${phoneError ? styles.error : ""}`}
+                                                    required
+                                                    numberInputProps={{
+                                                        className: phoneError ? styles.error : "",
+                                                    }}
+                                                    countrySelectProps={{
+                                                        className: phoneError ? styles.error : "",
+                                                    }}
+                                                />
+                                            </div>
+                                            <div className="mb-1 col-md-6">
+                                                <label htmlFor="country" className="form-label mb-0">Country</label>
+                                                <input type="text" name="country" required value={form?.country} onChange={handleChange} className="form-control" id="country" />
+                                            </div>
+                                        </div>
+                                        <div className="mb-1 col-md-6">
+                                            <label htmlFor="zipcode" className="form-label mb-0">Zip Code</label>
+                                            <input type="text" name="zip_code" required value={form?.zip_code} onChange={handleChange} className="form-control" id="zipcode" />
+                                        </div>
+
+
+
+                                        <div className="d-grid">
+                                            <button type="submit" disabled={loading} className={`btn ${styles.submit}`} style={{ backgroundColor: "#E37915", color: "#fff" }}>{loading? 'Loading...' : 'Submit'}</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {showModal && <div className="modal-backdrop fade show"></div>}
+            </div>
 
 
 
