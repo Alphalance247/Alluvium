@@ -45,7 +45,7 @@ const Team24Banner = () => {
                 Order here
                 </a>
               </Link>
-              <Link href="/booth53">
+              <Link href="/booth53#hero">
                 <a className={`d-block btn ${styles.btn}`}>
                 Booth 53
                 </a>

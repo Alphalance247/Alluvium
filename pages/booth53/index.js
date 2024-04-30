@@ -151,52 +151,52 @@ export default function Boot53() {
                 </Head>
             </div>
 
-            <div className="" style={{ backgroundImage: "url('/assets/b53hero.png')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: "595px", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div id="hero" className="" style={{ backgroundImage: "url('/assets/b53hero.png')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: "595px", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div className="container">
                     <div className="row my-5 my-md-0">
                         <div className="col-md-6">
                             <div className="" style={{ marginTop: "50px" }}>
-                                <h1 className="text-white">Welcome to booth <span className="text-warning">53</span></h1>
+                                <h1 className="text-white">Welcome to <span className="text-warning">Booth 53</span></h1>
                                 <h1 className="text-white">Unlock the full potential of your Atlassian products</h1>
-                                <div className="row">
+                                <div className="row px-3 px-lg-0 mb-4 mb-lg-0">
                                     <div className="col-md-6 p-0" style={{ marginTop: "60px" }}>
                                         <Image src="/assets/part.png" width={466.56} height={77.67} className="img-fluid" alt="Badges" />
                                     </div>
-                                    <div className="col-md-6" style={{ paddingLeft: "0" }}>
+                                    <div className="col-md-6 d-none d-lg-block" style={{ paddingLeft: "0" }}>
                                         <Image src="/assets/mark.png" width={270.62} height={189.93} className="img-fluid" alt="direction" />
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div className="container bg-white" style={{ borderRadius: "10px", maxWidth: '500px', padding: "10px" }}>
-                                <form onSubmit={handleFormSubmit}>
+                            <div className="container bg-white" style={{ borderRadius: "10px", maxWidth: '500px', padding: "20px" }}>
+                                <form onSubmit={handleFormSubmit} className={styles.form}>
                                     <div className="row">
                                         <div className="mb-1 col-md-6">
                                             <label htmlFor="firstName" className="form-label mb-0">First Name</label>
-                                            <input type="text" name="first_name" required value={form?.first_name} onChange={handleChange} className="form-control" id="firstName" placeholder="John" />
+                                            <input type="text" name="first_name" required value={form?.first_name} onChange={handleChange} className="form-control" id="firstName" />
                                         </div>
                                         <div className="mb-1 col-md-6">
                                             <label htmlFor="lastName" className="form-label mb-0">Last Name</label>
-                                            <input type="text" name="last_name" required value={form?.last_name} onChange={handleChange} className="form-control" id="lastName" placeholder="Doe" />
+                                            <input type="text" name="last_name" required value={form?.last_name} onChange={handleChange} className="form-control" id="lastName" />
                                         </div>
                                     </div>
                                     <div className="row">
-                                    <div className="mb-1 col-md-6">
-                                        <label htmlFor="companyName" className="form-label mb-0">Company Name</label>
-                                        <input type="text" name="company" required value={form?.company} onChange={handleChange} className="form-control" id="companyName" placeholder="Enter your company name" />
-                                    </div>
-                                    <div className="mb-1 col-md-6">
-                                        <label htmlFor="email" className="form-label mb-0">Email Address</label>
-                                        <input type="email" name="email" required value={form?.email} onChange={handleChange} className="form-control" id="email" placeholder="yourname@example.com" />
-                                    </div>
+                                        <div className="mb-1 col-md-6">
+                                            <label htmlFor="companyName" className="form-label mb-0">Company Name</label>
+                                            <input type="text" name="company" required value={form?.company} onChange={handleChange} className="form-control" id="companyName" />
+                                        </div>
+                                        <div className="mb-1 col-md-6">
+                                            <label htmlFor="email" className="form-label mb-0">Email Address</label>
+                                            <input type="email" name="email" required value={form?.email} onChange={handleChange} className="form-control" id="email" />
+                                        </div>
                                     </div>
                                     <div className="mb-1">
                                         <label htmlFor="phoneNumber" className="form-label mb-0">Phone Number</label>
                                         <PhoneInput
                                             placeholder="8140686688"
                                             international
-                                            defaultCountry="NG"
+                                            defaultCountry="US"
                                             value={form.phone_number ?? ""}
                                             onChange={handleNumber}
                                             className={`${styles.PhoneInput} ${phoneError ? styles.error : ""}`}
@@ -234,9 +234,18 @@ export default function Boot53() {
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
                     <div className="text-left">
                         <h1 className={styles.an_heading}>Comprehensive Site Audit</h1>
-                        <p style={{ maxWidth: "676px", fontWeight: "500" }}>
-                            Unlock the Full Potential of Your Atlassian Products with Our Comprehensive Site Audit! Discover Hidden Opportunities, Streamline Operations, and Elevate Performance Across Your Platform. Our Expert Health Check Ensures Your Setup is Fine-Tuned for Success, Regardless of Your Project's Scope or Complexity. Don't Wait – Schedule Your Audit Today and Take Your Atlassian Products to the Next Level!
-                        </p>
+                        <div style={{ maxWidth: "676px", fontWeight: "500" }}>
+                            <p>
+                                Unlock the Full Potential of Your Atlassian Products with Our Comprehensive Site Audit! </p>
+                            <ul className="ms-4">
+                                <li>Discover Hidden Opportunities,</li>
+                                <li>Streamline Operations,</li>
+                                <li>and Elevate Performance Across Your Platform.</li>
+                            </ul>
+                            <p> Our Expert Health Check Ensures Your Setup is Fine-Tuned for Success, Regardless of Your Project&apos;s Scope or Complexity.</p>
+                            <p> Don&apos;t Wait – Schedule Your Audit Today and Take Your Atlassian Products to the Next Level!
+                            </p>
+                        </div>
                         <button type="submit" className="btn" style={{ backgroundColor: "#E37915", color: "#fff" }}>Request a demo</button>
                     </div>
                 </div>

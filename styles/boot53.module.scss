@@ -33,11 +33,22 @@ $custom-btn-color: #E37915;
   }
 
   .an_heading{
-    font-size: 3rem;
+    // font-size: 32px;
     font-weight: bold;
+    margin-bottom: 20px;
 
     @media screen and (max-width: 576px) {
         font-size: 1rem;
+    }
+  }
+
+  .form{
+    label{
+        font-size: 14px;
+    }
+    & input{
+        font-size: 14px;
+        padding: 10px;
     }
   }
 
