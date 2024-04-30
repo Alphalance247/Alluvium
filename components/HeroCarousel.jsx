@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import Badges from "./badges";
 // import EventHero from "./cloud-connect/EventHero";
 import Team24Banner from "./TEAM24/banner"
+import Boot53 from "components/TEAM24/booth53"
 
 export default function () {
 
@@ -17,6 +18,10 @@ export default function () {
                     
                     <div>
                         <Team24Banner />
+                    </div>
+
+                    <div className="" style={{backgroundImage: 'url(/assets/team2024/booth53-bannerr.png)'}}>
+                    <Boot53 />
                     </div>
                     
                     {/* <div>
