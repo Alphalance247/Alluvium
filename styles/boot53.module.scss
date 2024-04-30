@@ -52,6 +52,94 @@ $custom-btn-color: #E37915;
     }
   }
 
+  .encap {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 0px;
+    overflow: hidden;
+    background: white;
+    width: 202px;
+    // height: 240px;
+
+    &:hover{
+      background-color: rgba(255, 255, 255, 0.929);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8) inset;
+    }
+
+    // @media screen and (max-width: 1200px) {
+    //   width: 100%;
+    // }
+
+    // @media screen and (max-width: 992px) {
+    //   width: 100%;
+    // }
+
+    // @media screen and (max-width: 576px) {
+    //   width: 100%;
+    // }
+
+    img {
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        margin: auto;
+      }
+
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        height: 300px;
+      }
+    }
+  }
+
+  .incentiveContent {
+    display: flex;
+    background: transparent;
+    column-gap: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding: 1rem;
+    margin-top: 0;
+
+    @media screen and (max-width: 992px) {
+      padding: .5rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding: .5rem;
+    }
+
+    .firtsP {
+      font-size: 16px;
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+
+  .modal{
+    .close{
+        background: transparent;
+        color: black;
+        border: 0;
+        font-size: 26px;
+    }
+
+    .submit{
+        color: #fff;
+        background-color: #E37915;
+        max-width: 269px;
+        margin: 30px auto;
+    }
+  }
+
+
+
+
+
+
+
+
+
 
   .hero {
     height: 600px;
@@ -382,7 +470,7 @@ $custom-btn-color: #E37915;
     background: #11202d;
   
     &>div {
-      padding: 4rem 12rem;
+      padding: 4rem 0;
   
       @media screen and (max-width: 1400px) {
         padding: 4rem;
@@ -485,43 +573,6 @@ $custom-btn-color: #E37915;
         border: 2px solid #c2c2c2;
       }
   
-      .selectDiv {
-        display: flex;
-  
-        .selectOption {
-          outline: none;
-          border: 2px solid #c2c2c2;
-          border-radius: 0.5rem 0 0 0.5rem;
-          background: #11202d;
-          color: white;
-          padding: 0.5rem;
-        }
-  
-        .selectInput {
-          width: 100%;
-          padding: 0.5rem;
-          outline: none;
-          border: 2px solid #c2c2c2;
-          border-radius: 0 0.5rem 0.5rem 0;
-          background: #11202d;
-          color: white;
-        }
-  
-        .error {
-          border: 2px solid orangered;
-        }
-      }
-  
-      .countrySelect {
-        width: 100%;
-        padding: 0.7rem;
-        outline: none;
-        background: white;
-        border: 2px solid #c2c2c2;
-        border-radius: 0.5rem;
-        color: #11202d;
-      }
-  
       .error {
         border: 2px solid orangered;
       }
@@ -580,100 +631,11 @@ $custom-btn-color: #E37915;
       }
   
       .incentives {
-        margin-top: 3rem;
+        // margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
   
-  
-        .incentiveStyle {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          column-gap: 2rem;
-  
-          @media screen and (max-width: 992px) {
-            grid-template-columns: repeat(2, 1fr);
-            column-gap: 2rem;
-          }
-  
-          @media screen and (max-width: 576px) {
-            grid-template-columns: 1fr;
-            row-gap: 2rem;
-          }
-  
-          .encap {
-            width: 440px;
-            border-radius: 8px;
-            border: 0px;
-            overflow: hidden;
-            background: white;
-  
-            &:hover{
-              background-color: rgba(255, 255, 255, 0.929);
-              box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8) inset;
-            }
-  
-            @media screen and (max-width: 1200px) {
-              width: 100%;
-            }
-  
-            @media screen and (max-width: 992px) {
-              width: 100%;
-            }
-  
-            @media screen and (max-width: 576px) {
-              width: 100%;
-            }
-  
-            img {
-              @media screen and (max-width: 992px) {
-                width: 100%;
-                margin: auto;
-              }
-  
-              @media screen and (max-width: 576px) {
-                width: 100%;
-                height: 300px;
-              }
-            }
-          }
-  
-          .incentiveContent {
-            display: flex;
-            background: transparent;
-            column-gap: 3rem;
-            align-items: flex-start;
-            color: black;
-            padding: 3rem 1.5rem 1.5rem 1.5rem;
-            margin-top: 0;
-  
-            @media screen and (max-width: 992px) {
-              padding: 1rem;
-            }
-  
-            @media screen and (max-width: 576px) {
-              padding: 1rem;
-            }
-  
-            .firtsP {
-              font-size: 36px;
-              line-height: 35px;
-              font-weight: 600;
-  
-              @media screen and (max-width: 576px) {
-                font-size: 20px;
-              }
-            }
-  
-            .secondP {
-              font-weight: 600;
-              font-size: 1rem;
-              line-height: 27px;
-  
-              @media screen and (max-width: 576px) {
-                font-size: 14px;
-                line-height: 20px;
-              }
-            }
-          }
-        }
       }
     }
   }

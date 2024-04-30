@@ -1,64 +1,58 @@
 const BoothData = [
     {
       id: 1,
-      image: "/assets/team2024/gele.png",
-      incentiveType: "GELE",
-      incentiveDescription:
-        "",
-      inputType: "checkbox",
+      image: "/assets/souvenirs/wallet.png",
       inputName: "souvenir",
-      inputValue: "gele",
-      alt: "gele",
+      inputValue: "Wallet",
     },
     {
       id: 2,
-      image: "/assets/team2024/fila.png",
-      incentiveType: "FILA",
-      incentiveDescription:
-        "",
-      inputType: "checkbox",
+      image: "/assets/souvenirs/fila.png",
       inputName: "souvenir",
-      inputValue: "fila",
-      alt: "fila",
+      inputValue: "Fila",
     },
-
     {
       id: 3,
-      image: "/assets/team2024/fila.png",
-      incentiveType: "FILA",
-      incentiveDescription:
-        "",
-      inputType: "checkbox",
+      image: "/assets/souvenirs/gele.png",
       inputName: "souvenir",
-      inputValue: "fila",
-      alt: "fila",
+      inputValue: "Gele",
     },
-
     {
       id: 4,
-      image: "/assets/team2024/fila.png",
-      incentiveType: "FILA",
-      incentiveDescription:
-        "",
-      inputType: "checkbox",
+      image: "/assets/souvenirs/coaster.png",
       inputName: "souvenir",
-      inputValue: "fila",
-      alt: "fila",
+      inputValue: "Coasters",
     },
-
-    
     {
       id: 5,
-      image: "/assets/team2024/fila.png",
-      incentiveType: "FILA",
-      incentiveDescription:
-        "",
-      inputType: "checkbox",
+      image: "/assets/souvenirs/shirt1.png",
       inputName: "souvenir",
-      inputValue: "fila",
-      alt: "fila",
+      inputValue: "Kente lined T-Shirt",
     },
-
+    {
+      id: 6,
+      image: "/assets/souvenirs/shirt2.png",
+      inputName: "souvenir",
+      inputValue: "Shwe-shwe lined T-Shirt",
+    },
+    {
+      id: 7,
+      image: "/assets/souvenirs/shirt3.png",
+      inputName: "souvenir",
+      inputValue: "Batik lined T-Shirt",
+    },
+    {
+      id: 8,
+      image: "/assets/souvenirs/shirt4.png",
+      inputName: "souvenir",
+      inputValue: "Ankara lined T-Shirt",
+    },
+    {
+      id: 9,
+      image: "/assets/souvenirs/shirt5.png",
+      inputName: "souvenir",
+      inputValue: "Kitenge lined T-Shirt",
+    },
     
   ];
   
