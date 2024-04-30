@@ -133,11 +133,11 @@ export default function Boot53() {
                 </Head>
             </div>
 
-            <div className="" style={{ backgroundImage: "url('/assets/b53hero.png')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: "995px", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <div className="" style={{ backgroundImage: "url('/assets/b53hero.png')", backgroundPosition: 'center', backgroundSize: 'cover', minHeight: "595px", display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <div className="container">
-                    <div className="row my-5">
+                    <div className="row my-5 my-md-0">
                         <div className="col-md-6">
-                            <div className="" style={{ marginTop: "150px" }}>
+                            <div className="" style={{ marginTop: "50px" }}>
                                 <h1 className="text-white">Welcome to booth <span className="text-warning">53</span></h1>
                                 <h1 className="text-white">Unlock the full potential of your Atlassian products</h1>
                                 <div className="row">
@@ -151,26 +151,30 @@ export default function Boot53() {
                             </div>
                         </div>
                         <div className="col-md-6">
-                            <div className="container bg-white" style={{ borderRadius: "10px", maxWidth: '500px', padding: "20px" }}>
+                            <div className="container bg-white" style={{ borderRadius: "10px", maxWidth: '500px', padding: "10px" }}>
                                 <form onSubmit={handleFormSubmit}>
-                                    <div className="mb-3">
-                                        <label htmlFor="firstName" className="form-label">First Name</label>
-                                        <input type="text" name="first_name" required value={form?.first_name} onChange={handleChange} className="form-control" id="firstName" placeholder="John" />
+                                    <div className="row">
+                                        <div className="mb-1 col-md-6">
+                                            <label htmlFor="firstName" className="form-label mb-0">First Name</label>
+                                            <input type="text" name="first_name" required value={form?.first_name} onChange={handleChange} className="form-control" id="firstName" placeholder="John" />
+                                        </div>
+                                        <div className="mb-1 col-md-6">
+                                            <label htmlFor="lastName" className="form-label mb-0">Last Name</label>
+                                            <input type="text" name="last_name" required value={form?.last_name} onChange={handleChange} className="form-control" id="lastName" placeholder="Doe" />
+                                        </div>
                                     </div>
-                                    <div className="mb-3">
-                                        <label htmlFor="lastName" className="form-label">Last Name</label>
-                                        <input type="text" name="last_name" required value={form?.last_name} onChange={handleChange} className="form-control" id="lastName" placeholder="Doe" />
-                                    </div>
-                                    <div className="mb-3">
-                                        <label htmlFor="companyName" className="form-label">Company Name</label>
+                                    <div className="row">
+                                    <div className="mb-1 col-md-6">
+                                        <label htmlFor="companyName" className="form-label mb-0">Company Name</label>
                                         <input type="text" name="company" required value={form?.company} onChange={handleChange} className="form-control" id="companyName" placeholder="Enter your company name" />
                                     </div>
-                                    <div className="mb-3">
-                                        <label htmlFor="email" className="form-label">Email Address</label>
+                                    <div className="mb-1 col-md-6">
+                                        <label htmlFor="email" className="form-label mb-0">Email Address</label>
                                         <input type="email" name="email" required value={form?.email} onChange={handleChange} className="form-control" id="email" placeholder="yourname@example.com" />
                                     </div>
-                                    <div className="mb-3">
-                                        <label htmlFor="phoneNumber" className="form-label">Phone Number</label>
+                                    </div>
+                                    <div className="mb-1">
+                                        <label htmlFor="phoneNumber" className="form-label mb-0">Phone Number</label>
                                         <PhoneInput
                                             placeholder="8140686688"
                                             international
@@ -188,8 +192,8 @@ export default function Boot53() {
                                         />
                                         {/* <input type="text" name="phone_number" required value={form?.phone_number} onChange={handleChange} className="form-control" id="phoneNumber" placeholder="0810000000" /> */}
                                     </div>
-                                    <div className="mb-3">
-                                        <label htmlFor="message" className="form-label">Message to Alluvium</label>
+                                    <div className="mb-1">
+                                        <label htmlFor="message" className="form-label mb-0">Message to Alluvium</label>
                                         <textarea className="form-control" required value={form?.message_to_alluvium} onChange={handleChange} name="message_to_alluvium" id="message" rows="5"></textarea>
                                     </div>
                                     <div className="d-grid">
