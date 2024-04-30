@@ -69,7 +69,7 @@ const Hero = ({ }) => {
           </div>
         </div>
         <div
-          style={{ background: "#FFFFFF", width: "100%", height: "48px" }}
+          style={{ background: "#009BC0", width: "100%", height: "48px" }}
           className={styles.bordershape}
         ></div>
       </section>
