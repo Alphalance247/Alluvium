@@ -52,6 +52,7 @@ export default function Boot53() {
     const { addToast } = useToasts();
 
     const phonePattern = useMemo(() => /^\+\d{1,13}$/);
+    BoothData.forEach(item=>console.log(item.inputValue.toLowerCase()));
 
     const [form, setForm] = useState({
         first_name: "",
@@ -302,7 +303,7 @@ export default function Boot53() {
                     <form action="" className="w-100" onSubmit={handleFormSubmit}>
                         <div className={styles.incentives}>
 
-                            <div className="d-flex flex-wrap mx-auto gap-4">
+                            <div className="d-flex flex-wrap justify-content-center mx-auto gap-4">
                                 {BoothData.slice(0, 4).map(data => (
                                     <button
                                         type="button"
@@ -331,8 +332,8 @@ export default function Boot53() {
                                                 name={data.inputName}
                                                 id="checkbox"
                                                 required={!form[data.inputName]}
-                                                checked={form[data.inputName] === data.inputValue}
-                                                value={data.inputValue}
+                                                checked={form[data.inputName] === data.inputValue.toLowerCase()}
+                                                value={data.inputValue.toLowerCase()}
                                                 style={{ transform: "scale(2)" }}
                                                 onChange={handleChange}
                                             />
@@ -340,7 +341,7 @@ export default function Boot53() {
                                     </button>
                                 ))}
                             </div>
-                            <div className="d-flex flex-wrap mx-auto gap-4">
+                            <div className="d-flex flex-wrap justify-content-center mx-auto gap-4">
                                 {BoothData.slice(4).map(data => (
                                     <button
                                         type="button"
@@ -369,8 +370,8 @@ export default function Boot53() {
                                                 name={data.inputName}
                                                 id="checkbox"
                                                 required={!form[data.inputName]}
-                                                checked={form[data.inputName] === data.inputValue}
-                                                value={data.inputValue}
+                                                checked={form[data.inputName] === data.inputValue.toLowerCase()}
+                                                value={data.inputValue.toLowerCase()}
                                                 style={{ transform: "scale(2)" }}
                                                 onChange={handleChange}
                                             />
