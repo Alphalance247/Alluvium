@@ -39,11 +39,18 @@ const Team24Banner = () => {
                 <span> African Gele and Fila</span>
               </h1>
 
+              <div className="d-flex gap-3">
               <Link href="/event/team24">
                 <a className={`d-block btn ${styles.btn}`}>
                 Order here
                 </a>
               </Link>
+              <Link href="/booth53">
+                <a className={`d-block btn ${styles.btn}`}>
+                Booth 53
+                </a>
+              </Link>
+              </div>
               <div style={{ position: "absolute", bottom: "-7px", right: "0" }} className={`d-md-none w-100`}>
                 <div className={styles.menCap}>
                   <Image
