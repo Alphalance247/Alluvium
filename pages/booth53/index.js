@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../../styles/boot53.module.scss";
 // import styles from "../../styles/team.module.scss";
+
 import Image from "next/image";
 import CaseStudies from "components/case-studies/case-studies";
 import Layout from "components/layout";
@@ -10,8 +11,25 @@ import { Country } from "country-state-city";
 import { ToastProvider, useToasts } from "react-toast-notifications";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import { IoIosGift } from "react-icons/io";
+// import IncentiveDataa from "./IncentiveDataa";
+import BoothData from "components/TEAM24/BoothData"
+import Input from "components/TEAM24/Input";
 
 export default function Boot53() {
+
+  const [showModal, setShowModal] = useState(false);
+  const handleButtonClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+
+
+
     const [country] = useState(Country.getAllCountries());
     const [phoneError, setPhoneError] = useState(false);
     const [loading, setLoading] = useState(false);
@@ -243,28 +261,147 @@ export default function Boot53() {
                 </div>
             </div>
 
-            {/* sourvenirs */}
-            <div className="container-fluid" style={{ backgroundColor: "#11202D" }}>
-                <div className="container mx-auto row align-items-center gap-5 gap-md-0" style={{ padding: "100px 0" }}>
-                    <div className="col-md-6">
-                        <div className="container d-flex justify-content-center align-items-center">
-                            <div className="d-flex flex-column align-items-center">
-                                <Image width={442} height={457} src="/assets/fila.png" className="img-fluid" alt="Fila Image" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="col-md-6">
-                        <div className="container d-flex justify-content-center align-items-center" style={{ backgroundImage: "url('/assets/sourvbg.png')", backgroundSize: "cover", minHeight: "457px" }}>
-                            <div className="d-flex flex-column align-items-center">
-                                <button type="submit" className="btn" style={{ backgroundColor: "#E37915", color: "#fff", borderRadius: "5px" }}>Send me souvenirs (coming soon)</button>
-                            </div>
-                        </div>
-                    </div>
-
+            {/* test */}
+            <section className={styles.section3} id="register-section">
+  <div className="container mx-auto">
+    <form action="" onSubmit={handleFormSubmit}>
+      <div className={styles.incentives}>
+        
+        <div className="d-flex flex-wrap">
+          {BoothData.map((data) => (
+            <button
+              type="button"
+              onClick={() => handleSouvenir(data?.inputName, data?.inputValue)}
+              className={`${styles.encap} col-md-2`} 
+              key={data.id}
+            >
+              <div className="w-100" height={430}>
+                <Image
+                  width={442}
+                  height={430}
+                  layout="responsive"
+                  src={data.image}
+                  alt={data.alt}
+                  loading="eager"
+                  priority
+                />
+              </div>
+              <div className={styles.incentiveContent}>
+                <div className={styles.content}>
+                  <p className={styles.firtsP}>{data.incentiveType}</p>
+                  <p className={styles.secondP}>{data.incentiveDescription}</p>
                 </div>
-            </div>
 
+                <input
+                  type="checkbox"
+                  name={data.inputName}
+                  id="checkbox"
+                  required={!form[data.inputName]}
+                  checked={form[data.inputName] === data.inputValue}
+                  value={data.inputValue}
+                  style={{ transform: "scale(2)" }}
+                  onChange={handleChange}
+                />
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+            {/* test */}
+                        {/* send me */}
+<div className="container-fluid" style={{ backgroundColor: "#11202D" }}>
+      <div className="container mx-auto row align-items-center gap-5 gap-md-0" style={{ padding: "100px 0" }}>
+        <div className="col-md-12">
+          <div className="container d-flex justify-content-center align-items-center" style={{ backgroundImage: "url('/assets/sourvbg.png')", backgroundSize: "cover", minHeight: "457px" }}>
+            <div className="d-flex flex-column align-items-center">
+              {/* Button to open modal */}
+              <button type="button" onClick={handleButtonClick} className="btn" style={{ backgroundColor: "#E37915", color: "#fff", borderRadius: "5px" }}>Send me souvenirs (coming soon)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Modal */}
+      {showModal && (
+        <div className="modal" tabIndex="-1" role="dialog" style={{ display: "block" }}>
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title"></h5>
+                <button type="button" className="close" onClick={handleCloseModal} aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                
+                <form onSubmit={handleFormSubmit}>
+                                    <div className="row">
+                                        <div className="mb-1 col-md-6">
+                                            <label htmlFor="firstName" className="form-label mb-0">Name</label>
+                                            <input type="text" name="name" required value={form?.name} onChange={handleChange} className="form-control" id="firstName" placeholder="Name" />
+                                        </div>
+                                        <div className="mb-1 col-md-6">
+                                            <label htmlFor="Email" className="form-label mb-0">Email</label>
+                                            <input type="text" name="email" required value={form?.email} onChange={handleChange} className="form-control" id="lastName" placeholder="Email" />
+                                        </div>
+                                    </div>
+                                    <div className="row">
+                                    </div>
+                                    <div className="mb-1">
+                                        <label htmlFor="message" className="form-label mb-0">Postage Address</label>
+                                        <textarea className="form-control" required value={form?.message_to_alluvium} onChange={handleChange} name="message_to_alluvium" id="message" rows="5"></textarea>
+                                    </div>
+
+                                    <div className="row">
+                                        <div className="mb-1 col-md-6">
+                                        <label htmlFor="phoneNumber" className="form-label mb-0">Contact</label>
+                                        <PhoneInput
+                                            placeholder="8140686688"
+                                            international
+                                            defaultCountry="NG"
+                                            value={form.phone_number ?? ""}
+                                            onChange={handleNumber}
+                                            className={`${styles.PhoneInput} ${phoneError ? styles.error : ""}`}
+                                            required
+                                            numberInputProps={{
+                                                className: phoneError ? styles.error : "",
+                                            }}
+                                            countrySelectProps={{
+                                                className: phoneError ? styles.error : "",
+                                            }}
+                                        />
+                                        </div>
+                                        <div className="mb-1 col-md-6">
+                                        <label htmlFor="email" className="form-label mb-0">Country</label>
+                                        <input type="country" name="country" required value={form?.email} onChange={handleChange} className="form-control" id="email" placeholder="yourname@example.com" />
+                                    </div>
+                                    </div>
+                                    <div className="mb-1 col-md-6">
+                                        <label htmlFor="zipcode" className="form-label mb-0">Zip Code</label>
+                                            <input type="text" name="zipcode" required value={form?.zipcode} onChange={handleChange} className="form-control" id="zipcode" placeholder="Zip Code" />
+                                        </div>
+
+                                   
+                                    
+                                    <div className="d-grid">
+                                        <button type="submit" className="btn" style={{ backgroundColor: "#E37915", color: "#fff" }}>Submit</button>
+                                    </div>
+                                </form>
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-secondary" onClick={handleCloseModal}>Close</button>
+                <button type="button" className="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      
+      {showModal && <div className="modal-backdrop fade show"></div>}
+    </div>
 
 
 

@@ -21,6 +21,7 @@ const IncentiveData = [
     inputValue: "fila",
     alt: "fila",
   },
+
 ];
 
 export default IncentiveData;
