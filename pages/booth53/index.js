@@ -52,7 +52,6 @@ export default function Boot53() {
     const { addToast } = useToasts();
 
     const phonePattern = useMemo(() => /^\+\d{1,13}$/);
-    BoothData.forEach(item=>console.log(item.inputValue.toLowerCase()));
 
     const [form, setForm] = useState({
         first_name: "",
