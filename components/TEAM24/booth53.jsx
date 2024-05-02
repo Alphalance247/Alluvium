@@ -6,7 +6,8 @@ import styles from "../../styles/boot53.module.scss";
 const Booth53Banner = () => {
   return (
     <>
-      <div className={styles.banner}>
+      <div className={styles.banner} style={{backgroundImage: "url('assets/team2024/booth53-bannerr.png')", backgroundSize: "1157px 530.05px", position: "relative"}}>
+      <div style={{position: "absolute", top: 0, left: 0, width: "100%", height: "100%", backgroundColor: "rgba(0, 0, 0, 0.5)"}}></div>
         <div className="container mx-auto">
           <div className="row m-0 p-0">
             <div className="col-lg-8 p-0">
