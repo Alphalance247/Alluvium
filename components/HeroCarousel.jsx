@@ -7,6 +7,7 @@ import Hero from "./Hero";
 import Badges from "./badges";
 // import EventHero from "./cloud-connect/EventHero";
 import Team24Banner from "./TEAM24/banner"
+import Boot53 from "components/TEAM24/booth53"
 
 export default function () {
 
@@ -15,10 +16,14 @@ export default function () {
             <div className="container-fluid p-0">
                 <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true} swipe >
                     
+                    <div className="">
+                        <Boot53 />
+                    </div>
                     <div>
                         <Team24Banner />
                     </div>
-                    
+
+                                        
                     {/* <div>
                         <EventHero showCountdown={false} />
                     </div> */}
