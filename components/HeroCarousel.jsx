@@ -16,21 +16,21 @@ export default function () {
             <div className="container-fluid p-0">
                 <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true} swipe >
                     
-                    {/* <div>
-                        <Team24Banner />
-                    </div> */}
-
                     <div className="">
                         <Boot53 />
                     </div>
+                    <div>
+                        <Team24Banner />
+                    </div>
+
                                         
                     {/* <div>
                         <EventHero showCountdown={false} />
                     </div> */}
-                    {/* <div>
+                    <div>
                         <Hero />
-                    </div> */}
-                    {/* <div className="container-fluid p-0">
+                    </div>
+                    <div className="container-fluid p-0">
                         <div className={`${styles.h2}`}>
                             <h1>Let’s take you to the Cloud</h1>
                             <div className={styles.blue}>
@@ -62,7 +62,7 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
 
                 </Slider>
             </div>
