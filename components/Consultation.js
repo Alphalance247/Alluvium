@@ -117,10 +117,9 @@ export const ConsultationForm = () => {
                                 2NX, UK.
                             </p>
                             <p>
-                                <strong>America:</strong> 2000 Auburn Drive
-                                One Chagrin Highlands
-                                Suite 200
-                                Beachwood, Ohio 44122 USA
+                                <strong>America:</strong> 27345 W Sand Lake Rd,
+                  STE 210 Office 3190
+                  Orlando, FL 32819 US.
                             </p>
                             <div>
                                 <strong>Africa:</strong>
