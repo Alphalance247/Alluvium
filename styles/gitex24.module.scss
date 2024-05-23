@@ -814,6 +814,7 @@
     background-color: transparent;
     border: 1px solid white;
     color: white;
+    height: 50px;
   }
   .transparentinput::placeholder {
     color: white;
@@ -844,6 +845,7 @@
 
   .footerspan span {
     color: #FFE075; /* Custom color for span text */
+    font-size: 11px;
   }
 
   .cardfooter p {
@@ -862,6 +864,10 @@
 
   .morestand h1 {
     font-size: 30px;
+  }
+
+  .morestand h4 {
+    margin-bottom: 20px;
   }
 
   .morestand p {
@@ -897,17 +903,48 @@
     background-image: url('/assets/gitex24/booth.gif');  
     background-size: cover;
     background-position: center;
-    min-height: "595px";
+    height: "795px";
     display: 'flex';
     justify-content: 'center';
     align-items: 'center';
+    position: relative;
 
 }
+
+.filandgele {
+    padding-top: 100px;
+}
+
+
+// .herosec::before {
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     z-index: 1;
+// }
+
+// .overlay {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background-color: rgba(0, 0, 0, 0.5);
+
+// }
 
 .herosecover {
     height: 600px;
+    margin-top: 150px;
 }
 
+.gitexallu {
+    margin-top: 150px;
+}
 .supercharge {
     margin-top: 60px;
 }
@@ -917,7 +954,7 @@
 }
 
 .gitexallu {
-    margin-top: 50px;
+   
 }
 
 .souvenirsubmit {

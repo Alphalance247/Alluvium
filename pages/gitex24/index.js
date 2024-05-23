@@ -298,6 +298,12 @@ export default function Gitex24() {
       </select>
     </div>
     </div>
+    <div className="form-check">
+      <input type="checkbox" className="form-check-input" id="emailUpdates" />
+      <label className="form-check-label text-white" for="emailUpdates">
+        I agree to receive email updates from Alluvium about future announcements
+      </label>
+    </div>
                                    
 <div className="d-grid">
 <button type="submit" disabled={loading} className={`btn ${styles.souvenirsubmit}`}>{loading? 'Loading...' : 'Order'}</button>
@@ -336,7 +342,7 @@ export default function Gitex24() {
                     <div className="col-md-1">
                     </div>
                     <div className="col-md-10">
-                        <Image width={1176} height={98.8} src="/assets/gitex24/badge.png" className="img-fluid" alt="Alluvium" />   
+                        <Image width={914} height={175} src="/assets/gitex24/badgee.png" className="img-fluid" alt="Alluvium" />   
                     </div>
                     <div className="col-md-1">
                     </div>
@@ -346,8 +352,8 @@ export default function Gitex24() {
             </div>
 
                 {/* More at our stand */}
-
-            <div className={`mx-auto row justify-content-between py-5 ${styles.standbg}`}>
+        <div className={`mx-auto justify-content-between py-5 ${styles.standbg}`}>
+            <div className={`container mx-auto row justify-content-between py-5`}>
             <h1 className={`text-white fw-bold font-weight-bold display-5 text-center ${styles.moreatourstand}`}>More at our stand</h1>
          
             {/* cards */}
@@ -392,19 +398,18 @@ export default function Gitex24() {
             {/* cards */}
 
     <div className={`container row justify-content-between ${styles.morestand}`}>
-    <div className="col-md-5 justify-content-center justify-content-lg-start align-items-center">
-        <h1>
+    <div className="col-md-6 justify-content-center justify-content-lg-start align-items-center">
+        <h4>
         Experience the Alluvium Difference
-        </h1>
-
+        </h4>
         <p>
         At our stand, we're bringing the difference to you! Prepare to be dazzled by our exclusive goodies, including traditional gele, fila, coasters, and more. As you soak up the beauty, expertise, and pure fun, you'll also take home souvenirs that will keep the magic of Alluvium alive even after the event ends.
         </p>
     </div>
-    <div className="col-md-5 justify-content-center justify-content-lg-start align-items-center">
-        <h1 className="">
+    <div className="col-md-6 justify-content-center justify-content-lg-start align-items-center">
+        <h4 className="">
         Connect with a network of experts
-        </h1>
+        </h4>
 
         <p>
         Looking to revolutionize your business? Connect with Alluvium's network of industry-leading experts at the upcoming Gitex Africa event. As pioneers in the fields of Atlassian products, AI solutions, and ITSM providers, we offer you the keys to attaining your business true potential.
@@ -413,9 +418,11 @@ export default function Gitex24() {
 </div>
                
             </div>
+            </div>
   
     {/* remarkable */}
-    <div className={`container-fluid mx-auto row justify-content-between ${styles.remarkable}`}>
+    <div className={`mx-auto justify-content-between ${styles.remarkable}`} >
+    <div className={`container mx-auto row justify-content-between`}>
         <div className={`container row justify-content-between ${styles.experience}`}>
         <div className="col-md-5 justify-content-center justify-content-lg-start align-items-center">
         <Image src="/assets/gitex24/allteam24.png" width={547} height={102.07} className="img-fluid" alt="Alluvium at Team 2024" />  
@@ -426,10 +433,10 @@ export default function Gitex24() {
             </p>
         </div>
     </div>
-    <div className={`container row justify-content-between ${styles.allteam}`}>
+    <div className={`container justify-content-between  ${styles.allteam}`}>
     <div className={`row ${styles.nogutters}`}>
-            <div className="col-md-2">
-            <Image src="/assets/gitex24/team1.png" width={306.92} height={210} className="img-fluid" alt="Alluvium at Team 2024" />  
+            <div className="col-md-3">
+            <Image src="/assets/gitex24/team1.png" width={306.92} height={140} className="img-fluid" alt="Alluvium at Team 2024" />  
             </div>
             <div className="col-md-2">
             <Image src="/assets/gitex24/team2.png" width={306.92} height={210} className="img-fluid" alt="Alluvium at Team 2024" />  
@@ -444,6 +451,7 @@ export default function Gitex24() {
             <Image src="/assets/gitex24/team5.png" width={306.92} height={210} className="img-fluid" alt="Alluvium at Team 2024" />  
             </div>
         </div>
+    </div>
     </div>
     </div>
 
