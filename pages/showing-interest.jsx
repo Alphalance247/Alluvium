@@ -45,8 +45,8 @@ const Demands = ({ demands }) => {
 const Onboarding = ({ products }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [formDisabled, setFormDisabled] = useState(true);
-  const [showFeedback, setShowFeedback] = useState(true);
+  const [formDisabled, setFormDisabled] = useState(false);
+  const [showFeedback, setShowFeedback] = useState(false);
   const [responseData, setResponseData] = useState(null);
   const [hideButton, setHideButton] = useState(false);
   const formElem = useRef(null);
@@ -58,28 +58,6 @@ const Onboarding = ({ products }) => {
     setResponseData(null);
   };
 
-  //   useEffect(() => {
-  //     if (data) {
-  //         if (data.firstname && data.lastname) {
-  //             setData(prev => prev ? ({ ...prev, fullname: `${data.firstname} ${data.lastname}` }) : { fullname: `${data.firstname} ${data.lastname}` });
-  //         }
-  //     }
-  // }, [data])
-
-  useEffect(() => {
-    testDb();
-  }, []);
-
-  const testDb = async () => {
-    await axios
-      .get("/api/user/test")
-      .then((res) => {
-        console.log(res.data.message);
-      })
-      .catch((err) => {
-        console.log(err.response.data.message);
-      });
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -93,10 +71,10 @@ const Onboarding = ({ products }) => {
   const handleSubmit = async (e) => {
     if (!formDisabled) {
       let newData = { ...data };
-      if (newData.firstname && newData.lastname) {
+      if (newData.first_name && newData.last_name) {
         newData = {
           ...newData,
-          fullname: `${newData.firstname} ${newData.lastname}`,
+          full_name: `${newData.first_name} ${newData.last_name}`,
         };
       }
       setHideButton(true);
@@ -105,12 +83,18 @@ const Onboarding = ({ products }) => {
       e.preventDefault();
       if (newData) {
         const responseData2 = await axios
-          .post("/api/user", newData)
+          .post("https://vast.ec2.alluvium.net/recruitment/add/", newData)
           .then((res) => {
-            return res.data;
+            if(res.status >= 200 && res.status < 400){
+              return {success: true, message: `Hello ${newData.full_name}, Thank you for reaching out to us. We'll get in touch with you.`};
+            } else {
+              console.log(res.data);
+              return {success: false, message: "Invalid data, please check your form and try again."};
+            }
           })
           .catch((err) => {
-            return err.response.data;
+            console.log(err.response.data);
+              return {success: false, message: "Unable to submit data, please try again or contact admin (contact@alluvium.net)."};
           });
         // console.log(responseData2);
         setResponseData(responseData2);
@@ -204,7 +188,7 @@ const Onboarding = ({ products }) => {
             >
               <input
                 type="text"
-                name="firstname"
+                name="first_name"
                 disabled={formDisabled}
                 placeholder="First name"
                 id=""
@@ -213,7 +197,7 @@ const Onboarding = ({ products }) => {
               />
               <input
                 type="text"
-                name="lastname"
+                name="last_name"
                 disabled={formDisabled}
                 placeholder="Last name"
                 id=""
@@ -267,8 +251,8 @@ const Onboarding = ({ products }) => {
                 <option defaultValue="" disabled>
                   Are you applying for a Trainee Program ?
                 </option>
-                <option defaultValue="yes">yes</option>
-                <option defaultValue="no">no</option>
+                <option defaultValue="Yes">Yes</option>
+                <option defaultValue="No">No</option>
               </select>
               <select
                 name="threeYearsAvailability"
@@ -281,8 +265,8 @@ const Onboarding = ({ products }) => {
                 <option defaultValue="" disabled>
                   3 years availability
                 </option>
-                <option defaultValue="yes">yes</option>
-                <option defaultValue="no">no</option>
+                <option defaultValue="Yes">Yes</option>
+                <option defaultValue="No">No</option>
               </select>
               <select
                 name="experienceLevel"
@@ -295,13 +279,13 @@ const Onboarding = ({ products }) => {
                 <option defaultValue="" disabled>
                   What is your Experience Level ?
                 </option>
-                <option defaultValue="beginner (Less than 1 year)">
+                <option defaultValue="Beginner (Less than 1 year)">
                   Beginner (Less than 1 year)
                 </option>
-                <option defaultValue="intermediate (1 year)">
+                <option defaultValue="Intermediate (1 year)">
                   Intermediate (1 year)
                 </option>
-                <option defaultValue="professional (More than 2 year)">
+                <option defaultValue="Professional (More than 2 year)">
                   Professional (More than 2 year)
                 </option>
               </select>
