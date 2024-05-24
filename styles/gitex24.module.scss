@@ -963,3 +963,18 @@
     
     // color: "#000";
 }
+
+.gitexbanner {
+    background-image: url('/assets/gitex24/g24bg.png');  
+    background-size: cover;
+    background-position: center;
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center';
+    position: relative;
+    padding-top: 100px;
+}
+
+.visitbanner {
+    margin-top: 25px;
+}
