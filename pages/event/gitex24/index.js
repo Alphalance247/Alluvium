@@ -1,33 +1,27 @@
 import Head from "next/head";
 import styles from "../../../styles/gitex24.module.scss";
-// import styles from "../../styles/team.module.scss";
 
 import Image from "next/image";
-// import CaseStudies from "components/case-studies/case-studies";
 import Layout from "components/layout";
 import { useCallback, useMemo, useState } from "react";
 import axios from "axios";
 import { Country } from "country-state-city";
-import { ToastProvider, useToasts } from "react-toast-notifications";
-// import PhoneInput from "react-phone-number-input";
+import { useToasts } from "react-toast-notifications";
+import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-// import { IoIosGift } from "react-icons/io";
-// import IncentiveDataa from "./IncentiveDataa";
-// import BoothData from "components/TEAM24/BoothData"
-// import Input from "components/TEAM24/Input";
 
 export default function Gitex24() {
 
     const [showModal, setShowModal] = useState(false);
-    const [api, setApi] = useState("https://vast.ec2.alluvium.net/events/lead-conversion/");
+    const [api, setApi] = useState("https://vast.ec2.alluvium.net/events/shippment/");
     const handleButtonClick = () => {
         setShowModal(true);
-        setApi("https://vast.ec2.alluvium.net/events/shippment/");
+        setApi("https://vast.ec2.alluvium.net/events/lead-conversion/");
     };
 
     const handleCloseModal = () => {
         setShowModal(false);
-        setApi("https://vast.ec2.alluvium.net/events/lead-conversion/");
+        setApi("https://vast.ec2.alluvium.net/events/shippment/");
         setForm({
             ...form,
             first_name: "",
@@ -41,7 +35,8 @@ export default function Gitex24() {
             country: "",
             phone_number: "",
             message_to_alluvium: "",
-            souvenir: ""
+            souvenir: "",
+            email_sub: false
         });
     };
 
@@ -65,11 +60,13 @@ export default function Gitex24() {
         country: "",
         phone_number: "",
         message_to_alluvium: "",
-        souvenir: ""
+        souvenir: "",
+        email_sub: false
     });
 
     const handleFormSubmit = useCallback(async (e) => {
         e.preventDefault();
+        console.log(form);
         if (!(phonePattern.test(form.phone_number) || (phonePattern.test(form.contact_number)))) {
             setPhoneError((prev) => true)
         }
@@ -78,7 +75,7 @@ export default function Gitex24() {
         };
         if (api.includes("shippment")) {
             if (!form.souvenir) {
-                addToast("Please select a souvenir on the page", { appearance: "error" });
+                addToast("Please select a souvenir", { appearance: "error" });
                 return;
             }
         }
@@ -113,7 +110,8 @@ export default function Gitex24() {
                         country: "",
                         phone_number: "",
                         message_to_alluvium: "",
-                        souvenir: ""
+                        souvenir: "",
+                        email_sub: false
                     });
                 })
                 .catch((err) => {
@@ -137,10 +135,10 @@ export default function Gitex24() {
     }, [phoneError, phonePattern, form, api]);
 
     const handleChange = (e) => {
-        const { name, value, type } = e.target;
+        const { name, value, type, checked } = e.target;
         setForm((prev) => ({
             ...prev,
-            [name]: type === "radio" ? Boolean(value) : value,
+            [name]: type === "radio" ? Boolean(value) : (type === 'checkbox' ? checked : value),
         }));
         // setFormErrors((prev) => ({ ...prev, [name]: false }));
     };
@@ -203,7 +201,7 @@ export default function Gitex24() {
 
             {/* choose souvenir */}
 
-            {/* <div className={`mx-auto row justify-content-between align-items-center py-5 ${styles.chooseSourve}`}>
+            <div className={`mx-auto row justify-content-between align-items-center py-5 ${styles.chooseSourve}`}>
                 <h1 className="text-white fw-bold font-weight-bold display-5 text-center">Choose your souvenir</h1>
                 <p className="text-white text-center">Congratulations! proceed to order your fila or gele by filling out the form below.</p>
                 <div className="col-md-4 d-flex justify-content-center justify-content-lg-start align-items-center">
@@ -229,14 +227,8 @@ export default function Gitex24() {
                     <form onSubmit={handleFormSubmit} className={styles.form}>
                         <div className="row">
                             <div className="mb-1 col-md-12">
-                                <label htmlFor="firstName" className="form-label mb-0 text-white">First name</label>
-                                <input type="text" name="first_name" required value={form?.first_name ?? ""} onChange={handleChange} className={`form-control ${styles.transparentinput}`} id="firstName" />
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="mb-1 col-md-12">
-                                <label htmlFor="lastName" className="form-label mb-0 text-white">Last name</label>
-                                <input type="text" name="last_name" required value={form?.last_name ?? ""} onChange={handleChange} className={`form-control ${styles.transparentinput}`} id="lastName" />
+                                <label htmlFor="firstName" className="form-label mb-0 text-white">Full name</label>
+                                <input type="text" name="name" required value={form?.name ?? ""} onChange={handleChange} className={`form-control ${styles.transparentinput}`} id="firstName" />
                             </div>
                         </div>
                         <div className="row">
@@ -274,11 +266,12 @@ export default function Gitex24() {
                                     className={`form-control custom-select ${styles.transparentinput}`}
                                     id="country"
                                 >
-                                    <option value="Nigeria">Nigeria</option>
-                                    <option value="United States">United States</option>
-                                    <option value="United Kingdom">United Kingdom</option>
-                                    <option value="Canada">Canada</option>
-                                    <option value="Australia">Australia</option>
+                                    <option value="" disabled>Select Country</option>
+                                    {country.map((el, i) => (
+                                        <option key={i} value={el.name}>
+                                            {el.name}
+                                        </option>
+                                    ))}
 
                                 </select>
                             </div>
@@ -295,15 +288,16 @@ export default function Gitex24() {
                                     className={`form-control custom-select ${styles.transparentinput}`}
                                     id="souvenir"
                                 >
-                                    <option value="Fila">Fila</option>
-                                    <option value="Gele">Gele</option>
+                                    <option value="" disabled>Select souvenir</option>
+                                    <option value="fila">Fila</option>
+                                    <option value="gele">Gele</option>
 
 
                                 </select>
                             </div>
                         </div>
                         <div className="form-check">
-                            <input type="checkbox" className="form-check-input" id="emailUpdates" />
+                            <input type="checkbox" name="email_sub" onChange={handleChange} checked={form.email_sub} className="form-check-input" id="emailUpdates" />
                             <label className="form-check-label text-white" htmlFor="emailUpdates">
                                 I agree to receive email updates from Alluvium about future announcements
                             </label>
@@ -315,7 +309,7 @@ export default function Gitex24() {
                     </form>
                 </div>
 
-            </div> */}
+            </div>
 
 
 
