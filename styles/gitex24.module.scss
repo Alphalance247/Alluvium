@@ -775,6 +775,10 @@
     color: white; 
 }
 
+.gele {
+    margin-top: 20px;
+}
+
 .geles {
     background-image: url('/assets/gitex24/geles.png'); 
     height: 300px;
@@ -966,14 +970,24 @@
 
 .gitexbanner {
     background-image: url('/assets/gitex24/g24bg.png');  
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
-    display: 'flex';
-    justify-content: 'center';
-    align-items: 'center';
-    position: relative;
     padding-top: 100px;
+    height: 600px;
+  
+ 
+    
+
 }
+
+// background-size: cover;
+// background-position: center;
+// justify-content: 'center';
+// align-items: 'center';
+// position: relative;
+// padding-top: 100px;
+// height:px;
 
 .visitbanner {
     margin-top: 25px;
