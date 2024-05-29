@@ -39,12 +39,12 @@ export const ConsultationForm = () => {
             fullname: fullname,
             email: email,
             company: company,
-            phone: phone,
-            message: message,
+            phone_number: phone,
+            how_we_can_help: message,
         };
 
         try {
-            let response = await fetch("/api/consultation", {
+            let response = await fetch("https://vast.ec2.alluvium.net/support/inquiry/", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json, text/plain, */*',
@@ -57,7 +57,7 @@ export const ConsultationForm = () => {
             const status = result.status;
             console.log(result);
             // show message based on status
-            addToast(result.message, { appearance: status });
+            addToast(result.success, { appearance: status });
         } catch (e) {
             console.log(e.message);
             addToast('Oops something went wrong. Please try again.', { appearance: "error" });
