@@ -214,7 +214,10 @@ export default function Boot53() {
                     STAND 9L11-9L12
                   </span>
                 </h1>
-                <h1 className="text-white" style={{ fontFamily: "Russo One" }}>
+                <h1
+                  className="text-white"
+                  style={{ fontFamily: "Russo One", fontSize: "37px" }}
+                >
                   Unlock the full potential of <br />
                   your Atlassian <br /> products
                 </h1>
