@@ -1,5 +1,23 @@
-$custom-btn-color: #E37915;
+$custom-btn-color: #e37915;
 
+.herosection {
+  @media screen and (max-width: 992px) {
+    height: 850px;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: 1300px;
+  }
+}
+
+.formsection {
+  border-radius: 10px;
+  max-width: 580px;
+  padding: 30px 50px;
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+  }
+}
 .custom-btn {
   background-color: $custom-btn-color;
   color: #fff; // Text color
@@ -15,7 +33,7 @@ $custom-btn-color: #E37915;
   color: #11202d;
 }
 
-.PhoneInput>div {
+.PhoneInput > div {
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -26,8 +44,7 @@ $custom-btn-color: #E37915;
 }
 
 .error {
-
-  &>div,
+  & > div,
   & input {
     box-shadow: 0px 0px 2px orangered inset;
     border: 2px solid orangered;
@@ -105,11 +122,11 @@ $custom-btn-color: #E37915;
   margin-top: 0;
 
   @media screen and (max-width: 992px) {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   @media screen and (max-width: 576px) {
-    padding: .5rem;
+    padding: 0.5rem;
   }
 
   .firtsP {
@@ -129,20 +146,11 @@ $custom-btn-color: #E37915;
 
   .submit {
     color: #fff;
-    background-color: #E37915;
+    background-color: #e37915;
     max-width: 269px;
     margin: 30px auto;
   }
 }
-
-
-
-
-
-
-
-
-
 
 .hero {
   height: 600px;
@@ -450,7 +458,8 @@ $custom-btn-color: #E37915;
   .imagesPosition {
     position: relative;
 
-    @media screen and (max-width: 576px) {}
+    @media screen and (max-width: 576px) {
+    }
 
     .positioning2 {
       position: absolute;
@@ -472,7 +481,7 @@ $custom-btn-color: #E37915;
 .section3 {
   background: #11202d;
 
-  &>div {
+  & > div {
     padding: 4rem 0;
 
     @media screen and (max-width: 1400px) {
@@ -638,7 +647,6 @@ $custom-btn-color: #E37915;
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-
     }
   }
 }
@@ -653,7 +661,7 @@ $custom-btn-color: #E37915;
   color: #11202d;
 }
 
-.PhoneInput>div {
+.PhoneInput > div {
   outline: none;
   border: 2px solid #c2c2c2;
   border-radius: 0.5rem 0 0 0.5rem;
@@ -678,7 +686,7 @@ $custom-btn-color: #E37915;
 }
 
 .caps {
-  &>span {
+  & > span {
     display: block !important;
   }
 }
@@ -711,7 +719,7 @@ $custom-btn-color: #E37915;
 
   .textBanner {
     border-radius: 10px;
-    background-color: #009BC073;
+    background-color: #009bc073;
     width: 50%;
     height: 220px;
     position: absolute;
@@ -731,17 +739,16 @@ $custom-btn-color: #E37915;
     @media screen and (max-width: 767px) {
       text-align: center;
       margin-bottom: 150px;
-      
     }
-    h1{
+    h1 {
       max-width: 450px;
       @media screen and (max-width: 767px) {
-      margin: auto;
+        margin: auto;
       }
     }
-    
+
     a {
-      background-color: #E37915;
+      background-color: #e37915;
       color: white;
       margin-bottom: 30px;
       border: none;
@@ -749,7 +756,6 @@ $custom-btn-color: #E37915;
       @media screen and (max-width: 767px) {
         margin-left: auto;
       }
-
     }
   }
 
@@ -799,7 +805,7 @@ $custom-btn-color: #E37915;
 
   .badges {
     @media screen and (max-width: 768px) {
-      &>span {
+      & > span {
         display: block !important;
       }
     }
@@ -808,7 +814,6 @@ $custom-btn-color: #E37915;
       display: none;
     }
   }
-
 
   .menCap {
     margin: 0 auto;
