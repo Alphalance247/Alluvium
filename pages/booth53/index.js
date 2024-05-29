@@ -9,8 +9,8 @@ import { useCallback, useMemo, useState } from "react";
 import axios from "axios";
 import { Country } from "country-state-city";
 import { ToastProvider, useToasts } from "react-toast-notifications";
-import PhoneInput from "react-phone-number-input";
-import "react-phone-number-input/style.css";
+// import PhoneInput from "react-phone-number-input";
+// import "react-phone-number-input/style.css";
 import { IoIosGift } from "react-icons/io";
 // import IncentiveDataa from "./IncentiveDataa";
 import BoothData from "components/TEAM24/BoothData";
@@ -214,7 +214,7 @@ export default function Boot53() {
                     STAND 9L11-9L12
                   </span>
                 </h1>
-                <h1 className="text-white">
+                <h1 className="text-white" style={{ fontFamily: "Russo One" }}>
                   Unlock the full potential of <br />
                   your Atlassian <br /> products
                 </h1>
@@ -252,7 +252,11 @@ export default function Boot53() {
                   <div className="row">
                     <p style={{ marginBottom: "10px" }}>BASIC INFORMATION</p>
                     <div className="mb-3 col-md-12">
-                      <label htmlFor="firstName" className="form-label mb-0">
+                      <label
+                        htmlFor="firstName"
+                        className="form-label mb-0"
+                        style={{ fontFamily: "Russo One" }}
+                      >
                         First Name
                       </label>
                       <input
@@ -267,7 +271,11 @@ export default function Boot53() {
                       />
                     </div>
                     <div className="mb-3 col-md-12">
-                      <label htmlFor="lastName" className="form-label mb-0">
+                      <label
+                        htmlFor="lastName"
+                        className="form-label mb-0"
+                        style={{ fontFamily: "Russo One" }}
+                      >
                         Last Name
                       </label>
                       <input
@@ -284,7 +292,11 @@ export default function Boot53() {
                   </div>
                   <div className="row">
                     <div className="mb-3 col-md-12">
-                      <label htmlFor="companyName" className="form-label mb-0">
+                      <label
+                        htmlFor="companyName"
+                        className="form-label mb-0"
+                        style={{ fontFamily: "Russo One" }}
+                      >
                         Company Name
                       </label>
                       <input
@@ -298,7 +310,11 @@ export default function Boot53() {
                       />
                     </div>
                     <div className="mb-3 col-md-12">
-                      <label htmlFor="email" className="form-label mb-0">
+                      <label
+                        htmlFor="email"
+                        className="form-label mb-0"
+                        style={{ fontFamily: "Russo One" }}
+                      >
                         Company email Address
                       </label>
                       <input
@@ -314,11 +330,15 @@ export default function Boot53() {
                     </div>
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="phoneNumber" className="form-label mb-0">
+                    <label
+                      htmlFor="phoneNumber"
+                      className="form-label mb-0"
+                      style={{ fontFamily: "Russo One" }}
+                    >
                       Phone Number
                     </label>
 
-                    <PhoneInput
+                    {/* <PhoneInput
                       placeholder="8140686688"
                       international
                       defaultCountry="US"
@@ -334,11 +354,15 @@ export default function Boot53() {
                       countrySelectProps={{
                         className: phoneError ? styles.error : "",
                       }}
-                    />
+                    /> */}
                     {/* <input type="text" name="phone_number" required value={form?.phone_number} onChange={handleChange} className="form-control" id="phoneNumber" placeholder="0810000000" /> */}
                   </div>
                   <div className="mb-3">
-                    <label htmlFor="message" className="form-label mb-0">
+                    <label
+                      htmlFor="message"
+                      className="form-label mb-0"
+                      style={{ fontFamily: "Russo One" }}
+                    >
                       Message to Alluvium
                     </label>
                     <textarea
@@ -356,7 +380,11 @@ export default function Boot53() {
                       type="submit"
                       disabled={loading}
                       className="btn"
-                      style={{ backgroundColor: "#E37915", color: "#fff" }}
+                      style={{
+                        backgroundColor: "#E37915",
+                        color: "#fff",
+                        fontFamily: "Russo One",
+                      }}
                     >
                       {loading ? "Loading..." : "Submit"}
                     </button>
@@ -385,23 +413,28 @@ export default function Boot53() {
         </div>
         <div className="col-md-6 d-flex justify-content-center align-items-center">
           <div className="text-left">
-            <h1 className={styles.an_heading}>Comprehensive Site Audit</h1>
+            <h1
+              className={styles.an_heading}
+              style={{ fontFamily: "Russo One" }}
+            >
+              Comprehensive Site Audit
+            </h1>
             <div style={{ maxWidth: "676px", fontWeight: "500" }}>
-              <p>
+              <p style={{ fontFamily: "Russo One" }}>
                 Unlock the Full Potential of Your Atlassian Products with Our
                 Comprehensive Site Audit!{" "}
               </p>
-              <ul className="ms-4">
+              <ul className="ms-4" style={{ fontFamily: "Russo One" }}>
                 <li>Discover Hidden Opportunities,</li>
                 <li>Streamline Operations,</li>
                 <li>and Elevate Performance Across Your Platform.</li>
               </ul>
-              <p>
+              <p style={{ fontFamily: "Russo One" }}>
                 {" "}
                 Our Expert Health Check Ensures Your Setup is Fine-Tuned for
                 Success, Regardless of Your Project&apos;s Scope or Complexity.
               </p>
-              <p>
+              <p style={{ fontFamily: "Russo One" }}>
                 {" "}
                 Don&apos;t Wait – Schedule Your Audit Today and Take Your
                 Atlassian Products to the Next Level!
@@ -410,7 +443,11 @@ export default function Boot53() {
             <button
               type="submit"
               className="btn"
-              style={{ backgroundColor: "#E37915", color: "#fff" }}
+              style={{
+                backgroundColor: "#E37915",
+                color: "#fff",
+                fontFamily: "Russo One",
+              }}
             >
               Request a demo
             </button>
@@ -424,12 +461,18 @@ export default function Boot53() {
       {/* brochure */}
       <div
         className="container mx-auto row align-items-center gap-5 gap-md-0"
-        style={{ paddingTop: "100px", paddingBottom: "100px" }}
+        style={{
+          paddingTop: "100px",
+          paddingBottom: "100px",
+          fontFamily: "Russo One",
+        }}
       >
         <div className="col-md-6">
           <div className="container">
-            <h1>Discover more with Our Brochure!</h1>
-            <p>
+            <h1 style={{ fontFamily: "Russo One" }}>
+              Discover more with Our Brochure!
+            </h1>
+            <p style={{ fontFamily: "Russo One" }}>
               Discover Hidden Opportunities, Streamline Operations, and Elevate
               Performance Across Your Platform. Our Expert Health Check Ensures
               Your Setup is Fine-Tuned for Success, Regardless of Your Project's
@@ -443,6 +486,7 @@ export default function Boot53() {
                 backgroundColor: "#E37915",
                 color: "#fff",
                 borderRadius: "5px",
+                fontFamily: "Russo One",
               }}
             >
               Download Brochure
@@ -482,7 +526,12 @@ export default function Boot53() {
                     </div>
                     <div className={styles.incentiveContent}>
                       <div className={styles.content}>
-                        <p className={styles.firtsP}>{data.inputValue}</p>
+                        <p
+                          className={styles.firtsP}
+                          style={{ fontFamily: "Russo One" }}
+                        >
+                          {data.inputValue}
+                        </p>
                       </div>
 
                       <input
@@ -524,7 +573,12 @@ export default function Boot53() {
                     </div>
                     <div className={styles.incentiveContent}>
                       <div className={styles.content}>
-                        <p className={styles.firtsP}>{data.inputValue}</p>
+                        <p
+                          className={styles.firtsP}
+                          style={{ fontFamily: "Russo One" }}
+                        >
+                          {data.inputValue}
+                        </p>
                       </div>
 
                       <input
@@ -574,6 +628,7 @@ export default function Boot53() {
                     backgroundColor: "#E37915",
                     color: "#fff",
                     borderRadius: "5px",
+                    fontFamily: "Russo One",
                   }}
                 >
                   Send me souvenirs
