@@ -6,7 +6,7 @@ import heroStyles from "../styles/hero.module.scss";
 import Hero from "./Hero";
 import Badges from "./badges";
 // import EventHero from "./cloud-connect/EventHero";
-import Team24Banner from "./TEAM24/banner"
+// import Team24Banner from "./TEAM24/banner"
 import Gitex24 from "components/gitex24/gitex"
 
 export default function () {
@@ -23,9 +23,9 @@ export default function () {
                     {/* <div className="">
                         <Boot53 />
                     </div> */}
-                    <div>
+                    {/* <div>
                         <Team24Banner />
-                    </div>
+                    </div> */}
 
                                         
                     {/* <div>
