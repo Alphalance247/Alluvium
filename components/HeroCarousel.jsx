@@ -49,7 +49,7 @@ export default function () {
                             </div>
                         </div>
                     </div>
-                    <div>
+                     <div>
                         <div className={`${styles.h3}`}>
                             <div className={styles.top}>
                                 <h1>We are AI</h1>
@@ -66,7 +66,7 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
 
                 </Slider>
             </div>
