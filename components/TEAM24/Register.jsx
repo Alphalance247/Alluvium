@@ -66,7 +66,7 @@ const Register = ({ setRegistrationLimitExceeded }) => {
     } else {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/events/addrecord/", { ...form, event: 'Team 24' })
+        .post("https://vast.ec2.alluvium.net/events/addrecord/", { ...form, event: "Team'24" })
         .then((res) => {
           setLoading(false);
           if (res.status !== 201) {

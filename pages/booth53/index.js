@@ -19,16 +19,16 @@ import Input from "components/TEAM24/Input";
 export default function Boot53() {
   const [showModal, setShowModal] = useState(false);
   const [api, setApi] = useState(
-    "https://vast.ec2.alluvium.net/teams24/lead-conversion/"
+    "https://vast.ec2.alluvium.net/events/lead-conversion/"
   );
   const handleButtonClick = () => {
     setShowModal(true);
-    setApi("https://vast.ec2.alluvium.net/teams24/shippment/");
+    setApi("https://vast.ec2.alluvium.net/events/shippment/");
   };
 
   const handleCloseModal = () => {
     setShowModal(false);
-    setApi("https://vast.ec2.alluvium.net/teams24/lead-conversion/");
+    setApi("https://vast.ec2.alluvium.net/events/lead-conversion/");
     setForm({
       ...form,
       first_name: "",
@@ -93,7 +93,7 @@ export default function Boot53() {
       if (!phoneError) {
         setLoading(true);
         await axios
-          .post(api, { ...form })
+          .post(api, { ...form, event: "Gitex Africa" })
           .then((res) => {
             setLoading(false);
             if (res.status !== 201) {
