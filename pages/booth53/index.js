@@ -207,7 +207,10 @@ export default function Boot53() {
               <div className="" style={{ marginTop: "80px" }}>
                 <h1 className="text-white" style={{ lineHeight: "65px" }}>
                   Welcome to <br />
-                  <span className="" style={{ color: "#E31E33" }}>
+                  <span
+                    className=""
+                    style={{ color: "#E31E33", fontFamily: "Russo One" }}
+                  >
                     STAND 9L11-9L12
                   </span>
                 </h1>
