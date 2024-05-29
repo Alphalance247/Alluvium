@@ -9,8 +9,8 @@ import { useCallback, useMemo, useState } from "react";
 import axios from "axios";
 import { Country } from "country-state-city";
 import { ToastProvider, useToasts } from "react-toast-notifications";
-// import PhoneInput from "react-phone-number-input";
-// import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 import { IoIosGift } from "react-icons/io";
 // import IncentiveDataa from "./IncentiveDataa";
 import BoothData from "components/TEAM24/BoothData";
@@ -338,7 +338,7 @@ export default function Boot53() {
                       Phone Number
                     </label>
 
-                    {/* <PhoneInput
+                    <PhoneInput
                       placeholder="8140686688"
                       international
                       defaultCountry="US"
@@ -354,7 +354,7 @@ export default function Boot53() {
                       countrySelectProps={{
                         className: phoneError ? styles.error : "",
                       }}
-                    /> */}
+                    />
                     {/* <input type="text" name="phone_number" required value={form?.phone_number} onChange={handleChange} className="form-control" id="phoneNumber" placeholder="0810000000" /> */}
                   </div>
                   <div className="mb-3">
