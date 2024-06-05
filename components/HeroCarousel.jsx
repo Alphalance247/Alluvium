@@ -8,6 +8,7 @@ import Badges from "./badges";
 // import EventHero from "./cloud-connect/EventHero";
 // import Team24Banner from "./TEAM24/banner"
 import Gitex24 from "components/gitex24/gitex"
+import Webinar from "components/webinar/webinar"
 
 export default function () {
 
@@ -16,9 +17,12 @@ export default function () {
             <div className="container-fluid p-0">
                 <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true} swipe >
                     
-                <div className="">
-                        <Gitex24 />
+                    <div className="">
+                        <Webinar />
                     </div>
+                {/* <div className="">
+                        <Gitex24 />
+                    </div> */}
 
                     {/* <div className="">
                         <Boot53 />
@@ -31,10 +35,10 @@ export default function () {
                     {/* <div>
                         <EventHero showCountdown={false} />
                     </div> */}
-                    <div>
+                    {/* <div>
                         <Hero />
-                    </div>
-                    <div className="container-fluid p-0">
+                    </div> */}
+                    {/* <div className="container-fluid p-0">
                         <div className={`${styles.h2}`}>
                             <h1>Let’s take you to the Cloud</h1>
                             <div className={styles.blue}>
@@ -48,8 +52,8 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                     <div>
+                    </div> */}
+                     {/* <div>
                         <div className={`${styles.h3}`}>
                             <div className={styles.top}>
                                 <h1>We are AI</h1>
@@ -66,7 +70,7 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>  */}
 
                 </Slider>
             </div>
