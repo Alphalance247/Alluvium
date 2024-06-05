@@ -28,7 +28,10 @@ export function AltFooter() {
             </div>
             <div>
               <p>
-                We supply the highest quality remote and onsite engineers AND We deliver some of the highest quality Jira, Confluence and Bitbucket migrations, faster and at much lower cost, for some of the biggest Atlassian partners and Enterprise companies.
+                We supply the highest quality remote and onsite engineers AND We
+                deliver some of the highest quality Jira, Confluence and
+                Bitbucket migrations, faster and at much lower cost, for some of
+                the biggest Atlassian partners and Enterprise companies.
               </p>
             </div>
             <div>
@@ -64,9 +67,7 @@ export function AltFooter() {
               </li>
               <li className={styles.contactListItem}>
                 <Link href="/support/contact">
-                  <a>
-                    Contact us
-                  </a>
+                  <a>Contact us</a>
                 </Link>
               </li>
               <li className={styles.contactListItem}>
@@ -134,22 +135,21 @@ export function AltFooter() {
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
                 <p>
-                  <b>Europe:</b> Kemp House 160, City Road London, EC1V
-                  2NX, UK.
+                  <b>Europe:</b> Kemp House 160, City Road London, EC1V 2NX, UK.
                 </p>
                 <p>
-                  <b>America:</b> 7345 W Sand Lake Rd,
-                  STE 210 Office 3190
+                  <b>America:</b> 7345 W Sand Lake Rd, STE 210 Office 3190
                   Orlando, FL 32819 US.
                 </p>
                 <div>
                   <b>Africa:</b>
                   <p>
-                    Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104, Nigeria.
+                    Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway,
+                    Lekki, Lagos 106104, Nigeria.
                   </p>
                   <p>
-                    Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi
-                    Road, Ikoro Ekiti, Ekiti State, Nigeria.
+                    Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro
+                    Ekiti, Ekiti State, Nigeria.
                   </p>
                 </div>
               </li>
@@ -210,7 +210,7 @@ export function AltFooter() {
             <a href="#" className="me-3">
               Legal Information
             </a> */}
-            <Link href={'/privacy-policy'}>
+            <Link href={"/privacy-policy"}>
               <a aria-label="privacy-policy">Privacy Policy</a>
             </Link>
           </div>
