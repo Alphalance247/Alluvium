@@ -35,10 +35,10 @@ export default function () {
                     {/* <div>
                         <EventHero showCountdown={false} />
                     </div> */}
-                    {/* <div>
+                    <div>
                         <Hero />
-                    </div> */}
-                    {/* <div className="container-fluid p-0">
+                    </div>
+                    <div className="container-fluid p-0">
                         <div className={`${styles.h2}`}>
                             <h1>Let’s take you to the Cloud</h1>
                             <div className={styles.blue}>
@@ -52,8 +52,8 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div> */}
-                     {/* <div>
+                    </div>
+                      <div>
                         <div className={`${styles.h3}`}>
                             <div className={styles.top}>
                                 <h1>We are AI</h1>
@@ -70,7 +70,7 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div>  */}
+                    </div>
 
                 </Slider>
             </div>
