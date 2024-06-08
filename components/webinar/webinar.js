@@ -31,7 +31,7 @@ const Webinar = () => {
                 to learn more!
               </p>
 
-              <Link href="/jsm-webinar">
+              <Link href="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8">
                 <a
                   className="btn text-white"
                   style={{ backgroundColor: "#E37915" }}
