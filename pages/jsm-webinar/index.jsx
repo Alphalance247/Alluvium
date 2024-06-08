@@ -1,12 +1,10 @@
 import Layout from "components/layout";
 import Navigation from "components/navigation";
 import Head from "next/head";
-import { AltFooter } from "components/footer";
 
 const PluginPage = () => {
   return (
     <>
-      <Navigation />
       <Head>
         <title>Home | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
@@ -18,7 +16,7 @@ const PluginPage = () => {
           name="keywords"
           content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
         />
-
+        <Navigation />
         <div
           style={{
             width: "100%",
@@ -33,7 +31,7 @@ const PluginPage = () => {
               border: "none",
               width: "100%",
               height: "100%",
-              marginTop: "3rem",
+              marginTop: "4rem",
             }}
             title="Plugin"
           />
