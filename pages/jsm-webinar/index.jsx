@@ -16,7 +16,6 @@ const PluginPage = () => {
           name="keywords"
           content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
         />
-        <Navigation />
         <div
           style={{
             width: "100%",
@@ -31,7 +30,6 @@ const PluginPage = () => {
               border: "none",
               width: "100%",
               height: "100%",
-              marginTop: "4rem",
             }}
             title="Plugin"
           />
