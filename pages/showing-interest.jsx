@@ -49,6 +49,7 @@ const Onboarding = ({ products }) => {
   const [showFeedback, setShowFeedback] = useState(false);
   const [responseData, setResponseData] = useState(null);
   const [hideButton, setHideButton] = useState(false);
+  const [error, setError] = useState({});
   const formElem = useRef(null);
 
   const clearData = () => {
@@ -58,7 +59,6 @@ const Onboarding = ({ products }) => {
     setResponseData(null);
   };
 
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     if (value) {
@@ -66,6 +66,7 @@ const Onboarding = ({ products }) => {
         prev ? { ...prev, [name]: value } : { [name]: value }
       );
     }
+    setError((...prev) => ({ ...prev, [name]: false }));
   };
 
   const handleSubmit = async (e) => {
@@ -81,20 +82,34 @@ const Onboarding = ({ products }) => {
       // console.log(newData);
       setLoading(true);
       e.preventDefault();
-      if (newData) {
+      if (
+        newData.threeYearsAvailability &&
+        newData.experienceLevel &&
+        newData.traineeProgram
+      ) {
         const responseData2 = await axios
           .post("https://vast.ec2.alluvium.net/recruitment/add/", newData)
           .then((res) => {
-            if(res.status >= 200 && res.status < 400){
-              return {success: true, message: `Hello ${newData.full_name}, Thank you for reaching out to us. We'll get in touch with you.`};
+            if (res.status >= 200 && res.status < 400) {
+              return {
+                success: true,
+                message: `Hello ${newData.full_name}, Thank you for reaching out to us. We'll get in touch with you.`,
+              };
             } else {
               console.log(res.data);
-              return {success: false, message: "Invalid data, please check your form and try again."};
+              return {
+                success: false,
+                message: "Invalid data, please check your form and try again.",
+              };
             }
           })
           .catch((err) => {
             console.log(err.response.data);
-              return {success: false, message: "Unable to submit data, please try again or contact admin (contact@alluvium.net)."};
+            return {
+              success: false,
+              message:
+                "Unable to submit data, please try again or contact admin (contact@alluvium.net).",
+            };
           });
         // console.log(responseData2);
         setResponseData(responseData2);
@@ -103,6 +118,16 @@ const Onboarding = ({ products }) => {
         // if(responseData2.success){
         //   e.reset();
         // }
+      } else {
+        setLoading(false);
+        setHideButton(false);
+        setError({
+          ...error,
+          threeYearsAvailability: !newData.threeYearsAvailability,
+          experienceLevel: !newData.experienceLevel,
+          traineeProgram: !newData.traineeProgram,
+        });
+        // alert("please fill the whole field");
       }
     }
   };
@@ -247,6 +272,11 @@ const Onboarding = ({ products }) => {
                 defaultValue="Are you applying for a Trainee Program ?"
                 onChange={handleChange}
                 required
+                style={{
+                  borderColor: error.traineeProgram ? "red" : "whitesmoke",
+                  borderStyle: "solid",
+                  borderWidth: "2px",
+                }}
               >
                 <option defaultValue="" disabled>
                   Are you applying for a Trainee Program ?
@@ -254,6 +284,8 @@ const Onboarding = ({ products }) => {
                 <option defaultValue="Yes">Yes</option>
                 <option defaultValue="No">No</option>
               </select>
+              {error.traineeProgram && <p>This field is required</p>}
+
               <select
                 name="threeYearsAvailability"
                 disabled={formDisabled}
@@ -261,6 +293,13 @@ const Onboarding = ({ products }) => {
                 onChange={handleChange}
                 id=""
                 required
+                style={{
+                  borderColor: error.threeYearsAvailability
+                    ? "red"
+                    : "whitesmoke",
+                  borderStyle: "solid",
+                  borderWidth: "2px",
+                }}
               >
                 <option defaultValue="" disabled>
                   3 years availability
@@ -268,6 +307,7 @@ const Onboarding = ({ products }) => {
                 <option defaultValue="Yes">Yes</option>
                 <option defaultValue="No">No</option>
               </select>
+              {error.threeYearsAvailability && <p>This field is required</p>}
               <select
                 name="experienceLevel"
                 disabled={formDisabled}
@@ -275,6 +315,11 @@ const Onboarding = ({ products }) => {
                 id=""
                 onChange={handleChange}
                 required
+                style={{
+                  borderColor: error.experienceLevel ? "red" : "whitesmoke",
+                  borderStyle: "solid",
+                  borderWidth: "2px",
+                }}
               >
                 <option defaultValue="" disabled>
                   What is your Experience Level ?
@@ -289,6 +334,8 @@ const Onboarding = ({ products }) => {
                   Professional (More than 2 year)
                 </option>
               </select>
+              {error.experienceLevel && <p>This field is required</p>}
+
               {!hideButton && (
                 <input type="submit" disabled={formDisabled} value="Submit" />
               )}
