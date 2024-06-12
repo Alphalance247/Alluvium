@@ -30,7 +30,6 @@ const PluginPage = () => {
               border: "none",
               width: "100%",
               height: "100%",
-              marginTop: "3rem",
             }}
             title="Plugin"
           />
