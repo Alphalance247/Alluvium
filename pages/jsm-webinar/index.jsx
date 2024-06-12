@@ -4,7 +4,7 @@ import Head from "next/head";
 
 const PluginPage = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>Home | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
@@ -30,12 +30,13 @@ const PluginPage = () => {
               border: "none",
               width: "100%",
               height: "100%",
+              marginTop: "3rem",
             }}
             title="Plugin"
           />
         </div>
       </Head>
-    </>
+    </Layout>
   );
 };
 
