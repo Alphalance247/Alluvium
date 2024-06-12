@@ -30,8 +30,7 @@ const Webinar = () => {
                 in-depth insights, expert tips, live demos, and more. Click here
                 to learn more!
               </p>
-              {/* https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8 */}
-              <Link href="/jsm-webinar">
+              <Link href="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8">
                 <a
                   className="btn text-white"
                   style={{ backgroundColor: "#E37915" }}
