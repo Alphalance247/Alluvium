@@ -45,7 +45,7 @@ const Demands = ({ demands }) => {
 const Onboarding = ({ products }) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [formDisabled, setFormDisabled] = useState(false);
+  const [formDisabled, setFormDisabled] = useState(true);
   const [showFeedback, setShowFeedback] = useState(false);
   const [responseData, setResponseData] = useState(null);
   const [hideButton, setHideButton] = useState(false);
@@ -111,13 +111,9 @@ const Onboarding = ({ products }) => {
                 "Unable to submit data, please try again or contact admin (contact@alluvium.net).",
             };
           });
-        // console.log(responseData2);
         setResponseData(responseData2);
         setLoading(false);
         setHideButton(false);
-        // if(responseData2.success){
-        //   e.reset();
-        // }
       } else {
         setLoading(false);
         setHideButton(false);
@@ -127,7 +123,6 @@ const Onboarding = ({ products }) => {
           experienceLevel: !newData.experienceLevel,
           traineeProgram: !newData.traineeProgram,
         });
-        // alert("please fill the whole field");
       }
     }
   };
@@ -205,141 +200,151 @@ const Onboarding = ({ products }) => {
                 </div>
               </div>
             )}
-            <form
-              action="#"
-              onSubmit={handleSubmit}
-              ref={formElem}
-              disabled={formDisabled}
-            >
-              <input
-                type="text"
-                name="first_name"
+            {formDisabled ? (
+              <div>
+                <h2 style={{ fontSize: "3rem" }}>Registration is Closed</h2>
+                <p style={{ textTransform: "uppercase", fontSize: "18px" }}>
+                  We are no longer accepting new entries at this time. <br />
+                  Thanks!!
+                </p>
+              </div>
+            ) : (
+              <form
+                action="#"
+                onSubmit={handleSubmit}
+                ref={formElem}
                 disabled={formDisabled}
-                placeholder="First name"
-                id=""
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="last_name"
-                disabled={formDisabled}
-                placeholder="Last name"
-                id=""
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                disabled={formDisabled}
-                placeholder="Email"
-                id=""
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="tel"
-                name="phoneNumber"
-                disabled={formDisabled}
-                placeholder="Phone (i.e +234 0812234991)"
-                id=""
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="currentEngagement"
-                disabled={formDisabled}
-                placeholder="Current Engagement"
-                id=""
-                onChange={handleChange}
-                required
-              />
-              <input
-                type="text"
-                name="location"
-                disabled={formDisabled}
-                placeholder="Location"
-                id=""
-                onChange={handleChange}
-                required
-              />
-              <select
-                name="traineeProgram"
-                disabled={formDisabled}
-                id=""
-                defaultValue="Are you applying for a Trainee Program ?"
-                onChange={handleChange}
-                required
-                style={{
-                  borderColor: error.traineeProgram ? "red" : "whitesmoke",
-                  borderStyle: "solid",
-                  borderWidth: "2px",
-                }}
               >
-                <option defaultValue="" disabled>
-                  Are you applying for a Trainee Program ?
-                </option>
-                <option defaultValue="Yes">Yes</option>
-                <option defaultValue="No">No</option>
-              </select>
-              {error.traineeProgram && <p>This field is required</p>}
+                <input
+                  type="text"
+                  name="first_name"
+                  disabled={formDisabled}
+                  placeholder="First name"
+                  id=""
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="last_name"
+                  disabled={formDisabled}
+                  placeholder="Last name"
+                  id=""
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  disabled={formDisabled}
+                  placeholder="Email"
+                  id=""
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  disabled={formDisabled}
+                  placeholder="Phone (i.e +234 0812234991)"
+                  id=""
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="currentEngagement"
+                  disabled={formDisabled}
+                  placeholder="Current Engagement"
+                  id=""
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="location"
+                  disabled={formDisabled}
+                  placeholder="Location"
+                  id=""
+                  onChange={handleChange}
+                  required
+                />
+                <select
+                  name="traineeProgram"
+                  disabled={formDisabled}
+                  id=""
+                  defaultValue="Are you applying for a Trainee Program ?"
+                  onChange={handleChange}
+                  required
+                  style={{
+                    borderColor: error.traineeProgram ? "red" : "whitesmoke",
+                    borderStyle: "solid",
+                    borderWidth: "2px",
+                  }}
+                >
+                  <option defaultValue="" disabled>
+                    Are you applying for a Trainee Program ?
+                  </option>
+                  <option defaultValue="Yes">Yes</option>
+                  <option defaultValue="No">No</option>
+                </select>
+                {error.traineeProgram && <p>This field is required</p>}
 
-              <select
-                name="threeYearsAvailability"
-                disabled={formDisabled}
-                defaultValue="3 years availability"
-                onChange={handleChange}
-                id=""
-                required
-                style={{
-                  borderColor: error.threeYearsAvailability
-                    ? "red"
-                    : "whitesmoke",
-                  borderStyle: "solid",
-                  borderWidth: "2px",
-                }}
-              >
-                <option defaultValue="" disabled>
-                  3 years availability
-                </option>
-                <option defaultValue="Yes">Yes</option>
-                <option defaultValue="No">No</option>
-              </select>
-              {error.threeYearsAvailability && <p>This field is required</p>}
-              <select
-                name="experienceLevel"
-                disabled={formDisabled}
-                defaultValue="What is your Experience Level ?"
-                id=""
-                onChange={handleChange}
-                required
-                style={{
-                  borderColor: error.experienceLevel ? "red" : "whitesmoke",
-                  borderStyle: "solid",
-                  borderWidth: "2px",
-                }}
-              >
-                <option defaultValue="" disabled>
-                  What is your Experience Level ?
-                </option>
-                <option defaultValue="Beginner (Less than 1 year)">
-                  Beginner (Less than 1 year)
-                </option>
-                <option defaultValue="Intermediate (1 year)">
-                  Intermediate (1 year)
-                </option>
-                <option defaultValue="Professional (More than 2 year)">
-                  Professional (More than 2 year)
-                </option>
-              </select>
-              {error.experienceLevel && <p>This field is required</p>}
+                <select
+                  name="threeYearsAvailability"
+                  disabled={formDisabled}
+                  defaultValue="3 years availability"
+                  onChange={handleChange}
+                  id=""
+                  required
+                  style={{
+                    borderColor: error.threeYearsAvailability
+                      ? "red"
+                      : "whitesmoke",
+                    borderStyle: "solid",
+                    borderWidth: "2px",
+                  }}
+                >
+                  <option defaultValue="" disabled>
+                    3 years availability
+                  </option>
+                  <option defaultValue="Yes">Yes</option>
+                  <option defaultValue="No">No</option>
+                </select>
+                {error.threeYearsAvailability && <p>This field is required</p>}
+                <select
+                  name="experienceLevel"
+                  disabled={formDisabled}
+                  defaultValue="What is your Experience Level ?"
+                  id=""
+                  onChange={handleChange}
+                  required
+                  style={{
+                    borderColor: error.experienceLevel ? "red" : "whitesmoke",
+                    borderStyle: "solid",
+                    borderWidth: "2px",
+                  }}
+                >
+                  <option defaultValue="" disabled>
+                    What is your Experience Level ?
+                  </option>
+                  <option defaultValue="Beginner (Less than 1 year)">
+                    Beginner (Less than 1 year)
+                  </option>
+                  <option defaultValue="Intermediate (1 year)">
+                    Intermediate (1 year)
+                  </option>
+                  <option defaultValue="Professional (More than 2 year)">
+                    Professional (More than 2 year)
+                  </option>
+                </select>
+                {error.experienceLevel && <p>This field is required</p>}
 
-              {!hideButton && (
-                <input type="submit" disabled={formDisabled} value="Submit" />
-              )}
-            </form>
+                {!hideButton && (
+                  <input type="submit" disabled={formDisabled} value="Submit" />
+                )}
+              </form>
+            )}
           </div>
         </main>
       </div>
