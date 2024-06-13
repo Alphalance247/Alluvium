@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from "react";
+import React, { useState } from 'react';
 import { ToastProvider, useToasts } from 'react-toast-notifications';
 import { validateEmail } from 'lib/validation';
 import Link from 'next/link';
@@ -17,22 +16,27 @@ export const BookingCTA = () => {
 }
 
 export const ConsultationForm = () => {
-    const [fullname, setFullname] = useState('')
-    const [email, setEmail] = useState('')
-    const [company, setCompany] = useState('')
-    const [phone, setPhone] = useState('')
-    const [message, setMessage] = useState('')
+    const [fullname, setFullname] = useState('');
+    const [email, setEmail] = useState('');
+    const [company, setCompany] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
+    const [isChecked, setIsChecked] = useState(false);
     const { addToast } = useToasts();
 
     const onsubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         if (!fullname || !email || !phone || !message) {
-            addToast("All fields marked with askteriks are required", { appearance: 'error' });
-            return
+            addToast("All fields marked with asterisks are required", { appearance: 'error' });
+            return;
         }
         if (!validateEmail(email)) {
             addToast("Please enter a valid email address", { appearance: 'error' });
-            return
+            return;
+        }
+        if (!isChecked) {
+            addToast("You must agree to the terms and conditions", { appearance: 'error' });
+            return;
         }
 
         let formData = {
@@ -63,11 +67,12 @@ export const ConsultationForm = () => {
             addToast('Oops something went wrong. Please try again.', { appearance: "error" });
         }
 
-        setFullname("")
-        setEmail("")
-        setPhone("")
-        setCompany("")
-        setMessage("")
+        setFullname("");
+        setEmail("");
+        setPhone("");
+        setCompany("");
+        setMessage("");
+        setIsChecked(false);
     }
 
     return (
@@ -104,8 +109,26 @@ export const ConsultationForm = () => {
                                     <label htmlFor="message">How can we help you? <span className='text-danger'>*</span></label>
                                     <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="message" id="message" className='form-control' rows="7"></textarea>
                                 </div>
+
+                                <div className="form-group col-md-12">
+                                    <input
+                                        type="checkbox"
+                                        id="consent"
+                                        name="consent"
+                                        className="mr-2 leading-tight"
+                                        checked={isChecked}
+                                        onChange={(e) => setIsChecked(e.target.checked)}
+                                        required
+                                    />
+                                    <label htmlFor="consent">Please be aware that the information you provide will be used in our website, news letter, and other marketing materials. <span className='text-danger'>*</span></label>
+                                </div>
+
+                                <div className="form-group col-md-12 mt-3 border border-info">
+                                    <label htmlFor="consentchangemind">If you change your mind in the future, you can email us at contact@alluvium.net to withdraw your consent. <span className='text-default'></span></label>
+                                </div>
+
                                 <div className="form-group mt-5">
-                                    <button type="submit" aria-label='submit' className={`${styles.button} ${styles.defaultButton} ${styles.consultButton}`}>Submit</button>
+                                    <button type="submit" aria-label='submit' className={`${styles.button} ${styles.defaultButton} ${styles.consultButton}`} disabled={!isChecked}>Submit</button>
                                 </div>
 
                             </form>
@@ -140,4 +163,3 @@ export const ConsultationForm = () => {
         </ToastProvider>
     )
 }
-
