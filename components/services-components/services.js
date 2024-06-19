@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../../styles/services.module.scss";
 import Service from "./service";
 import BookingCTA from "components/Booking";
-
+import Image from "next/image";
 const Services = () => {
   const ourServices = ourServicesData;
   return (
@@ -20,19 +20,186 @@ const Services = () => {
             suite of services
           </p>
         </div>
-        <div
-          className={styles.ourServicesList}
-          style={{ marginBottom: "4rem" }}
-        >
-          {ourServices.map((service) => {
-            const { id, icon } = service;
+      </div>
 
-            return (
-              !!service && <Service icon={icon} service={service} key={id} />
-            );
-          })}
+
+        <div className="container mx-auto">
+        <div className="row">
+          <div className="col-md-6" style={{}}>
+          <Image className={`img-fluid ${styles}`} width={542} height={510} src="/assets/home/atlassconsult.png" />
+          </div>
+          <div className={`col-md-6 ${styles.servmd}`}>
+            <h1 style={{fontSize:"30px"}}>Atlassian Consulting</h1>
+            <p style={{fontSize:"16px"}}>
+            Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam vulputate a pellentesque. Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam 
+            </p>
+            <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                 Migration
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Hosting
+                </a>
+              </Link>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Implementation
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Training
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Integration
+                </a>
+              </Link> <br></br>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#E37915", marginRight:"10px", fontSize:"16px" }}
+                >
+                  Schedule a call
+                </a>
+              </Link>
+          </div>
         </div>
-        <BookingCTA />
+
+
+
+        <div className="row" style={{}}>
+        <div className={`col-md-6 ${styles.servmd}`}>
+            <h1 style={{fontSize:"30px"}}>AWS Consulting</h1>
+            <p style={{fontSize:"16px"}}>
+            Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam vulputate a pellentesque. Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam 
+            </p>
+            <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                 DevOps
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  ITSM
+                </a>
+              </Link>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Data Migration
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Process & Service Modernisation
+                </a>
+              </Link>
+               <br></br>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#E37915", marginRight:"10px", fontSize:"16px" }}
+                >
+                  Speak to our consultant
+                </a>
+              </Link>
+          </div>
+          <div className="col-md-6">
+          <Image className={`img-fluid ${styles.customdiv}`} width={542} height={510} src="/assets/home/awsconsult.png" />
+          </div>
+        </div>
+
+
+
+
+        <div className="row">
+          <div className="col-md-6">
+          <Image className={`img-fluid ${styles.customdiv}`} width={542} height={510} src="/assets/home/dev.png" />
+          </div>
+          <div className={`col-md-6 ${styles.servmd}`}>
+            <h1 style={{fontSize:"30px"}}>Design and Dev</h1>
+            <p style={{fontSize:"16px"}}>
+            Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam vulputate a pellentesque. Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam 
+            </p>
+            <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize: "14px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                 Application Development
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize: "14px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Application Improvement
+                </a>
+              </Link>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Software Consulting
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Web Development
+                </a>
+              </Link> <br></br>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#E37915", marginRight:"10px", fontSize:"16px" }}
+                >
+                  Schedule a call
+                </a>
+              </Link>
+          </div>
+        </div>
+
       </div>
     </section>
   );

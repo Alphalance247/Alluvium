@@ -13,6 +13,7 @@ import Layout from "components/layout";
 import HeroCarousel from "components/HeroCarousel";
 import styles from "../styles/hero.module.scss";
 import Badges from "components/badges";
+import Featured from "components/Featured";
 
 const Home = () => {
   return (
@@ -33,16 +34,18 @@ const Home = () => {
         <div className="container-fluid p-0 m-0">
           <div
             className="container-fluid p-0"
-            style={{ background: "rgba(15, 26, 37, 1)" }}
+            style={{ background: "" }}
           >
             <HeroCarousel />
-            <div className="container-fluid d-sm-none">
+            <Featured />
+
+            {/* <div className="container-fluid d-sm-none">
               <div
                 className={`d-flex ${styles.badges_container} mt-5 mt-sm-4 pb-5`}
               >
                 <Badges />
               </div>
-            </div>
+            </div> */}
           </div>
           <Services />
           <OurSolution />
