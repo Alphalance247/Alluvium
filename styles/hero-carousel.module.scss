@@ -1,5 +1,16 @@
 
 
+.atp {
+    font-size: 40px;
+  }
+
+
+  @media (min-width: 768px) {
+    .atp {
+      font-size: 72px;
+    }
+  }
+
 .featured {
     margin-top: -65px;
     border-radius: 8px;
@@ -29,11 +40,6 @@
         margin-left: 10%; 
         margin-right: 10%;
         margin-top: 20px;
-        
-    }
-
-    .atp {
-        font-size: 40px;
         
     }
 

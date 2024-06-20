@@ -31,14 +31,14 @@ const Services = () => {
           <div className={`col-md-6 ${styles.servmd}`}>
             <h1 style={{fontSize:"30px"}}>Atlassian Consulting</h1>
             <p style={{fontSize:"16px"}}>
-            Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam vulputate a pellentesque. Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam 
+            We offer a comprehensive range of Atlassian services including ITSM, automation, AI, JSM implementations, data center management, cloud solutions, migrations, support services, training, holistic site audit and governance, and access to Atlassian certified experts on demand.
             </p>
             <Link href="#">
                 <a
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                 Migration
+                 AI
                 </a>
               </Link>
               <Link href="#">
@@ -46,7 +46,7 @@ const Services = () => {
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                  Hosting
+                  ITSM
                 </a>
               </Link>
 
@@ -55,7 +55,23 @@ const Services = () => {
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                  Implementation
+                  Migrations
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Data Center
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Cloud
                 </a>
               </Link>
               <Link href="#">
@@ -71,7 +87,25 @@ const Services = () => {
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                  Integration
+                  JSM Implementations
+                </a>
+              </Link>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Automation
+                </a>
+              </Link>
+
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                >
+                  Support
                 </a>
               </Link> <br></br>
 
@@ -92,14 +126,14 @@ const Services = () => {
         <div className={`col-md-6 ${styles.servmd}`}>
             <h1 style={{fontSize:"30px"}}>AWS Consulting</h1>
             <p style={{fontSize:"16px"}}>
-            Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam vulputate a pellentesque. Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis pretium lorem quam 
+            Optimize your Atlassian environment with our AWS consulting services. We offer managed services, infrastructure review, modernization, and DevOps solutions, delivered by our team of experienced consultants.
             </p>
             <Link href="#">
                 <a
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                 DevOps
+                 Managed Services
                 </a>
               </Link>
               <Link href="#">
@@ -107,16 +141,24 @@ const Services = () => {
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                  ITSM
+                  Infrastructure review
                 </a>
               </Link>
 
               <Link href="#">
                 <a
                   className="btn border mr-4"
-                  style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
+                  style={{ color: "#000", marginRight:"10px", fontSize:"13px", fontWeight:"normal" }}
                 >
-                  Data Migration
+                  Experienced Consultants
+                </a>
+              </Link>
+              <Link href="#">
+                <a
+                  className="btn border mr-4"
+                  style={{ color: "#000", marginRight:"10px", fontSize:"13px", fontWeight:"normal" }}
+                >
+                  Process & Service Modernisation
                 </a>
               </Link>
               <Link href="#">
@@ -124,7 +166,7 @@ const Services = () => {
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                  Process & Service Modernisation
+                 DevOps and Solutions Consulting
                 </a>
               </Link>
                <br></br>
@@ -160,7 +202,7 @@ const Services = () => {
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize: "14px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                 Application Development
+                 Software Development
                 </a>
               </Link>
               <Link href="#">
@@ -168,9 +210,10 @@ const Services = () => {
                   className="btn border mr-4"
                   style={{ color: "#000", marginRight:"10px", fontSize: "14px", fontSize:"15px", fontWeight:"normal" }}
                 >
-                  Application Improvement
+                  Design as a Service
                 </a>
               </Link>
+              
 
               <Link href="#">
                 <a

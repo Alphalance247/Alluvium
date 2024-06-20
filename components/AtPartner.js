@@ -7,31 +7,31 @@ export default function () {
 <div className={` ${styles.herobanner}`}>
         <div className={`row container mx-auto`}>
           <div className="col-md-8">
-            <div className="" style={{ paddingTop: "-5px" }}>
+            <div className="" style={{ paddingTop: "" }}>
               <h1
                 className={`text-white ${styles.atp}`}
                 style={{
-                //   fontSize: "50px",
+                  // fontSize: "72px",
                   lineHeight: "30px",
-                  marginBottom: "30px",
+                  
                 }}
               >
-                We are Trusted
+                We are a Trusted
               </h1>
 
               <h1
                 className={`text-white ${styles.atp}`}
                 style={{
-                //   fontSize: "50px",
-                  lineHeight: "20px",
+                  // fontSize: "72px",
+                  lineHeight: "82px",
                   marginBottom: "30px",
                 }}
               >
                 Atlassian Partner
               </h1>
               <p
-                className="text-white"
-                style={{ fontSize: "18px", marginBottom: "20px", lineHeight: "20px"}}
+                className=""
+                style={{ fontSize: "18px", marginBottom: "20px", lineHeight: "20px", color: "#E7E8E9"}}
               >
               We are ITSM, DevOps and Data Migration Experts
               </p>
@@ -40,7 +40,7 @@ export default function () {
                   className="btn text-white mr-4"
                   style={{ backgroundColor: "#E37915", marginRight:"10px" }}
                 >
-                  Why Hire an Atlassian Partner
+                  Why hire us as your Atlassian partner
                 </a>
               </Link>
 
