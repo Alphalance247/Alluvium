@@ -1,0 +1,165 @@
+.solutionContainer {
+  background: #05080c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  // @media screen and (max-width: 576px) {
+  //   height: 1300px;
+  // }
+
+  .atlassian {
+    display: grid;
+    grid-template-columns: 33% auto;
+    column-gap: 2rem;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      row-gap: 4rem;
+    }
+
+    .atlassianProduct {
+      background: linear-gradient(
+        90deg,
+        #0f1a26 0%,
+        #066b87 90%,
+        #066b87 50%,
+        #0f1a26 100%
+      );
+      border: 1px solid rgb(37, 36, 36);
+
+      h5 {
+        color: white;
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        margin-bottom: 10rem;
+        line-height: 28px;
+      }
+
+      .img1 {
+        position: absolute;
+        right: 2rem;
+        bottom: 9rem;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: 576px) {
+          right: 1rem;
+        }
+      }
+
+      .img2 {
+        margin-bottom: 1rem;
+        position: relative;
+        top: -4rem;
+
+        @media screen and (max-width: 576px) {
+          left: 0rem;
+        }
+      }
+
+      .img3 {
+        position: absolute;
+        right: 7rem;
+        bottom: -2rem;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: 992px) {
+          right: 10rem;
+        }
+
+        @media screen and (max-width: 576px) {
+          right: 5rem;
+          bottom: -4rem;
+        }
+      }
+    }
+
+    .atlassianDiscovery {
+      background-color: #0f1a26;
+      border: 1px solid rgb(37, 36, 36);
+      // padding: 1rem 1.4rem !important;
+
+      @media screen and (max-width: 576px) {
+        padding: 1rem !important;
+      }
+
+      h5 {
+        color: white;
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 1rem;
+
+        @media screen and (max-width: 576px) {
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 28px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .atlassianMigration {
+      background: linear-gradient(90deg, #009bc0 50%, #00f0ff 100%);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      align-items: center;
+      padding: 1.5rem 1.5rem !important;
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: 1fr;
+        justify-content: left !important;
+        align-items: start !important;
+        padding: 1.5rem 1.5rem !important;
+      }
+
+      h5 {
+        color: white;
+        margin-top: 1rem;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 28px;
+      }
+
+      .cloudImg {
+        position: relative;
+        top: 2rem;
+        right: -1.5rem;
+
+        @media screen and (max-width: 576px) {
+          top: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}
