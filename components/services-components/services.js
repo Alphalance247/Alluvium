@@ -5,7 +5,6 @@ import Service from "./service";
 import BookingCTA from "components/Booking";
 import Image from "next/image";
 const Services = () => {
-  const ourServices = ourServicesData;
   return (
     <section
       className={`container-fluid p-0 ${styles.ourServices}`}
