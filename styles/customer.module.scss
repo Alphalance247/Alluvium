@@ -1,0 +1,38 @@
+.customerReview {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: white;
+
+  .review {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0f1a25;
+    line-height: 1.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .message {
+    font-size: 20px;
+    line-height: 32px;
+    color: #595959;
+    width: 70%;
+    margin: auto;
+  }
+
+  .customer {
+    .customerName {
+      color: #1d1b1a;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      margin-top: 2rem;
+    }
+    .customerRole {
+      color: #595959;
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}

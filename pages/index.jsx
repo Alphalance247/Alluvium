@@ -5,7 +5,8 @@ import Services from "components/services-components/services";
 import CaseStudies from "components/case-studies/case-studies";
 // import WhyAlluvium from "components/whyAlluvium";
 // import Hero from "components/Hero";
-import OurSolution from "components/ourSolutions";
+// import OurSolution from "components/ourSolutions";
+
 // import OurPartners from "components/ourPartners";
 // import WelcomeToAlluvium from "components/welcomeToAlluvium";
 // import ToolsAndPlatforms from "components/toolsAndPlatforms";
@@ -48,12 +49,14 @@ const Home = () => {
             </div> */}
           </div>
           <Services />
-          <OurSolution />
+          <Solutions />
+          {/* <OurSolution /> */}
           {/* <WelcomeToAlluvium /> */}
           {/* <ToolsAndPlatforms /> */}
           {/* <WhyAlluvium /> */}
           {/* <OurPartners /> */}
           <CaseStudies />
+          <CustomerReview />
           {/* <News /> */}
         </div>
       </Layout>
