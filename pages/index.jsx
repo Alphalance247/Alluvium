@@ -5,7 +5,8 @@ import Services from "components/services-components/services";
 import CaseStudies from "components/case-studies/case-studies";
 // import WhyAlluvium from "components/whyAlluvium";
 // import Hero from "components/Hero";
-import OurSolution from "components/ourSolutions";
+// import OurSolution from "components/ourSolutions";
+
 // import OurPartners from "components/ourPartners";
 // import WelcomeToAlluvium from "components/welcomeToAlluvium";
 // import ToolsAndPlatforms from "components/toolsAndPlatforms";
@@ -13,6 +14,8 @@ import Layout from "components/layout";
 import HeroCarousel from "components/HeroCarousel";
 import styles from "../styles/hero.module.scss";
 import Badges from "components/badges";
+import Solutions from "components/our-solutions/solutions";
+import CustomerReview from "components/our-customers/customer";
 
 const Home = () => {
   return (
@@ -45,12 +48,14 @@ const Home = () => {
             </div>
           </div>
           <Services />
-          <OurSolution />
+          <Solutions />
+          {/* <OurSolution /> */}
           {/* <WelcomeToAlluvium /> */}
           {/* <ToolsAndPlatforms /> */}
           {/* <WhyAlluvium /> */}
           {/* <OurPartners /> */}
           <CaseStudies />
+          <CustomerReview />
           {/* <News /> */}
         </div>
       </Layout>
