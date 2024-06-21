@@ -35,7 +35,7 @@ export default function () {
               >
               We are ITSM, DevOps and Data Migration Experts
               </p>
-              <Link href="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8">
+              <Link href="#">
                 <a
                   className="btn text-white mr-4"
                   style={{ backgroundColor: "#E37915", marginRight:"10px" }}
@@ -44,7 +44,7 @@ export default function () {
                 </a>
               </Link>
 
-              <Link href="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8">
+              <Link href="https://alluvium.net/support/contact#schedule-a-call">
                 <a
                   className={`${styles.custombtn} btn text-white border`}
                   style={{ }}

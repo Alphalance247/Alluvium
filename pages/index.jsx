@@ -15,7 +15,8 @@ import HeroCarousel from "components/HeroCarousel";
 import styles from "../styles/hero.module.scss";
 import Badges from "components/badges";
 import Featured from "components/Featured";
-
+import Solutions from "components/our-solutions/solutions";
+import CustomerReview from "components/our-customers/customer";
 const Home = () => {
   return (
     <>
