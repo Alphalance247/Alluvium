@@ -1,135 +1,198 @@
-@import'lib/breakpoints.scss';
+@import "lib/breakpoints.scss";
 
 .booking {
-    display: inline-flex;
-    justify-content: space-between;
-    background-color: #0F1A25;
-    align-items: center;
-    background-image: url("/assets/about/booking-bg.png");
-    background-attachment: fixed;
-    border-radius: 10px;
-    width: 100%;
-    padding: 20px;
-    // margin: 2rem 0;
+  display: inline-flex;
+  justify-content: space-between;
+  background-color: #0f1a25;
+  align-items: center;
+  background-image: url("/assets/about/booking-bg.png");
+  background-attachment: fixed;
+  border-radius: 10px;
+  width: 100%;
+  // padding: 20px;
+  // margin: 2rem 0;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: center;
+  }
+
+  h3 {
+    font-weight: 700 !important;
+    font-size: 24px !important;
+    line-height: 30px !important;
+    letter-spacing: 0.0125em !important;
+    color: #ffffff;
+    margin: 0 !important;
 
     @media screen and (max-width: 768px) {
-        display: block;
-        text-align: center;
+      margin-bottom: 40px !important;
     }
+  }
 
-    h3 {
-        font-weight: 700 !important;
-        font-size: 24px !important;
-        line-height: 30px !important;
-        letter-spacing: 0.0125em !important;
-        color: #FFFFFF;
-        margin: 0 !important;
+  a:hover {
+    color: initial;
+  }
+}
 
-        @media screen and (max-width: 768px) {
-            margin-bottom: 40px !important;
-        }
-    }
+.buttonClear {
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  min-width: 277px;
+  min-height: 56px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bfbfbf;
+  background: white;
 
-    a:hover {
-        color: initial;
-    }
+  @media screen and (max-width: 576px) {
+    display: inline-flex;
+  }
+
+  &.consultButton {
+    min-width: 177px;
+    min-height: 46px;
+  }
 }
 
 .button {
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 0.04em;
-    // padding: 10px 50px;
-    min-width: 277px;
-    min-height: 56px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.04em;
+  // padding: 10px 50px;
+  min-width: 277px;
+  min-height: 56px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    &.consultButton {
-        min-width: 177px;
-        min-height: 46px;
-    }
+  &.consultButton {
+    min-width: 177px;
+    min-height: 46px;
+  }
 }
 
 .defaultButton {
-    background: #E37915;
-    border: 1.5px solid #E37915;
-    color: #FFFFFF;
+  background: #e37915;
+  border: 1.5px solid #e37915;
+  color: #ffffff;
 
-    &:hover {
-        color: #FFFFFF !important;
-        background: #c46308;
-        border: 1.5px solid #c46308;
-    }
+  &:hover {
+    color: #ffffff !important;
+    background: #c46308;
+    border: 1.5px solid #c46308;
+  }
 }
 
 .contact {
-    position: relative;
-    background-color: rgba(15, 26, 37, 1);
-    padding: 120px 0;
+  position: relative;
+  //   background-color: rgba(15, 26, 37, 1);
+  background: white;
+  padding: 120px 0;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
 
-    h2 {
-        font-weight: 700;
-        font-size: 34px;
-        line-height: 40px;
-        color: #ffffff;
-        margin-bottom: 30px;
+  @media screen and (max-width: 576px) {
+    padding: 1rem;
+  }
+
+  .book {
+    border-radius: 15px;
+    border: 1px solid #d9d9d9;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    column-gap: 50px;
+
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #0f1a25;
+    margin-bottom: 30px;
+  }
+
+  .content {
+    padding: 3rem 2.5rem;
+
+    @media screen and (max-width: 576px) {
+      padding: 1rem;
     }
 
+    input {
+      height: 59px;
+      border: 1px solid #d9d9d9;
+    }
+
+    label {
+      color: #595959;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 15px;
+      margin-bottom: 14px;
+    }
+
+    h3 {
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    p,
+    a {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 160%;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    strong {
+      color: #ffffff;
+    }
+  }
+
+  @include media("<=tablet") {
     .content {
-        display: grid;
-        grid-template-columns: 2.5fr 1fr;
-        column-gap: 100px;
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      row-gap: 30px;
 
-        input{
-            height: 59px;
-        }
-
-        label {
-            color: #ffffff;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 15px;
-            margin-bottom: 14px;
-        }
-
-        h3 {
-            color: #FFFFFF;
-            font-weight: 700;
-            font-size: 24px;
-            line-height: 30px;
-        }
-
-        p,
-        a {
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 160%;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        strong {
-            color: #ffffff;
-        }
+      form {
+        margin-bottom: 30px;
+      }
     }
+  }
 
-    @include media("<=tablet") {
-        .content {
-            grid-template-columns: 1fr;
-            column-gap: 0;
-            row-gap: 30px;
+  .location {
+    padding: 64px 32px;
+    background: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    border: 1px solid #d9d9d9;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 
-            form {
-                margin-bottom: 30px;
-            }
-        }
-
+    @media screen and (max-width: 576px) {
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-top-right-radius: 0px;
     }
-
-
+  }
 }

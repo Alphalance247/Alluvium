@@ -31,8 +31,8 @@
 
     .contactUsButton, .scheduleButton {
         // background-color: rgba(29, 52, 73, 1);
-        color: rgba(0, 155, 192, 1) !important;
-        border: 2px solid #009BC0;
+        color: rgb(2, 2, 2) !important;
+        // border: 2px solid #009BC0;
         border-radius: 5px;
 
         display: flex;
@@ -65,11 +65,12 @@
     }
 
     .scheduleButton {
-        color: #fff !important;
-        background-color: #009BC0;
+        color: #E37915 !important;
+        border: 2px solid #E37915;
+        background-color: #fff;
         &:hover {
             // padding: 17px 34px;
-            color: #009BC0 !important;
+            color: #E37915 !important;
             background: white;
         }
     }

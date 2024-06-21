@@ -1,20 +1,18 @@
+@media (min-width: 768px) {
+  .servmd {
+    margin-top: 30px;
+  }
+}
+
 .ourServices {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(
-    70.55% 70.55% at 150% 100.55%,
-    rgba(0, 155, 192, 0.6) 20%,
-    rgba(0, 155, 192, 0) 100%
-  );
   background-attachment: fixed;
-  background-color: #0f1a25;
+  background-color: #fcfcfc;
   font-family: serif !important;
-  // opacity: 0.4;
-  // filter: blur(100px);
-  // min-height: 860px;
-  padding-top: 120px !important;
+  padding-top: 80px !important;
   padding-bottom: 120px !important;
 
   @media screen and (max-width: 1300px) {
@@ -50,7 +48,7 @@
       font-weight: 600;
       font-size: 40px;
       line-height: 52px;
-      color: rgba(255, 255, 255, 1);
+      color: #000;
       text-align: center;
     }
 
@@ -60,7 +58,7 @@
       font-size: 16px;
       line-height: 200%;
       text-align: center;
-      color: rgba(255, 255, 255, 0.85);
+      color: #000;
       max-width: 70%;
       margin: 1rem 0;
     }

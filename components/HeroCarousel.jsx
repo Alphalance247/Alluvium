@@ -1,44 +1,22 @@
 // import Slider from "./Slider";
 import Slider from "react-slick";
-import styles from "../styles/hero-carousel.module.scss";
-import heroStyles from "../styles/hero.module.scss";
+
 
 import Hero from "./Hero";
 import Badges from "./badges";
-// import EventHero from "./cloud-connect/EventHero";
-// import Team24Banner from "./TEAM24/banner"
-import Gitex24 from "components/gitex24/gitex"
-import Webinar from "components/webinar/webinar"
+import AtPartner from "./AtPartner";
 
 export default function () {
 
     return (
         <>
             <div className="container-fluid p-0">
-                <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true} swipe >
-                    
-                    <div className="">
-                        <Webinar />
-                    </div>
-                {/* <div className="">
-                        <Gitex24 />
-                    </div> */}
-
-                    {/* <div className="">
-                        <Boot53 />
-                    </div> */}
+                {/* <Slider speed={3000} autoplaySpeed={7000} arrows={false} dots={false} autoplay={true} pauseOnHover={false} pauseOnFocus={false} infinite={true}> */}
+                    <AtPartner />
                     {/* <div>
-                        <Team24Banner />
-                    </div> */}
-
-                                        
-                    {/* <div>
-                        <EventHero showCountdown={false} />
-                    </div> */}
-                    <div>
                         <Hero />
-                    </div>
-                    <div className="container-fluid p-0">
+                    </div> */}
+                    {/* <div className="container-fluid p-0">
                         <div className={`${styles.h2}`}>
                             <h1>Let’s take you to the Cloud</h1>
                             <div className={styles.blue}>
@@ -52,8 +30,8 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div>
-                      <div>
+                    </div> */}
+                    {/* <div>
                         <div className={`${styles.h3}`}>
                             <div className={styles.top}>
                                 <h1>We are AI</h1>
@@ -70,9 +48,9 @@ export default function () {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
-                </Slider>
+                {/* </Slider> */}
             </div>
         </>
     )

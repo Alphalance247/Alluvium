@@ -89,15 +89,15 @@ export const ConsultationForm = () => {
   return (
     <ToastProvider>
       <section id="consultationForm" className={styles.contact}>
-        <div className="container">
-          <h2>How can we help?</h2>
+        <div className={`container ${styles.book} p-0`}>
           <div className={styles.content}>
             <div>
+              <h2>Let’s get in touch!</h2>
               <form method="POST" onSubmit={onsubmit}>
                 <div className="row my-4">
                   <div className="form-group col-md-6">
                     <label htmlFor="fullname">
-                      Full Name <span className="text-danger">*</span>
+                      Name <span className="text-danger">*</span>
                     </label>
                     <input
                       onChange={(e) => setFullname(e.target.value)}
@@ -106,7 +106,7 @@ export const ConsultationForm = () => {
                       className="form-control"
                       name="fullname"
                       id="fullname"
-                      placeholder=""
+                      placeholder="Name"
                     />
                   </div>
                   <div className="form-group col-md-6">
@@ -120,7 +120,7 @@ export const ConsultationForm = () => {
                       className="form-control"
                       name="email"
                       id="email"
-                      placeholder=""
+                      placeholder="Email"
                     />
                   </div>
                 </div>
@@ -137,7 +137,7 @@ export const ConsultationForm = () => {
                       className="form-control"
                       name="company"
                       id="company"
-                      placeholder=""
+                      placeholder="Company Name"
                     />
                   </div>
                   <div className="form-group col-md-6">
@@ -151,7 +151,7 @@ export const ConsultationForm = () => {
                       className="form-control"
                       name="telephone"
                       id="telephone"
-                      placeholder=""
+                      placeholder="Contact number"
                     />
                   </div>
                 </div>
@@ -167,6 +167,7 @@ export const ConsultationForm = () => {
                     id="message"
                     className="form-control"
                     rows="7"
+                    placeholder="How can we help you?"
                   ></textarea>
                 </div>
 
@@ -198,7 +199,10 @@ export const ConsultationForm = () => {
                       <span className="text-danger">*</span> If you change your
                       mind in the future, you can email us at
                       <span>
-                        <a href="mailto:contact@alluvium.net">
+                        <a
+                          href="mailto:contact@alluvium.net"
+                          className=" text-danger"
+                        >
                           {` contact@alluvium.net `}
                         </a>
                       </span>
@@ -207,48 +211,57 @@ export const ConsultationForm = () => {
                   </div>
                 </div>
 
-                <div className="form-group mt-5">
+                <div className="form-group mt-5 d-flex column-gap-2">
+                  {/* <button
+                    type="submit"
+                    aria-label="submit"
+                    className={`${styles.buttonClear} ${styles.consultButton}`}
+                  >
+                    Clear
+                  </button> */}
+
                   <button
                     type="submit"
                     aria-label="submit"
                     className={`${styles.button} ${styles.defaultButton} ${styles.consultButton}`}
                     disabled={!isChecked}
                   >
-                    Submit
+                    Submit Form
                   </button>
                 </div>
               </form>
             </div>
+          </div>
+
+          <div className={`${styles.location}`}>
+            <h3>Our Locations</h3>
+            <p>
+              <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
+              2NX, UK.
+            </p>
+            <p>
+              <strong>America:</strong> 27345 W Sand Lake Rd, STE 210 Office
+              3190 Orlando, FL 32819 US.
+            </p>
             <div>
-              <h3>Our Locations</h3>
+              <strong>Africa:</strong>
               <p>
-                <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
-                2NX, UK.
+                Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki,
+                Lagos 106104, Nigeria.
               </p>
               <p>
-                <strong>America:</strong> 27345 W Sand Lake Rd, STE 210 Office
-                3190 Orlando, FL 32819 US.
-              </p>
-              <div>
-                <strong>Africa:</strong>
-                <p>
-                  Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki,
-                  Lagos 106104, Nigeria.
-                </p>
-                <p>
-                  Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro
-                  Ekiti, Ekiti State, Nigeria.
-                </p>
-              </div>
-              <p>
-                <strong>Email:</strong>{" "}
-                <a href="mailto:contact@alluvium.net">contact@alluvium.net</a>{" "}
-              </p>
-              <p>
-                <strong>Phone Number:</strong>{" "}
-                <a href="tel:+442035762028"> +442035762028</a>{" "}
+                Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti,
+                Ekiti State, Nigeria.
               </p>
             </div>
+            <p>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:contact@alluvium.net">contact@alluvium.net</a>{" "}
+            </p>
+            <p>
+              <strong>Phone Number:</strong>{" "}
+              <a href="tel:+442035762028"> +442035762028</a>{" "}
+            </p>
           </div>
         </div>
       </section>
