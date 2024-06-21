@@ -34,10 +34,7 @@ const Home = () => {
           />
         </Head>
         <div className="container-fluid p-0 m-0">
-          <div
-            className="container-fluid p-0"
-            style={{ background: "" }}
-          >
+          <div className="container-fluid p-0" style={{ background: "" }}>
             <HeroCarousel />
             <Featured />
 
