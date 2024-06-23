@@ -273,7 +273,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-md-6">
             <Image
               className={`img-fluid ${styles.customdiv}`}
@@ -357,7 +357,7 @@ const Services = () => {
               </a>
             </Link>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
