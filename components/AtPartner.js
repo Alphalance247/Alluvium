@@ -5,41 +5,26 @@ export default function () {
   return (
     <div className={` ${styles.herobanner}`}>
       <div className={`row container mx-auto`}>
-        <div className="col-md-8">
+        <div className=" col-md-8">
           <div className="">
             <h1
               className={`text-white ${styles.atp}`}
-              style={{
-                lineHeight: "30px",
-              }}
             >
               We are a Trusted
             </h1>
 
             <h1
               className={`text-white ${styles.atp}`}
-              style={{
-                lineHeight: "82px",
-                marginBottom: "30px",
-              }}
             >
               Atlassian Partner
             </h1>
-            <p
-              className=""
-              style={{
-                fontSize: "18px",
-                marginBottom: "48px",
-                lineHeight: "20px",
-                color: "#E7E8E9",
-              }}
-            >
+              <p className={`${styles.prg}`}>
               We are ITSM, DevOps and Data Migration Experts
             </p>
             <Link href="#">
               <a
-                className="btn text-white mr-4"
-                style={{ backgroundColor: "#E37915", marginRight: "10px" }}
+                className={` btn text-white mr-4 ${styles.hirebtn}`} 
+                
               >
                 Why hire us as your Atlassian partner
               </a>
