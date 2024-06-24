@@ -158,7 +158,7 @@ const Services = () => {
               </a>
             </Link>{" "}
             <br></br>
-            <Link href="https://alluvium.net/support/contact#schedule-a-call">
+            <Link href="/support/contact#schedule-a-call">
               <a
                 className="btn border mr-4"
                 style={{
@@ -273,7 +273,7 @@ const Services = () => {
           </div>
         </div>
 
-        {/* <div className="row">
+        <div className="row">
           <div className="col-md-6">
             <Image
               className={`img-fluid ${styles.customdiv}`}
@@ -285,9 +285,10 @@ const Services = () => {
           <div className={`col-md-6 ${styles.servmd}`}>
             <h1 style={{ fontSize: "30px" }}>Design and Dev</h1>
             <p style={{ fontSize: "16px" }}>
-              Lorem ipsum dolor sit amet consectetur. Diam tincidunt vel turpis
-              pretium lorem quam vulputate a pellentesque. Lorem ipsum dolor sit
-              amet consectetur. Diam tincidunt vel turpis pretium lorem quam
+              Enhance your projects with our comprehensive Design as a Service
+              and cutting-edge software development. Our expert team delivers
+              tailored, innovative solutions to meet your unique needs and drive
+              your business forward.
             </p>
             <Link href="#">
               <a
@@ -357,7 +358,7 @@ const Services = () => {
               </a>
             </Link>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   );
