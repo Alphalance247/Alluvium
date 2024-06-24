@@ -12,7 +12,7 @@ const Services = () => {
     >
       <div className={`container mx-auto `}>
         <div className={styles.ourServicesHeader}>
-          <h2>What We Do</h2>
+          <h2 className={styles.ourServicesT}>WHAT WE DO</h2>
           <h3 className={styles.ourServicesTitle}>Our Services</h3>
           <p className={styles.ourServicesSubtitle}>
             Unlock the full potential of your business with our comprehensive
