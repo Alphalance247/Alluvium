@@ -2,31 +2,35 @@
     background: #fcfcfc;
   
     .featured {
-      width: 80%;
+      width: 90%;
       margin: auto;
       position: relative;
       bottom: 3rem;
       background: #fcfcfc;
       padding: 2rem 2.5rem;
+      
     }
   }
   
   .hirebtn {
       background-color: #E37915;
       margin-right: 10px;
+      // width: 324px;
   }
   
   .prg {
-      font-size: 18px;
-       margin-bottom: 48px;
+      font-size: 24px;
+       margin-bottom: 24px;
+       margin-top: 24px;
        line-height: 20px;
+       font-weight: 400px;
        color: #E7E8E9;
   }
   
 
   .ftitle {
     color: #009BC0;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 10px;
     margin-left: 10px;
     font-weight: bold;
@@ -34,10 +38,10 @@
 
 
 .fcontent {
-  font-size: 10px;
+  font-size: 13px;
   margin-top: -10px;
   margin-left: 10px;
-  font-weight: bold;
+  font-weight:600;
 }
 
   .atp {
@@ -47,6 +51,8 @@
   @media (min-width: 768px) {
     .atp {
       font-size: 72px;
+      font-weight: 700;
+      line-height: 82px;
     }
   }
   
@@ -72,6 +78,7 @@
       margin-left: 10%;
       margin-right: 10%;
       margin-top: 20px;
+      
     }
   
     .custombtn {
@@ -82,6 +89,7 @@
   .featuredsec {
     color: #5e666d;
     font-size: 13px;
+    font-weight: 600;
   }
   
   .h2 {

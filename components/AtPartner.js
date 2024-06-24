@@ -26,6 +26,7 @@ export default function () {
                 className={` btn text-white mr-4 ${styles.hirebtn}`} 
                 
               >
+                {/* <p className={` ${styles.hiretext}`}>Why hire us as your Atlassian partner</p> */}
                 Why hire us as your Atlassian partner
               </a>
             </Link>

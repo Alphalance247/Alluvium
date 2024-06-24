@@ -6,7 +6,7 @@ export default function () {
     <div className={`${styles.customxs}`}>
       <div className={`${styles.featured}`}>
         <div className="row container mx-auto">
-          <h3 className={`${styles.featuredsec} text-xl font-bold`}>
+          <h3 className={`${styles.featuredsec}`}>
             FEATURED SECTION
           </h3>
           <div className="col-md-4 d-flex align-items-center">
