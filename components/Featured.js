@@ -19,28 +19,10 @@ export default function () {
               />
             </div>
             <div className="ml-2 mt-2">
-              <p
-                className=""
-                style={{
-                  color: "#009BC0",
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "10px",
-                  marginLeft: "10px",
-                }}
-              >
+            <p className={` ${styles.ftitle}`}>
                 OUR SERVICES
               </p>
-              <p
-                className=""
-                style={{
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "-10px",
-                  marginLeft: "10px",
-                }}
-              >
-                {" "}
+                <p className={` ${styles.fcontent}`}>
                 See how Alluvium Can Help You
               </p>
             </div>
@@ -55,28 +37,10 @@ export default function () {
               />
             </div>
             <div className="ml-2 mt-2">
-              <p
-                className=""
-                style={{
-                  color: "#009BC0",
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "10px",
-                  marginLeft: "10px",
-                }}
-              >
+            <p className={` ${styles.ftitle}`}>
                 CAMPAIGN
               </p>
-              <p
-                className=""
-                style={{
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "-10px",
-                  marginLeft: "10px",
-                }}
-              >
-                {" "}
+              <p className={` ${styles.fcontent}`}>
                 Enhance Your Jira Management Skills
               </p>
             </div>
@@ -91,28 +55,10 @@ export default function () {
               />
             </div>
             <div className="ml-2 mt-2">
-              <p
-                className=""
-                style={{
-                  color: "#009BC0",
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "10px",
-                  marginLeft: "10px",
-                }}
-              >
+            <p className={` ${styles.ftitle}`}>
                 CASE STUDIES
               </p>
-              <p
-                className=""
-                style={{
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "-10px",
-                  marginLeft: "10px",
-                }}
-              >
-                {" "}
+              <p className={` ${styles.fcontent}`}>
                 Explore More of Our Transformative Projects
               </p>
             </div>
