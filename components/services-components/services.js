@@ -23,7 +23,7 @@ const Services = () => {
 
       <div className="container mx-auto">
         <div className="row">
-          <div className="col-md-6" style={{}}>
+          <div className="col-md-6">
             <Image
               className={`img-fluid ${styles}`}
               width={542}
@@ -32,8 +32,8 @@ const Services = () => {
             />
           </div>
           <div className={`col-md-6 ${styles.servmd}`}>
-            <h1 style={{ fontSize: "30px" }}>Atlassian Consulting</h1>
-            <p style={{ fontSize: "16px" }}>
+            <h1 className={`font ${styles.servhead}`}>Atlassian Consulting</h1>
+            <p className={` ${styles.servp}`}>
               We offer a comprehensive range of Atlassian services including
               ITSM, automation, AI, JSM implementations, data center management,
               cloud solutions, migrations, support services, training, holistic
@@ -41,132 +41,53 @@ const Services = () => {
               experts on demand.
             </p>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+              <a className={` btn border mr-4 ${styles.servtabs}`}>
                 AI
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 ITSM
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Migrations
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Data Center
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Cloud
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Training
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 JSM Implementations
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Automation
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Support
               </a>
             </Link>{" "}
             <br></br>
             <Link href="/support/contact#schedule-a-call">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#E37915",
-                  marginRight: "10px",
-                  fontSize: "16px",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Schedule a call
               </a>
             </Link>
@@ -183,82 +104,35 @@ const Services = () => {
               experienced consultants.
             </p>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Managed Services
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Infrastructure review
               </a>
             </Link>
 
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "13px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Experienced Consultants
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "13px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Process & Service Modernisation
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 DevOps and Solutions Consulting
               </a>
             </Link>
             <br></br>
 
             <Link href="/#consultationForm">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#E37915",
-                  marginRight: "10px",
-                  fontSize: "16px",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Speak to our consultant
               </a>
             </Link>
@@ -291,69 +165,28 @@ const Services = () => {
               your business forward.
             </p>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "14px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Software Development
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "14px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Design as a Service
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Software Consulting
               </a>
             </Link>
             <Link href="#">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#000",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                  fontWeight: "normal",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Web Development
               </a>
             </Link>{" "}
             <br></br>
             <Link href="https://alluvium.net/support/contact#schedule-a-call">
-              <a
-                className="btn border mr-4"
-                style={{
-                  color: "#E37915",
-                  marginRight: "10px",
-                  fontSize: "16px",
-                }}
-              >
+            <a className={` btn border mr-4 ${styles.servtabs}`}>
                 Schedule a call
               </a>
             </Link>
