@@ -40,15 +40,6 @@
     }
   }
 
-
-  .prg {
-      font-size: 24px;
-       margin-bottom: 24px;
-       margin-top: 24px;
-       line-height: 20px;
-       font-weight: 400px;
-       color: #E7E8E9;
-  }
   
 
   .ftitle {
@@ -79,6 +70,22 @@
       line-height: 82px;
     }
   }
+
+  .prg {
+    color: #E7E8E9;
+}
+
+@media (min-width: 768px) {
+  .prg {
+    font-size: 24px;
+     margin-bottom: 24px;
+     margin-top: 24px;
+     line-height: 20px;
+     font-weight: 400px;
+     color: #E7E8E9;
+}
+}
+
   
   .featured {
     // margin-top: -65px;
