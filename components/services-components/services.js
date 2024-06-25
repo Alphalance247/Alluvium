@@ -103,7 +103,7 @@ const Services = () => {
 
 
 
-        <div className={`row ${styles.servdiv}`}>
+        <div className={`row ${styles.servaws}`}>
           <div className={`col-md-6 ${styles.servmd}`}>
             <h1 className={`font ${styles.servhead}`}>AWS Consulting</h1>
             <p className={` ${styles.servp}`}>
