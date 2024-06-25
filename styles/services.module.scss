@@ -1,24 +1,138 @@
-@media (min-width: 768px) {
-  .servmd {
-    margin-top: 30px;
+.servdiv {
+  padding-left: 141.5px;
+  padding-right: 141.5px;
+  padding-top: 102px;
+  padding-bottom: 102px;
+}
+
+.servtabs {
+  color: #262626;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-right: 10px;
+  padding: 4px 20px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.servhead {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.servp {
+  text-align: justify;
+  width: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.servtabs {
+  margin-bottom: 10px; /* Add bottom margin to separate buttons */
+  text-align: center; /* Center the text */
+  
+}
+
+@media (max-width: 768px) {
+  .servdiv {
+    padding-left: 20px; /* Adjust padding for smaller screens */
+    padding-right: 20px; /* Adjust padding for smaller screens */
+    padding-top: 20px; /* Adjust padding for smaller screens */
+    padding-bottom: 20px; /* Adjust padding for smaller screens */
+  }
+
+  .servmd, .col-md-6 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .servmd img {
+    width: 100%;
+    height: auto;
+  }
+
+  .servhead {
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  .servp {
+    text-align: justify;
+    width: 100%;
+
+  }
+
+  .servtabs {
+    display: block; /* Make each button take a new line */
+    width: 100%; /* Make the button take full width */
+    margin-right: 0; /* Reset right margin */
+    margin-bottom: 10px; /* Add bottom margin to separate buttons */
+    text-align: center; /* Center the text */
+    box-sizing: border-box; /* Ensure padding is included in the width */
   }
 }
 
 
-.servhead {
-  font-size: 30px;
+
+
+// .servdiv {
+//   padding-left: 141.5px;
+//   padding-right: 141.5px;
+//   padding-top: 102px;
+//   padding-bottom: 102px;
+// }
+
+// @media (min-width: 768px) {
+//   .servmd {
+//     margin-top: 30px;
+    
+//   }
+// }
+
+
+.sched {
+  border-color: #E37915;
 }
 
-.servp {
-  font-size: 16px;
-}
+// .servhead {
+//   font-size: 30px;
+//   line-height: 40px;
+//   font-weight: 600;
+// }
 
-.servtabs {
-  color: #000;
-  margin-right: 10px;
-  font-size: 15px;
-  font-weight: normal;
-}
+// .servp {
+//   font-size: 16px;
+//   line-height: 24px;
+//   // width: 528px;
+//   // height: 120px;
+//   color: #262626;
+// }
+
+// .servtabs {
+//   color: #262626;
+//   font-size: 15px;
+//   font-weight: 400;
+//   line-height: 30px;
+//   margin-right: 10px;
+//   padding: 4px 20px;
+//   border-radius: 6px;
+//   display: inline-block;
+// }
+
+// @media (max-width: 768px) {
+//   .servtabs {
+//     display: block; /* Make each button take a new line */
+//     width: 100%; /* Make the button take full width */
+//     margin-right: 0; /* Reset right margin */
+//     margin-bottom: 10px; /* Add bottom margin to separate buttons */
+//     text-align: center; /* Center the text */
+//     box-sizing: border-box; /* Ensure padding is included in the width */
+//   }
+// }
 
 .ourServices {
   display: flex;
@@ -26,7 +140,7 @@
   align-items: center;
   justify-content: center;
   background-attachment: fixed;
-  background-color: #fcfcfc;
+  background-color: transparent;
   font-family: serif !important;
   padding-top: 80px !important;
   padding-bottom: 120px !important;
@@ -60,21 +174,29 @@
     align-items: center;
     margin: 2rem 0;
 
+    .ourServicesT {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 14px;
+      color: #009BC0;
+      text-align: center;
+    }
+
     .ourServicesTitle {
       font-weight: 600;
       font-size: 40px;
-      line-height: 52px;
-      color: #000;
+      line-height: 55px;
+      color: #1F1F1F;
       text-align: center;
     }
 
     .ourServicesSubtitle {
       // display: none; //to remove placeholder text
-      font-weight: normal;
+      font-weight: 400;
       font-size: 16px;
       line-height: 200%;
       text-align: center;
-      color: #000;
+      color: #595959;
       max-width: 70%;
       margin: 1rem 0;
     }

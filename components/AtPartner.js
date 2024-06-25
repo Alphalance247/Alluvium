@@ -23,7 +23,7 @@ export default function () {
             </p>
             <Link href="#">
               <a
-                className={` btn text-white mr-4 ${styles.hirebtn}`} 
+                className={`text-white mr-4 ${styles.hirebtn}`} 
                 
               >
                 {/* <p className={` ${styles.hiretext}`}>Why hire us as your Atlassian partner</p> */}
@@ -32,7 +32,10 @@ export default function () {
             </Link>
 
             <Link href="https://alluvium.net/support/contact#schedule-a-call">
-              <a className={`${styles.custombtn} btn text-white border`}>
+              <a 
+                className={`${styles.callbtn} text-white mr-4 border`}
+                >
+
                 Schedule a call
               </a>
             </Link>

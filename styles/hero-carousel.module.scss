@@ -15,9 +15,32 @@
   .hirebtn {
       background-color: #E37915;
       margin-right: 10px;
-      // width: 324px;
+      padding: 1rem 1.3rem;
+      border-radius: 8px;
   }
+
+  .callbtn {
+    // background-color: #E37915;
+    margin-right: 10px;
+    padding: 1rem 1.3rem;
+    border-radius: 8px;
+}
   
+  @media (max-width: 768px) {
+    .hirebtn, 
+    .callbtn {
+      display: block;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 0.9rem; /* font size for mobile */
+      // padding: 0.8rem 1rem; /* padding for mobile */
+
+    }
+  }
+
+
   .prg {
       font-size: 24px;
        margin-bottom: 24px;
@@ -33,7 +56,8 @@
     font-size: 12px;
     margin-top: 10px;
     margin-left: 10px;
-    font-weight: bold;
+    line-height: 10px;
+    font-weight: 500;
   }
 
 
@@ -81,15 +105,19 @@
       
     }
   
-    .custombtn {
-      width: 310px;
-    }
   }
   
   .featuredsec {
     color: #5e666d;
     font-size: 13px;
     font-weight: 600;
+    line-height: 24px;
+  }
+
+  .fimages {
+    border-radius: 4px;
+    width: 176px;
+    height: 101px;
   }
   
   .h2 {

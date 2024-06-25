@@ -12,7 +12,7 @@ export default function () {
           <div className="col-md-4 d-flex align-items-center">
             <div>
               <Image
-                className={`img-fluid ${styles.serv}`}
+                className={`img-fluid ${styles.fimages}`}
                 width={176}
                 height={101}
                 src="/assets/serv.png"
@@ -30,7 +30,7 @@ export default function () {
           <div className="col-md-4 d-flex align-items-center">
             <div>
               <Image
-                className={`img-fluid ${styles.serv}`}
+                className={`img-fluid ${styles.fimages}`}
                 width={176}
                 height={101}
                 src="/assets/camp.png"
@@ -48,7 +48,7 @@ export default function () {
           <div className="col-md-4 d-flex align-items-center">
             <div>
               <Image
-                className={`img-fluid ${styles.serv}`}
+                className={`img-fluid ${styles.fimages}`}
                 width={176}
                 height={101}
                 src="/assets/case.png"
