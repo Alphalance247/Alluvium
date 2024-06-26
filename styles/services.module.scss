@@ -22,6 +22,11 @@
   padding-right: 141.5px;
   padding-top: 102px;
   padding-bottom: 102px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  
 }
 
 .servtabs {
@@ -55,12 +60,29 @@
   
 }
 
+.servimage {
+  align-self: center;
+}
+
+.schedulecall {
+  color: #E37915;
+  border-color: #E37915 !important;
+
+  
+}
+
 @media (max-width: 768px) {
   .servdiv {
     padding-left: 20px; /* Adjust padding for smaller screens */
     padding-right: 20px; /* Adjust padding for smaller screens */
     padding-top: 20px; /* Adjust padding for smaller screens */
     padding-bottom: 20px; /* Adjust padding for smaller screens */
+    
+  }
+
+  .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   .servmd, .col-md-6 {
@@ -92,6 +114,18 @@
     margin-bottom: 10px; /* Add bottom margin to separate buttons */
     text-align: center; /* Center the text */
     box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+
+  .schedulecall {
+    display: block; /* Make each button take a new line */
+    width: 100%; /* Make the button take full width */
+    margin-right: 0; /* Reset right margin */
+    margin-bottom: 10px; /* Add bottom margin to separate buttons */
+    text-align: center; /* Center the text */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    color: #E37915;
+    margin-right: 10px;
+    font-size: 16px;
   }
 }
 

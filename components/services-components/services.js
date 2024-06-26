@@ -25,7 +25,7 @@ const Services = () => {
         <div className={`row ${styles.servdiv}`}>
           <div className="col-md-6">
             <Image
-              className={`img-fluid ${styles}`}
+              className={`img-fluid ${styles.servimage}`}
               width={542}
               height={510}
               src="/assets/home/atlassconsult.png"
@@ -88,12 +88,8 @@ const Services = () => {
             <br></br>
             <Link href="/support/contact#schedule-a-call">
             <a
-                className="btn border mr-4"
-                style={{
-                  color: "#E37915",
-                  marginRight: "10px",
-                  fontSize: "16px",
-                }}>
+                className={`btn border mr-4 ${styles.schedulecall}`}
+                >
                 Schedule a call
               </a>
             </Link>
@@ -103,7 +99,7 @@ const Services = () => {
 
 
 
-        <div className={`row ${styles.servaws}`}>
+        <div className={`row ${styles.servaws, styles.servdiv}`}>
           <div className={`col-md-6 ${styles.servmd}`}>
             <h1 className={`font ${styles.servhead}`}>AWS Consulting</h1>
             <p className={` ${styles.servp}`}>
@@ -141,12 +137,8 @@ const Services = () => {
             <br></br>
             <Link href="/support/contact#schedule-a-call">
             <a
-                className="btn border mr-4"
-                style={{
-                  color: "#E37915",
-                  marginRight: "10px",
-                  fontSize: "16px",
-                }}>
+                className={`btn border mr-4 ${styles.schedulecall}`}
+                >
                 Schedule a call
               </a>
             </Link>
@@ -161,10 +153,12 @@ const Services = () => {
           </div>
         </div>
 
+        
+
         <div className={`row ${styles.servdiv}`}>
         <div className="col-md-6">
             <Image
-              className={`img-fluid ${styles}`}
+              className={`img-fluid ${styles.servimage}`}
               width={542}
               height={510}
               src="/assets/home/dev.png"
@@ -199,12 +193,8 @@ const Services = () => {
             <br></br>
             <Link href="/support/contact#schedule-a-call">
             <a
-                className="btn border mr-4"
-                style={{
-                  color: "#E37915",
-                  marginRight: "10px",
-                  fontSize: "16px",
-                }}>
+                className={`btn border mr-4 ${styles.schedulecall}`}
+                >
                 Schedule a call
               </a>
             </Link>
