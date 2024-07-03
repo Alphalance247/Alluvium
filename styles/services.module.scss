@@ -1,12 +1,13 @@
 .servaws {
-  padding-left: 141.5px;
-  padding-right: 141.5px;
-  padding-top: 102px;
-  padding-bottom: 102px;
+  // padding-left: 141.5px;
+  // padding-right: 141.5px;
+  // padding-top: 102px;
+  // padding-bottom: 102px;
+
   background-color: #F5F5F5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .servaws {
     padding-left: 20px; /* padding for smaller screens */
     padding-right: 20px; /* padding for smaller screens */
@@ -15,21 +16,110 @@
     background-color: #F5F5F5;
   }
 
+  
+
 }
 
 
-.servdiv {
-  padding-left: 141.5px;
-  padding-right: 141.5px;
-  padding-top: 102px;
-  padding-bottom: 102px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // height: 100vh;
+// .servdiv {
+//   padding-left: 141.5px;
+//   padding-right: 141.5px;
+//   padding-top: 102px;
+//   padding-bottom: 102px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   // height: 100vh;
+  
+// }
+
+.servmd0 {
+  width: 590px;
+
+  @media screen and (max-width: 992px) {
+    width: 400px;
+    
+  }
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1,1fr);
+    display:contents;
+
+  }
+  
   
 }
 
+.servmd1 {
+  width: 630px;
+  padding: 2rem 0px;
+
+  @media screen and (max-width: 992px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1,1fr);
+    display:contents;
+
+  }
+}
+
+.servmd2 {
+
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1,1fr);
+    display:contents;
+
+  }
+}
+
+
+
+.servdiv {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  padding-top: 102px !important;
+  padding-bottom: 102px !important;
+  justify-content: center;
+  column-gap: 3rem;
+  
+  @media screen and (max-width: 992px) {
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media screen and (max-width: 576px) {
+    //grid-template-columns: 1fr;
+    grid-template-columns: repeat(1,1fr);
+
+    
+  }
+
+}
+
+.servconsult {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  justify-content: center;
+  column-gap: 3rem;
+  padding-top: 102px;
+  padding-bottom: 102px;
+
+  @media screen and (max-width: 992px) {
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media screen and (max-width: 576px) {
+    //grid-template-columns: 1fr;
+    grid-template-columns: repeat(1,1fr);
+
+    
+  }
+}
 .servtabs {
   color: #262626;
   font-size: 15px;
@@ -45,14 +135,25 @@
   font-weight: 600;
   font-size: 30px;
   line-height: 40px;
+
+
 }
 
 .servp {
   text-align: justify;
-  width: 100%;
+  // width: 100%;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.awsp {
+  width: 80%;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 }
 
 .servtabs {
@@ -61,8 +162,16 @@
   
 }
 
+// .servimage {
+//   align-self: center;
+// }
+
 .servimage {
-  align-self: center;
+  // @media screen and (max-width: 576px) {
+  //   grid-template-columns: 1fr;
+  //   // grid-template-columns: repeat(1,2fr);
+    
+  // }
 }
 
 .schedulecall {
@@ -72,63 +181,89 @@
   
 }
 
-@media (max-width: 768px) {
-  .servdiv {
-    padding-left: 20px; /* Adjust padding for smaller screens */
-    padding-right: 20px; /* Adjust padding for smaller screens */
-    padding-top: 20px; /* Adjust padding for smaller screens */
-    padding-bottom: 20px; /* Adjust padding for smaller screens */
-    
-  }
+.sched {
+  background-color: #E37915;
+  color: #fff;
+  margin-right: 8px;
+  padding: 14px 20px;
 
-  .col-sm-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .servmd, .col-md-6 {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .servmd img {
-    width: 100%;
-    height: auto;
-  }
-
-  .servhead {
-    text-align: center;
-    width: 100%;
-    font-size: 25px;
-  }
-
-  .servp {
-    text-align: justify;
-    width: 100%;
-
-  }
-
-  .servtabs {
-    display: block; /* Make each button take a new line */
-    width: 100%; /* Make the button take full width */
-    margin-right: 0; /* Reset right margin */
-    margin-bottom: 10px; /* Add bottom margin to separate buttons */
-    text-align: center; /* Center the text */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-  }
-
-  .schedulecall {
-    display: block; /* Make each button take a new line */
-    width: 100%; /* Make the button take full width */
-    margin-right: 0; /* Reset right margin */
-    margin-bottom: 10px; /* Add bottom margin to separate buttons */
-    text-align: center; /* Center the text */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    color: #E37915;
-    margin-right: 10px;
-    font-size: 16px;
-  }
 }
+
+.learnmore {
+  border-color: #E37915 !important;
+  color: #E37915;
+  margin-right: 8px;
+  padding: 14px 20px;
+}
+
+
+.servmd {
+  margin-top: -2.5rem;
+  
+  @media screen and (max-width: 992px) {
+    margin-top: 0rem;
+  }
+  
+}
+
+// @media (max-width: 992px) {
+//   .servdiv {
+//     padding-left: 20px; 
+//     padding-right: 20px;
+//     padding-top: 20px; 
+//     padding-bottom: 20px;
+    
+//   }
+
+//   .col-sm-12 {
+//     flex: 0 0 100%;
+//     max-width: 100%;
+//   }
+
+//   .servmd, .col-md-6 {
+//     width: 100%;
+//     max-width: 100%;
+    
+//   }
+
+//   .servmd img {
+//     width: 100%;
+//     height: auto;
+//   }
+
+//   .servhead {
+//     text-align: center;
+//     width: 100%;
+//     font-size: 25px;
+//   }
+
+//   .servp {
+//     text-align: justify;
+//     width: 100%;
+
+//   }
+
+//   .servtabs {
+//     // display: block; /* Make each button take a new line */
+//     // width: 100%; /* Make the button take full width */
+//     margin-right: 0; /* Reset right margin */
+//     margin-bottom: 10px; /* Add bottom margin to separate buttons */
+//     text-align: center; /* Center the text */
+
+//   }
+
+//   .schedulecall {
+//     display: block; /* Make each button take a new line */
+//     width: 100%; /* Make the button take full width */
+//     margin-right: 0; /* Reset right margin */
+//     margin-bottom: 10px; /* Add bottom margin to separate buttons */
+//     text-align: center; /* Center the text */
+//     box-sizing: border-box; /* Ensure padding is included in the width */
+//     color: #E37915;
+//     margin-right: 10px;
+//     font-size: 16px;
+//   }
+// }
 
 
 
@@ -148,9 +283,6 @@
 // }
 
 
-.sched {
-  border-color: #E37915;
-}
 
 // .servhead {
 //   font-size: 30px;
@@ -199,18 +331,19 @@
   padding-top: 80px !important;
   padding-bottom: 120px !important;
 
-  @media screen and (max-width: 1300px) {
-    padding: 5rem 0;
+  @media screen and (max-width: 992px) {
+    padding: 1rem 0 !important;
+    
   }
 
-  @media screen and (max-width: 769px) {
-    padding: 5rem 3vw;
-  }
+  // @media screen and (max-width: 769px) {
+  //   padding: 5rem 3vw;
+  // }
 
-  @media screen and (max-width: 576px) {
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
-  }
+  // @media screen and (max-width: 576px) {
+  //   padding-top: 100px !important;
+  //   padding-bottom: 100px !important;
+  // }
 
   h2 {
     font-style: normal;

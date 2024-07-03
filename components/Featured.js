@@ -36,7 +36,7 @@ export default function () {
                 src="/assets/camp.png"
               />
             </div>
-            <div className="ml-2 mt-2">
+            <div className="ml-3 mt-2">
             <p className={` ${styles.ftitle}`}>
                 CAMPAIGN
               </p>
@@ -54,7 +54,7 @@ export default function () {
                 src="/assets/case.png"
               />
             </div>
-            <div className="ml-2 mt-2">
+            <div className="ml-3 mt-2">
             <p className={` ${styles.ftitle}`}>
                 CASE STUDIES
               </p>
