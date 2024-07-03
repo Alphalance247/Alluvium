@@ -6,41 +6,23 @@ export default function () {
     <div className={`${styles.customxs}`}>
       <div className={`${styles.featured}`}>
         <div className="row container mx-auto">
-          <h3 className={`${styles.featuredsec} text-xl font-bold`}>
+          <h3 className={`${styles.featuredsec}`}>
             FEATURED SECTION
           </h3>
           <div className="col-md-4 d-flex align-items-center">
             <div>
               <Image
-                className={`img-fluid ${styles.serv}`}
+                className={`img-fluid ${styles.fimages}`}
                 width={176}
                 height={101}
                 src="/assets/serv.png"
               />
             </div>
             <div className="ml-2 mt-2">
-              <p
-                className=""
-                style={{
-                  color: "#009BC0",
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "10px",
-                  marginLeft: "10px",
-                }}
-              >
+            <p className={` ${styles.ftitle}`}>
                 OUR SERVICES
               </p>
-              <p
-                className=""
-                style={{
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "-10px",
-                  marginLeft: "10px",
-                }}
-              >
-                {" "}
+                <p className={` ${styles.fcontent}`}>
                 See how Alluvium Can Help You
               </p>
             </div>
@@ -48,35 +30,17 @@ export default function () {
           <div className="col-md-4 d-flex align-items-center">
             <div>
               <Image
-                className={`img-fluid ${styles.serv}`}
+                className={`img-fluid ${styles.fimages}`}
                 width={176}
                 height={101}
                 src="/assets/camp.png"
               />
             </div>
-            <div className="ml-2 mt-2">
-              <p
-                className=""
-                style={{
-                  color: "#009BC0",
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "10px",
-                  marginLeft: "10px",
-                }}
-              >
+            <div className="ml-3 mt-2">
+            <p className={` ${styles.ftitle}`}>
                 CAMPAIGN
               </p>
-              <p
-                className=""
-                style={{
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "-10px",
-                  marginLeft: "10px",
-                }}
-              >
-                {" "}
+              <p className={` ${styles.fcontent}`}>
                 Enhance Your Jira Management Skills
               </p>
             </div>
@@ -84,35 +48,17 @@ export default function () {
           <div className="col-md-4 d-flex align-items-center">
             <div>
               <Image
-                className={`img-fluid ${styles.serv}`}
+                className={`img-fluid ${styles.fimages}`}
                 width={176}
                 height={101}
                 src="/assets/case.png"
               />
             </div>
-            <div className="ml-2 mt-2">
-              <p
-                className=""
-                style={{
-                  color: "#009BC0",
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "10px",
-                  marginLeft: "10px",
-                }}
-              >
+            <div className="ml-3 mt-2">
+            <p className={` ${styles.ftitle}`}>
                 CASE STUDIES
               </p>
-              <p
-                className=""
-                style={{
-                  fontSize: "10px",
-                  fontWeight: "bold",
-                  marginTop: "-10px",
-                  marginLeft: "10px",
-                }}
-              >
-                {" "}
+              <p className={` ${styles.fcontent}`}>
                 Explore More of Our Transformative Projects
               </p>
             </div>

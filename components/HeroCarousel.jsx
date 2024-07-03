@@ -25,15 +25,15 @@ export default function () {
           infinite={true}
         >
           <AtPartner />
-          <Webinar />
-          <Hero />
+          {/* this <Webinar /> */}
+          {/* this <Hero /> */}
           {/* <Team24Banner /> */}
           {/* <Gitex24 /> */}
           {/* <Boot53 /> */}
           {/* <Team24Banner /> */}
           {/* <EventHero showCountdown={false} /> */}
 
-          <div className="container-fluid p-0">
+          {/* this <div className="container-fluid p-0">
             <div className={`${styles.h2}`}>
               <h1>Let’s take you to the Cloud</h1>
               <div className={styles.blue}>
@@ -49,9 +49,9 @@ export default function () {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div>
+          {/* this <div>
             <div className={`${styles.h3}`}>
               <div className={styles.top}>
                 <h1>We are AI</h1>
@@ -70,7 +70,7 @@ export default function () {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </Slider>
       </div>
     </>
