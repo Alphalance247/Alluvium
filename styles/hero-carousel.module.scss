@@ -1,23 +1,128 @@
+.atbtn {
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.5rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 .customxs {
   background: #fcfcfc;
 
   .featured {
-    width: 80%;
+    width: 90%;
     margin: auto;
     position: relative;
     bottom: 3rem;
     background: #fcfcfc;
     padding: 2rem 2.5rem;
+
+    @media (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+
+  .point {
+    cursor: pointer;
+    &:hover {
+      .fcontent {
+        text-decoration: 1px solid underline !important; /* or any other decoration you want */
+        color: black !important;
+      }
+    }
+  }
+}
+
+.hirebtn {
+  background-color: #e37915;
+  margin-right: 10px;
+  padding: 1rem 1.3rem;
+  border-radius: 8px;
+
+  @media screen and (max-width: 992px) {
+    min-width: 290px;
+  }
+
+  @media screen and (max-width: 576px) {
+    min-width: fit-content;
+  }
+}
+
+.callbtn {
+  // background-color: #E37915;
+  margin-right: 10px;
+  padding: 1rem 1.3rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .hirebtn,
+  .callbtn {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 0.9rem; /* font size for mobile */
+    // padding: 0.8rem 1rem; /* padding for mobile */
+  }
+}
+
+.ftitle {
+  color: #009bc0;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 10px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.fcontent {
+  font-size: 13px;
+  margin-top: -10px;
+  margin-left: 10px;
+  font-weight: 600;
+
+  @media (max-width: 992px) {
+    font-size: 10px;
   }
 }
 
 .atp {
-  font-size: 40px;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 82px;
+
+  @media (max-width: 992px) {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
 }
 
-@media (min-width: 768px) {
-  .atp {
-    font-size: 72px;
+.prg {
+  font-size: 24px;
+  margin-bottom: 48px;
+  margin-top: 24px;
+  line-height: 25px;
+  font-weight: 400px;
+  color: #e7e8e9;
+
+  @media (max-width: 992px) {
+    width: 95%;
+    font-size: 18px;
   }
 }
 
@@ -32,31 +137,50 @@
   padding-top: 120px;
   height: 732px;
 
-  @media (max-width: 575.98px) {
-    padding-top: 50px;
-  }
-}
-
-/* Custom offset for extra small devices */
-@media (max-width: 575.98px) {
-  .customxs {
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 20px;
+  @media (max-width: 576px) {
+    height: 550px;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .custombtn {
-    width: 310px;
+  .atbanner {
+    display: grid;
+    grid-template-columns: 70% auto;
+    align-items: center;
+
+    @media (max-width: 992px) {
+      column-gap: 3rem;
+      align-items: start;
+    }
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .customimg {
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      display: none;
+    }
   }
 }
 
 .featuredsec {
   color: #5e666d;
   font-size: 13px;
+  font-weight: 600;
+  line-height: 24px;
+  padding-bottom: 24px;
+}
+
+.fimages {
+  border-radius: 4px;
+  width: 176px;
+  height: 101px;
 }
 
 .h2 {
-  // background: rgba(73,91,109,255);
   background: url("/assets/hero/bg2.png"),
     linear-gradient(
       90deg,
@@ -73,7 +197,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-
   color: #fff;
   text-align: center;
   font-size: 24px;
@@ -134,14 +257,12 @@
   background-size: auto 100%;
   color: white;
   min-height: 733px;
-
   color: #fff;
   text-align: center;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
   padding: 111px 160px;
-  /* 36px */
 
   @media (min-width: 1900px) {
     background-size: 100% 100%;

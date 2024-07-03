@@ -1,6 +1,154 @@
-@media (min-width: 768px) {
-  .servmd {
-    margin-top: 30px;
+.servaws {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 992px) {
+  .servaws {
+    padding-left: 20px; /* padding for smaller screens */
+    padding-right: 20px; /* padding for smaller screens */
+    padding-top: 20px; /* padding for smaller screens */
+    padding-bottom: 20px; /* padding for smaller screens */
+    background-color: #f5f5f5;
+  }
+}
+
+.servmd0 {
+  width: 590px;
+
+  @media screen and (max-width: 992px) {
+    width: 400px;
+  }
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+    display: contents;
+  }
+}
+
+.servmd1 {
+  width: 630px;
+  padding: 2rem 0px;
+
+  @media screen and (max-width: 992px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+    display: contents;
+  }
+}
+
+.servmd2 {
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+    display: contents;
+  }
+}
+
+.servdiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  padding-top: 102px !important;
+  padding-bottom: 102px !important;
+  justify-content: center;
+  column-gap: 3rem;
+
+  @media screen and (max-width: 992px) {
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 2rem;
+    row-gap: 1rem;
+  }
+}
+
+.servconsult {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  column-gap: 3rem;
+  padding-top: 102px;
+  padding-bottom: 102px;
+
+  @media screen and (max-width: 992px) {
+    column-gap: 1.5rem;
+    align-items: start;
+  }
+
+  @media screen and (max-width: 576px) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 2rem 2rem;
+    row-gap: 1rem;
+    align-items: flex-start;
+  }
+}
+.servtabs {
+  color: #262626;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-right: 10px;
+  padding: 4px 20px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.servhead {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.servp {
+  text-align: justify;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.awsp {
+  width: 80%;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
+}
+
+.servtabs {
+  margin-bottom: 10px; /* Add bottom margin to separate buttons */
+  text-align: center; /* Center the text */
+}
+
+.schedulecall {
+  color: #e37915;
+  border-color: #e37915 !important;
+}
+
+.sched {
+  background-color: #e37915;
+  color: #fff;
+  margin-right: 8px;
+  padding: 14px 20px;
+}
+
+.learnmore {
+  border-color: #e37915 !important;
+  color: #e37915;
+  margin-right: 8px;
+  padding: 14px 20px;
+}
+
+.servmd {
+  margin-top: -2.5rem;
+
+  @media screen and (max-width: 992px) {
+    margin-top: 0rem;
   }
 }
 
@@ -10,22 +158,16 @@
   align-items: center;
   justify-content: center;
   background-attachment: fixed;
-  background-color: #fcfcfc;
-  font-family: serif !important;
+  background-color: transparent;
   padding-top: 80px !important;
   padding-bottom: 120px !important;
 
-  @media screen and (max-width: 1300px) {
-    padding: 5rem 0;
-  }
-
-  @media screen and (max-width: 769px) {
-    padding: 5rem 3vw;
+  @media screen and (max-width: 992px) {
+    padding: 1rem 0px !important;
   }
 
   @media screen and (max-width: 576px) {
-    padding-top: 100px !important;
-    padding-bottom: 100px !important;
+    padding: 0.5rem 0px !important;
   }
 
   h2 {
@@ -33,8 +175,6 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 18px;
-    /* identical to box height */
-
     color: #009bc0;
   }
 
@@ -44,23 +184,34 @@
     align-items: center;
     margin: 2rem 0;
 
+    .ourServicesT {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 14px;
+      color: #009bc0;
+      text-align: center;
+    }
+
     .ourServicesTitle {
       font-weight: 600;
       font-size: 40px;
-      line-height: 52px;
-      color: #000;
+      line-height: 55px;
+      color: #1f1f1f;
       text-align: center;
     }
 
     .ourServicesSubtitle {
-      // display: none; //to remove placeholder text
-      font-weight: normal;
+      font-weight: 400;
       font-size: 16px;
       line-height: 200%;
       text-align: center;
-      color: #000;
+      color: #595959;
       max-width: 70%;
       margin: 1rem 0;
+
+      @media (max-width: 576px) {
+        margin: 0px;
+      }
     }
   }
 
@@ -69,12 +220,9 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-items: flex-start;
-    // justify-content: center;
     justify-content: space-around;
     column-gap: 1rem;
-    // background-color: #009BC0;
     padding: 1rem 0rem;
-    // width: 100%;
     margin: 0 auto;
 
     @media screen and (max-width: 1300px) {
@@ -90,7 +238,6 @@
 
 .service {
   background: #132130;
-  // box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
   border-radius: 10px;
   padding: 1.5rem;
   flex: 1;
@@ -114,8 +261,6 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 25px;
-    /* identical to box height, or 125% */
-
     color: #ffffff;
   }
 
@@ -124,10 +269,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    /* identical to box height, or 143% */
-
     color: rgba(255, 255, 255, 0.7);
-
     opacity: 0.7;
   }
 
@@ -168,7 +310,6 @@
     line-height: 20px;
     color: rgba(255, 255, 255, 0.9);
     padding-top: 20px;
-    /* identical to box height, or 125% */
     border-bottom: 1px solid rgba(255, 255, 255, 0.079);
   }
 
