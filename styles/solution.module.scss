@@ -97,7 +97,7 @@
       // padding: 1rem 1.4rem !important;
 
       @media screen and (max-width: 576px) {
-        padding: 1rem !important;
+        padding: 0.5rem !important;
       }
 
       h5 {
@@ -119,6 +119,7 @@
 
         @media screen and (max-width: 576px) {
           font-size: 0.8rem;
+          line-height: 20px;
         }
       }
     }
@@ -156,6 +157,10 @@
         position: relative;
         top: 2.5rem;
         right: -1.5rem;
+
+        @media screen and (max-width: 992px) {
+          top: 2.1rem;
+        }
 
         @media screen and (max-width: 576px) {
           top: 0;

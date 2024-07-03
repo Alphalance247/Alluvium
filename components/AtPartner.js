@@ -4,57 +4,37 @@ import styles from "../styles/hero-carousel.module.scss";
 export default function () {
   return (
     <div className={` ${styles.herobanner}`}>
-      <div className={`row container mx-auto`}>
-        <div className="col-md-8">
+      <div className={`${styles.atbanner} container mx-auto`}>
+        <div className="">
           <div className="">
-            <h1
-              className={`text-white ${styles.atp}`}
-              style={{
-                lineHeight: "30px",
-              }}
-            >
-              We are a Trusted
+            <h1 className={`text-white ${styles.atp}`}>
+              We are a Trusted Atlassian Partner
             </h1>
-
-            <h1
-              className={`text-white ${styles.atp}`}
-              style={{
-                lineHeight: "82px",
-                marginBottom: "30px",
-              }}
-            >
-              Atlassian Partner
-            </h1>
-            <p
-              className=""
-              style={{
-                fontSize: "18px",
-                marginBottom: "48px",
-                lineHeight: "20px",
-                color: "#E7E8E9",
-              }}
-            >
+            <p className={`${styles.prg}`}>
               We are ITSM, DevOps and Data Migration Experts
             </p>
-            <Link href="#">
-              <a
-                className="btn text-white mr-4"
-                style={{ backgroundColor: "#E37915", marginRight: "10px" }}
-              >
-                Why hire us as your Atlassian partner
-              </a>
-            </Link>
+            <div className={`${styles.atbtn}`}>
+              <div>
+                <Link href="/blog">
+                  <a className={`text-white mr-4 ${styles.hirebtn}`}>
+                    Why hire us as your Atlassian partner
+                  </a>
+                </Link>
+              </div>
 
-            <Link href="https://alluvium.net/support/contact#schedule-a-call">
-              <a className={`${styles.custombtn} btn text-white border`}>
-                Schedule a call
-              </a>
-            </Link>
+              <div>
+                <Link href="https://alluvium.net/support/contact#schedule-a-call">
+                  <a className={`${styles.callbtn} text-white mr-4 border`}>
+                    Schedule a call
+                  </a>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-12 col-md-4">
+        <div className={` img-fluid ${styles.customimg}`}>
           <Image
-            className={`img-fluid ${styles.customdiv}`}
+            className={` img-fluid ${styles.customdiv}`}
             width={393.77}
             height={302}
             src="/assets/bdg.png"
