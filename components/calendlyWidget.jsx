@@ -1,12 +1,12 @@
 // components/CalendlyWidget.jsx
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 const CalendlyWidget = () => {
   useEffect(() => {
     // Load Calendly script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
     script.async = true;
     document.body.appendChild(script);
 
@@ -18,7 +18,11 @@ const CalendlyWidget = () => {
 
   return (
     <>
-      <div className="calendly-inline-widget" data-url="https://calendly.com/alluvium-hq" style={{ minWidth: '320px', height: '700px' }}></div>
+      <div
+        className="calendly-inline-widget"
+        data-url="https://api.leadconnectorhq.com/widget/bookings/taiwo"
+        style={{ minWidth: "320px", height: "700px" }}
+      ></div>
     </>
   );
 };

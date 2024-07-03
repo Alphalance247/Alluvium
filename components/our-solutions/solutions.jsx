@@ -64,7 +64,7 @@ const Solutions = () => {
                 return (
                   <div
                     className={`px-4 py-5 ${styles.atlassianDiscovery} rounded-3`}
-                    id={data.id}
+                    key={data.id}
                   >
                     <Image
                       src={data.image}
