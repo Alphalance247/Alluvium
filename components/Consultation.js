@@ -235,16 +235,14 @@ export const ConsultationForm = () => {
 
           <div className={`${styles.location}`}>
             <h3>Our Locations</h3>
-            <div>
-              <strong>Europe:</strong>
-              <p>Kemp House 160, City Road London, EC1V 2NX, UK.</p>
-            </div>
-            <div>
-              <strong>America:</strong>
-              <p>
-                27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL 32819 US.
-              </p>
-            </div>
+            <p>
+              <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
+              2NX, UK.
+            </p>
+            <p>
+              <strong>America:</strong> 27345 W Sand Lake Rd, STE 210 Office
+              3190 Orlando, FL 32819 US.
+            </p>
             <div>
               <strong>Africa:</strong>
               <p>
@@ -256,14 +254,13 @@ export const ConsultationForm = () => {
                 Ekiti State, Nigeria.
               </p>
             </div>
-
             <p>
-              <img src="/assets/footer-consult/Email.svg" alt="Email" />
-              <a href="mailto:contact@alluvium.net">contact@alluvium.net</a>
+              <strong>Email:</strong>{" "}
+              <a href="mailto:contact@alluvium.net">contact@alluvium.net</a>{" "}
             </p>
             <p>
-              <img src="/assets/footer-consult/Call.svg" alt="Phone" />
-              <a href="tel:+442035762028"> +442035762028</a>
+              <strong>Phone Number:</strong>{" "}
+              <a href="tel:+442035762028"> +442035762028</a>{" "}
             </p>
           </div>
         </div>

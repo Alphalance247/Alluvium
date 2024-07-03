@@ -5,7 +5,7 @@ import Switch from "react-input-switch";
 import styles from "../styles/footer.module.scss";
 import { useToasts } from "react-toast-notifications";
 import { ImFacebook, ImLinkedin2 } from "react-icons/im";
-import { FaXTwitter } from "react-icons/fa6";
+import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 
 export function AltFooter() {
   const { addToast } = useToasts();
@@ -174,7 +174,7 @@ export function AltFooter() {
               aria-label="facebook"
               target="_blank"
             >
-              <ImFacebook style={{ fontSize: "1.5rem" }} />
+              <ImFacebook />
             </a>
             {/* <AiFillInstagram /> */}
             <a
@@ -182,14 +182,14 @@ export function AltFooter() {
               aria-label="twitter"
               target="_blank"
             >
-              <FaXTwitter style={{ fontSize: "1.5rem" }} />
+              <AiOutlineTwitter />
             </a>
             <a
               href="https://www.linkedin.com/company/alluvium-hq/"
               aria-label="linkedIn"
               target="_blank"
             >
-              <ImLinkedin2 style={{ fontSize: "2rem" }} />
+              <ImLinkedin2 />
             </a>
           </div>
           <div className="col-md-5">
