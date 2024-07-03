@@ -189,6 +189,18 @@
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
 
+    p {
+      color: #8c8c8c;
+    }
+    img {
+      margin-right: 1rem;
+    }
+
+    a {
+      text-decoration: 2px solid underline !important;
+      color: #8c8c8c;
+    }
+
     @media screen and (max-width: 576px) {
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
