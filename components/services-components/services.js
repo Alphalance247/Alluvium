@@ -23,7 +23,7 @@ const Services = () => {
 
       <div className="container mx-auto">
         <div className="row">
-          <div className="col-md-6" style={{}}>
+          <div className="col-md-6">
             <Image
               className={`img-fluid ${styles}`}
               width={542}

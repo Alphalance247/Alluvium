@@ -19,10 +19,10 @@ export const blogheading = [
     id: "5",
     heading: "Why Choose Alluvium as Your partner",
   },
-  {
-    id: "6",
-    heading: "Your Work Lifecycle",
-  },
+  // {
+  //   id: "6",
+  //   heading: "Your Work Lifecycle",
+  // },
   {
     id: "7",
     heading: "Conclusion",

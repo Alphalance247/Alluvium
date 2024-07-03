@@ -50,7 +50,7 @@ const ContentTab = () => {
           {activeTab === 2 && <WorkWithAtlassian />}
           {activeTab === 3 && <Benefit />}
           {activeTab === 4 && <ChoosingAlluvium />}
-          {activeTab === 5 && <Lifecycle />}
+          {/* {activeTab === 5 && <Lifecycle />} */}
           {activeTab === 6 && <Conclusion />}
           {activeTab === 0 && (
             <>
@@ -59,7 +59,7 @@ const ContentTab = () => {
               <WorkWithAtlassian />
               <Benefit />
               <ChoosingAlluvium />
-              <Lifecycle />
+              {/* <Lifecycle /> */}
               <Conclusion />
             </>
           )}
