@@ -1451,14 +1451,14 @@ export const toolsAndPlatforms = [
 export const atlassianTraining = [
   {
     id: "1",
-    image: "/assets/solution/trainingg.svg",
+    image: "/assets/solution/training.png",
     heading: "Atlassian Training",
     paragraph:
       "Improve your Atlassian skills and knowledge. Get the foundational Atlassian training you need or advanced configuration and app specific workshops",
   },
   {
     id: "2",
-    image: "/assets/solution/search.svg",
+    image: "/assets/solution/search.png",
     heading: "Atlassian Discovery",
     paragraph:
       "Our experts work directly with your team to determine which products you need, and provide the most cost-effective licensing model.",
