@@ -6,10 +6,10 @@ export default function () {
     <div className={`${styles.customxs}`}>
       <div className={`${styles.featured}`}>
         <div className="row container mx-auto">
-          <h3 className={`${styles.featuredsec}`}>
-            FEATURED SECTION
-          </h3>
-          <div className="col-md-4 d-flex align-items-center">
+          <h3 className={`${styles.featuredsec}`}>FEATURED SECTION</h3>
+          <div
+            className={`col-md-4 d-flex align-items-center ${styles.points}`}
+          >
             <div>
               <Image
                 className={`img-fluid ${styles.fimages}`}
@@ -19,15 +19,15 @@ export default function () {
               />
             </div>
             <div className="ml-2 mt-2">
-            <p className={` ${styles.ftitle}`}>
-                OUR SERVICES
-              </p>
-                <p className={` ${styles.fcontent}`}>
+              <p className={` ${styles.ftitle}`}>OUR SERVICES</p>
+              <p className={` ${styles.fcontent}`}>
                 See how Alluvium Can Help You
               </p>
             </div>
           </div>
-          <div className="col-md-4 d-flex align-items-center">
+          <div
+            className={`col-md-4 d-flex align-items-center ${styles.points}`}
+          >
             <div>
               <Image
                 className={`img-fluid ${styles.fimages}`}
@@ -37,15 +37,15 @@ export default function () {
               />
             </div>
             <div className="ml-3 mt-2">
-            <p className={` ${styles.ftitle}`}>
-                CAMPAIGN
-              </p>
+              <p className={` ${styles.ftitle}`}>CAMPAIGN</p>
               <p className={` ${styles.fcontent}`}>
                 Enhance Your Jira Management Skills
               </p>
             </div>
           </div>
-          <div className="col-md-4 d-flex align-items-center">
+          <div
+            className={`col-md-4 d-flex align-items-center ${styles.points}`}
+          >
             <div>
               <Image
                 className={`img-fluid ${styles.fimages}`}
@@ -55,9 +55,7 @@ export default function () {
               />
             </div>
             <div className="ml-3 mt-2">
-            <p className={` ${styles.ftitle}`}>
-                CASE STUDIES
-              </p>
+              <p className={` ${styles.ftitle}`}>CASE STUDIES</p>
               <p className={` ${styles.fcontent}`}>
                 Explore More of Our Transformative Projects
               </p>

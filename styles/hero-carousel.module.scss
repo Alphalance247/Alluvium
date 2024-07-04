@@ -29,6 +29,16 @@
       padding: 1rem;
     }
   }
+
+  .points {
+    cursor: pointer;
+    &:hover {
+      .fcontent {
+        text-decoration: 1px solid underline !important; /* or any other decoration you want */
+        color: black !important;
+      }
+    }
+  }
 }
 
 .hirebtn {
