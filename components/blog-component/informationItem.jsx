@@ -32,7 +32,7 @@ export const blogheading = [
 const articledata = [
   {
     id: "1",
-    image: "/assets/blogImages/CaseStudy1.svg",
+    image: "/assets/blogImages/agile1.svg",
     heading:
       "Agile Way of Working implementation on a large scale at a top tier UK bank.",
     artcleName: "Data Migration",
@@ -41,7 +41,7 @@ const articledata = [
   },
   {
     id: "2",
-    image: "/assets/blogImages/CaseStudy2.svg",
+    image: "/assets/blogImages/agile2.svg",
     heading:
       "Agile Way of Working implementation on a large scale at a top tier UK bank.",
     artcleName: "Data Migration",
@@ -50,7 +50,7 @@ const articledata = [
   },
   {
     id: "3",
-    image: "/assets/blogImages/CaseStudy3.svg",
+    image: "/assets/blogImages/agile3.svg",
     heading:
       "Agile Way of Working implementation on a large scale at a top tier UK bank.",
     artcleName: "Data Migration",

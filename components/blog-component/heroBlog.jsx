@@ -1,5 +1,5 @@
 import styles from "../../styles/blogpost.module.scss";
-import Images from "./imageBlog";
+import AssetImg from "./socialimage";
 
 const HeroBlog = () => {
   return (
@@ -19,33 +19,22 @@ const HeroBlog = () => {
             <p className={`${styles.contentname}`}>Share This Article</p>
             <div className={styles.socialImg}>
               <div>
-                <Images
+                <AssetImg
                   src="/assets/blogImages/facebook.svg"
                   alt="facebook"
-                  url="https://www.facebook.com/alluviumhq/?ti=as"
-                  style={{ margin: "3rem" }}
                 />
               </div>
               <div>
-                <Images
-                  src="/assets/blogImages/twitter.svg"
-                  alt="twitter"
-                  url="https://twitter.com/alluviumhq?s=08"
-                />
+                <AssetImg src="/assets/blogImages/twitter.svg" alt="twitter" />
               </div>
               <div>
-                <Images
+                <AssetImg
                   src="/assets/blogImages/linkedin.svg"
                   alt="linkedin"
-                  url="https://www.linkedin.com/company/alluvium-hq/"
                 />
               </div>
               <div>
-                <Images
-                  src="/assets/blogImages/insta.svg"
-                  alt="instagram"
-                  url="#"
-                />
+                <AssetImg src="/assets/blogImages/insta.svg" alt="instagram" />
               </div>
             </div>
           </div>

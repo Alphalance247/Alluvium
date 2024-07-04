@@ -1,7 +1,7 @@
-import HeroBlog from "components/blog-component/heroBlog";
+import HeroBlog from "components/blog-component/heroblog";
 import Layout from "components/layout";
-import ContentTab from "components/blog-component/contentInfo";
-import Potential from "components/blog-component/unlockPotential";
+import ContentTab from "components/blog-component/contentinfo";
+import Potential from "components/blog-component/unlockquote";
 import Articles from "components/blog-component/article";
 
 const Blog = () => {
