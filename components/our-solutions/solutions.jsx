@@ -6,7 +6,7 @@ const Solutions = () => {
   return (
     <section className={`container-fluid ${styles.solutionContainer}`}>
       <div className="container m-auto">
-        <h3 className=" text-white text-center fw-semibold fs-1 mb-5">
+        <h3 className=" text-white text-center fw-semibold fs-1">
           Our Atlassian Solution
         </h3>
 
@@ -25,29 +25,32 @@ const Solutions = () => {
                 implementations and health checks for Atlassian products such as
                 Jira Software, Jira Service Management and Confluence.
               </p>
-              <div className={`${styles.img1}`}>
-                <Image
-                  src="/assets/solution/logo3.png"
-                  height={88}
-                  width={88}
-                  alt="rocket"
-                />
-              </div>
-              <div className={`${styles.img2}`}>
-                <Image
-                  src="/assets/solution/logo2.png"
-                  height={88}
-                  width={88}
-                  alt="rocket"
-                />
-              </div>
-              <div className={`${styles.img3}`}>
-                <Image
-                  src="/assets/solution/logo1.png"
-                  height={88}
-                  width={88}
-                  alt="rocket"
-                />
+
+              <div>
+                <div className={`${styles.img1}`}>
+                  <Image
+                    src="/assets/solution/logo3.png"
+                    height={88}
+                    width={88}
+                    alt="rocket"
+                  />
+                </div>
+                <div className={`${styles.img2}`}>
+                  <Image
+                    src="/assets/solution/logo2.png"
+                    height={88}
+                    width={88}
+                    alt="rocket"
+                  />
+                </div>
+                <div className={`${styles.img3}`}>
+                  <Image
+                    src="/assets/solution/logo1.png"
+                    height={88}
+                    width={88}
+                    alt="rocket"
+                  />
+                </div>
               </div>
             </div>
 
@@ -59,7 +62,7 @@ const Solutions = () => {
             />
           </div>
           <div className=" d-grid row-gap-4">
-            <div className=" d-flex column-gap-2">
+            <div className=" d-flex column-gap-4">
               {atlassianTraining.map((data) => {
                 return (
                   <div
