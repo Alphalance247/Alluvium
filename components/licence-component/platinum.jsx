@@ -1,4 +1,5 @@
 import styles from "../../styles/licence.module.scss";
+import Link from "next/link";
 
 const Platinum = () => {
   return (
@@ -12,7 +13,9 @@ const Platinum = () => {
             cases.
           </p>
           <div>
-            <button className={styles.button1}>Request License</button>
+            <Link href="/atlassian-licence/licence-request">
+              <button className={styles.button1}>Request License</button>
+            </Link>
             <button className={styles.button2}>Request Site Audit</button>
           </div>
         </div>
