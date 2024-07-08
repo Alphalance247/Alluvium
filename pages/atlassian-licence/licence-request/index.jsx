@@ -35,6 +35,7 @@ const RequestForm = () => {
 
   const handleDropDown = (e) => {
     setDropDown(e.target.value);
+    setDropDownForm(e.target.value);
   };
 
   const handleDropDownForm = (e) => {
