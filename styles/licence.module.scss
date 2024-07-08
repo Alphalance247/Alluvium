@@ -456,6 +456,16 @@
   justify-content: center;
   width: 50%;
 
+  @media screen and (max-width: 992px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 95%;
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+
   p {
     font-size: 1rem;
     font-weight: 400;
@@ -468,6 +478,16 @@
     line-height: 48px;
     font-size: 2.6rem;
     color: #0f1a24;
+
+    @media screen and (max-width: 992px) {
+      font-size: 1.8rem;
+      line-height: 30px;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.8rem;
+      line-height: 30px;
+    }
   }
 
   .portalGroup {
