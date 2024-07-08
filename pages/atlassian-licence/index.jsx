@@ -6,6 +6,7 @@ import Platinum from "../../components/licence-component/platinum";
 import Purchase from "components/licence-component/purchase";
 import ChooseUs from "components/licence-component/chooseUs";
 import FaQuestions from "components/licence-component/faQuestion";
+import Link from "next/link";
 
 const AtlassianLicence = () => {
   return (
@@ -20,7 +21,9 @@ const AtlassianLicence = () => {
             id.
           </p>
           <div>
-            <button className={styles.button1}>Request License</button>
+            <Link href="/atlassian-licence/licence-request">
+              <button className={styles.button1}>Request License</button>
+            </Link>
             <button className={styles.button2}>Request Site Audit</button>
           </div>
         </div>

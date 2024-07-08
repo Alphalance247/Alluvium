@@ -56,7 +56,7 @@
 .button1 {
   background: #e37915;
   border: none;
-  margin-right: 0.5rem;
+  margin-right: 12px;
   padding: 14px 40px;
   font-size: 1rem;
   font-weight: 600;
@@ -446,4 +446,159 @@
       }
     }
   }
+}
+
+.contactForm {
+  display: grid;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  row-gap: 2rem;
+  justify-content: center;
+  width: 50%;
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 2rem;
+    color: #3d3d3d;
+  }
+
+  h3 {
+    font-weight: 700;
+    line-height: 48px;
+    font-size: 2.6rem;
+    color: #0f1a24;
+  }
+
+  .portalGroup {
+    label {
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: 500;
+    }
+
+    select {
+      width: 100%;
+      border: 1px solid #d0d5dd;
+      border-radius: 5px;
+      padding: 12px 14px;
+      outline: none;
+    }
+
+    .optionGroup {
+      padding: 2rem;
+    }
+  }
+}
+
+.formStyle {
+  form {
+    border: 2px dashed #9747ff;
+    border-radius: 5px;
+    padding: 1.2rem;
+
+    label {
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: 500;
+    }
+
+    textarea {
+      width: 100%;
+      border: 1px solid #d0d5dd;
+      border-radius: 5px;
+      padding: 12px 1rem;
+      outline: none;
+    }
+
+    button {
+      background: #e37915;
+      border: none;
+      padding: 14px 40px;
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 24px;
+      border-radius: 8px;
+      color: white;
+      margin-top: 2rem;
+    }
+  }
+
+  .portalGroupForm {
+    label {
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: 500;
+    }
+
+    .selectStyle {
+      width: 100%;
+      border: 1px solid #d0d5dd;
+      border-radius: 5px;
+      padding: 12px 14px;
+      outline: none;
+    }
+
+    .errorSelect {
+      width: 100%;
+      border: 1px solid #ec6401;
+      border-radius: 5px;
+      padding: 12px 14px;
+      outline: none;
+    }
+
+    .optionGroup {
+      padding: 2rem;
+    }
+  }
+
+  .formInput {
+    margin-bottom: 2rem;
+    label {
+      font-size: 14px;
+      line-height: 15px;
+      font-weight: 500;
+    }
+
+    .error {
+      border: 2px solid #ec6401;
+      width: 100%;
+      border-radius: 5px;
+      padding: 12px 1rem;
+      outline: none;
+    }
+
+    .inputStyle {
+      width: 100%;
+      border: 1px solid #d0d5dd;
+      border-radius: 5px;
+      padding: 12px 1rem;
+      outline: none;
+    }
+  }
+}
+
+.PhoneInput input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: white;
+  color: #11202d;
+  padding: 12px 1rem;
+}
+
+.PhoneInput > div {
+  outline: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background: white;
+  color: #11202d;
+  padding: 12px 1rem;
+  margin-right: 0;
+}
+
+.error {
+  border: 2px solid orangered;
 }
