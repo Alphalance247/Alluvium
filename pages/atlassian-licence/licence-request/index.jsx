@@ -14,12 +14,18 @@ const RequestForm = () => {
   const [dropDownForm, setDropDownForm] = useState("");
   const [cloudDrop, setCloudDrop] = useState("");
   const [loading, setLoading] = useState(false);
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  // const urlRegex = /^(https?:\/\/)?[a-zA-Z0-9.-]+\.atlassian\.net$/;
   const [form, setForm] = useState({
     phoneNumber: "",
   });
   const { addToast } = useToasts();
-
   const [formError, setFormError] = useState({});
+
+  const validateUrl = (url) => {
+    const regex = /^(https?:\/\/)?[a-zA-Z0-9.-]+\.atlassian\.net$/;
+    return regex.test(url);
+  };
 
   console.log(form);
 
@@ -30,7 +36,17 @@ const RequestForm = () => {
       [name]: value,
     }));
 
-    setFormError({ ...formError, [name]: false });
+    if (name === "cloud_url") {
+      if (validateUrl(value)) {
+        setFormError((prevErrors) => ({ ...prevErrors, cloud_url: false }));
+      } else {
+        setFormError((prevErrors) => ({ ...prevErrors, cloud_url: true }));
+      }
+    } else {
+      setFormError((prevErrors) => ({ ...prevErrors, [name]: false }));
+    }
+
+    // setFormError({ ...formError, [name]: false });
   };
 
   const handleDropDown = (e) => {
@@ -40,6 +56,7 @@ const RequestForm = () => {
 
   const handleDropDownForm = (e) => {
     setDropDownForm(e.target.value);
+    setForm({ ...form, cloud_url: "" });
   };
 
   const handleNumber = (value) => {
@@ -62,7 +79,7 @@ const RequestForm = () => {
       form.jobFunction &&
       form.company &&
       form.current_technical_name &&
-      form.current_technical_email &&
+      emailRegex.test(form.current_technical_email) &&
       form.data_center_plan &&
       form.cloud_sub_mode &&
       form.have_data_center_license &&
@@ -125,7 +142,7 @@ const RequestForm = () => {
         jobFunction: !form.jobFunction,
         company: !form.company,
         current_technical_name: !form.current_technical_name,
-        current_technical_email: !form.current_technical_email,
+        current_technical_email: !emailRegex.test(form.current_technical_email),
         data_center_plan: !form.data_center_plan,
         cloud_sub_mode: !form.cloud_sub_mode,
         apps_desired_user: !form.apps_desired_user,
@@ -139,7 +156,7 @@ const RequestForm = () => {
   const hadleSubmitCloudLicence = async (e) => {
     e.preventDefault();
 
-    if (form.have_cloud_env) {
+    if (form.have_cloud_env && emailRegex.test(form.current_technical_email)) {
       setLoading(true);
       await axios
         .post("https://vast.ec2.alluvium.net/support/cloud-license/", {
@@ -453,10 +470,6 @@ const RequestForm = () => {
                     onChange={handleChange}
                     errorF={formError.last_name}
                   />
-
-                  {/* {formError.lastname && (
-                  <h1 className=" text-[#EC6401]">Last Name cannot be empty</h1>
-                )} */}
                 </div>
 
                 <div>
@@ -814,6 +827,12 @@ const RequestForm = () => {
                         onChange={handleChange}
                       />
                     </div>
+                  )}
+
+                  {form.have_cloud_env === "Yes" && formError.cloud_url && (
+                    <p style={{ color: "#FF1616", marginTop: ".5rem" }}>
+                      Invalid URL. Must end with '.atlassian.net'
+                    </p>
                   )}
                 </div>
 
