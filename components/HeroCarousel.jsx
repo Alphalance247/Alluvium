@@ -9,6 +9,7 @@ import EventHero from "./cloud-connect/EventHero";
 import Team24Banner from "./TEAM24/banner";
 import Gitex24 from "components/gitex24/gitex";
 import Webinar from "components/webinar/webinar";
+import CommunityEvent from "./hero-component/communityEvent";
 
 export default function () {
   return (
@@ -24,6 +25,7 @@ export default function () {
           pauseOnFocus={false}
           infinite={true}
         >
+          <CommunityEvent />
           <AtPartner />
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
