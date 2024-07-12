@@ -15,7 +15,6 @@ const RequestForm = () => {
   const [cloudDrop, setCloudDrop] = useState("");
   const [loading, setLoading] = useState(false);
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  // const urlRegex = /^(https?:\/\/)?[a-zA-Z0-9.-]+\.atlassian\.net$/;
   const [form, setForm] = useState({
     phoneNumber: "",
   });
@@ -45,8 +44,6 @@ const RequestForm = () => {
     } else {
       setFormError((prevErrors) => ({ ...prevErrors, [name]: false }));
     }
-
-    // setFormError({ ...formError, [name]: false });
   };
 
   const handleDropDown = (e) => {
@@ -61,7 +58,6 @@ const RequestForm = () => {
 
   const handleNumber = (value) => {
     setForm((prev) => ({ ...prev, phoneNumber: value }));
-    // setPhoneError(false);
   };
 
   useEffect(() => {
@@ -851,6 +847,60 @@ const RequestForm = () => {
                       />
                     </div>
                   )}
+                </div>
+
+                <div className={` ${styles.portalGroupForm}`}>
+                  <label htmlFor="cloud_sub_mode">
+                    Would you like a monthly or annual Cloud subscription?
+                  </label>
+                  <br /> <br />
+                  <select
+                    name="cloud_sub_mode"
+                    value={form.cloud_sub_mode || ""}
+                    id="cloud_sub_mode"
+                    onChange={handleChange}
+                    className={`${
+                      formError.have_data_center_license
+                        ? styles.errorSelect
+                        : styles.selectStyle
+                    }`}
+                  >
+                    <option value=""></option>
+                    <option value="Annual subscription">
+                      Annual subscription
+                    </option>
+                    <option value="Monthly subscription">
+                      Monthly subscription
+                    </option>
+                    <option value="I’m not sure">I’m not sure</option>
+                  </select>
+                </div>
+
+                <div
+                  className={` ${styles.portalGroupForm}`}
+                  style={{ marginTop: "2rem" }}
+                >
+                  <label htmlFor="data_center_plan">
+                    What Atlassian Cloud plan would you like?
+                  </label>
+                  <br /> <br />
+                  <select
+                    name="data_center_plan"
+                    value={form.data_center_plan || ""}
+                    id="data_center_plan"
+                    onChange={handleChange}
+                    className={`${
+                      formError.data_center_plan
+                        ? styles.errorSelect
+                        : styles.selectStyle
+                    }`}
+                  >
+                    <option value=""></option>
+                    <option value="Basic">Basic</option>
+                    <option value="Premium">Premium</option>
+                    <option value="Enterprise">Enterprise</option>
+                    <option value="I’m not sure">I’m not sure</option>
+                  </select>
                 </div>
 
                 <div style={{ marginTop: "2rem" }}>
