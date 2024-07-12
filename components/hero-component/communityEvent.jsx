@@ -37,7 +37,7 @@ const CommunityEvent = () => {
           <p>Zoom</p>
         </div>
         <div>
-          <Link href="https://support.portal.alluvium.net/servicedesk/customer/portal/58/group/175/create/683">
+          <Link href="https://funnel.alluvium.net/">
             <button>Register now</button>
           </Link>
         </div>
