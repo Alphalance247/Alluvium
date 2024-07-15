@@ -170,6 +170,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(1,1fr);
+    }
     
     .gitexcontentdiv {
         display: grid;
@@ -188,6 +192,11 @@
                 line-height: 71.7px;
                 color: #1A768D;
                 max-width: 525px;
+
+                @media screen and (max-width: 576px) {
+                  font-size: 30px;
+                  line-height: 35.8px;
+                }
     
             }
         }
@@ -222,6 +231,11 @@
                 color: #121212;
                 // width: 680px;
                 text-align: left;
+
+                @media screen and (max-width: 576px) {
+                  text-align: justify;
+                  margin: 0.2rem;
+                }
             }
         }
 
@@ -233,6 +247,12 @@
         display: grid;
         // margin-right: 122.82px;
         place-items: center;
+
+        @media screen and (max-width: 576px) {
+          margin-top: -30%;
+          margin-bottom: 25%;
+        }
+        
     }
 
 }
