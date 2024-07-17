@@ -2,17 +2,17 @@ import styles from "../../styles/licence.module.scss";
 import { chooseUsOptions } from "data";
 import Image from "next/image";
 
-const ChooseUs = () => {
+const ChooseUs = ({ choose }) => {
   return (
     <div className={`container-fluid ${styles.chooseUsDiv}`}>
       <div className={`container mx-auto ${styles.chooseOption}`}>
         <div className={`${styles.chooseHeading}`}>
-          <h3>Why Choose Us</h3>
-          <p>
+          <h3>{choose}</h3>
+          {/* <p>
             Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
             arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
             id.
-          </p>
+          </p> */}
         </div>
 
         <div className={`${styles.expertGuide}`}>

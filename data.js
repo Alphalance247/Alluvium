@@ -1470,29 +1470,56 @@ export const purchaseOptions = [
     id: "1",
     headings: "First Purchase",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "If you're new to Atlassian tools, we can assist you with purchasing the licenses for your new Cloud or Data Center environment. We help you choose the exact licenses you need, the appropriate Cloud Plan (Basic, Premium, or Enterprise), and the subscription type (monthly or annual). This ensures you only pay for what your organization needs, maximizing your investment.",
   },
   {
     id: "2",
     headings: "Extension of Support Period",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "Need to extend the support period of your current licenses or renew them for multiple years? This is a great way to ensure price stability. Don’t hesitate to ask us whether or not renewal of all current licenses is necessary; we’re happy to advise you on this. We’re here to help you renew your Data Center or Cloud licenses, whether for one year or multiple years.",
   },
   {
     id: "3",
     headings: "Upgrades",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "If you've outgrown your current Atlassian user tiers, we can help you upgrade your license user tiers. This will save you money, time, and energy. We offer support for upgrading both Data Center and Cloud licenses, ensuring your tools grow with your organization.",
   },
   {
     id: "4",
     headings: "Downgrades",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "If your current user tiers are too high, we can advise you on downgrading to lower tiers and what’s best for your organization’s future. This might include switching to a different plan, license type, or subscription to better suit your needs.",
   },
   {
     id: "5",
     headings: "Harmonization",
+    paragraphs:
+      "Do you have multiple licenses with different end-dates? Let us help you streamline this. We can co-term your Atlassian licenses, so you only have one renewal date each year. This simplifies budget preparation and gives you a clear overview of all annual license costs.",
+  },
+];
+
+export const cloudOptions = [
+  {
+    id: "1",
+    headings: "Security",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+  {
+    id: "2",
+    headings: "Compliance",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+  {
+    id: "3",
+    headings: "Privacy",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+  {
+    id: "4",
+    headings: "Reliability",
     paragraphs:
       "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
   },
@@ -1501,44 +1528,43 @@ export const purchaseOptions = [
 export const chooseUsOptions = [
   {
     id: "1",
-    headings: "Expert Guidance",
+    headings: "Optimized Costs",
     imgChoose: "/assets/licence-image/carbonImg.svg",
-    paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+    paragraphs: "Ensure you only pay for what you need with our expertise.",
   },
   {
     id: "2",
-    headings: "Expert Guidance",
+    headings: "Stress-Free Renewals",
     imgChoose: "/assets/licence-image/carbonImg.svg",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+      "Avoid the hassle of expiring licenses and ensure operational continuity. ",
   },
   {
     id: "3",
-    headings: "Expert Guidance",
+    headings: "Simplified Management",
     imgChoose: "/assets/licence-image/carbonImg.svg",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+      "Co-term your current licenses for a single annual renewal date.",
   },
   {
     id: "4",
-    headings: "Expert Guidance",
+    headings: "Single Point of Contact",
     imgChoose: "/assets/licence-image/carbonImg.svg",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+      "Get all your Atlassian and Marketplace questions answered in one place.",
   },
   {
     id: "5",
     headings: "Expert Guidance",
     imgChoose: "/assets/licence-image/carbonImg.svg",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+      "Receive advice on the best apps to achieve your business goals.",
   },
   {
     id: "6",
-    headings: "Expert Guidance",
+    headings: "Flexible Payment Options",
     imgChoose: "/assets/licence-image/carbonImg.svg",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
   },
 ];
