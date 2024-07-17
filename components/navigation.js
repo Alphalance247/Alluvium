@@ -13,7 +13,7 @@ export default function Navigation({ theme }) {
   const [dropdownActive, setDropdownActive] = useState(false);
 
   const toggleMenu = () => {
-    setDisplayMobileMenu(prev => !prev);
+    setDisplayMobileMenu((prev) => !prev);
   };
 
   const toggleDropdown = (title) => {
@@ -44,69 +44,73 @@ export default function Navigation({ theme }) {
             <img src="/assets/alluvium-logo-dark.svg" alt="logo" />
           </Link>
         </div>
-        {!displayMobileMenu && <nav className={styles.navigation}>
-          <ul
-            className={
-              theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu
-            }
-          >
-            <li>
-              <div>
-                <p
-                  onClick={() => toggleDropdown("company")}
-                  className={
-                    dropdownActive && currentDropdown === "company"
-                      ? styles.dropdownActive
-                      : styles.dropdownToggler
-                  }
-                >
-                  <span>Company</span>
-                  {dropdownActive && currentDropdown === "company" ? (
-                    <MdOutlineKeyboardArrowUp
-                      size={"1.5em"}
-                      className="fw-bold text-dark"
-                    />
-                  ) : (
-                    <MdOutlineKeyboardArrowDown
-                      size={"1.5em"}
-                      className="fw-bold text-dark"
-                    />
-                  )}
-                </p>
-                <div
-                  className={
-                    dropdownActive && currentDropdown === "company"
-                      ? styles.dropdownDiv
-                      : styles.dropdownHidden
-                  }
-                >
-                  <ul>
-                    <li>
-                      <Link href="/about">About us</Link>
-                    </li>
-                    <li>
-                      <a href="http://university.alluvium.net" target="_blank">
-                        Alluvium University (AU)
-                      </a>
-                    </li>
-                    <li>
-                      <Link href="/showing-interest">Show Interest (AU)</Link>
-                    </li>
-                    <li>
-                      <Link href="/our-project">Project Reel</Link>
-                    </li>
-                    <li>
-                      <Link href="/support/contact">Contact Us</Link>
-                    </li>
-                    {/* <li><Link href="/#services">Our Services</Link></li> */}
-                  </ul>
+        {!displayMobileMenu && (
+          <nav className={styles.navigation}>
+            <ul
+              className={
+                theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu
+              }
+            >
+              <li>
+                <div>
+                  <p
+                    onClick={() => toggleDropdown("company")}
+                    className={
+                      dropdownActive && currentDropdown === "company"
+                        ? styles.dropdownActive
+                        : styles.dropdownToggler
+                    }
+                  >
+                    <span>Company</span>
+                    {dropdownActive && currentDropdown === "company" ? (
+                      <MdOutlineKeyboardArrowUp
+                        size={"1.5em"}
+                        className="fw-bold text-dark"
+                      />
+                    ) : (
+                      <MdOutlineKeyboardArrowDown
+                        size={"1.5em"}
+                        className="fw-bold text-dark"
+                      />
+                    )}
+                  </p>
+                  <div
+                    className={
+                      dropdownActive && currentDropdown === "company"
+                        ? styles.dropdownDiv
+                        : styles.dropdownHidden
+                    }
+                  >
+                    <ul>
+                      <li>
+                        <Link href="/about">About us</Link>
+                      </li>
+                      <li>
+                        <a
+                          href="http://university.alluvium.net"
+                          target="_blank"
+                        >
+                          Alluvium University (AU)
+                        </a>
+                      </li>
+                      <li>
+                        <Link href="/showing-interest">Show Interest (AU)</Link>
+                      </li>
+                      <li>
+                        <Link href="/our-project">Project Reel</Link>
+                      </li>
+                      <li>
+                        <Link href="/support/contact">Contact Us</Link>
+                      </li>
+                      {/* <li><Link href="/#services">Our Services</Link></li> */}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li>
-              <Link href="/#services">Services</Link>
-            </li>
-            {/* <li>
+              </li>
+              <li>
+                <Link href="/#services">Services</Link>
+              </li>
+              {/* <li>
               <div>
                 <p
                   onClick={() => toggleDropdown("services")}
@@ -147,27 +151,27 @@ export default function Navigation({ theme }) {
                 </div>
               </div>
             </li> */}
-            <li>
-              <a
-                href="https://marketplace.atlassian.com/vendors/1218751/alluvium"
-                target="_blank"
-              >
-                Our Products
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://blog.alluvium.net/"
-                rel="Alluvium"
-                target="_blank"
-              >
-                Blog
-              </a>
-            </li>
-            <li>
-              <Link href="/case-studies">Case Studies</Link>
-            </li>
-            {/* <li>
+              <li>
+                <a
+                  href="https://marketplace.atlassian.com/vendors/1218751/alluvium"
+                  target="_blank"
+                >
+                  Our Products
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://blog.alluvium.net/"
+                  rel="Alluvium"
+                  target="_blank"
+                >
+                  Blog
+                </a>
+              </li>
+              <li>
+                <Link href="/case-studies">Case Studies</Link>
+              </li>
+              {/* <li>
                             <div>
                                 <p onClick={() => toggleDropdown('Case Studies')} className={(dropdownActive && (currentDropdown === 'Case Studies')) ? styles.dropdownActive : styles.dropdownToggler}>
                                     <span>Case Studies</span>
@@ -189,20 +193,28 @@ export default function Navigation({ theme }) {
                                 </div>
                             </div>
                         </li> */}
-          </ul>
-          <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
-            <a href="mailto:contact@alluvium.net" className={styles.contactUsButton}>Email Us</a>
-            <Link href="/support/contact#schedule-a-call">
-              <a className={styles.scheduleButton}>Schedule a Call</a>
-            </Link>
-          </div>
-        </nav>}
+            </ul>
+            <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
+              <a
+                href="mailto:contact@alluvium.net"
+                className={styles.contactUsButton}
+              >
+                Email Us
+              </a>
+              <Link href="/support/contact#schedule-a-call">
+                <a className={styles.scheduleButton}>Schedule a Call</a>
+              </Link>
+            </div>
+          </nav>
+        )}
         <button
           onClick={() => toggleMenu()}
-          className={displayMobileMenu ? ` ${styles.closeBtn}` : styles.menuBtnDark}
+          className={
+            displayMobileMenu ? ` ${styles.closeBtn}` : styles.menuBtnDark
+          }
           arial-label="Toggle Menu"
           id="toggleMenu"
-          title={`${displayMobileMenu ? 'open menu' : 'close menu'}`}
+          title={`${displayMobileMenu ? "open menu" : "close menu"}`}
         >
           {/* <div className={theme === "dark" ? styles.menuBtnDark : styles.menuBtn}> */}
           <div className={styles.menuBtnDark}>
@@ -276,9 +288,13 @@ export default function Navigation({ theme }) {
               <Link href="/support/contact">+ Contact Us</Link>
             </li>
             <li>
-              <a href="https://calendly.com/alluvium-hq"
+              <a
+                href="https://calendly.com/alluvium-hq"
                 rel="Alluvium"
-                target="_blank">+ Schedule a Call</a>
+                target="_blank"
+              >
+                + Schedule a Call
+              </a>
             </li>
           </ul>
         </div>
@@ -290,7 +306,7 @@ export default function Navigation({ theme }) {
 export const getStaticProps = async () => {
   return {
     props: {
-      products: productData
+      products: productData,
     },
   };
 };

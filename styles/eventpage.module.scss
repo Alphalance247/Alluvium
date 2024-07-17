@@ -108,7 +108,7 @@
           column-gap: 0.5rem;
         }
 
-        &>div {
+        & > div {
           background-color: rgba(227, 121, 21, 1);
           width: 57px;
           height: 57px;
@@ -176,7 +176,7 @@
   }
 }
 
-.conference>h1 {
+.conference > h1 {
   color: #009bc0;
   font-family: "Graphik";
   font-size: 36px;
@@ -186,7 +186,7 @@
   margin-bottom: 32px;
 }
 
-.conference>h2 {
+.conference > h2 {
   color: #11202d;
   font-family: "Graphik";
   font-size: 36px;
@@ -194,7 +194,7 @@
   font-weight: 600;
 }
 
-.progamEvent>h2 {
+.progamEvent > h2 {
   margin-bottom: 32px;
   font-family: "Graphik";
   font-size: 28px;
@@ -311,7 +311,7 @@
 }
 
 .speech_cover {
-  font-family: 'Graphik';
+  font-family: "Graphik";
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
@@ -381,7 +381,7 @@
   }
 }
 
-.inner>p {
+.inner > p {
   margin-bottom: 0.5rem;
 }
 
@@ -424,7 +424,7 @@
   }
 }
 
-.recap{
+.recap {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -531,7 +531,7 @@
   grid-gap: 6rem;
 }
 
-.register>h1 {
+.register > h1 {
   font-size: 40px;
   font-weight: 700;
   letter-spacing: -0.004em;
@@ -572,8 +572,8 @@
   font-family: "Graphik";
 
   h3 {
-    color: #11202D;
-    font-family: 'Graphik';
+    color: #11202d;
+    font-family: "Graphik";
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -582,8 +582,8 @@
   }
 
   h4 {
-    color: #11202D;
-    font-family: 'Graphik';
+    color: #11202d;
+    font-family: "Graphik";
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -592,11 +592,11 @@
     margin-bottom: 0;
     /* 125% */
   }
-  
+
   p {
     margin-top: 24px;
     color: #000;
-    font-family: 'Graphik';
+    font-family: "Graphik";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -651,12 +651,12 @@
     font-weight: 200;
   }
 
-  .conference>h1 {
+  .conference > h1 {
     font-size: 30px;
     font-weight: 600;
   }
 
-  .conference>h2 {
+  .conference > h2 {
     font-size: 30px;
     font-weight: 600;
   }
@@ -680,12 +680,12 @@
     grid-gap: 4rem;
   }
 
-  .register>h1 {
+  .register > h1 {
     font-size: 18px;
     font-weight: 500;
   }
 
-  .register>.btn {
+  .register > .btn {
     padding: 16px, 32px, 16px, 32px;
   }
 
@@ -706,7 +706,7 @@
     margin: auto;
   }
 
-  .progamEvent>h2 {
+  .progamEvent > h2 {
     text-align: center;
     margin-bottom: 2rem;
   }
@@ -715,7 +715,7 @@
     line-height: 17px;
   }
 
-  .inner>p {
+  .inner > p {
     margin-bottom: 0.5rem;
   }
 
@@ -799,7 +799,7 @@
     grid-gap: 0.5rem;
   }
 
-  .register>h1 {
+  .register > h1 {
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -977,7 +977,7 @@
       .btn_drop {
         height: 46px;
         border: 1px solid #ced4da;
-        font-family: 'Graphik';
+        font-family: "Graphik";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -997,7 +997,6 @@
         max-height: 200px !important;
         overflow-y: scroll;
       }
-
     }
   }
 }
@@ -1011,8 +1010,8 @@
   margin-top: 37px;
 
   h6 {
-    color: #11202D;
-    font-family: 'Graphik';
+    color: #11202d;
+    font-family: "Graphik";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
@@ -1021,12 +1020,150 @@
   }
 
   p {
-    color: #11202D;
-    font-family: 'Graphik';
+    color: #11202d;
+    font-family: "Graphik";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
     margin: 0 !important;
+  }
+}
+
+.itsmHero {
+  background: url("/assets/events/funnelevent.png");
+  padding-top: 8.6rem;
+  padding-bottom: 8.6rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 576px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .groupEvent {
+    display: grid;
+    grid-template-columns: 60% auto;
+    align-items: center;
+    column-gap: 4rem;
+    width: 90%;
+    margin: auto;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+
+    .users {
+      font-size: 46px;
+      font-weight: 700;
+      line-height: 70px;
+      margin-bottom: 52px;
+      color: white;
+
+      @media screen and (max-width: 576px) {
+        font-size: 2.3rem;
+        line-height: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+    p {
+      font-size: 20px;
+      line-height: 2rem;
+      margin-top: 26px;
+      color: white;
+      margin-bottom: 70px;
+    }
+
+    .imgaws {
+      margin-left: -3rem;
+
+      @media screen and (max-width: 576px) {
+        margin-left: -2rem;
+      }
+    }
+  }
+}
+
+.speakersection {
+  background: #11202d;
+  padding-top: 47px;
+  padding-bottom: 47px;
+
+  .spearkersStore {
+    .spearkersPara {
+      font-size: 2rem;
+      line-height: 48px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 1.3rem;
+      color: white;
+    }
+
+    .titleDivsUl {
+      background: white;
+      padding: 2rem 2rem;
+      margin-bottom: 88px;
+      border-radius: 1.3rem;
+      @media screen and (max-width: 576px) {
+        padding: 1rem 0.8rem;
+      }
+
+      li {
+        font-size: 1.5rem;
+        color: #11202d;
+        line-height: 2rem;
+
+        @media screen and (max-width: 576px) {
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+
+    .meet {
+      font-size: 2rem;
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      line-height: 46px;
+      margin-bottom: 1.7rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 1rem;
+        line-height: 2rem;
+      }
+    }
+
+    .meetingssp {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 6rem;
+      align-items: center;
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+        align-items: center;
+      }
+
+      .spname {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        color: white;
+        text-align: center;
+        margin-top: 1.2rem;
+      }
+
+      .sptitle {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 500;
+        color: white;
+        text-align: center;
+      }
+    }
   }
 }

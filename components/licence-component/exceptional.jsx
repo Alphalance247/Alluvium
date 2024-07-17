@@ -17,14 +17,16 @@ const Exceptional = () => {
         <div>
           <p className={`${styles.manage}`}>LICENSE MANAGEMENT</p>
           <h5>
-            Exceptional Customer Support Ensuring Prompt and Effective
-            Assistance
+            Expert Advice and Support for Streamlined Atlassian License
+            Management
           </h5>
           <p className={`${styles.lorem}`}>
-            Lorem ipsum dolor sit amet consectetur. Cras metus imperdiet cras
-            suspendisse mi libero pulvinar diam magnis. Turpis ultrices purus
-            risus a. Magna integer eget nunc non. At ultrices enim tortor varius
-            suspendisse in eget.
+            Are you seeking an Atlassian partner to assist with purchasing
+            Atlassian and Marketplace apps? Maximize your license investment by
+            letting Alluvium manage your licenses. <br />
+            <br /> As a certified Atlassian partner, we are committed to helping
+            you get the most out of your Atlassian investment, offering greater
+            transparency and simplicity in the licensing process.
           </p>
         </div>
       </div>

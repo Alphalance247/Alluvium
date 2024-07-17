@@ -6,11 +6,10 @@ const Platinum = () => {
     <div className={`container-fluid ${styles.platinumPlan}`}>
       <div className={`container mx-auto`}>
         <div className={` ${styles.partnerPlan}`}>
-          <h5>Your Atlassian Platinum Partner</h5>
+          <h5>Your Atlassian Partner and Solutions Expert</h5>
           <p>
-            We start by understanding your unique needs and pain points so you
-            get a bespoke solution built for Perfection Software and your use
-            cases.
+            Let's discuss your unique needs and challenges, and we'll develop a
+            customized solution tailored specifically for your use case.
           </p>
           <div>
             <Link href="/atlassian-licence/licence-request">

@@ -14,11 +14,10 @@ const AtlassianLicence = () => {
       <div className={`container-fluid ${styles.licencelayout}`}>
         <div className={` ${styles.licencehero}`}>
           <p className={styles.textlicence}>ATLASSIAN LICENSE MANAGEMENT</p>
-          <h3>Effortless Atlassian License Management</h3>
+          <h3>Streamlined Atlassian License Management</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-            arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id.
+            Maximize your Atlassian license investment by gaining dedicated
+            expert advice and support for managing your licenses.
           </p>
           <div>
             <Link href="/atlassian-licence/licence-request">
@@ -32,7 +31,7 @@ const AtlassianLicence = () => {
       <DepOption />
       <Platinum />
       <Purchase />
-      <ChooseUs />
+      <ChooseUs choose="Why Choose Alluvium" />
       <FaQuestions />
     </Layout>
   );

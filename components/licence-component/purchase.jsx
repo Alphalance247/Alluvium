@@ -8,9 +8,8 @@ const Purchase = () => {
         <div className={`${styles.purchaseHeading}`}>
           <h5>License Purchase Options</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-            arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id.
+            Optimize Your Atlassian Licensing with Alluvium: Tailored Solutions
+            for Every Stage.
           </p>
         </div>
         <div className={`${styles.descript}`}>
