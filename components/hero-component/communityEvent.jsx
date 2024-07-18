@@ -37,7 +37,7 @@ const CommunityEvent = () => {
           <p>Zoom</p>
         </div>
         <div>
-          <Link href="https://funnel.alluvium.net/">
+          <Link href="/event/itsm-solutions">
             <button>Register now</button>
           </Link>
         </div>
