@@ -1568,3 +1568,59 @@ export const chooseUsOptions = [
       "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
   },
 ];
+
+export const frequentlyAsked = [
+  {
+    id: 1,
+    questions: "What Atlassian services do you offer?",
+    answer:
+      "We provide a comprehensive suite of Atlassian services, including implementation, optimization, license management, training, migration services, and ad hoc support. With extensive expertise in the Atlassian ecosystem, we’ve amassed significant technical experience, making no project too complex for us.",
+  },
+  {
+    id: 2,
+    questions:
+      "How can we get started with your Atlassian services, and what should we expect during the initial consultation?",
+    answer:
+      "The first step is to schedule a free consultation call with one of our experts by filling out this form (LINK). During this consultation, we will review your current situation, needs, and challenges, and discuss your goals, desired outcomes, and timelines. After the consultation, we will create a customized proposal and plan based on your needs and send it to you via email. Once we agree on the proposal, we will schedule the project and decide on starting dates together.",
+  },
+  {
+    id: 3,
+    questions: " What kind of support do you offer post-implementation?",
+    answer:
+      "We offer dedicated support through our subscription packages, ensuring you are continuously supported by our experts post-implementation. Our support covers everything from functional to technical questions. Get in touch with us to learn more.",
+  },
+  {
+    id: 4,
+    questions: "What is involved in a holistic site audit and governance?",
+    answer:
+      "Our site audit will thoroughly examine your instance(s) to assess the current configuration and governance structure. We compile our findings into a customized report, which includes our advice, best practices, and necessary steps to improve your instance.",
+  },
+  {
+    id: 5,
+    questions:
+      "Can you help us migrate from a different platform to Atlassian Cloud?",
+    answer:
+      "Yes, in addition to migrating customers from Atlassian Server or Data Center to Atlassian Cloud, we can assist with migrating from other platforms to Atlassian Cloud. This includes migrations from ServiceNow to Jira Service Management or from SharePoint to Confluence.",
+  },
+  {
+    id: 6,
+    questions:
+      "Data security is our top priority. How does Atlassian guarantee it, particularly for cloud solutions?",
+    answer:
+      "Atlassian follows security best practices with a layered approach to protect your data. The platform offers tools such as the detections program, secure software development, and external penetration testing, along with a growing set of controls to safeguard your data. Read more about Atlassian's data protection here.",
+  },
+  {
+    id: 7,
+    questions:
+      "What types of training programs do you offer for our team, and how can they help us maximize the use of Atlassian tools?",
+    answer:
+      "Training is an essential part of our implementation process to ensure you get the most out of your Atlassian tools. We offer various training programs, from beginner sessions for end-users to administrator training for Jira and Confluence Admins. Additionally, we provide advanced configuration training for third-party Marketplace apps. Get in touch (LINK) to learn more.",
+  },
+  {
+    id: 8,
+    questions:
+      "What are the potential benefits of integrating artificial intelligence (AI) into our Atlassian tools, and how can it help our organization?",
+    answer:
+      "Atlassian offers its own AI, known as Atlassian Intelligence, which can bring numerous benefits to your organization. It enhances productivity by tailoring dashboards, improves decision-making by analyzing data, and streamlines operations by recommending improved workflows. This is just a glimpse of the possibilities. Please get in touch (LINK) with us to schedule a demo and explore more about Atlassian Intelligence.",
+  },
+];
