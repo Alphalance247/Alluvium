@@ -7,14 +7,15 @@ import Purchase from "components/licence-component/purchase";
 import ChooseUs from "components/licence-component/chooseUs";
 import FaQuestions from "components/licence-component/faQuestion";
 import Link from "next/link";
+import LicenceHero from "./licence-request/licencehero";
 
 const AtlassianLicence = () => {
   return (
     <Layout>
-      <div className={`container-fluid ${styles.licencelayout}`}>
+      {/* <div className={`container-fluid ${styles.licencelayout}`}>
         <div className={` ${styles.licencehero}`}>
-          <p className={styles.textlicence}>ATLASSIAN LICENSE MANAGEMENT</p>
-          <h3>Streamlined Atlassian License Management</h3>
+          <p className={styles.textlicence}></p>
+          <h3></h3>
           <p>
             Maximize your Atlassian license investment by gaining dedicated
             expert advice and support for managing your licenses.
@@ -26,7 +27,15 @@ const AtlassianLicence = () => {
             <button className={styles.button2}>Request Site Audit</button>
           </div>
         </div>
-      </div>
+      </div> */}
+      <LicenceHero
+        withrequest={true}
+        contentsheading="ATLASSIAN LICENSE MANAGEMENT"
+        contentsheading1="Streamlined Atlassian License Management"
+        contentsheading2="Maximize your Atlassian license investment by gaining dedicated
+            expert advice and support for managing your licenses."
+        buttontext="Request License"
+      />
       <Exceptional />
       <DepOption />
       <Platinum />

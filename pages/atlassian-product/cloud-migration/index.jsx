@@ -7,26 +7,20 @@ import ChooseUs from "components/licence-component/chooseUs";
 import CaseStudies from "components/case-studies/case-studies";
 import FaqPage from "components/faqPage";
 import FaQuestions from "components/licence-component/faQuestion";
+import LicenceHero from "pages/atlassian-licence/licence-request/licencehero";
 
 const CloudMigration = () => {
   return (
     <Layout>
-      <div className={`container-fluid ${styles.licencelayout}`}>
-        <div className={` ${styles.licencehero}`}>
-          <p className={styles.textlicence}>ATLASSIAN LICENSE MANAGEMENT</p>
-          <h3>Effortless Atlassian License Management</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
+      <LicenceHero
+        withrequest={false}
+        contentsheading="ATLASSIAN LICENSE MANAGEMENT"
+        contentsheading1="Effortless Atlassian License Management"
+        contentsheading2="Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
             arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id.
-          </p>
-          <div>
-            <Link href="">
-              <button className={styles.button1}>Schedule a Demo</button>
-            </Link>
-          </div>
-        </div>
-      </div>
+            id."
+        buttontext="Schedule a Demo"
+      />
       <ServerCloud />
       <WhyMigrate />
       <ChooseUs choose="Why Plan Your Migration With Alluvium?" />

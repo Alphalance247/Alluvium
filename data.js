@@ -1624,3 +1624,110 @@ export const frequentlyAsked = [
       "Atlassian offers its own AI, known as Atlassian Intelligence, which can bring numerous benefits to your organization. It enhances productivity by tailoring dashboards, improves decision-making by analyzing data, and streamlines operations by recommending improved workflows. This is just a glimpse of the possibilities. Please get in touch (LINK) with us to schedule a demo and explore more about Atlassian Intelligence.",
   },
 ];
+
+export const discoverAtlassiansServ = [
+  {
+    id: 1,
+    heading: "Cloud & Data Migration",
+    questions:
+      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+  },
+  {
+    id: 2,
+    heading: "Training & Support",
+    questions:
+      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+  },
+  {
+    id: 3,
+    heading: "Licensing Management",
+    questions:
+      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+  },
+  {
+    id: 4,
+    heading: "Atlassian Consulting & Strategy",
+    questions:
+      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+  },
+  {
+    id: 5,
+    heading: "JSM Implementation",
+    questions:
+      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+  },
+];
+
+export const atlassianTools = [
+  {
+    id: "1",
+    subhead: "WORK MANAGEMENT",
+    headings: "Jira Software",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+    paragraphs: "Ensure you only pay for what you need with our expertise.",
+  },
+  {
+    id: "2",
+    headings: "Confluence",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/confluence.svg",
+    paragraphs:
+      "Avoid the hassle of expiring licenses and ensure operational continuity. ",
+  },
+  {
+    id: "3",
+    headings: "Jira Work Management",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+    paragraphs:
+      "Co-term your current licenses for a single annual renewal date.",
+  },
+  {
+    id: "4",
+    subhead: "WORK MANAGEMENT",
+    headings: "Jira Service Management",
+    imgChoose: "/assets/licence-image/bluejira.svg",
+    paragraphs:
+      "Get all your Atlassian and Marketplace questions answered in one place.",
+  },
+  {
+    id: "5",
+    headings: "Trello",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/trello.svg",
+    paragraphs:
+      "Receive advice on the best apps to achieve your business goals.",
+  },
+  {
+    id: "6",
+    headings: "Jira Align",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+    paragraphs:
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+  {
+    id: "7",
+    headings: "Bitbucket",
+    subhead: "CODE HOSTING & COLLABORATION",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+    paragraphs:
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+  {
+    id: "8",
+    headings: "Opsgenie",
+    subhead: "CODE HOSTING & COLLABORATION",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
+    paragraphs:
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+  {
+    id: "9",
+    headings: "Atlassian Marketplace",
+    subhead: "APPS & PLUGINS INTEGRATIONS",
+    imgChoose: "/assets/licence-image/plugin.svg",
+    paragraphs:
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+];

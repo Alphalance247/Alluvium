@@ -1,9 +1,9 @@
 .licencelayout {
   background: #0b141c;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  text-align: center;
   .licencehero {
-    padding-top: 96px;
-    padding-bottom: 96px;
-    text-align: center;
     width: 60%;
     margin: auto;
 
@@ -50,6 +50,19 @@
         line-height: 25px;
       }
     }
+  }
+}
+.infinitesscrollstyling {
+  margin-top: 6rem;
+  position: relative;
+
+  .overlaylicence {
+    background: linear-gradient(90deg, #0b141c 30.02%, #0b141c 100%);
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    opacity: 0.8;
+    height: 80px;
   }
 }
 
