@@ -802,7 +802,7 @@ const RequestForm = () => {
                         : styles.selectStyle
                     }`}
                   >
-                    <option value=""></option>
+                    <option value=""> </option>
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                   </select>

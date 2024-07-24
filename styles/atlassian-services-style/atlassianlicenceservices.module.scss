@@ -9,13 +9,13 @@
     column-gap: 5.5rem;
 
     @media screen and (max-width: 992px) {
-      column-gap: 3.5;
+      column-gap: 2rem;
     }
 
     @media screen and (max-width: 576px) {
       display: flex;
       flex-direction: column;
-      row-gap: 2rem;
+      row-gap: 3rem;
     }
 
     .discoverdropdown {
@@ -27,6 +27,11 @@
         display: flex;
         column-gap: 2.5rem;
         align-items: baseline;
+
+        @media screen and (max-width: 992px) {
+          flex-direction: column;
+          row-gap: 1rem;
+        }
 
         p {
           font-size: 1rem;
@@ -69,6 +74,11 @@
         line-height: 53px;
         margin-bottom: 1.5rem;
         color: #0f1a24;
+
+        @media screen and (max-width: 992px) {
+          font-size: 2rem;
+          line-height: 3rem;
+        }
       }
 
       p {
@@ -76,6 +86,10 @@
         font-size: 1.2rem;
         line-height: 2rem;
         margin-bottom: 2rem;
+
+        @media screen and (max-width: 992px) {
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -121,11 +135,14 @@
 }
 
 .Productsection {
-  background: #f3f4f6;
+  background: white;
   padding-top: 6rem;
   padding-bottom: 6rem;
 
   .productfaq {
+    width: 80%;
+    margin: auto;
+
     h5 {
       font-weight: 600;
       font-size: 0.9rem;
@@ -140,6 +157,14 @@
       line-height: 53px;
       margin-bottom: 1.5rem;
       color: #0f1a24;
+
+      @media screen and (max-width: 992px) {
+        font-size: 2.8rem;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
     }
 
     p {
@@ -147,6 +172,10 @@
       font-size: 1.2rem;
       line-height: 2rem;
       margin-bottom: 2rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 0.9rem;
+      }
     }
   }
 
@@ -156,6 +185,15 @@
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     grid-gap: 1.5rem;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 1rem;
+    }
 
     .atlassiansoftware {
       padding: 2.5rem 1.5rem;
@@ -178,6 +216,10 @@
         font-weight: 600;
         font-size: 1.5rem;
         line-height: 2.5rem;
+
+        @media screen and (max-width: 992px) {
+          font-size: 1.2rem;
+        }
       }
     }
   }

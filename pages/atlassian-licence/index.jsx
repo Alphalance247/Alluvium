@@ -5,29 +5,11 @@ import DepOption from "../../components/licence-component/depOption";
 import Platinum from "../../components/licence-component/platinum";
 import Purchase from "components/licence-component/purchase";
 import ChooseUs from "components/licence-component/chooseUs";
-import FaQuestions from "components/licence-component/faQuestion";
-import Link from "next/link";
 import LicenceHero from "./licence-request/licencehero";
 
 const AtlassianLicence = () => {
   return (
     <Layout>
-      {/* <div className={`container-fluid ${styles.licencelayout}`}>
-        <div className={` ${styles.licencehero}`}>
-          <p className={styles.textlicence}></p>
-          <h3></h3>
-          <p>
-            Maximize your Atlassian license investment by gaining dedicated
-            expert advice and support for managing your licenses.
-          </p>
-          <div>
-            <Link href="/atlassian-licence/licence-request">
-              <button className={styles.button1}>Request License</button>
-            </Link>
-            <button className={styles.button2}>Request Site Audit</button>
-          </div>
-        </div>
-      </div> */}
       <LicenceHero
         withrequest={true}
         contentsheading="ATLASSIAN LICENSE MANAGEMENT"
@@ -35,10 +17,15 @@ const AtlassianLicence = () => {
         contentsheading2="Maximize your Atlassian license investment by gaining dedicated
             expert advice and support for managing your licenses."
         buttontext="Request License"
+        withSlide={false}
       />
       <Exceptional />
       <DepOption />
-      <Platinum />
+      <Platinum
+        heading="Your Atlassian Partner and Solutions Expert"
+        buttoncontent="Request License"
+        button1style={styles.button2}
+      />
       <Purchase />
       <ChooseUs choose="Why Choose Alluvium" />
     </Layout>

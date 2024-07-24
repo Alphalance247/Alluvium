@@ -84,12 +84,23 @@
 .button2 {
   background: none;
   border: 1px solid #ffffff;
-  padding: 14px 40px;
+  padding: 0.9rem 2.5rem;
   font-size: 1rem;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.5rem;
   border-radius: 8px;
   color: white;
+}
+
+.button3 {
+  background: none;
+  border: 1px solid #e37915;
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  border-radius: 8px;
+  color: #e37915;
 }
 
 .exception {

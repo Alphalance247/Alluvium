@@ -20,6 +20,7 @@ const CloudMigration = () => {
             arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
             id."
         buttontext="Schedule a Demo"
+        withSlide={false}
       />
       <ServerCloud />
       <WhyMigrate />

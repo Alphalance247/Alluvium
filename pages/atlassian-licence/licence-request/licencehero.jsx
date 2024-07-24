@@ -8,10 +8,11 @@ const LicenceHero = ({
   contentsheading2,
   withrequest = true,
   buttontext,
+  withSlide = false,
 }) => {
   return (
     <div className={`container-fluid ${styles.licencelayout}`}>
-      <div className={` ${styles.licencehero}`}>
+      <div className={`container mx-auto ${styles.licencehero}`}>
         <p className={styles.textlicence}>{contentsheading}</p>
         <h3>{contentsheading1}</h3>
         <p>{contentsheading2}</p>
@@ -25,15 +26,17 @@ const LicenceHero = ({
           )}
         </div>
       </div>
-      <div className={`container mx-auto ${styles.infinitesscrollstyling}`}>
-        <div className={styles.overlaylicence}></div>
-        <Image
-          src="/assets/licence-image/infiniteimage.svg"
-          width={967}
-          height={79}
-          alt=""
-        />
-      </div>
+      {withSlide && (
+        <div className={`container mx-auto ${styles.infinitesscrollstyling}`}>
+          <div className={styles.overlaylicence}></div>
+          <Image
+            src="/assets/licence-image/infiniteimage.svg"
+            width={967}
+            height={79}
+            alt=""
+          />
+        </div>
+      )}
     </div>
   );
 };
