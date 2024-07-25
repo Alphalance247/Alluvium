@@ -179,7 +179,6 @@
         display: grid;
         margin-top: 80px;
         margin-bottom: 80px;
-        // margin-left: 148px;
         place-items: center;
 
 
@@ -229,7 +228,6 @@
                 font-size: 15.4px;
                 line-height: 130%;
                 color: #121212;
-                // width: 680px;
                 text-align: left;
 
                 @media screen and (max-width: 576px) {
@@ -302,4 +300,12 @@
 
 .activeDot {
   background-color: #FFFFFF;
+}
+.carouimage {
+  margin: 0;
+  padding: 0;
+}
+
+.carouimage img {
+  display: block;
 }

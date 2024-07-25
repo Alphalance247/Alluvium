@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Head from "next/head";
 
 import Layout from "components/layout";
@@ -12,6 +12,10 @@ import Gitex24Carousel from "components/event/Gitex24Carousel";
 import Team24 from "components/event/Team24";
 import CloudConnect23 from "components/event/CloudConnect23";
 import Expo from "components/event/Expo";
+import EventBlogCarousel from "components/event/EventBlogCarousel"
+import Team24Carousel from "components/event/Team24Carousel"
+import CloudCarousel from "components/event/CloudCarousel"
+import ExpoCarousel from "components/event/ExpoCarousel"
 
 const EventBlog = () => {
   const giteximages = [
@@ -49,6 +53,7 @@ const EventBlog = () => {
     '/assets/event/expo5.png',
     
   ];
+
   return (
     
     <>
@@ -70,16 +75,21 @@ const EventBlog = () => {
            
           <div className="container-fluid p-0">
             
+            
             <EventHero />
             <DateVen />
             <Gitex24 />
-            <Gitex24Carousel images={giteximages}/>
+            <EventBlogCarousel />
+            {/* <Gitex24Carousel images={giteximages}/> */}
             <Team24 />
-            <Gitex24Carousel images={team24images}/>
+            {/* <Gitex24Carousel images={team24images}/> */}
+            <Team24Carousel />
             <CloudConnect23 />
-            <Gitex24Carousel images={cloudconnect23images} />
+            {/* <Gitex24Carousel images={cloudconnect23images} /> */}
+            <CloudCarousel />
             <Expo />
-            <Gitex24Carousel images={expoimages} />
+            {/* <Gitex24Carousel images={expoimages} /> */}
+            <ExpoCarousel />
           </div>
 
         </div>
