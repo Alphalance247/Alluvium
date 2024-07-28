@@ -1,6 +1,7 @@
 import styles from "../../../styles/licence.module.scss";
 import Link from "next/link";
 import Image from "next/image";
+import AutoPlay from "pages/atlassian-product/atlassian-services/autoplay";
 
 const LicenceHero = ({
   contentsheading,
@@ -27,15 +28,18 @@ const LicenceHero = ({
         </div>
       </div>
       {withSlide && (
-        <div className={`container mx-auto ${styles.infinitesscrollstyling}`}>
-          <div className={styles.overlaylicence}></div>
-          <Image
-            src="/assets/licence-image/infiniteimage.svg"
-            width={967}
-            height={79}
-            alt=""
-          />
-        </div>
+        <>
+          <div className={`container mx-auto ${styles.infinitesscrollstyling}`}>
+            <div className={styles.overlaylicence}></div>
+            {/* <Image
+              src="/assets/licence-image/infiniteimage.svg"
+              width={967}
+              height={79}
+              alt=""
+            /> */}
+            <AutoPlay />
+          </div>
+        </>
       )}
     </div>
   );
