@@ -3,6 +3,7 @@ import styles from "../../styles/case-studies.module.scss";
 import { caseStudiesData } from "data";
 import CaseStudy from "./case-study";
 import BookingCTA from "components/Booking";
+import Link from "next/link";
 
 const CaseStudies = ({ showBooking = true }) => {
   return (
@@ -34,7 +35,9 @@ const CaseStudies = ({ showBooking = true }) => {
           {/* {showBooking && <BookingCTA />} */}
 
           <div style={{ textAlign: "center" }}>
-            <button>View all case studies</button>
+            <Link href="/case-studies">
+              <button>View all case studies</button>
+            </Link>
           </div>
         </div>
       </section>
