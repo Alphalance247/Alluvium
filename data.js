@@ -1464,3 +1464,81 @@ export const atlassianTraining = [
       "Our experts work directly with your team to determine which products you need, and provide the most cost-effective licensing model.",
   },
 ];
+
+export const purchaseOptions = [
+  {
+    id: "1",
+    headings: "First Purchase",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+  {
+    id: "2",
+    headings: "Extension of Support Period",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+  {
+    id: "3",
+    headings: "Upgrades",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+  {
+    id: "4",
+    headings: "Downgrades",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+  {
+    id: "5",
+    headings: "Harmonization",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+  },
+];
+
+export const chooseUsOptions = [
+  {
+    id: "1",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+  },
+  {
+    id: "2",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+  },
+  {
+    id: "3",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+  },
+  {
+    id: "4",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+  },
+  {
+    id: "5",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+  },
+  {
+    id: "6",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
+  },
+];

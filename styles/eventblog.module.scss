@@ -1,0 +1,311 @@
+.underlineinput {
+    border: none;
+    border-bottom: 1px solid #000;
+    padding: 5px 0;
+    outline: none; 
+    border-radius: 0%;
+}
+
+.underlineinput:focus {
+    border-bottom: 2px solid #000; /* Change the bottom border on focus */
+}
+
+.atbtn {
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+  
+    @media screen and (max-width: 992px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 0.5rem;
+    }
+  
+    @media screen and (max-width: 576px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  .customxs {
+    background: #F0F2F3;
+
+    .latestevents {
+        display: grid;
+        place-items: center;
+        color: #0D1117;
+        font-weight: bold;
+        font-size: 34px;
+        line-height: 40px;
+        padding-bottom: 33px;
+    }
+  
+    .featured {
+      width: 70%;
+      margin: auto;
+      position: relative;
+      bottom: 3rem;
+      background: #fcfcfc;
+      padding: 2rem 2.5rem;
+  
+      @media (max-width: 768px) {
+        padding: 1rem;
+      }
+    }
+  
+    .points {
+      cursor: pointer;
+      &:hover {
+        .fcontent {
+          text-decoration: 1px solid underline !important; /* or any other decoration you want */
+          color: black !important;
+        }
+      }
+    }
+  }
+
+  .gitexslider {
+    background-color: #11202D;
+  }
+  
+
+  
+ 
+ 
+  
+
+  
+
+  
+  // @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  //   .prg {
+  //     font-size: 24px;
+  //      margin-top: 24px;
+  //      line-height: 25px;
+  //      font-weight: 400px;
+  //      color: #E7E8E9;
+  //      width: 600px;
+  // }
+  // }
+  
+  .featured {
+    // margin-top: -65px;
+    border-radius: 8px;
+  }
+  
+  .herobanner {
+    background-image: url("/assets/event/eventbg.png");
+    background-size: cover;
+    // padding-top: 120px;
+    height: 485px;
+  
+    .heroimg {
+        display:grid;
+        place-items: center;
+    }
+
+   
+.upcomingparent {
+    display: grid;
+    margin-left: 110.37px;
+    padding-top: 53px;
+    padding-bottom: 11.29px;
+
+    @media screen and (max-width: 576px) {
+     grid-template-columns: 1fr;
+     margin: 0%;
+     place-items: center;   
+        
+    }
+}
+
+.upcoming {
+    display: flex;
+    background-color: #746E6E;
+    color: #fff;
+    width: 293.63px;
+    // height: 43.71px;
+    padding-left: 23.11px;
+    padding-right: 22.51px;
+    padding-top: 3.79px;
+    padding-bottom: 2.92px;
+
+
+}
+
+.herotext {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 120%;
+    
+}
+  
+.heroimg {
+    
+}
+.heroimg {
+      @media screen and (max-width: 576px) {
+        grid-template-columns: 1fr;
+        
+      }
+    }
+  }
+  
+
+  
+  .featuredsec {
+    color: #5e666d;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 24px;
+  }
+  
+  .fimages {
+    border-radius: 4px;
+    width: 176px;
+    height: 101px;
+  }
+  
+.gitex24 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(1,1fr);
+    }
+    
+    .gitexcontentdiv {
+        display: grid;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        place-items: center;
+
+
+        .gitextdiv {
+            margin-bottom: 21px;
+
+            .gitext {
+                font-size: 60.96px;
+                font-weight: bold;
+                line-height: 71.7px;
+                color: #1A768D;
+                max-width: 525px;
+
+                @media screen and (max-width: 576px) {
+                  font-size: 30px;
+                  line-height: 35.8px;
+                }
+    
+            }
+        }
+
+        .supertextdiv {
+            margin-bottom: 21px;
+
+            .supertext {
+                font-size: 28px;
+                font-weight: bold;
+                line-height: 150%;
+                color: #191D48;
+            }
+        }
+
+        .detailstextdiv {
+            margin-bottom: 21px;
+
+            .detailstext {
+                font-size: 18px;
+                line-height: 20px;
+                color: #000000;
+            }
+        }
+
+        .desctextdiv {
+            margin-bottom: 80px;
+
+            .desctext {
+                font-size: 15.4px;
+                line-height: 130%;
+                color: #121212;
+                text-align: left;
+
+                @media screen and (max-width: 576px) {
+                  text-align: justify;
+                  margin: 0.2rem;
+                }
+            }
+        }
+
+
+
+    }
+
+    .gitexpicturediv {
+        display: grid;
+        // margin-right: 122.82px;
+        place-items: center;
+
+        @media screen and (max-width: 576px) {
+          margin-top: -30%;
+          margin-bottom: 25%;
+        }
+        
+    }
+
+}
+
+/* components/Slider.module.css */
+.sliderContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #11202D;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.imageRow {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.imageRow img {
+  width: 25%;
+  // height: 25%;
+  transition: transform 0.5s ease;
+}
+
+.dots {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  transform: scale(1.1);
+}
+
+.activeDot {
+  background-color: #FFFFFF;
+}
+.carouimage {
+  margin: 0;
+  padding: 0;
+}
+
+.carouimage img {
+  display: block;
+}
