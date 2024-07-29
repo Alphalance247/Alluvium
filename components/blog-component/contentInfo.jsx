@@ -1,7 +1,6 @@
 import Image from "next/image";
 import styles from "../../styles/blogpost.module.scss";
 import { Blogheading } from "./informationItem";
-import ContentList from "./informationItem";
 import Introduction from "./introduction";
 import Benefit from "./collaborate";
 import AtlassianPartner from "./atlassianPartner";

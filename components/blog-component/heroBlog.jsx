@@ -3,12 +3,12 @@ import AssetImg from "./socialimage";
 
 const HeroBlog = () => {
   return (
-    <section className={`${styles.heroblog} container-fluid`}>
+    <section className={`${styles.heroblogstyles} container-fluid`}>
       <div className={`container m-auto`}>
         <h1>Why Hire Us as Your Atlassian Partner</h1>
 
-        <div className={`${styles.blogdata}`}>
-          <div className={`${styles.content}`}>
+        <div className={`${styles.blogdatastyle}`}>
+          <div className={`${styles.contentstyling}`}>
             <p className={`${styles.contentname}`}>By James Akinlabi</p>
             <p className={`${styles.contentdate}`}>
               Sept 15th, 2024 <span>.</span> 5 mins read
