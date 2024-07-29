@@ -4,7 +4,7 @@ import { Blogheading } from "./informationItem";
 import Introduction from "./introduction";
 import Benefit from "./collaborate";
 import AtlassianPartner from "./atlassianPartner";
-import ChoosingAlluvium from "./choosealluvium";
+import ChoosingAlluvium from "./chooseAlluvium";
 // import Lifecycle from "./lifecycle";
 import Conclusion from "./conclusion";
 import WorkwithAtlassian from "./getintouch";
