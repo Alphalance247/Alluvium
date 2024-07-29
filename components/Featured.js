@@ -14,7 +14,7 @@ export default function () {
       <div className={`${styles.featured}`}>
         <div className="row container mx-auto">
           <h3 className={`${styles.featuredsec}`}>FEATURED SECTION</h3>
-          <Link href="#" passHref>
+          <Link href="/why-hire-us" passHref>
             <div
               className={`col-md-4 d-flex align-items-center ${styles.points}`}
             >

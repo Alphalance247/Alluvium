@@ -7,14 +7,7 @@ import Image from "next/image";
 const CaseStudy = ({ caseStudy }) => {
   return (
     <>
-      <div
-        className={`container-fluid p-0 m-0 mb-4 ${styles.caseStudy}`}
-        // style={{
-        //   backgroundImage: `url(${caseStudy?.clientLogo})`,
-        //   backgroundRepeat: "no-repeat",
-        //   height: "340px",
-        // }}
-      >
+      <div className={`container-fluid p-0 m-0 mb-4 ${styles.caseStudy}`}>
         <Image
           src={caseStudy?.clientLogo}
           alt={caseStudy?.title}
