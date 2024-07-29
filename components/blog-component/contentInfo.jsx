@@ -1,14 +1,14 @@
 import Image from "next/image";
 import styles from "../../styles/blogpost.module.scss";
-import { blogheading } from "./informationItem";
+import { Blogheading } from "./informationItem";
 import ContentList from "./informationItem";
 import Introduction from "./introduction";
-import AtlassianPartner from "./atlassianpartner";
-import WorkWithAtlassian from "./getintouch";
 import Benefit from "./collaborate";
+import AtlassianPartner from "./atlassianPartner";
 import ChoosingAlluvium from "./choosealluvium";
 // import Lifecycle from "./lifecycle";
 import Conclusion from "./conclusion";
+import WorkwithAtlassian from "./getintouch";
 import { useState } from "react";
 
 const ContentTab = () => {
@@ -32,7 +32,7 @@ const ContentTab = () => {
       <div className={`${styles.innerContent}`}>
         <div className={styles.styleTab}>
           <p className={styles.styleP}>TABLE OF CONTENT</p>
-          {blogheading.map((data, i) => (
+          {Blogheading.map((data, i) => (
             <div
               key={data.id}
               onClick={() => handleToggle(i)}
@@ -47,7 +47,7 @@ const ContentTab = () => {
 
         <div className={`${styles.contentListing}`}>
           {activeTab === 1 && <AtlassianPartner />}
-          {activeTab === 2 && <WorkWithAtlassian />}
+          {activeTab === 2 && <WorkwithAtlassian />}
           {activeTab === 3 && <Benefit />}
           {activeTab === 4 && <ChoosingAlluvium />}
           {/* {activeTab === 5 && <Lifecycle />} */}
@@ -56,7 +56,7 @@ const ContentTab = () => {
             <>
               <Introduction />
               <AtlassianPartner />
-              <WorkWithAtlassian />
+              <WorkwithAtlassian />
               <Benefit />
               <ChoosingAlluvium />
               {/* <Lifecycle /> */}

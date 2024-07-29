@@ -1,4 +1,4 @@
-const WorkWithAtlassian = () => {
+const WorkwithAtlassian = () => {
   return (
     <div>
       <h3>When to Work With an Atlassian Partner</h3>
@@ -51,4 +51,4 @@ const WorkWithAtlassian = () => {
   );
 };
 
-export default WorkWithAtlassian;
+export default WorkwithAtlassian;

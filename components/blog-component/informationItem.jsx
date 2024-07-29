@@ -1,4 +1,4 @@
-export const blogheading = [
+export const Blogheading = [
   {
     id: "1",
     heading: "Introduction",
@@ -29,7 +29,7 @@ export const blogheading = [
   },
 ];
 
-const articledata = [
+export const Articledata = [
   {
     id: "1",
     image: "/assets/blogImages/agile1.svg",
@@ -58,5 +58,3 @@ const articledata = [
     publishedDate: "Sept 15th, 2024 . 5 mins read",
   },
 ];
-
-export default articledata;

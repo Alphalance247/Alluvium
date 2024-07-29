@@ -1,15 +1,13 @@
 import styles from "../../styles/blogpost.module.scss";
 import Image from "next/image";
-import articledata from "./informationItem";
-
+import { Articledata } from "./informationItem";
 const Articles = () => {
   return (
     <section className={`container-fluid ${styles.Articles}`}>
       <div className="container m-auto">
         <h2>Related Articles</h2>
-
         <div className={`${styles.articlediv}`}>
-          {articledata.map((el) => {
+          {Articledata.map((el) => {
             return (
               <div className={styles.articlencap} key={el.id}>
                 <div className={styles.imgs}>
