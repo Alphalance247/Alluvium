@@ -10,52 +10,30 @@ function CenterMode() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4
+    slidesToShow: 3,
+    slidesToScroll: 3,
   };
   return (
-    <div className="slider-container" style={{backgroundColor: "#11202D"}}>
+    <div className="slider-container" style={{ backgroundColor: "#11202D" }}>
       <Slider {...settings}>
         <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            src="/assets/event/expo1.png"
-          />
+          <Image width={347} height={300} src="/assets/event/expo1.png" />
         </div>
         <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            src="/assets/event/expo2.png"
-          />
+          <Image width={347} height={300} src="/assets/event/expo2.png" />
         </div>
         <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            src="/assets/event/expo3.png"
-          />
+          <Image width={347} height={300} src="/assets/event/expo3.png" />
         </div>
         <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            src="/assets/event/expo4.png"
-          />
+          <Image width={347} height={300} src="/assets/event/expo4.png" />
         </div>
         <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            src="/assets/event/expo5.png"
-          />
+          <Image width={347} height={300} src="/assets/event/expo5.png" />
         </div>
-     
       </Slider>
     </div>
   );
 }
 
 export default CenterMode;
-
