@@ -25,7 +25,7 @@ export default function () {
           pauseOnFocus={false}
           infinite={true}
         >
-          <CommunityEvent />
+          {/* <CommunityEvent /> */}
           <AtPartner />
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
