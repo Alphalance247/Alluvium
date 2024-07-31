@@ -26,7 +26,22 @@
       .questionsSection {
         display: flex;
         column-gap: 2.5rem;
-        align-items: baseline;
+        align-items: flex-start;
+        cursor: pointer;
+
+        &:hover {
+          h5 {
+            color: #e37915 !important;
+          }
+
+          .idstyle {
+            color: #e37915;
+          }
+
+          .arrowRightStyle {
+            color: #e37915;
+          }
+        }
 
         @media screen and (max-width: 992px) {
           flex-direction: column;
@@ -42,6 +57,15 @@
       }
 
       .questcontent {
+        .arrowsec {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          .arrowRightStyle {
+            font-size: 25px;
+          }
+        }
         h5 {
           font-size: 1.5rem;
           line-height: 2rem;

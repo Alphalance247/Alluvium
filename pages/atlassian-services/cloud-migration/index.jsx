@@ -7,7 +7,7 @@ import ChooseUs from "components/licence-component/chooseUs";
 import CaseStudies from "components/case-studies/case-studies";
 import FaqPage from "components/faqPage";
 import FaQuestions from "components/licence-component/faQuestion";
-import LicenceHero from "pages/atlassian-licence/licence-request/licencehero";
+import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero";
 
 const CloudMigration = () => {
   return (
@@ -30,7 +30,7 @@ const CloudMigration = () => {
           <h4>Seamlessly migrate your data with Alluvium – Get started now!</h4>
 
           <div>
-            <Link href="">
+            <Link href="/support/contact#schedule-a-call">
               <button className={styles.button1}>Schedule a Call</button>
             </Link>
           </div>

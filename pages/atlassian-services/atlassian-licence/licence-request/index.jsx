@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import styles from "../../../styles/licence.module.scss";
+// import styles from "../../styles/licence.module.scss";
 import { useState } from "react";
 import Input from "components/licence-component/inputP";
 import { useEffect } from "react";
@@ -8,6 +8,7 @@ import PhoneInput from "react-phone-number-input";
 import axios from "axios";
 import { ToastProvider, useToasts } from "react-toast-notifications";
 import LoadingScreen from "components/loading";
+import styles from "../../../../styles/licence.module.scss";
 
 const RequestForm = () => {
   const [dropDown, setDropDown] = useState("");

@@ -1629,30 +1629,35 @@ export const discoverAtlassiansServ = [
   {
     id: 1,
     heading: "Cloud & Data Migration",
+    servicepage: "cloud-migration",
     questions:
       "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
   },
   {
     id: 2,
     heading: "Training & Support",
+    servicepage: "",
     questions:
       "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
   },
   {
     id: 3,
     heading: "Licensing Management",
+    servicepage: "atlassian-licence",
     questions:
       "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
   },
   {
     id: 4,
     heading: "Atlassian Consulting & Strategy",
+    servicepage: "",
     questions:
       "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
   },
   {
     id: 5,
     heading: "JSM Implementation",
+    servicepage: "",
     questions:
       "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
   },

@@ -1,7 +1,7 @@
 import styles from "../../../styles/licence.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import AutoPlay from "pages/atlassian-product/atlassian-services/autoplay";
+import AutoPlay from "pages/atlassian-services/autoplay";
 
 const LicenceHero = ({
   contentsheading,
@@ -18,7 +18,7 @@ const LicenceHero = ({
         <h3>{contentsheading1}</h3>
         <p>{contentsheading2}</p>
         <div>
-          <Link href="/atlassian-licence/licence-request">
+          <Link href="/atlassian-services/atlassian-licence/licence-request">
             <button className={styles.button1}>{buttontext}</button>
           </Link>
 

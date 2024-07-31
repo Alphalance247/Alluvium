@@ -1,5 +1,8 @@
+import Link from "next/link";
 import styles from "../../styles/atlassian-services-style/atlassianlicenceservices.module.scss";
 import { discoverAtlassiansServ } from "data";
+import { GoArrowRight } from "react-icons/go";
+
 const DiscoverAtlassian = () => {
   return (
     <section className={`container-fluid ${styles.atlassiandiscover}`}>
@@ -12,20 +15,26 @@ const DiscoverAtlassian = () => {
             arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
             id.
           </p>
-          <button className={styles.button1}>Schedule a Call</button>
+          <Link href="/support/contact#schedule-a-call">
+            <button className={styles.button1}>Schedule a Call</button>
+          </Link>
         </div>
-
         <div className={`${styles.discoverdropdown}`}>
           {discoverAtlassiansServ.map((item, i) => (
-            <div key={item.id}>
-              <div className={`${styles.questionsSection}`}>
-                <p className={`${styles.idstyle}`}>0{item.id}</p>
-                <div className={`${styles.questcontent}`}>
-                  <h5>{item.heading}</h5>
-                  <p>{item.questions}</p>
-                  <hr className={` ${styles.horizon}`} />
+            <div key={item?.id}>
+              <Link href={"/atlassian-services/" + item?.servicepage} passHref>
+                <div className={`${styles.questionsSection}`}>
+                  <p className={`${styles.idstyle}`}>0{item?.id}</p>
+                  <div className={`${styles.questcontent}`}>
+                    <div className={styles.arrowsec}>
+                      <h5>{item?.heading}</h5>
+                      <GoArrowRight className={styles.arrowRightStyle} />
+                    </div>
+                    <p>{item?.questions}</p>
+                    <hr className={` ${styles.horizon}`} />
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>
