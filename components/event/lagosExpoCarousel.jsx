@@ -4,17 +4,27 @@ import Image from "next/image";
 import styles from "../../styles/eventblog.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SampleNextArrow from "./sampleRArrow";
 
-function CenterMode() {
+function LagosExpoCarousel() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
   };
+
   return (
-    <div className="slider-container" style={{ backgroundColor: "#11202D" }}>
+    <div
+      className="container-fluid"
+      style={{
+        backgroundColor: "#11202D",
+        padding: "2rem 0",
+        position: "relative",
+      }}
+    >
       <Slider {...settings}>
         <div className={styles.carouimage}>
           <Image width={347} height={300} src="/assets/event/expo1.png" />
@@ -31,9 +41,15 @@ function CenterMode() {
         <div className={styles.carouimage}>
           <Image width={347} height={300} src="/assets/event/expo5.png" />
         </div>
+        <div className={styles.carouimage}>
+          <Image width={347} height={300} src="/assets/event/expo5.png" />
+        </div>
+        <div className={styles.carouimage}>
+          <Image width={347} height={300} src="/assets/event/expo5.png" />
+        </div>
       </Slider>
     </div>
   );
 }
 
-export default CenterMode;
+export default LagosExpoCarousel;

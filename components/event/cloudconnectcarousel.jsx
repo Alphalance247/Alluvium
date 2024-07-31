@@ -1,3 +1,4 @@
+"use client";
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
@@ -5,67 +6,35 @@ import styles from "../../styles/eventblog.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GoArrowRight } from "react-icons/go";
+import SampleNextArrow from "./sampleRArrow";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <>
-      {/* <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "red",
-          position: "absolute",
-          left: "4rem",
-        }}
-        onClick={onClick}
-      /> */}
-
-      <GoArrowRight
-        // className={className}
-        style={{
-          ...style,
-          display: "block",
-          background: "red",
-          position: "absolute",
-          left: "4rem",
-          top: "-1rem",
-          cursor: "pointer",
-        }}
-        onClick={onClick}
-      />
-    </>
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        background: "green",
-        position: "absolute",
-        zIndex: "4",
-        left: "25px",
-      }}
-      onClick={onClick}
-    />
-  );
-}
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{
+//         ...style,
+//         display: "block",
+//         background: "green",
+//         position: "absolute",
+//         zIndex: "4",
+//         left: "25px",
+//       }}
+//       onClick={onClick}
+//     />
+//   );
+// }
 
 function CloudConnectCarousel() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // prevArrow: <SamplePrevArrow />,
   };
 
   return (
@@ -73,7 +42,7 @@ function CloudConnectCarousel() {
       className="container-fluid"
       style={{
         backgroundColor: "#11202D",
-        padding: "2rem 1rem",
+        padding: "2rem 0",
         position: "relative",
       }}
     >

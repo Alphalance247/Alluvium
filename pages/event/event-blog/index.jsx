@@ -10,12 +10,13 @@ import Gitex24 from "components/event/Gitex24";
 import Gitex24Carousel from "components/event/Gitex24Carousel";
 import Team24 from "components/event/Team24";
 import Expo from "components/event/Expo";
-import EventBlogCarousel from "components/event/EventBlogCarousel";
-import Team24Carousel from "components/event/Team24Carousel";
+import Team24Carousel from "components/event/atlassianTeam24Carousel";
 import CloudCarousel from "components/event/cloudconnectcarousel";
 import CloudConnectCarousel from "components/event/cloudconnectcarousel";
-import ExpoCarousel from "components/event/ExpoCarousel";
 import Connect from "components/event/connect23";
+import LagosExpoCarousel from "components/event/lagosExpoCarousel";
+import GitexAfricaCarousel from "components/event/gitexAfricaCarousel";
+import AtlassianTeam24Carousel from "components/event/atlassianTeam24Carousel";
 
 const EventBlog = () => {
   const giteximages = [
@@ -68,13 +69,14 @@ const EventBlog = () => {
         <EventHero />
         <DateVen />
         <Gitex24 />
-        {/* <EventBlogCarousel /> */}
+        <GitexAfricaCarousel />
         <Team24 />
+        <AtlassianTeam24Carousel />
         {/* <Team24Carousel /> */}
         <Connect />
         <CloudConnectCarousel />
         <Expo />
-        {/* <ExpoCarousel /> */}
+        <LagosExpoCarousel />
       </Layout>
     </>
   );
