@@ -6,18 +6,22 @@ export default function () {
   return (
     <div className={`${styles.customxs}`}>
       <div className={`${styles.featured}`}>
-      
-      <div className="row">
-    <div className="col">
-        <label>Date</label>
-      <input type="date" className={`form-control ${styles.underlineinput}`} />
-    </div>
-    <div className="col">
-    <label>Venue</label>
-      <input type="text" className={`form-control ${styles.underlineinput}`} />
-    </div>
-  </div>
-      
+        <div className="row">
+          <div className="col">
+            <label>Date</label>
+            <input
+              type="date"
+              className={`form-control ${styles.underlineinput}`}
+            />
+          </div>
+          <div className="col">
+            <label>Venue</label>
+            <input
+              type="text"
+              className={`form-control ${styles.underlineinput}`}
+            />
+          </div>
+        </div>
       </div>
 
       <div className={`${styles.latestevents}`}>

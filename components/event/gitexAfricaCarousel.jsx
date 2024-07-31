@@ -6,14 +6,15 @@ import styles from "../../styles/eventblog.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SampleNextArrow from "./sampleRArrow";
+import { giteximages } from "data";
 
 function GitexAfricaCarousel() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     nextArrow: <SampleNextArrow />,
   };
 
@@ -27,10 +28,12 @@ function GitexAfricaCarousel() {
       }}
     >
       <Slider {...settings}>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/g1.png" />
-        </div>
-        <div className={styles.carouimage}>
+        {giteximages.map((item) => (
+          <div className={styles.carouimage} key={item.id}>
+            <Image width={347} height={300} src={item.imgChoose} />
+          </div>
+        ))}
+        {/* <div className={styles.carouimage}>
           <Image width={347} height={300} src="/assets/event/g1.png" />
         </div>
         <div className={styles.carouimage}>
@@ -44,7 +47,7 @@ function GitexAfricaCarousel() {
         </div>
         <div className={styles.carouimage}>
           <Image width={347} height={300} src="/assets/event/g5.png" />
-        </div>
+        </div> */}
       </Slider>
     </div>
   );

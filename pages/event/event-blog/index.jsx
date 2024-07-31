@@ -19,37 +19,13 @@ import GitexAfricaCarousel from "components/event/gitexAfricaCarousel";
 import AtlassianTeam24Carousel from "components/event/atlassianTeam24Carousel";
 
 const EventBlog = () => {
-  const giteximages = [
-    "/assets/event/g1.png",
-    "/assets/event/g2.png",
-    "/assets/event/g3.png",
-    "/assets/event/g4.png",
-    "/assets/event/g5.png",
-  ];
+  // const giteximages = ["", "", "", "", ""];
 
-  const team24images = [
-    "/assets/event/t1img.png",
-    "/assets/event/t2img.png",
-    "/assets/event/t3img.png",
-    "/assets/event/t4img.png",
-    "/assets/event/t5img.png",
-  ];
+  // const team24images = ["", "", "", "", ""];
 
-  const cloudconnect23images = [
-    "/assets/event/cloud1.png",
-    "/assets/event/cloud2.png",
-    "/assets/event/cloud3.png",
-    "/assets/event/cloud4.png",
-    "/assets/event/cloud5.png",
-  ];
+  // const cloudconnect23images = ["", "", "", "", ""];
 
-  const expoimages = [
-    "/assets/event/expo1.png",
-    "/assets/event/expo2.png",
-    "/assets/event/expo3.png",
-    "/assets/event/expo4.png",
-    "/assets/event/expo5.png",
-  ];
+  // const expoimages = ["", "", "", "", ""];
 
   return (
     <>

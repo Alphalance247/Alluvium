@@ -1542,3 +1542,151 @@ export const chooseUsOptions = [
       "Lorem ipsum dolor sit amet consectetur. Faucibus scelerisque augue pellentesque integer tincidunt mi interdum eget.",
   },
 ];
+
+export const giteximages = [
+  {
+    id: "1",
+    imgChoose: "/assets/event/g1.png",
+  },
+  {
+    id: "2",
+    imgChoose: "/assets/event/g2.png",
+  },
+  {
+    id: "3",
+    imgChoose: "/assets/event/g3.png",
+  },
+  {
+    id: "4",
+    imgChoose: "/assets/event/g4.png",
+  },
+  {
+    id: "5",
+    imgChoose: "/assets/event/g5.png",
+  },
+  {
+    id: "6",
+    imgChoose: "/assets/event/g6.png",
+  },
+  {
+    id: "7",
+    imgChoose: "/assets/event/gitex7.png",
+  },
+  {
+    id: "8",
+    imgChoose: "/assets/event/gitex8.png",
+  },
+  {
+    id: "9",
+    imgChoose: "/assets/event/gitex9.png",
+  },
+  {
+    id: "10",
+    imgChoose: "/assets/event/gitex10.png",
+  },
+  {
+    id: "11",
+    imgChoose: "/assets/event/gitex11.png",
+  },
+  {
+    id: "12",
+    imgChoose: "/assets/event/gitex12.png",
+  },
+  {
+    id: "13",
+    imgChoose: "/assets/event/gitex13.png",
+  },
+  {
+    id: "14",
+    imgChoose: "/assets/event/gitex14.png",
+  },
+  {
+    id: "15",
+    imgChoose: "/assets/event/gitex15.png",
+  },
+  {
+    id: "16",
+    imgChoose: "/assets/event/gitex16.png",
+  },
+];
+
+export const team24images = [
+  {
+    id: "1",
+    imgChoose: "/assets/event/t1img.png",
+  },
+  {
+    id: "2",
+    imgChoose: "/assets/event/t2img.png",
+  },
+  {
+    id: "3",
+    imgChoose: "/assets/event/t3img.png",
+  },
+  {
+    id: "4",
+    imgChoose: "/assets/event/t4img.png",
+  },
+  {
+    id: "5",
+    imgChoose: "/assets/event/t5img.png",
+  },
+  {
+    id: "6",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+  },
+];
+
+export const cloudconnect23images = [
+  {
+    id: "1",
+    imgChoose: "/assets/event/cloud1.png",
+  },
+  {
+    id: "2",
+    imgChoose: "/assets/event/cloud2.png",
+  },
+  {
+    id: "3",
+    imgChoose: "/assets/event/cloud3.png",
+  },
+  {
+    id: "4",
+    imgChoose: "/assets/event/cloud4.png",
+  },
+  {
+    id: "5",
+    imgChoose: "/assets/event/cloud5.png",
+  },
+  {
+    id: "6",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+  },
+];
+
+export const expoimages = [
+  {
+    id: "1",
+    imgChoose: "/assets/event/expo1.png",
+  },
+  {
+    id: "2",
+    imgChoose: "/assets/event/expo2.png",
+  },
+  {
+    id: "3",
+    imgChoose: "/assets/event/expo3.png",
+  },
+  {
+    id: "4",
+    imgChoose: "/assets/event/expo4.png",
+  },
+  {
+    id: "5",
+    imgChoose: "/assets/event/expo5.png",
+  },
+  {
+    id: "6",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+  },
+];
