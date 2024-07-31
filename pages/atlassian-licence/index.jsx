@@ -32,7 +32,7 @@ const AtlassianLicence = () => {
       <Platinum />
       <Purchase />
       <ChooseUs choose="Why Choose Alluvium" />
-      <FaQuestions />
+      {/* <FaQuestions /> */}
     </Layout>
   );
 };
