@@ -4,8 +4,8 @@ import styles from "../../styles/eventblog.module.scss";
 
 export default function () {
   return (
-    <div className={`${styles.customxs}`}>
-      <div className={`${styles.featured}`}>
+    <div className={`container-fluid ${styles.customxs}`}>
+      <div className={`container m-auto ${styles.featuredHero}`}>
         <div className="row">
           <div className="col">
             <label>Date</label>

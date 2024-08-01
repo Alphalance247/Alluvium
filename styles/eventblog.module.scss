@@ -39,7 +39,7 @@
     padding-bottom: 33px;
   }
 
-  .featured {
+  .featuredHero {
     width: 70%;
     margin: auto;
     position: relative;
@@ -49,6 +49,7 @@
 
     @media (max-width: 768px) {
       padding: 1rem;
+      width: 90%;
     }
   }
 
@@ -67,7 +68,7 @@
   background-color: #11202d;
 }
 
-.featured {
+.featuredHero {
   // margin-top: -65px;
   border-radius: 8px;
 }
@@ -75,7 +76,6 @@
 .herobanner {
   background-image: url("/assets/event/eventbg.png");
   background-size: cover;
-  // padding-top: 120px;
   height: 485px;
 
   .heroimg {
@@ -85,7 +85,6 @@
 
   .upcomingparent {
     display: grid;
-    margin-left: 110.37px;
     padding-top: 53px;
     padding-bottom: 11.29px;
 
@@ -101,7 +100,6 @@
     background-color: #746e6e;
     color: #fff;
     width: 293.63px;
-    // height: 43.71px;
     padding-left: 23.11px;
     padding-right: 22.51px;
     padding-top: 3.79px;
@@ -139,6 +137,14 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 5rem;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  align-items: center;
+
+  @media screen and (max-width: 992px) {
+    column-gap: 3rem;
+    align-items: flex-start;
+  }
 
   @media screen and (max-width: 576px) {
     grid-template-columns: repeat(1, 1fr);
@@ -146,22 +152,34 @@
 
   .gitexcontentdiv {
     display: grid;
-    margin-top: 80px;
-    margin-bottom: 80px;
     place-items: center;
 
     .gitextdiv {
       margin-bottom: 21px;
 
+      @media screen and (max-width: 992px) {
+        margin-bottom: 2px;
+      }
+
       .gitext {
-        font-size: 60.96px;
+        font-size: 3.5rem;
         font-weight: bold;
         line-height: 71.7px;
         color: #1a768d;
         max-width: 525px;
 
+        @media screen and (max-width: 1026px) {
+          font-size: 2.5rem;
+          line-height: 50px;
+        }
+
+        @media screen and (max-width: 992px) {
+          font-size: 1.8rem;
+          line-height: 50px;
+        }
+
         @media screen and (max-width: 576px) {
-          font-size: 30px;
+          font-size: 1rem;
           line-height: 35.8px;
         }
       }
@@ -175,6 +193,14 @@
         font-weight: bold;
         line-height: 150%;
         color: #191d48;
+
+        @media screen and (max-width: 992px) {
+          font-size: 1.2rem;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 0.9rem;
+        }
       }
     }
 
@@ -185,6 +211,10 @@
         font-size: 18px;
         line-height: 20px;
         color: #000000;
+
+        @media screen and (max-width: 992px) {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -193,13 +223,14 @@
 
       .desctext {
         font-size: 15.4px;
-        line-height: 130%;
+        line-height: 25px;
         color: #121212;
         text-align: left;
 
         @media screen and (max-width: 576px) {
           text-align: justify;
           margin: 0.2rem;
+          font-size: 13px;
         }
       }
     }
@@ -207,13 +238,6 @@
 
   .gitexpicturediv {
     display: grid;
-    // margin-right: 122.82px;
-    place-items: center;
-
-    @media screen and (max-width: 576px) {
-      margin-top: -30%;
-      margin-bottom: 25%;
-    }
   }
 }
 
@@ -263,11 +287,60 @@
 .activeDot {
   background-color: #ffffff;
 }
-// .carouimage {
-//   margin: 0;
-//   padding: 0;
-// }
 
-// .carouimage img {
-//   display: block;
-// }
+.arrowLeftStyle {
+  display: block;
+  background: white;
+  position: absolute;
+  z-index: 4;
+  left: 25px;
+  top: 6rem;
+  cursor: pointer;
+  color: #004080;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  padding: 0.5rem;
+
+  @media screen and (max-width: 992px) {
+    top: 3rem;
+    width: 25px;
+    height: 25px;
+    left: 5px;
+  }
+  @media screen and (max-width: 576px) {
+    top: 1rem;
+    width: 15px;
+    height: 15px;
+    padding: 0.2rem;
+  }
+}
+
+.arrowRightStyle {
+  display: block;
+  background: white;
+  position: absolute;
+  right: 2rem;
+  top: 6rem;
+  cursor: pointer;
+  color: #004080;
+  border-radius: 50%;
+  font-size: 12px;
+  width: 35px;
+  height: 35px;
+  padding: 0.5rem;
+
+  @media screen and (max-width: 992px) {
+    top: 3rem;
+    width: 25px;
+    height: 25px;
+    right: 5px;
+  }
+  @media screen and (max-width: 576px) {
+    top: 1rem;
+    width: 15px;
+    height: 15px;
+    padding: 0.2rem;
+  }
+}

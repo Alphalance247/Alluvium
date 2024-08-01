@@ -5,15 +5,18 @@ import styles from "../../styles/eventblog.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SampleNextArrow from "./sampleRArrow";
+import { team24images } from "data";
+import SamplePrevArrow from "./sampleLeftArrow";
 
 function AtlassianTeam24Carousel() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
   return (
     <div
@@ -25,33 +28,17 @@ function AtlassianTeam24Carousel() {
       }}
     >
       <Slider {...settings}>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t1img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t2img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t3img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t4img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t5img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t2img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t2img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t5img.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/t1img.png" />
-        </div>
+        {team24images.map((item) => (
+          <div className={styles.carouimage} key={item.id}>
+            <Image
+              width={347}
+              height={300}
+              src={item.imgChoose}
+              alt="team24"
+              layout="responsive"
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

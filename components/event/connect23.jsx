@@ -15,7 +15,7 @@ const Connect = () => {
           </div>
           <div className={`${styles.detailstextdiv}`}>
             <text className={` ${styles.detailstext}`}>
-              Ekiti | Nov 30th, 2023
+              Ekiti <span style={{ color: "#FBAA47" }}>Nov 30th, 2023</span>
             </text>
           </div>
           <div className={`${styles.desctextdiv}`}>

@@ -5,36 +5,19 @@ import Image from "next/image";
 import styles from "../../styles/eventblog.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { GoArrowRight } from "react-icons/go";
 import SampleNextArrow from "./sampleRArrow";
-
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{
-//         ...style,
-//         display: "block",
-//         background: "green",
-//         position: "absolute",
-//         zIndex: "4",
-//         left: "25px",
-//       }}
-//       onClick={onClick}
-//     />
-//   );
-// }
+import { cloudconnect23images } from "data";
+import SamplePrevArrow from "./sampleLeftArrow";
 
 function CloudConnectCarousel() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
@@ -47,54 +30,17 @@ function CloudConnectCarousel() {
       }}
     >
       <Slider {...settings}>
-        <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            layout="responsive"
-            src="/assets/event/g1.png"
-          />
-        </div>
-        <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            layout="responsive"
-            src="/assets/event/cloud5.png"
-          />
-        </div>
-        <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            layout="responsive"
-            src="/assets/event/cloud2.png"
-          />
-        </div>
-        <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            layout="responsive"
-            src="/assets/event/cloud3.png"
-          />
-        </div>
-        <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            layout="responsive"
-            src="/assets/event/cloud4.png"
-          />
-        </div>
-        <div className={styles.carouimage}>
-          <Image
-            width={347}
-            height={300}
-            layout="responsive"
-            src="/assets/event/cloud5.png"
-          />
-        </div>
+        {cloudconnect23images.map((item) => (
+          <div className={styles.carouimage} key={item.id}>
+            <Image
+              width={347}
+              height={300}
+              src={item.imgChoose}
+              alt={`cloudconnect${item.id}`}
+              layout="responsive"
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

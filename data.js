@@ -1629,11 +1629,59 @@ export const team24images = [
   },
   {
     id: "5",
-    imgChoose: "/assets/event/t5img.png",
+    imgChoose: "/assets/event/team5.png",
   },
   {
     id: "6",
-    imgChoose: "/assets/licence-image/carbonImg.svg",
+    imgChoose: "/assets/event/team6.png",
+  },
+  {
+    id: "7",
+    imgChoose: "/assets/event/team7.png",
+  },
+  {
+    id: "8",
+    imgChoose: "/assets/event/team8.png",
+  },
+  {
+    id: "9",
+    imgChoose: "/assets/event/team9.png",
+  },
+  {
+    id: "10",
+    imgChoose: "/assets/event/team10.png",
+  },
+  {
+    id: "11",
+    imgChoose: "/assets/event/team11.png",
+  },
+  {
+    id: "12",
+    imgChoose: "/assets/event/team12.png",
+  },
+  {
+    id: "13",
+    imgChoose: "/assets/event/team13.png",
+  },
+  {
+    id: "14",
+    imgChoose: "/assets/event/team14.png",
+  },
+  {
+    id: "15",
+    imgChoose: "/assets/event/team15.png",
+  },
+  {
+    id: "16",
+    imgChoose: "/assets/event/team16.png",
+  },
+  {
+    id: "17",
+    imgChoose: "/assets/event/team17.png",
+  },
+  {
+    id: "18",
+    imgChoose: "/assets/event/team18.png",
   },
 ];
 
@@ -1660,7 +1708,75 @@ export const cloudconnect23images = [
   },
   {
     id: "6",
-    imgChoose: "/assets/licence-image/carbonImg.svg",
+    imgChoose: "/assets/event/cloud6.png",
+  },
+  {
+    id: "7",
+    imgChoose: "/assets/event/cloud7.png",
+  },
+  {
+    id: "8",
+    imgChoose: "/assets/event/cloud8.png",
+  },
+  {
+    id: "9",
+    imgChoose: "/assets/event/cloud9.png",
+  },
+  {
+    id: "10",
+    imgChoose: "/assets/event/cloud10.png",
+  },
+  {
+    id: "11",
+    imgChoose: "/assets/event/cloud11.png",
+  },
+  {
+    id: "13",
+    imgChoose: "/assets/event/cloud13.png",
+  },
+  {
+    id: "14",
+    imgChoose: "/assets/event/cloud14.png",
+  },
+  {
+    id: "15",
+    imgChoose: "/assets/event/cloud15.png",
+  },
+  {
+    id: "16",
+    imgChoose: "/assets/event/cloud16.png",
+  },
+  {
+    id: "17",
+    imgChoose: "/assets/event/cloud17.png",
+  },
+  {
+    id: "18",
+    imgChoose: "/assets/event/cloud18.png",
+  },
+  {
+    id: "19",
+    imgChoose: "/assets/event/cloud19.png",
+  },
+  {
+    id: "20",
+    imgChoose: "/assets/event/cloud20.png",
+  },
+  {
+    id: "21",
+    imgChoose: "/assets/event/cloud21.png",
+  },
+  {
+    id: "22",
+    imgChoose: "/assets/event/cloud22.png",
+  },
+  {
+    id: "23",
+    imgChoose: "/assets/event/cloud23.png",
+  },
+  {
+    id: "24",
+    imgChoose: "/assets/event/cloud24.png",
   },
 ];
 
@@ -1687,6 +1803,50 @@ export const expoimages = [
   },
   {
     id: "6",
-    imgChoose: "/assets/licence-image/carbonImg.svg",
+    imgChoose: "/assets/event/expo6.png",
+  },
+  {
+    id: "7",
+    imgChoose: "/assets/event/expo7.png",
+  },
+  {
+    id: "8",
+    imgChoose: "/assets/event/expo8.png",
+  },
+  {
+    id: "9",
+    imgChoose: "/assets/event/expo9.png",
+  },
+  {
+    id: "10",
+    imgChoose: "/assets/event/expo10.png",
+  },
+  {
+    id: "11",
+    imgChoose: "/assets/event/expo11.png",
+  },
+  {
+    id: "12",
+    imgChoose: "/assets/event/expo12.png",
+  },
+  {
+    id: "13",
+    imgChoose: "/assets/event/expo13.png",
+  },
+  {
+    id: "14",
+    imgChoose: "/assets/event/expo14.png",
+  },
+  {
+    id: "15",
+    imgChoose: "/assets/event/expo15.png",
+  },
+  {
+    id: "16",
+    imgChoose: "/assets/event/expo16.png",
+  },
+  {
+    id: "17",
+    imgChoose: "/assets/event/expo17.png",
   },
 ];

@@ -5,15 +5,18 @@ import styles from "../../styles/eventblog.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SampleNextArrow from "./sampleRArrow";
+import { expoimages } from "data";
+import SamplePrevArrow from "./sampleLeftArrow";
 
 function LagosExpoCarousel() {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
+    slidesToShow: 5,
+    slidesToScroll: 5,
     nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
@@ -26,27 +29,17 @@ function LagosExpoCarousel() {
       }}
     >
       <Slider {...settings}>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/expo1.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/expo2.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/expo3.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/expo4.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/expo5.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/expo5.png" />
-        </div>
-        <div className={styles.carouimage}>
-          <Image width={347} height={300} src="/assets/event/expo5.png" />
-        </div>
+        {expoimages.map((item) => (
+          <div className={styles.carouimage} key={item.id}>
+            <Image
+              width={347}
+              height={300}
+              src={item.imgChoose}
+              alt={`cloudconnect ${item.id}`}
+              layout="responsive"
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );
