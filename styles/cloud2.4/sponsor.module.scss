@@ -1,0 +1,440 @@
+.whybecomesponsor {
+  background: #082433;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .firstheading {
+    margin-bottom: 5.8rem;
+
+    .whybecomeheading {
+      padding-left: 5.2rem;
+      margin-bottom: 5rem;
+      width: 80%;
+      margin-right: auto;
+
+      @media screen and (max-width: 992px) {
+        padding-left: 3rem;
+        width: 90%;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding-left: 0rem;
+      }
+
+      h3 {
+        font-weight: 500;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        margin-bottom: 1rem;
+        color: white;
+
+        @media screen and (max-width: 992px) {
+          font-size: 2rem;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+      }
+
+      p {
+        color: #d9d9d9;
+        line-height: 2rem;
+        font-size: 1.2rem;
+        grid-gap: 1.5rem;
+        font-family: "Graphik";
+
+        @media screen and (max-width: 576px) {
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+        }
+      }
+    }
+
+    .whybecomeloop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.5rem;
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .sponsorItem {
+        padding: 1.5rem;
+        background: #194257;
+        border-radius: 4px;
+
+        h6 {
+          font-weight: 600;
+          font-size: 1.15rem;
+          line-height: 1.5rem;
+          color: white;
+          margin-bottom: 1rem;
+          font-family: "Graphik";
+        }
+
+        p {
+          color: #d9d9d9;
+          font-size: 1rem;
+          line-height: 1.55rem;
+          font-family: "Graphik";
+        }
+      }
+    }
+  }
+
+  .sponspackages {
+    margin-top: 6rem;
+
+    h3 {
+      font-weight: 500;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      margin-bottom: 5rem;
+      color: white;
+      text-align: center;
+
+      @media screen and (max-width: 992px) {
+        font-size: 2rem;
+      }
+
+      @media screen and (max-width: 576px) {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    .packdivs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 1.5rem;
+
+      @media screen and (max-width: 1025px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+
+        & > div:nth-child(3) {
+          grid-column: span 2;
+        }
+      }
+
+      @media screen and (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 2rem;
+
+        & > div:nth-child(3) {
+          grid-column: span 2;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        & > div:nth-child(3) {
+          grid-column: span 1;
+        }
+      }
+
+      .packagesItem {
+        padding: 1.5rem;
+        background: #0c3246;
+        border-radius: 0.5rem;
+        border: 1px solid #194257;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+
+        @media screen and (max-width: 576px) {
+          padding: 1rem;
+        }
+
+        .packagesP {
+          color: white;
+          font-weight: 500;
+          font-size: 1.5rem;
+          line-height: 1rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 1rem;
+          }
+        }
+
+        h6 {
+          color: white;
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 1.5rem;
+          }
+        }
+
+        p {
+          color: #d9d9d9;
+          font-size: 1rem;
+          line-height: 1.6rem;
+          font-family: "Graphik";
+          margin-bottom: 0rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 0.9rem;
+          }
+        }
+        ul {
+          margin: 0rem;
+        }
+        li {
+          font-weight: 500;
+          color: #f5f5f5;
+          font-size: 1rem;
+          line-height: 2rem;
+          margin-bottom: 0.7rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.BecomeReuseStyle {
+  margin-bottom: 5rem;
+  width: 83%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-align: center;
+    color: #082433;
+
+    @media screen and (max-width: 992px) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+  }
+
+  p {
+    color: #595959;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    grid-gap: 1.5rem;
+    font-family: "Graphik";
+    text-align: center;
+
+    @media screen and (max-width: 576px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.sponsorshipform {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  .formdetails {
+    width: 95%;
+    margin: auto;
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1rem;
+      color: #262626;
+      font-weight: 600;
+      border-bottom: 1px solid #d9d9d9;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .input1style {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1.5rem;
+      column-gap: 1.25rem;
+      margin-bottom: 2rem;
+      margin-top: 1.5rem;
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .input2style {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.25rem;
+      row-gap: 1.5rem;
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    .packageForm {
+      margin-top: 2.5rem;
+
+      .input3style {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5rem;
+        column-gap: 1.25rem;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+
+        @media screen and (max-width: 576px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+
+    .additionalDetails {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+
+      .input4style {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5rem;
+        column-gap: 1.25rem;
+        margin-bottom: 2rem;
+        margin-top: 1.5rem;
+
+        @media screen and (max-width: 576px) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    }
+  }
+}
+
+//////////////////////phone number stylin and select input styling which general fo all select input style//////////////////////////////////
+.labelStyle {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #374151;
+  padding: 0px;
+}
+
+.countrySelect {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  background: white;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.5rem;
+  color: #11202d;
+  appearance: none;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.iconic {
+  position: absolute;
+  top: 68%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #667085;
+  @media screen and (max-width: 576px) {
+    transform: translateY(-2%);
+    top: 60%;
+  }
+}
+
+.PhoneInput input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: white;
+  color: #11202d;
+  padding: 14px;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.PhoneInput > div {
+  outline: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background: white;
+  color: #11202d;
+  padding: 14px;
+  margin-right: 0;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.error {
+  border: 2px solid orangered;
+}
+
+.textareastyle {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 5px;
+  padding: 12px 1rem;
+  outline: none;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.button1 {
+  background: #e37915;
+  border: none;
+  margin-right: 12px;
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 8px;
+  color: white;
+}

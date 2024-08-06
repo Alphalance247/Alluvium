@@ -1,0 +1,189 @@
+.volunteeringForm {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  .formdetailsvolunteer {
+    width: 95%;
+    margin: auto;
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1rem;
+      color: #262626;
+      font-weight: 600;
+      border-bottom: 1px solid #d9d9d9;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .volunteerstyleform1 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1.5rem;
+      column-gap: 1.25rem;
+      margin-bottom: 2rem;
+      margin-top: 1.5rem;
+
+      & > div:nth-child(7) {
+        grid-column: span 2;
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        & > div:nth-child(7) {
+          grid-column: span 1;
+        }
+      }
+    }
+
+    .volunteerstyleform2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 1.5rem;
+      column-gap: 1.25rem;
+      margin-bottom: 2rem;
+      margin-top: 1.5rem;
+
+      & > div:nth-child(3) {
+        grid-column: span 2;
+      }
+      & > div:nth-child(4) {
+        grid-column: span 2;
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+
+        & > div:nth-child(3) {
+          grid-column: span 1;
+        }
+
+        & > div:nth-child(4) {
+          grid-column: span 1;
+        }
+      }
+    }
+
+    .additionalDetails {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+//////////////////////phone number stylin and select input styling which general fo all select input style//////////////////////////////////
+.labelStyle {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #374151;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.radioP {
+  color: #374151;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.countrySelect {
+  width: 100%;
+  padding: 14px;
+  outline: none;
+  background: white;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.5rem;
+  color: #11202d;
+  appearance: none;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.iconic {
+  position: absolute;
+  top: 65%;
+  right: 15px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #667085;
+
+  @media screen and (max-width: 576px) {
+    transform: translateY(-2%);
+    top: 63%;
+  }
+}
+
+.PhoneInput input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: white;
+  color: #11202d;
+  padding: 14px;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.PhoneInput > div {
+  outline: none;
+  border: 1px solid #c2c2c2;
+  border-radius: 0.5rem 0 0 0.5rem;
+  background: white;
+  color: #11202d;
+  padding: 14px;
+  margin-right: 0;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.error {
+  border: 2px solid orangered;
+}
+
+.textareastyle {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 5px;
+  padding: 12px 1rem;
+  outline: none;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
+}
+
+.button1 {
+  background: #e37915;
+  border: none;
+  margin-right: 12px;
+  padding: 0.9rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 8px;
+  color: white;
+}
