@@ -2,6 +2,7 @@ import styles from "../../styles/cloudconnect.module.scss";
 import Footer from "components/cloud-connect-2/Footer";
 import Header from "components/cloud-connect-2/Header";
 import AboutCloudConnect from "components/cloud-connect-2/Home/AboutCloudConnect";
+import EventVideo from "components/cloud-connect-2/Home/EventVideo";
 import Hero from "components/cloud-connect-2/Home/Hero";
 import TopLeaders from "components/cloud-connect-2/Home/TopLeaders";
 import Head from "next/head";
@@ -22,6 +23,7 @@ const CloudConnectHomepage = () => {
       />
       <AboutCloudConnect />
       <TopLeaders />
+      <EventVideo />
       <Footer />
     </main>
   );

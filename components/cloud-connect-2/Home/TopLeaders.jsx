@@ -52,7 +52,7 @@ const speakers = [
 ];
 
 const TopLeaders = () => {
-  const [visibleSpeakers, setVisibleSpeakers] = useState(7);
+  const [visibleSpeakers, setVisibleSpeakers] = useState(9);
 
   const loadMoreSpeakers = () => {
     setVisibleSpeakers(speakers.length);

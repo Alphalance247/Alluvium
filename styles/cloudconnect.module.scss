@@ -429,11 +429,60 @@
   &__speaker-title {
     font-size: 16px;
     line-height: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   &__load-more {
     display: flex;
     justify-content: center;
+  }
+}
+
+.event-video {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 96px 0;
+
+  &__content {
+    max-width: 611px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    margin: 0 auto 80px;
+  }
+
+  &__title {
+    font-family: "Helvetica Compressed", sans-serif;
+    font-size: 60px;
+    line-height: 60px;
+    line-height: 1;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  &__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #f5f5f5;
+  }
+
+  &__video-container {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+
+  &__iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
   }
 }
