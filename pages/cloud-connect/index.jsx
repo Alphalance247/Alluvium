@@ -1,6 +1,7 @@
 import styles from "../../styles/cloudconnect.module.scss";
 import Footer from "components/cloud-connect-2/Footer";
 import Header from "components/cloud-connect-2/Header";
+import AboutAlluvium from "components/cloud-connect-2/Home/AboutAlluvium";
 import AboutCloudConnect from "components/cloud-connect-2/Home/AboutCloudConnect";
 import AgendaSection from "components/cloud-connect-2/Home/AgendaSection";
 import EventVideo from "components/cloud-connect-2/Home/EventVideo";
@@ -28,6 +29,7 @@ const CloudConnectHomepage = () => {
       <EventVideo />
       <WhyAttend />
       <AgendaSection />
+      <AboutAlluvium />
       <Footer />
     </main>
   );

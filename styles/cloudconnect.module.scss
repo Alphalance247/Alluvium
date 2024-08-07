@@ -576,7 +576,7 @@
 }
 
 .footer {
-  padding: 96px 0;
+  padding: 96px 0 33px;
   max-width: 1320px;
   margin: 0 auto;
 
@@ -779,6 +779,59 @@
     &:hover {
       background-color: #ffffff;
       color: #0086c0;
+    }
+  }
+}
+
+.aboutAlluvium {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 96px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .content {
+    width: 572px;
+
+    .logo {
+      margin-bottom: 2rem;
+    }
+
+    .description {
+      font-size: 1.125rem;
+      line-height: 2rem;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .list {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      margin-left: 1.5rem;
+
+      .listItem {
+        font-size: 1.125rem;
+        line-height: 2rem;
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    .button {
+      margin-top: 2.5rem;
+    }
+  }
+
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      max-width: 100%;
+      height: auto;
     }
   }
 }
