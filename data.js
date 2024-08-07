@@ -1643,3 +1643,120 @@ export const sponsorPackage = [
       "Data and Lead Generation: Provide a high-rank sponsor with access to data collected from event attendees, such as leads or demographics, to support their marketing efforts.",
   },
 ];
+
+export const eventTicket = [
+  {
+    id: "1",
+    ticketTitle: "General admission",
+    price: "₦5,000",
+    list1: "Access to all Cloud Connect sessions",
+    list2: "Networking opportunities with industry peers",
+    list3: "Event swag bag",
+    list4: "Coffee & refreshments throughout the event",
+  },
+  {
+    id: "2",
+    ticketTitle: "General admission",
+    price: "₦5,000",
+    list1: "Access to all Cloud Connect sessions",
+    list2: "Networking opportunities with industry peers",
+    list3: "Event swag bag",
+    list4: "Coffee & refreshments throughout the event",
+  },
+  {
+    id: "3",
+    ticketTitle: "General admission",
+    price: "₦5,000",
+    list1: "Access to all Cloud Connect sessions",
+    list2: "Networking opportunities with industry peers",
+    list3: "Event swag bag",
+    list4: "Coffee & refreshments throughout the event",
+  },
+];
+
+export const cloudatad24 = [
+  {
+    id: "1",
+    icon: "/assets/connect2.4/saving.png",
+    widths: 201,
+    heigh: 36,
+  },
+  {
+    id: "2",
+    icon: "/assets/connect2.4/kolo.png",
+    widths: 187,
+    heigh: 32,
+  },
+  {
+    id: "3",
+    icon: "/assets/connect2.4/sabi.png",
+    widths: 178,
+    heigh: 46,
+  },
+  {
+    id: "4",
+    icon: "/assets/connect2.4/sycamore.png",
+    widths: 154,
+    heigh: 43,
+  },
+  {
+    id: "5",
+    icon: "/assets/connect2.4/intuit.png",
+    widths: 170,
+    heigh: 34,
+  },
+  {
+    id: "6",
+    icon: "/assets/connect2.4/ercos.png",
+    widths: 151,
+    heigh: 32,
+  },
+  {
+    id: "7",
+    icon: "/assets/connect2.4/cardify.png",
+    widths: 216,
+    heigh: 49,
+  },
+  {
+    id: "8",
+    icon: "/assets/connect2.4/flutter.png",
+    widths: 196,
+    heigh: 47,
+  },
+  {
+    id: "9",
+    icon: "/assets/connect2.4/aws.png",
+    widths: 67,
+    heigh: 40,
+  },
+  {
+    id: "10",
+    icon: "/assets/connect2.4/growgoole.png",
+    widths: 236,
+    heigh: 44,
+  },
+  {
+    id: "11",
+    icon: "/assets/connect2.4/webflow.png",
+    widths: 122,
+    heigh: 30,
+  },
+  {
+    id: "12",
+    icon: "/assets/connect2.4/techsgiving.png",
+    widths: 184,
+    heigh: 58,
+  },
+  {
+    id: "13",
+    icon: "/assets/connect2.4/black.png",
+    widths: 145,
+    heigh: 54,
+  },
+  {
+    id: "14",
+    icon: "/assets/connect2.4/civic.png",
+    widths: 132,
+    heigh: 30,
+  },
+];
