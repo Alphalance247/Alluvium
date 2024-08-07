@@ -1,9 +1,9 @@
 import styles from "../../styles/cloudconnect.module.scss";
-import Footer from "components/cloud-connect/Footer";
-import Header from "components/cloud-connect/Header";
-import AboutCloudConnect from "components/cloud-connect/Home/AboutCloudConnect";
-import Hero from "components/cloud-connect/Home/Hero";
-import TopLeaders from "components/cloud-connect/Home/TopLeaders";
+import Footer from "components/cloud-connect-2/Footer";
+import Header from "components/cloud-connect-2/Header";
+import AboutCloudConnect from "components/cloud-connect-2/Home/AboutCloudConnect";
+import Hero from "components/cloud-connect-2/Home/Hero";
+import TopLeaders from "components/cloud-connect-2/Home/TopLeaders";
 import Head from "next/head";
 
 const CloudConnectHomepage = () => {
@@ -15,6 +15,11 @@ const CloudConnectHomepage = () => {
       </Head>
       <Header />
       <Hero />
+      <img
+        src="/assets/cloud-connect/images/Cloud connect event image.jpg"
+        alt="Cloud connect event image"
+        className={styles.eventImg}
+      />
       <AboutCloudConnect />
       <TopLeaders />
       <Footer />

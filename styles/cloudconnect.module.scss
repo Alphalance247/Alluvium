@@ -134,7 +134,7 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 
   &:disabled {
@@ -170,10 +170,205 @@
   &--medium {
     padding: 10px 20px;
     font-size: 16px;
+    height: 44px;
   }
 
   &--large {
     padding: 14px 40px;
     font-size: 16px;
+    height: 52px;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 96px;
+  padding-bottom: 100px;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  gap: 143px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 623px;
+
+    &-date {
+      color: #454545;
+      font-size: 0.875rem;
+      padding: 0.5rem 1rem;
+      background-color: white;
+      border-radius: 2px;
+      font-weight: 600;
+      width: fit-content;
+      text-transform: uppercase;
+    }
+
+    &-title-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &-subtitle {
+      color: #009bc0;
+      font-size: 1.125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      font-family: "Helvetica Compressed", sans-serif;
+      font-weight: 500;
+      font-size: 120px;
+      line-height: 128px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    &-description {
+      color: #d9d9d9;
+      font-size: 20px;
+      line-height: 32px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &-main {
+      height: 307px;
+      width: 450px;
+    }
+
+    &-secondary {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      > div {
+        height: 307px;
+        width: 221px;
+      }
+    }
+  }
+  .image {
+    border-radius: 10px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.eventImg {
+  width: 100%;
+  height: 1055px;
+  object-fit: cover;
+}
+
+.section-header {
+  &--full-width {
+    width: 100%;
+  }
+
+  &--limited-width {
+    max-width: 782px;
+  }
+
+  &__heading {
+    font-size: 96px;
+    line-height: 96px;
+    font-weight: 500;
+    color: white;
+    font-family: "Helvetica Compressed", sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: #d9d9d9;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+}
+
+.about-cloud-connect {
+  padding-top: 96px;
+
+  &__content {
+    max-width: 1320px;
+    margin: 0 auto 108px;
+  }
+
+  &__images {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 48px;
+  }
+
+  &__image-container {
+    flex: 1;
+    height: 305px;
+    position: relative;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.4;
+    transition: opacity 0.5s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__stats {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    background-color: white;
+
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__stat-value {
+    font-family: "Helvetica Compressed", sans-serif;
+    color: #262626;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  &__stat-category {
+    color: #595959;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 24px;
+    text-transform: uppercase;
   }
 }

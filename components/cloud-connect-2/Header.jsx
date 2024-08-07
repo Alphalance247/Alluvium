@@ -65,14 +65,14 @@ const Header = () => {
                     isActive("/cloud-connect/news") ? styles.active : ""
                   }
                 >
-                  <Link href="/resources/documents">News</Link>
+                  <Link href="/cloud-connect/news">News</Link>
                 </li>
                 <li
                   className={
                     isActive("/cloud-connect/media") ? styles.active : ""
                   }
                 >
-                  <Link href="/cloud-connect/videos">Media</Link>
+                  <Link href="/cloud-connect/media">Media</Link>
                 </li>
               </ul>
             )}
