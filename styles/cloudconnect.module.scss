@@ -574,3 +574,127 @@
     }
   }
 }
+
+.footer {
+  padding: 96px 0;
+  max-width: 1320px;
+  margin: 0 auto;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 76px;
+  }
+
+  &__logo {
+    width: 273px;
+    height: 145px;
+  }
+
+  &__links {
+    h3 {
+      font-family: "Helvetica Compressed", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      color: white;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      li {
+        color: #d9d9d9;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__subscribe {
+    width: 444px;
+
+    h3 {
+      font-family: "Helvetica Compressed", sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      color: white;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    input {
+      width: 444px;
+      height: 44px;
+      background: #fff;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      padding: 0 16px;
+      color: #000;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #9ca3af;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid #ffffff1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+
+    p {
+      color: #bfbfbf;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 500;
+    }
+
+    .policy {
+      display: flex;
+      gap: 16px;
+
+      a {
+        color: #d9d9d9;
+        text-decoration: underline !important;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+
+        &:hover {
+          color: #b1b1b1;
+        }
+      }
+
+      .divider {
+        height: 20px;
+        width: 1px;
+        background: #ffffff4d;
+      }
+    }
+  }
+}
