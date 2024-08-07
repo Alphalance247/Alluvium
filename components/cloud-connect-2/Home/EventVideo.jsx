@@ -14,10 +14,9 @@ const EventVideo = () => {
           className={styles["event-video__iframe"]}
           src="https://www.youtube-nocookie.com/embed/Na6P_kLI2FE?si=rf-sk4KzoIN5rRia&amp;controls=0"
           title="Cloud connect video"
-          frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullscreen
         ></iframe>
       </div>
     </section>

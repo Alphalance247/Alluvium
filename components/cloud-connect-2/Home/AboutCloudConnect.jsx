@@ -35,6 +35,7 @@ const AboutCloudConnect = () => {
     <section className={styles["about-cloud-connect"]}>
       <div className={styles["about-cloud-connect__content"]}>
         <SectionHeader
+          size="large"
           heading="What is cloud connect?"
           description="Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem diam feugiat. Tristique velit velit proin amet cras diam mi. Vel nunc ut feugiat quis dolor malesuada vitae quisque. Lacinia quis quis scelerisque vitae maecenas nulla sem."
           button1={<Button size="large">Buy Tickets</Button>}

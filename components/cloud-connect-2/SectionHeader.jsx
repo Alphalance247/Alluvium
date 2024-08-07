@@ -5,22 +5,38 @@ const SectionHeader = ({
   description,
   button1,
   button2,
-  widthFull = false,
+  width = "medium", // small, medium, fullWidth
+  size, // small, normal, large
+  variant = "default", // default, dark
 }) => {
-  const widthClass = widthFull
-    ? styles["section-header--full-width"]
-    : styles["section-header--limited-width"];
+  const widthClass =
+    width === "fullWidth"
+      ? styles["sectionHeader--full-width"]
+      : width === "small"
+      ? styles["sectionHeader--small-width"]
+      : styles["sectionHeader--normal-width"];
+
+  const sizeClass =
+    size === "small"
+      ? styles["sectionHeader--small"]
+      : size === "large"
+      ? styles["sectionHeader--large"]
+      : styles["sectionHeader--normal"];
+
+  const variantClass = variant === "dark" ? styles["sectionHeader--dark"] : "";
 
   return (
-    <div className={`${styles["section-header"]} ${widthClass}`}>
-      <h2 className={styles["section-header__heading"]}>{heading}</h2>
+    <div
+      className={`${styles.sectionHeader} ${widthClass} ${sizeClass} ${variantClass}`}
+    >
+      <h2 className={`${styles.sectionHeader__heading}`}>{heading}</h2>
 
       {description && (
-        <p className={styles["section-header__description"]}>{description}</p>
+        <p className={`${styles.sectionHeader__description}`}>{description}</p>
       )}
 
       {(button1 || button2) && (
-        <div className={styles["section-header__buttons"]}>
+        <div className={styles.sectionHeader__buttons}>
           {button1}
           {button2}
         </div>

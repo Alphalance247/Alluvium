@@ -5,6 +5,7 @@ import AboutCloudConnect from "components/cloud-connect-2/Home/AboutCloudConnect
 import EventVideo from "components/cloud-connect-2/Home/EventVideo";
 import Hero from "components/cloud-connect-2/Home/Hero";
 import TopLeaders from "components/cloud-connect-2/Home/TopLeaders";
+import WhyAttend from "components/cloud-connect-2/Home/WhyAttend";
 import Head from "next/head";
 
 const CloudConnectHomepage = () => {
@@ -24,6 +25,7 @@ const CloudConnectHomepage = () => {
       <AboutCloudConnect />
       <TopLeaders />
       <EventVideo />
+      <WhyAttend />
       <Footer />
     </main>
   );
