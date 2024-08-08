@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../../components/cloud-connect-2/Layout";
+import SectionHeader from "../../components/cloud-connect-2/SectionHeader";
 
 export default function Media() {
   return (
@@ -7,7 +8,9 @@ export default function Media() {
       <Head>
         <title>Media | Cloud Connect 2024</title>
       </Head>
-      <h1>Media Page</h1>
+      <section className={styles.agendaSection}>
+        <SectionHeader heading="Media" />
+      </section>
     </Layout>
   );
 }
