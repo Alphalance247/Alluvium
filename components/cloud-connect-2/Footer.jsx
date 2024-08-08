@@ -20,16 +20,16 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <Link href="#">Agenda</Link>
+                <Link href="/cloud-connect/agenda">Agenda</Link>
               </li>
               <li>
-                <Link href="#">Media & Resources</Link>
+                <Link href="/cloud-connect/media">Media & Resources</Link>
               </li>
               <li>
-                <Link href="#">Sponsor</Link>
+                <Link href="/cloud-connect/sponsor">Sponsor</Link>
               </li>
               <li>
-                <Link href="#">Volunteer</Link>
+                <Link href="/cloud-connect/volunteer">Volunteer</Link>
               </li>
             </ul>
           </div>

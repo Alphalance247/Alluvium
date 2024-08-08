@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
-import styles from "../../styles/cloudconnect.module.scss";
+import styles from "../../styles/cloud-connect-2/cloudconnect.module.scss";
 import Link from "next/link";
 import Button from "./Button";
 import { useRouter } from "next/router";
@@ -11,6 +11,11 @@ const Header = () => {
   const router = useRouter();
 
   const isActive = (path) => router.pathname === path;
+  const isResourcesActive = () => {
+    return ["/cloud-connect/news", "/cloud-connect/media"].some((path) =>
+      router.pathname.startsWith(path)
+    );
+  };
 
   return (
     <header className={styles.header}>
@@ -46,32 +51,24 @@ const Header = () => {
           </li>
           <li
             className={`${styles.resources} ${
-              isResourcesOpen ? styles.open : ""
-            }`}
+              isResourcesActive() ? styles.active : ""
+            } ${isResourcesOpen ? styles.open : ""}`}
           >
-            <button onClick={() => setIsResourcesOpen(!isResourcesOpen)}>
-              Resources
+            <div onClick={() => setIsResourcesOpen(!isResourcesOpen)}>
+              <span>Resources</span>
               <Image
                 src={"/assets/cloud-connect/icons/lucide_chevron-down.svg"}
                 alt=""
                 width={16}
                 height={16}
               />
-            </button>
+            </div>
             {isResourcesOpen && (
               <ul className={styles.submenu}>
-                <li
-                  className={
-                    isActive("/cloud-connect/news") ? styles.active : ""
-                  }
-                >
+                <li>
                   <Link href="/cloud-connect/news">News</Link>
                 </li>
-                <li
-                  className={
-                    isActive("/cloud-connect/media") ? styles.active : ""
-                  }
-                >
+                <li>
                   <Link href="/cloud-connect/media">Media</Link>
                 </li>
               </ul>
