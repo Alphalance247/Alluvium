@@ -1,0 +1,83 @@
+.agendaSection {
+  .agendaContent {
+    max-width: 626px;
+    margin: 0 auto;
+    padding: 96px 0;
+  }
+
+  .agendaHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .title {
+    font-family: "Helvetica Compressed", sans-serif;
+    font-weight: 500;
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .date {
+    color: #f5f5f5;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+  }
+
+  .agendaItems {
+    .agendaItem {
+      display: flex;
+      justify-content: space-between;
+      padding: 24px;
+      border-bottom: 1px solid #ffffff1a;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .time {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    .description {
+      color: #f5f5f5;
+      font-weight: 600;
+    }
+  }
+
+  .sponsorSection {
+    background: linear-gradient(270deg, #0086c0 31.28%, #009bc0 90.73%);
+    padding: 96px 0;
+  }
+
+  .sponsorContent {
+    max-width: 846px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .sponsorText {
+    color: #ffffff;
+    margin-bottom: 18px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+
+  .sponsorButton {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    margin-top: 32px;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #0086c0;
+    }
+  }
+}

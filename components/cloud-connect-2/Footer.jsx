@@ -1,4 +1,4 @@
-import styles from "../../styles/cloudconnect.module.scss";
+import styles from "../../styles/cloud-connect-2/cloudconnect.module.scss";
 import Link from "next/link";
 import Button from "./Button";
 

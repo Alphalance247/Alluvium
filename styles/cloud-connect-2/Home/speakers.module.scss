@@ -1,0 +1,58 @@
+.top-leaders {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-top: 90px;
+  padding-bottom: 96px;
+
+  &__title {
+    font-family: "Helvetica Compressed", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #fff;
+    max-width: 911px;
+    margin: 0 auto 80px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 32px;
+    row-gap: 40px;
+    margin-bottom: 80px;
+  }
+
+  &__speaker {
+    text-align: right;
+    width: fit-content;
+  }
+
+  &__speaker-image {
+    width: 384px;
+    height: 400px;
+    margin: 0 auto 24px;
+  }
+
+  &__speaker-name {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 9px;
+    color: #fff;
+    font-family: "Helvetica Compressed", sans-serif;
+  }
+
+  &__speaker-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+  }
+
+  &__load-more {
+    display: flex;
+    justify-content: center;
+  }
+}

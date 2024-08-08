@@ -1,6 +1,4 @@
-import styles from "../../styles/cloudconnect.module.scss";
-import Footer from "components/cloud-connect-2/Footer";
-import Header from "components/cloud-connect-2/Header";
+import styles from "../../styles/cloud-connect-2/cloudconnect.module.scss";
 import AboutAlluvium from "components/cloud-connect-2/Home/AboutAlluvium";
 import AboutCloudConnect from "components/cloud-connect-2/Home/AboutCloudConnect";
 import AgendaSection from "components/cloud-connect-2/Home/AgendaSection";
@@ -9,15 +7,15 @@ import Hero from "components/cloud-connect-2/Home/Hero";
 import TopLeaders from "components/cloud-connect-2/Home/TopLeaders";
 import WhyAttend from "components/cloud-connect-2/Home/WhyAttend";
 import Head from "next/head";
+import Layout from "../../components/cloud-connect-2/Layout";
 
-const CloudConnectHomepage = () => {
+export default function Home() {
   return (
-    <main className={styles.cloudConnectHome}>
+    <Layout>
       <Head>
         <title>Cloud Connect 2024 | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <Hero />
       <img
         src="/assets/cloud-connect/images/Cloud connect event image.jpg"
@@ -30,9 +28,6 @@ const CloudConnectHomepage = () => {
       <WhyAttend />
       <AgendaSection />
       <AboutAlluvium />
-      <Footer />
-    </main>
+    </Layout>
   );
-};
-
-export default CloudConnectHomepage;
+}

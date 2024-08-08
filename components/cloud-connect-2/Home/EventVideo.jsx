@@ -1,4 +1,4 @@
-import styles from "../../../styles/cloudconnect.module.scss";
+import styles from "../../../styles/cloud-connect-2/Home/eventVideo.module.scss";
 
 const EventVideo = () => {
   return (
@@ -16,7 +16,7 @@ const EventVideo = () => {
           title="Cloud connect video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
-          allowFullscreen
+          allowFullScreen
         ></iframe>
       </div>
     </section>

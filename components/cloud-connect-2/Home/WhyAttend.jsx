@@ -1,5 +1,5 @@
 import SectionHeader from "../SectionHeader";
-import styles from "../../../styles/cloudconnect.module.scss";
+import styles from "../../../styles/cloud-connect-2/Home/whyAttend.module.scss";
 
 const data = [
   {
