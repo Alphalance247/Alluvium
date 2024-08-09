@@ -253,6 +253,10 @@ export const ConsultationForm = () => {
                 Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti,
                 Ekiti State, Nigeria.
               </p>
+              <p>
+                Kenya: 4th Floor, Laiboni Centre, Lenana Road, Kilimani,
+                Nairobi, Kenya.
+              </p>
             </div>
             <p>
               <strong>Email:</strong>{" "}
