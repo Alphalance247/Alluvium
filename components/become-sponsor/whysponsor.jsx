@@ -43,7 +43,7 @@ const WhySponsor = () => {
                     <li>{item?.list2}</li>
                     <li>{item?.list3}</li>
                     <li>{item?.list4}</li>
-                    <li>{item?.list5}</li>
+                    {item.list5 && <li>{item?.list5}</li>}
                   </ul>
                 </div>
               );

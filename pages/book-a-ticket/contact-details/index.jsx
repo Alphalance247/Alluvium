@@ -1,23 +1,20 @@
-import TicketDetails from "components/ticket-contact/ticketDetails";
+import styles from "../../../styles/cloudconnect.module.scss";
 import Header from "components/cloud-connect-2/Header";
 import Footer from "components/cloud-connect-2/Footer";
-import styles from "../../styles/cloudconnect.module.scss";
 import SectionHeader from "components/cloud-connect-2/SectionHeader";
+import ContactInformation from "components/ticket-contact/contactInformation";
 
-const BookTicket = () => {
+const ContactDetails = () => {
   return (
     <main className={styles.cloudConnectHome}>
       <Header />
       <div className={`container ${styles.sponsor_hero}`}>
-        <SectionHeader
-          heading="get your ticket"
-          description="Sales ends on the 31st of October, 2024"
-        />
+        <SectionHeader heading="Contact Details" />
       </div>
-      <TicketDetails />
+      <ContactInformation />
       <Footer />
     </main>
   );
 };
 
-export default BookTicket;
+export default ContactDetails;
