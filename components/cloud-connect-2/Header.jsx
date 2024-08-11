@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <nav>
-        <div className={styles.logoDiv}>
+        <Link href="/cloud-connect" className={styles.logoDiv}>
           <div className={styles.flexBetween}>
             <Image
               src={"/assets/cloud-connect/images/logo.png"}
@@ -29,12 +29,12 @@ const Header = () => {
               height={71}
             />
             <div className={styles.eventDetails}>
-              <span>Landmark Event Center</span>
+              <span>Landmark Event Center,</span>
               <span>Lagos, Nigeria</span>
               <span>November 26, 2024</span>
             </div>
           </div>
-        </div>
+        </Link>
         <ul className={styles.navList}>
           <li className={isActive("/cloud-connect") ? styles.active : ""}>
             <Link href="/cloud-connect">Home</Link>

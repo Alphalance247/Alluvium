@@ -1,6 +1,7 @@
 import styles from "../../styles/cloud-connect-2/cloudconnect.module.scss";
 import Link from "next/link";
 import Button from "./Button";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -11,10 +12,13 @@ const Footer = () => {
     >
       <div className={styles.footer}>
         <div className={styles.footer__top}>
-          <img
-            src="/assets/cloud-connect/images/logo.png"
+          <Image
+            src={"/assets/cloud-connect/images/logo.png"}
             alt="Cloud connect logo"
+            width={273}
+            height={145}
             className={styles.footer__logo}
+            quality={100}
           />
           <div className={styles.footer__links}>
             <h3>Quick Links</h3>
