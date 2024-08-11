@@ -1,36 +1,69 @@
+import { useEffect, useState } from "react";
 import Head from "next/head";
-import Image from "next/image";
+import styles from "../../styles/cloud-connect-2/Media/media.module.scss";
 import Layout from "../../components/cloud-connect-2/Layout";
 import SectionHeader from "../../components/cloud-connect-2/SectionHeader";
-import styles from "../../styles/cloud-connect-2/Media/media.module.scss";
+import ImageModal from "components/cloud-connect-2/Media/ImageModal";
+
+
+const images = [
+  "/assets/cloud-connect/images/cc23/Image.png",
+  "/assets/cloud-connect/images/cc23/Image-1.png",
+  "/assets/cloud-connect/images/cc23/Image-2.png",
+  "/assets/cloud-connect/images/cc23/Image-3.png",
+  "/assets/cloud-connect/images/cc23/Image-4.png",
+  "/assets/cloud-connect/images/cc23/Image-5.png",
+  "/assets/cloud-connect/images/cc23/Image-6.png",
+  "/assets/cloud-connect/images/cc23/Image-7.png",
+  "/assets/cloud-connect/images/cc23/Image-8.png",
+  "/assets/cloud-connect/images/cc23/Image-9.png",
+  "/assets/cloud-connect/images/cc23/Image-10.png",
+  "/assets/cloud-connect/images/cc23/Image-11.png",
+  "/assets/cloud-connect/images/cc23/Image-12.png",
+  "/assets/cloud-connect/images/cc23/Image-13.png",
+  "/assets/cloud-connect/images/cc23/Image-14.png",
+  "/assets/cloud-connect/images/cc23/Image-15.png",
+  "/assets/cloud-connect/images/cc23/Image-16.png",
+  "/assets/cloud-connect/images/cc23/Image-17.png",
+  "/assets/cloud-connect/images/cc23/Image-18.png",
+  "/assets/cloud-connect/images/cc23/Image-19.png",
+  "/assets/cloud-connect/images/cc23/Image-20.png",
+  "/assets/cloud-connect/images/cc23/Image-21.png",
+  "/assets/cloud-connect/images/cc23/Image-22.png",
+  "/assets/cloud-connect/images/cc23/Image-23.png",
+];
 
 export default function Media() {
-  const images = [
-    "/assets/cloud-connect/images/cc23/Image.png",
-    "/assets/cloud-connect/images/cc23/Image-1.png",
-    "/assets/cloud-connect/images/cc23/Image-2.png",
-    "/assets/cloud-connect/images/cc23/Image-3.png",
-    "/assets/cloud-connect/images/cc23/Image-4.png",
-    "/assets/cloud-connect/images/cc23/Image-5.png",
-    "/assets/cloud-connect/images/cc23/Image-6.png",
-    "/assets/cloud-connect/images/cc23/Image-7.png",
-    "/assets/cloud-connect/images/cc23/Image-8.png",
-    "/assets/cloud-connect/images/cc23/Image-9.png",
-    "/assets/cloud-connect/images/cc23/Image-10.png",
-    "/assets/cloud-connect/images/cc23/Image-11.png",
-    "/assets/cloud-connect/images/cc23/Image-12.png",
-    "/assets/cloud-connect/images/cc23/Image-13.png",
-    "/assets/cloud-connect/images/cc23/Image-14.png",
-    "/assets/cloud-connect/images/cc23/Image-15.png",
-    "/assets/cloud-connect/images/cc23/Image-16.png",
-    "/assets/cloud-connect/images/cc23/Image-17.png",
-    "/assets/cloud-connect/images/cc23/Image-18.png",
-    "/assets/cloud-connect/images/cc23/Image-19.png",
-    "/assets/cloud-connect/images/cc23/Image-20.png",
-    "/assets/cloud-connect/images/cc23/Image-21.png",
-    "/assets/cloud-connect/images/cc23/Image-22.png",
-    "/assets/cloud-connect/images/cc23/Image-23.png",
-  ];
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup function to reset overflow when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [modalOpen]);
+
+  const openModal = (index) => {
+    setCurrentImageIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => setModalOpen(false);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
 
   const renderImageRow = (start, end) => {
     const rowImages = images.slice(start, end);
@@ -54,11 +87,12 @@ export default function Media() {
               height: "100%",
               marginRight: index < rowImages.length - 1 ? "4px" : "0",
             }}
+            onClick={() => openModal(start + index)}
           >
             <img
               src={src}
               alt={`Cloud Connect image ${start + index + 1}`}
-             className={styles.image}
+              className={styles.image}
             />
           </div>
         ))}
@@ -89,6 +123,15 @@ export default function Media() {
           </div>
         </div>
       </section>
+      {modalOpen && (
+        <ImageModal
+          images={images}
+          currentIndex={currentImageIndex}
+          onClose={closeModal}
+          onPrev={goToPrevious}
+          onNext={goToNext}
+        />
+      )}
     </Layout>
   );
 }
