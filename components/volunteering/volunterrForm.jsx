@@ -1,31 +1,164 @@
 import BecomeReuse from "components/cloud-connect-common/becomeReuse";
-import { Country } from "country-state-city";
+import { Country, State } from "country-state-city";
 import { useState } from "react";
 import styles from "../../styles/cloud2.4/volunteering.module.scss";
 import Input from "components/licence-component/inputP";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { FaChevronDown } from "react-icons/fa";
+import { useToasts } from "react-toast-notifications";
+import axios from "axios";
+import LoadingScreen from "components/loading";
+import { useEffect } from "react";
+import { countries } from "country-flag-icons";
 
 const VolunterForm = () => {
-  const [country] = useState(Country.getAllCountries());
+  const country = Country.getAllCountries();
+  // const state = State.getStatesOfCountry(country);
+  const [countries, setCountries] = useState([]);
+  const [states, setStates] = useState([]);
+
+  // console.log(country, state);
+
   const [form, setForm] = useState({
     phone_number_4: "",
     volunteer_before_10: "No",
   });
-  //   const { addToast } = useToasts();
+
+  const { addToast } = useToasts();
   const [formError, setFormError] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setForm((prevForm) => ({
+  //     ...prevForm,
+  //     [name]: value,
+  //   }));
+
+  //   setFormError((prev) => ({ ...prev, [name]: false }));
+  // };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setForm((prevForm) => ({
-      ...prevForm,
-      [name]: value,
-    }));
+    if (name === "country_5") {
+      const selectedCountry = countries.find(
+        (country) => country.isoCode === value
+      );
+      setForm((prevForm) => ({
+        ...prevForm,
+        country_5: selectedCountry.isoCode,
+        countryName: selectedCountry.name,
+      }));
+    } else {
+      setForm((prevForm) => ({
+        ...prevForm,
+        [name]: value,
+      }));
+    }
+    setFormError((prev) => ({ ...prev, [name]: false }));
   };
 
   const handleNumber = (value) => {
-    setForm((prev) => ({ ...prev, phoneNumber: value }));
+    setForm((prev) => ({ ...prev, phone_number_4: value }));
+    setFormError((prev) => ({ ...prev, phone_number_4: false }));
+  };
+
+  useEffect(() => {
+    // Fetch countries when component mounts
+    const countryOptions = Country.getAllCountries()?.map((country) => ({
+      name: country?.name,
+      isoCode: country?.isoCode,
+    }));
+
+    console.log(countryOptions);
+    setCountries(countryOptions);
+  }, []);
+
+  useEffect(() => {
+    // Fetch cities when a country is selected
+    if (form?.country_5) {
+      const stateOptions =
+        State.getStatesOfCountry(form?.country_5)?.map((state) => ({
+          name: state?.name,
+          isoCode: state?.isoCode,
+        })) ?? [];
+      setStates(stateOptions);
+    } else {
+      setStates([]);
+    }
+  }, [form?.country_5]);
+
+  const handleVolunteerForm = async (e) => {
+    e.preventDefault();
+
+    if (
+      form.country_5 &&
+      form.phone_number_4 &&
+      form.state_6 &&
+      form.volunteer_reason_9 &&
+      form.which_experience_8
+    ) {
+      setLoading(true);
+      await axios
+        .post("https://vast.ec2.alluvium.net/cloud-connect/vounteer-form", {
+          ...form,
+          country_5: form.countryName, // Send country name instead of isoCode
+        })
+        .then((res) => {
+          setLoading(false);
+
+          if (res.status >= 200 && res.status < 300) {
+            addToast(
+              "Your request has been submitted successfully. Thank you, we'll be in touch.",
+              {
+                appearance: "success",
+              }
+            );
+            setForm({
+              ...form,
+              first_name_1: "",
+              last_name_2: "",
+              email_3: "",
+              phone_number_4: "",
+              country_5: "",
+              state_6: "",
+              address_7: "",
+              which_experience_8: "",
+              volunteer_reason_9: "",
+              volunteer_before_10: "No",
+              experience_desc_11: "",
+              question_comment_info_12: "",
+            });
+          } else {
+            addToast("Error occured, please try again or contact Admin", {
+              appearance: "error",
+            });
+            return;
+          }
+        })
+        .catch((err) => {
+          setLoading(false);
+          let errMessage =
+            "Oops something went wrong. Please try again or contact Admin";
+          if (err?.response?.status < 500) {
+            errMessage =
+              err?.response?.data?.error ||
+              "Oops something went wrong. Please try again or contact Admin";
+          }
+          addToast(errMessage, { appearance: "error" });
+          return;
+        });
+    } else {
+      setFormError({
+        ...formError,
+        phone_number_4: !form.phone_number_4,
+        country_5: !form.country_5,
+        state_6: !form.state_6,
+        which_experience_8: !form.which_experience_8,
+        volunteer_reason_9: !form.volunteer_reason_9,
+      });
+    }
   };
 
   console.log(form);
@@ -33,12 +166,19 @@ const VolunterForm = () => {
   return (
     <section className={`container-fluid ${styles.volunteeringForm}`}>
       <div className="container">
+        {loading && (
+          <LoadingScreen message="Your request is being processed......" />
+        )}
         <BecomeReuse
           heading="REGISTER AS A VOLUNTEER"
           paragraph="Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem diam feugiat. Tristique velit velit proin amet cras diam mi. Vel nunc ut feugiat quis dolor"
         />
         <div className={styles.formdetailsvolunteer}>
-          <form action="" className={styles.formlogic}>
+          <form
+            action=""
+            className={styles.formlogic}
+            onSubmit={handleVolunteerForm}
+          >
             <p>Your Details</p>
             <div className={styles.volunteerstyleform1}>
               <div>
@@ -71,11 +211,11 @@ const VolunterForm = () => {
 
               <div>
                 <Input
-                  id="jobFunction"
-                  label="jobFunction"
-                  text="Job function"
+                  id="email"
+                  label="email"
+                  text="Email"
                   name="email_3"
-                  type="text"
+                  type="email"
                   value={form?.email_3 || ""}
                   placeholder=""
                   onChange={handleChange}
@@ -94,13 +234,9 @@ const VolunterForm = () => {
                   defaultCountry="NG"
                   value={form.phone_number_4 ?? ""}
                   onChange={handleNumber}
-                  className={`${styles.PhoneInput} ${styles.PhoneInputCountry}`}
-                  numberInputProps={{
-                    className: formError.phone_number_4 ? styles.error : "",
-                  }}
-                  countrySelectProps={{
-                    className: formError.phone_number_4 ? styles.error : "",
-                  }}
+                  className={`${styles.PhoneInput} ${
+                    styles.PhoneInputCountry
+                  } ${formError.phone_number_4 ? styles.error : ""}`}
                 />
               </div>
 
@@ -118,8 +254,8 @@ const VolunterForm = () => {
                   onChange={handleChange}
                 >
                   <option value=""></option>
-                  {country.map((el, i) => (
-                    <option key={i} value={el.name}>
+                  {countries.map((el, i) => (
+                    <option key={el.isoCode} value={el.isoCode}>
                       {el.name}
                     </option>
                   ))}
@@ -141,7 +277,7 @@ const VolunterForm = () => {
                   onChange={handleChange}
                 >
                   <option value=""></option>
-                  {country.map((el, i) => (
+                  {states.map((el, i) => (
                     <option key={i} value={el?.name}>
                       {el?.name}
                     </option>
@@ -171,62 +307,10 @@ const VolunterForm = () => {
               <div className={styles.volunteerstyleform2}>
                 <div className=" position-relative">
                   <label
-                    htmlFor="experience_desc_11"
-                    className={styles.labelStyle}
-                  >
-                    Which of these best describes your experience?
-                  </label>
-                  <select
-                    name="experience_desc_11"
-                    id="experience_desc_11"
-                    className={`${styles.countrySelect} ${
-                      formError.experience_desc_11 ? styles.error : ""
-                    }`}
-                    value={form.experience_desc_11}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select</option>
-                    <option value="To gain experience in event management or organization">
-                      To gain experience in event management or organization
-                    </option>
-                    <option
-                      value="To contribute to the success of the IT and service
-                      management community."
-                    >
-                      To contribute to the success of the IT and service
-                      management community.
-                    </option>
-                    <option
-                      value="To network with industry professionals and expand my
-                      network."
-                    >
-                      To network with industry professionals and expand my
-                      network.
-                    </option>
-                    <option
-                      value="To learn more about service management and its impact on
-                      businesses."
-                    >
-                      To learn more about service management and its impact on
-                      businesses.
-                    </option>
-                    <option value="">
-                      To give back to the community and support a worthwhile
-                      cause.
-                    </option>
-                    <option value="">
-                      To enhance my resume and gain valuable skills.
-                    </option>
-                  </select>
-                  <FaChevronDown className={styles.iconic} />
-                </div>
-
-                <div className=" position-relative">
-                  <label
                     htmlFor="volunteer_reason_9"
                     className={styles.labelStyle}
                   >
-                    Why do you want to volunteer at Cloud Connect?
+                    Which of these best describes your experience?
                   </label>
                   <select
                     name="volunteer_reason_9"
@@ -235,6 +319,52 @@ const VolunterForm = () => {
                       formError.volunteer_reason_9 ? styles.error : ""
                     }`}
                     value={form.volunteer_reason_9}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select</option>
+                    <option value="To gain experience in event management or organization">
+                      To gain experience in event management or organization.
+                    </option>
+                    <option value="To contribute to the success of the IT and service management community">
+                      To contribute to the success of the IT and service
+                      management community.
+                    </option>
+                    <option value="To network with industry professionals and expand my network">
+                      To network with industry professionals and expand my
+                      network.
+                    </option>
+                    <option
+                      value="To learn more about service management and its impact on
+                    businesses"
+                    >
+                      To learn more about service management and its impact on
+                      businesses.
+                    </option>
+                    <option value="To give back to the community and support a worthwhile cause">
+                      To give back to the community and support a worthwhile
+                      cause.
+                    </option>
+                    <option value="To enhance my resume and gain valuable skills">
+                      To enhance my resume and gain valuable skills.
+                    </option>
+                  </select>
+                  <FaChevronDown className={styles.iconic} />
+                </div>
+
+                <div className=" position-relative">
+                  <label
+                    htmlFor="which_experience_8"
+                    className={styles.labelStyle}
+                  >
+                    Why do you want to volunteer at Cloud Connect?
+                  </label>
+                  <select
+                    name="which_experience_8"
+                    id="which_experience_8"
+                    className={`${styles.countrySelect} ${
+                      formError.which_experience_8 ? styles.error : ""
+                    }`}
+                    value={form.which_experience_8}
                     onChange={handleChange}
                   >
                     <option value="">Select</option>
@@ -279,18 +409,22 @@ const VolunterForm = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="relevant_info" className={styles.labelStyle}>
+                  <label
+                    htmlFor="experience_desc_11"
+                    className={styles.labelStyle}
+                  >
                     If yes, can you describe your experience
                   </label>
                   <textarea
-                    id="relevant_info"
-                    name="relevant_info"
+                    id="experience_desc_11"
+                    name="experience_desc_11"
                     rows="10"
                     cols="100"
-                    required
-                    value={form.relevant_info || ""}
+                    value={form.experience_desc_11 || ""}
                     onChange={handleChange}
-                    className={styles.textareastyle}
+                    className={`${styles.textareastyle} ${
+                      formError.volunteer_reason_9 ? styles.error : ""
+                    }`}
                   ></textarea>
                 </div>
               </div>
@@ -301,15 +435,15 @@ const VolunterForm = () => {
 
               <div>
                 <Input
-                  id="first_name"
-                  label="first_name"
+                  id="question_comment_info_12"
+                  label="question_comment_info_12"
                   text="Do you have any other questions or comments?"
-                  name="first_name"
+                  name="question_comment_info_12"
                   type="text"
-                  value={form.first_name || ""}
+                  value={form.question_comment_info_12 || ""}
                   placeholder=""
                   onChange={handleChange}
-                  errorF={formError.first_name}
+                  errorF={formError.question_comment_info_12}
                 />
               </div>
             </div>

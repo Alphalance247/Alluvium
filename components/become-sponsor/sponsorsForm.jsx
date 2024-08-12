@@ -116,6 +116,9 @@ const SponsorsForm = () => {
   return (
     <section className={`container-fluid ${styles.sponsorshipform}`}>
       <div className="container">
+        {loading && (
+          <LoadingScreen message="Your request is being processed......" />
+        )}
         <BecomeReuse
           heading=" BECOME A CLOUD CONNECT SPONSOR"
           paragraph=" Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem diam
@@ -436,12 +439,8 @@ const SponsorsForm = () => {
               </div>
             </div>
 
-            <div style={{ color: "black" }}>
-              {loading ? (
-                <LoadingScreen message="loading......" />
-              ) : (
-                <button className={styles.button1}>Submit Request</button>
-              )}
+            <div>
+              <button className={styles.button1}>Submit Request</button>
             </div>
           </form>
         </div>

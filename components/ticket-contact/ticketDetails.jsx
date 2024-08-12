@@ -132,6 +132,7 @@ const TicketDetails = () => {
       <OrderSummary
         ticketNumbers={ticketNumbers}
         calculateTotal={calculateTotal}
+        contBtn={true}
       />
 
       {/* <div>

@@ -5,15 +5,21 @@ import PhoneInput from "react-phone-number-input";
 import DetailsContact from "components/cloud-connect-common/details";
 import { useState, useEffect } from "react";
 import OrderSummary from "components/cloud-connect-common/orderSummary";
+import axios from "axios";
+import { useToasts } from "react-toast-notifications";
+import { useRouter } from "next/router";
 
 const ContactInformation = () => {
-  const [form, setForm] = useState({
-    phoneNumber: "",
-  });
+  const [form, setForm] = useState({});
   const [formError, setFormError] = useState({});
   const [ticketNumbers, setTicketNumbers] = useState([0, 0, 0]);
   const [isMounted, setIsMounted] = useState(false);
   const [isChecked, setIschecked] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const { addToast } = useToasts();
+  const router = useRouter();
+
+  console.log(form);
 
   console.log(isChecked);
 
@@ -23,6 +29,7 @@ const ContactInformation = () => {
       ...prevForm,
       [name]: value,
     }));
+    setFormError((prev) => ({ ...prev, [name]: false }));
   };
 
   const handleCheckBox = () => {
@@ -49,16 +56,98 @@ const ContactInformation = () => {
     return total.toLocaleString();
   };
 
+  const ticket1 = ticketNumbers[0] * 1000;
+  const ticket2 = ticketNumbers[1] * 3000;
+  const ticket3 = ticketNumbers[2] * 5000;
+
+  const bronze = ticket1.toString();
+  const silver = ticket2.toString();
+  const gold = ticket3.toString();
+
+  console.log(bronze, silver, gold);
+
   const total = calculateTotal();
   console.log(total);
 
   const handleNumber = (value) => {
-    setForm((prev) => ({ ...prev, phoneNumber: value }));
+    setForm((prev) => ({ ...prev, phone_number_5: value }));
+    setForm((prev) => ({ ...prev, recipient_phone_number_9: value }));
+    setFormError((prev) => ({ ...prev, phone_number_5: false }));
   };
 
   if (!isMounted) {
     return <p>Loading.....</p>; // or a loading spinner
   }
+
+  const handleSubmitTicket = async (e) => {
+    e.preventDefault();
+
+    if (
+      form.first_name_1 &&
+      form.last_name_2 &&
+      form.email_3 &&
+      form.phone_number_5
+    ) {
+      setLoading(true);
+      await axios
+        .post("https://vast.ec2.alluvium.net/cloud-connect/ticket-form", {
+          ...form,
+          bronze_ticket_10: bronze,
+          siver_ticket_11: silver,
+          gold_ticket_12: gold,
+        })
+        .then((res) => {
+          setLoading(false);
+
+          if (res.status >= 200 && res.status < 300) {
+            console.log(res?.data?.data?.paystack_auth_url);
+            router.push(res?.data?.data?.paystack_auth_url);
+            addToast("Details submitted successfully. Redirecting...", {
+              appearance: "success",
+            });
+
+            setForm({
+              ...form,
+              first_name_1: "",
+              last_name_2: "",
+              phone_number_5: "",
+              email_3: "",
+              recipient_email_8: "",
+              recipient_first_name_6: "",
+              recipient_last_name_7: "",
+              recipient_phone_number_9: "",
+            });
+          } else {
+            addToast(
+              res.data.error ||
+                "Error occured, please try again or contact Admin",
+              { appearance: "error" }
+            );
+            return;
+          }
+        })
+        .catch((err) => {
+          setLoading(false);
+          let errMessage =
+            "Oops something went wrong. Please try again or contact Admin";
+          if (err?.response?.status < 500) {
+            errMessage =
+              err?.response?.data?.error ||
+              "Oops something went wrong. Please try again or contact Admin";
+          }
+          addToast(errMessage, { appearance: "error" });
+          return;
+        });
+    } else {
+      setFormError({
+        ...formError,
+        first_name_1: !form.first_name_1,
+        last_name_2: !form.last_name_2,
+        email_3: !form.email_3,
+        phone_number_5: !form.phone_number_5,
+      });
+    }
+  };
 
   return (
     <section className={`container-fluid ${styles.details__contact}`}>
@@ -72,12 +161,12 @@ const ContactInformation = () => {
               id="first_name"
               label="first_name"
               text="First Name"
-              name="first_name"
+              name="first_name_1"
               type="text"
-              value={form.first_name || ""}
+              value={form.first_name_1 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.first_name}
+              errorF={formError.first_name_1}
             />
           </div>
 
@@ -86,40 +175,40 @@ const ContactInformation = () => {
               id="last_name"
               label="last_name"
               text="Last Name"
-              name="last_name"
+              name="last_name_2"
               type="text"
-              value={form.last_name || ""}
+              value={form.last_name_2 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.last_name}
+              errorF={formError.last_name_2}
             />
           </div>
 
           <div>
             <Input
-              id="jobFunction"
-              label="jobFunction"
+              id="email_3"
+              label="email_3"
               text="Email"
-              name="jobFunction"
+              name="email_3"
               type="email"
-              value={form.jobFunction || ""}
+              value={form.email_3 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.jobFunction}
+              errorF={formError.email_3}
             />
           </div>
 
           <div>
             <Input
-              id="jobFunction"
-              label="jobFunction"
+              id="email_4"
+              label="email_4"
               text="Confirm Email"
-              name="jobFunction"
+              name="email_4"
               type="email"
-              value={form.jobFunction || ""}
+              value={form.email_4 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.jobFunction}
+              errorF={formError.email_4}
             />
           </div>
 
@@ -132,15 +221,11 @@ const ContactInformation = () => {
               international
               required
               defaultCountry="NG"
-              value={form.phoneNumber ?? ""}
+              value={form.phone_number_5 ?? ""}
               onChange={handleNumber}
-              className={`${styles.PhoneInput} ${styles.PhoneInputCountry}`}
-              numberInputProps={{
-                className: formError.phoneNumber ? styles.error : "",
-              }}
-              countrySelectProps={{
-                className: formError.phoneNumber ? styles.error : "",
-              }}
+              className={`${styles.PhoneInput} ${styles.PhoneInputCountry} ${
+                formError.phone_number_5 ? styles.error : ""
+              }`}
             />
           </div>
         </div>
@@ -173,12 +258,12 @@ const ContactInformation = () => {
               id="first_name"
               label="first_name"
               text="Recipient First Name "
-              name="first_name"
+              name="recipient_first_name_6"
               type="text"
-              value={form.first_name || ""}
+              value={form.recipient_first_name_6 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.first_name}
+              errorF={formError.recipient_first_name_6}
             />
           </div>
 
@@ -187,12 +272,12 @@ const ContactInformation = () => {
               id="last_name"
               label="last_name"
               text="Recipient Last Name "
-              name="last_name"
+              name="recipient_last_name_7"
               type="text"
-              value={form.last_name || ""}
+              value={form.recipient_last_name_7 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.last_name}
+              errorF={formError.recipient_last_name_7}
             />
           </div>
 
@@ -201,26 +286,26 @@ const ContactInformation = () => {
               id="jobFunction"
               label="jobFunction"
               text="Recipient Email address"
-              name="jobFunction"
+              name="recipient_email_8"
               type="email"
-              value={form.jobFunction || ""}
+              value={form.recipient_email_8 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.jobFunction}
+              errorF={formError.recipient_email_8}
             />
           </div>
 
           <div>
             <Input
-              id="jobFunction"
-              label="jobFunction"
+              id="recipient_email_8"
+              label="recipient_email_8"
               text="Confirm Recipient Email address "
-              name="jobFunction"
+              name="recipient_email_8"
               type="email"
-              value={form.jobFunction || ""}
+              value={form.recipient_email_8 || ""}
               placeholder=""
               onChange={handleChange}
-              errorF={formError.jobFunction}
+              errorF={formError.recipient_email_8}
             />
           </div>
 
@@ -233,14 +318,18 @@ const ContactInformation = () => {
               international
               required
               defaultCountry="NG"
-              value={form.phoneNumber ?? ""}
+              value={form.recipient_phone_number_9 ?? ""}
               onChange={handleNumber}
               className={`${styles.PhoneInput} ${styles.PhoneInputCountry}`}
               numberInputProps={{
-                className: formError.phoneNumber ? styles.error : "",
+                className: formError.recipient_phone_number_9
+                  ? styles.error
+                  : "",
               }}
               countrySelectProps={{
-                className: formError.phoneNumber ? styles.error : "",
+                className: formError.recipient_phone_number_9
+                  ? styles.error
+                  : "",
               }}
             />
           </div>
@@ -251,6 +340,9 @@ const ContactInformation = () => {
         <OrderSummary
           ticketNumbers={ticketNumbers}
           calculateTotal={calculateTotal}
+          newButton={true}
+          onClick={handleSubmitTicket}
+          loading={loading}
         />
       </div>
     </section>
