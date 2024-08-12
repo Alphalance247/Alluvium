@@ -1,38 +1,87 @@
 .newsSection {
-  padding: 96px 0;
-  max-width: 1320px;
+  padding: 48px 16px;
+  max-width: 100%;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 72px 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 96px 12px;
+    max-width: 1320px;
+  }
 }
 
 .latestArticles {
-  padding: 96px 0;
+  padding: 48px 16px;
   background-color: white;
 
+  @media (min-width: 768px) {
+    padding: 72px 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 96px 12px;
+  }
+
   .container {
-    max-width: 1320px;
+    max-width: 100%;
     margin: 0 auto;
+
+    @media (min-width: 1024px) {
+      max-width: 1320px;
+    }
   }
 
   a {
-    width: fit-content;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: fit-content;
+    }
   }
 
   .latestArticlesHeading {
-    font-size: 2rem;
-    line-height: 2rem;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
     font-weight: 500;
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     color: #262626;
     font-family: "Helvetica Compressed", sans-serif;
     text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+      letter-spacing: 0.75px;
+      margin-bottom: 32px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 2rem;
+      line-height: 2rem;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+    }
   }
 
   .articlesGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
     justify-items: center;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+      gap: 2rem;
+    }
   }
 }
 
@@ -44,14 +93,16 @@
   box-shadow: 0px 8px 16px 0px #00000014;
   transition: transform 0.3s ease;
   height: 477px;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 
   &:hover {
     transform: translateY(-5px);
   }
 
   .imageWrapper {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 226px;
   }
 
@@ -99,13 +150,7 @@
 @media (max-width: 768px) {
   .newsSection,
   .latestArticles {
-    padding: 48px 0;
-  }
-
-  .latestArticles {
-    .articlesGrid {
-      grid-template-columns: 1fr;
-    }
+    padding: 48px 24px;
   }
 }
 
@@ -114,13 +159,23 @@
   padding: 96px 0;
   color: #262626;
 
+  @media (max-width: 768px) {
+    padding: 48px 0;
+  }
+
   .container {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   .articleTitle {
     margin-bottom: 24px;
+    font-size: 2.5rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .author {
@@ -132,12 +187,14 @@
   }
 
   .imageWrapper {
-    height: 487px;
+    height: auto;
     width: 100%;
+    max-height: 487px;
 
     .articleImage {
       width: 100%;
-      height: 487px;
+      height: auto;
+      max-height: 487px;
       object-fit: cover;
     }
   }
@@ -145,6 +202,10 @@
   .articleContent {
     .articleSection {
       margin: 64px 0;
+
+      @media (max-width: 768px) {
+        margin: 32px 0;
+      }
 
       .paragraph {
         margin-bottom: 20px;
@@ -154,16 +215,25 @@
         text-align: justify;
         color: #454545;
 
+        @media (max-width: 768px) {
+          font-size: 1rem;
+          line-height: 1.75rem;
+        }
+
         &:last-child {
-          margin-bottom: 0; // Remove margin from the last paragraph
+          margin-bottom: 0;
         }
       }
     }
 
     .ctaContainer {
-      padding: 40px 140px;
+      padding: 40px;
       border-top: 2px solid #e37915;
       border-bottom: 2px solid #e37915;
+
+      @media (max-width: 768px) {
+        padding: 24px;
+      }
 
       .ctaContent {
         display: flex;
@@ -182,12 +252,22 @@
           color: #082433;
           margin-bottom: 16px;
           text-transform: uppercase;
+
+          @media (max-width: 768px) {
+            font-size: 24px;
+            line-height: 28px;
+          }
         }
         p {
           color: #595959;
           font-size: 18px;
           line-height: 28px;
           margin-bottom: 24px;
+
+          @media (max-width: 768px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
         }
       }
     }
@@ -198,6 +278,13 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
 
     .authorInfo {
       .metaDetails {
@@ -232,13 +319,15 @@
   }
 
   .articleFigure {
-    height: 399px;
+    height: auto;
     width: 100%;
     margin-bottom: 0;
+    max-height: 399px;
 
     .contentImage {
       width: 100%;
-      height: 100%;
+      height: auto;
+      max-height: 399px;
       object-fit: cover;
     }
   }
@@ -246,17 +335,27 @@
   .shareSection {
     margin-top: 56px;
 
+    @media (max-width: 768px) {
+      margin-top: 32px;
+    }
+
     p {
       margin-bottom: 24px;
       font-size: 18px;
       font-weight: 500;
       line-height: 28px;
       color: #333333;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
 
     .socialIcons {
       display: flex;
       gap: 16px;
+      flex-wrap: wrap;
     }
   }
 }
@@ -265,9 +364,14 @@
   background-color: #f5f5f5;
   padding: 96px 0;
 
+  @media (max-width: 768px) {
+    padding: 48px 0;
+  }
+
   .container {
     max-width: 1320px;
     margin: 0 auto;
+    padding: 0 20px;
   }
 
   h3 {
@@ -279,6 +383,12 @@
     line-height: 40px;
     letter-spacing: 1px;
     text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 32px;
+      line-height: 36px;
+      margin-bottom: 32px;
+    }
   }
 
   .articlesGrid {
@@ -286,5 +396,10 @@
     align-items: center;
     gap: 32px;
     justify-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      gap: 24px;
+    }
   }
 }

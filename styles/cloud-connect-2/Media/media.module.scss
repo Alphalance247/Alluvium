@@ -1,16 +1,25 @@
 .mediaSection {
-  padding: 96px 0;
+  padding: 96px 20px;
   max-width: 1320px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 48px 20px;
+  }
 }
 
 .mediaContent {
   padding: 96px 0;
   background-color: white;
 
+  @media (max-width: 768px) {
+    padding: 48px 0;
+  }
+
   .container {
     max-width: 1320px;
     margin: 0 auto;
+    padding: 0 20px;
 
     .mediaHeading {
       font-size: 2rem;
@@ -21,6 +30,12 @@
       color: #262626;
       font-family: "Helvetica Compressed", sans-serif;
       text-transform: uppercase;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 24px;
+      }
     }
 
     .imageContainer {
@@ -31,12 +46,25 @@
     .imageRow {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 4px;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        margin-bottom: 0;
+      }
     }
 
     .imageWrapper {
       position: relative;
       overflow: hidden;
       transition: transform 0.3s ease;
+
+      @media (max-width: 768px) {
+        width: 100% !important;
+        height: 240px !important;
+        margin-right: 0 !important;
+        margin-bottom: 4px;
+      }
     }
 
     .image {
@@ -162,6 +190,21 @@
 
     &:last-of-type {
       right: -60px;
+    }
+
+    @media (max-width: 768px) {
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      &:first-of-type {
+        left: 5%;
+      }
+
+      &:last-of-type {
+        right: 5%;
+      }
     }
   }
 }

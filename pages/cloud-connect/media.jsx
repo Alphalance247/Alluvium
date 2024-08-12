@@ -5,7 +5,6 @@ import Layout from "../../components/cloud-connect-2/Layout";
 import SectionHeader from "../../components/cloud-connect-2/SectionHeader";
 import ImageModal from "components/cloud-connect-2/Media/ImageModal";
 
-
 const images = [
   "/assets/cloud-connect/images/cc23/Image.png",
   "/assets/cloud-connect/images/cc23/Image-1.png",
@@ -36,17 +35,31 @@ const images = [
 export default function Media() {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (modalOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
 
     // Cleanup function to reset overflow when component unmounts
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [modalOpen]);
 
@@ -68,15 +81,20 @@ export default function Media() {
   const renderImageRow = (start, end) => {
     const rowImages = images.slice(start, end);
     const isMultipleImages = rowImages.length > 1;
-    const rowHeight = isMultipleImages ? 362 : 480;
-    const imageWidth = isMultipleImages
+    const rowHeight = isMobile ? 300 : isMultipleImages ? 362 : 480;
+    const imageWidth = isMobile
+      ? "100%"
+      : isMultipleImages
       ? `calc((100% - ${(rowImages.length - 1) * 4}px) / ${rowImages.length})`
       : "100%";
 
     return (
       <div
         className={styles.imageRow}
-        style={{ height: `${rowHeight}px`, marginBottom: "4px" }}
+        style={{
+          height: isMobile ? "auto" : `${rowHeight}px`,
+          marginBottom: "4px",
+        }}
       >
         {rowImages.map((src, index) => (
           <div
@@ -84,8 +102,9 @@ export default function Media() {
             className={styles.imageWrapper}
             style={{
               width: imageWidth,
-              height: "100%",
-              marginRight: index < rowImages.length - 1 ? "4px" : "0",
+              height: isMobile ? "240px" : "100%",
+              marginRight:
+                !isMobile && index < rowImages.length - 1 ? "4px" : "0",
             }}
             onClick={() => openModal(start + index)}
           >

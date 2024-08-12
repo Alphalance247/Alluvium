@@ -16,7 +16,9 @@ const Media = () => {
         />
       </Head>
       <section className={styles.newsSection}>
-        <SectionHeader heading="Blog" />
+        <div className={styles.container}>
+          <SectionHeader heading="Blog" />
+        </div>
       </section>
       <section className={styles.latestArticles}>
         <div className={styles.container}>

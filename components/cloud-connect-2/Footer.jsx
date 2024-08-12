@@ -12,13 +12,10 @@ const Footer = () => {
     >
       <div className={styles.footer}>
         <div className={styles.footer__top}>
-          <Image
+          <img
             src={"/assets/cloud-connect/images/logo.png"}
             alt="Cloud connect logo"
-            width={273}
-            height={145}
             className={styles.footer__logo}
-            quality={100}
           />
           <div className={styles.footer__links}>
             <h3>Quick Links</h3>
