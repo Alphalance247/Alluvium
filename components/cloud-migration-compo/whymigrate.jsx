@@ -8,9 +8,9 @@ const WhyMigrate = () => {
         <div className={`${styles.cloudheading}`}>
           <h5>Why Migrate to the Atlassian Cloud?</h5>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-            arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id.
+            From strategy to execution, our team of experts will provide the
+            utmost guidance and smooth delivery through your data migration
+            journey.
           </p>
         </div>
         <div className={`${styles.cloudcontent}`}>

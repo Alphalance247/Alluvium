@@ -1,17 +1,22 @@
 import styles from "../../styles/licence.module.scss";
-import { chooseUsOptions } from "data";
+import { chooseUsAlluvium } from "data";
 import Image from "next/image";
 
-const ChooseUs = ({ choose }) => {
+const ChooseAlluvium = ({ choose }) => {
   return (
     <div className={`container-fluid ${styles.chooseUsDiv}`}>
       <div className={`container mx-auto ${styles.chooseOption}`}>
         <div className={`${styles.chooseHeading}`}>
           <h3>{choose}</h3>
+          <p>
+            From strategy to execution, our team of experts will provide the
+            utmost guidance and smooth delivery through your data migration
+            journey.
+          </p>
         </div>
 
         <div className={`${styles.expertGuide}`}>
-          {chooseUsOptions.map((el) => {
+          {chooseUsAlluvium.map((el) => {
             return (
               <div key={el.id}>
                 <Image src={el.imgChoose} width={48} height={48} alt="carbon" />
@@ -26,4 +31,4 @@ const ChooseUs = ({ choose }) => {
   );
 };
 
-export default ChooseUs;
+export default ChooseAlluvium;

@@ -10,10 +10,8 @@ const ProductAtlassian = () => {
           <h5>OUR SERVICES</h5>
           <h3>Our Atlassian Suite of Products</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-            arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id. Lorem ipsum dolor sit amet consectetur. Purus dui eget felis
-            congue arcu praesent proin.
+            See the overview below of the product suite of Atlassian apps we
+            support as an Atlassian Partner
           </p>
         </div>
 

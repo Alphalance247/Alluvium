@@ -1503,25 +1503,25 @@ export const cloudOptions = [
     id: "1",
     headings: "Security",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "Atlassian Cloud ensures high security with data encryption in transit and at rest, robust access controls, and compliance with standards like ISO 27001 and SOC 2. It offers data residency options, continuous security monitoring, and a dedicated incident response team. Atlassian adheres to strict privacy policies and conducts regular third-party audits.",
   },
   {
     id: "2",
-    headings: "Compliance",
+    headings: " Always up to date",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "By choosing Atlassian Cloud, you are assured of always being automatically up to date with the latest versions released by Atlassian and third-party apps. This way, you have access to the newest features and updates without needing to put in any technical effort.",
   },
   {
     id: "3",
-    headings: "Privacy",
+    headings: "Scalability",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "Atlassian Cloud is highly scalable, supporting organizations of all sizes with flexible Cloud plans and resources. It can handle growing user bases, increasing workloads, and complex projects seamlessly. The platform's architecture allows for easy expansion and integration with other tools. Scalability is enhanced by Atlassian's global infrastructure, ensuring optimal performance across regions.",
   },
   {
     id: "4",
     headings: "Reliability",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
   },
 ];
 
@@ -1631,35 +1631,42 @@ export const discoverAtlassiansServ = [
     heading: "Cloud & Data Migration",
     servicepage: "cloud-migration",
     questions:
-      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+      "Let us help you migrate your current Server environments to Atlassian Cloud smoothy.",
   },
   {
     id: 2,
-    heading: "Training & Support",
+    heading: "Training ",
     servicepage: "",
     questions:
-      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+      "Need to train your Jira or Confluence users to become more skilled? We offer various Atlassian training sessions, from user training to advanced admin training.",
   },
   {
     id: 3,
-    heading: "Licensing Management",
+    heading: "Support",
     servicepage: "atlassian-licence",
     questions:
-      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+      "Our team of experts is ready to support you during every phase of your Atlassian journey. We offer support packages and subscriptions tailored to your needs.",
   },
   {
     id: 4,
-    heading: "Atlassian Consulting & Strategy",
+    heading: "Licensing Management",
     servicepage: "",
     questions:
-      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+      "Are you seeking an Atlassian partner to assist with purchasing Atlassian and Marketplace apps? Maximize your license investment by letting Alluvium manage your licenses.",
   },
   {
     id: 5,
+    heading: "Consulting & Strategy",
+    servicepage: "",
+    questions:
+      "Looking for Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? We’re here for you.",
+  },
+  {
+    id: 6,
     heading: "JSM Implementation",
     servicepage: "",
     questions:
-      "Lorem ipsum dolor sit amet consectetur. Diam at vel donec molestie habitasse massa. Non est consequat etiam congue.",
+      "Transform your IT service operations into a streamlined and efficient powerhouse with our ITSM implementation using the best-in-class tool: Jira Service Management.",
   },
 ];
 
@@ -1734,5 +1741,70 @@ export const atlassianTools = [
     imgChoose: "/assets/licence-image/plugin.svg",
     paragraphs:
       "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+];
+
+export const chooseUsAlluvium = [
+  {
+    id: "1",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We’ve helped numerous companies migrate to Cloud before",
+  },
+  {
+    id: "2",
+    headings: "Feel Fully Supported",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Be assured of a smooth migration process and post-migration support.",
+  },
+  {
+    id: "3",
+    headings: "Zero Data Loss",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "With our expertise, we can ensure no data gets lost during migration.",
+  },
+  {
+    id: "4",
+    headings: "Shorter Timelines",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We can decrease the timelines for the migration.",
+  },
+  {
+    id: "5",
+    headings: "Minimizing Downtime",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We understand your business continuïty matters most.",
+  },
+  {
+    id: "6",
+    headings: "Flexible Payment Options",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "We ensure you know exactly what the cost estimates for migration and licensing.",
+  },
+];
+
+export const cloudcounter = [
+  {
+    id: "1",
+    content: "The Discovery Phase",
+  },
+  {
+    id: "2",
+    content: "Smoke Testing (1 month)",
+  },
+  {
+    id: "3",
+    content: "User Acceptance Testing",
+  },
+  {
+    id: "4",
+    content: "Production Migration",
+  },
+  {
+    id: "5",
+    content: "Post Migration Support",
   },
 ];

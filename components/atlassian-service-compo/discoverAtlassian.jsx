@@ -11,9 +11,8 @@ const DiscoverAtlassian = () => {
           <h5>OUR SERVICES</h5>
           <h3>Discover Our Atlassian Services</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-            arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id.
+            Our team of Atlassian certified experts is ready to help you tackle
+            any of your Atlassian challenges.
           </p>
           <Link href="/support/contact#schedule-a-call">
             <button className={styles.button1}>Schedule a Call</button>

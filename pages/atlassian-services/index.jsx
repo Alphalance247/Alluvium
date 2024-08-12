@@ -7,6 +7,7 @@ import Platinum from "components/licence-component/platinum";
 import CustomerReview from "components/our-customers/customer";
 import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero";
 import styles from "../../styles/licence.module.scss";
+import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 
 const AtlassianService = () => {
   return (
@@ -14,21 +15,21 @@ const AtlassianService = () => {
       <LicenceHero
         withrequest={true}
         contentsheading="ATLASSIAN SERVICES"
-        contentsheading1="End-to-End Atlassian Services for Enhanced Productivity"
-        contentsheading2="Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit id."
-        buttontext="Request License"
+        contentsheading1="Customized Atlassian Services for Enhanced Productivity"
+        contentsheading2="Implement or optimize your Atlassian apps through our Atlassian products and services."
+        buttontext="Schedule a Call"
         withSlide={true}
       />
       <DiscoverAtlassian />
       <MarketPlace />
       <ProductAtlassian />
       <Platinum
-        heading="Your Atlassian Platinum Partner"
+        heading="Your Atlassian Partner and Solution Expert"
         buttoncontent="Schedule a Call"
         button1style={styles.button3}
         scheduleRequest="/support/contact#schedule-a-call"
       />
-      <ChooseUs choose="Why Choose Alluvium" />
+      <ChooseAlluvium choose="Why Choose Alluvium" pargraphContent={true} />
       <CustomerReview />
     </Layout>
   );
