@@ -1,13 +1,16 @@
+import Head from "next/head";
 import VolunterForm from "components/volunteering/volunterrForm";
-import Header from "components/cloud-connect-2/Header";
-import Footer from "components/cloud-connect-2/Footer";
-import styles from "../../styles/cloudconnect.module.scss";
+import styles from "../../styles/cloud-connect-2/cloudconnect.module.scss";
 import SectionHeader from "components/cloud-connect-2/SectionHeader";
+import Layout from "components/cloud-connect-2/Layout";
 
 const Volunteer = () => {
   return (
-    <main className={styles.cloudConnectHome}>
-      <Header />
+    <Layout>
+      <Head>
+        <title>Contact Details | Cloud Connect 2024</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className={`container ${styles.sponsor_hero}`}>
         <SectionHeader
           heading="VOLUNTEER REGISTRATION"
@@ -15,9 +18,7 @@ const Volunteer = () => {
         />
       </div>
       <VolunterForm />
-
-      <Footer />
-    </main>
+    </Layout>
   );
 };
 

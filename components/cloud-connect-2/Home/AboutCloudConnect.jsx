@@ -2,6 +2,7 @@ import SectionHeader from "../SectionHeader";
 import Button from "../Button";
 import styles from "../../../styles/cloud-connect-2/Home/aboutCloudConnect.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const images = [
   {
@@ -38,7 +39,11 @@ const AboutCloudConnect = () => {
           size="large"
           heading="What is cloud connect?"
           description="Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem diam feugiat. Tristique velit velit proin amet cras diam mi. Vel nunc ut feugiat quis dolor malesuada vitae quisque. Lacinia quis quis scelerisque vitae maecenas nulla sem."
-          button1={<Button size="large">Buy Tickets</Button>}
+          button1={
+            <Link href="/cloud-connect/book-a-ticket">
+              <Button size="large">Buy Tickets</Button>
+            </Link>
+          }
         />
       </div>
 

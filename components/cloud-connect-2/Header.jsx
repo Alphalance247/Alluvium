@@ -87,9 +87,10 @@ const Header = () => {
               height={71}
             />
             <div className={styles.eventDetails}>
-              <span>Landmark Event Center,</span>
+              <span>The Zone, Plot 9, Gbagada</span>
+              <span>Industrial Scheme beside UPS,</span>
               <span>Lagos, Nigeria</span>
-              <span>November 26, 2024</span>
+              <span>November 28th, 2024</span>
             </div>
           </div>
         </Link>
@@ -108,7 +109,9 @@ const Header = () => {
           </ul>
         )}
         <div className={styles.ctaButton}>
-          <Button>Buy Tickets</Button>
+          <Link href="/cloud-connect/book-a-ticket">
+            <Button>Buy Tickets</Button>
+          </Link>
         </div>
       </nav>
     </header>

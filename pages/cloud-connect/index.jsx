@@ -8,6 +8,7 @@ import TopLeaders from "components/cloud-connect-2/Home/TopLeaders";
 import WhyAttend from "components/cloud-connect-2/Home/WhyAttend";
 import Head from "next/head";
 import Layout from "../../components/cloud-connect-2/Layout";
+import Partners from "components/cloud-connect-common/partners";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         alt="Cloud connect event image"
         className={styles.eventImg}
       />
+      <Partners showheadSponsor />
       <AboutCloudConnect />
       <TopLeaders />
       <EventVideo />

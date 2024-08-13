@@ -1,12 +1,14 @@
 import Button from "../Button";
 import styles from "../../../styles/cloud-connect-2/Home/hero.module.scss";
+import Link from "next/link";
 
 const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.hero__content}>
         <div className={styles["hero__content-date"]}>
-          Nov 6, 2024 | Landmark Event Center | Lagos
+          Nov 6, 2024 | The Zone, Plot 9, Gbagada Industrial Scheme beside UPS,
+          Lagos Nigeria{" "}
         </div>
         <div className={styles["hero__content-title-wrapper"]}>
           <h1 className={styles["hero__content-subtitle"]}>
@@ -16,14 +18,15 @@ const Hero = () => {
             Service Management Beyond it.
           </h2>
           <p className={styles["hero__content-description"]}>
-            Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem
-            diam feugiat. Tristique velit velit proin amet cras diam mi. Vel
-            nunc ut feugiat quis dolor malesuada vitae quisque. Lacinia quis
-            quis scelerisque vitae maecenas nulla sem.
+            This innovative event is designed to enhance your approach to
+            business optimization by extending service management practices
+            beyond IT boundaries.
           </p>
         </div>
         <div>
-          <Button size="large">Buy Tickets</Button>
+          <Link href="/cloud-connect/book-a-ticket">
+            <Button size="large">Buy Tickets</Button>
+          </Link>
         </div>
       </div>
 

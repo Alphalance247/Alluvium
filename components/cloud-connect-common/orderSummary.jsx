@@ -1,4 +1,3 @@
-// const
 import Button from "components/cloud-connect-2/Button";
 import styles from "../../styles/cloud2.4/general.module.scss";
 import { useRouter } from "next/router";
@@ -14,7 +13,7 @@ const OrderSummary = ({
   const router = useRouter();
 
   const handleClick = () => {
-    router.push("/book-a-ticket/contact-details");
+    router.push("/cloud-connect/book-a-ticket/contact-details");
   };
 
   return (

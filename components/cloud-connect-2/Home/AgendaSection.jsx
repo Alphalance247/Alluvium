@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../../../styles/cloud-connect-2/Home/agendaSection.module.scss";
 import Button from "../Button";
 import SectionHeader from "../SectionHeader";
@@ -34,9 +35,11 @@ const AgendaSection = () => {
             heading="Partner with Us to Drive Innovation at Cloud Connect"
             width="fullWidth"
             button1={
-              <Button size="large" width className={styles.sponsorButton}>
-                Become a sponsor
-              </Button>
+              <Link href="/cloud-connect/sponsor">
+                <Button size="large" width className={styles.sponsorButton}>
+                  Become a sponsor
+                </Button>
+              </Link>
             }
           />
         </div>
