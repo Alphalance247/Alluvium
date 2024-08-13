@@ -7,40 +7,38 @@ import ChooseUs from "components/licence-component/chooseUs";
 import CaseStudies from "components/case-studies/case-studies";
 import FaqPage from "components/faqPage";
 import FaQuestions from "components/licence-component/faQuestion";
+import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero";
+import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
+import MigrationProcess from "components/cloud-migration-compo/migrationProcess";
 
 const CloudMigration = () => {
   return (
     <Layout>
-      <div className={`container-fluid ${styles.licencelayout}`}>
-        <div className={` ${styles.licencehero}`}>
-          <p className={styles.textlicence}>ATLASSIAN LICENSE MANAGEMENT</p>
-          <h3>Effortless Atlassian License Management</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-            arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id.
-          </p>
-          <div>
-            <Link href="">
-              <button className={styles.button1}>Schedule a Demo</button>
-            </Link>
-          </div>
-        </div>
-      </div>
+      <LicenceHero
+        withrequest={false}
+        contentsheading="ATLASSIAN LICENSE MANAGEMENT"
+        contentsheading1="Effortless Atlassian Migration"
+        contentsheading2="When smooth and secure data migration matters, make Alluvium your go-to partner."
+        buttontext="Schedule a Demo"
+        withSlide={false}
+      />
       <ServerCloud />
       <WhyMigrate />
-      <ChooseUs choose="Why Plan Your Migration With Alluvium?" />
+      <ChooseAlluvium choose="Why Plan Your Migration With Alluvium?" />
       <div className={`container-fluid ${styles.seamlessMigration}`}>
         <div className={` ${styles.seamlessheading}`}>
           <h4>Seamlessly migrate your data with Alluvium – Get started now!</h4>
 
           <div>
-            <Link href="">
-              <button className={styles.button1}>Schedule a Call</button>
+            <Link href="/support/contact#schedule-a-call">
+              <button className={styles.button1}>
+                Schedule a Free Consult
+              </button>
             </Link>
           </div>
         </div>
       </div>
+      <MigrationProcess />
       <CaseStudies />
       <FaQuestions />
     </Layout>
