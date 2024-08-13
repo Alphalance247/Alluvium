@@ -39,6 +39,8 @@
       border-radius: 2px;
       font-weight: 600;
       width: fit-content;
+      max-width: 428px;
+      height: 56px;
       text-transform: uppercase;
 
       @media (min-width: 768px) {

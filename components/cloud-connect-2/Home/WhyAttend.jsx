@@ -5,39 +5,27 @@ import Image from "next/image";
 const data = [
   {
     icon: "/assets/cloud-connect/icons/ic_outline-insights.svg",
-    title: "Insights and Trends",
+    title: "Strategic Insights",
     description:
-      "Learn about the latest developments in cloud technology from leading industry experts.",
+      "Learn how leading organizations are harnessing Service Management strategy ies to optimize their business operations.",
   },
   {
     icon: "/assets/cloud-connect/icons/la_handshake-solid.svg",
-    title: "Networking",
+    title: "Cross-Functional Collaboration",
     description:
-      "Connect with peers, thought leaders, and innovators from around the world.",
+      "Discover how extending service management practices beyond IT can create synergies and drive innovation throughout your entire organization.",
   },
   {
     icon: "/assets/cloud-connect/icons/icons8_idea.svg",
-    title: "Learning Opportunities",
+    title: "Business Transformation",
     description:
-      "Participate in interactive workshops and sessions to enhance your skills and knowledge.",
+      "From customer service to HR and beyond, Cloud Connect will show you how to maximize new opportunities for growth and efficiency within the an organization.",
   },
   {
     icon: "/assets/cloud-connect/icons/icon-park-outline_database-success.svg",
-    title: "Access to New Technologies",
+    title: "Networking Opportunities",
     description:
-      "Discover the latest tools and solutions that can drive your business forward.",
-  },
-  {
-    icon: "/assets/cloud-connect/icons/icons8_idea.svg",
-    title: "Group Discussions",
-    description:
-      "Participate in interactive workshops and sessions to enhance your skills and knowledge.",
-  },
-  {
-    icon: "/assets/cloud-connect/icons/icon-park-outline_database-success.svg",
-    title: "Access to New Technologies",
-    description:
-      "Discover the latest tools and solutions that can drive your business forward.",
+      "Connect with industry experts, thought leaders, and peers who are at the forefront of service management. Share experiences, exchange ideas, and forge valuable connections that can propel your business forward.",
   },
 ];
 
@@ -48,10 +36,10 @@ const WhyAttend = () => {
         <div className={styles.whyAttend__header}>
           <SectionHeader
             heading="Why Attend Cloud Connect?"
-            description="Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem diam feugiat. Tristique velit velit proin amet cras diam mi. Vel nunc ut feugiat quis dolor malesuada vitae quisque. Lacinia quis quis scelerisque vitae maecenas nulla sem."
+            description="Cloud Connect offers a platform to explore how to outshine traditional IT service management and align service delivery with broader business objectives. Discover innovative strategies to optimize operations, enhance customer experiences, and drive sustainable growth."
             size="small"
             variant="dark"
-            width="medium"
+            width="small"
           />
         </div>
         <div className={styles.whyAttend__grid}>
