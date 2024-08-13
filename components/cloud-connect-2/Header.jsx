@@ -108,7 +108,9 @@ const Header = () => {
           </ul>
         )}
         <div className={styles.ctaButton}>
-          <Button>Buy Tickets</Button>
+          <Link href="/cloud-connect/book-a-ticket">
+            <Button>Buy Tickets</Button>
+          </Link>
         </div>
       </nav>
     </header>

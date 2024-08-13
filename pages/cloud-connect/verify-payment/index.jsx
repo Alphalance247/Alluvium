@@ -3,9 +3,8 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useToasts } from "react-toast-notifications";
 import LoadingScreen from "components/loading";
-import Header from "components/cloud-connect-2/Header";
-import Footer from "components/cloud-connect-2/Footer";
-import styles from "../../../styles/cloudconnect.module.scss";
+import Layout from "components/cloud-connect-2/Layout";
+import Head from "next/head";
 
 const Verify = () => {
   const [post, setPost] = useState("");
@@ -57,8 +56,11 @@ const Verify = () => {
     VerifyPayment(payment__reference);
   }, [router.isReady, router.query]);
   return (
-    <main className={styles.cloudConnectHome}>
-      <Header />
+    <Layout>
+      <Head>
+        <title>Verify Payment | Cloud Connect 2024</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div>
         {loading && (
           <LoadingScreen message="Payment Verification in Progress...." />
@@ -67,8 +69,7 @@ const Verify = () => {
 
         <p>Yay 🎉🎉 {post}</p>
       </div>
-      <Footer />
-    </main>
+    </Layout>
   );
 };
 
