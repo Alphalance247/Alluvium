@@ -1,5 +1,6 @@
 import Button from "../Button";
 import styles from "../../../styles/cloud-connect-2/Home/hero.module.scss";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -23,7 +24,9 @@ const Hero = () => {
           </p>
         </div>
         <div>
-          <Button size="large">Buy Tickets</Button>
+          <Link href="/cloud-connect/book-a-ticket">
+            <Button size="large">Buy Tickets</Button>
+          </Link>
         </div>
       </div>
 

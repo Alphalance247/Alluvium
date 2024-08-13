@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "../../../styles/cloud-connect-2/Home/aboutAlluvium.module.scss";
 import Button from "../Button";
 
@@ -36,9 +37,11 @@ const AboutAlluvium = () => {
             </li>
           ))}
         </ul>
-        <Button size="large" className={styles.button}>
-          Learn More About Us
-        </Button>
+        <a href="/" target="_blank">
+          <Button size="large" className={styles.button}>
+            Learn More About Us
+          </Button>
+        </a>
       </div>
       <div className={styles.imageWrapper}>
         <img
