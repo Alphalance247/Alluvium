@@ -1,4 +1,4 @@
-import styles from "../../styles/cloudconnect.module.scss";
+import styles from "../../styles/cloud-connect-2/button.module.scss";
 
 const Button = ({
   children,

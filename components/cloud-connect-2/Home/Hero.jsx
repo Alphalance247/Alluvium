@@ -1,5 +1,5 @@
 import Button from "../Button";
-import styles from "../../../styles/cloudconnect.module.scss";
+import styles from "../../../styles/cloud-connect-2/Home/hero.module.scss";
 
 const Hero = () => {
   return (

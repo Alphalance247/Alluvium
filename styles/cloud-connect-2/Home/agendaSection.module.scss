@@ -1,0 +1,191 @@
+.agendaSection {
+  .agendaContent {
+    max-width: 626px;
+    margin: 0 auto;
+    padding: 48px 16px;
+
+    @media (min-width: 768px) {
+      padding: 72px 24px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 96px 0;
+    }
+  }
+
+  .agendaHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    @media (min-width: 768px) {
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 2.5rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  .title {
+    font-family: "Helvetica Compressed", sans-serif;
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 3rem;
+      letter-spacing: 0.75px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 3.75rem;
+      line-height: 3.75rem;
+      letter-spacing: 1px;
+    }
+  }
+
+  .date {
+    color: #f5f5f5;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+      line-height: 1.35rem;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .agendaItems {
+    .agendaItem {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 0;
+      border-bottom: 1px solid #ffffff1a;
+      font-size: 16px;
+      line-height: 20px;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        font-size: 17px;
+        line-height: 22px;
+      }
+
+      @media (min-width: 1024px) {
+        padding: 24px 0;
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    .time {
+      margin-bottom: 8px;
+
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+        flex-basis: 40%;
+      }
+    }
+
+    .description {
+      color: #f5f5f5;
+      font-weight: 600;
+
+      @media (min-width: 768px) {
+        flex-basis: 60%;
+        text-align: right;
+      }
+    }
+  }
+
+  .sponsorSection {
+    background: linear-gradient(270deg, #0086c0 31.28%, #009bc0 90.73%);
+    padding: 48px 16px;
+
+    @media (min-width: 768px) {
+      padding: 72px 24px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 96px 0;
+    }
+  }
+
+  .sponsorContent {
+    max-width: 846px;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    @media (min-width: 768px) {
+      padding: 1.5rem 0;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 2rem 0;
+    }
+  }
+
+  .sponsorText {
+    color: #ffffff;
+    margin-bottom: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 15px;
+      line-height: 22px;
+      font-size: 16px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 18px;
+      line-height: 24px;
+      font-size: 18px;
+    }
+  }
+
+  .sponsorButton {
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    margin-top: 24px;
+    font-size: 14px;
+    padding: 10px 20px;
+
+    @media (min-width: 768px) {
+      margin-top: 28px;
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-top: 32px;
+      font-size: 18px;
+      padding: 14px 28px;
+    }
+
+    &:hover {
+      background-color: #ffffff;
+      color: #0086c0;
+    }
+  }
+}

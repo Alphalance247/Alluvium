@@ -1,6 +1,6 @@
 import SectionHeader from "../SectionHeader";
 import Button from "../Button";
-import styles from "../../../styles/cloudconnect.module.scss";
+import styles from "../../../styles/cloud-connect-2/Home/aboutCloudConnect.module.scss";
 import Image from "next/image";
 
 const images = [
