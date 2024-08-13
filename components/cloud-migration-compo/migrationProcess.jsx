@@ -22,7 +22,7 @@ const MigrationProcess = () => {
           />
         </div>
 
-        <div className={styles.cloud__process}>
+        {/* <div className={styles.cloud__process}>
           {cloudcounter.map((el) => {
             return (
               <div key={el.id}>
@@ -31,7 +31,7 @@ const MigrationProcess = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
         <p>
           Before starting your migration journey, we take the time to truly
           understand your unique Atlassian landscape. Through a comprehensive

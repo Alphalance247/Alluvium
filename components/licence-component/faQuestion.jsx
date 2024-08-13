@@ -22,11 +22,11 @@ const FaQuestions = () => {
         <div className={`${styles.faqContent}`}>
           <h5>FAQ</h5>
           <h3>Frequently Asked Questions</h3>
-          <p>
+          {/* <p>
             Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
             arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
             id.
-          </p>
+          </p> */}
         </div>
 
         <div className={`${styles.faqsection}`}>

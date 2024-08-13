@@ -40,6 +40,7 @@ const CloudMigration = () => {
       </div>
       <MigrationProcess />
       <CaseStudies />
+      <FaQuestions />
     </Layout>
   );
 };

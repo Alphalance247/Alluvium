@@ -8,6 +8,7 @@ import CustomerReview from "components/our-customers/customer";
 import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero";
 import styles from "../../styles/licence.module.scss";
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
+import FaQuestions from "components/licence-component/faQuestion";
 
 const AtlassianService = () => {
   return (
@@ -31,6 +32,7 @@ const AtlassianService = () => {
       />
       <ChooseAlluvium choose="Why Choose Alluvium" pargraphContent={true} />
       <CustomerReview />
+      <FaQuestions />
     </Layout>
   );
 };
