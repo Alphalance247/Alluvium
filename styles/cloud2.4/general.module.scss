@@ -5,19 +5,25 @@
   padding: 0;
   background: white;
 
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
   .ticketBookings {
     padding-top: 6rem;
     padding-bottom: 6rem;
     padding-left: 6rem;
 
     @media screen and (max-width: 992px) {
-      padding-left: 2rem;
+      padding-left: 1rem;
     }
 
     @media screen and (max-width: 576px) {
-      padding-left: 1rem;
+      padding-left: 0.5rem;
       padding-top: 1rem;
       padding-bottom: 1rem;
+      padding-right: 1rem;
     }
   }
 
@@ -29,6 +35,10 @@
     flex-direction: column;
     row-gap: 2rem;
 
+    @media screen and (max-width: 576px) {
+      padding-left: 1rem 0px;
+    }
+
     .ticketTitle {
       display: grid;
       grid-template-columns: 50% auto auto;
@@ -38,7 +48,7 @@
       align-items: center;
 
       @media screen and (max-width: 576px) {
-        grid-template-columns: 1fr;
+        padding: 1rem 1rem;
       }
 
       p {
@@ -47,6 +57,10 @@
         font-weight: 500;
         line-height: 2rem;
         margin-bottom: 0px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 0.8rem;
+        }
       }
     }
 
@@ -56,7 +70,7 @@
       padding: 1rem 2rem;
 
       @media screen and (max-width: 576px) {
-        grid-template-columns: 1fr;
+        padding: 0.5rem;
       }
 
       .contentTicket {
@@ -65,16 +79,28 @@
           font-weight: 500;
           font-size: 17px;
           line-height: 1.5rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 13px;
+          }
         }
 
         ul {
           margin-left: 1.5rem;
+
+          @media screen and (max-width: 576px) {
+            margin-left: 1rem;
+          }
         }
 
         li {
           font-size: 17px;
           line-height: 1.5rem;
           color: #595959;
+
+          @media screen and (max-width: 576px) {
+            font-size: 10px;
+          }
         }
       }
 
@@ -83,6 +109,10 @@
         font-weight: 500;
         line-height: 1.5rem;
         color: #595959;
+
+        @media screen and (max-width: 576px) {
+          font-size: 13px;
+        }
       }
 
       .ticketUpdate {
@@ -90,12 +120,21 @@
         column-gap: 10px;
         align-items: flex-start;
 
+        @media screen and (max-width: 576px) {
+          column-gap: 5px;
+        }
+
         p {
           color: #262626;
           font-weight: 500;
           line-height: 1.5rem;
           font-size: 1rem;
           margin-top: 0.3rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 12px;
+            margin-top: 0.1rem;
+          }
         }
 
         .minus {
@@ -103,9 +142,13 @@
           border-radius: 0.5rem;
           padding: 0.2rem 0.8rem;
           border: none;
-          //   font-weight: 700;
           color: #a9a8b3;
           font-size: 18px;
+
+          @media screen and (max-width: 576px) {
+            padding: 0.2rem 0.5rem;
+            font-size: 14px;
+          }
         }
 
         .plus {
@@ -113,9 +156,13 @@
           border-radius: 0.5rem;
           padding: 0.2rem 0.8rem;
           border: none;
-          //   font-weight: 700;
           color: white;
           font-size: 17px;
+
+          @media screen and (max-width: 576px) {
+            padding: 0.2rem 0.5rem;
+            font-size: 13px;
+          }
         }
       }
     }
@@ -126,10 +173,15 @@
 .orderSummary {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background: #eeedf2;
+  background: #f8f7fa;
   padding-top: 6rem;
   height: 100%;
   border-left: 1px solid #eeedf2;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 
   .summaryHeading {
     font-size: 1.5rem;
@@ -236,6 +288,12 @@
   padding: 0rem 2rem;
   font-family: "Helvetica Compressed", sans-serif;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0px 1rem;
+  }
 }
 
 .details__contact {
@@ -245,10 +303,19 @@
   padding: 0;
   background: white;
 
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
   .details__encap {
     padding-top: 6rem;
     padding-bottom: 6rem;
     padding-left: 6rem;
+
+    @media screen and (max-width: 992px) {
+      padding: 2.5rem 1rem;
+    }
   }
 
   .input__details {
@@ -257,6 +324,11 @@
     row-gap: 1.5rem;
     column-gap: 1.25rem;
     margin-top: 2rem;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
   }
 
   .ticket__pickup {
@@ -272,12 +344,20 @@
       line-height: 28px;
       font-weight: 500;
       margin-bottom: 0.3rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 0.8rem;
+      }
     }
 
     .receive__mail {
       font-size: 1rem;
       line-height: 20px;
       color: #595959;
+
+      @media screen and (max-width: 576px) {
+        font-size: 0.8rem;
+      }
     }
   }
 

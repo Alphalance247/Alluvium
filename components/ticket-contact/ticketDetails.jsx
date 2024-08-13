@@ -8,16 +8,6 @@ const TicketDetails = () => {
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
   const ticketPrices = [1000, 3000, 5000];
 
-  // const [ticketNumbers, setTicketNumbers] = useState(() => {
-  //   const savedTickets = localStorage.getItem("ticketNumbers");
-  //   return savedTickets ? JSON.parse(savedTickets) : eventTicket.map(() => 0);
-  // });
-  // const ticketPrices = [1000, 3000, 5000];
-
-  // useEffect(() => {
-  //   localStorage.setItem("ticketNumbers", JSON.stringify(ticketNumbers));
-  // }, [ticketNumbers]);
-
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedTickets = localStorage.getItem("ticketNumbers");
@@ -72,7 +62,6 @@ const TicketDetails = () => {
       <div className={styles.ticketBookings}>
         <div className={`${styles.chooseTicket} container`}>
           <DetailsContact content="CHOOSE YOUR event TICKET" />
-          {/* <p className={`${styles.eventTicket}`}>CHOOSE YOUR event TICKET</p> */}
 
           <div className={`${styles.ticketTitle}`}>
             <p>TICKET</p>
@@ -94,16 +83,13 @@ const TicketDetails = () => {
               }}
             >
               <div className={styles.contentTicket}>
-                <p>General admission</p>
+                <p>{item.ticketTitle}</p>
                 <ul>
-                  <li>Access to all Cloud Connect sessions</li>
-                  <li>Networking opportunities with industry peers</li>
-                  <li>Event swag bag</li>
-                  <li>Coffee & refreshments throughout the event</li>
+                  <li>{item.list1}</li>
                 </ul>
               </div>
 
-              <p className={styles.ticketPrice}>₦5,000</p>
+              <p className={styles.ticketPrice}>{item.price}</p>
 
               <div className={styles.ticketUpdate}>
                 <div>
@@ -134,43 +120,6 @@ const TicketDetails = () => {
         calculateTotal={calculateTotal}
         contBtn={true}
       />
-
-      {/* <div>
-        <div className={`${styles.orderSummary}`}>
-          <p className={`${styles.summaryHeading}`}>Order Summary</p>
-          <div className={`${styles.firstTicket}`}>
-            <p className={`${styles.tag}`}>
-              {ticketNumbers[0]} x General admission
-            </p>
-            <p className={`${styles.priceTag}`}>{`₦ ${(
-              1000 * ticketNumbers[0]
-            ).toLocaleString()}`}</p>
-          </div>
-
-          <div className={`${styles.firstTicket}`}>
-            <p className={`${styles.tag}`}>{ticketNumbers[1]} x VP </p>
-            <p className={`${styles.priceTag}`}>{`₦ ${(
-              3000 * ticketNumbers[1]
-            ).toLocaleString()}`}</p>
-          </div>
-
-          <div className={`${styles.firstTicket}`}>
-            <p className={`${styles.tag}`}>{ticketNumbers[2]} x VVIP</p>
-            <p className={`${styles.priceTag}`}>{`₦ ${(
-              5000 * ticketNumbers[2]
-            ).toLocaleString()}`}</p>
-          </div>
-
-          <div className={`${styles.summaryTotal}`}>
-            <p>Total</p>
-            <p>{`₦ ${calculateTotal()}`}</p>
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <button className={styles.button1}>Continue</button>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };

@@ -1,7 +1,6 @@
 // const
 import Button from "components/cloud-connect-2/Button";
 import styles from "../../styles/cloud2.4/general.module.scss";
-// import Router from "next/router";
 import { useRouter } from "next/router";
 
 const OrderSummary = ({
@@ -12,17 +11,6 @@ const OrderSummary = ({
   onClick,
   loading,
 }) => {
-  // const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
-  //   const ticketPrices = [1000, 3000, 5000];
-
-  //   const calculateTotal = () => {
-  //     const total = ticketNumbers.reduce(
-  //       (total, num, index) => total + num * ticketPrices[index],
-  //       0
-  //     );
-
-  //     return total.toLocaleString();
-  //   };
   const router = useRouter();
 
   const handleClick = () => {
@@ -30,7 +18,6 @@ const OrderSummary = ({
   };
 
   return (
-    // <div>
     <div className={`${styles.orderSummary}`}>
       <p className={`${styles.summaryHeading}`}>Order Summary</p>
       <div className={`${styles.firstTicket}`}>
@@ -62,8 +49,6 @@ const OrderSummary = ({
       </div>
 
       <div style={{ display: "flex", flexDirection: "column" }}>
-        {/* <button className={styles.button1}>Continue</button> */}
-
         {contBtn && <Button onClick={handleClick}>Continue</Button>}
 
         {newButton && (
@@ -73,7 +58,6 @@ const OrderSummary = ({
         )}
       </div>
     </div>
-    // </div>
   );
 };
 

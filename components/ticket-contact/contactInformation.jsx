@@ -21,8 +21,6 @@ const ContactInformation = () => {
 
   console.log(form);
 
-  console.log(isChecked);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prevForm) => ({
@@ -56,18 +54,15 @@ const ContactInformation = () => {
     return total.toLocaleString();
   };
 
-  const ticket1 = ticketNumbers[0] * 1000;
-  const ticket2 = ticketNumbers[1] * 3000;
-  const ticket3 = ticketNumbers[2] * 5000;
+  const ticket1 = ticketNumbers[0];
+  const ticket2 = ticketNumbers[1];
+  const ticket3 = ticketNumbers[2];
 
   const bronze = ticket1.toString();
   const silver = ticket2.toString();
   const gold = ticket3.toString();
 
-  console.log(bronze, silver, gold);
-
   const total = calculateTotal();
-  console.log(total);
 
   const handleNumber = (value) => {
     setForm((prev) => ({ ...prev, phone_number_5: value }));
@@ -100,7 +95,6 @@ const ContactInformation = () => {
           setLoading(false);
 
           if (res.status >= 200 && res.status < 300) {
-            console.log(res?.data?.data?.paystack_auth_url);
             router.push(res?.data?.data?.paystack_auth_url);
             addToast("Details submitted successfully. Redirecting...", {
               appearance: "success",
@@ -151,8 +145,6 @@ const ContactInformation = () => {
 
   return (
     <section className={`container-fluid ${styles.details__contact}`}>
-      {/* <div className={styles.details__filling}> */}
-
       <div className={`${styles.details__encap} container`}>
         <DetailsContact content="Enter your Contact Details" />
         <div className={styles.input__details}>
@@ -335,7 +327,6 @@ const ContactInformation = () => {
           </div>
         </div>
       </div>
-      {/* </div> */}
       <div>
         <OrderSummary
           ticketNumbers={ticketNumbers}

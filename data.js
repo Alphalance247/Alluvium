@@ -1647,30 +1647,21 @@ export const sponsorPackage = [
 export const eventTicket = [
   {
     id: "1",
-    ticketTitle: "General admission",
+    ticketTitle: "Bronze Ticket",
     price: "₦5,000",
-    list1: "Access to all Cloud Connect sessions",
-    list2: "Networking opportunities with industry peers",
-    list3: "Event swag bag",
-    list4: "Coffee & refreshments throughout the event",
+    list1: "Food, networking, T-shirt, Pen and Jotter",
   },
   {
     id: "2",
-    ticketTitle: "General admission",
+    ticketTitle: "Silver Ticket",
     price: "₦5,000",
-    list1: "Access to all Cloud Connect sessions",
-    list2: "Networking opportunities with industry peers",
-    list3: "Event swag bag",
-    list4: "Coffee & refreshments throughout the event",
+    list1: "Food, networking, T-shirt, Pen and Jotter",
   },
   {
     id: "3",
-    ticketTitle: "General admission",
+    ticketTitle: "Gold Ticket",
     price: "₦5,000",
-    list1: "Access to all Cloud Connect sessions",
-    list2: "Networking opportunities with industry peers",
-    list3: "Event swag bag",
-    list4: "Coffee & refreshments throughout the event",
+    list1: "Food, networking, T-shirt, Pen and Jotter",
   },
 ];
 
