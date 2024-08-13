@@ -1,0 +1,403 @@
+.ticketBooking {
+  display: grid;
+  grid-template-columns: 75% auto;
+  column-gap: 2.5rem;
+  padding: 0;
+  background: white;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .ticketBookings {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 6rem;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 1rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding-left: 0.5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .chooseTicket {
+    border: 1px solid #eeedf2;
+    border-radius: 8px;
+    padding: 2rem 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @media screen and (max-width: 576px) {
+      padding-left: 1rem 0px;
+    }
+
+    .ticketTitle {
+      display: grid;
+      grid-template-columns: 50% auto auto;
+      padding: 1rem 2rem;
+      background: #f8f7fa;
+      border-bottom: 1px solid #f8f7fa;
+      align-items: center;
+
+      @media screen and (max-width: 576px) {
+        padding: 1rem 1rem;
+      }
+
+      p {
+        color: #454545;
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 2rem;
+        margin-bottom: 0px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .ticketCategory {
+      display: grid;
+      grid-template-columns: 50% auto auto;
+      padding: 1rem 2rem;
+
+      @media screen and (max-width: 576px) {
+        padding: 0.5rem;
+      }
+
+      .contentTicket {
+        p {
+          color: #667085;
+          font-weight: 500;
+          font-size: 17px;
+          line-height: 1.5rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 13px;
+          }
+        }
+
+        ul {
+          margin-left: 1.5rem;
+
+          @media screen and (max-width: 576px) {
+            margin-left: 1rem;
+          }
+        }
+
+        li {
+          font-size: 17px;
+          line-height: 1.5rem;
+          color: #595959;
+
+          @media screen and (max-width: 576px) {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .ticketPrice {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.5rem;
+        color: #595959;
+
+        @media screen and (max-width: 576px) {
+          font-size: 13px;
+        }
+      }
+
+      .ticketUpdate {
+        display: inline-flex;
+        column-gap: 10px;
+        align-items: flex-start;
+
+        @media screen and (max-width: 576px) {
+          column-gap: 5px;
+        }
+
+        p {
+          color: #262626;
+          font-weight: 500;
+          line-height: 1.5rem;
+          font-size: 1rem;
+          margin-top: 0.3rem;
+
+          @media screen and (max-width: 576px) {
+            font-size: 12px;
+            margin-top: 0.1rem;
+          }
+        }
+
+        .minus {
+          background: #eeedf2;
+          border-radius: 0.5rem;
+          padding: 0.2rem 0.8rem;
+          border: none;
+          color: #a9a8b3;
+          font-size: 18px;
+
+          @media screen and (max-width: 576px) {
+            padding: 0.2rem 0.5rem;
+            font-size: 14px;
+          }
+        }
+
+        .plus {
+          background: #e37915;
+          border-radius: 0.5rem;
+          padding: 0.2rem 0.8rem;
+          border: none;
+          color: white;
+          font-size: 17px;
+
+          @media screen and (max-width: 576px) {
+            padding: 0.2rem 0.5rem;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////Order Summary styles///////////////////////////////////////////////
+.orderSummary {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background: #f8f7fa;
+  padding-top: 6rem;
+  height: 100%;
+  border-left: 1px solid #eeedf2;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .summaryHeading {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: #262626;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Helvetica Compressed", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .firstTicket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #d9d9d9;
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #595959;
+      margin-bottom: 0px;
+    }
+    .priceTag {
+      font-weight: 500;
+    }
+  }
+
+  .summaryTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #d9d9d9;
+
+    p {
+      color: #262626;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.5rem;
+      margin-bottom: 0px;
+    }
+  }
+  .button1 {
+    background: #e37915;
+    border: none;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 24px;
+    border-radius: 8px;
+    color: white;
+  }
+}
+
+// //////////////////////////////////////////Partners-dispaly-section///////////////////////////////////////////////
+.partnersStyle {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: white;
+
+  .partnersHeading {
+    text-align: center;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    color: #262626;
+    font-family: "Helvetica Compressed", sans-serif;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5rem;
+    color: #262626;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+
+  .sponsorsimgs {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 3.5rem;
+    row-gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+}
+
+// ///////////////////////////////CONTACT DETAILS STYLING////////////////////////////////////////
+
+.eventTicket {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: #262626;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0rem 2rem;
+  font-family: "Helvetica Compressed", sans-serif;
+  letter-spacing: 1px;
+
+  @media screen and (max-width: 576px) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0px 1rem;
+  }
+}
+
+.details__contact {
+  display: grid;
+  grid-template-columns: 75% auto;
+  column-gap: 2.5rem;
+  padding: 0;
+  background: white;
+
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+    row-gap: 1.5rem;
+  }
+
+  .details__encap {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-left: 6rem;
+
+    @media screen and (max-width: 992px) {
+      padding: 2.5rem 1rem;
+    }
+  }
+
+  .input__details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1.5rem;
+    column-gap: 1.25rem;
+    margin-top: 2rem;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+  }
+
+  .ticket__pickup {
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
+    display: flex;
+    column-gap: 1rem;
+    align-items: flex-start;
+
+    .send__ticket__to {
+      color: #374151;
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .receive__mail {
+      font-size: 1rem;
+      line-height: 20px;
+      color: #595959;
+
+      @media screen and (max-width: 576px) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .labelStyle {
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 500;
+    color: #374151;
+    padding: 0px;
+  }
+
+  .PhoneInput input {
+    width: 100%;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid #c2c2c2;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: white;
+    color: #11202d;
+    padding: 14px;
+
+    &:focus {
+      border-radius: 4;
+      border-color: #f2c193;
+      box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+    }
+  }
+
+  .PhoneInput > div {
+    border: 1px solid #c2c2c2;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 14px;
+    margin-right: 0;
+  }
+
+  .error {
+    border: 2px solid orangered;
+  }
+}
+
+.error {
+  border: 2px solid orangered;
+}
