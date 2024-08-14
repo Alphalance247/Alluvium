@@ -1,21 +1,8 @@
 "use client";
 import styles from "../../styles/licence.module.scss";
-import { SlArrowDown } from "react-icons/sl";
-import { SlArrowUp } from "react-icons/sl";
-import { useState } from "react";
-import { frequentlyAsked } from "data";
+import FAQss from "components/atlassian-service-compo/FAQss";
 
 const FaQuestions = () => {
-  const [expandIndex, setExpandIndex] = useState(null);
-
-  const handleDropdown = (i) => {
-    if (expandIndex === i) {
-      setExpandIndex(null);
-    } else {
-      setExpandIndex(i);
-    }
-  };
-
   return (
     <div className={`container-fluid ${styles.faqDiv}`}>
       <div className={`container mx-auto ${styles.faqsEncap}`}>
@@ -29,7 +16,9 @@ const FaQuestions = () => {
           </p> */}
         </div>
 
-        <div className={`${styles.faqsection}`}>
+        <FAQss />
+
+        {/* <div className={`${styles.faqsection}`}>
           {frequentlyAsked.map((item, i) => (
             <div key={item.id}>
               <div className={`${styles.questionsSection}`}>
@@ -59,7 +48,7 @@ const FaQuestions = () => {
               <hr className={` ${styles.horizon}`} />
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

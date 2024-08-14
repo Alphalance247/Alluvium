@@ -1,19 +1,13 @@
+import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
 import styles from "../../styles/licence.module.scss";
 import { chooseUsAlluvium } from "data";
 import Image from "next/image";
 
-const ChooseAlluvium = ({ choose }) => {
+const ChooseAlluvium = ({ choose, strategy }) => {
   return (
     <div className={`container-fluid ${styles.chooseUsDiv}`}>
       <div className={`container mx-auto ${styles.chooseOption}`}>
-        <div className={`${styles.chooseHeading}`}>
-          <h3>{choose}</h3>
-          <p>
-            From strategy to execution, our team of experts will provide the
-            utmost guidance and smooth delivery through your data migration
-            journey.
-          </p>
-        </div>
+        <AtlassianSubHead headings={choose} strategy={strategy} />
 
         <div className={`${styles.expertGuide}`}>
           {chooseUsAlluvium.map((el) => {

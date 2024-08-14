@@ -69,3 +69,18 @@
   font-weight: 400;
   src: url("/assets/fonts/russelone/RussoOne-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Mena Grotesk";
+  font-display: fallback;
+  font-style: normal;
+  src: url("/assets/fonts/mena-grotesk/Mena Grotesk Black.ttf");
+}
+
+@font-face {
+  font-family: "MenaGroteskBold";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/mena-grotesk/Mena Grotesk Bold.ttf");
+}

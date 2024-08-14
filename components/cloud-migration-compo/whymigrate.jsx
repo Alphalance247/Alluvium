@@ -1,3 +1,4 @@
+import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
 import styles from "../../styles/licence.module.scss";
 import { cloudOptions } from "data";
 
@@ -5,14 +6,11 @@ const WhyMigrate = () => {
   return (
     <div className={`container-fluid ${styles.migration}`}>
       <div className={`container mx-auto ${styles.atlassianCloud}`}>
-        <div className={`${styles.cloudheading}`}>
-          <h5>Why Migrate to the Atlassian Cloud?</h5>
-          <p>
-            From strategy to execution, our team of experts will provide the
-            utmost guidance and smooth delivery through your data migration
-            journey.
-          </p>
-        </div>
+        <AtlassianSubHead
+          headings="Why Migrate to the Atlassian Cloud?"
+          strategy="From strategy to execution, our team of experts will provide the utmost
+        guidance and smooth delivery through your data migration journey."
+        />
         <div className={`${styles.cloudcontent}`}>
           {cloudOptions.map((el) => {
             return (
