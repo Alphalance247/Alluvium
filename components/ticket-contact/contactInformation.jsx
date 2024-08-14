@@ -146,7 +146,7 @@ const ContactInformation = () => {
   return (
     <section className={`container-fluid ${styles.details__contact}`}>
       <div className={`${styles.details__encap} container`}>
-        <DetailsContact content="Enter your Contact Details" />
+        <DetailsContact content="Enter your Contact Details" pad={false} />
         <div className={styles.input__details}>
           <div>
             <Input

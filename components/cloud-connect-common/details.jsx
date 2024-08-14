@@ -1,9 +1,9 @@
 import styles from "../../styles/cloud2.4/general.module.scss";
 
-const DetailsContact = ({ content }) => {
+const DetailsContact = ({ content, pad = true }) => {
   return (
     <>
-      <p className={`${styles.eventTicket}`}>{content}</p>
+      <p className={`${styles.eventTicket} ${pad && "px-4"} `}>{content}</p>
     </>
   );
 };
