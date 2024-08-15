@@ -1,11 +1,12 @@
 import Layout from "components/layout";
 import Exceptional from "components/licence-component/exceptional";
 import DepOption from "../../../components/licence-component/depOption";
-import Platinum from "../../../components/licence-component/platinum";
 import Purchase from "components/licence-component/purchase";
 import ChooseUs from "components/licence-component/chooseUs";
 import LicenceHero from "./licencehero";
-import styles from "../../../styles/licence.module.scss";
+import GetStarted from "components/atlassian-service-reuse/getStarted";
+import Button from "components/atlassian-service-reuse/Button";
+import Link from "next/link";
 
 const AtlassianLicence = () => {
   return (
@@ -21,11 +22,24 @@ const AtlassianLicence = () => {
       />
       <Exceptional />
       <DepOption />
-      <Platinum
+
+      <GetStarted
         heading="Your Atlassian Partner and Solutions Expert"
-        buttoncontent="Request License"
-        button1style={styles.button2}
-        scheduleRequest="/atlassian-services/atlassian-licence/licence-request"
+        text="Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
+        button1={
+          <Link href="atlassian-services/atlassian-licence/licence-request">
+            <Button size="large" className="mx-4">
+              Request License
+            </Button>
+          </Link>
+        }
+        button2={
+          <Link href="atlassian-services/atlassian-licence/licence-request">
+            <Button size="large" variant="tertiary">
+              Request Site Audit
+            </Button>
+          </Link>
+        }
       />
       <Purchase />
       <ChooseUs choose="Why Choose Alluvium" />

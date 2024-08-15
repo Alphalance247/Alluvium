@@ -10,23 +10,44 @@ const ServerToCloud = ({
   image1Url,
   alt2,
   alt1,
+  variant = "default",
+  text = true,
+  callToAction = true,
+  width = false,
+  display = "default",
 }) => {
   return (
-    <section className={`container ${styles.servercloudstyles}`}>
-      {image1 && (
-        <div>
-          <Image src={image1Url} alt={alt2} width={500} height={500} />
+    <section
+      className={`container-fluid ${styles.servercloudstylesMain} ${
+        styles[`servercloudstylesMain--${variant}`]
+      }`}
+    >
+      <div
+        className={`container mx-auto ${styles.servercloudstyles} ${
+          styles[`servercloudstyles--${display}`]
+        }`}
+      >
+        {image1 && (
+          <div>
+            <Image src={image1Url} alt={alt2} width={500} height={500} />
+          </div>
+        )}
+        <div className={width && styles.server__content}>
+          <h2>{heading}</h2>
+          <p>{paragraph}</p>
+          {(text || callToAction) && (
+            <div>
+              <p>{text}</p>
+              {callToAction}
+            </div>
+          )}
         </div>
-      )}
-      <div>
-        <h2>{heading}</h2>
-        <p>{paragraph}</p>
+        {image2 && (
+          <div>
+            <Image src={image2Url} alt={alt1} width={500} height={500} />
+          </div>
+        )}
       </div>
-      {image2 && (
-        <div>
-          <Image src={image2Url} alt={alt1} width={500} height={500} />
-        </div>
-      )}
     </section>
   );
 };

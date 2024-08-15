@@ -15,7 +15,7 @@ const LicenceHero = ({
     <div className={`container-fluid ${styles.licencelayout}`}>
       <div className={`container mx-auto ${styles.licencehero}`}>
         <p className={styles.textlicence}>{contentsheading}</p>
-        <h3>{contentsheading1}</h3>
+        <h1>{contentsheading1}</h1>
         <p>{contentsheading2}</p>
         <div>
           <Link href="/atlassian-services/atlassian-licence/licence-request">
@@ -31,12 +31,7 @@ const LicenceHero = ({
         <>
           <div className={`container mx-auto ${styles.infinitesscrollstyling}`}>
             <div className={styles.overlaylicence}></div>
-            {/* <Image
-              src="/assets/licence-image/infiniteimage.svg"
-              width={967}
-              height={79}
-              alt=""
-            /> */}
+
             <AutoPlay />
           </div>
         </>

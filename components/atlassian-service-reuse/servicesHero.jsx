@@ -16,7 +16,7 @@ const ServicesHero = ({
     <div className={`container-fluid ${styles.licencelayout}`}>
       <div className={`container mx-auto ${styles.licencehero}`}>
         <p className={styles.textlicence}>{contentsheading}</p>
-        <h3>{contentsheading1}</h3>
+        <h1>{contentsheading1}</h1>
         <p>{contentsheading2}</p>
 
         {(button1 || button2) && (

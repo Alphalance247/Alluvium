@@ -2,16 +2,13 @@ import DiscoverAtlassian from "components/atlassian-service-compo/discoverAtlass
 import MarketPlace from "components/atlassian-service-compo/marketplace";
 import ProductAtlassian from "components/atlassian-service-compo/productAtlassian";
 import Layout from "components/layout";
-import ChooseUs from "components/licence-component/chooseUs";
-import Platinum from "components/licence-component/platinum";
 import CustomerReview from "components/our-customers/customer";
-import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero";
-import styles from "../../styles/licence.module.scss";
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import FaQuestions from "components/licence-component/faQuestion";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
+import GetStarted from "components/atlassian-service-reuse/getStarted";
 
 const AtlassianService = () => {
   return (
@@ -22,7 +19,7 @@ const AtlassianService = () => {
         contentsheading2="Implement or optimize your Atlassian apps through our Atlassian products and services."
         withSlide={true}
         button1={
-          <Link href="/atlassian-services/atlassian-licence/licence-request">
+          <Link href="/support/contact#schedule-a-call">
             <Button size="large">Schedule a Call</Button>
           </Link>
         }
@@ -34,23 +31,29 @@ const AtlassianService = () => {
           </Link>
         }
       />
-      {/* <LicenceHero
-        withrequest={true}
-        contentsheading="ATLASSIAN SERVICES"
-        contentsheading1="Customized Atlassian Services for Enhanced Productivity"
-        contentsheading2="Implement or optimize your Atlassian apps through our Atlassian products and services."
-        buttontext="Schedule a Call"
-        withSlide={true}
-      /> */}
+
       <DiscoverAtlassian />
       <MarketPlace />
       <ProductAtlassian />
-      <Platinum
+      <GetStarted
         heading="Your Atlassian Partner and Solution Expert"
-        buttoncontent="Schedule a Call"
-        button1style={styles.button3}
-        scheduleRequest="/support/contact#schedule-a-call"
+        text="Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
+        button1={
+          <Link href="/support/contact#schedule-a-call">
+            <Button size="large" className="mx-4">
+              Schedule a Call
+            </Button>
+          </Link>
+        }
+        button2={
+          <Link href="/support/contact#schedule-a-call">
+            <Button size="large" variant="tertiary">
+              Schedule a Call
+            </Button>
+          </Link>
+        }
       />
+
       <ChooseAlluvium
         choose="Why Choose Us"
         strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."

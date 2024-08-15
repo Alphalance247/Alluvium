@@ -8,6 +8,8 @@ import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero"
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import MigrationProcess from "components/cloud-migration-compo/migrationProcess";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
+import Button from "components/atlassian-service-reuse/Button";
+import GetStarted from "components/atlassian-service-reuse/getStarted";
 
 const CloudMigration = () => {
   return (
@@ -37,17 +39,16 @@ const CloudMigration = () => {
         strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
       />
       <div className={`container-fluid ${styles.seamlessMigration}`}>
-        <div className={` ${styles.seamlessheading}`}>
-          <h4>Seamlessly migrate your data with Alluvium – Get started now!</h4>
-
-          <div>
+        <GetStarted
+          heading="Seamlessly migrate your data with Alluvium – Get started now!"
+          text={false}
+          variant="primary"
+          button1={
             <Link href="/support/contact#schedule-a-call">
-              <button className={styles.button1}>
-                Schedule a Free Consult
-              </button>
+              <Button size="large">Schedule a Free Consult</Button>
             </Link>
-          </div>
-        </div>
+          }
+        />
       </div>
       <MigrationProcess />
       <CaseStudies />
