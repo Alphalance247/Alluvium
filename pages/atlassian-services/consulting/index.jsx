@@ -5,10 +5,12 @@ import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import { consultingPageCards } from "data";
+import PackageCard from "components/atlassian-service-reuse/PackageCard";
 
 const Consulting = () => {
   return (
     <Layout>
+      <PackageCard />
       <LicenceHero
         withrequest={false}
         contentsheading="ATLASSIAN CONSULTANCY & STRATEGY"
