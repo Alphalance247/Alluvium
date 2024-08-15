@@ -1,29 +1,29 @@
 import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
 import styles from "../../styles/licence.module.scss";
-import { cloudOptions } from "data";
+import FeatureCard from "components/atlassian-service-reuse/FeatureCard";
 
-const WhyMigrate = () => {
+const WhyMigrate = ({ data, heading, description }) => {
   return (
     <div className={`container-fluid ${styles.migration}`}>
       <div className={`container mx-auto ${styles.atlassianCloud}`}>
-        <AtlassianSubHead
-          headings="Why Migrate to the Atlassian Cloud?"
-          strategy="From strategy to execution, our team of experts will provide the utmost
-        guidance and smooth delivery through your data migration journey."
-        />
+        <AtlassianSubHead headings={heading} strategy={description} />
         <div className={`${styles.cloudcontent}`}>
-          {cloudOptions.map((el) => {
-            return (
-              <div key={el.id}>
-                <h5>0{el.id}</h5>
-                <div>
-                  <h6>{el.headings}</h6>
-
-                  <p>{el.paragraphs}</p>
-                </div>
-              </div>
-            );
-          })}
+          {data &&
+            data?.map((el) => {
+              return (
+                <FeatureCard
+                  key={el.id}
+                  number={el.showNumber ? el.id : null}
+                  icon={el.icon}
+                  heading={el.headings}
+                  description={el.paragraphs}
+                  link={el.link}
+                  buttonText={el.buttonText}
+                  buttonVariant={el.buttonVariant}
+                  variant={el.variant}
+                />
+              );
+            })}
         </div>
       </div>
     </div>
