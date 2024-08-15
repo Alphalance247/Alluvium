@@ -1538,7 +1538,7 @@ export const consultingPageCards = [
     variant: "border",
     link: "#",
     buttonText: "Learn More About Implementing JSM",
-    // buttonVariant: "secondary",
+    buttonVariant: "outline",
   },
   {
     id: "2",
@@ -1550,6 +1550,7 @@ export const consultingPageCards = [
     variant: "border",
     link: "#",
     buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
   },
   {
     id: "3",
@@ -1559,6 +1560,7 @@ export const consultingPageCards = [
     variant: "border",
     link: "#",
     buttonText: "Learn More About Atlassian Migration",
+    buttonVariant: "outline",
   },
   {
     id: "4",
@@ -1570,6 +1572,7 @@ export const consultingPageCards = [
     variant: "border",
     link: "#",
     buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
   },
   {
     id: "5",
@@ -1581,6 +1584,7 @@ export const consultingPageCards = [
     variant: "border",
     link: "#",
     buttonText: "Atlassian Migration",
+    buttonVariant: "outline",
   },
 ];
 

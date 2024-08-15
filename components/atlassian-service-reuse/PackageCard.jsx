@@ -6,6 +6,7 @@ const PackageCard = ({ packageName, price, link }) => {
     <div className={`${styles.packageCard}`}>
       <div className={styles.heading}>
         <h3>Silver</h3>
+        {/* replace values with props */}
         <p>Up to 80 support hours monthly</p>
       </div>
 
@@ -17,7 +18,7 @@ const PackageCard = ({ packageName, price, link }) => {
         <p>billed monthly or annually</p>
       </div>
 
-      <Button>Schedule a Call</Button>
+      <Button variant="outline">Schedule a Call</Button>
     </div>
   );
 };

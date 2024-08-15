@@ -26,7 +26,7 @@ const FeatureCard = ({
           </h4>
         )}
         <div className={styles.content}>
-          <h3 className={styles.heading}>{heading}</h3>
+          <h3>{heading}</h3>
           {Array.isArray(description) ? (
             description.map((paragraph, index) => (
               <p key={index} className={styles.description}>
@@ -38,7 +38,7 @@ const FeatureCard = ({
           )}
         </div>
       </div>
-      <div>
+      <div className={styles.buttonContainer}>
         {buttonText && link && (
           <Link href={link} className={styles.link}>
             <Button variant={buttonVariant}>{buttonText}</Button>

@@ -697,6 +697,11 @@
           font-weight: 500;
           line-height: 28px;
           color: #595959;
+          margin-top: 1rem;
+        }
+
+        .buttonContainer {
+          margin-top: 1rem;
         }
       }
       .cardDefault {
@@ -706,7 +711,7 @@
       .cardBorder {
         background-color: #f0f0f0;
         border: 1px solid #d9d9d9;
-        height: 387px;
+        // height: 387px;
       }
     }
   }
