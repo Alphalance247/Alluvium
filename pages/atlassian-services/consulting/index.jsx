@@ -10,7 +10,6 @@ import PackageCard from "components/atlassian-service-reuse/PackageCard";
 const Consulting = () => {
   return (
     <Layout>
-      <PackageCard />
       <LicenceHero
         withrequest={false}
         contentsheading="ATLASSIAN CONSULTANCY & STRATEGY"
