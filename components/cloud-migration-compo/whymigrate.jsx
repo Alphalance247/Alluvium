@@ -2,7 +2,13 @@ import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhea
 import styles from "../../styles/licence.module.scss";
 import FeatureCard from "components/atlassian-service-reuse/FeatureCard";
 
-const WhyMigrate = ({ data, heading, description, largeGap = false }) => {
+const WhyMigrate = ({
+  data,
+  heading,
+  description,
+  largeGap = false,
+  threeColumn = false,
+}) => {
   return (
     <div className={`container-fluid ${styles.migration}`}>
       <div className={`container mx-auto ${styles.atlassianCloud}`}>
@@ -10,7 +16,9 @@ const WhyMigrate = ({ data, heading, description, largeGap = false }) => {
         <div
           className={`${styles.cloudcontent} ${
             largeGap ? styles["cloudcontent--largeGap"] : ""
-          }`}
+          }
+          ${threeColumn ? styles["cloudcontent--threeColumn"] : ""}
+          `}
         >
           {data &&
             data.map((el) => {
