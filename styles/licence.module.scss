@@ -19,12 +19,13 @@
       margin-bottom: 1.5rem;
     }
 
-    h3 {
+    h1 {
       font-size: 51px;
       line-height: 59px;
       margin-bottom: 2rem;
       color: white;
       font-weight: 700;
+      letter-spacing: -1px;
 
       @media screen and (max-width: 992px) {
         font-size: 3rem;
@@ -213,56 +214,6 @@
     }
   }
 }
-
-.platinumPlan {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  border-top: 1px solid #e5e7eb;
-  .partnerPlan {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    background: #0f1a24;
-    display: grid;
-    row-gap: 2rem;
-    padding: 4rem 130px;
-    border-radius: 18px;
-
-    @media screen and (max-width: 992px) {
-      padding: 3rem;
-    }
-
-    @media screen and (max-width: 576px) {
-      padding: 2rem;
-    }
-  }
-
-  h5 {
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 2rem;
-    color: white;
-
-    @media screen and (max-width: 576px) {
-      font-size: 25px;
-      line-height: 2rem;
-    }
-  }
-
-  p {
-    font-size: 18px;
-    line-height: 32px;
-    color: white;
-    width: 80%;
-    margin: auto;
-
-    @media screen and (max-width: 576px) {
-      font-size: 1rem;
-      line-height: 24px;
-    }
-  }
-}
-
 .subdiv {
   background: #006e88;
   padding-top: 96px;
@@ -635,32 +586,64 @@
 }
 
 // CLOUD MIGRATION STYLING
-.servercloudstyles {
-  padding-top: 36px;
-  padding-bottom: 96px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3.75rem;
-  align-items: center;
+.servercloudstylesMain {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
-  @media screen and (max-width: 576px) {
-    grid-template-columns: 1fr;
-    row-gap: 2rem;
+  // Variants
+  &--default {
+    background-color: white;
   }
 
-  h2 {
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.5rem;
-    margin-bottom: 1rem;
-    color: #0f1a24;
-    letter-spacing: -1px;
+  &--primary {
+    background-color: #f5f5f5;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
-  p {
-    font-size: 1rem;
-    color: #595959;
-    line-height: 25px;
+  &--secondary {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .servercloudstyles {
+    grid-gap: 5rem;
+    align-items: center;
+
+    //display
+    &--default {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &--primary {
+      display: grid;
+      grid-template-columns: 58% auto;
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+    }
+
+    .server__content {
+      width: 100%;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin-bottom: 1rem;
+      color: #0f1a24;
+      letter-spacing: -1px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #595959;
+      line-height: 25px;
+    }
   }
 }
 
@@ -732,8 +715,8 @@
           line-height: 25.6px;
           letter-spacing: 0.5%;
 
-          li{
-            margin-bottom: .5rem;
+          li {
+            margin-bottom: 0.5rem;
           }
         }
       }

@@ -1,8 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
 import AutoPlay from "pages/atlassian-services/autoplay";
 import styles from "../../styles/licence.module.scss";
-import Button from "./Button";
 
 const ServicesHero = ({
   contentsheading,
@@ -16,7 +13,7 @@ const ServicesHero = ({
     <div className={`container-fluid ${styles.licencelayout}`}>
       <div className={`container mx-auto ${styles.licencehero}`}>
         <p className={styles.textlicence}>{contentsheading}</p>
-        <h3>{contentsheading1}</h3>
+        <h1>{contentsheading1}</h1>
         <p>{contentsheading2}</p>
 
         {(button1 || button2) && (
