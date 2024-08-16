@@ -39,6 +39,7 @@ const CloudMigration = () => {
         description="From strategy to execution, our team of experts will provide the utmost
         guidance and smooth delivery through your data migration journey."
         data={cloudOptions}
+        largeGap={true}
       />
       <ChooseAlluvium
         choose="Why Plan Your Migration With Alluvium?"

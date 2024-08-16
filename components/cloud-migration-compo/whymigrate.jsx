@@ -2,14 +2,26 @@ import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhea
 import styles from "../../styles/licence.module.scss";
 import FeatureCard from "components/atlassian-service-reuse/FeatureCard";
 
-const WhyMigrate = ({ data, heading, description }) => {
+const WhyMigrate = ({
+  data,
+  heading,
+  description,
+  largeGap = false,
+  threeColumn = false,
+}) => {
   return (
     <div className={`container-fluid ${styles.migration}`}>
       <div className={`container mx-auto ${styles.atlassianCloud}`}>
         <AtlassianSubHead headings={heading} strategy={description} />
-        <div className={`${styles.cloudcontent}`}>
+        <div
+          className={`${styles.cloudcontent} ${
+            largeGap ? styles["cloudcontent--largeGap"] : ""
+          }
+          ${threeColumn ? styles["cloudcontent--threeColumn"] : ""}
+          `}
+        >
           {data &&
-            data?.map((el) => {
+            data.map((el) => {
               return (
                 <FeatureCard
                   key={el.id}
@@ -20,6 +32,7 @@ const WhyMigrate = ({ data, heading, description }) => {
                   link={el.link}
                   buttonText={el.buttonText}
                   buttonVariant={el.buttonVariant}
+                  buttonSize={el.buttonSize}
                   variant={el.variant}
                   listItems={el.listItems}
                 />
