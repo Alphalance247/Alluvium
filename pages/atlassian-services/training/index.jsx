@@ -1,9 +1,13 @@
 import Layout from "components/layout";
-import React from "react";
+import styles from "../../../styles/licence.module.scss";
 import Exceptional from "components/licence-component/exceptional";
 import LicenceHero from "../atlassian-licence/licencehero";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
+
 import { trainingPageCards } from "data";
+import GetStarted from "components/atlassian-service-reuse/getStarted";
+import Link from "next/link";
+import Button from "components/atlassian-service-reuse/Button";
 
 const Training = () => {
   return (
@@ -29,18 +33,18 @@ const Training = () => {
         description="Identify the power of Jira Service Management to support your IT support processes and create the best customer support experience."
         data={trainingPageCards}
       />
-      {/* <div className={`container-fluid ${styles.seamlessMigration}`}>
-        <div className={` ${styles.seamlessheading}`}>
-          <h4>Book a Free Training Consultation With Our Experts Today.</h4>
-
-          <div>
-            <Link href="/support/contact#schedule-a-call">
-              <button className={styles.button1}>Schedule a Call</button>
+      <div className={`container-fluid ${styles.seamlessMigration}`}>
+        <GetStarted
+          heading="Book a Free Training Consultation With Our Experts Today."
+          text={false}
+          variant="primary"
+          button1={
+            <Link href="/support/contact#schedule-a-call" passHref>
+              <Button size="large">Schedule a Call</Button>
             </Link>
-          </div>
-        </div>
-      </div> */}
-      {/* the banner component */}
+          }
+        />
+      </div>
     </Layout>
   );
 };
