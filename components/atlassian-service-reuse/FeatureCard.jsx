@@ -12,6 +12,7 @@ const FeatureCard = ({
   icon,
   variant = "default",
   style,
+  listItems,
 }) => {
   const cardClass =
     styles[`card${variant.charAt(0).toUpperCase() + variant.slice(1)}`];
@@ -19,7 +20,7 @@ const FeatureCard = ({
   return (
     <div className={`${styles.cardContainer} ${cardClass}`} style={style}>
       <div>
-        {icon && <img name={icon} className={styles.icon} />}
+        {icon && <img src={icon} className={styles.icon} alt="Feature icon" />}
         {number && (
           <h4 className={styles.number}>
             {number.toString().padStart(2, "0")}
@@ -35,6 +36,13 @@ const FeatureCard = ({
             ))
           ) : (
             <p className={styles.description}>{description}</p>
+          )}
+          {listItems && listItems.length > 0 && (
+            <ul className={styles.featureList}>
+              {listItems.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
           )}
         </div>
       </div>

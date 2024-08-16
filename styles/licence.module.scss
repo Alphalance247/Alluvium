@@ -118,6 +118,21 @@
     align-items: flex-start;
   }
 
+  .imageContainer {
+    width: 424px;
+    height: 113px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .content {
+    width: 100%;
+  }
+
   .manage {
     font-weight: 600;
     font-size: 14px;
@@ -677,6 +692,13 @@
         flex-direction: column;
         justify-content: space-between;
 
+        .icon {
+          width: 56px;
+          height: auto;
+          margin-bottom: 1.5rem;
+          object-fit: contain;
+        }
+
         h4 {
           font-size: 1.5rem;
           font-weight: 500;
@@ -702,6 +724,17 @@
 
         .buttonContainer {
           margin-top: 1rem;
+        }
+
+        .featureList {
+          margin-left: 1.5rem;
+          color: #262626;
+          line-height: 25.6px;
+          letter-spacing: 0.5%;
+
+          li{
+            margin-bottom: .5rem;
+          }
         }
       }
       .cardDefault {

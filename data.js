@@ -1587,6 +1587,86 @@ export const consultingPageCards = [
     buttonVariant: "outline",
   },
 ];
+export const trainingPageCards = [
+  {
+    id: "1",
+    icon: "/assets/services/Jira logo.png",
+    headings: "Jira Admin Training",
+    paragraphs:
+      "Become the architect of your team's project management success. Our Jira Admin training empowers you to:",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Implementing JSM",
+    listItems: [
+      "Master Jira's common challenges, from configuration to customization",
+      "Optimize workflows and automations for maximum efficiency",
+      "Ensure seamless collaboration across multiple teams",
+    ],
+  },
+  {
+    id: "2",
+    icon: "/assets/services/Jira logo.png",
+    headings: "Jira User Training",
+    paragraphs: [
+      "Transform your team into Jira power users. Our training focuses on:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    listItems: [
+      "Navigating Jira with ease",
+      "Effective issue tracking and management",
+      "Leveraging Jira for improved collaboration and productivity",
+    ],
+  },
+  {
+    id: "3",
+    icon: "/assets/services/JSM Admin.png",
+    headings: "JSM Admin Training",
+    paragraphs:
+      "Elevate your service delivery with our JSM Admin training. You'll learn to:",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Atlassian Migration",
+    listItems: [
+      "Configure and manage Jira Service Management effortlessly",
+      "Enhance customer satisfaction through efficient service desk operations",
+      "Optimize your IT service management processes by getting to know all JSM best practices.",
+    ],
+  },
+  {
+    id: "4",
+    icon: "/assets/services/Confluence.png",
+    headings: "Confluence Mastery",
+    paragraphs: [
+      "Turn your team into knowledge creators and collaborators with our Confluence User training. You'll learn to:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    listItems: [
+      "Create and organize engaging content",
+      "Foster a culture of knowledge-sharing",
+      "Enhance teamwork and collaboration",
+    ],
+  },
+  {
+    id: "5",
+    icon: "/assets/services/Atlassian logo 1.png",
+    headings: "App-Specific Workshops",
+    paragraphs: [
+      "Expand your Atlassian toolkit with our app-specific workshops. We offer tailored training on multiple marketplace apps to help you:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Atlassian Migration",
+    listItems: [
+      "Maximize the value of your chosen apps",
+      "Integrate them seamlessly into your Atlassian instances",
+      "Optimize their usage for specific business needs",
+    ],
+  },
+];
 
 export const chooseUsOptions = [
   {
@@ -1699,7 +1779,7 @@ export const discoverAtlassiansServ = [
   {
     id: 2,
     heading: "Training ",
-    servicepage: "",
+    servicepage: "training",
     questions:
       "Need to train your Jira or Confluence users to become more skilled? We offer various Atlassian training sessions, from user training to advanced admin training.",
   },

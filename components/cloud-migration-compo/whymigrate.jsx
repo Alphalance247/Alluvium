@@ -21,6 +21,7 @@ const WhyMigrate = ({ data, heading, description }) => {
                   buttonText={el.buttonText}
                   buttonVariant={el.buttonVariant}
                   variant={el.variant}
+                  listItems={el.listItems}
                 />
               );
             })}
