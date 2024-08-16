@@ -13,7 +13,6 @@ const ServerToCloud = ({
   variant = "default",
   text = true,
   callToAction = true,
-  width = false,
   display = "default",
 }) => {
   return (
@@ -32,7 +31,7 @@ const ServerToCloud = ({
             <Image src={image1Url} alt={alt2} width={500} height={500} />
           </div>
         )}
-        <div className={width && styles.server__content}>
+        <div>
           <h2>{heading}</h2>
           <p>{paragraph}</p>
           {(text || callToAction) && (

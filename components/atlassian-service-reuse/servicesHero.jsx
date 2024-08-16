@@ -1,8 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
 import AutoPlay from "pages/atlassian-services/autoplay";
 import styles from "../../styles/licence.module.scss";
-import Button from "./Button";
 
 const ServicesHero = ({
   contentsheading,

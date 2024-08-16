@@ -16,7 +16,7 @@ const GetStarted = ({
             styles[`partnerPlan--${variant}`]
           }`}
           style={{
-            rowGap: showText === false && "3.5rem",
+            rowGap: !showText ? "3.5rem" : null,
           }}
         >
           <h2>{heading}</h2>

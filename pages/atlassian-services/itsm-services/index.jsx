@@ -7,6 +7,7 @@ import JiraService from "components/ITSM-SERVICES/jiraService";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import styles from "../../../styles/licence.module.scss";
 import JiraTools from "components/ITSM-SERVICES/jiraTools";
+
 const ItsmServices = () => {
   return (
     <Layout>
@@ -14,7 +15,7 @@ const ItsmServices = () => {
         contentsheading1="IT SERVICE MANAGEMENT"
         contentsheading2="Empower your service teams with industry-leading IT Service Management tool Jira Service Management to deliver exceptional service"
         button1={
-          <Link href="">
+          <Link href="/support/contact#schedule-a-call" passHref>
             <Button size="large">Schedule a Call</Button>
           </Link>
         }
@@ -37,7 +38,7 @@ const ItsmServices = () => {
           text={false}
           variant="primary"
           button1={
-            <Link href="/support/contact#schedule-a-call">
+            <Link href="/support/contact#schedule-a-call" passHref>
               <Button size="large">Book a Free Demo With Us</Button>
             </Link>
           }
