@@ -6,11 +6,11 @@
   margin-right: auto;
 
   @media screen and (max-width: 992px) {
-    width: 80%;
+    width: 90%;
   }
 
   @media screen and (max-width: 576px) {
-    width: 90%;
+    width: 100%;
   }
 
   h2 {
@@ -20,12 +20,22 @@
     color: #0f1a24;
     margin-bottom: 1rem;
     letter-spacing: -1px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
   }
 
   p {
     font-size: 18px;
     line-height: 28px;
     color: #595959;
+
+    @media screen and (max-width: 576px) {
+      font-size: 0.9rem;
+      line-height: 1.3rem;
+    }
   }
 }
 

@@ -1960,58 +1960,110 @@ export const cloudcounter = [
 export const supportCards = [
   {
     id: "1",
-    headings: "ITSM Implementation and Optimization",
-    paragraphs:
-      "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
+    headings: "Installation",
     variant: "border",
-    link: "#",
-    buttonText: "Learn More About Implementing JSM",
-    buttonVariant: "outline",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: "2",
-    headings: "Agile at Scale",
-    paragraphs: [
-      "Do you software teams lack alignment and coordination? Is it hard to track project progress and identify issues at an early stage? Transform your organization with our Agile at Scale solution. With our Agile at Scale solution we ensure the successful deployment of Agile at Scale methodologies, supporting your organization through its agile journey.",
-      "Our services include thorough training for end-users to ensure smooth adoption and effective utilization of Agile practices.",
-    ],
+    headings: "Configuration",
     variant: "border",
-    link: "#",
-    buttonText: "Book a Free Consult",
-    buttonVariant: "outline",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: "3",
-    headings: "Atlassian Migration",
-    paragraphs:
-      "Are you looking to migrate to Atlassian Cloud? We offer a process-driven approach to seamlessly migrate existing data and configurations to the designated Cloud environment with zero data loss. From complex data models to integrating existing apps, we handle it all.",
+    headings: "Sales",
     variant: "border",
-    link: "#",
-    buttonText: "Learn More About Atlassian Migration",
-    buttonVariant: "outline",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: "4",
-    headings: "Atlassian Optimization",
-    paragraphs: [
-      "Is your Atlassian instance not performing optimally? Or do you notice you’re not making the most out of your Atlassian instances? Let us help you maximize the potential of your Atlassian setup.",
-      "We provide specialized health checks and consultancy to ensure your business processes are fully supported, enabling you to utilize your Atlassian tools to their fullest potential.",
-    ],
+    headings: "Troubleshooting",
     variant: "border",
-    link: "#",
-    buttonText: "Book a Free Consult",
-    buttonVariant: "outline",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
     id: "5",
-    headings: "DevOps Consultancy",
-    paragraphs: [
-      "Are you looking to accelerate your development and operations processes?  Our team of DevOps specialists is dedicated to helping your organization achieve faster delivery, improved collaboration, and enhanced efficiency.",
-      "We help development and operations teams to foster a culture of continuous improvement and innovation, providing customized solutions tailored to your specific needs. Comprehensive toolchain integration and end-user training are included to ensure successful adoption and utilization of DevOps practices.",
-    ],
+    headings: "Migration",
     variant: "border",
-    link: "#",
-    buttonText: "Atlassian Migration",
-    buttonVariant: "outline",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "6",
+    headings: "Product Demo",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
+
+export const JiraCards = [
+  {
+    id: "1",
+    headings: "Incident Management",
+    variant: "border",
+    paragraphs:
+      "Streamline incident management by centralizing incident reporting, prioritization, and tracking on a single platform, ensuring swift response and resolution. With automated workflows and real-time collaboration tools, JSM enables teams to quickly diagnose and resolve incidents, minimizing downtime and business disruption.",
+  },
+  {
+    id: "2",
+    headings: "Change Management",
+    variant: "border",
+    paragraphs:
+      "Simplify change management by providing a structured process for planning, approving, and implementing changes, reducing risks and ensuring smooth transitions. With customizable workflows and automated approval processes, JSM ensures that changes are efficiently reviewed and executed with minimal impact on ongoing operations.",
+  },
+  {
+    id: "3",
+    headings: "Problem Management",
+    variant: "border",
+    paragraphs:
+      "Enhance problem management by centralizing the identification, analysis, and resolution of underlying issues, helping to prevent recurring incidents. With built-in root cause analysis tools and customizable workflows, JSM enables teams to efficiently diagnose and address problems, reducing the impact on business operations.",
+  },
+  {
+    id: "4",
+    headings: "Queues",
+    variant: "border",
+    paragraphs:
+      "Organize and prioritize incoming requests, to efficiently manage and address issues based on urgency and importance. Queues can be customized to align with specific workflows, ensuring that tasks are automatically sorted and assigned to the right team members.",
+  },
+  {
+    id: "5",
+    headings: "SLA’s",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management enables the creation and tracking of Service Level Agreements (SLAs) to ensure timely resolution of requests. It automatically monitors response and resolution times, helping teams meet their performance targets and maintain high service standards.",
+  },
+  {
+    id: "6",
+    headings: "Reporting and Dashboard",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management offers powerful reporting and dashboarding features, providing real-time insights into team performance, incident trends, and service metrics. Customizable dashboards allow teams to visualize key data, track progress, and make informed decisions to improve service delivery.",
+  },
+  {
+    id: "7",
+    headings: "Asset Management",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management's asset management capabilities allow organizations to track and manage their IT assets and resources throughout their lifecycle. By linking assets to incidents, changes, and other processes, teams can maintain accurate inventory, monitor asset performance, and optimize resource utilization.",
+  },
+  {
+    id: "8",
+    headings: "Knowledge Base",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management integrates a knowledge base that allows teams to create, organize, and share valuable information and solutions. This empowers users to find answers quickly, reduces the volume of support requests, and fosters a culture of self-service and continuous learning.",
+  },
+  {
+    id: "9",
+    headings: "Automation",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management's automation features enable teams to streamline repetitive tasks and processes by setting up automated rules and triggers. This reduces manual effort, enhances efficiency, and ensures consistent handling of incidents, changes, and other service requests.",
   },
 ];

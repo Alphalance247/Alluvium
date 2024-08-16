@@ -1,4 +1,4 @@
-import { consultingPageCards } from "data";
+import { JiraCards } from "data";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 
 const SupportServices = () => {
@@ -6,25 +6,10 @@ const SupportServices = () => {
     <WhyMigrate
       heading="Comprehensive Support Services for Every Need"
       description="Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit id."
-      data={consultingPageCards}
+      data={JiraCards}
+      threeColumn={true}
     />
   );
 };
-
-// <section className={`container-fluid ${styles.support__service}`}>
-{
-  /* <div className={`container ${styles.comprehensive__service}`}> */
-}
-{
-  /* <AtlassianSubHead
-          headings=""
-          strategy=""
-        /> */
-}
-
-{
-  /* </div> */
-}
-// </section>
 
 export default SupportServices;
