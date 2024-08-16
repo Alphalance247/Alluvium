@@ -9,6 +9,7 @@ const FeatureCard = ({
   buttonText,
   link,
   buttonVariant = "default",
+  buttonSize,
   icon,
   variant = "default",
   style,
@@ -46,10 +47,12 @@ const FeatureCard = ({
           )}
         </div>
       </div>
-      <div className={styles.buttonContainer}>
+      <div className={buttonText ? styles.buttonContainer : ""}>
         {buttonText && link && (
           <Link href={link} className={styles.link}>
-            <Button variant={buttonVariant}>{buttonText}</Button>
+            <Button variant={buttonVariant} size={buttonSize}>
+              {buttonText}
+            </Button>
           </Link>
         )}
       </div>

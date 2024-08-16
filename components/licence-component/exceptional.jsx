@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/licence.module.scss";
 
-const Exceptional = ({ heading, paragraphs, image }) => {
+const Exceptional = ({ categoryTitle, heading, paragraphs, image }) => {
   return (
     <div className="container-fluid" style={{ background: "#f9fafb" }}>
       <div className={`container mx-auto ${styles.exception}`}>
@@ -10,7 +10,7 @@ const Exceptional = ({ heading, paragraphs, image }) => {
         </div>
 
         <div className={styles.content}>
-          <p className={styles.manage}>LICENSE MANAGEMENT</p>
+          {categoryTitle && <p className={styles.manage}>{categoryTitle}</p>}
           <h5>{heading}</h5>
           {paragraphs.map((paragraph, index) => (
             <p

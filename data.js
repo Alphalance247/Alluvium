@@ -1596,7 +1596,8 @@ export const trainingPageCards = [
       "Become the architect of your team's project management success. Our Jira Admin training empowers you to:",
     variant: "border",
     link: "#",
-    buttonText: "Learn More About Implementing JSM",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
     listItems: [
       "Master Jira's common challenges, from configuration to customization",
       "Optimize workflows and automations for maximum efficiency",
@@ -1613,6 +1614,7 @@ export const trainingPageCards = [
     variant: "border",
     link: "#",
     buttonText: "Book a Free Consult",
+    buttonSize: "large",
     listItems: [
       "Navigating Jira with ease",
       "Effective issue tracking and management",
@@ -1627,7 +1629,8 @@ export const trainingPageCards = [
       "Elevate your service delivery with our JSM Admin training. You'll learn to:",
     variant: "border",
     link: "#",
-    buttonText: "Learn More About Atlassian Migration",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
     listItems: [
       "Configure and manage Jira Service Management effortlessly",
       "Enhance customer satisfaction through efficient service desk operations",
@@ -1644,6 +1647,7 @@ export const trainingPageCards = [
     variant: "border",
     link: "#",
     buttonText: "Book a Free Consult",
+    buttonSize: "large",
     listItems: [
       "Create and organize engaging content",
       "Foster a culture of knowledge-sharing",
@@ -1659,7 +1663,8 @@ export const trainingPageCards = [
     ],
     variant: "border",
     link: "#",
-    buttonText: "Atlassian Migration",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
     listItems: [
       "Maximize the value of your chosen apps",
       "Integrate them seamlessly into your Atlassian instances",

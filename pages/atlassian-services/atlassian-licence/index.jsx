@@ -21,13 +21,14 @@ const AtlassianLicence = () => {
         withSlide={false}
       />
       <Exceptional
+        categoryTitle="LICENSE MANAGEMENT"
         heading="Expert Advice and Support for Streamlined Atlassian License
             Management"
         paragraphs={[
           "Are you seeking an Atlassian partner to assist with purchasing Atlassian and Marketplace apps? Maximize your license investment by letting Alluvium manage your licenses.",
           "As a certified Atlassian partner, we are committed to helping you get the most out of your Atlassian investment, offering greater  transparency and simplicity in the licensing process.",
         ]}
-        image= "/assets/licence-image/Certs.svg"
+        image="/assets/licence-image/Certs.svg"
       />
       <DepOption />
 
