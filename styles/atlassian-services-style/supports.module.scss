@@ -40,6 +40,12 @@
 .support__package {
   padding-top: 6rem;
   padding-bottom: 6rem;
+
+  .support__package__details {
+    display: flex;
+    column-gap: 1.25rem;
+    justify-content: center;
+  }
 }
 
 .support__learn {

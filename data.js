@@ -1951,3 +1951,62 @@ export const cloudcounter = [
     content: "Post Migration Support",
   },
 ];
+
+export const supportCards = [
+  {
+    id: "1",
+    headings: "ITSM Implementation and Optimization",
+    paragraphs:
+      "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Implementing JSM",
+    buttonVariant: "outline",
+  },
+  {
+    id: "2",
+    headings: "Agile at Scale",
+    paragraphs: [
+      "Do you software teams lack alignment and coordination? Is it hard to track project progress and identify issues at an early stage? Transform your organization with our Agile at Scale solution. With our Agile at Scale solution we ensure the successful deployment of Agile at Scale methodologies, supporting your organization through its agile journey.",
+      "Our services include thorough training for end-users to ensure smooth adoption and effective utilization of Agile practices.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
+  },
+  {
+    id: "3",
+    headings: "Atlassian Migration",
+    paragraphs:
+      "Are you looking to migrate to Atlassian Cloud? We offer a process-driven approach to seamlessly migrate existing data and configurations to the designated Cloud environment with zero data loss. From complex data models to integrating existing apps, we handle it all.",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Atlassian Migration",
+    buttonVariant: "outline",
+  },
+  {
+    id: "4",
+    headings: "Atlassian Optimization",
+    paragraphs: [
+      "Is your Atlassian instance not performing optimally? Or do you notice you’re not making the most out of your Atlassian instances? Let us help you maximize the potential of your Atlassian setup.",
+      "We provide specialized health checks and consultancy to ensure your business processes are fully supported, enabling you to utilize your Atlassian tools to their fullest potential.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
+  },
+  {
+    id: "5",
+    headings: "DevOps Consultancy",
+    paragraphs: [
+      "Are you looking to accelerate your development and operations processes?  Our team of DevOps specialists is dedicated to helping your organization achieve faster delivery, improved collaboration, and enhanced efficiency.",
+      "We help development and operations teams to foster a culture of continuous improvement and innovation, providing customized solutions tailored to your specific needs. Comprehensive toolchain integration and end-user training are included to ensure successful adoption and utilization of DevOps practices.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Atlassian Migration",
+    buttonVariant: "outline",
+  },
+];
