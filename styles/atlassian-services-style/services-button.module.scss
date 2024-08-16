@@ -29,6 +29,18 @@
     }
   }
 
+  &--outline {
+    color: #e37915;
+    border: 1px solid #e37915;
+    background: none;
+
+    &:hover:not(:disabled) {
+      background-color: #e37915;
+      color: white;
+      border: none;
+    }
+  }
+
   &--tertiary {
     border: 1.3px solid white;
     color: #fff;

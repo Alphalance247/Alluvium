@@ -1501,27 +1501,170 @@ export const purchaseOptions = [
 export const cloudOptions = [
   {
     id: "1",
+    showNumber: true,
     headings: "Security",
     paragraphs:
       "Atlassian Cloud ensures high security with data encryption in transit and at rest, robust access controls, and compliance with standards like ISO 27001 and SOC 2. It offers data residency options, continuous security monitoring, and a dedicated incident response team. Atlassian adheres to strict privacy policies and conducts regular third-party audits.",
   },
   {
     id: "2",
+    showNumber: true,
     headings: " Always up to date",
     paragraphs:
       "By choosing Atlassian Cloud, you are assured of always being automatically up to date with the latest versions released by Atlassian and third-party apps. This way, you have access to the newest features and updates without needing to put in any technical effort.",
   },
   {
     id: "3",
+    showNumber: true,
     headings: "Scalability",
     paragraphs:
       "Atlassian Cloud is highly scalable, supporting organizations of all sizes with flexible Cloud plans and resources. It can handle growing user bases, increasing workloads, and complex projects seamlessly. The platform's architecture allows for easy expansion and integration with other tools. Scalability is enhanced by Atlassian's global infrastructure, ensuring optimal performance across regions.",
   },
   {
     id: "4",
+    showNumber: true,
     headings: "Reliability",
     paragraphs:
       "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
+  },
+];
+
+export const consultingPageCards = [
+  {
+    id: "1",
+    headings: "ITSM Implementation and Optimization",
+    paragraphs:
+      "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Implementing JSM",
+    buttonVariant: "outline",
+  },
+  {
+    id: "2",
+    headings: "Agile at Scale",
+    paragraphs: [
+      "Do you software teams lack alignment and coordination? Is it hard to track project progress and identify issues at an early stage? Transform your organization with our Agile at Scale solution. With our Agile at Scale solution we ensure the successful deployment of Agile at Scale methodologies, supporting your organization through its agile journey.",
+      "Our services include thorough training for end-users to ensure smooth adoption and effective utilization of Agile practices.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
+  },
+  {
+    id: "3",
+    headings: "Atlassian Migration",
+    paragraphs:
+      "Are you looking to migrate to Atlassian Cloud? We offer a process-driven approach to seamlessly migrate existing data and configurations to the designated Cloud environment with zero data loss. From complex data models to integrating existing apps, we handle it all.",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Atlassian Migration",
+    buttonVariant: "outline",
+  },
+  {
+    id: "4",
+    headings: "Atlassian Optimization",
+    paragraphs: [
+      "Is your Atlassian instance not performing optimally? Or do you notice you’re not making the most out of your Atlassian instances? Let us help you maximize the potential of your Atlassian setup.",
+      "We provide specialized health checks and consultancy to ensure your business processes are fully supported, enabling you to utilize your Atlassian tools to their fullest potential.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
+  },
+  {
+    id: "5",
+    headings: "DevOps Consultancy",
+    paragraphs: [
+      "Are you looking to accelerate your development and operations processes?  Our team of DevOps specialists is dedicated to helping your organization achieve faster delivery, improved collaboration, and enhanced efficiency.",
+      "We help development and operations teams to foster a culture of continuous improvement and innovation, providing customized solutions tailored to your specific needs. Comprehensive toolchain integration and end-user training are included to ensure successful adoption and utilization of DevOps practices.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Atlassian Migration",
+    buttonVariant: "outline",
+  },
+];
+export const trainingPageCards = [
+  {
+    id: "1",
+    icon: "/assets/services/Jira logo.png",
+    headings: "Jira Admin Training",
+    paragraphs:
+      "Become the architect of your team's project management success. Our Jira Admin training empowers you to:",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Implementing JSM",
+    listItems: [
+      "Master Jira's common challenges, from configuration to customization",
+      "Optimize workflows and automations for maximum efficiency",
+      "Ensure seamless collaboration across multiple teams",
+    ],
+  },
+  {
+    id: "2",
+    icon: "/assets/services/Jira logo.png",
+    headings: "Jira User Training",
+    paragraphs: [
+      "Transform your team into Jira power users. Our training focuses on:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    listItems: [
+      "Navigating Jira with ease",
+      "Effective issue tracking and management",
+      "Leveraging Jira for improved collaboration and productivity",
+    ],
+  },
+  {
+    id: "3",
+    icon: "/assets/services/JSM Admin.png",
+    headings: "JSM Admin Training",
+    paragraphs:
+      "Elevate your service delivery with our JSM Admin training. You'll learn to:",
+    variant: "border",
+    link: "#",
+    buttonText: "Learn More About Atlassian Migration",
+    listItems: [
+      "Configure and manage Jira Service Management effortlessly",
+      "Enhance customer satisfaction through efficient service desk operations",
+      "Optimize your IT service management processes by getting to know all JSM best practices.",
+    ],
+  },
+  {
+    id: "4",
+    icon: "/assets/services/Confluence.png",
+    headings: "Confluence Mastery",
+    paragraphs: [
+      "Turn your team into knowledge creators and collaborators with our Confluence User training. You'll learn to:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    listItems: [
+      "Create and organize engaging content",
+      "Foster a culture of knowledge-sharing",
+      "Enhance teamwork and collaboration",
+    ],
+  },
+  {
+    id: "5",
+    icon: "/assets/services/Atlassian logo 1.png",
+    headings: "App-Specific Workshops",
+    paragraphs: [
+      "Expand your Atlassian toolkit with our app-specific workshops. We offer tailored training on multiple marketplace apps to help you:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Atlassian Migration",
+    listItems: [
+      "Maximize the value of your chosen apps",
+      "Integrate them seamlessly into your Atlassian instances",
+      "Optimize their usage for specific business needs",
+    ],
   },
 ];
 
@@ -1636,7 +1779,7 @@ export const discoverAtlassiansServ = [
   {
     id: 2,
     heading: "Training ",
-    servicepage: "",
+    servicepage: "training",
     questions:
       "Need to train your Jira or Confluence users to become more skilled? We offer various Atlassian training sessions, from user training to advanced admin training.",
   },
@@ -1657,7 +1800,7 @@ export const discoverAtlassiansServ = [
   {
     id: 5,
     heading: "Consulting & Strategy",
-    servicepage: "",
+    servicepage: "consulting",
     questions:
       "Looking for Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? We’re here for you.",
   },

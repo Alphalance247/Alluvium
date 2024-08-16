@@ -4,6 +4,7 @@ import Link from "next/link";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import CaseStudies from "components/case-studies/case-studies";
 import FaQuestions from "components/licence-component/faQuestion";
+import { cloudOptions } from "data";
 import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero";
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import MigrationProcess from "components/cloud-migration-compo/migrationProcess";
@@ -33,7 +34,12 @@ const CloudMigration = () => {
         image2Url="/assets/licence-image/cloudpic.svg"
         alt2="cloudpic"
       />
-      <WhyMigrate />
+      <WhyMigrate
+        heading="Why Migrate to the Atlassian Cloud?"
+        description="From strategy to execution, our team of experts will provide the utmost
+        guidance and smooth delivery through your data migration journey."
+        data={cloudOptions}
+      />
       <ChooseAlluvium
         choose="Why Plan Your Migration With Alluvium?"
         strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
