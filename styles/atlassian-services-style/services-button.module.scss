@@ -75,4 +75,13 @@
     font-size: 16px;
     height: 56px;
   }
+
+  @media screen and (max-width: 768px) {
+    &--medium,
+    &--large,
+    &--xlarge {
+      font-size: 14px;
+      height: auto;
+    }
+  }
 }
