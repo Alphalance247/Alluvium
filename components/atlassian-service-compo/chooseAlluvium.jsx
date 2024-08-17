@@ -1,7 +1,7 @@
 import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
 import styles from "../../styles/licence.module.scss";
 import { chooseUsAlluvium } from "data";
-import Image from "next/image";
+import ReasonsCard from "components/atlassian-service-reuse/ReasonsCard";
 
 const ChooseAlluvium = ({ choose, strategy }) => {
   return (
@@ -12,11 +12,12 @@ const ChooseAlluvium = ({ choose, strategy }) => {
         <div className={`${styles.expertGuide}`}>
           {chooseUsAlluvium.map((el) => {
             return (
-              <div key={el.id}>
-                <Image src={el.imgChoose} width={48} height={48} alt="carbon" />
-                <h5>{el.headings}</h5>
-                <p>{el.paragraphs}</p>
-              </div>
+              <ReasonsCard
+                id={el.id}
+                headings={el.headings}
+                paragraphs={el.paragraphs}
+                imgChoose={el.imgChoose}
+              />
             );
           })}
         </div>
