@@ -17,38 +17,6 @@ const FaQuestions = () => {
         </div>
 
         <FAQss />
-
-        {/* <div className={`${styles.faqsection}`}>
-          {frequentlyAsked.map((item, i) => (
-            <div key={item.id}>
-              <div className={`${styles.questionsSection}`}>
-                <div
-                  onClick={() => handleDropdown(i)}
-                  className={`${styles.questcontent}`}
-                >
-                  <p>{item.questions}</p>
-                </div>
-                {expandIndex === i ? (
-                  <SlArrowUp
-                    onClick={() => handleDropdown(i)}
-                    style={{ cursor: "pointer", color: "#E37915" }}
-                  />
-                ) : (
-                  <SlArrowDown
-                    onClick={() => handleDropdown(i)}
-                    style={{ cursor: "pointer", color: "#E37915" }}
-                  />
-                )}
-              </div>
-              {expandIndex === i && (
-                <p data-aos-delay="100" data-aos="fade-down">
-                  {item.answer}
-                </p>
-              )}
-              <hr className={` ${styles.horizon}`} />
-            </div>
-          ))}
-        </div> */}
       </div>
     </div>
   );

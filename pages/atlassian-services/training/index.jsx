@@ -1,23 +1,25 @@
 import Layout from "components/layout";
 import styles from "../../../styles/licence.module.scss";
 import Exceptional from "components/licence-component/exceptional";
-import LicenceHero from "../atlassian-licence/licencehero";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
-
 import { trainingPageCards } from "data";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
+import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 
 const Training = () => {
   return (
     <Layout>
-      <LicenceHero
-        withrequest={false}
+      <ServicesHero
         contentsheading1="Atlassian Training"
-        contentsheading2="Empower your service teams with industry-leading IT Service Management tool Jira Service Management to deliver exceptional service"
-        buttontext="Get in Touch"
+        contentsheading2="Empower your service teams with industry-leading IT Service Management tool Jira Service Management to deliver exceptional service."
         withSlide={false}
+        button1={
+          <Link href="/support/contact#schedule-a-call">
+            <Button size="large">Get in Touch</Button>
+          </Link>
+        }
       />
       <Exceptional
         heading="Expert Advice and Support for Streamlined Atlassian License

@@ -1,5 +1,3 @@
-import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
-import styles from "../../styles/atlassian-services-style/jiramanagement.module.scss";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { JiraCards } from "data";
 

@@ -18,7 +18,7 @@ const PackageCard = ({ packageName, hoursUse, price }) => {
         </div>
         <p>billed monthly or annually</p>
       </div>
-      <Link href="">
+      <Link href="/support/contact#schedule-a-call">
         <Button variant="outline">Schedule a Call</Button>
       </Link>
     </div>
