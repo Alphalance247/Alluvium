@@ -40,6 +40,18 @@
 .support__package {
   padding-top: 6rem;
   padding-bottom: 6rem;
+
+  .support__package__details {
+    display: flex;
+    column-gap: 1.25rem;
+    justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      row-gap: 3rem;
+      column-gap: 2rem;
+    }
+  }
 }
 
 .support__learn {
@@ -50,6 +62,14 @@
   .comprehensive__learn {
     width: 65%;
     margin: auto;
+
+    @media screen and (max-width: 992px) {
+      width: 85%;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+    }
   }
 }
 

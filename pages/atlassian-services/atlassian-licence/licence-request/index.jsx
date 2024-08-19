@@ -1,5 +1,4 @@
 import Layout from "components/layout";
-// import styles from "../../styles/licence.module.scss";
 import { useState } from "react";
 import Input from "components/licence-component/inputP";
 import { useEffect } from "react";

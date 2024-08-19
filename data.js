@@ -1956,3 +1956,114 @@ export const cloudcounter = [
     content: "Post Migration Support",
   },
 ];
+
+export const supportCards = [
+  {
+    id: "1",
+    headings: "Installation",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "2",
+    headings: "Configuration",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "3",
+    headings: "Sales",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "4",
+    headings: "Troubleshooting",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "5",
+    headings: "Migration",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "6",
+    headings: "Product Demo",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
+
+export const JiraCards = [
+  {
+    id: "1",
+    headings: "Incident Management",
+    variant: "border",
+    paragraphs:
+      "Streamline incident management by centralizing incident reporting, prioritization, and tracking on a single platform, ensuring swift response and resolution. With automated workflows and real-time collaboration tools, JSM enables teams to quickly diagnose and resolve incidents, minimizing downtime and business disruption.",
+  },
+  {
+    id: "2",
+    headings: "Change Management",
+    variant: "border",
+    paragraphs:
+      "Simplify change management by providing a structured process for planning, approving, and implementing changes, reducing risks and ensuring smooth transitions. With customizable workflows and automated approval processes, JSM ensures that changes are efficiently reviewed and executed with minimal impact on ongoing operations.",
+  },
+  {
+    id: "3",
+    headings: "Problem Management",
+    variant: "border",
+    paragraphs:
+      "Enhance problem management by centralizing the identification, analysis, and resolution of underlying issues, helping to prevent recurring incidents. With built-in root cause analysis tools and customizable workflows, JSM enables teams to efficiently diagnose and address problems, reducing the impact on business operations.",
+  },
+  {
+    id: "4",
+    headings: "Queues",
+    variant: "border",
+    paragraphs:
+      "Organize and prioritize incoming requests, to efficiently manage and address issues based on urgency and importance. Queues can be customized to align with specific workflows, ensuring that tasks are automatically sorted and assigned to the right team members.",
+  },
+  {
+    id: "5",
+    headings: "SLA’s",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management enables the creation and tracking of Service Level Agreements (SLAs) to ensure timely resolution of requests. It automatically monitors response and resolution times, helping teams meet their performance targets and maintain high service standards.",
+  },
+  {
+    id: "6",
+    headings: "Reporting and Dashboard",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management offers powerful reporting and dashboarding features, providing real-time insights into team performance, incident trends, and service metrics. Customizable dashboards allow teams to visualize key data, track progress, and make informed decisions to improve service delivery.",
+  },
+  {
+    id: "7",
+    headings: "Asset Management",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management's asset management capabilities allow organizations to track and manage their IT assets and resources throughout their lifecycle. By linking assets to incidents, changes, and other processes, teams can maintain accurate inventory, monitor asset performance, and optimize resource utilization.",
+  },
+  {
+    id: "8",
+    headings: "Knowledge Base",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management integrates a knowledge base that allows teams to create, organize, and share valuable information and solutions. This empowers users to find answers quickly, reduces the volume of support requests, and fosters a culture of self-service and continuous learning.",
+  },
+  {
+    id: "9",
+    headings: "Automation",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management's automation features enable teams to streamline repetitive tasks and processes by setting up automated rules and triggers. This reduces manual effort, enhances efficiency, and ensures consistent handling of incidents, changes, and other service requests.",
+  },
+];

@@ -5,23 +5,26 @@ import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import CaseStudies from "components/case-studies/case-studies";
 import FaQuestions from "components/licence-component/faQuestion";
 import { cloudOptions } from "data";
-import LicenceHero from "pages/atlassian-services/atlassian-licence/licencehero";
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import MigrationProcess from "components/cloud-migration-compo/migrationProcess";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import Button from "components/atlassian-service-reuse/Button";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
+import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 
 const CloudMigration = () => {
   return (
     <Layout>
-      <LicenceHero
-        withrequest={false}
+      <ServicesHero
         contentsheading="ATLASSIAN LICENSE MANAGEMENT"
         contentsheading1="Effortless Atlassian Migration"
         contentsheading2="When smooth and secure data migration matters, make Alluvium your go-to partner."
-        buttontext="Schedule a Demo"
         withSlide={false}
+        button1={
+          <Link href="/support/contact#schedule-a-call">
+            <Button size="large">Schedule a Demo</Button>
+          </Link>
+        }
       />
       <ServerToCloud
         image2={true}

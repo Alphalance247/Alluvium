@@ -1,21 +1,26 @@
 import Layout from "components/layout";
 import React from "react";
-import LicenceHero from "../atlassian-licence/licencehero";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import { consultingPageCards } from "data";
+import ServicesHero from "components/atlassian-service-reuse/servicesHero";
+import Link from "next/link";
+import Button from "components/atlassian-service-reuse/Button";
 
 const Consulting = () => {
   return (
     <Layout>
-      <LicenceHero
-        withrequest={false}
+      <ServicesHero
         contentsheading="ATLASSIAN CONSULTANCY & STRATEGY"
         contentsheading1="Strategic Atlassian Consultancy for Optimal Results"
         contentsheading2="Are you seeking Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? Let us help you tackle your teams' challenges."
-        buttontext="Book a schedule"
         withSlide={false}
+        button1={
+          <Link href="/support/contact#schedule-a-call">
+            <Button size="large">Book a schedule</Button>
+          </Link>
+        }
       />
       <ServerToCloud
         image2={true}

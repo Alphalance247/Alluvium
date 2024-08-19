@@ -28,7 +28,7 @@ const ServerToCloud = ({
       >
         {image1 && (
           <div>
-            <Image src={image1Url} alt={alt2} width={500} height={500} />
+            <Image src={image1Url} alt={alt2} width={439} height={416} />
           </div>
         )}
         <div>
@@ -43,7 +43,7 @@ const ServerToCloud = ({
         </div>
         {image2 && (
           <div>
-            <Image src={image2Url} alt={alt1} width={500} height={500} />
+            <Image src={image2Url} alt={alt1} width={439} height={416} />
           </div>
         )}
       </div>
