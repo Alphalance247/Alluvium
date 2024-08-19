@@ -6,7 +6,8 @@ import Button from "components/atlassian-service-reuse/Button";
 import SupportPackages from "components/support-component/supportPackages";
 import SupportServices from "components/support-component/supportServices";
 import LearnMore from "components/support-component/learnMore";
-import StandOut from "components/support-component/standOut";
+import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
+import { chooseUsAlluvium } from "data";
 
 const Support = () => {
   return (
@@ -26,7 +27,11 @@ const Support = () => {
       <SupportServices />
       <SupportPackages />
       <LearnMore />
-      <StandOut />
+      <ChooseAlluvium
+        choose="What Makes Us Stand Out"
+        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
+        chooseUsAlluvium={chooseUsAlluvium}
+      />
     </Layout>
   );
 };

@@ -7,6 +7,7 @@ import { consultingPageCards } from "data";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
+import { chooseUsAlluvium } from "data";
 
 const Consulting = () => {
   return (
@@ -37,6 +38,7 @@ const Consulting = () => {
       <ChooseAlluvium
         choose="Why Plan Your Migration With Alluvium?"
         strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
+        chooseUsAlluvium={chooseUsAlluvium}
       />
     </Layout>
   );

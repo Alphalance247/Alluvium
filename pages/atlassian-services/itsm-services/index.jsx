@@ -7,6 +7,8 @@ import JiraService from "components/ITSM-SERVICES/jiraService";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import styles from "../../../styles/licence.module.scss";
 import JiraTools from "components/ITSM-SERVICES/jiraTools";
+import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
+import { chooseUsAlluvium } from "data";
 
 const ItsmServices = () => {
   return (
@@ -92,6 +94,12 @@ const ItsmServices = () => {
         alt2="cloudpic"
         display="primary"
         variant="secondary"
+      />
+
+      <ChooseAlluvium
+        choose="Why Choose Us"
+        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
+        chooseUsAlluvium={chooseUsAlluvium}
       />
     </Layout>
   );

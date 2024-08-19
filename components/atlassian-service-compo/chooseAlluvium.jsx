@@ -1,15 +1,28 @@
 import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
 import styles from "../../styles/licence.module.scss";
-import { chooseUsAlluvium } from "data";
 import ReasonsCard from "components/atlassian-service-reuse/ReasonsCard";
 
-const ChooseAlluvium = ({ choose, strategy }) => {
+const ChooseAlluvium = ({
+  choose,
+  strategy,
+  chooseUsAlluvium,
+  variant = "default",
+  backgroundVariant = "default",
+}) => {
   return (
-    <div className={`container-fluid ${styles.chooseUsDiv}`}>
+    <div
+      className={`container-fluid ${styles.chooseUsDiv} ${
+        styles[`chooseUsDiv--${backgroundVariant}`]
+      }`}
+    >
       <div className={`container mx-auto ${styles.chooseOption}`}>
         <AtlassianSubHead headings={choose} strategy={strategy} />
 
-        <div className={`${styles.expertGuide}`}>
+        <div
+          className={`${styles.expertGuide} ${
+            styles[`expertGuide--${variant}`]
+          }`}
+        >
           {chooseUsAlluvium.map((el) => {
             return (
               <ReasonsCard

@@ -1791,7 +1791,7 @@ export const discoverAtlassiansServ = [
   {
     id: 3,
     heading: "Support",
-    servicepage: "atlassian-licence",
+    servicepage: "support",
     questions:
       "Our team of experts is ready to support you during every phase of your Atlassian journey. We offer support packages and subscriptions tailored to your needs.",
   },
@@ -1812,7 +1812,7 @@ export const discoverAtlassiansServ = [
   {
     id: 6,
     heading: "JSM Implementation",
-    servicepage: "",
+    servicepage: "itsm-services",
     questions:
       "Transform your IT service operations into a streamlined and efficient powerhouse with our ITSM implementation using the best-in-class tool: Jira Service Management.",
   },
