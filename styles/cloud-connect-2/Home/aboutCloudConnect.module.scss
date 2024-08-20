@@ -49,6 +49,10 @@
     @media (min-width: 1024px) {
       height: 305px;
     }
+
+    span {
+      height: 100% !important;
+    }
   }
 
   &__image {

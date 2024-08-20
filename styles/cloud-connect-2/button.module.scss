@@ -29,6 +29,17 @@
     }
   }
 
+  &--outline{
+    background-color: transparent;
+    border: 1.2px solid #FFFFFF4D;
+    color: #FFFFFF;
+
+    &:hover:not(:disabled) {
+      background-color: #FFFFFF4D;
+      color: white;
+    }
+  }
+
   // Sizes
   &--small {
     padding: 6px 12px;

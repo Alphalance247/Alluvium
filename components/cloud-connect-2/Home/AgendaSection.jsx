@@ -27,6 +27,14 @@ const AgendaSection = () => {
             </div>
           ))}
         </div>
+        <div className={styles.buttonContainer}>
+          <Link href="/cloud-connect/agenda">
+            <Button size="large" variant="outline">View full agenda</Button>
+          </Link>
+          <Link href="/cloud-connect/book-a-ticket">
+            <Button size="large">Buy Ticket</Button>
+          </Link>
+        </div>
       </div>
       <div className={styles.sponsorSection}>
         <div className={styles.sponsorContent}>
