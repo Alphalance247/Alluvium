@@ -29,11 +29,7 @@ const ProductAtlassian = () => {
                 </div>
                 <h6>{item.subhead}</h6>
                 <h5>{item.headings}</h5>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur. Integer vel tempor
-                  fusce felis pulvinar risus tortor tempor pellentesque. Sed
-                  nunc purus mauris enim suspendisse. Faucibus
-                </p>
+                <p>{item.paragraphs}</p>
               </div>
             );
           })}

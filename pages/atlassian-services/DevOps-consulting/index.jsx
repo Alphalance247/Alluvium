@@ -13,7 +13,7 @@ import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { DevOpsCard } from "data";
 import { chooseUsAlluvium } from "data";
 
-const AwsConsulting = () => {
+const DevOps = () => {
   return (
     <Layout>
       <ServicesHero
@@ -87,4 +87,4 @@ const AwsConsulting = () => {
   );
 };
 
-export default AwsConsulting;
+export default DevOps;

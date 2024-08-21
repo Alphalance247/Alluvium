@@ -9,6 +9,7 @@ import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
+import { chooseUsAlluvium } from "data";
 
 const AtlassianService = () => {
   return (
@@ -59,6 +60,7 @@ const AtlassianService = () => {
       <ChooseAlluvium
         choose="Why Choose Us"
         strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
+        chooseUsAlluvium={chooseUsAlluvium}
       />
       <CustomerReview />
       <FaQuestions />

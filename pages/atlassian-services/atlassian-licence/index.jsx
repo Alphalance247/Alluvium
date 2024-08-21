@@ -2,11 +2,12 @@ import Layout from "components/layout";
 import Exceptional from "components/licence-component/exceptional";
 import DepOption from "../../../components/licence-component/depOption";
 import Purchase from "components/licence-component/purchase";
-import ChooseUs from "components/licence-component/chooseUs";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
+import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
+import { chooseUsAlluvium } from "data";
 
 const AtlassianLicence = () => {
   return (
@@ -64,7 +65,10 @@ const AtlassianLicence = () => {
         }
       />
       <Purchase />
-      <ChooseUs choose="Why Choose Alluvium" />
+      <ChooseAlluvium
+        choose="Why Choose Alluvium"
+        chooseUsAlluvium={chooseUsAlluvium}
+      />
     </Layout>
   );
 };

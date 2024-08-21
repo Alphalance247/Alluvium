@@ -1824,7 +1824,8 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     headings: "Jira Software",
     imgChoose: "/assets/licence-image/jiraservice.svg",
-    paragraphs: "Ensure you only pay for what you need with our expertise.",
+    paragraphs:
+      "The no. 1 tool for business teams and IT teams to manage projects, collaborate, work, and track progress.",
   },
   {
     id: "2",
@@ -1832,7 +1833,7 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/confluence.svg",
     paragraphs:
-      "Avoid the hassle of expiring licenses and ensure operational continuity. ",
+      "Collaborate with colleagues in real time on documentation and improve knowledge sharing across your entire organization.",
   },
   {
     id: "3",
@@ -1840,23 +1841,23 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/jirawork.svg",
     paragraphs:
-      "Co-term your current licenses for a single annual renewal date.",
+      "Deliver the best support to your customers with Jira Service Management while promoting self-service and offering a one-stop-show for every support request.",
   },
-  {
-    id: "4",
-    subhead: "WORK MANAGEMENT",
-    headings: "Jira Service Management",
-    imgChoose: "/assets/licence-image/bluejira.svg",
-    paragraphs:
-      "Get all your Atlassian and Marketplace questions answered in one place.",
-  },
+  // {
+  //   id: "4",
+  //   subhead: "WORK MANAGEMENT",
+  //   headings: "Trello",
+  //   imgChoose: "/assets/licence-image/bluejira.svg",
+  //   paragraphs:
+  //     "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
+  // },
   {
     id: "5",
     headings: "Trello",
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/trello.svg",
     paragraphs:
-      "Receive advice on the best apps to achieve your business goals.",
+      "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
   },
   {
     id: "6",
@@ -1864,7 +1865,7 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/jiraalign.svg",
     paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+      "Take your strategy from plan to payout. Move everyone to the same page so you can solve for dependencies, scope, and roadmaps across teams and portfolios.",
   },
   {
     id: "7",
@@ -1872,23 +1873,98 @@ export const atlassianTools = [
     subhead: "CODE HOSTING & COLLABORATION",
     imgChoose: "/assets/licence-image/bitbucket.svg",
     paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+      "Bitbucket Cloud is Atlassian’s source code management and CI/CD tool. It offers a central place to manage Git repositories, collaborate on source code, and build CI/CD workflows.",
   },
   {
     id: "8",
     headings: "Opsgenie",
-    subhead: "CODE HOSTING & COLLABORATION",
+    subhead: "APPS & PLUGINS INTEGRATIONS",
     imgChoose: "/assets/licence-image/opsgenie.svg",
     paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+      "Notify the right people at the right time with powerful incident alerting and on-call schedules. Opsgenie integrates with over 200 of the best monitoring, ITSM, ChatOps, and collaboration tools. ",
+  },
+  // {
+  //   id: "9",
+  //   headings: "Atlassian Marketplace",
+  //   subhead: "APPS & PLUGINS INTEGRATIONS",
+  //   imgChoose: "/assets/licence-image/plugin.svg",
+  //   paragraphs:
+  //     "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  // },
+];
+
+export const atlassianToolsImage = [
+  {
+    id: "1",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+  },
+  {
+    id: "2",
+    imgChoose: "/assets/licence-image/confluence.svg",
+  },
+  {
+    id: "3",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+  },
+  {
+    id: "4",
+    imgChoose: "/assets/licence-image/bluejira.svg",
+  },
+  {
+    id: "5",
+    imgChoose: "/assets/licence-image/trello.svg",
+  },
+  {
+    id: "6",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+  },
+  {
+    id: "7",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+  },
+  {
+    id: "8",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
   },
   {
     id: "9",
-    headings: "Atlassian Marketplace",
-    subhead: "APPS & PLUGINS INTEGRATIONS",
     imgChoose: "/assets/licence-image/plugin.svg",
-    paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+  {
+    id: "10",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+  },
+  {
+    id: "11",
+    imgChoose: "/assets/licence-image/confluence.svg",
+  },
+  {
+    id: "12",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+  },
+  {
+    id: "13",
+    imgChoose: "/assets/licence-image/bluejira.svg",
+  },
+  {
+    id: "14",
+    imgChoose: "/assets/licence-image/trello.svg",
+  },
+  {
+    id: "15",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+  },
+  {
+    id: "16",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+  },
+  {
+    id: "17",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
+  },
+  {
+    id: "18",
+    imgChoose: "/assets/licence-image/plugin.svg",
   },
 ];
 

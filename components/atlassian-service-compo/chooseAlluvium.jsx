@@ -26,6 +26,7 @@ const ChooseAlluvium = ({
           {chooseUsAlluvium.map((el) => {
             return (
               <ReasonsCard
+                key={el.id}
                 id={el.id}
                 headings={el.headings}
                 paragraphs={el.paragraphs}
