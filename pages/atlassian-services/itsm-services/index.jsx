@@ -28,8 +28,9 @@ const ItsmServices = () => {
         paragraph="Over 45,000 companies use Jira Service Management. JSM unifies all service teams on a single platform, streamlining the workflow between Development and IT Operations. It empowers teams to embrace a service-oriented approach, enabling them to deliver outstanding experiences for both employees and customers."
         heading="Deliver exceptional support with Jira Service Management"
         text="With our Atlassian-certified consultants and ITSM expertise, we tailor Jira Service Management to meet your organization’s specific needs, ensuring the tool optimizes your processes for maximum efficiency"
-        image2Url="/assets/licence-image/itsmtools.svg"
+        image2Url="/assets/licence-image/itsmcampaign.svg"
         alt2="cloudpic"
+        showWithImage={true}
       />
 
       <JiraService />

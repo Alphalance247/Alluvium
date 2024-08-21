@@ -2067,3 +2067,93 @@ export const JiraCards = [
       "Jira Service Management's automation features enable teams to streamline repetitive tasks and processes by setting up automated rules and triggers. This reduces manual effort, enhances efficiency, and ensures consistent handling of incidents, changes, and other service requests.",
   },
 ];
+
+export const transformativeChanges = [
+  {
+    id: "1",
+    headings: "Faster Time to Market",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps practices streamline the software development lifecycle, allowing businesses to deliver new features, updates, and products more quickly and efficiently.",
+  },
+  {
+    id: "2",
+    headings: "Improved Collaboration",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps fosters better communication and collaboration between development and operations teams, breaking down silos and enabling a more cohesive approach to problem-solving.",
+  },
+  {
+    id: "3",
+    headings: "Increased Reliability",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "By automating processes and integrating continuous testing, DevOps helps to reduce errors, minimize downtime, and ensure more reliable software deployments.",
+  },
+  {
+    id: "4",
+    headings: "Scalability and Flexibility",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps enables businesses to scale their operations and infrastructure seamlessly, adapting to changing demands and market conditions with greater agility.",
+  },
+  {
+    id: "5",
+    headings: "Enhanced Customer Satisfaction",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "With faster delivery of features and more reliable services, businesses can respond more effectively to customer needs and improve overall satisfaction.",
+  },
+  {
+    id: "6",
+    headings: "Cost Efficiency",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "By automating repetitive tasks and optimizing resource use, DevOps reduces operational costs and enhances overall productivity.",
+  },
+];
+
+export const DevOpsCard = [
+  {
+    id: "1",
+    headings: "CI/CD Implementation",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+  },
+  {
+    id: "2",
+    headings: "Infrastructure as Code (IaC)",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+  },
+  {
+    id: "3",
+    headings: "Monitoring and Logging",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+  },
+  {
+    id: "4",
+    headings: "Containerization and Orchestration",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+  },
+  {
+    id: "5",
+    headings: "Cloud Integration",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+  },
+  {
+    id: "6",
+    headings: "Automation",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+  },
+];

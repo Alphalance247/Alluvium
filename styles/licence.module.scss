@@ -365,7 +365,7 @@
       }
 
       h5 {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 600;
         line-height: 2rem;
         color: #0f1a24;
@@ -617,6 +617,11 @@
     background-color: white;
   }
 
+  &--newdefaults {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
   &--primary {
     background-color: #f5f5f5;
     padding-top: 6rem;
@@ -645,6 +650,22 @@
     &--default {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      // align-items: flex-start;
+
+      @media screen and (max-width: 992px) {
+        align-items: flex-start;
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+      }
+    }
+
+    &--newdefaults {
+      display: grid;
+      grid-template-columns: 45% auto;
+      align-items: flex-start;
 
       @media screen and (max-width: 992px) {
         align-items: flex-start;
