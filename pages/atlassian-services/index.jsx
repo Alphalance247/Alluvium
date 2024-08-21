@@ -31,7 +31,7 @@ const AtlassianService = () => {
         scheduleRequest="/support/contact#schedule-a-call"
       />
       <ChooseAlluvium choose="Why Choose Alluvium" pargraphContent={true} />
-      <CustomerReview />
+      {/* <CustomerReview /> */}
       <FaQuestions />
     </Layout>
   );
