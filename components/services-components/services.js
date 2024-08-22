@@ -43,22 +43,22 @@ const Services = () => {
             <Link href="#">
               <a className={`border mr-4 ${styles.servtabs}`}>AI</a>
             </Link>
-            <Link href="#">
+            <Link href="/atlassian-services/itsm-services">
               <a className={`border mr-4 ${styles.servtabs}`}>ITSM</a>
             </Link>
-            <Link href="#">
+            <Link href="/atlassian-services/cloud-migration">
               <a className={`border mr-4 ${styles.servtabs}`}>Migrations</a>
             </Link>
-            <Link href="#">
+            <Link href="/atlassian-services/cloud-migration">
               <a className={`border mr-4 ${styles.servtabs}`}>Data Center</a>
             </Link>
-            <Link href="#">
+            <Link href="/atlassian-services/cloud-migration">
               <a className={`border mr-4 ${styles.servtabs}`}>Cloud</a>
             </Link>
-            <Link href="#">
+            <Link href="/atlassian-services/training">
               <a className={`border mr-4 ${styles.servtabs}`}>Training</a>
             </Link>
-            <Link href="#">
+            <Link href="/atlassian-services/consulting">
               <a className={`border mr-4 ${styles.servtabs}`}>
                 JSM Implementations
               </a>
@@ -66,7 +66,7 @@ const Services = () => {
             <Link href="#">
               <a className={`border mr-4 ${styles.servtabs}`}>Automation</a>
             </Link>
-            <Link href="#">
+            <Link href="/atlassian-services/support">
               <a className={`border mr-4 ${styles.servtabs}`}>Support</a>
             </Link>{" "}
             <br></br>

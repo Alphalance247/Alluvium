@@ -1,28 +1,37 @@
+import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
 import styles from "../../styles/licence.module.scss";
-import { chooseUsAlluvium } from "data";
-import Image from "next/image";
+import ReasonsCard from "components/atlassian-service-reuse/ReasonsCard";
 
-const ChooseAlluvium = ({ choose }) => {
+const ChooseAlluvium = ({
+  choose,
+  strategy,
+  chooseUsAlluvium,
+  variant = "default",
+  backgroundVariant = "default",
+}) => {
   return (
-    <div className={`container-fluid ${styles.chooseUsDiv}`}>
+    <div
+      className={`container-fluid ${styles.chooseUsDiv} ${
+        styles[`chooseUsDiv--${backgroundVariant}`]
+      }`}
+    >
       <div className={`container mx-auto ${styles.chooseOption}`}>
-        <div className={`${styles.chooseHeading}`}>
-          <h3>{choose}</h3>
-          <p>
-            From strategy to execution, our team of experts will provide the
-            utmost guidance and smooth delivery through your data migration
-            journey.
-          </p>
-        </div>
+        <AtlassianSubHead headings={choose} strategy={strategy} />
 
-        <div className={`${styles.expertGuide}`}>
+        <div
+          className={`${styles.expertGuide} ${
+            styles[`expertGuide--${variant}`]
+          }`}
+        >
           {chooseUsAlluvium.map((el) => {
             return (
-              <div key={el.id}>
-                <Image src={el.imgChoose} width={48} height={48} alt="carbon" />
-                <h5>{el.headings}</h5>
-                <p>{el.paragraphs}</p>
-              </div>
+              <ReasonsCard
+                key={el.id}
+                id={el.id}
+                headings={el.headings}
+                paragraphs={el.paragraphs}
+                imgChoose={el.imgChoose}
+              />
             );
           })}
         </div>
