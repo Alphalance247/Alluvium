@@ -1672,6 +1672,112 @@ export const trainingPageCards = [
     ],
   },
 ];
+export const awsServicesPage = [
+  {
+    id: "1",
+    icon: "/assets/services/image 465.svg",
+    headings: "Data migration ",
+    paragraphs:
+      "Seamlessly transition your data to the cloud with AWS Data Migration services. We ensure a secure, efficient, and minimal-downtime migration of your databases, applications, and workloads to AWS. Whether you’re moving from on-premises systems or upgrading to new cloud environments, our expert team handles every aspect, allowing you to unlock the full potential of the cloud with confidence.",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+  },
+  {
+    id: "2",
+    icon: "/assets/services/image 466.svg",
+    headings: "Data Wharehousing",
+    paragraphs: [
+      "Unlock the power of your data with our AWS Data Warehousing services. We help you consolidate, store, and analyze vast amounts of data in a scalable and secure environment. Whether you're looking to enhance business intelligence, streamline reporting, or drive data-driven decision-making, our AWS solutions provide the speed, flexibility, and reliability you need to turn your data into actionable insights.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+  },
+  {
+    id: "3",
+    icon: "/assets/services/image 467.svg",
+    headings: "Cloud Services Optimization",
+    paragraphs:
+      "Maximize the efficiency and performance of your cloud infrastructure with our AWS Cloud Services Optimization. We analyze and fine-tune your cloud resources to ensure you're getting the best value for your investment. By optimizing costs, improving scalability, and enhancing performance, we help you achieve a more streamlined and cost-effective cloud environment, allowing your business to operate at its full potential.",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+  },
+];
+export const awsSolutions = [
+  {
+    id: "1",
+    image: "/assets/services/image 459.png",
+    headings: "Full Cloud Solution",
+    paragraphs:
+      "Our Hybrid Solution seamlessly integrates your on-premises infrastructure with the power and scalability of AWS cloud services, providing a flexible and balanced approach to cloud adoption. This solution is ideal for businesses that require a gradual transition to the cloud or need to maintain certain workloads on-premises due to regulatory, security, or performance considerations. By combining the best of both worlds, our Hybrid Solution ensures that your business can scale efficiently, optimize costs, and maintain high availability, all while securely managing data and applications across environments. Experience a smoother, more controlled cloud journey with our tailored hybrid approach",
+    link: "#",
+    buttonText: "Book a Session",
+    buttonSize: "large",
+  },
+  {
+    id: "2",
+    image: "/assets/services/image 461.png",
+    headings: "Full Cloud Solution",
+    paragraphs: [
+      "Our Full Cloud Solution is designed to help your business fully embrace the power of AWS, enabling you to migrate all your infrastructure, applications, and data to the cloud. By moving entirely to the cloud, you gain unmatched scalability, flexibility, and cost-efficiency, while eliminating the limitations of traditional on-premises systems. Our solution covers every aspect of your cloud journey, from planning and migration to ongoing management and optimization, ensuring a smooth transition and maximizing the benefits of cloud technology. With our Full Cloud Solution, your business can innovate faster, respond to market changes more effectively, and focus on what truly matters—growth and success.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Session",
+    buttonSize: "large",
+    direction: "row-reverse",
+  },
+  {
+    id: "3",
+    image: "/assets/services/image 463.png",
+    headings: "Apps & Services Deployment",
+    paragraphs:
+      "Our App & Services Deployment solution streamlines the process of launching your applications and services on AWS, ensuring they are set up for optimal performance, security, and scalability. We handle everything from initial setup and configuration to continuous integration and deployment, allowing your development teams to focus on innovation rather than infrastructure. Whether you're deploying a single application or a complex multi-service architecture, our solution ensures a smooth, efficient rollout with minimal downtime. Experience faster time-to-market, enhanced reliability, and simplified management with our expert deployment services on AWS.",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Session",
+    buttonSize: "large",
+  },
+];
+export const awsTrainingData = [
+  {
+    id: "1",
+    headings: "Fundamentals & Essential",
+    paragraphs:
+      "Build a strong foundation with our AWS Fundamentals & Essentials training. Perfect for beginners, this course covers the core concepts of cloud computing and AWS services, providing you with the essential knowledge needed to start your cloud journey.",
+  },
+  {
+    id: "2",
+    headings: "Data analytics & Machine learning",
+    paragraphs: [
+      "Unlock the power of your data with our Data Analytics & Machine Learning training. Learn how to leverage AWS tools and services to collect, process, analyze, and visualize data, as well as build and deploy machine learning models",
+    ],
+  },
+  {
+    id: "3",
+    headings: "Security & Compliance",
+    paragraphs:
+      "Ensure your cloud environment is secure with our AWS Security & Compliance training. This course covers best practices for securing your AWS infrastructure, managing compliance requirements, and protecting your data against evolving threats.",
+  },
+  {
+    id: "4",
+    headings: "Advanced Cloud Architecture",
+    paragraphs:
+      "Take your skills to the next level with our Advanced Cloud Architecture training. Designed for experienced professionals, this course delves deep into complex AWS architectures, teaching you how to design, implement, and manage scalable, secure, and highly available cloud solutions",
+  },
+  {
+    id: "5",
+    headings: "Security & Compliance",
+    paragraphs:
+      "Ensure your cloud environment is secure with our AWS Security & Compliance training. This course covers best practices for securing your AWS infrastructure, managing compliance requirements, and protecting your data against evolving threats.",
+    textAlign: "center",
+  },
+];
 
 export const chooseUsOptions = [
   {
