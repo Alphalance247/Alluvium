@@ -2195,42 +2195,42 @@ export const DevOpsCard = [
     headings: "CI/CD Implementation",
     variant: "border",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+      "We specialize in implementing Continuous Integration and Continuous Delivery (CI/CD) pipelines that streamline your software development process. Our CI/CD services automate testing, integration, and deployment, allowing your teams to deliver high-quality software faster and more efficiently.",
   },
   {
     id: "2",
-    headings: "Infrastructure as Code (IaC)",
+    headings: "Cloud Integration & Infrastructure as Code",
     variant: "border",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+      "Our cloud integration services help you seamlessly connect various cloud platforms and services. We leverage Infrastructure as Code (IaC) to automate the management and provisioning of your infrastructure, ensuring consistency and scalability.",
   },
   {
     id: "3",
     headings: "Monitoring and Logging",
     variant: "border",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+      "Ensure your systems are always performing at their best with our comprehensive monitoring and logging services. We implement robust monitoring solutions that provide real-time insights into your infrastructure and applications, along with detailed logging for troubleshooting and analysis.",
   },
   {
     id: "4",
     headings: "Containerization and Orchestration",
     variant: "border",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+      "We offer containerization and orchestration services that enable you to deploy, manage, and scale applications efficiently. By containerizing your applications and using orchestration tools like Kubernetes, we help you achieve greater flexibility, portability, and resource efficiency.",
   },
   {
     id: "5",
-    headings: "Cloud Integration",
-    variant: "border",
-    paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
-  },
-  {
-    id: "6",
     headings: "Automation",
     variant: "border",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
+      "Automation is at the core of our service offerings, from CI/CD pipelines to cloud infrastructure. We automate repetitive tasks and processes to reduce manual intervention, minimize errors, and increase productivity across your organization.",
+  },
+  {
+    id: "6",
+    headings: "Cloud Migration",
+    variant: "border",
+    paragraphs:
+      "Our cloud migration services ensure a smooth transition from on-premises infrastructure to the cloud. We provide a comprehensive migration strategy tailored to your business needs, ensuring minimal disruption and maximum efficiency.",
   },
 ];
 
