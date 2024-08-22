@@ -6,7 +6,7 @@ import OrderSummary from "components/cloud-connect-common/orderSummary";
 
 const TicketDetails = () => {
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
-  const ticketPrices = [1000, 3000, 5000];
+  const ticketPrices = [5000, 20000, 100000];
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -86,6 +86,9 @@ const TicketDetails = () => {
                 <p>{item.ticketTitle}</p>
                 <ul>
                   <li>{item.list1}</li>
+                  <li>{item.list2}</li>
+                  <li>{item.list3}</li>
+                  <li>{item.list4}</li>
                 </ul>
               </div>
 

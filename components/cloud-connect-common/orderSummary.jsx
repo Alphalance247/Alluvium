@@ -19,43 +19,52 @@ const OrderSummary = ({
   return (
     <div className={`${styles.orderSummary}`}>
       <p className={`${styles.summaryHeading}`}>Order Summary</p>
-      <div className={`${styles.firstTicket}`}>
-        <p className={`${styles.tag}`}>
-          {ticketNumbers[0]} x General admission
-        </p>
-        <p className={`${styles.priceTag}`}>{`₦ ${(
-          1000 * ticketNumbers[0]
-        ).toLocaleString()}`}</p>
-      </div>
+      {ticketNumbers[0] >= 1 && (
+        <div className={`${styles.firstTicket}`}>
+          <p className={`${styles.tag}`}>
+            {ticketNumbers[0]} x General admission
+          </p>
+          <p className={`${styles.priceTag}`}>{`₦ ${(
+            5000 * ticketNumbers[0]
+          ).toLocaleString()}`}</p>
+        </div>
+      )}
 
-      <div className={`${styles.firstTicket}`}>
-        <p className={`${styles.tag}`}>{ticketNumbers[1]} x VP </p>
-        <p className={`${styles.priceTag}`}>{`₦ ${(
-          3000 * ticketNumbers[1]
-        ).toLocaleString()}`}</p>
-      </div>
+      {ticketNumbers[1] >= 1 && (
+        <div className={`${styles.firstTicket}`}>
+          <p className={`${styles.tag}`}>{ticketNumbers[1]} x VIP </p>
+          <p className={`${styles.priceTag}`}>{`₦ ${(
+            20000 * ticketNumbers[1]
+          ).toLocaleString()}`}</p>
+        </div>
+      )}
 
-      <div className={`${styles.firstTicket}`}>
-        <p className={`${styles.tag}`}>{ticketNumbers[2]} x VVIP</p>
-        <p className={`${styles.priceTag}`}>{`₦ ${(
-          5000 * ticketNumbers[2]
-        ).toLocaleString()}`}</p>
-      </div>
+      {ticketNumbers[2] >= 1 && (
+        <div className={`${styles.firstTicket}`}>
+          <p className={`${styles.tag}`}>{ticketNumbers[2]} x Platinum</p>
+          <p className={`${styles.priceTag}`}>{`₦ ${(
+            100000 * ticketNumbers[2]
+          ).toLocaleString()}`}</p>
+        </div>
+      )}
 
-      <div className={`${styles.summaryTotal}`}>
-        <p>Total</p>
-        <p>{`₦ ${calculateTotal()}`}</p>
-      </div>
+      {(ticketNumbers[0] || ticketNumbers[1] || ticketNumbers[2] >= 1) && (
+        <section>
+          <div className={`${styles.summaryTotal}`}>
+            <p>Total</p>
+            <p>{`₦ ${calculateTotal()}`}</p>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            {contBtn && <Button onClick={handleClick}>Continue</Button>}
 
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        {contBtn && <Button onClick={handleClick}>Continue</Button>}
-
-        {newButton && (
-          <Button onClick={onClick}>
-            {loading ? "Submitting.." : "Checkout"}
-          </Button>
-        )}
-      </div>
+            {newButton && (
+              <Button onClick={onClick}>
+                {loading ? "Submitting.." : "Checkout"}
+              </Button>
+            )}
+          </div>
+        </section>
+      )}
     </div>
   );
 };

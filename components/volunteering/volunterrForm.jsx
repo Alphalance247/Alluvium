@@ -29,16 +29,6 @@ const VolunterForm = () => {
   const [formError, setFormError] = useState({});
   const [loading, setLoading] = useState(false);
 
-  // const handleChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setForm((prevForm) => ({
-  //     ...prevForm,
-  //     [name]: value,
-  //   }));
-
-  //   setFormError((prev) => ({ ...prev, [name]: false }));
-  // };
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     if (name === "country_5") {
@@ -171,7 +161,7 @@ const VolunterForm = () => {
         )}
         <BecomeReuse
           heading="REGISTER AS A VOLUNTEER"
-          paragraph="Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem diam feugiat. Tristique velit velit proin amet cras diam mi. Vel nunc ut feugiat quis dolor"
+          paragraph="Join our dynamic team and be part of something bigger. Help make Cloud Connect '24 a resounding success by joining the Cloud Connect volunteer force."
         />
         <div className={styles.formdetailsvolunteer}>
           <form

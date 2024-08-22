@@ -19,11 +19,7 @@ const BecomeASponsor = () => {
           heading="Become a Sponsor"
           description="Unlock unparalleled opportunities by becoming a sponsor at Cloud Connect. Gain exclusive access to a highly engaged audience of industry leaders, innovators, and decision-makers. Elevate your brand, generate high-quality leads, and position your company at the forefront of cloud technology."
           button1={
-            <Button
-              size="large"
-              variant="default"
-              className={styles.brochure__button}
-            >
+            <Button size="large" variant="tertiary">
               Download Brochure
             </Button>
           }

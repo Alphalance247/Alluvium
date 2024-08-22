@@ -1572,96 +1572,105 @@ export const chooseUsOptions = [
 export const becomeSponsor = [
   {
     id: "1",
-    headings: "Visibility and Exposure",
+    headings: "Targeted Exposure",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Blandit aliquet at mi hac morbi nibh odio. Lectus cras nibh nisl in. Volutpat ac duis ac dis. Mauris arcu diam sit sagittis iaculis sem.",
+      "Gain significant brand visibility and connect with a highly engaged audience of decision-makers (IT professionals, business leaders, service managers) actively seeking solutions to optimize service delivery.",
   },
   {
     id: "2",
-    headings: "Networking Opportunities",
+    headings: "Showcase Your Expertise",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Blandit aliquet at mi hac morbi nibh odio. Lectus cras nibh nisl in. Volutpat ac duis ac dis. Mauris arcu diam sit sagittis iaculis sem.",
+      "Position yourself as a leader in service management innovation by sponsoring Cloud Connect. Showcase your cutting-edge solutions to a captive audience seeking proven strategies for success.",
   },
   {
     id: "3",
-    headings: "Lead Generation",
+    headings: "Generate High-Quality Leads",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Blandit aliquet at mi hac morbi nibh odio. Lectus cras nibh nisl in. Volutpat ac duis ac dis. Mauris arcu diam sit sagittis iaculis sem.",
+      "Network directly with potential customers interested in your service management solutions, fostering valuable leads and driving business growth.",
   },
   {
     id: "4",
-    headings: "Thought Leadership",
+    headings: "Become a service management innovator",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. Blandit aliquet at mi hac morbi nibh odio. Lectus cras nibh nisl in. Volutpat ac duis ac dis. Mauris arcu diam sit sagittis iaculis sem.",
+      "By sponsoring Cloud Connect, you position your company at the forefront of industry innovation. Gain unparalleled visibility among a targeted audience of decision-makers seeking to optimize their service delivery strategies.",
   },
 ];
 
 export const sponsorPackage = [
   {
     id: "1",
-    title: "BRONZE",
-    price: "USD($) 1250",
+    title: "SILVER",
+    price: "NGN 350,000 (₦)",
 
-    paragraphs:
-      "Become the cornerstone of Cloud Connect with our premier Title Sponsorship. This exclusive package offers unparalleled brand visibility and engagement opportunities,",
-    list1: "Logo placement on event website and marketing materials",
-    list2:
-      "Acknowledgement as a sponsor in event publications and social media channels",
-    list3: "Opportunity to distribute one marketing piece at the event",
-    list4: "Two complimentary attendee registrations",
+    // paragraphs:
+    //   "Become the cornerstone of Cloud Connect with our premier Title Sponsorship. This exclusive package offers unparalleled brand visibility and engagement opportunities,",
+    list1: "Premium booth space",
+    list2: " Co-branding opportunities with Alluvium",
+    list3: "Host a dedicated workshop or roundtable",
+    list4: "Three complimentary registrations",
   },
   {
     id: "2",
-    title: "Silver",
-    price: "USD($) 1250",
+    title: "GOLD",
+    price: "NGN 500,000 (₦)",
 
-    paragraphs:
-      "Elevate your brand presence with our Platinum Sponsorship. This package provides significant exposure and engagement with event attendees.",
-    list1: "All benefits of Bronze Sponsor tier",
-    list2:
-      "Dedicated booth space at the event for product demonstrations and networking",
-    list3: "Speaking opportunity in a breakout session (15-20 minutes)",
-    list4: "Pre-event social media promotion of your company as a sponsor",
-    list5: "Five complimentary attendee registrations",
-  },
-
-  {
-    id: "3",
-    title: "Plantinum",
-    price: "USD($) 5000",
-
-    paragraphs:
-      "Our Gold Sponsorship offers excellent value, providing strong brand visibility and engagement opportunities at an affordable investment.",
-    list1: "All benefits of Bronze Sponsor tier",
-
-    list2:
-      "We'll make sure their companies stand out on the event website and all the promotional materials, grabbing everyone's attention",
-    list3:
-      "They’ll have the first chance to talk to the media at the event, ensuring their company gets the best press coverage.",
-    list4: "Fifteen complimentary attendee registrations.",
+    // paragraphs:
+    //   "Elevate your brand presence with our Platinum Sponsorship. This package provides significant exposure and engagement with event attendees.",
+    list1: "All Silver Sponsor Benefits, Plus",
+    list2: " Top placement on event website & marketing materials",
+    list3: "First media interview opportunity)",
+    list4: " Five complimentary registrations",
     list5:
-      "Data and Lead Generation: Provide a high-rank sponsor with access to data collected from event attendees, such as leads or demographics, to support their marketing efforts.",
+      "Priority consideration for future collaborations and partnerships with Alluvium.",
   },
+
+  // {
+  //   id: "3",
+  //   title: "Plantinum",
+  //   price: "USD($) 5000",
+
+  //   paragraphs:
+  //     "Our Gold Sponsorship offers excellent value, providing strong brand visibility and engagement opportunities at an affordable investment.",
+  //   list1: "All benefits of Bronze Sponsor tier",
+
+  //   list2:
+  //     "We'll make sure their companies stand out on the event website and all the promotional materials, grabbing everyone's attention",
+  //   list3:
+  //     "They’ll have the first chance to talk to the media at the event, ensuring their company gets the best press coverage.",
+  //   list4: "Fifteen complimentary attendee registrations.",
+  //   list5:
+  //     "Data and Lead Generation: Provide a high-rank sponsor with access to data collected from event attendees, such as leads or demographics, to support their marketing efforts.",
+  // },
 ];
 
 export const eventTicket = [
   {
     id: "1",
-    ticketTitle: "Bronze Ticket",
+    ticketTitle: "General Admission",
     price: "₦5,000",
-    list1: "Food, networking, T-shirt, Pen and Jotter",
+    list1: "Access to all keynote speeches and panel discussions",
+    list2: "Networking opportunities with industry peers",
+    list3: "Complimentary refreshments and light snacks",
+    list4: "Digital event materials and proceedings",
   },
   {
     id: "2",
-    ticketTitle: "Silver Ticket",
-    price: "₦5,000",
-    list1: "Food, networking, T-shirt, Pen and Jotter",
+    ticketTitle: "VIP",
+    price: "₦20,000",
+    list1: "All benefits of General Admission",
+    list2: "Priority seating at keynote speeches and workshops",
+    list3: "Networking lunch with industry leaders and potential clients",
+    list4: "Limited edition Cloud Connect merchandise",
   },
   {
     id: "3",
-    ticketTitle: "Gold Ticket",
-    price: "₦5,000",
-    list1: "Food, networking, T-shirt, Pen and Jotter",
+    ticketTitle: "Platinum",
+    price: "₦100,000",
+    list1: "All benefits of VIP ticket",
+    list2:
+      "Exclusive access to two complimentary one-on-one consultations with a service management expert post-event.t",
+    list3: "Dedicated event concierge for personalized assistance",
+    list4: "Priority booking for future Alluvium events and workshops.",
   },
 ];
 

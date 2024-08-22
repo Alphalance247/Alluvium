@@ -114,16 +114,17 @@ const SponsorsForm = () => {
   };
 
   return (
-    <section className={`container-fluid ${styles.sponsorshipform}`}>
+    <section
+      className={`container-fluid ${styles.sponsorshipform}`}
+      id="sponsor-form-section"
+    >
       <div className="container">
         {loading && (
           <LoadingScreen message="Your request is being processed......" />
         )}
         <BecomeReuse
           heading=" BECOME A CLOUD CONNECT SPONSOR"
-          paragraph=" Lorem ipsum dolor sit amet consectetur. Aliquet amet massa lorem diam
-        feugiat. Tristique velit velit proin amet cras diam mi. Vel nunc ut
-        feugiat quis dolor"
+          paragraph="Explore our sponsorship packages and join us in making a significant impact."
         />
         <div className={styles.formdetails}>
           <form
