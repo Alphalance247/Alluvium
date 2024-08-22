@@ -62,7 +62,7 @@ const AtlassianService = () => {
         strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
         chooseUsAlluvium={chooseUsAlluvium}
       />
-      <CustomerReview />
+      {/* <CustomerReview /> */}
       <FaQuestions />
     </Layout>
   );
