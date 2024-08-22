@@ -14,6 +14,7 @@ const ServerToCloud = ({
   text = true,
   callToAction = true,
   display = "default",
+  showWithImage = true,
 }) => {
   return (
     <section
@@ -21,32 +22,43 @@ const ServerToCloud = ({
         styles[`servercloudstylesMain--${variant}`]
       }`}
     >
-      <div
-        className={`container mx-auto ${styles.servercloudstyles} ${
-          styles[`servercloudstyles--${display}`]
-        }`}
-      >
-        {image1 && (
-          <div>
-            <Image src={image1Url} alt={alt2} width={439} height={416} />
-          </div>
-        )}
-        <div>
-          <h2>{heading}</h2>
-          <p>{paragraph}</p>
-          {(text || callToAction) && (
+      {showWithImage ? (
+        <div
+          className={`container mx-auto ${styles.servercloudstyles} ${
+            styles[`servercloudstyles--${display}`]
+          }`}
+        >
+          {image1 && (
             <div>
-              <p>{text}</p>
-              {callToAction}
+              <Image src={image1Url} alt={alt2} width={439} height={416} />
+            </div>
+          )}
+          <div>
+            <h2>{heading}</h2>
+            <p>{paragraph}</p>
+            {(text || callToAction) && (
+              <div>
+                <p>{text}</p>
+                {callToAction}
+              </div>
+            )}
+          </div>
+          {image2 && (
+            <div>
+              <Image src={image2Url} alt={alt1} width={439} height={416} />
             </div>
           )}
         </div>
-        {image2 && (
-          <div>
-            <Image src={image2Url} alt={alt1} width={439} height={416} />
-          </div>
-        )}
-      </div>
+      ) : (
+        <div
+          className={`container mx-auto ${styles.servercloudstyles} ${
+            styles[`servercloudstyles--${display}`]
+          }`}
+        >
+          <h2>{heading}</h2>
+          <p>{paragraph}</p>
+        </div>
+      )}
     </section>
   );
 };

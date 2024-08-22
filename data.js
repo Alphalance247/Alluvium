@@ -1897,7 +1897,7 @@ export const discoverAtlassiansServ = [
   {
     id: 3,
     heading: "Support",
-    servicepage: "atlassian-licence",
+    servicepage: "support",
     questions:
       "Our team of experts is ready to support you during every phase of your Atlassian journey. We offer support packages and subscriptions tailored to your needs.",
   },
@@ -1918,7 +1918,7 @@ export const discoverAtlassiansServ = [
   {
     id: 6,
     heading: "JSM Implementation",
-    servicepage: "",
+    servicepage: "itsm-services",
     questions:
       "Transform your IT service operations into a streamlined and efficient powerhouse with our ITSM implementation using the best-in-class tool: Jira Service Management.",
   },
@@ -1930,7 +1930,8 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     headings: "Jira Software",
     imgChoose: "/assets/licence-image/jiraservice.svg",
-    paragraphs: "Ensure you only pay for what you need with our expertise.",
+    paragraphs:
+      "The no. 1 tool for business teams and IT teams to manage projects, collaborate, work, and track progress.",
   },
   {
     id: "2",
@@ -1938,7 +1939,7 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/confluence.svg",
     paragraphs:
-      "Avoid the hassle of expiring licenses and ensure operational continuity. ",
+      "Collaborate with colleagues in real time on documentation and improve knowledge sharing across your entire organization.",
   },
   {
     id: "3",
@@ -1946,23 +1947,23 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/jirawork.svg",
     paragraphs:
-      "Co-term your current licenses for a single annual renewal date.",
+      "Deliver the best support to your customers with Jira Service Management while promoting self-service and offering a one-stop-show for every support request.",
   },
-  {
-    id: "4",
-    subhead: "WORK MANAGEMENT",
-    headings: "Jira Service Management",
-    imgChoose: "/assets/licence-image/bluejira.svg",
-    paragraphs:
-      "Get all your Atlassian and Marketplace questions answered in one place.",
-  },
+  // {
+  //   id: "4",
+  //   subhead: "WORK MANAGEMENT",
+  //   headings: "Trello",
+  //   imgChoose: "/assets/licence-image/bluejira.svg",
+  //   paragraphs:
+  //     "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
+  // },
   {
     id: "5",
     headings: "Trello",
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/trello.svg",
     paragraphs:
-      "Receive advice on the best apps to achieve your business goals.",
+      "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
   },
   {
     id: "6",
@@ -1970,7 +1971,7 @@ export const atlassianTools = [
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/jiraalign.svg",
     paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+      "Take your strategy from plan to payout. Move everyone to the same page so you can solve for dependencies, scope, and roadmaps across teams and portfolios.",
   },
   {
     id: "7",
@@ -1978,23 +1979,98 @@ export const atlassianTools = [
     subhead: "CODE HOSTING & COLLABORATION",
     imgChoose: "/assets/licence-image/bitbucket.svg",
     paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+      "Bitbucket Cloud is Atlassian’s source code management and CI/CD tool. It offers a central place to manage Git repositories, collaborate on source code, and build CI/CD workflows.",
   },
   {
     id: "8",
     headings: "Opsgenie",
-    subhead: "CODE HOSTING & COLLABORATION",
+    subhead: "APPS & PLUGINS INTEGRATIONS",
     imgChoose: "/assets/licence-image/opsgenie.svg",
     paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+      "Notify the right people at the right time with powerful incident alerting and on-call schedules. Opsgenie integrates with over 200 of the best monitoring, ITSM, ChatOps, and collaboration tools. ",
+  },
+  // {
+  //   id: "9",
+  //   headings: "Atlassian Marketplace",
+  //   subhead: "APPS & PLUGINS INTEGRATIONS",
+  //   imgChoose: "/assets/licence-image/plugin.svg",
+  //   paragraphs:
+  //     "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  // },
+];
+
+export const atlassianToolsImage = [
+  {
+    id: "1",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+  },
+  {
+    id: "2",
+    imgChoose: "/assets/licence-image/confluence.svg",
+  },
+  {
+    id: "3",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+  },
+  {
+    id: "4",
+    imgChoose: "/assets/licence-image/bluejira.svg",
+  },
+  {
+    id: "5",
+    imgChoose: "/assets/licence-image/trello.svg",
+  },
+  {
+    id: "6",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+  },
+  {
+    id: "7",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+  },
+  {
+    id: "8",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
   },
   {
     id: "9",
-    headings: "Atlassian Marketplace",
-    subhead: "APPS & PLUGINS INTEGRATIONS",
     imgChoose: "/assets/licence-image/plugin.svg",
-    paragraphs:
-      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+  {
+    id: "10",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+  },
+  {
+    id: "11",
+    imgChoose: "/assets/licence-image/confluence.svg",
+  },
+  {
+    id: "12",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+  },
+  {
+    id: "13",
+    imgChoose: "/assets/licence-image/bluejira.svg",
+  },
+  {
+    id: "14",
+    imgChoose: "/assets/licence-image/trello.svg",
+  },
+  {
+    id: "15",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+  },
+  {
+    id: "16",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+  },
+  {
+    id: "17",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
+  },
+  {
+    id: "18",
+    imgChoose: "/assets/licence-image/plugin.svg",
   },
 ];
 
@@ -2171,5 +2247,139 @@ export const JiraCards = [
     variant: "border",
     paragraphs:
       "Jira Service Management's automation features enable teams to streamline repetitive tasks and processes by setting up automated rules and triggers. This reduces manual effort, enhances efficiency, and ensures consistent handling of incidents, changes, and other service requests.",
+  },
+];
+
+export const transformativeChanges = [
+  {
+    id: "1",
+    headings: "Faster Time to Market",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps practices streamline the software development lifecycle, allowing businesses to deliver new features, updates, and products more quickly and efficiently.",
+  },
+  {
+    id: "2",
+    headings: "Improved Collaboration",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps fosters better communication and collaboration between development and operations teams, breaking down silos and enabling a more cohesive approach to problem-solving.",
+  },
+  {
+    id: "3",
+    headings: "Increased Reliability",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "By automating processes and integrating continuous testing, DevOps helps to reduce errors, minimize downtime, and ensure more reliable software deployments.",
+  },
+  {
+    id: "4",
+    headings: "Scalability and Flexibility",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps enables businesses to scale their operations and infrastructure seamlessly, adapting to changing demands and market conditions with greater agility.",
+  },
+  {
+    id: "5",
+    headings: "Enhanced Customer Satisfaction",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "With faster delivery of features and more reliable services, businesses can respond more effectively to customer needs and improve overall satisfaction.",
+  },
+  {
+    id: "6",
+    headings: "Cost Efficiency",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "By automating repetitive tasks and optimizing resource use, DevOps reduces operational costs and enhances overall productivity.",
+  },
+];
+
+export const DevOpsCard = [
+  {
+    id: "1",
+    headings: "CI/CD Implementation",
+    variant: "border",
+    paragraphs:
+      "We specialize in implementing Continuous Integration and Continuous Delivery (CI/CD) pipelines that streamline your software development process. Our CI/CD services automate testing, integration, and deployment, allowing your teams to deliver high-quality software faster and more efficiently.",
+  },
+  {
+    id: "2",
+    headings: "Cloud Integration & Infrastructure as Code",
+    variant: "border",
+    paragraphs:
+      "Our cloud integration services help you seamlessly connect various cloud platforms and services. We leverage Infrastructure as Code (IaC) to automate the management and provisioning of your infrastructure, ensuring consistency and scalability.",
+  },
+  {
+    id: "3",
+    headings: "Monitoring and Logging",
+    variant: "border",
+    paragraphs:
+      "Ensure your systems are always performing at their best with our comprehensive monitoring and logging services. We implement robust monitoring solutions that provide real-time insights into your infrastructure and applications, along with detailed logging for troubleshooting and analysis.",
+  },
+  {
+    id: "4",
+    headings: "Containerization and Orchestration",
+    variant: "border",
+    paragraphs:
+      "We offer containerization and orchestration services that enable you to deploy, manage, and scale applications efficiently. By containerizing your applications and using orchestration tools like Kubernetes, we help you achieve greater flexibility, portability, and resource efficiency.",
+  },
+  {
+    id: "5",
+    headings: "Automation",
+    variant: "border",
+    paragraphs:
+      "Automation is at the core of our service offerings, from CI/CD pipelines to cloud infrastructure. We automate repetitive tasks and processes to reduce manual intervention, minimize errors, and increase productivity across your organization.",
+  },
+  {
+    id: "6",
+    headings: "Cloud Migration",
+    variant: "border",
+    paragraphs:
+      "Our cloud migration services ensure a smooth transition from on-premises infrastructure to the cloud. We provide a comprehensive migration strategy tailored to your business needs, ensuring minimal disruption and maximum efficiency.",
+  },
+];
+
+export const consultingChooseOptions = [
+  {
+    id: "1",
+    headings: "Optimized Costs",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "Ensure you only pay for what you need with our expertise.",
+  },
+  {
+    id: "2",
+    headings: "Stress-Free Renewals",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Avoid the hassle of expiring licenses and ensure operational continuity.",
+  },
+  {
+    id: "3",
+    headings: "Simplified Management",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Co-term your current licenses for a single annual renewal date.",
+  },
+  {
+    id: "4",
+    headings: "Single Point of Contact",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Get all your Atlassian and Marketplace questions answered in one place.",
+  },
+  {
+    id: "5",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Receive advice on the best apps to achieve your business goals.",
+  },
+  {
+    id: "6",
+    headings: "Flexible Payment Options",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
   },
 ];

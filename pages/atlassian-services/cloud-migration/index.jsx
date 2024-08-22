@@ -11,6 +11,7 @@ import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import Button from "components/atlassian-service-reuse/Button";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
+import { chooseUsAlluvium } from "data";
 
 const CloudMigration = () => {
   return (
@@ -47,6 +48,7 @@ const CloudMigration = () => {
       <ChooseAlluvium
         choose="Why Plan Your Migration With Alluvium?"
         strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
+        chooseUsAlluvium={chooseUsAlluvium}
       />
       <div className={`container-fluid ${styles.seamlessMigration}`}>
         <GetStarted

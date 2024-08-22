@@ -7,6 +7,8 @@ import JiraService from "components/ITSM-SERVICES/jiraService";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import styles from "../../../styles/licence.module.scss";
 import JiraTools from "components/ITSM-SERVICES/jiraTools";
+import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
+import { chooseUsAlluvium } from "data";
 
 const ItsmServices = () => {
   return (
@@ -26,8 +28,9 @@ const ItsmServices = () => {
         paragraph="Over 45,000 companies use Jira Service Management. JSM unifies all service teams on a single platform, streamlining the workflow between Development and IT Operations. It empowers teams to embrace a service-oriented approach, enabling them to deliver outstanding experiences for both employees and customers."
         heading="Deliver exceptional support with Jira Service Management"
         text="With our Atlassian-certified consultants and ITSM expertise, we tailor Jira Service Management to meet your organization’s specific needs, ensuring the tool optimizes your processes for maximum efficiency"
-        image2Url="/assets/licence-image/itsmtools.svg"
+        image2Url="/assets/licence-image/itsmcampaign.svg"
         alt2="cloudpic"
+        showWithImage={true}
       />
 
       <JiraService />
@@ -62,7 +65,9 @@ const ItsmServices = () => {
         display="primary"
         variant="primary"
         callToAction={
-          <Button size="large">Learn More About License Management</Button>
+          <Link href='/atlassian-services/atlassian-licence'>
+            <Button size="large">Learn More About License Management</Button>
+          </Link>
         }
       />
 
@@ -92,6 +97,12 @@ const ItsmServices = () => {
         alt2="cloudpic"
         display="primary"
         variant="secondary"
+      />
+
+      <ChooseAlluvium
+        choose="Why Choose Us"
+        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
+        chooseUsAlluvium={chooseUsAlluvium}
       />
     </Layout>
   );

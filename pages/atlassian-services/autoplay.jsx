@@ -1,13 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
-import { atlassianTools } from "data";
+import { atlassianToolsImage } from "data";
 import Image from "next/image";
 import styles from "../../styles/atlassian-services-style/atlassianlicenceservices.module.scss";
 function AutoPlay() {
   const settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 8,
+    slidesToShow: 9,
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
@@ -39,7 +39,7 @@ function AutoPlay() {
   return (
     <div className="">
       <Slider {...settings}>
-        {atlassianTools.map((item) => (
+        {atlassianToolsImage.map((item) => (
           <div
             className={styles.autplayimg}
             style={{ marginBottom: "10rem" }}
