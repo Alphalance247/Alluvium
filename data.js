@@ -2233,3 +2233,47 @@ export const DevOpsCard = [
       "Lorem ipsum dolor sit amet consectetur. Amet duis massa adipiscing amet tellus sed ac cursus amet. Eu tempor gravida bibendum adipiscing at vulputate tortor sed aliquam. Eu nunc in scelerisque elit tellus venenatis turpis. Tortor ac ullamcorper porta morbi suspendisse tempus commodo cursus.",
   },
 ];
+
+export const consultingChooseOptions = [
+  {
+    id: "1",
+    headings: "Optimized Costs",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "Ensure you only pay for what you need with our expertise.",
+  },
+  {
+    id: "2",
+    headings: "Stress-Free Renewals",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Avoid the hassle of expiring licenses and ensure operational continuity.",
+  },
+  {
+    id: "3",
+    headings: "Simplified Management",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Co-term your current licenses for a single annual renewal date.",
+  },
+  {
+    id: "4",
+    headings: "Single Point of Contact",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Get all your Atlassian and Marketplace questions answered in one place.",
+  },
+  {
+    id: "5",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Receive advice on the best apps to achieve your business goals.",
+  },
+  {
+    id: "6",
+    headings: "Flexible Payment Options",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+];

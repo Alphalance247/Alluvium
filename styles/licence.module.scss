@@ -736,6 +736,15 @@
 
       &--threeColumn {
         grid-template-columns: repeat(3, 1fr);
+
+        @media screen and (max-width: 992px) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 576px) {
+          grid-template-columns: 1fr;
+          column-gap: 2rem;
+        }
       }
 
       &--largeGap {
@@ -745,6 +754,7 @@
 
       @media screen and (max-width: 992px) {
         column-gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       @media screen and (max-width: 576px) {

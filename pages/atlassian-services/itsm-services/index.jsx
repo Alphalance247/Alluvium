@@ -65,7 +65,9 @@ const ItsmServices = () => {
         display="primary"
         variant="primary"
         callToAction={
-          <Button size="large">Learn More About License Management</Button>
+          <Link href='/atlassian-services/atlassian-licence'>
+            <Button size="large">Learn More About License Management</Button>
+          </Link>
         }
       />
 
