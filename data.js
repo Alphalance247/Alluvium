@@ -2298,45 +2298,59 @@ export const transformativeChanges = [
 export const DevOpsCard = [
   {
     id: "1",
-    headings: "CI/CD Implementation",
+    headings: "DevOps Consulting",
     variant: "border",
     paragraphs:
-      "We specialize in implementing Continuous Integration and Continuous Delivery (CI/CD) pipelines that streamline your software development process. Our CI/CD services automate testing, integration, and deployment, allowing your teams to deliver high-quality software faster and more efficiently.",
+      "Our experienced DevOps consultants will assess your current practices and identify areas for improvement. We'll work closely with you to understand your unique needs and develop a tailored DevOps strategy that aligns with your business goals.",
   },
   {
     id: "2",
-    headings: "Cloud Integration & Infrastructure as Code",
+    headings: "DevOps Implementation",
     variant: "border",
     paragraphs:
-      "Our cloud integration services help you seamlessly connect various cloud platforms and services. We leverage Infrastructure as Code (IaC) to automate the management and provisioning of your infrastructure, ensuring consistency and scalability.",
+      "We'll help you implement DevOps tools, processes, and culture throughout your organization. Our team will guide you through the transition, ensuring a smooth and successful adoption of DevOps principles.",
   },
   {
     id: "3",
-    headings: "Monitoring and Logging",
-    variant: "border",
-    paragraphs:
-      "Ensure your systems are always performing at their best with our comprehensive monitoring and logging services. We implement robust monitoring solutions that provide real-time insights into your infrastructure and applications, along with detailed logging for troubleshooting and analysis.",
-  },
-  {
-    id: "4",
-    headings: "Containerization and Orchestration",
+    headings: "Containerization & Orchestration",
     variant: "border",
     paragraphs:
       "We offer containerization and orchestration services that enable you to deploy, manage, and scale applications efficiently. By containerizing your applications and using orchestration tools like Kubernetes, we help you achieve greater flexibility, portability, and resource efficiency.",
   },
   {
-    id: "5",
-    headings: "Automation",
+    id: "4",
+    headings: "Continuous Integration and Continuous Delivery (CI/CD)",
     variant: "border",
     paragraphs:
-      "Automation is at the core of our service offerings, from CI/CD pipelines to cloud infrastructure. We automate repetitive tasks and processes to reduce manual intervention, minimize errors, and increase productivity across your organization.",
+      "We'll help you automate your software delivery pipeline, reducing the time it takes to get new features and updates into the hands of your users. CI/CD enables faster releases, improved quality, and increased efficiency.",
+  },
+  {
+    id: "5",
+    headings: "Infrastructure as Code (IaC)",
+    variant: "border",
+    paragraphs:
+      "We'll help you manage your infrastructure using code, ensuring consistency, reproducibility, and scalability. IaC allows you to define and manage your infrastructure declaratively, making it easier to deploy and manage changes.",
   },
   {
     id: "6",
-    headings: "Cloud Migration",
+    headings: "Cloud Migration and Optimization",
     variant: "border",
     paragraphs:
-      "Our cloud migration services ensure a smooth transition from on-premises infrastructure to the cloud. We provide a comprehensive migration strategy tailored to your business needs, ensuring minimal disruption and maximum efficiency.",
+      "If you're considering migrating to the cloud, we can help you assess your options, plan the migration, and optimize your cloud infrastructure for performance and cost-efficiency.",
+  },
+  {
+    id: "7",
+    headings: "Monitoring and Observability",
+    variant: "border",
+    paragraphs:
+      "We'll implement robust monitoring and observability solutions to gain insights into your application performance and identify potential issues proactively. This helps you maintain high availability and ensure a great user experience.",
+  },
+  {
+    id: "8",
+    headings: "Security and Compliance",
+    variant: "border",
+    paragraphs:
+      "We'll help you ensure that your DevOps practices align with industry regulations and security standards. We'll implement security measures to protect your systems and data, and help you comply with relevant compliance frameworks.",
   },
 ];
 

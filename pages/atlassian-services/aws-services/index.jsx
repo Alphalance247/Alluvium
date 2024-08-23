@@ -49,7 +49,7 @@ const AWSServices = () => {
                     <p>{el.paragraphs}</p>
                   </div>
                   <div className={styles.buttonContainer}>
-                    <Link href={el.link}>
+                    <Link href="/support/contact#schedule-a-call">
                       <Button variant="outline" size="large">
                         Learn More
                       </Button>
@@ -87,7 +87,10 @@ const AWSServices = () => {
                       className={el.buttonText ? styles.buttonContainer : ""}
                     >
                       {el.buttonText && (
-                        <Link href={el.link} className={styles.link}>
+                        <Link
+                          href="/support/contact#schedule-a-call"
+                          className={styles.link}
+                        >
                           <Button
                             variant={el.buttonVariant}
                             size={el.buttonSize}
@@ -106,14 +109,16 @@ const AWSServices = () => {
       </div>
 
       <div className={`container-fluid ${styles.awsTraining}`}>
-        <h2>AWS Training & Certification</h2>
-        <p>
-          AWS Training and Certification provides a comprehensive learning path
-          for mastering Amazon Web Services (AWS) and gaining recognition for
-          your cloud expertise. Whether you're new to AWS or an experienced
-          cloud professional, AWS training helps you build skills to effectively
-          manage AWS services and solutions.
-        </p>
+        <div className={`container mx-auto ${styles.heading}`}>
+          <h2>AWS Training & Certification</h2>
+          <p>
+            AWS Training and Certification provides a comprehensive learning
+            path for mastering Amazon Web Services (AWS) and gaining recognition
+            for your cloud expertise. Whether you're new to AWS or an
+            experienced cloud professional, AWS training helps you build skills
+            to effectively manage AWS services and solutions.
+          </p>
+        </div>
 
         <div className={`container mx-auto ${styles.grid}`}>
           {awsTrainingData.map((el) => {
