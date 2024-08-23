@@ -106,14 +106,16 @@ const AWSServices = () => {
       </div>
 
       <div className={`container-fluid ${styles.awsTraining}`}>
-        <h2>AWS Training & Certification</h2>
-        <p>
-          AWS Training and Certification provides a comprehensive learning path
-          for mastering Amazon Web Services (AWS) and gaining recognition for
-          your cloud expertise. Whether you're new to AWS or an experienced
-          cloud professional, AWS training helps you build skills to effectively
-          manage AWS services and solutions.
-        </p>
+        <div className={`container mx-auto ${styles.heading}`}>
+          <h2>AWS Training & Certification</h2>
+          <p>
+            AWS Training and Certification provides a comprehensive learning
+            path for mastering Amazon Web Services (AWS) and gaining recognition
+            for your cloud expertise. Whether you're new to AWS or an
+            experienced cloud professional, AWS training helps you build skills
+            to effectively manage AWS services and solutions.
+          </p>
+        </div>
 
         <div className={`container mx-auto ${styles.grid}`}>
           {awsTrainingData.map((el) => {
