@@ -49,7 +49,7 @@ const AWSServices = () => {
                     <p>{el.paragraphs}</p>
                   </div>
                   <div className={styles.buttonContainer}>
-                    <Link href={el.link}>
+                    <Link href="/support/contact#schedule-a-call">
                       <Button variant="outline" size="large">
                         Learn More
                       </Button>
@@ -87,7 +87,10 @@ const AWSServices = () => {
                       className={el.buttonText ? styles.buttonContainer : ""}
                     >
                       {el.buttonText && (
-                        <Link href={el.link} className={styles.link}>
+                        <Link
+                          href="/support/contact#schedule-a-call"
+                          className={styles.link}
+                        >
                           <Button
                             variant={el.buttonVariant}
                             size={el.buttonSize}
