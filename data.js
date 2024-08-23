@@ -1536,7 +1536,7 @@ export const consultingPageCards = [
     paragraphs:
       "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
     variant: "border",
-    link: "#",
+    link: "/atlassian-services/itsm-services",
     buttonText: "Learn More About Implementing JSM",
     buttonVariant: "outline",
   },
@@ -1548,7 +1548,7 @@ export const consultingPageCards = [
       "Our services include thorough training for end-users to ensure smooth adoption and effective utilization of Agile practices.",
     ],
     variant: "border",
-    link: "#",
+    link: "/support/contact#schedule-a-call",
     buttonText: "Book a Free Consult",
     buttonVariant: "outline",
   },
@@ -1558,7 +1558,7 @@ export const consultingPageCards = [
     paragraphs:
       "Are you looking to migrate to Atlassian Cloud? We offer a process-driven approach to seamlessly migrate existing data and configurations to the designated Cloud environment with zero data loss. From complex data models to integrating existing apps, we handle it all.",
     variant: "border",
-    link: "#",
+    link: "/atlassian-services/cloud-migration",
     buttonText: "Learn More About Atlassian Migration",
     buttonVariant: "outline",
   },
@@ -1570,7 +1570,7 @@ export const consultingPageCards = [
       "We provide specialized health checks and consultancy to ensure your business processes are fully supported, enabling you to utilize your Atlassian tools to their fullest potential.",
     ],
     variant: "border",
-    link: "#",
+    link: "/support/contact#schedule-a-call",
     buttonText: "Book a Free Consult",
     buttonVariant: "outline",
   },
@@ -1582,11 +1582,12 @@ export const consultingPageCards = [
       "We help development and operations teams to foster a culture of continuous improvement and innovation, providing customized solutions tailored to your specific needs. Comprehensive toolchain integration and end-user training are included to ensure successful adoption and utilization of DevOps practices.",
     ],
     variant: "border",
-    link: "#",
+    link: "/atlassian-services/consulting",
     buttonText: "Atlassian Migration",
     buttonVariant: "outline",
   },
 ];
+
 export const trainingPageCards = [
   {
     id: "1",
