@@ -71,3 +71,23 @@
     }
   }
 }
+
+// ////////////////////////// Agile style/////////////////////////////
+
+.agilestyle {
+  padding-top: 6rem;
+
+  h2 {
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 2rem;
+    color: #0f1a24;
+    margin-bottom: 5rem;
+    letter-spacing: -1px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.3rem;
+      line-height: 2rem;
+    }
+  }
+}

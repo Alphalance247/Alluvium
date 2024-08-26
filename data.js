@@ -2398,3 +2398,34 @@ export const consultingChooseOptions = [
       "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
   },
 ];
+
+export const AgileCard = [
+  {
+    id: "1",
+    headings: "Agile Framework Implementation",
+    variant: "border",
+    paragraphs:
+      "We specialize in implementing leading frameworks like SAFe, LeSS, and the Spotify Model. Each framework is customized to align with your organization’s unique goals, ensuring a seamless transition from traditional to scaled agile practices.",
+  },
+  {
+    id: "2",
+    headings: "Agile Coaching and Training",
+    variant: "border",
+    paragraphs:
+      " Our seasoned agile coaches provide hands-on training and ongoing support to guide your teams through the adoption of new methodologies. We work closely with all levels of your organization, from leadership to individual teams, to embed agile practices deeply into your culture.",
+  },
+  {
+    id: "3",
+    headings: "Tools and Technology Integration",
+    variant: "border",
+    paragraphs:
+      "We assist in selecting and integrating essential tools like Jira Align, which helps synchronize your strategy with execution. Our focus is on ensuring that your teams have the right technology to support agile processes at scale, enhancing collaboration, visibility, and productivity.",
+  },
+  {
+    id: "4",
+    headings: "Continuous Improvement",
+    variant: "border",
+    paragraphs:
+      "Agile at Scale isn’t a one-time implementation; it’s a journey of continuous improvement. We partner with you to regularly assess and refine your agile processes, ensuring that they evolve with your organization’s needs and market dynamics. This ongoing support helps you sustain momentum and continuously deliver value to your customers.",
+  },
+];
