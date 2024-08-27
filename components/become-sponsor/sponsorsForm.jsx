@@ -286,6 +286,9 @@ const SponsorsForm = () => {
                     onChange={handleChange}
                   >
                     <option value=""></option>
+                    <option value="Below NGN 2,000,000">
+                      Below NGN 2,000,000
+                    </option>
                     <option value="NGN 2,000,000 - 5,000,000">
                       NGN 2,000,000 - 5,000,000
                     </option>
@@ -330,8 +333,7 @@ const SponsorsForm = () => {
                   >
                     <option value=""></option>
                     <option value="Silver">Silver</option>
-                    <option value="Bronze">Bronze</option>
-                    <option value="Platinum">Platinum</option>
+                    <option value="Gold">Gold</option>
                   </select>
                   <FaChevronDown className={styles.iconic} />
                   {/* {formError.preferred_sponsorship_tier_10 && (
@@ -363,7 +365,11 @@ const SponsorsForm = () => {
                     onChange={handleChange}
                   >
                     <option value=""></option>
+                    <option value="Social media">Google</option>
                     <option value="Social media">Social media</option>
+                    <option value="Social media">
+                      Referral from a Friend or Colleague
+                    </option>
                     <option value="Event Website">Event Website</option>
                     <option value="Company Website">Company Website</option>
                     <option value="Email Newsletter">Email Newsletter</option>
@@ -425,14 +431,13 @@ const SponsorsForm = () => {
                   style={{ marginBottom: "10px" }}
                 >
                   Please provide additional information or context about your
-                  objectives for a potential partnership with us *
+                  objectives for a potential partnership with us
                 </label>
                 <textarea
                   id="additional_info_14"
                   name="additional_info_14"
                   rows="10"
                   cols="100"
-                  required
                   value={form.additional_info_14 || ""}
                   onChange={handleChange}
                   className={styles.textareastyle}

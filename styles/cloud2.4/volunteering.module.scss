@@ -188,3 +188,24 @@
   border-radius: 8px;
   color: white;
 }
+
+.labelStyle {
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #374151;
+  padding: 0px;
+}
+
+.textareastyle {
+  width: 100%;
+  border: 1px solid #d0d5dd;
+  border-radius: 5px;
+  padding: 12px 1rem;
+  outline: none;
+
+  &:focus {
+    border-radius: 4;
+    border-color: #f2c193;
+  }
+}

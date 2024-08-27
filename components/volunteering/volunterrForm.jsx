@@ -10,15 +10,10 @@ import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import LoadingScreen from "components/loading";
 import { useEffect } from "react";
-import { countries } from "country-flag-icons";
 
 const VolunterForm = () => {
-  const country = Country.getAllCountries();
-  // const state = State.getStatesOfCountry(country);
   const [countries, setCountries] = useState([]);
   const [states, setStates] = useState([]);
-
-  // console.log(country, state);
 
   const [form, setForm] = useState({
     phone_number_4: "",
@@ -300,7 +295,7 @@ const VolunterForm = () => {
                     htmlFor="volunteer_reason_9"
                     className={styles.labelStyle}
                   >
-                    Which of these best describes your experience?
+                    Why do you want to volunteer at Cloud Connect?
                   </label>
                   <select
                     name="volunteer_reason_9"
@@ -346,7 +341,7 @@ const VolunterForm = () => {
                     htmlFor="which_experience_8"
                     className={styles.labelStyle}
                   >
-                    Why do you want to volunteer at Cloud Connect?
+                    Which of these best describes your experience?
                   </label>
                   <select
                     name="which_experience_8"
@@ -364,7 +359,8 @@ const VolunterForm = () => {
                     <option value="Marketing and communications">
                       Marketing and communications
                     </option>
-                    <option value="IT support">Tech aspirant</option>
+                    <option value="IT support">IT support</option>
+                    <option value="Tech aspirant">Tech aspirant</option>
                     <option value="Student">Student</option>
                   </select>
                   <FaChevronDown className={styles.iconic} />
@@ -424,16 +420,22 @@ const VolunterForm = () => {
               <p>Additional Information</p>
 
               <div>
-                <Input
+                <label
+                  htmlFor="question_comment_info_12"
+                  className={styles.labelStyle}
+                  style={{ marginBottom: "10px" }}
+                >
+                  Do you have any other questions or comments?
+                </label>
+                <input
                   id="question_comment_info_12"
-                  label="question_comment_info_12"
-                  text="Do you have any other questions or comments?"
                   name="question_comment_info_12"
                   type="text"
-                  value={form.question_comment_info_12 || ""}
                   placeholder=""
-                  onChange={handleChange}
+                  className={styles.textareastyle}
                   errorF={formError.question_comment_info_12}
+                  value={form.question_comment_info_12 || ""}
+                  onChange={handleChange}
                 />
               </div>
             </div>
