@@ -180,12 +180,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(6, 26, 36, 0.781);
+    // background-color: rgba(6, 26, 36, 0.781);
+    background-color: #061a24;
     backdrop-filter: blur(10px);
     position: absolute;
-    top: 100%;
+    top: 90%;
     left: 0;
-    padding: 20px;
+    padding: 100px;
     z-index: 1000;
 
     li {

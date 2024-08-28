@@ -16,7 +16,9 @@ const SponsorsForm = () => {
     phone_number_6: "",
   });
   const { addToast } = useToasts();
-  const [formError, setFormError] = useState({});
+  const [formError, setFormError] = useState({
+    phone_number_6: false,
+  });
   const [loading, setLoading] = useState(false);
 
   console.log(form);
@@ -220,6 +222,12 @@ const SponsorsForm = () => {
                     styles.PhoneInputCountry
                   } ${formError.phone_number_6 ? styles.error : ""}`}
                 />
+
+                {formError.phone_number_6 && (
+                  <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                    Please enter your phone number
+                  </h6>
+                )}
               </div>
 
               <div className=" position-relative">
@@ -243,11 +251,14 @@ const SponsorsForm = () => {
                     </option>
                   ))}
                 </select>
-                <FaChevronDown className={styles.iconic} />
+                {/* <FaChevronDown className={styles.iconic} /> */}
+                {formError.country_7 && (
+                  <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                    Please enter your country
+                  </h6>
+                )}
               </div>
-              {/* {formError.country_7 && (
-                <p style={{ color: "red" }}>This field is Required</p>
-              )} */}
+
               <div>
                 <Input
                   id="website_url_8"
@@ -305,10 +316,15 @@ const SponsorsForm = () => {
                       NGN 20,000,000 - 25,000,000
                     </option>
                   </select>
-                  <FaChevronDown className={styles.iconic} />
-                  {/* {formError.budget_9 && (
+                  {/* <FaChevronDown className={styles.iconic} /> */}
+                  {/* {formError. && (
                     <p style={{ color: "red" }}>This field is Required</p>
                   )} */}
+                  {formError.budget_9 && (
+                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                      Please select your budget
+                    </h6>
+                  )}
                 </div>
 
                 <div className=" position-relative">
@@ -335,10 +351,15 @@ const SponsorsForm = () => {
                     <option value="Silver">Silver</option>
                     <option value="Gold">Gold</option>
                   </select>
-                  <FaChevronDown className={styles.iconic} />
+                  {/* <FaChevronDown className={styles.iconic} /> */}
                   {/* {formError.preferred_sponsorship_tier_10 && (
                     <p style={{ color: "red" }}>This field is Required</p>
                   )} */}
+                  {formError.preferred_sponsorship_tier_10 && (
+                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                      Please select your preferred tier
+                    </h6>
+                  )}
                 </div>
               </div>
             </div>
@@ -377,10 +398,13 @@ const SponsorsForm = () => {
                       Previous Attendance
                     </option>
                   </select>
-                  <FaChevronDown className={styles.iconic} />
-                  {/* {formError.hear_about_us_11 && (
-                    <p style={{ color: "red" }}>Country is Required</p>
-                  )} */}
+                  {/* <FaChevronDown className={styles.iconic} /> */}
+
+                  {formError.hear_about_us_11 && (
+                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                      This field is required
+                    </h6>
+                  )}
                 </div>
 
                 <div className=" position-relative">
@@ -417,10 +441,16 @@ const SponsorsForm = () => {
                       Share knowledge and insights with the target audience
                     </option>
                   </select>
-                  <FaChevronDown className={styles.iconic} />
+                  {/* <FaChevronDown className={styles.iconic} /> */}
                   {/* {formError.What_are_your_primary_objectives_12 && (
                     <p style={{ color: "red" }}>Country is Required</p>
                   )} */}
+
+                  {formError.What_are_your_primary_objectives_12 && (
+                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                      This field is required
+                    </h6>
+                  )}
                 </div>
               </div>
 

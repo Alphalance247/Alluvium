@@ -50,7 +50,7 @@ const WhySponsor = () => {
                     <li>{item?.list4}</li>
                     {item.list5 && <li>{item?.list5}</li>}
                   </ul>
-                  <Button variant="tertiary" onClick={handleScrollToView}>
+                  <Button variant="outline" onClick={handleScrollToView}>
                     Get Started
                   </Button>
                 </div>

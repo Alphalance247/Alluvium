@@ -5,9 +5,12 @@ import { useToasts } from "react-toast-notifications";
 import LoadingScreen from "components/loading";
 import Layout from "components/cloud-connect-2/Layout";
 import Head from "next/head";
+import styles from "../../../styles/cloud2.4/successscreen.module.scss";
+import Image from "next/image";
+import Button from "components/cloud-connect-2/Button";
 
 const Verify = () => {
-  const [post, setPost] = useState("");
+  const [post, setPost] = useState("false");
   const router = useRouter();
   const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
@@ -16,7 +19,7 @@ const Verify = () => {
   useEffect(() => {
     if (!router.isReady) return;
     const payment__reference = router.query.reference;
-    // "bj9j2ag25h"
+
     const VerifyPayment = async (ref) => {
       setLoading(true);
       await axios
@@ -36,6 +39,7 @@ const Verify = () => {
                 "Error occured, please try again or contact Admin",
               { appearance: "error" }
             );
+            setPost("Error occured, please try again or contact Admin");
             return;
           }
         })
@@ -55,17 +59,94 @@ const Verify = () => {
 
     VerifyPayment(payment__reference);
   }, [router.isReady, router.query]);
+
   return (
     <Layout>
       <Head>
         <title>Verify Payment | Cloud Connect 2024</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div style={{ background: "white" }}>
-        {/* {loading && (
-          <LoadingScreen message="Payment Verification in Progress...." />
-        )} */}
-      </div>
+      {loading ? (
+        <LoadingScreen message="verifying payment status" />
+      ) : (
+        <>
+          <div className={`container-fluid ${styles.success__screen__style}`}>
+            <div className="container text-center">
+              <Image
+                src="/assets/connect2.4/success.svg"
+                width={64}
+                height={64}
+                alt="checked"
+              />
+              <h2>Thank you for your purchase!</h2>
+              <p>
+                Your payment has been processed successfully, and your ticket is
+                confirmed. We’ve sent a confirmation email with your ticket
+                details and receipt, please check your inbox (and spam folder)
+                for that information.
+              </p>
+              <div className={styles.btn}>
+                <Button variant="default">Add to Calendar</Button>
+                <Button variant="tertiary">
+                  <a href="https://mail.google.com" target="_blank">
+                    Go to Gmail
+                  </a>
+                </Button>
+              </div>
+              <p>Share event</p>
+              <div className={styles.socialIcons}>
+                <a
+                  href="https://www.facebook.com/alluviumhq"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src="/assets/cloud-connect/icons/FB.svg"
+                    alt="Facebook"
+                    width={40}
+                    height={40}
+                  />
+                </a>
+                <a
+                  href="https://x.com/alluviumhq"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src="/assets/cloud-connect/icons/X.svg"
+                    alt="Facebook"
+                    width={40}
+                    height={40}
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.linkedin.com/posts/alluvium-hq_cloud-connect-24-activity-7232364227338883073-zNv8?utm_source=share&utm_medium=member_ios"
+                  target="_blank"
+                >
+                  <Image
+                    src="/assets/cloud-connect/icons/Linkedin.svg"
+                    alt="Facebook"
+                    width={40}
+                    height={40}
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Image
+                    src="/assets/cloud-connect/icons/Instagram.svg"
+                    alt="Instagram"
+                    width={40}
+                    height={40}
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </Layout>
   );
 };

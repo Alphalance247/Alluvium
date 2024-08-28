@@ -223,6 +223,12 @@ const VolunterForm = () => {
                     styles.PhoneInputCountry
                   } ${formError.phone_number_4 ? styles.error : ""}`}
                 />
+
+                {formError.phone_number_4 && (
+                  <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                    This field is required
+                  </h6>
+                )}
               </div>
 
               <div className=" position-relative">
@@ -245,7 +251,12 @@ const VolunterForm = () => {
                     </option>
                   ))}
                 </select>
-                <FaChevronDown className={styles.iconic} />
+                {/* <FaChevronDown className={styles.iconic} /> */}
+                {formError.country_5 && (
+                  <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                    This field is required
+                  </h6>
+                )}
               </div>
 
               <div className=" position-relative">
@@ -268,7 +279,13 @@ const VolunterForm = () => {
                     </option>
                   ))}
                 </select>
-                <FaChevronDown className={styles.iconic} />
+                {/* <FaChevronDown className={styles.iconic} /> */}
+
+                {formError.state_6 && (
+                  <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                    This field is required
+                  </h6>
+                )}
               </div>
 
               <div>
@@ -333,7 +350,12 @@ const VolunterForm = () => {
                       To enhance my resume and gain valuable skills.
                     </option>
                   </select>
-                  <FaChevronDown className={styles.iconic} />
+                  {/* <FaChevronDown className={styles.iconic} /> */}
+                  {formError.volunteer_reason_9 && (
+                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                      This field is required
+                    </h6>
+                  )}
                 </div>
 
                 <div className=" position-relative">
@@ -363,7 +385,12 @@ const VolunterForm = () => {
                     <option value="Tech aspirant">Tech aspirant</option>
                     <option value="Student">Student</option>
                   </select>
-                  <FaChevronDown className={styles.iconic} />
+                  {/* <FaChevronDown className={styles.iconic} /> */}
+                  {formError.which_experience_8 && (
+                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                      This field is required
+                    </h6>
+                  )}
                 </div>
 
                 <div>
@@ -433,7 +460,6 @@ const VolunterForm = () => {
                   type="text"
                   placeholder=""
                   className={styles.textareastyle}
-                  errorF={formError.question_comment_info_12}
                   value={form.question_comment_info_12 || ""}
                   onChange={handleChange}
                 />

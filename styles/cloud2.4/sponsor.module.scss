@@ -363,13 +363,13 @@
 
 .countrySelect {
   width: 100%;
-  padding: 14px;
+  padding: 18px;
   outline: none;
   background: white;
   border: 1px solid #c2c2c2;
   border-radius: 0.5rem;
   color: #11202d;
-  appearance: none;
+  // appearance: none;
 
   &:focus {
     border-radius: 4;
@@ -419,7 +419,7 @@
 }
 
 .error {
-  border: 2px solid orangered;
+  border: 1px solid orangered;
 }
 
 .textareastyle {

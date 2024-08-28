@@ -40,6 +40,17 @@
     }
   }
 
+  &--tertiary {
+    background-color: transparent;
+    border: 1.2px solid #082433;
+    color: #082433;
+
+    &:hover:not(:disabled) {
+      background-color: #ffffff4d;
+      color: black;
+    }
+  }
+
   // Sizes
   &--small {
     padding: 6px 12px;
