@@ -7,7 +7,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.hero__content}>
         <div className={styles["hero__content-date"]}>
-          Nov 6, 2024 | The Zone, Plot 9, Gbagada Industrial Scheme beside UPS,
+          Nov 26, 2024 | The Zone, Plot 9, Gbagada Industrial Scheme beside UPS,
           Lagos Nigeria{" "}
         </div>
         <div className={styles["hero__content-title-wrapper"]}>

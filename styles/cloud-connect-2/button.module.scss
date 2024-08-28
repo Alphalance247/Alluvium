@@ -29,13 +29,14 @@
     }
   }
 
-  &--tertiary {
-    background: none;
-    color: white;
+  &--outline {
+    background-color: transparent;
     border: 1.2px solid #ffffff4d;
+    color: #ffffff;
 
     &:hover:not(:disabled) {
-      background-color: #0087a1;
+      background-color: #ffffff4d;
+      color: white;
     }
   }
 
