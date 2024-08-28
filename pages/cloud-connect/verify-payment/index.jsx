@@ -61,13 +61,10 @@ const Verify = () => {
         <title>Verify Payment | Cloud Connect 2024</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
-        {loading && (
+      <div style={{ background: "white" }}>
+        {/* {loading && (
           <LoadingScreen message="Payment Verification in Progress...." />
-        )}
-        <h1>This is a Payment Verification Page</h1>
-
-        <p>Yay 🎉🎉 {post}</p>
+        )} */}
       </div>
     </Layout>
   );
