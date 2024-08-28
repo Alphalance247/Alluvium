@@ -17,7 +17,7 @@ const CloudMigration = () => {
   return (
     <Layout>
       <ServicesHero
-        contentsheading="ATLASSIAN LICENSE MANAGEMENT"
+        contentsheading="ATLASSIAN CLOUD MIGRATION"
         contentsheading1="Effortless Atlassian Migration"
         contentsheading2="When smooth and secure data migration matters, make Alluvium your go-to partner."
         withSlide={false}

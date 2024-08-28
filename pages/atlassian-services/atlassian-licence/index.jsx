@@ -21,7 +21,7 @@ const AtlassianLicence = () => {
         button1={
           <Link href="/atlassian-services/atlassian-licence/licence-request">
             <Button size="large" className="mx-4 my-4">
-              Request License
+              Request License Quote
             </Button>
           </Link>
         }
@@ -52,7 +52,7 @@ const AtlassianLicence = () => {
         button1={
           <Link href="/atlassian-services/atlassian-licence/licence-request">
             <Button size="large" className="mx-4 my-4">
-              Request License
+              Request License Quote
             </Button>
           </Link>
         }

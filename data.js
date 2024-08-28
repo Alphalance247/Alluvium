@@ -1596,9 +1596,6 @@ export const trainingPageCards = [
     paragraphs:
       "Become the architect of your team's project management success. Our Jira Admin training empowers you to:",
     variant: "border",
-    link: "#",
-    buttonText: "Book a Free Consult",
-    buttonSize: "large",
     listItems: [
       "Master Jira's common challenges, from configuration to customization",
       "Optimize workflows and automations for maximum efficiency",
@@ -1614,8 +1611,7 @@ export const trainingPageCards = [
     ],
     variant: "border",
     link: "#",
-    buttonText: "Book a Free Consult",
-    buttonSize: "large",
+
     listItems: [
       "Navigating Jira with ease",
       "Effective issue tracking and management",
@@ -1629,9 +1625,6 @@ export const trainingPageCards = [
     paragraphs:
       "Elevate your service delivery with our JSM Admin training. You'll learn to:",
     variant: "border",
-    link: "#",
-    buttonText: "Book a Free Consult",
-    buttonSize: "large",
     listItems: [
       "Configure and manage Jira Service Management effortlessly",
       "Enhance customer satisfaction through efficient service desk operations",
@@ -1646,9 +1639,6 @@ export const trainingPageCards = [
       "Turn your team into knowledge creators and collaborators with our Confluence User training. You'll learn to:",
     ],
     variant: "border",
-    link: "#",
-    buttonText: "Book a Free Consult",
-    buttonSize: "large",
     listItems: [
       "Create and organize engaging content",
       "Foster a culture of knowledge-sharing",
@@ -1663,9 +1653,6 @@ export const trainingPageCards = [
       "Expand your Atlassian toolkit with our app-specific workshops. We offer tailored training on multiple marketplace apps to help you:",
     ],
     variant: "border",
-    link: "#",
-    buttonText: "Book a Free Consult",
-    buttonSize: "large",
     listItems: [
       "Maximize the value of your chosen apps",
       "Integrate them seamlessly into your Atlassian instances",
@@ -2427,5 +2414,84 @@ export const AgileCard = [
     variant: "border",
     paragraphs:
       "Agile at Scale isn’t a one-time implementation; it’s a journey of continuous improvement. We partner with you to regularly assess and refine your agile processes, ensuring that they evolve with your organization’s needs and market dynamics. This ongoing support helps you sustain momentum and continuously deliver value to your customers.",
+  },
+];
+
+export const SoftwareDeveloplemtCard = [
+  {
+    id: "1",
+    headings: "Custom Software Development",
+    variant: "border",
+    paragraphs:
+      "At Alluvium, we specialize in crafting custom software solutions that perfectly align with your unique business needs. Our team of skilled developers will work closely with you to understand your specific requirements and design software that meets your exact needs. We follow agile methodologies to ensure flexibility, efficiency, and continuous improvement throughout the development process. ",
+  },
+  {
+    id: "2",
+    headings: "UI/UX Design",
+    variant: "border",
+    paragraphs:
+      "Our designers create intuitive and visually appealing interfaces that enhance the user experience. We conduct thorough user research to understand your target audience and their needs, ensuring that our designs are both functional and aesthetically pleasing.",
+  },
+  {
+    id: "3",
+    headings: "Mobile App Development",
+    variant: "border",
+    paragraphs:
+      "We develop high-quality mobile apps that are optimized for both iOS and Android platforms. Our team has expertise in native app development, as well as hybrid app development for businesses with limited resources.",
+  },
+  {
+    id: "4",
+    headings: "Web Application Development",
+    variant: "border",
+    paragraphs:
+      "We create responsive websites that look great on all devices and provide a seamless user experience. We specialize in developing e-commerce solutions, content management systems, and other web-based applications.",
+  },
+  {
+    id: "5",
+    headings: "API Integration",
+    variant: "border",
+    paragraphs:
+      "We seamlessly integrate your software with third-party applications and services, ensuring smooth data flow and functionality. We can also develop custom APIs to meet your specific requirements and facilitate communication between different systems.",
+  },
+];
+
+export const chooseUsSoftware = [
+  {
+    id: "1",
+    headings: "Customized Solutions",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We design software tailored to your specific requirements.",
+  },
+  {
+    id: "2",
+    headings: "Seamless Integration",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Our solutions integrate seamlessly with your existing systems.",
+  },
+  {
+    id: "3",
+    headings: "Expert Development",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "Benefit from our team of skilled developers and designers.",
+  },
+  {
+    id: "4",
+    headings: "Agile Methodology",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We follow agile practices for flexibility and efficiency.",
+  },
+  {
+    id: "5",
+    headings: "Quality assurance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "Rigorous testing ensures a high-quality product.",
+  },
+  {
+    id: "6",
+    headings: "Security and Compliance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "We take robust measures to protect your sensitive information and ensure that your software solutions adhere to industry regulations.",
   },
 ];

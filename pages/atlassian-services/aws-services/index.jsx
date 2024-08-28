@@ -14,7 +14,7 @@ const AWSServices = () => {
         contentsheading2="From data transformation to full cloud solutions, we help you leverage the power of AWS."
         button1={
           <Link href="/support/contact#schedule-a-call" passHref>
-            <Button size="large">Book a schedule</Button>
+            <Button size="large">Schedule a Call</Button>
           </Link>
         }
       />

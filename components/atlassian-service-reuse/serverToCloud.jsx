@@ -19,6 +19,8 @@ const ServerToCloud = ({
   para1,
   para2,
   imageContent = false,
+  listItem = false,
+  softwareList,
 }) => {
   return (
     <section
@@ -51,6 +53,14 @@ const ServerToCloud = ({
 
             <h2>{heading}</h2>
             <p>{paragraph}</p>
+            {listItem && (
+              <ul>
+                {softwareList.map((el) => {
+                  return <li>{el}</li>;
+                })}
+              </ul>
+            )}
+
             {paragraphs && (
               <>
                 <p>{para1}</p>

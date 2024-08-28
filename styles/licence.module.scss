@@ -720,6 +720,21 @@
         line-height: 1.2rem;
       }
     }
+
+    ul {
+      margin-left: 2rem;
+
+      li {
+        font-size: 1rem;
+        color: #595959;
+        line-height: 25px;
+
+        @media screen and (max-width: 992px) {
+          font-size: 0.9rem;
+          line-height: 1.2rem;
+        }
+      }
+    }
   }
 }
 

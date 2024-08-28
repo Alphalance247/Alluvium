@@ -5,8 +5,6 @@ import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import { AgileCard } from "data";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
-import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
-import { chooseUsAlluvium } from "data";
 import styles from "../../../styles/atlassian-services-style/generalstyle.module.scss";
 
 const AgileAtScale = () => {
@@ -17,7 +15,7 @@ const AgileAtScale = () => {
         contentsheading2="Starting out with Agile or seeking assistance in scaling it throughout your enterprise? We are here to guide you every step of the way."
         button1={
           <Link href="/support/contact#schedule-a-call" passHref>
-            <Button size="large">Book a schedule</Button>
+            <Button size="large">Schedule a Call</Button>
           </Link>
         }
       />
@@ -57,7 +55,6 @@ const AgileAtScale = () => {
         imageContent={true}
       />
 
-      {/* <AtlassianSubHead headings="" /> */}
       <div className={`container mx-auto text-center ${styles.agilestyle}`}>
         <h2>Why Agile at Scale Matters to Your Organization</h2>
       </div>
@@ -87,12 +84,6 @@ const AgileAtScale = () => {
         alt2="cloudpic"
         display="primary"
         variant="secondary"
-      />
-
-      <ChooseAlluvium
-        choose="Why Choose Us"
-        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
-        chooseUsAlluvium={chooseUsAlluvium}
       />
     </Layout>
   );
