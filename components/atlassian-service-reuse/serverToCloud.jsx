@@ -55,8 +55,8 @@ const ServerToCloud = ({
             <p>{paragraph}</p>
             {listItem && (
               <ul>
-                {softwareList.map((el) => {
-                  return <li>{el}</li>;
+                {softwareList.map((el, index) => {
+                  return <li key={index}>{el}</li>;
                 })}
               </ul>
             )}

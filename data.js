@@ -1582,8 +1582,8 @@ export const consultingPageCards = [
       "We help development and operations teams to foster a culture of continuous improvement and innovation, providing customized solutions tailored to your specific needs. Comprehensive toolchain integration and end-user training are included to ensure successful adoption and utilization of DevOps practices.",
     ],
     variant: "border",
-    link: "/atlassian-services/consulting",
-    buttonText: "Atlassian Migration",
+    link: "/atlassian-services/DevOps-consulting",
+    buttonText: "Book Your Free DevOps Consult",
     buttonVariant: "outline",
   },
 ];

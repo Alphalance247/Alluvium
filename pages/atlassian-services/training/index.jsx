@@ -31,7 +31,7 @@ const Training = () => {
       />
       <WhyMigrate
         heading="Our Training Programs"
-        description="Identify the power of Jira Service Management to support your IT support processes and create the best customer support experience."
+        description="Explore our Atlassian training options to identify which one fits your needs best."
         data={trainingPageCards}
         freeconsult={true}
       />

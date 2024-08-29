@@ -39,9 +39,8 @@ const CloudMigration = () => {
         alt2="cloudpic"
       />
       <WhyMigrate
-        heading="Why Migrate to the Atlassian Cloud?"
-        description="From strategy to execution, our team of experts will provide the utmost
-        guidance and smooth delivery through your data migration journey."
+        heading="The Benefits of Migrating to Atlassian Cloud"
+        description=""
         data={cloudOptions}
         largeGap={true}
       />

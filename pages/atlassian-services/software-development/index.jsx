@@ -4,8 +4,6 @@ import Link from "next/link";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { SoftwareDeveloplemtCard } from "data";
-import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
-import { chooseUsSoftware } from "data";
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../../styles/atlassian-services-style/generalstyle.module.scss";
 
@@ -36,12 +34,7 @@ const SoftwareDevelopment = () => {
         data={SoftwareDeveloplemtCard}
       />
 
-      <ChooseAlluvium
-        choose="Why Choose Us"
-        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
-        chooseUsAlluvium={chooseUsSoftware}
-      />
-      <div className="container-fluid" style={{ background: "#F5F5F5" }}>
+      <div className="container-fluid">
         <div className={`container mx-auto text-center ${styles.agilestyle}`}>
           <h2>Our Comprehensive Service Offerings</h2>
         </div>
@@ -58,7 +51,6 @@ const SoftwareDevelopment = () => {
             "We follow agile methodologies for flexibility and efficiency.",
             "We rigorously test our software to ensure high quality and performance.",
           ]}
-          variant="primary"
         />
 
         <ServerToCloud
@@ -74,7 +66,6 @@ const SoftwareDevelopment = () => {
             "We focus on usability, accessibility, and aesthetics in our designs.",
             "We iterate and refine our designs based on user feedback.",
           ]}
-          variant="primary"
           display="primary"
         />
 
@@ -82,7 +73,7 @@ const SoftwareDevelopment = () => {
           image1={true}
           paragraph="We specialize in developing mobile applications for iOS and Android platforms. Our mobile app development services cover the entire lifecycle, from concept and design to development, testing, and deployment."
           heading="Mobile App Development"
-          image1Url="/assets/licence-image/front-end.svg"
+          image1Url="/assets/licence-image/websitecoding.svg"
           alt1="frontend"
           listItem={true}
           softwareList={[
@@ -91,14 +82,13 @@ const SoftwareDevelopment = () => {
             "We optimize our apps for performance and user experience.",
             "We ensure compatibility across different devices and operating systems.",
           ]}
-          variant="primary"
         />
 
         <ServerToCloud
           image2={true}
           paragraph="Our web application development services involve creating robust and scalable web-based solutions. We use modern frameworks and technologies to build applications that are responsive, secure, and capable of handling high traffic."
           heading="Web Application Development"
-          image2Url="/assets/licence-image/softwareconcept.png"
+          image2Url="/assets/licence-image/coding.svg"
           alt2="softwareconcept"
           listItem={true}
           softwareList={[
@@ -107,7 +97,6 @@ const SoftwareDevelopment = () => {
             "We optimize websites for search engines to improve visibility.",
             "We ensure accessibility and compliance with web standards.",
           ]}
-          variant="primary"
           display="primary"
         />
 
@@ -124,7 +113,6 @@ const SoftwareDevelopment = () => {
             "We ensure secure and efficient data exchange between systems.",
             "We provide ongoing support and maintenance for API integrations.",
           ]}
-          variant="primary"
         />
       </div>
     </Layout>
