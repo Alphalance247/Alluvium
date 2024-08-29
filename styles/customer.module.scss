@@ -2,6 +2,7 @@
   padding-top: 120px;
   padding-bottom: 120px;
   background: white;
+  border-top: 1px solid #e5e7eb;
 
   .review {
     font-size: 15px;
@@ -14,11 +15,16 @@
   }
 
   .message {
-    font-size: 20px;
+    font-size: 1.3rem;
     line-height: 32px;
     color: #595959;
     width: 70%;
     margin: auto;
+
+    @media screen and (max-width: 576px) {
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+    }
   }
 
   .customer {

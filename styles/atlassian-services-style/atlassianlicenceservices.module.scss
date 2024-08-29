@@ -1,0 +1,256 @@
+.atlassiandiscover {
+  background: #f3f4f6;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  .services {
+    display: grid;
+    grid-template-columns: 43% auto;
+    column-gap: 5.5rem;
+
+    @media screen and (max-width: 992px) {
+      column-gap: 2rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3rem;
+    }
+
+    .discoverdropdown {
+      display: flex;
+      flex-direction: column;
+      row-gap: 3.5rem;
+
+      .questionsSection {
+        display: flex;
+        column-gap: 2.5rem;
+        align-items: flex-start;
+        cursor: pointer;
+
+        &:hover {
+          h5 {
+            color: #e37915 !important;
+          }
+
+          .idstyle {
+            color: #e37915;
+          }
+
+          .arrowRightStyle {
+            color: #e37915;
+          }
+        }
+
+        @media screen and (max-width: 992px) {
+          flex-direction: column;
+          row-gap: 1rem;
+        }
+
+        p {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          font-weight: 500;
+          color: #595959;
+        }
+      }
+
+      .questcontent {
+        .arrowsec {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+
+          .arrowRightStyle {
+            font-size: 25px;
+          }
+        }
+        h5 {
+          font-size: 1.5rem;
+          line-height: 2rem;
+          margin-bottom: 2rem;
+          font-weight: 600;
+          color: #0f1a24;
+        }
+
+        p {
+          color: #3d3d3d;
+          font-size: 1.1rem;
+          line-height: 1.6rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+
+    .discoverfaq {
+      h5 {
+        font-weight: 600;
+        font-size: 0.9rem;
+        line-height: 1rem;
+        color: #009bc0;
+        margin-bottom: 1.5rem;
+      }
+
+      h3 {
+        font-weight: 700;
+        font-size: 3.2rem;
+        line-height: 53px;
+        margin-bottom: 1.5rem;
+        color: #0f1a24;
+
+        @media screen and (max-width: 992px) {
+          font-size: 2rem;
+          line-height: 3rem;
+        }
+      }
+
+      p {
+        color: #3d3d3d;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        margin-bottom: 2rem;
+
+        @media screen and (max-width: 992px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .button1 {
+    background: #e37915;
+    border: none;
+    margin-right: 12px;
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 24px;
+    border-radius: 8px;
+    color: white;
+
+    @media screen and (max-width: 576px) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .horizon {
+    width: 100%;
+    height: 0.12rem;
+    background: #e5e7eb;
+  }
+}
+
+.partners {
+  background: #006e88;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  .trusted {
+    p {
+      font-weight: 600;
+      font-size: 0.9rem;
+      line-height: 1.5rem;
+      color: white;
+      margin-bottom: 2.5rem;
+      text-align: center;
+    }
+  }
+}
+
+.Productsection {
+  background: white;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  .productfaq {
+    width: 80%;
+    margin: auto;
+
+    h5 {
+      font-weight: 600;
+      font-size: 0.9rem;
+      line-height: 1rem;
+      color: #009bc0;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: 3.2rem;
+      line-height: 53px;
+      margin-bottom: 1.5rem;
+      color: #0f1a24;
+
+      @media screen and (max-width: 992px) {
+        font-size: 2.8rem;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+
+    p {
+      color: #3d3d3d;
+      font-size: 1.2rem;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .atlassiantool {
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    grid-gap: 1.5rem;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 1rem;
+    }
+
+    .atlassiansoftware {
+      padding: 2.5rem 1.5rem;
+      background: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      border-radius: 1rem;
+      border: 1px solid #e5e7eb;
+
+      h6 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: #6b7280;
+      }
+
+      h5 {
+        color: #3d3d3d;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+
+        @media screen and (max-width: 992px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+.autplayimg {
+  @media screen and (max-width: 992px) {
+    margin-left: 2rem;
+  }
+}

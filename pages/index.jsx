@@ -54,7 +54,7 @@ const Home = () => {
           {/* <WhyAlluvium /> */}
           {/* <OurPartners /> */}
           <CaseStudies />
-          <CustomerReview />
+          {/* <CustomerReview /> */}
           {/* <News /> */}
         </div>
       </Layout>

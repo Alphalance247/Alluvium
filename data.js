@@ -1501,27 +1501,282 @@ export const purchaseOptions = [
 export const cloudOptions = [
   {
     id: "1",
+    showNumber: true,
     headings: "Security",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "Atlassian Cloud ensures high security with data encryption in transit and at rest, robust access controls, and compliance with standards like ISO 27001 and SOC 2. It offers data residency options, continuous security monitoring, and a dedicated incident response team. Atlassian adheres to strict privacy policies and conducts regular third-party audits.",
   },
   {
     id: "2",
-    headings: "Compliance",
+    showNumber: true,
+    headings: " Always up to date",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "By choosing Atlassian Cloud, you are assured of always being automatically up to date with the latest versions released by Atlassian and third-party apps. This way, you have access to the newest features and updates without needing to put in any technical effort.",
   },
   {
     id: "3",
-    headings: "Privacy",
+    showNumber: true,
+    headings: "Scalability",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "Atlassian Cloud is highly scalable, supporting organizations of all sizes with flexible Cloud plans and resources. It can handle growing user bases, increasing workloads, and complex projects seamlessly. The platform's architecture allows for easy expansion and integration with other tools. Scalability is enhanced by Atlassian's global infrastructure, ensuring optimal performance across regions.",
   },
   {
     id: "4",
+    showNumber: true,
     headings: "Reliability",
     paragraphs:
-      "Lorem ipsum dolor sit amet consectetur. In nibh eros dui id aliquet senectus sed. Sagittis varius scelerisque nisl rutrum mollis blandit massa diam ac. Eu facilisi elit aliquet diam ut tortor viverra. Massa risus sagittis proin sit. Sed in proin penatibus morbi nulla mattis amet viverra. Mi curabitur nun.",
+      "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
+  },
+];
+
+export const consultingPageCards = [
+  {
+    id: "1",
+    headings: "ITSM Implementation and Optimization",
+    paragraphs:
+      "Atlassian Cloud offers high reliability, by having a solid infrastructure with a 99.9% uptime SLA. Atlassian’s global data centers ensure redundancy and disaster recovery capabilities. Regular maintenance, automatic updates, and continuous monitoring guarantee consistent performance for our customers. And Atlassian's dedicated support and incident response teams ensure swift resolution of any issues.",
+    variant: "border",
+    link: "/atlassian-services/itsm-services",
+    buttonText: "Learn More About Implementing JSM",
+    buttonVariant: "outline",
+  },
+  {
+    id: "2",
+    headings: "Agile at Scale",
+    paragraphs: [
+      "Do you software teams lack alignment and coordination? Is it hard to track project progress and identify issues at an early stage? Transform your organization with our Agile at Scale solution. With our Agile at Scale solution we ensure the successful deployment of Agile at Scale methodologies, supporting your organization through its agile journey.",
+      "Our services include thorough training for end-users to ensure smooth adoption and effective utilization of Agile practices.",
+    ],
+    variant: "border",
+    link: "/support/contact#schedule-a-call",
+    buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
+  },
+  {
+    id: "3",
+    headings: "Atlassian Migration",
+    paragraphs:
+      "Are you looking to migrate to Atlassian Cloud? We offer a process-driven approach to seamlessly migrate existing data and configurations to the designated Cloud environment with zero data loss. From complex data models to integrating existing apps, we handle it all.",
+    variant: "border",
+    link: "/atlassian-services/cloud-migration",
+    buttonText: "Learn More About Atlassian Migration",
+    buttonVariant: "outline",
+  },
+  {
+    id: "4",
+    headings: "Atlassian Optimization",
+    paragraphs: [
+      "Is your Atlassian instance not performing optimally? Or do you notice you’re not making the most out of your Atlassian instances? Let us help you maximize the potential of your Atlassian setup.",
+      "We provide specialized health checks and consultancy to ensure your business processes are fully supported, enabling you to utilize your Atlassian tools to their fullest potential.",
+    ],
+    variant: "border",
+    link: "/support/contact#schedule-a-call",
+    buttonText: "Book a Free Consult",
+    buttonVariant: "outline",
+  },
+  {
+    id: "5",
+    headings: "DevOps Consultancy",
+    paragraphs: [
+      "Are you looking to accelerate your development and operations processes?  Our team of DevOps specialists is dedicated to helping your organization achieve faster delivery, improved collaboration, and enhanced efficiency.",
+      "We help development and operations teams to foster a culture of continuous improvement and innovation, providing customized solutions tailored to your specific needs. Comprehensive toolchain integration and end-user training are included to ensure successful adoption and utilization of DevOps practices.",
+    ],
+    variant: "border",
+    link: "/atlassian-services/consulting",
+    buttonText: "Atlassian Migration",
+    buttonVariant: "outline",
+  },
+];
+
+export const trainingPageCards = [
+  {
+    id: "1",
+    icon: "/assets/services/Jira logo.png",
+    headings: "Jira Admin Training",
+    paragraphs:
+      "Become the architect of your team's project management success. Our Jira Admin training empowers you to:",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+    listItems: [
+      "Master Jira's common challenges, from configuration to customization",
+      "Optimize workflows and automations for maximum efficiency",
+      "Ensure seamless collaboration across multiple teams",
+    ],
+  },
+  {
+    id: "2",
+    icon: "/assets/services/Jira logo.png",
+    headings: "Jira User Training",
+    paragraphs: [
+      "Transform your team into Jira power users. Our training focuses on:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+    listItems: [
+      "Navigating Jira with ease",
+      "Effective issue tracking and management",
+      "Leveraging Jira for improved collaboration and productivity",
+    ],
+  },
+  {
+    id: "3",
+    icon: "/assets/services/JSM Admin.png",
+    headings: "JSM Admin Training",
+    paragraphs:
+      "Elevate your service delivery with our JSM Admin training. You'll learn to:",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+    listItems: [
+      "Configure and manage Jira Service Management effortlessly",
+      "Enhance customer satisfaction through efficient service desk operations",
+      "Optimize your IT service management processes by getting to know all JSM best practices.",
+    ],
+  },
+  {
+    id: "4",
+    icon: "/assets/services/Confluence.png",
+    headings: "Confluence Mastery",
+    paragraphs: [
+      "Turn your team into knowledge creators and collaborators with our Confluence User training. You'll learn to:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+    listItems: [
+      "Create and organize engaging content",
+      "Foster a culture of knowledge-sharing",
+      "Enhance teamwork and collaboration",
+    ],
+  },
+  {
+    id: "5",
+    icon: "/assets/services/Atlassian logo 1.png",
+    headings: "App-Specific Workshops",
+    paragraphs: [
+      "Expand your Atlassian toolkit with our app-specific workshops. We offer tailored training on multiple marketplace apps to help you:",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+    listItems: [
+      "Maximize the value of your chosen apps",
+      "Integrate them seamlessly into your Atlassian instances",
+      "Optimize their usage for specific business needs",
+    ],
+  },
+];
+export const awsServicesPage = [
+  {
+    id: "1",
+    icon: "/assets/services/image 465.svg",
+    headings: "Data migration ",
+    paragraphs:
+      "Seamlessly transition your data to the cloud with AWS Data Migration services. We ensure a secure, efficient, and minimal-downtime migration of your databases, applications, and workloads to AWS. Whether you’re moving from on-premises systems or upgrading to new cloud environments, our expert team handles every aspect, allowing you to unlock the full potential of the cloud with confidence.",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+  },
+  {
+    id: "2",
+    icon: "/assets/services/image 466.svg",
+    headings: "Data Wharehousing",
+    paragraphs: [
+      "Unlock the power of your data with our AWS Data Warehousing services. We help you consolidate, store, and analyze vast amounts of data in a scalable and secure environment. Whether you're looking to enhance business intelligence, streamline reporting, or drive data-driven decision-making, our AWS solutions provide the speed, flexibility, and reliability you need to turn your data into actionable insights.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+  },
+  {
+    id: "3",
+    icon: "/assets/services/image 467.svg",
+    headings: "Cloud Services Optimization",
+    paragraphs:
+      "Maximize the efficiency and performance of your cloud infrastructure with our AWS Cloud Services Optimization. We analyze and fine-tune your cloud resources to ensure you're getting the best value for your investment. By optimizing costs, improving scalability, and enhancing performance, we help you achieve a more streamlined and cost-effective cloud environment, allowing your business to operate at its full potential.",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Free Consult",
+    buttonSize: "large",
+  },
+];
+export const awsSolutions = [
+  {
+    id: "1",
+    image: "/assets/services/image 459.png",
+    headings: "Full Cloud Solution",
+    paragraphs:
+      "Our Hybrid Solution seamlessly integrates your on-premises infrastructure with the power and scalability of AWS cloud services, providing a flexible and balanced approach to cloud adoption. This solution is ideal for businesses that require a gradual transition to the cloud or need to maintain certain workloads on-premises due to regulatory, security, or performance considerations. By combining the best of both worlds, our Hybrid Solution ensures that your business can scale efficiently, optimize costs, and maintain high availability, all while securely managing data and applications across environments. Experience a smoother, more controlled cloud journey with our tailored hybrid approach",
+    link: "#",
+    buttonText: "Book a Session",
+    buttonSize: "large",
+  },
+  {
+    id: "2",
+    image: "/assets/services/image 461.png",
+    headings: "Full Cloud Solution",
+    paragraphs: [
+      "Our Full Cloud Solution is designed to help your business fully embrace the power of AWS, enabling you to migrate all your infrastructure, applications, and data to the cloud. By moving entirely to the cloud, you gain unmatched scalability, flexibility, and cost-efficiency, while eliminating the limitations of traditional on-premises systems. Our solution covers every aspect of your cloud journey, from planning and migration to ongoing management and optimization, ensuring a smooth transition and maximizing the benefits of cloud technology. With our Full Cloud Solution, your business can innovate faster, respond to market changes more effectively, and focus on what truly matters—growth and success.",
+    ],
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Session",
+    buttonSize: "large",
+    direction: "row-reverse",
+  },
+  {
+    id: "3",
+    image: "/assets/services/image 463.png",
+    headings: "Apps & Services Deployment",
+    paragraphs:
+      "Our App & Services Deployment solution streamlines the process of launching your applications and services on AWS, ensuring they are set up for optimal performance, security, and scalability. We handle everything from initial setup and configuration to continuous integration and deployment, allowing your development teams to focus on innovation rather than infrastructure. Whether you're deploying a single application or a complex multi-service architecture, our solution ensures a smooth, efficient rollout with minimal downtime. Experience faster time-to-market, enhanced reliability, and simplified management with our expert deployment services on AWS.",
+    variant: "border",
+    link: "#",
+    buttonText: "Book a Session",
+    buttonSize: "large",
+  },
+];
+export const awsTrainingData = [
+  {
+    id: "1",
+    headings: "Fundamentals & Essential",
+    paragraphs:
+      "Build a strong foundation with our AWS Fundamentals & Essentials training. Perfect for beginners, this course covers the core concepts of cloud computing and AWS services, providing you with the essential knowledge needed to start your cloud journey.",
+  },
+  {
+    id: "2",
+    headings: "Data analytics & Machine learning",
+    paragraphs: [
+      "Unlock the power of your data with our Data Analytics & Machine Learning training. Learn how to leverage AWS tools and services to collect, process, analyze, and visualize data, as well as build and deploy machine learning models",
+    ],
+  },
+  {
+    id: "3",
+    headings: "Security & Compliance",
+    paragraphs:
+      "Ensure your cloud environment is secure with our AWS Security & Compliance training. This course covers best practices for securing your AWS infrastructure, managing compliance requirements, and protecting your data against evolving threats.",
+  },
+  {
+    id: "4",
+    headings: "Advanced Cloud Architecture",
+    paragraphs:
+      "Take your skills to the next level with our Advanced Cloud Architecture training. Designed for experienced professionals, this course delves deep into complex AWS architectures, teaching you how to design, implement, and manage scalable, secure, and highly available cloud solutions",
+  },
+  {
+    id: "5",
+    headings: "Security & Compliance",
+    paragraphs:
+      "Ensure your cloud environment is secure with our AWS Security & Compliance training. This course covers best practices for securing your AWS infrastructure, managing compliance requirements, and protecting your data against evolving threats.",
+    textAlign: "center",
   },
 ];
 
@@ -1538,6 +1793,581 @@ export const chooseUsOptions = [
     imgChoose: "/assets/licence-image/carbonImg.svg",
     paragraphs:
       "Avoid the hassle of expiring licenses and ensure operational continuity. ",
+  },
+  {
+    id: "3",
+    headings: "Simplified Management",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Co-term your current licenses for a single annual renewal date.",
+  },
+  {
+    id: "4",
+    headings: "Single Point of Contact",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Get all your Atlassian and Marketplace questions answered in one place.",
+  },
+  {
+    id: "5",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Receive advice on the best apps to achieve your business goals.",
+  },
+  {
+    id: "6",
+    headings: "Flexible Payment Options",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  },
+];
+
+export const frequentlyAsked = [
+  {
+    id: 1,
+    questions: "What Atlassian services do you offer?",
+    answer:
+      "We provide a comprehensive suite of Atlassian services, including implementation, optimization, license management, training, migration services, and ad hoc support. With extensive expertise in the Atlassian ecosystem, we’ve amassed significant technical experience, making no project too complex for us.",
+  },
+  {
+    id: 2,
+    questions:
+      "How can we get started with your Atlassian services, and what should we expect during the initial consultation?",
+    answer:
+      "The first step is to schedule a free consultation call with one of our experts by filling out this form (LINK). During this consultation, we will review your current situation, needs, and challenges, and discuss your goals, desired outcomes, and timelines. After the consultation, we will create a customized proposal and plan based on your needs and send it to you via email. Once we agree on the proposal, we will schedule the project and decide on starting dates together.",
+  },
+  {
+    id: 3,
+    questions: " What kind of support do you offer post-implementation?",
+    answer:
+      "We offer dedicated support through our subscription packages, ensuring you are continuously supported by our experts post-implementation. Our support covers everything from functional to technical questions. Get in touch with us to learn more.",
+  },
+  {
+    id: 4,
+    questions: "What is involved in a holistic site audit and governance?",
+    answer:
+      "Our site audit will thoroughly examine your instance(s) to assess the current configuration and governance structure. We compile our findings into a customized report, which includes our advice, best practices, and necessary steps to improve your instance.",
+  },
+  {
+    id: 5,
+    questions:
+      "Can you help us migrate from a different platform to Atlassian Cloud?",
+    answer:
+      "Yes, in addition to migrating customers from Atlassian Server or Data Center to Atlassian Cloud, we can assist with migrating from other platforms to Atlassian Cloud. This includes migrations from ServiceNow to Jira Service Management or from SharePoint to Confluence.",
+  },
+  {
+    id: 6,
+    questions:
+      "Data security is our top priority. How does Atlassian guarantee it, particularly for cloud solutions?",
+    answer:
+      "Atlassian follows security best practices with a layered approach to protect your data. The platform offers tools such as the detections program, secure software development, and external penetration testing, along with a growing set of controls to safeguard your data. Read more about Atlassian's data protection here.",
+  },
+  {
+    id: 7,
+    questions:
+      "What types of training programs do you offer for our team, and how can they help us maximize the use of Atlassian tools?",
+    answer:
+      "Training is an essential part of our implementation process to ensure you get the most out of your Atlassian tools. We offer various training programs, from beginner sessions for end-users to administrator training for Jira and Confluence Admins. Additionally, we provide advanced configuration training for third-party Marketplace apps. Get in touch (LINK) to learn more.",
+  },
+  {
+    id: 8,
+    questions:
+      "What are the potential benefits of integrating artificial intelligence (AI) into our Atlassian tools, and how can it help our organization?",
+    answer:
+      "Atlassian offers its own AI, known as Atlassian Intelligence, which can bring numerous benefits to your organization. It enhances productivity by tailoring dashboards, improves decision-making by analyzing data, and streamlines operations by recommending improved workflows. This is just a glimpse of the possibilities. Please get in touch (LINK) with us to schedule a demo and explore more about Atlassian Intelligence.",
+  },
+];
+
+export const discoverAtlassiansServ = [
+  {
+    id: 1,
+    heading: "Cloud & Data Migration",
+    servicepage: "cloud-migration",
+    questions:
+      "Let us help you migrate your current Server environments to Atlassian Cloud smoothy.",
+  },
+  {
+    id: 2,
+    heading: "Training ",
+    servicepage: "training",
+    questions:
+      "Need to train your Jira or Confluence users to become more skilled? We offer various Atlassian training sessions, from user training to advanced admin training.",
+  },
+  {
+    id: 3,
+    heading: "Support",
+    servicepage: "support",
+    questions:
+      "Our team of experts is ready to support you during every phase of your Atlassian journey. We offer support packages and subscriptions tailored to your needs.",
+  },
+  {
+    id: 4,
+    heading: "Licensing Management",
+    servicepage: "atlassian-licence",
+    questions:
+      "Are you seeking an Atlassian partner to assist with purchasing Atlassian and Marketplace apps? Maximize your license investment by letting Alluvium manage your licenses.",
+  },
+  {
+    id: 5,
+    heading: "Consulting & Strategy",
+    servicepage: "consulting",
+    questions:
+      "Looking for Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? We’re here for you.",
+  },
+  {
+    id: 6,
+    heading: "JSM Implementation",
+    servicepage: "itsm-services",
+    questions:
+      "Transform your IT service operations into a streamlined and efficient powerhouse with our ITSM implementation using the best-in-class tool: Jira Service Management.",
+  },
+];
+
+export const atlassianTools = [
+  {
+    id: "1",
+    subhead: "WORK MANAGEMENT",
+    headings: "Jira Software",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+    paragraphs:
+      "The no. 1 tool for business teams and IT teams to manage projects, collaborate, work, and track progress.",
+  },
+  {
+    id: "2",
+    headings: "Confluence",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/confluence.svg",
+    paragraphs:
+      "Collaborate with colleagues in real time on documentation and improve knowledge sharing across your entire organization.",
+  },
+  {
+    id: "3",
+    headings: "Jira Work Management",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+    paragraphs:
+      "Deliver the best support to your customers with Jira Service Management while promoting self-service and offering a one-stop-show for every support request.",
+  },
+  // {
+  //   id: "4",
+  //   subhead: "WORK MANAGEMENT",
+  //   headings: "Trello",
+  //   imgChoose: "/assets/licence-image/bluejira.svg",
+  //   paragraphs:
+  //     "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
+  // },
+  {
+    id: "5",
+    headings: "Trello",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/trello.svg",
+    paragraphs:
+      "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
+  },
+  {
+    id: "6",
+    headings: "Jira Align",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+    paragraphs:
+      "Take your strategy from plan to payout. Move everyone to the same page so you can solve for dependencies, scope, and roadmaps across teams and portfolios.",
+  },
+  {
+    id: "7",
+    headings: "Bitbucket",
+    subhead: "CODE HOSTING & COLLABORATION",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+    paragraphs:
+      "Bitbucket Cloud is Atlassian’s source code management and CI/CD tool. It offers a central place to manage Git repositories, collaborate on source code, and build CI/CD workflows.",
+  },
+  {
+    id: "8",
+    headings: "Opsgenie",
+    subhead: "APPS & PLUGINS INTEGRATIONS",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
+    paragraphs:
+      "Notify the right people at the right time with powerful incident alerting and on-call schedules. Opsgenie integrates with over 200 of the best monitoring, ITSM, ChatOps, and collaboration tools. ",
+  },
+  // {
+  //   id: "9",
+  //   headings: "Atlassian Marketplace",
+  //   subhead: "APPS & PLUGINS INTEGRATIONS",
+  //   imgChoose: "/assets/licence-image/plugin.svg",
+  //   paragraphs:
+  //     "Choose to pay monthly or annually for your Atlassian Cloud licenses.",
+  // },
+];
+
+export const atlassianToolsImage = [
+  {
+    id: "1",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+  },
+  {
+    id: "2",
+    imgChoose: "/assets/licence-image/confluence.svg",
+  },
+  {
+    id: "3",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+  },
+  {
+    id: "4",
+    imgChoose: "/assets/licence-image/bluejira.svg",
+  },
+  {
+    id: "5",
+    imgChoose: "/assets/licence-image/trello.svg",
+  },
+  {
+    id: "6",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+  },
+  {
+    id: "7",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+  },
+  {
+    id: "8",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
+  },
+  {
+    id: "9",
+    imgChoose: "/assets/licence-image/plugin.svg",
+  },
+  {
+    id: "10",
+    imgChoose: "/assets/licence-image/jiraservice.svg",
+  },
+  {
+    id: "11",
+    imgChoose: "/assets/licence-image/confluence.svg",
+  },
+  {
+    id: "12",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+  },
+  {
+    id: "13",
+    imgChoose: "/assets/licence-image/bluejira.svg",
+  },
+  {
+    id: "14",
+    imgChoose: "/assets/licence-image/trello.svg",
+  },
+  {
+    id: "15",
+    imgChoose: "/assets/licence-image/jiraalign.svg",
+  },
+  {
+    id: "16",
+    imgChoose: "/assets/licence-image/bitbucket.svg",
+  },
+  {
+    id: "17",
+    imgChoose: "/assets/licence-image/opsgenie.svg",
+  },
+  {
+    id: "18",
+    imgChoose: "/assets/licence-image/plugin.svg",
+  },
+];
+
+export const chooseUsAlluvium = [
+  {
+    id: "1",
+    headings: "Expert Guidance",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We’ve helped numerous companies migrate to Cloud before",
+  },
+  {
+    id: "2",
+    headings: "Feel Fully Supported",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Be assured of a smooth migration process and post-migration support.",
+  },
+  {
+    id: "3",
+    headings: "Zero Data Loss",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "With our expertise, we can ensure no data gets lost during migration.",
+  },
+  {
+    id: "4",
+    headings: "Shorter Timelines",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We can decrease the timelines for the migration.",
+  },
+  {
+    id: "5",
+    headings: "Minimizing Downtime",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "We understand your business continuïty matters most.",
+  },
+  {
+    id: "6",
+    headings: "Flexible Payment Options",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "We ensure you know exactly what the cost estimates for migration and licensing.",
+  },
+];
+
+export const cloudcounter = [
+  {
+    id: "1",
+    content: "The Discovery Phase",
+  },
+  {
+    id: "2",
+    content: "Smoke Testing (1 month)",
+  },
+  {
+    id: "3",
+    content: "User Acceptance Testing",
+  },
+  {
+    id: "4",
+    content: "Production Migration",
+  },
+  {
+    id: "5",
+    content: "Post Migration Support",
+  },
+];
+
+export const supportCards = [
+  {
+    id: "1",
+    headings: "Installation",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "2",
+    headings: "Configuration",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "3",
+    headings: "Sales",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "4",
+    headings: "Troubleshooting",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "5",
+    headings: "Migration",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    id: "6",
+    headings: "Product Demo",
+    variant: "border",
+    paragraphs:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit vehicula dui sit amet ligula cursus. dolor sit amet dolor adipiscing. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+];
+
+export const JiraCards = [
+  {
+    id: "1",
+    headings: "Incident Management",
+    variant: "border",
+    paragraphs:
+      "Streamline incident management by centralizing incident reporting, prioritization, and tracking on a single platform, ensuring swift response and resolution. With automated workflows and real-time collaboration tools, JSM enables teams to quickly diagnose and resolve incidents, minimizing downtime and business disruption.",
+  },
+  {
+    id: "2",
+    headings: "Change Management",
+    variant: "border",
+    paragraphs:
+      "Simplify change management by providing a structured process for planning, approving, and implementing changes, reducing risks and ensuring smooth transitions. With customizable workflows and automated approval processes, JSM ensures that changes are efficiently reviewed and executed with minimal impact on ongoing operations.",
+  },
+  {
+    id: "3",
+    headings: "Problem Management",
+    variant: "border",
+    paragraphs:
+      "Enhance problem management by centralizing the identification, analysis, and resolution of underlying issues, helping to prevent recurring incidents. With built-in root cause analysis tools and customizable workflows, JSM enables teams to efficiently diagnose and address problems, reducing the impact on business operations.",
+  },
+  {
+    id: "4",
+    headings: "Queues",
+    variant: "border",
+    paragraphs:
+      "Organize and prioritize incoming requests, to efficiently manage and address issues based on urgency and importance. Queues can be customized to align with specific workflows, ensuring that tasks are automatically sorted and assigned to the right team members.",
+  },
+  {
+    id: "5",
+    headings: "SLA’s",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management enables the creation and tracking of Service Level Agreements (SLAs) to ensure timely resolution of requests. It automatically monitors response and resolution times, helping teams meet their performance targets and maintain high service standards.",
+  },
+  {
+    id: "6",
+    headings: "Reporting and Dashboard",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management offers powerful reporting and dashboarding features, providing real-time insights into team performance, incident trends, and service metrics. Customizable dashboards allow teams to visualize key data, track progress, and make informed decisions to improve service delivery.",
+  },
+  {
+    id: "7",
+    headings: "Asset Management",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management's asset management capabilities allow organizations to track and manage their IT assets and resources throughout their lifecycle. By linking assets to incidents, changes, and other processes, teams can maintain accurate inventory, monitor asset performance, and optimize resource utilization.",
+  },
+  {
+    id: "8",
+    headings: "Knowledge Base",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management integrates a knowledge base that allows teams to create, organize, and share valuable information and solutions. This empowers users to find answers quickly, reduces the volume of support requests, and fosters a culture of self-service and continuous learning.",
+  },
+  {
+    id: "9",
+    headings: "Automation",
+    variant: "border",
+    paragraphs:
+      "Jira Service Management's automation features enable teams to streamline repetitive tasks and processes by setting up automated rules and triggers. This reduces manual effort, enhances efficiency, and ensures consistent handling of incidents, changes, and other service requests.",
+  },
+];
+
+export const transformativeChanges = [
+  {
+    id: "1",
+    headings: "Faster Time to Market",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps practices streamline the software development lifecycle, allowing businesses to deliver new features, updates, and products more quickly and efficiently.",
+  },
+  {
+    id: "2",
+    headings: "Improved Collaboration",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps fosters better communication and collaboration between development and operations teams, breaking down silos and enabling a more cohesive approach to problem-solving.",
+  },
+  {
+    id: "3",
+    headings: "Increased Reliability",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "By automating processes and integrating continuous testing, DevOps helps to reduce errors, minimize downtime, and ensure more reliable software deployments.",
+  },
+  {
+    id: "4",
+    headings: "Scalability and Flexibility",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "DevOps enables businesses to scale their operations and infrastructure seamlessly, adapting to changing demands and market conditions with greater agility.",
+  },
+  {
+    id: "5",
+    headings: "Enhanced Customer Satisfaction",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "With faster delivery of features and more reliable services, businesses can respond more effectively to customer needs and improve overall satisfaction.",
+  },
+  {
+    id: "6",
+    headings: "Cost Efficiency",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "By automating repetitive tasks and optimizing resource use, DevOps reduces operational costs and enhances overall productivity.",
+  },
+];
+
+export const DevOpsCard = [
+  {
+    id: "1",
+    headings: "DevOps Consulting",
+    variant: "border",
+    paragraphs:
+      "Our experienced DevOps consultants will assess your current practices and identify areas for improvement. We'll work closely with you to understand your unique needs and develop a tailored DevOps strategy that aligns with your business goals.",
+  },
+  {
+    id: "2",
+    headings: "DevOps Implementation",
+    variant: "border",
+    paragraphs:
+      "We'll help you implement DevOps tools, processes, and culture throughout your organization. Our team will guide you through the transition, ensuring a smooth and successful adoption of DevOps principles.",
+  },
+  {
+    id: "3",
+    headings: "Containerization & Orchestration",
+    variant: "border",
+    paragraphs:
+      "We offer containerization and orchestration services that enable you to deploy, manage, and scale applications efficiently. By containerizing your applications and using orchestration tools like Kubernetes, we help you achieve greater flexibility, portability, and resource efficiency.",
+  },
+  {
+    id: "4",
+    headings: "Continuous Integration and Continuous Delivery (CI/CD)",
+    variant: "border",
+    paragraphs:
+      "We'll help you automate your software delivery pipeline, reducing the time it takes to get new features and updates into the hands of your users. CI/CD enables faster releases, improved quality, and increased efficiency.",
+  },
+  {
+    id: "5",
+    headings: "Infrastructure as Code (IaC)",
+    variant: "border",
+    paragraphs:
+      "We'll help you manage your infrastructure using code, ensuring consistency, reproducibility, and scalability. IaC allows you to define and manage your infrastructure declaratively, making it easier to deploy and manage changes.",
+  },
+  {
+    id: "6",
+    headings: "Cloud Migration and Optimization",
+    variant: "border",
+    paragraphs:
+      "If you're considering migrating to the cloud, we can help you assess your options, plan the migration, and optimize your cloud infrastructure for performance and cost-efficiency.",
+  },
+  {
+    id: "7",
+    headings: "Monitoring and Observability",
+    variant: "border",
+    paragraphs:
+      "We'll implement robust monitoring and observability solutions to gain insights into your application performance and identify potential issues proactively. This helps you maintain high availability and ensure a great user experience.",
+  },
+  {
+    id: "8",
+    headings: "Security and Compliance",
+    variant: "border",
+    paragraphs:
+      "We'll help you ensure that your DevOps practices align with industry regulations and security standards. We'll implement security measures to protect your systems and data, and help you comply with relevant compliance frameworks.",
+  },
+];
+
+export const consultingChooseOptions = [
+  {
+    id: "1",
+    headings: "Optimized Costs",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs: "Ensure you only pay for what you need with our expertise.",
+  },
+  {
+    id: "2",
+    headings: "Stress-Free Renewals",
+    imgChoose: "/assets/licence-image/carbonImg.svg",
+    paragraphs:
+      "Avoid the hassle of expiring licenses and ensure operational continuity.",
   },
   {
     id: "3",
