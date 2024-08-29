@@ -22,7 +22,7 @@ const Training = () => {
         }
       />
       <Exceptional
-        heading="Expert Atlassian Training Tailored for Your Success"
+        heading="Specialized Training to Master the Atlassian Tooling"
         paragraphs={[
           "More than being a licensed Atlassian training partner, we have a proven track record of expertise and smooth deliveries. We’ll provide comprehensive Atlassian training customized to suit your personal, business, and budget needs. ",
           "Our Experienced Atlassian Consultants will make it a point of duty to equip you with Atlassian customized solutions. Regardless of your team size, we will ensure you fully leverage the benefits of Atlassian tools. By listening to your needs and customizing your training program, we equip your team with the precise skills required for success.",

@@ -29,7 +29,7 @@ const AtlassianService = () => {
         button2={
           <Link href="/atlassian-services/atlassian-licence/licence-request">
             <Button size="large" variant="tertiary">
-              Request Site Audit
+              Get a Free Atlassian Audit
             </Button>
           </Link>
         }
@@ -48,13 +48,13 @@ const AtlassianService = () => {
             </Button>
           </Link>
         }
-        button2={
-          <Link href="/support/contact#schedule-a-call">
-            <Button size="large" variant="outline">
-              Schedule a Call
-            </Button>
-          </Link>
-        }
+        // button2={
+        //   <Link href="/support/contact#schedule-a-call">
+        //     <Button size="large" variant="outline">
+        //       Schedule a Call
+        //     </Button>
+        //   </Link>
+        // }
       />
 
       <ChooseAlluvium

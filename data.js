@@ -1891,7 +1891,7 @@ export const discoverAtlassiansServ = [
   },
   {
     id: 4,
-    heading: "Licensing Management",
+    heading: "License Management",
     servicepage: "atlassian-licence",
     questions:
       "Are you seeking an Atlassian partner to assist with purchasing Atlassian and Marketplace apps? Maximize your license investment by letting Alluvium manage your licenses.",
