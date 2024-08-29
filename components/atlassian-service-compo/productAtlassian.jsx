@@ -7,7 +7,7 @@ const ProductAtlassian = () => {
     <section className={`container-fluid ${styles.Productsection}`}>
       <div className={`container ${styles.productstyle}`}>
         <div className={`${styles.productfaq} text-center`}>
-          <h5>OUR SERVICES</h5>
+          <h5>ATLASSIAN PRODUCTS</h5>
           <h3>Our Atlassian Suite of Products</h3>
           <p>
             See the overview below of the product suite of Atlassian apps we

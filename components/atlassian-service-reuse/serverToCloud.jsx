@@ -15,6 +15,12 @@ const ServerToCloud = ({
   callToAction = true,
   display = "default",
   showWithImage = true,
+  paragraphs = false,
+  para1,
+  para2,
+  imageContent = false,
+  listItem = false,
+  softwareList,
 }) => {
   return (
     <section
@@ -34,8 +40,34 @@ const ServerToCloud = ({
             </div>
           )}
           <div>
+            {imageContent && (
+              <div>
+                <Image
+                  src="/assets/licence-image/alignjira.svg"
+                  alt=""
+                  width={143}
+                  height={83}
+                />
+              </div>
+            )}
+
             <h2>{heading}</h2>
             <p>{paragraph}</p>
+            {listItem && (
+              <ul>
+                {softwareList.map((el, index) => {
+                  return <li key={index}>{el}</li>;
+                })}
+              </ul>
+            )}
+
+            {paragraphs && (
+              <>
+                <p>{para1}</p>
+                <p>{para2}</p>
+              </>
+            )}
+
             {(text || callToAction) && (
               <div>
                 <p>{text}</p>
