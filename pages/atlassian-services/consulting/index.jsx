@@ -2,12 +2,10 @@ import Layout from "components/layout";
 import React from "react";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
-import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import { consultingPageCards } from "data";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
-import { consultingChooseOptions } from "data";
 
 const Consulting = () => {
   return (
@@ -19,7 +17,7 @@ const Consulting = () => {
         withSlide={false}
         button1={
           <Link href="/support/contact#schedule-a-call">
-            <Button size="large">Book a schedule</Button>
+            <Button size="large">Schedule a Call</Button>
           </Link>
         }
       />
@@ -34,10 +32,6 @@ const Consulting = () => {
         heading="Tailored Atlassian Solutions for Every Business Need"
         description=""
         data={consultingPageCards}
-      />
-      <ChooseAlluvium
-        choose="Why Plan Your Migration With Alluvium?"
-        chooseUsAlluvium={consultingChooseOptions}
       />
     </Layout>
   );

@@ -17,7 +17,7 @@ const CloudMigration = () => {
   return (
     <Layout>
       <ServicesHero
-        contentsheading="ATLASSIAN LICENSE MANAGEMENT"
+        contentsheading="ATLASSIAN MIGRATION AND CONSOLIDATION"
         contentsheading1="Effortless Atlassian Migration"
         contentsheading2="When smooth and secure data migration matters, make Alluvium your go-to partner."
         withSlide={false}
@@ -39,9 +39,8 @@ const CloudMigration = () => {
         alt2="cloudpic"
       />
       <WhyMigrate
-        heading="Why Migrate to the Atlassian Cloud?"
-        description="From strategy to execution, our team of experts will provide the utmost
-        guidance and smooth delivery through your data migration journey."
+        heading="The Benefits of Migrating to Atlassian Cloud"
+        description=""
         data={cloudOptions}
         largeGap={true}
       />
