@@ -48,7 +48,7 @@ const Header = () => {
         <Link href="/cloud-connect/sponsor">Sponsor</Link>
       </li>
       <li className={isActive("/cloud-connect/volunteer") ? styles.active : ""}>
-        <Link href="/cloud-connect/sponsor">Volunteer</Link>
+        <Link href="/cloud-connect/volunteer">Volunteer</Link>
       </li>
       <li
         className={`${styles.resources} ${
