@@ -2495,3 +2495,195 @@ export const chooseUsSoftware = [
       "We take robust measures to protect your sensitive information and ensure that your software solutions adhere to industry regulations.",
   },
 ];
+
+export const becomeSponsor = [
+  {
+    id: "1",
+    headings: "Targeted Exposure",
+    paragraphs:
+      "Gain significant brand visibility and connect with a highly engaged audience of decision-makers (IT professionals, business leaders, service managers) actively seeking solutions to optimize service delivery.",
+  },
+  {
+    id: "2",
+    headings: "Showcase Your Expertise",
+    paragraphs:
+      "Position yourself as a leader in service management innovation by sponsoring Cloud Connect. Showcase your cutting-edge solutions to a captive audience seeking proven strategies for success.",
+  },
+  {
+    id: "3",
+    headings: "Generate High-Quality Leads",
+    paragraphs:
+      "Network directly with potential customers interested in your service management solutions, fostering valuable leads and driving business growth.",
+  },
+  {
+    id: "4",
+    headings: "Become a service management innovator",
+    paragraphs:
+      "By sponsoring Cloud Connect, you position your company at the forefront of industry innovation. Gain unparalleled visibility among a targeted audience of decision-makers seeking to optimize their service delivery strategies.",
+  },
+];
+
+export const sponsorPackage = [
+  {
+    id: "1",
+    title: "SILVER",
+    price: "NGN 350,000 (₦)",
+
+    // paragraphs:
+    //   "Become the cornerstone of Cloud Connect with our premier Title Sponsorship. This exclusive package offers unparalleled brand visibility and engagement opportunities,",
+    list1: "Premium booth space",
+    list2: " Co-branding opportunities with Alluvium",
+    list3: "Host a dedicated workshop or roundtable",
+    list4: "Three complimentary registrations",
+  },
+  {
+    id: "2",
+    title: "GOLD",
+    price: "NGN 500,000 (₦)",
+
+    // paragraphs:
+    //   "Elevate your brand presence with our Platinum Sponsorship. This package provides significant exposure and engagement with event attendees.",
+    list1: "All Silver Sponsor Benefits, Plus",
+    list2: " Top placement on event website & marketing materials",
+    list3: "First media interview opportunity)",
+    list4: " Five complimentary registrations",
+    list5:
+      "Priority consideration for future collaborations and partnerships with Alluvium.",
+  },
+
+  // {
+  //   id: "3",
+  //   title: "Plantinum",
+  //   price: "USD($) 5000",
+
+  //   paragraphs:
+  //     "Our Gold Sponsorship offers excellent value, providing strong brand visibility and engagement opportunities at an affordable investment.",
+  //   list1: "All benefits of Bronze Sponsor tier",
+
+  //   list2:
+  //     "We'll make sure their companies stand out on the event website and all the promotional materials, grabbing everyone's attention",
+  //   list3:
+  //     "They’ll have the first chance to talk to the media at the event, ensuring their company gets the best press coverage.",
+  //   list4: "Fifteen complimentary attendee registrations.",
+  //   list5:
+  //     "Data and Lead Generation: Provide a high-rank sponsor with access to data collected from event attendees, such as leads or demographics, to support their marketing efforts.",
+  // },
+];
+
+export const eventTicket = [
+  {
+    id: "1",
+    ticketTitle: "General Admission",
+    price: "₦5,000",
+    list1: "Access to all keynote speeches and panel discussions",
+    list2: "Networking opportunities with industry peers",
+    list3: "Complimentary refreshments and light snacks",
+    list4: "Digital event materials and proceedings",
+  },
+  {
+    id: "2",
+    ticketTitle: "VIP",
+    price: "₦15,000",
+    list1: "All benefits of General Admission",
+    list2: "Priority seating at keynote speeches and workshops",
+    list3: "Networking lunch with industry leaders and potential clients",
+    list4: "Limited edition Cloud Connect merchandise",
+  },
+  {
+    id: "3",
+    ticketTitle: "Platinum",
+    price: "₦70,000",
+    list1: "All benefits of VIP ticket",
+    list2:
+      "Exclusive access to two complimentary one-on-one consultations with a service management expert post-event.t",
+    list3: "Dedicated event concierge for personalized assistance",
+    list4: "Priority booking for future Alluvium events and workshops.",
+  },
+];
+
+export const cloudatad24 = [
+  {
+    id: "1",
+    icon: "/assets/connect2.4/saving.png",
+    widths: 201,
+    heigh: 36,
+  },
+  {
+    id: "2",
+    icon: "/assets/connect2.4/kolo.png",
+    widths: 187,
+    heigh: 32,
+  },
+  {
+    id: "3",
+    icon: "/assets/connect2.4/sabi.png",
+    widths: 178,
+    heigh: 46,
+  },
+  {
+    id: "4",
+    icon: "/assets/connect2.4/sycamore.png",
+    widths: 154,
+    heigh: 43,
+  },
+  {
+    id: "5",
+    icon: "/assets/connect2.4/intuit.png",
+    widths: 170,
+    heigh: 34,
+  },
+  {
+    id: "6",
+    icon: "/assets/connect2.4/ercos.png",
+    widths: 151,
+    heigh: 32,
+  },
+  {
+    id: "7",
+    icon: "/assets/connect2.4/cardify.png",
+    widths: 216,
+    heigh: 49,
+  },
+  {
+    id: "8",
+    icon: "/assets/connect2.4/flutter.png",
+    widths: 196,
+    heigh: 47,
+  },
+  {
+    id: "9",
+    icon: "/assets/connect2.4/aws.png",
+    widths: 67,
+    heigh: 40,
+  },
+  {
+    id: "10",
+    icon: "/assets/connect2.4/growgoole.png",
+    widths: 236,
+    heigh: 44,
+  },
+  {
+    id: "11",
+    icon: "/assets/connect2.4/webflow.png",
+    widths: 122,
+    heigh: 30,
+  },
+  {
+    id: "12",
+    icon: "/assets/connect2.4/techsgiving.png",
+    widths: 184,
+    heigh: 58,
+  },
+  {
+    id: "13",
+    icon: "/assets/connect2.4/black.png",
+    widths: 145,
+    heigh: 54,
+  },
+  {
+    id: "14",
+    icon: "/assets/connect2.4/civic.png",
+    widths: 132,
+    heigh: 30,
+  },
+];

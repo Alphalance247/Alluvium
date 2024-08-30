@@ -13,10 +13,9 @@ const Input = ({
 }) => {
   return (
     <div className={styles.formInput}>
-      <label htmlFor={label}>
-        {text} <span style={{ color: "#FF1616" }}>*</span>
-      </label>{" "}
-      <br /> <br />
+      <label htmlFor={label} style={{ marginBottom: "10px", display: "block" }}>
+        {text} <span style={{ color: "#374151" }}>*</span>
+      </label>
       <input
         id={id}
         name={name}
