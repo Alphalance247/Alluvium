@@ -1,0 +1,133 @@
+.about-cloud-connect {
+  padding-top: 48px;
+
+  @media (min-width: 768px) {
+    padding-top: 72px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 96px;
+  }
+
+  &__content {
+    max-width: 1320px;
+    margin: 0 auto 48px;
+    padding: 0 16px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 72px;
+      padding: 0 24px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 108px;
+    }
+  }
+
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 24px;
+
+    @media (min-width: 768px) {
+      margin-top: 48px;
+    }
+  }
+
+  &__image-container {
+    flex: 1 1 50%;
+    height: 200px;
+    position: relative;
+
+    @media (min-width: 768px) {
+      flex: 1 1 25%;
+      height: 250px;
+    }
+
+    @media (min-width: 1024px) {
+      height: 305px;
+    }
+
+    span {
+      height: 100% !important;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.4;
+    transition: opacity 0.5s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__stats {
+    padding: 48px 16px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 24px;
+
+    @media (min-width: 768px) {
+      padding: 72px 24px;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 96px 24px;
+    }
+  }
+
+  &__stat-item {
+    flex: 1 1 calc(50% - 12px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      flex: 1 1 calc(33.33% - 16px);
+      gap: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+      flex: 1;
+    }
+  }
+
+  &__stat-value {
+    font-family: "Helvetica Compressed", sans-serif;
+    color: #262626;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 1.2;
+
+    @media (min-width: 768px) {
+      font-size: 60px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 72px;
+      line-height: 72px;
+    }
+  }
+
+  &__stat-category {
+    color: #595959;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.4;
+
+    @media (min-width: 768px) {
+      font-size: 1rem;
+      line-height: 24px;
+    }
+  }
+}
