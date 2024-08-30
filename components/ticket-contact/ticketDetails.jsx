@@ -6,7 +6,7 @@ import OrderSummary from "components/cloud-connect-common/orderSummary";
 
 const TicketDetails = () => {
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
-  const ticketPrices = [5000, 20000, 100000];
+  const ticketPrices = [5000, 15000, 70000];
 
   useEffect(() => {
     if (typeof window !== "undefined") {

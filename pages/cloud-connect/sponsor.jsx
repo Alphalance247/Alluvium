@@ -33,12 +33,11 @@ const BecomeASponsor = () => {
               Apply
             </Button>
           }
-          width="large"
           size="normal"
           variant="default"
         />
       </div>
-      <Partners />
+      {/* <Partners /> */}
       <WhySponsor />
       <SponsorsForm />
     </Layout>

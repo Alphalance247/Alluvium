@@ -34,7 +34,7 @@ const OrderSummary = ({
         <div className={`${styles.firstTicket}`}>
           <p className={`${styles.tag}`}>{ticketNumbers[1]} x VIP </p>
           <p className={`${styles.priceTag}`}>{`₦ ${(
-            20000 * ticketNumbers[1]
+            15000 * ticketNumbers[1]
           ).toLocaleString()}`}</p>
         </div>
       )}
@@ -43,7 +43,7 @@ const OrderSummary = ({
         <div className={`${styles.firstTicket}`}>
           <p className={`${styles.tag}`}>{ticketNumbers[2]} x Platinum</p>
           <p className={`${styles.priceTag}`}>{`₦ ${(
-            100000 * ticketNumbers[2]
+            70000 * ticketNumbers[2]
           ).toLocaleString()}`}</p>
         </div>
       )}

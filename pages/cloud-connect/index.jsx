@@ -23,7 +23,7 @@ export default function Home() {
         alt="Cloud connect event image"
         className={styles.eventImg}
       />
-      <Partners showheadSponsor />
+      {/* <Partners showheadSponsor /> */}
       <AboutCloudConnect />
       <TopLeaders />
       <EventVideo />

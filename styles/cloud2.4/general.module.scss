@@ -254,6 +254,11 @@
     color: #262626;
     font-family: "Helvetica Compressed", sans-serif;
     letter-spacing: 1px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 2rem;
+      line-height: 1.6;
+    }
   }
 
   p {

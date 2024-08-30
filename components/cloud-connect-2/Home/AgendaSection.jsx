@@ -5,11 +5,11 @@ import SectionHeader from "../SectionHeader";
 
 const AgendaSection = () => {
   const agendaItems = [
-    { time: "8:30AM - 9:30AM", description: "Registration & Welcome" },
-    { time: "9:30AM - 11:30AM", description: "Presentation sessions" },
-    { time: "1:00PM - 4:00PM", description: "Breakout & Workshop sessions" },
-    { time: "4:00PM - 5:00PM", description: "Networking & Refreshments" },
-    { time: "5:00PM - 5:15PM", description: "Closing remarks" },
+    { time: "9:00AM - 9:30AM", description: "Registration & Welcome" },
+    { time: "9:30AM - 2:30PM", description: "Presentation sessions" },
+    { time: "2:30PM - 4:30PM", description: "Lunch & Break" },
+    { time: "4:30PM - 5:30PM", description: "Networking & Exhibition" },
+    { time: "5:30PM - 6:00PM", description: "Closing remarks" },
   ];
 
   return (
@@ -28,8 +28,10 @@ const AgendaSection = () => {
           ))}
         </div>
         <div className={styles.buttonContainer}>
-          <Link href="/cloud-connect/agenda">
-            <Button size="large" variant="outline">View full agenda</Button>
+          <Link href="/cloud-connect">
+            <Button size="large" variant="outline">
+              View full agenda
+            </Button>
           </Link>
           <Link href="/cloud-connect/book-a-ticket">
             <Button size="large">Buy Ticket</Button>

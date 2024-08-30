@@ -42,7 +42,7 @@ const Header = () => {
         <Link href="/cloud-connect">Home</Link>
       </li>
       <li className={isActive("/cloud-connect/agenda") ? styles.active : ""}>
-        <Link href="/cloud-connect/agenda">Agenda</Link>
+        <Link href="/cloud-connect">Agenda</Link>
       </li>
       <li className={isActive("/cloud-connect/sponsor") ? styles.active : ""}>
         <Link href="/cloud-connect/sponsor">Sponsor</Link>

@@ -2486,7 +2486,7 @@ export const eventTicket = [
   {
     id: "2",
     ticketTitle: "VIP",
-    price: "₦20,000",
+    price: "₦15,000",
     list1: "All benefits of General Admission",
     list2: "Priority seating at keynote speeches and workshops",
     list3: "Networking lunch with industry leaders and potential clients",
@@ -2495,7 +2495,7 @@ export const eventTicket = [
   {
     id: "3",
     ticketTitle: "Platinum",
-    price: "₦100,000",
+    price: "₦70,000",
     list1: "All benefits of VIP ticket",
     list2:
       "Exclusive access to two complimentary one-on-one consultations with a service management expert post-event.t",

@@ -13,7 +13,7 @@ const EventVideo = () => {
         <div className={styles["event-video__video-container"]}>
           <iframe
             className={styles["event-video__iframe"]}
-            src="https://www.youtube-nocookie.com/embed/Na6P_kLI2FE?si=rf-sk4KzoIN5rRia&amp;controls=0"
+            src="https://www.youtube-nocookie.com/embed/wAom6mlgL04?si=rf-sk4KzoIN5rRia&amp;controls=0"
             title="Cloud connect video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"

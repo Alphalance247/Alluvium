@@ -21,7 +21,7 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <Link href="/cloud-connect/agenda">Agenda</Link>
+                <Link href="/cloud-connect">Agenda</Link>
               </li>
               <li>
                 <Link href="/cloud-connect/media">Media & Resources</Link>

@@ -10,30 +10,39 @@ const WhySponsor = () => {
       ?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section className={`container-fluid ${styles.whybecomesponsor}`}>
-      <div className="container">
-        <div className={styles.firstheading}>
-          <div className={styles.whybecomeheading}>
-            <h3>WHY BECOME A SPONSOR</h3>
-            <p>
-              Be a sponsor at Alluvium’s Cloud Connect event. Invest in Service
-              excellence.
-            </p>
-          </div>
+    <>
+      <section
+        className={`container-fluid ${styles.whybecomesponsor}`}
+        style={{ background: "#009bc0" }}
+      >
+        <div className="container">
+          <div className={styles.firstheading}>
+            <div className={styles.whybecomeheading}>
+              <h3>WHY BECOME A SPONSOR</h3>
+              <p>
+                Be a sponsor at Alluvium’s Cloud Connect event. Invest in
+                Service excellence.
+              </p>
+            </div>
 
-          <div className={styles.whybecomeloop}>
-            {becomeSponsor.map((item) => {
-              return (
-                <div key={item.id} className={styles.sponsorItem}>
-                  <h6>{item.headings}</h6>
-                  <p>{item.paragraphs}</p>
-                </div>
-              );
-            })}
+            <div className={styles.whybecomeloop}>
+              {becomeSponsor.map((item) => {
+                return (
+                  <div key={item.id} className={styles.sponsorItem}>
+                    <h6>{item.headings}</h6>
+                    <p>{item.paragraphs}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-
-        <div className={styles.sponspackages}>
+      </section>
+      <section
+        className={`container-fluid ${styles.whybecomesponsor}`}
+        style={{ background: "#082433" }}
+      >
+        <div className={`container ${styles.sponspackages}`}>
           <h3>SPONSORSHIP PACKAGES</h3>
 
           <div className={styles.packdivs}>
@@ -58,8 +67,8 @@ const WhySponsor = () => {
             })}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

@@ -1,5 +1,4 @@
 .whybecomesponsor {
-  background: #082433;
   padding-top: 6rem;
   padding-bottom: 6rem;
 
@@ -14,7 +13,7 @@
   }
 
   .firstheading {
-    margin-bottom: 5.8rem;
+    // margin-bottom: 5.8rem;
 
     .whybecomeheading {
       padding-left: 5.2rem;
@@ -98,8 +97,6 @@
   }
 
   .sponspackages {
-    margin-top: 6rem;
-
     h3 {
       font-weight: 500;
       font-size: 3.5rem;
@@ -127,16 +124,16 @@
       justify-content: center;
       // width: 70%;
 
-      & > div:nth-child(2) {
-        width: 40%;
-      }
+      // & > div:nth-child(2) {
+      //   width: 40%;
+      // }
 
       @media screen and (max-width: 1025px) {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 2rem;
-        & > div:nth-child(2) {
-          width: 60%;
-        }
+        // & > div:nth-child(2) {
+        //   width: 60%;
+        // }
       }
 
       @media screen and (max-width: 992px) {
@@ -148,11 +145,8 @@
       @media screen and (max-width: 576px) {
         display: flex;
         flex-wrap: wrap;
-        & > div:nth-child(2) {
-          width: 100%;
-        }
-        // & > div:nth-child(3) {
-        //   grid-column: span 1;
+        // & > div:nth-child(2) {
+        //   width: 100%;
         // }
       }
 
@@ -245,11 +239,11 @@
     letter-spacing: 1px;
 
     @media screen and (max-width: 992px) {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
 
     @media screen and (max-width: 576px) {
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       line-height: 2rem;
     }
   }
@@ -317,7 +311,6 @@
 
     .packageForm {
       margin-top: 2.5rem;
-
       .input3style {
         display: grid;
         grid-template-columns: repeat(2, 1fr);

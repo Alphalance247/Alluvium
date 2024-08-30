@@ -18,6 +18,7 @@ const ContactInformation = () => {
   const [loading, setLoading] = useState(false);
   const { addToast } = useToasts();
   const router = useRouter();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   console.log(form);
 
@@ -80,7 +81,7 @@ const ContactInformation = () => {
     if (
       form.first_name_1 &&
       form.last_name_2 &&
-      form.email_3 &&
+      emailRegex.test(form.email_3) &&
       form.phone_number_5
     ) {
       setLoading(true);
@@ -137,7 +138,7 @@ const ContactInformation = () => {
         ...formError,
         first_name_1: !form.first_name_1,
         last_name_2: !form.last_name_2,
-        email_3: !form.email_3,
+        email_3: !emailRegex.test(form.email_3),
         phone_number_5: !form.phone_number_5,
       });
     }
@@ -160,6 +161,11 @@ const ContactInformation = () => {
               onChange={handleChange}
               errorF={formError.first_name_1}
             />
+            {formError.first_name_1 && (
+              <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                This field is required
+              </h6>
+            )}
           </div>
 
           <div>
@@ -174,6 +180,12 @@ const ContactInformation = () => {
               onChange={handleChange}
               errorF={formError.last_name_2}
             />
+
+            {formError.last_name_2 && (
+              <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                This field is required
+              </h6>
+            )}
           </div>
 
           <div>
@@ -188,6 +200,12 @@ const ContactInformation = () => {
               onChange={handleChange}
               errorF={formError.email_3}
             />
+
+            {formError.email_3 && (
+              <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                Please enter a valid email
+              </h6>
+            )}
           </div>
 
           <div>
@@ -219,6 +237,11 @@ const ContactInformation = () => {
                 formError.phone_number_5 ? styles.error : ""
               }`}
             />
+            {formError.phone_number_5 && (
+              <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                This field is required
+              </h6>
+            )}
           </div>
         </div>
 
@@ -237,10 +260,10 @@ const ContactInformation = () => {
             <p className={styles.send__ticket__to}>
               Send ticket(s) to a different email address?
             </p>
-            <p className={styles.receive__mail}>
+            {/* <p className={styles.receive__mail}>
               Lorem ipsum dolor sit amet consectetur. Habitasse in lectus tortor
               purus{" "}
-            </p>
+            </p> */}
           </div>
         </div>
 

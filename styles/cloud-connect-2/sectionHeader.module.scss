@@ -94,6 +94,11 @@
         font-size: 72px;
         line-height: 72px;
       }
+
+      @media screen and (max-width: 576px) {
+        font-size: 2rem;
+        line-height: 1.6;
+      }
     }
 
     & .sectionHeader__description {
