@@ -1,6 +1,9 @@
 import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
 import styles from "../../styles/licence.module.scss";
 import FeatureCard from "components/atlassian-service-reuse/FeatureCard";
+import Link from "next/link";
+import Button from "components/atlassian-service-reuse/Button";
+import { FaSlash } from "react-icons/fa";
 
 const WhyMigrate = ({
   data,
@@ -8,6 +11,7 @@ const WhyMigrate = ({
   description,
   largeGap = false,
   threeColumn = false,
+  freeconsult = false,
 }) => {
   return (
     <div className={`container-fluid ${styles.migration}`}>
@@ -39,6 +43,16 @@ const WhyMigrate = ({
               );
             })}
         </div>
+        {freeconsult && (
+          <div className=" text-center my-5">
+            <Link
+              className={styles.link}
+              href="/support/contact#schedule-a-call"
+            >
+              <Button size="large">Book a Free Consult</Button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

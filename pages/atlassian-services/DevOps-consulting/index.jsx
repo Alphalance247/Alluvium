@@ -11,7 +11,6 @@ import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { DevOpsCard } from "data";
-import { chooseUsAlluvium } from "data";
 
 const DevOps = () => {
   return (
@@ -76,12 +75,6 @@ const DevOps = () => {
         heading="Our Comprehensive DevOps Service Offerings"
         description="At Alluvium, we offer comprehensive DevOps solutions designed to meet your unique needs. Our team of experts will work closely with you to implement best practices, optimize workflows, and drive innovation."
         data={DevOpsCard}
-      />
-
-      <ChooseAlluvium
-        choose="Why Choose Us"
-        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
-        chooseUsAlluvium={chooseUsAlluvium}
       />
     </Layout>
   );

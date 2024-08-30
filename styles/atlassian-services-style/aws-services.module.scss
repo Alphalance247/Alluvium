@@ -170,11 +170,16 @@
   }
 
   .grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .trainingCard {
