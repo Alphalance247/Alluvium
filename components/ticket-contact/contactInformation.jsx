@@ -266,89 +266,90 @@ const ContactInformation = () => {
             </p> */}
           </div>
         </div>
+        {isChecked && (
+          <div className={styles.input__details}>
+            <div>
+              <Input
+                id="first_name"
+                label="first_name"
+                text="Recipient First Name "
+                name="recipient_first_name_6"
+                type="text"
+                value={form.recipient_first_name_6 || ""}
+                placeholder=""
+                onChange={handleChange}
+                errorF={formError.recipient_first_name_6}
+              />
+            </div>
 
-        <div className={styles.input__details}>
-          <div>
-            <Input
-              id="first_name"
-              label="first_name"
-              text="Recipient First Name "
-              name="recipient_first_name_6"
-              type="text"
-              value={form.recipient_first_name_6 || ""}
-              placeholder=""
-              onChange={handleChange}
-              errorF={formError.recipient_first_name_6}
-            />
-          </div>
+            <div>
+              <Input
+                id="last_name"
+                label="last_name"
+                text="Recipient Last Name "
+                name="recipient_last_name_7"
+                type="text"
+                value={form.recipient_last_name_7 || ""}
+                placeholder=""
+                onChange={handleChange}
+                errorF={formError.recipient_last_name_7}
+              />
+            </div>
 
-          <div>
-            <Input
-              id="last_name"
-              label="last_name"
-              text="Recipient Last Name "
-              name="recipient_last_name_7"
-              type="text"
-              value={form.recipient_last_name_7 || ""}
-              placeholder=""
-              onChange={handleChange}
-              errorF={formError.recipient_last_name_7}
-            />
-          </div>
+            <div>
+              <Input
+                id="jobFunction"
+                label="jobFunction"
+                text="Recipient Email address"
+                name="recipient_email_8"
+                type="email"
+                value={form.recipient_email_8 || ""}
+                placeholder=""
+                onChange={handleChange}
+                errorF={formError.recipient_email_8}
+              />
+            </div>
 
-          <div>
-            <Input
-              id="jobFunction"
-              label="jobFunction"
-              text="Recipient Email address"
-              name="recipient_email_8"
-              type="email"
-              value={form.recipient_email_8 || ""}
-              placeholder=""
-              onChange={handleChange}
-              errorF={formError.recipient_email_8}
-            />
-          </div>
+            <div>
+              <Input
+                id="recipient_email_8"
+                label="recipient_email_8"
+                text="Confirm Recipient Email address "
+                name="recipient_email_8"
+                type="email"
+                value={form.recipient_email_8 || ""}
+                placeholder=""
+                onChange={handleChange}
+                errorF={formError.recipient_email_8}
+              />
+            </div>
 
-          <div>
-            <Input
-              id="recipient_email_8"
-              label="recipient_email_8"
-              text="Confirm Recipient Email address "
-              name="recipient_email_8"
-              type="email"
-              value={form.recipient_email_8 || ""}
-              placeholder=""
-              onChange={handleChange}
-              errorF={formError.recipient_email_8}
-            />
+            <div>
+              <label htmlFor="phoneNumber" className={styles.labelStyle}>
+                Recipient Phone number *
+              </label>
+              <PhoneInput
+                placeholder="8140686688"
+                international
+                required
+                defaultCountry="NG"
+                value={form.recipient_phone_number_9 ?? ""}
+                onChange={handleNumber}
+                className={`${styles.PhoneInput} ${styles.PhoneInputCountry}`}
+                numberInputProps={{
+                  className: formError.recipient_phone_number_9
+                    ? styles.error
+                    : "",
+                }}
+                countrySelectProps={{
+                  className: formError.recipient_phone_number_9
+                    ? styles.error
+                    : "",
+                }}
+              />
+            </div>
           </div>
-
-          <div>
-            <label htmlFor="phoneNumber" className={styles.labelStyle}>
-              Recipient Phone number *
-            </label>
-            <PhoneInput
-              placeholder="8140686688"
-              international
-              required
-              defaultCountry="NG"
-              value={form.recipient_phone_number_9 ?? ""}
-              onChange={handleNumber}
-              className={`${styles.PhoneInput} ${styles.PhoneInputCountry}`}
-              numberInputProps={{
-                className: formError.recipient_phone_number_9
-                  ? styles.error
-                  : "",
-              }}
-              countrySelectProps={{
-                className: formError.recipient_phone_number_9
-                  ? styles.error
-                  : "",
-              }}
-            />
-          </div>
-        </div>
+        )}
       </div>
       <div>
         <OrderSummary
