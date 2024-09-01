@@ -91,8 +91,18 @@ const TicketDetails = () => {
                   <li>{item.list4}</li>
                 </ul>
               </div>
-
-              <p className={styles.ticketPrice}>{item.price}</p>
+              <div>
+                <p
+                  className={styles.ticketPrice}
+                  style={{
+                    textDecoration:
+                      index === eventTicket.length - 3 ? "none" : null,
+                  }}
+                >
+                  {item?.price}
+                </p>
+                <p className={styles.early__birds__price}>{item?.earlybirds}</p>
+              </div>
 
               <div className={styles.ticketUpdate}>
                 <div>
