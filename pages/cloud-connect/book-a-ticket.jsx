@@ -16,10 +16,6 @@ const BookTicket = () => {
           heading="get your ticket"
           description="Sales ends on the 31st of October, 2024"
         />
-        <p>
-          Register now and enjoy a 30% discount on your VIP and Platinum ticket
-          prices.
-        </p>
       </div>
       <TicketDetails />
     </Layout>
