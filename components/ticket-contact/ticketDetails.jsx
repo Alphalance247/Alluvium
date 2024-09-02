@@ -62,7 +62,10 @@ const TicketDetails = () => {
       <div className={styles.ticketBookings}>
         <div className={`${styles.chooseTicket} container`}>
           <DetailsContact content="CHOOSE YOUR event TICKET" />
-
+          <p className={styles.early__birds__chance}>
+            <span>Early Bird Special:</span> Save 30% on Cloud Connect '24 VIP
+            and Platinum Tickets!
+          </p>
           <div className={`${styles.ticketTitle}`}>
             <p>TICKET</p>
             <p>PRICE</p>
