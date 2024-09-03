@@ -1,6 +1,6 @@
 import SectionHeader from "../SectionHeader";
 import styles from "../../../styles/cloud-connect-2/Home/whyAttend.module.scss";
-import Image from "next/image";
+import AttendCloud from "../AttendCloud";
 
 const data = [
   {
@@ -42,21 +42,7 @@ const WhyAttend = () => {
             width="small"
           />
         </div>
-        <div className={styles.whyAttend__grid}>
-          {data.map((item, index) => (
-            <div className={styles.card} key={index}>
-              <Image
-                src={item.icon}
-                alt=""
-                width={48}
-                height={48}
-                className={styles.card__icon}
-              />
-              <h3 className={styles.card__title}>{item.title}</h3>
-              <p className={styles.card__description}>{item.description}</p>
-            </div>
-          ))}
-        </div>
+        <AttendCloud data={data} />
       </div>
     </section>
   );
