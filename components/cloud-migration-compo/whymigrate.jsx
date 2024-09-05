@@ -3,7 +3,6 @@ import styles from "../../styles/licence.module.scss";
 import FeatureCard from "components/atlassian-service-reuse/FeatureCard";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
-import { FaSlash } from "react-icons/fa";
 
 const WhyMigrate = ({
   data,
@@ -32,6 +31,7 @@ const WhyMigrate = ({
                   number={el.showNumber ? el.id : null}
                   icon={el.icon}
                   heading={el.headings}
+                  subText={el.subText}
                   description={el.paragraphs}
                   link={el.link}
                   buttonText={el.buttonText}
@@ -39,6 +39,7 @@ const WhyMigrate = ({
                   buttonSize={el.buttonSize}
                   variant={el.variant}
                   listItems={el.listItems}
+                  url={el.url}
                 />
               );
             })}

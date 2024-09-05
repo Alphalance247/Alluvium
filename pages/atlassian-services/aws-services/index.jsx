@@ -10,7 +10,7 @@ const AWSServices = () => {
   return (
     <Layout>
       <ServicesHero
-        contentsheading1="Comprehensive AWS Solutions Tailored to Your Needs."
+        contentsheading1="Partner with Alluvium for AWS excellence."
         contentsheading2="From data transformation to full cloud solutions, we help you leverage the power of AWS."
         button1={
           <Link href="/support/contact#schedule-a-call" passHref>

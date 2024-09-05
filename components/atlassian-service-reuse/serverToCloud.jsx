@@ -21,6 +21,8 @@ const ServerToCloud = ({
   imageContent = false,
   listItem = false,
   softwareList,
+  newP = false,
+  color = "default",
 }) => {
   return (
     <section
@@ -48,23 +50,56 @@ const ServerToCloud = ({
                   width={143}
                   height={83}
                 />
+                <p>Migrate successfully to Atlassian Cloud</p>
               </div>
             )}
-
-            <h2>{heading}</h2>
-            <p>{paragraph}</p>
+            {newP && (
+              <p
+                className={`${styles.cloud__text} ${
+                  styles[`cloud__text--${color}`]
+                }`}
+              >
+                Migrate successfully to Atlassian Cloud
+              </p>
+            )}
+            <h2
+              className={`${styles.cloud__heading} ${
+                styles[`cloud__heading--${color}`]
+              }`}
+            >
+              {heading}
+            </h2>
+            <p
+              className={`${styles.cloud__text} ${
+                styles[`cloud__text--${color}`]
+              }`}
+            >
+              {paragraph}
+            </p>
             {listItem && (
               <ul>
                 {softwareList.map((el, index) => {
-                  return <li key={index}>{el}</li>;
+                  return <li key={index}>{el} </li>;
                 })}
               </ul>
             )}
 
             {paragraphs && (
               <>
-                <p>{para1}</p>
-                <p>{para2}</p>
+                <p
+                  className={`${styles.cloud__text} ${
+                    styles[`cloud__text--${color}`]
+                  }`}
+                >
+                  {para1}
+                </p>
+                <p
+                  className={`${styles.cloud__text} ${
+                    styles[`cloud__text--${color}`]
+                  }`}
+                >
+                  {para2}
+                </p>
               </>
             )}
 

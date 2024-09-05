@@ -48,13 +48,6 @@ const AtlassianService = () => {
             </Button>
           </Link>
         }
-        // button2={
-        //   <Link href="/support/contact#schedule-a-call">
-        //     <Button size="large" variant="outline">
-        //       Schedule a Call
-        //     </Button>
-        //   </Link>
-        // }
       />
 
       <ChooseAlluvium
