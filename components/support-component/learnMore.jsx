@@ -8,7 +8,7 @@ const LearnMore = () => {
       <div className={`container`}>
         <AtlassianSubHead
           headings="Learn More About Atlassian Support Packages"
-          strategy="Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit id."
+          strategy=""
         />
         <div className={`container ${styles.comprehensive__learn}`}>
           <FAQss />

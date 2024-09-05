@@ -1,0 +1,15 @@
+.exhibition__style {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.exhibition {
+  background: white;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  .exhibitor__expectation {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5rem;
+  }
+}

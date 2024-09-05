@@ -14,6 +14,8 @@ const FeatureCard = ({
   variant = "default",
   style,
   listItems,
+  subText,
+  url,
 }) => {
   const cardClass =
     styles[`card${variant.charAt(0).toUpperCase() + variant.slice(1)}`];
@@ -36,7 +38,12 @@ const FeatureCard = ({
               </p>
             ))
           ) : (
-            <p className={styles.description}>{description}</p>
+            <p className={styles.description}>
+              {description}{" "}
+              <Link href={`/${url}`}>
+                <span className={styles.subtext__style}>{subText}</span>
+              </Link>
+            </p>
           )}
           {listItems && listItems.length > 0 && (
             <ul className={styles.featureList}>
