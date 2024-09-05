@@ -215,6 +215,11 @@ export function AltFooter() {
             <a href="#" className="me-3">
               Legal Information
             </a> */}
+            <Link href="/atlassian-services/terms-conditions">
+              <a aria-label="privacy-policy" className="px-3">
+                Terms & Conditions
+              </a>
+            </Link>
             <Link href={"/privacy-policy"}>
               <a aria-label="privacy-policy">Privacy Policy</a>
             </Link>

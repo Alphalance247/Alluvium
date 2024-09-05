@@ -1,5 +1,6 @@
 import styles from "../../styles/blogpost.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Potential = () => {
   return (
@@ -21,7 +22,9 @@ const Potential = () => {
             Boost your business productivity with expert Atlassian solutions
             from Alluvium.
           </p>
-          <button>Schedule a Meeting</button>
+          <Link href="/support/contact#schedule-a-call">
+            <button>Schedule a Meeting</button>
+          </Link>
         </div>
       </div>
     </section>

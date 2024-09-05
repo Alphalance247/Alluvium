@@ -4,8 +4,8 @@ import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 const SupportServices = () => {
   return (
     <WhyMigrate
-      heading="Comprehensive Support Services for Every Need"
-      description="Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit id."
+      heading="Dedicated Support for Every Use Case"
+      description="Explore the range of Atlassian support services we offer to meet your needs."
       data={JiraCards}
       threeColumn={true}
     />
