@@ -236,12 +236,14 @@ export const ConsultationForm = () => {
           <div className={`${styles.location}`}>
             <h3>Our Locations</h3>
             <p>
-              <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
-              2NX, UK.
+              <strong>America:</strong> <br />
+              7345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL 32819 US.
+              <br />
+              27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL 32819 US.
             </p>
             <p>
-              <strong>America:</strong> 27345 W Sand Lake Rd, STE 210 Office
-              3190 Orlando, FL 32819 US.
+              <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
+              2NX, UK.
             </p>
             <div>
               <strong>Africa:</strong>

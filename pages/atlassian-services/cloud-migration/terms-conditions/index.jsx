@@ -348,12 +348,17 @@ const data = [
             text: "For any questions or concerns regarding these Terms and Conditions, please contact us at:",
           },
           {
+            text: "Company Address: 680 E Main Street Ste A Stamford, CT 06901 US. Email: ",
+          },
+          {
             subtext1: "contact@alluvium.net ",
-            boldText2: "Phone Number: ",
-            subtext2: "+442035762028 ",
             url2: "mailto:contact@alluvium.net ",
+            text: "Email: ",
+          },
+          {
+            subtext2: "+442035762028",
             url3: "tel:+442035762028",
-            text: "Alluvium Ltd [Company Address: Kemp House 160, City Road London, EC1V 2NX, UK.] Email: ",
+            text: "Phone Number: ",
           },
         ],
       },
