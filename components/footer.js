@@ -135,11 +135,12 @@ export function AltFooter() {
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
                 <p>
-                  <b>Europe:</b> Kemp House 160, City Road London, EC1V 2NX, UK.
+                  <b>America:</b> 680 E Main Street Ste A Stamford, CT 06901 US.
+                  <br />
+                  7345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL 32819 US.
                 </p>
                 <p>
-                  <b>America:</b> 7345 W Sand Lake Rd, STE 210 Office 3190
-                  Orlando, FL 32819 US.
+                  <b>Europe:</b> Kemp House 160, City Road London, EC1V 2NX, UK.
                 </p>
                 <div>
                   <b>Africa:</b>
@@ -209,12 +210,6 @@ export function AltFooter() {
             </p>
           </div>
           <div className={styles.extralinks}>
-            {/* <a href="#" className="me-3">
-              Cookie Settings
-            </a>
-            <a href="#" className="me-3">
-              Legal Information
-            </a> */}
             <Link href="/atlassian-services/terms-conditions">
               <a aria-label="privacy-policy" className="px-3">
                 Terms & Conditions
