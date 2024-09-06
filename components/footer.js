@@ -135,9 +135,11 @@ export function AltFooter() {
             <ul className={styles.altFooterContactList}>
               <li className={styles.contactListItem}>
                 <p>
-                  <b>America:</b> 680 E Main Street Ste A Stamford, CT 06901 US.
-                  <br />
-                  7345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL 32819 US.
+                  <b>America:</b> <br /> Connecticut: 680 E Main Street Ste A
+                  Stamford, CT 06901 US.
+                  <br /> <br />
+                  Florida: 27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL
+                  32819 US.
                 </p>
                 <p>
                   <b>Europe:</b> Kemp House 160, City Road London, EC1V 2NX, UK.
