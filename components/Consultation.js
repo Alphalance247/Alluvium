@@ -237,9 +237,10 @@ export const ConsultationForm = () => {
             <h3>Our Locations</h3>
             <p>
               <strong>America:</strong> <br />
-              7345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL 32819 US.
-              <br />
-              27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL 32819 US.
+              Connecticut: 680 E Main Street Ste A Stamford, CT 06901 US.
+              <br /> <br />
+              Florida: 27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL
+              32819 US.
             </p>
             <p>
               <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
