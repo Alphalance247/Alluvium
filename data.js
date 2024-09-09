@@ -1823,7 +1823,10 @@ export const frequentlyAsked = [
     questions:
       "How can we get started with your Atlassian services, and what should we expect during the initial consultation?",
     answer:
-      "The first step is to schedule a free consultation call with one of our experts by filling out this form (LINK). During this consultation, we will review your current situation, needs, and challenges, and discuss your goals, desired outcomes, and timelines. After the consultation, we will create a customized proposal and plan based on your needs and send it to you via email. Once we agree on the proposal, we will schedule the project and decide on starting dates together.",
+      "The first step is to schedule a free consultation call with one of our experts by filling out this ",
+    subAnswer: "form.",
+    subAnswer1:
+      " During this consultation, we will review your current situation, needs, and challenges, and discuss your goals, desired outcomes, and timelines. After the consultation, we will create a customized proposal and plan based on your needs and send it to you via email. Once we agree on the proposal, we will schedule the project and decide on starting dates together.",
   },
   {
     id: 3,
@@ -1856,14 +1859,19 @@ export const frequentlyAsked = [
     questions:
       "What types of training programs do you offer for our team, and how can they help us maximize the use of Atlassian tools?",
     answer:
-      "Training is an essential part of our implementation process to ensure you get the most out of your Atlassian tools. We offer various training programs, from beginner sessions for end-users to administrator training for Jira and Confluence Admins. Additionally, we provide advanced configuration training for third-party Marketplace apps. Get in touch (LINK) to learn more.",
+      "Training is an essential part of our implementation process to ensure you get the most out of your Atlassian tools. We offer various training programs, from beginner sessions for end-users to administrator training for Jira and Confluence Admins. Additionally, we provide advanced configuration training for third-party Marketplace apps. ",
+    subAnswer: " Get in touch ",
+    subAnswer1: " to learn more.",
   },
   {
     id: 8,
     questions:
       "What are the potential benefits of integrating artificial intelligence (AI) into our Atlassian tools, and how can it help our organization?",
     answer:
-      "Atlassian offers its own AI, known as Atlassian Intelligence, which can bring numerous benefits to your organization. It enhances productivity by tailoring dashboards, improves decision-making by analyzing data, and streamlines operations by recommending improved workflows. This is just a glimpse of the possibilities. Please get in touch (LINK) with us to schedule a demo and explore more about Atlassian Intelligence.",
+      "Atlassian offers its own AI, known as Atlassian Intelligence, which can bring numerous benefits to your organization. It enhances productivity by tailoring dashboards, improves decision-making by analyzing data, and streamlines operations by recommending improved workflows. This is just a glimpse of the possibilities. Please ",
+    subAnswer: "get in touch ",
+    subAnswer1:
+      "with us to schedule a demo and explore more about Atlassian Intelligence.",
   },
 ];
 
