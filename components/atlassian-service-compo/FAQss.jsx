@@ -3,6 +3,7 @@ import { SlArrowDown } from "react-icons/sl";
 import { SlArrowUp } from "react-icons/sl";
 import { useState } from "react";
 import { frequentlyAsked } from "data";
+import Link from "next/link";
 
 const FAQss = () => {
   const [expandIndex, setExpandIndex] = useState(null);
@@ -37,7 +38,23 @@ const FAQss = () => {
               />
             )}
           </div>
-          {expandIndex === i && <p>{item.answer}</p>}
+          {expandIndex === i && (
+            <p>
+              {item?.answer}{" "}
+              <Link href="/#consultationForm">
+                <span
+                  style={{
+                    color: "#e37915",
+                    cursor: "pointer",
+                    textDecoration: "underline",
+                  }}
+                >
+                  {item?.subAnswer}
+                </span>
+              </Link>
+              <span>{item?.subAnswer1}</span>
+            </p>
+          )}
           <hr className={` ${styles.horizon}`} />
         </div>
       ))}

@@ -78,7 +78,10 @@ export default function AboutUs() {
                       </strong>{" "}
                     </p>{" "}
                     <p>
-                      Alluvium Mission is to provide highly capable, experienced consultants and dependable managed services for a seamless digital transformation to give our clients and partners the advantage in their business environment.{" "}
+                      Alluvium's Mission is to provide highly capable,
+                      experienced consultants and dependable managed services
+                      for a seamless digital transformation to give our clients
+                      and partners the advantage in their business environment.{" "}
                     </p>
                     <p>
                       We invite you to learn more about Alluvium and our
@@ -188,10 +191,7 @@ export default function AboutUs() {
                     className="col-lg-2 col-md-4 col-sm-6 col-6"
                     key={achievemnetKeys++}
                   >
-                    <AchievementCounter
-                      name={category}
-                      value={value}
-                    />
+                    <AchievementCounter name={category} value={value} />
                   </div>
                 ))}
               </div>
@@ -274,8 +274,7 @@ export default function AboutUs() {
                 Visit Website
               </a>
             </div>
-            <div className={styles.contentRight}>
-            </div>
+            <div className={styles.contentRight}></div>
           </section>
 
           {/* <section>
