@@ -31,7 +31,7 @@ const Benefit = () => {
       </div>
 
       <div>
-        <p>Effortless Procurement::</p>
+        <p>Effortless Procurement:</p>
         <div>
           <ul>
             <li>
