@@ -3,7 +3,7 @@ import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Layout from "components/layout";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import Link from "next/link";
-import styles from "../../../styles/atlassian-services-style/aws-services.module.scss";
+import styles from "../../styles//atlassian-services-style/aws-services.module.scss";
 import { awsServicesPage, awsTrainingData, awsSolutions } from "data";
 
 const AWSServices = () => {

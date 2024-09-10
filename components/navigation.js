@@ -195,12 +195,9 @@ export default function Navigation({ theme }) {
                         </li> */}
             </ul>
             <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
-              <a
-                href="mailto:contact@alluvium.net"
-                className={styles.contactUsButton}
-              >
-                Email Us
-              </a>
+              <Link href="/atlassian-services/support">
+                <a className={styles.contactUsButton}>Support</a>
+              </Link>
               <Link href="/support/contact#schedule-a-call">
                 <a className={styles.scheduleButton}>Schedule a Call</a>
               </Link>

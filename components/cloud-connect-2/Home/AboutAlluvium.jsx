@@ -21,10 +21,10 @@ const AboutAlluvium = () => {
         <p className={styles.description}>
           About Alluvium:
           <br />
-          At Alluvium, we're passionate about we have a passion for helping
-          businesses achieve the essence of service management. We are a team of
-          experts dedicated to providing you with the tools and strategies you
-          need to optimize service delivery across your entire organization.
+          At Alluvium, we're passionate about helping businesses achieve the
+          essence of service management. We are a team of experts dedicated to
+          providing you with the tools and strategies you need to optimize
+          service delivery across your entire organization.
         </p>
         <p className={styles.description}>
           Our mission is to empower you to deliver exceptional service, every
