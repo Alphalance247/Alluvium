@@ -40,41 +40,37 @@ const Services = () => {
               site audit and governance, and access to Atlassian certified
               experts on demand.
             </p>
-            <Link href="#">
-              <a className={`border mr-4 ${styles.servtabs}`}>AI</a>
-            </Link>
-            <Link href="/atlassian-services/itsm-services">
-              <a className={`border mr-4 ${styles.servtabs}`}>ITSM</a>
+            <Link href="/atlassian-services/atlassian-licence">
+              <a className={`border mr-4 ${styles.servtabs}`}>
+                Licence Management
+              </a>
             </Link>
             <Link href="/atlassian-services/cloud-migration">
               <a className={`border mr-4 ${styles.servtabs}`}>Migrations</a>
             </Link>
-            <Link href="/atlassian-services/cloud-migration">
-              <a className={`border mr-4 ${styles.servtabs}`}>Data Center</a>
-            </Link>
-            <Link href="/atlassian-services/cloud-migration">
-              <a className={`border mr-4 ${styles.servtabs}`}>Cloud</a>
+            <Link href="/atlassian-services/consulting">
+              <a className={`border mr-4 ${styles.servtabs}`}>
+                Consulting & Strategy
+              </a>
             </Link>
             <Link href="/atlassian-services/training">
               <a className={`border mr-4 ${styles.servtabs}`}>Training</a>
             </Link>
-            <Link href="/atlassian-services/consulting">
+            <Link href="/atlassian-services/itsm-services">
               <a className={`border mr-4 ${styles.servtabs}`}>
                 JSM Implementations
               </a>
             </Link>
-            <Link href="#">
-              <a className={`border mr-4 ${styles.servtabs}`}>Automation</a>
-            </Link>
             <Link href="/atlassian-services/support">
               <a className={`border mr-4 ${styles.servtabs}`}>Support</a>
-            </Link>{" "}
+            </Link>
+
             <br></br>
             <Link href="/support/contact#schedule-a-call">
               <a className={`btn border ${styles.sched}`}>Schedule a call</a>
             </Link>
             <Link href="/atlassian-services">
-              <a className={`btn border ${styles.learnmore}`}>Learn more</a>
+              <a className={`btn border ${styles.learnmore}`}>Learn More</a>
             </Link>
           </div>
         </div>
@@ -89,36 +85,18 @@ const Services = () => {
                 modernization, and DevOps solutions, delivered by our team of
                 experienced consultants.
               </p>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Managed Services
-                </a>
-              </Link>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Infrastructure review 
-                </a>
-              </Link>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Experienced Consultants
-                </a>
-              </Link>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Process and Infra modernisation
-                </a>
-              </Link>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  DevOps and Solutions Consulting
-                </a>
-              </Link>{" "}
+
               {/* <br></br> */}
               <div style={{ marginTop: "1rem" }}>
                 <Link href="/support/contact#schedule-a-call">
-                  <a className={`btn border mr-4 ${styles.schedulecall}`}>
-                    Speak to our consultant
+                  <a className={`btn border ${styles.sched}`}>
+                    Schedule a call
+                  </a>
+                </Link>
+
+                <Link href="/aws-services">
+                  <a className={`btn border mr-4 ${styles.learnmore}`}>
+                    Learn More
                   </a>
                 </Link>
               </div>
@@ -155,33 +133,19 @@ const Services = () => {
                 tailored, innovative solutions to meet your unique needs and
                 drive your business forward.
               </p>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Software Development
-                </a>
-              </Link>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Design as a Service
-                </a>
-              </Link>
-              <br />
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Software Consulting
-                </a>
-              </Link>
-              <Link href="#">
-                <a className={`border mr-4 ${styles.servtabs}`}>
-                  Web Development
-                </a>
-              </Link>{" "}
-              <br></br>
-              <Link href="/support/contact#schedule-a-call">
-                <a className={`btn border mr-4 ${styles.schedulecall}`}>
-                  Schedule a call
-                </a>
-              </Link>
+              <div style={{ marginTop: "1rem" }}>
+                <Link href="/support/contact#schedule-a-call">
+                  <a className={`btn border ${styles.sched}`}>
+                    Schedule a call
+                  </a>
+                </Link>
+
+                <Link href="/software-development">
+                  <a className={`btn border mr-4 ${styles.learnmore}`}>
+                    Learn More
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

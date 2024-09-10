@@ -5,7 +5,7 @@ import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { SoftwareDeveloplemtCard } from "data";
 import Button from "components/atlassian-service-reuse/Button";
-import styles from "../../../styles/atlassian-services-style/generalstyle.module.scss";
+import styles from "../../styles/atlassian-services-style/generalstyle.module.scss";
 
 const SoftwareDevelopment = () => {
   return (
