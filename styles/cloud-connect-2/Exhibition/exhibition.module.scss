@@ -6,10 +6,41 @@
   background: white;
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
 
-  .exhibitor__expectation {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 5rem;
+.exhibitor__expectation {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 5rem;
+}
+
+.exhibitors {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5rem;
+}
+
+.exhibitor__packages {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  background: #009bc0;
+}
+
+.feedback {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  p {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+    line-height: 45px;
+    letter-spacing: -1px;
+    font-weight: 500;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

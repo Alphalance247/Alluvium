@@ -2,35 +2,69 @@ import Layout from "components/cloud-connect-2/Layout";
 import SectionHeader from "components/cloud-connect-2/SectionHeader";
 import Head from "next/head";
 import Button from "components/cloud-connect-2/Button";
-import styles from "../../styles/cloud-connect-2/Exhibition/exhibition.module.scss";
+import styles from "../../../styles/cloud-connect-2/Exhibition/exhibition.module.scss";
 import Hero from "components/cloud-connect-2/Home/Hero";
 import Image from "next/image";
 import AttendCloud from "components/cloud-connect-2/AttendCloud";
+import Packages from "components/cloud-connect-2/Packages";
+import ExhibitionForm from "components/cloud-connect-2/Exhibition/ExhibitionForm";
+import Link from "next/link";
 
 const data = [
   {
-    icon: "/assets/cloud-connect/icons/ic_outline-insights.svg",
+    icon: "/assets/cloud-connect/icons/ic_outline-insights_w.svg",
     title: "Strategic Insights",
     description:
       "Learn how leading organizations are harnessing Service Management strategy ies to optimize their business operations.",
   },
   {
-    icon: "/assets/cloud-connect/icons/la_handshake-solid.svg",
+    icon: "/assets/cloud-connect/icons/la_handshake-solid_w.svg",
     title: "Cross-Functional Collaboration",
     description:
       "Discover how extending service management practices beyond IT can create synergies and drive innovation throughout your entire organization.",
   },
   {
-    icon: "/assets/cloud-connect/icons/icons8_idea.svg",
+    icon: "/assets/cloud-connect/icons/icons8_idea_w.svg",
     title: "Business Transformation",
     description:
       "From customer service to HR and beyond, Cloud Connect will show you how to maximize new opportunities for growth and efficiency within the an organization.",
   },
   {
-    icon: "/assets/cloud-connect/icons/icon-park-outline_database-success.svg",
+    icon: "/assets/cloud-connect/icons/icon-park-outline_database-success_w.svg",
     title: "Networking Opportunities",
     description:
       "Connect with industry experts, thought leaders, and peers who are at the forefront of service management. Share experiences, exchange ideas, and forge valuable connections that can propel your business forward.",
+  },
+];
+
+export const exhibitorsPackage = [
+  {
+    id: "1",
+    title: "SILVER",
+    price: "NGN 350,000 (₦)",
+
+    paragraphs:
+      "Become the cornerstone of Cloud Connect with our premier Title Sponsorship. This exclusive package offers unparalleled brand visibility and engagement opportunities,",
+    list1: "3 by 4 booth space",
+    list2: "6 chairs, 1 table, 1 socket, 1 wastebin",
+    list3: "6 complimentary meals",
+    list4: "Complimentary TV",
+    list5: "Brand backdrop",
+    list6: "Access to all events & workshop",
+  },
+  {
+    id: "2",
+    title: "GOLD",
+    price: "NGN 500,000 (₦)",
+
+    paragraphs:
+      "Elevate your brand presence with our Platinum Sponsorship. This package provides significant exposure and engagement with event attendees.",
+    list1: "3 by 4 booth space",
+    list2: "6 chairs, 1 table, 1 socket, 1 wastebin",
+    list3: "6 complimentary meals",
+    list4: "Complimentary TV",
+    list5: "Brand backdrop",
+    list5: "Access to all events & workshop",
   },
 ];
 
@@ -76,11 +110,38 @@ const Exhibition = () => {
         </div>
       </div>
 
-      <div className={`container mx-auto ${styles.exhibitor__expectation}`}>
+      <section className={`container mx-auto ${styles.exhibitors}`}>
         <SectionHeader heading="Why YOU SHOULD EXHIBIT" />
 
         <AttendCloud data={data} />
-      </div>
+      </section>
+
+      <section className={`container-fluid ${styles.exhibitor__packages}`}>
+        <Packages
+          sponsorPackage={exhibitorsPackage}
+          heading="EXHIBITORS PACKAGES"
+          showButton={false}
+          subText={true}
+        />
+      </section>
+      <Image
+        src="/assets/cloud-connect/images/imagey.png"
+        alt="Cloud connect event image"
+        className={styles.eventImg}
+        width={1440}
+        height={557}
+      />
+      <ExhibitionForm />
+
+      <section className={`container text-center ${styles.feedback}`}>
+        <p>
+          Have questions or need more information? We are here to help you make
+          the most of your Cloud Connect experience
+        </p>
+        <Link href="/">
+          <Button size="large">Contact Us</Button>
+        </Link>
+      </section>
     </Layout>
   );
 };
