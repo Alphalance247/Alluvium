@@ -60,8 +60,7 @@ const TopLeaders = () => {
   return (
     <section className={styles["top-leaders"]}>
       <h2 className={styles["top-leaders__title"]}>
-        {/* Top Global Innovators and Corporate Leaders Speaking */}
-        Past event speakers watch out for this year speakers.
+        Missed our past events? Catch up with our previous speakers!{" "}
       </h2>
       <div className={styles["top-leaders__grid"]}>
         {speakers.slice(0, visibleSpeakers).map((speaker, index) => (
