@@ -61,7 +61,7 @@ const TopLeaders = () => {
     <section className={styles["top-leaders"]}>
       <h2 className={styles["top-leaders__title"]}>
         {/* Top Global Innovators and Corporate Leaders Speaking */}
-        Get ready to be inspired by industry giants at Cloud Connect '24.
+        Past event speakers watch out for this year speakers.
       </h2>
       <div className={styles["top-leaders__grid"]}>
         {speakers.slice(0, visibleSpeakers).map((speaker, index) => (
