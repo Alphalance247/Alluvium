@@ -30,7 +30,19 @@ export default function Article({ article }) {
             <section key={index} className={styles.articleSection}>
               {item.paragraphs.map((paragraph, pIndex) => (
                 <p key={pIndex} className={styles.paragraph}>
-                  {paragraph.text}
+                  {paragraph.text}{" "}
+                  <Link href="/cloud-connect/book-a-ticket">
+                    <span
+                      style={{
+                        color: "orange",
+                        cursor: "pointer",
+                        textDecoration: "underline",
+                      }}
+                    >
+                      {paragraph.link}
+                    </span>
+                  </Link>
+                  <span>{paragraph.subText}</span>
                 </p>
               ))}
             </section>
@@ -46,6 +58,24 @@ export default function Article({ article }) {
             <h2 key={index} className={styles.subheading}>
               {item.text}
             </h2>
+          );
+        case "theme":
+          return (
+            <section key={index}>
+              <p key={index} className={styles.paragrap}>
+                <span style={{ color: "#082433", fontWeight: "bold" }}>
+                  {item.subText}
+                </span>
+                {item.text}
+              </p>
+
+              {/* <p key={index} className={styles.paragrap}>
+                <span style={{ color: "#082433", fontWeight: "bold" }}>
+                  {item.subText}
+                </span>
+                {item.text}
+              </p> */}
+            </section>
           );
         case "image":
           return (
