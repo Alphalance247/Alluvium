@@ -4,10 +4,10 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className={styles.hero}>
+    <section className={`${styles.hero} container mx-auto`}>
       <div className={styles.hero__content}>
         <div className={styles["hero__content-date"]}>
-          Nov 26, 2024 | The Zone, Plot 9, Gbagada Industrial Scheme beside UPS,
+          Nov 28, 2024 | The Zone, Plot 9, Gbagada Industrial Scheme beside UPS,
           Lagos Nigeria{" "}
         </div>
         <div className={styles["hero__content-title-wrapper"]}>

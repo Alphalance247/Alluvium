@@ -308,47 +308,47 @@ export const articles = [
       },
     ],
   },
-  {
-    id: 6,
-    title: "Volunteer Applications Now Open for Cloud Connect 2024",
-    excerpt:
-      "A world-leading aviation company sought assistance in enhancing their utilization and understanding of Atlassian products and services.",
+  // {
+  //   id: 6,
+  //   title: "Volunteer Applications Now Open for Cloud Connect 2024",
+  //   excerpt:
+  //     "A world-leading aviation company sought assistance in enhancing their utilization and understanding of Atlassian products and services.",
 
-    image: "/assets/cloud-connect/images/AboutCC2.jpg",
-    readTime: "5 min read",
-    author: "James Akinlabi",
-    datePublished: "July 17, 2024",
-  },
-  {
-    id: 7,
-    title: "Renowned Keynote Speakers Announced for Cloud Connect 2024",
-    excerpt:
-      "We are thrilled to announce the keynote speakers for Cloud Connect 2024. This year’s lineup features some of the most influential voices .",
+  //   image: "/assets/cloud-connect/images/AboutCC2.jpg",
+  //   readTime: "5 min read",
+  //   author: "James Akinlabi",
+  //   datePublished: "July 17, 2024",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Renowned Keynote Speakers Announced for Cloud Connect 2024",
+  //   excerpt:
+  //     "We are thrilled to announce the keynote speakers for Cloud Connect 2024. This year’s lineup features some of the most influential voices .",
 
-    readTime: "5 min read",
-    author: "James Akinlabi",
-    datePublished: "July 17, 2024",
-  },
-  {
-    id: 8,
-    title: "Early Bird Registration Now Open for Cloud Connect 2024",
-    excerpt:
-      "Exciting news! Early bird registration for Cloud Connect 2024 is now open. ake advantage of discounted rates and secure your spot",
-    image: "/assets/cloud-connect/images/AboutCC1.jpg",
+  //   readTime: "5 min read",
+  //   author: "James Akinlabi",
+  //   datePublished: "July 17, 2024",
+  // },
+  // {
+  //   id: 8,
+  //   title: "Early Bird Registration Now Open for Cloud Connect 2024",
+  //   excerpt:
+  //     "Exciting news! Early bird registration for Cloud Connect 2024 is now open. ake advantage of discounted rates and secure your spot",
+  //   image: "/assets/cloud-connect/images/AboutCC1.jpg",
 
-    readTime: "5 min read",
-    author: "James Akinlabi",
-    datePublished: "August 1, 2024",
-  },
-  {
-    id: 9,
-    title: "Volunteer Applications Now Open for Cloud Connect 2024",
-    excerpt:
-      "A world-leading aviation company sought assistance in enhancing their utilization and understanding of Atlassian products and services.",
+  //   readTime: "5 min read",
+  //   author: "James Akinlabi",
+  //   datePublished: "August 1, 2024",
+  // },
+  // {
+  //   id: 9,
+  //   title: "Volunteer Applications Now Open for Cloud Connect 2024",
+  //   excerpt:
+  //     "A world-leading aviation company sought assistance in enhancing their utilization and understanding of Atlassian products and services.",
 
-    image: "/assets/cloud-connect/images/AboutCC2.jpg",
-    readTime: "5 min read",
-    author: "James Akinlabi",
-    datePublished: "July 17, 2024",
-  },
+  //   image: "/assets/cloud-connect/images/AboutCC2.jpg",
+  //   readTime: "5 min read",
+  //   author: "James Akinlabi",
+  //   datePublished: "July 17, 2024",
+  // },
 ];
