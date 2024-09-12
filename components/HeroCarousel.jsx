@@ -10,6 +10,7 @@ import Team24Banner from "./TEAM24/banner";
 import Gitex24 from "components/gitex24/gitex";
 import Webinar from "components/webinar/webinar";
 import CommunityEvent from "./hero-component/communityEvent";
+import CloudConnectBanner from "./EventBanner/cloudConnectBanner";
 
 export default function () {
   return (
@@ -26,6 +27,7 @@ export default function () {
           infinite={true}
         >
           {/* <CommunityEvent /> */}
+          {/* <CloudConnectBanner /> */}
           <AtPartner />
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
