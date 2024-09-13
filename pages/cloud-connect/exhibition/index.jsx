@@ -124,7 +124,7 @@ const Exhibition = () => {
           subText={true}
         />
       </section>
-      <Image
+      <img
         src="/assets/cloud-connect/images/imagey.png"
         alt="Cloud connect event image"
         className={styles.eventImg}
