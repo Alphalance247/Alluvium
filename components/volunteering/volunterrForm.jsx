@@ -5,7 +5,6 @@ import styles from "../../styles/cloud2.4/volunteering.module.scss";
 import Input from "components/licence-component/inputP";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import { FaChevronDown } from "react-icons/fa";
 import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import LoadingScreen from "components/loading";
@@ -56,7 +55,6 @@ const VolunterForm = () => {
       isoCode: country?.isoCode,
     }));
 
-    console.log(countryOptions);
     setCountries(countryOptions);
   }, []);
 
@@ -375,7 +373,7 @@ const VolunterForm = () => {
                     onChange={handleChange}
                   >
                     <option value="">Select</option>
-                    <option value="">Event Management</option>
+                    <option value="Event Management">Event Management</option>
                     <option value="Social media">Social media</option>
                     <option value="Customer service">Customer service</option>
                     <option value="Marketing and communications">
