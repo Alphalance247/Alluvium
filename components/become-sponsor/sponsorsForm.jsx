@@ -297,23 +297,12 @@ const SponsorsForm = () => {
                     onChange={handleChange}
                   >
                     <option value=""></option>
-                    <option value="Below NGN 2,000,000">
-                      Below NGN 2,000,000
+
+                    <option value="NGN 300,000 - 500,000">
+                      NGN 300,000 - 500,000
                     </option>
-                    <option value="NGN 2,000,000 - 5,000,000">
-                      NGN 2,000,000 - 5,000,000
-                    </option>
-                    <option value="NGN 5,000,000 - 10,000,000">
-                      NGN 5,000,000 - 10,000,000
-                    </option>
-                    <option value="NGN 10,000,000 - 15,000,000">
-                      NGN 10,000,000 - 15,000,000
-                    </option>
-                    <option value="NGN 15,000,000 - 20,000,000">
-                      NGN 15,000,000 - 20,000,000
-                    </option>
-                    <option value="NGN 20,000,000 - 25,000,000">
-                      NGN 20,000,000 - 25,000,000
+                    <option value="NGN 500,000 - 1,000,000">
+                      NGN 500,000 - 1,000,000
                     </option>
                   </select>
                   {/* <FaChevronDown className={styles.iconic} /> */}
@@ -327,40 +316,76 @@ const SponsorsForm = () => {
                   )}
                 </div>
 
-                <div className=" position-relative">
-                  <label
-                    htmlFor="Country"
-                    className={styles.labelStyle}
-                    style={{ marginBottom: "10px" }}
-                  >
-                    Preferred sponsorship tier
-                  </label>
+                {form.budget_9 === "NGN 300,000 - 500,000" && (
+                  <div className=" position-relative">
+                    <label
+                      htmlFor="Country"
+                      className={styles.labelStyle}
+                      style={{ marginBottom: "10px" }}
+                    >
+                      Preferred sponsorship tier
+                    </label>
 
-                  <select
-                    name="preferred_sponsorship_tier_10"
-                    id="preferred_sponsorship_tier_10"
-                    className={`${styles.countrySelect} ${
-                      formError.preferred_sponsorship_tier_10
-                        ? styles.error
-                        : ""
-                    }`}
-                    value={form.preferred_sponsorship_tier_10}
-                    onChange={handleChange}
-                  >
-                    <option value=""></option>
-                    <option value="Silver">Silver</option>
-                    <option value="Gold">Gold</option>
-                  </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
-                  {/* {formError.preferred_sponsorship_tier_10 && (
+                    <select
+                      name="preferred_sponsorship_tier_10"
+                      id="preferred_sponsorship_tier_10"
+                      className={`${styles.countrySelect} ${
+                        formError.preferred_sponsorship_tier_10
+                          ? styles.error
+                          : ""
+                      }`}
+                      value={form.preferred_sponsorship_tier_10}
+                      onChange={handleChange}
+                    >
+                      <option value=""></option>
+                      <option value="Silver">Silver</option>
+                    </select>
+                    {/* <FaChevronDown className={styles.iconic} /> */}
+                    {/* {formError.preferred_sponsorship_tier_10 && (
                     <p style={{ color: "red" }}>This field is Required</p>
                   )} */}
-                  {formError.preferred_sponsorship_tier_10 && (
-                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
-                      Please select your preferred tier
-                    </h6>
-                  )}
-                </div>
+                    {formError.preferred_sponsorship_tier_10 && (
+                      <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                        Please select your preferred tier
+                      </h6>
+                    )}
+                  </div>
+                )}
+                {form.budget_9 === "NGN 500,000 - 1,000,000" && (
+                  <div className=" position-relative">
+                    <label
+                      htmlFor="Country"
+                      className={styles.labelStyle}
+                      style={{ marginBottom: "10px" }}
+                    >
+                      Preferred sponsorship tier
+                    </label>
+
+                    <select
+                      name="preferred_sponsorship_tier_10"
+                      id="preferred_sponsorship_tier_10"
+                      className={`${styles.countrySelect} ${
+                        formError.preferred_sponsorship_tier_10
+                          ? styles.error
+                          : ""
+                      }`}
+                      value={form.preferred_sponsorship_tier_10}
+                      onChange={handleChange}
+                    >
+                      <option value=""></option>
+                      <option value="Gold">Gold</option>
+                    </select>
+                    {/* <FaChevronDown className={styles.iconic} /> */}
+                    {/* {formError.preferred_sponsorship_tier_10 && (
+                    <p style={{ color: "red" }}>This field is Required</p>
+                  )} */}
+                    {formError.preferred_sponsorship_tier_10 && (
+                      <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                        Please select your preferred tier
+                      </h6>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
 
@@ -386,9 +411,9 @@ const SponsorsForm = () => {
                     onChange={handleChange}
                   >
                     <option value=""></option>
-                    <option value="Social media">Google</option>
+                    <option value="Google">Google</option>
                     <option value="Social media">Social media</option>
-                    <option value="Social media">
+                    <option value="Referral from a Friend or Colleague">
                       Referral from a Friend or Colleague
                     </option>
                     <option value="Event Website">Event Website</option>

@@ -123,11 +123,6 @@
     column-gap: 1.5rem;
     flex-wrap: nowrap;
     justify-content: center;
-    // width: 70%;
-
-    // & > div:nth-child(2) {
-    //   width: 40%;
-    // }
 
     @media screen and (max-width: 1025px) {
       grid-template-columns: repeat(2, 1fr);
