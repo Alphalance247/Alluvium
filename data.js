@@ -1700,7 +1700,7 @@ export const awsSolutions = [
   {
     id: "1",
     image: "/assets/services/image 459.png",
-    headings: "Full Cloud Solution",
+    headings: "Hybrid Solution",
     paragraphs:
       "Our Hybrid Solution seamlessly integrates your on-premises infrastructure with the power and scalability of AWS cloud services, providing a flexible and balanced approach to cloud adoption. This solution is ideal for businesses that require a gradual transition to the cloud or need to maintain certain workloads on-premises due to regulatory, security, or performance considerations. By combining the best of both worlds, our Hybrid Solution ensures that your business can scale efficiently, optimize costs, and maintain high availability, all while securely managing data and applications across environments. Experience a smoother, more controlled cloud journey with our tailored hybrid approach",
     link: "#",
@@ -1823,7 +1823,10 @@ export const frequentlyAsked = [
     questions:
       "How can we get started with your Atlassian services, and what should we expect during the initial consultation?",
     answer:
-      "The first step is to schedule a free consultation call with one of our experts by filling out this form (LINK). During this consultation, we will review your current situation, needs, and challenges, and discuss your goals, desired outcomes, and timelines. After the consultation, we will create a customized proposal and plan based on your needs and send it to you via email. Once we agree on the proposal, we will schedule the project and decide on starting dates together.",
+      "The first step is to schedule a free consultation call with one of our experts by filling out this ",
+    subAnswer: "form.",
+    subAnswer1:
+      " During this consultation, we will review your current situation, needs, and challenges, and discuss your goals, desired outcomes, and timelines. After the consultation, we will create a customized proposal and plan based on your needs and send it to you via email. Once we agree on the proposal, we will schedule the project and decide on starting dates together.",
   },
   {
     id: 3,
@@ -1856,14 +1859,19 @@ export const frequentlyAsked = [
     questions:
       "What types of training programs do you offer for our team, and how can they help us maximize the use of Atlassian tools?",
     answer:
-      "Training is an essential part of our implementation process to ensure you get the most out of your Atlassian tools. We offer various training programs, from beginner sessions for end-users to administrator training for Jira and Confluence Admins. Additionally, we provide advanced configuration training for third-party Marketplace apps. Get in touch (LINK) to learn more.",
+      "Training is an essential part of our implementation process to ensure you get the most out of your Atlassian tools. We offer various training programs, from beginner sessions for end-users to administrator training for Jira and Confluence Admins. Additionally, we provide advanced configuration training for third-party Marketplace apps. ",
+    subAnswer: " Get in touch ",
+    subAnswer1: " to learn more.",
   },
   {
     id: 8,
     questions:
       "What are the potential benefits of integrating artificial intelligence (AI) into our Atlassian tools, and how can it help our organization?",
     answer:
-      "Atlassian offers its own AI, known as Atlassian Intelligence, which can bring numerous benefits to your organization. It enhances productivity by tailoring dashboards, improves decision-making by analyzing data, and streamlines operations by recommending improved workflows. This is just a glimpse of the possibilities. Please get in touch (LINK) with us to schedule a demo and explore more about Atlassian Intelligence.",
+      "Atlassian offers its own AI, known as Atlassian Intelligence, which can bring numerous benefits to your organization. It enhances productivity by tailoring dashboards, improves decision-making by analyzing data, and streamlines operations by recommending improved workflows. This is just a glimpse of the possibilities. Please ",
+    subAnswer: "get in touch ",
+    subAnswer1:
+      "with us to schedule a demo and explore more about Atlassian Intelligence.",
   },
 ];
 
@@ -2175,66 +2183,49 @@ export const supportCards = [
 export const JiraCards = [
   {
     id: "1",
-    headings: "Incident Management",
+    headings: "Installation",
     variant: "border",
     paragraphs:
-      "Streamline incident management by centralizing incident reporting, prioritization, and tracking on a single platform, ensuring swift response and resolution. With automated workflows and real-time collaboration tools, JSM enables teams to quickly diagnose and resolve incidents, minimizing downtime and business disruption.",
+      "Struggling with installing new Atlassian apps in your on-premise environment? Let Alluvium handle it. We specialize in installing databases, servers, Atlassian apps, and Marketplace apps to ensure your environment runs at peak performance.",
   },
   {
     id: "2",
-    headings: "Change Management",
+    headings: "Configuration",
     variant: "border",
     paragraphs:
-      "Simplify change management by providing a structured process for planning, approving, and implementing changes, reducing risks and ensuring smooth transitions. With customizable workflows and automated approval processes, JSM ensures that changes are efficiently reviewed and executed with minimal impact on ongoing operations.",
+      "Need assistance configuring Atlassian tools? As a certified Atlassian partner, we bring extensive experience in configuring both Atlassian and Marketplace apps. Together, we'll tailor these tools to optimally support your internal processes.",
   },
   {
     id: "3",
-    headings: "Problem Management",
+    headings: "License Management",
     variant: "border",
+    subText: "License Management page.",
+    url: "atlassian-services/atlassian-licence",
     paragraphs:
-      "Enhance problem management by centralizing the identification, analysis, and resolution of underlying issues, helping to prevent recurring incidents. With built-in root cause analysis tools and customizable workflows, JSM enables teams to efficiently diagnose and address problems, reducing the impact on business operations.",
+      "Looking for guidance on managing your licenses? Our expertise has helped clients save significant time and money on licensing. Discover more on our",
   },
   {
     id: "4",
-    headings: "Queues",
+    headings: "Troubleshooting",
     variant: "border",
     paragraphs:
-      "Organize and prioritize incoming requests, to efficiently manage and address issues based on urgency and importance. Queues can be customized to align with specific workflows, ensuring that tasks are automatically sorted and assigned to the right team members.",
+      "Facing technical or functional challenges? Let us handle the troubleshooting so you can quickly identify and resolve issues, saving valuable time and effort.",
   },
   {
     id: "5",
-    headings: "SLA’s",
+    headings: "Migration",
     variant: "border",
     paragraphs:
-      "Jira Service Management enables the creation and tracking of Service Level Agreements (SLAs) to ensure timely resolution of requests. It automatically monitors response and resolution times, helping teams meet their performance targets and maintain high service standards.",
+      "Planning to migrate or consolidate your data into a new Atlassian instance? Whether you need support during the migration process or prefer a full-service data migration, we're here to help. Learn more about our migration services ",
+    subText: " here.",
+    url: "atlassian-services/cloud-migration",
   },
   {
     id: "6",
-    headings: "Reporting and Dashboard",
+    headings: "Maintenance",
     variant: "border",
     paragraphs:
-      "Jira Service Management offers powerful reporting and dashboarding features, providing real-time insights into team performance, incident trends, and service metrics. Customizable dashboards allow teams to visualize key data, track progress, and make informed decisions to improve service delivery.",
-  },
-  {
-    id: "7",
-    headings: "Asset Management",
-    variant: "border",
-    paragraphs:
-      "Jira Service Management's asset management capabilities allow organizations to track and manage their IT assets and resources throughout their lifecycle. By linking assets to incidents, changes, and other processes, teams can maintain accurate inventory, monitor asset performance, and optimize resource utilization.",
-  },
-  {
-    id: "8",
-    headings: "Knowledge Base",
-    variant: "border",
-    paragraphs:
-      "Jira Service Management integrates a knowledge base that allows teams to create, organize, and share valuable information and solutions. This empowers users to find answers quickly, reduces the volume of support requests, and fosters a culture of self-service and continuous learning.",
-  },
-  {
-    id: "9",
-    headings: "Automation",
-    variant: "border",
-    paragraphs:
-      "Jira Service Management's automation features enable teams to streamline repetitive tasks and processes by setting up automated rules and triggers. This reduces manual effort, enhances efficiency, and ensures consistent handling of incidents, changes, and other service requests.",
+      "Ensure your Atlassian Data Center environment remains secure and up-to-date with our expert maintenance support. Regular updates not only enhance security but also provide you with access to the latest features and improvements. Reach out to us today to discuss how we can help maintain and optimize your environment.",
   },
 ];
 
@@ -2575,30 +2566,30 @@ export const eventTicket = [
     id: "1",
     ticketTitle: "General Admission",
     price: "₦5,000",
-    list1: "Access to all keynote speeches and panel discussions",
-    list2: "Networking opportunities with industry peers",
-    list3: "Complimentary refreshments and light snacks",
-    list4: "Digital event materials and proceedings",
+    list1: "Access to all keynote speeches and panel discussions.",
+    list2: "Networking opportunities with industry peers.",
+    list3: "Complimentary refreshments and light snacks.",
+    list4: "Digital event materials and proceedings.",
   },
   {
     id: "2",
     ticketTitle: "VIP",
     price: "₦20,000",
     earlybirds: "₦15,000",
-    list1: "All benefits of General Admission",
-    list2: "Priority seating at keynote speeches and workshops",
+    list1: "All benefits of General Admission.",
+    list2: "Priority seating at keynote speeches and workshops.",
     list3: "Networking lunch with industry leaders and potential clients",
-    list4: "Limited edition Cloud Connect merchandise",
+    list4: "Limited edition Cloud Connect merchandise.",
   },
   {
     id: "3",
     ticketTitle: "Platinum",
     price: "₦100,000",
     earlybirds: "₦70,000",
-    list1: "All benefits of VIP ticket",
+    list1: "All benefits of VIP ticket.",
     list2:
-      "Exclusive access to two complimentary one-on-one consultations with a service management expert post-event.t",
-    list3: "Dedicated event concierge for personalized assistance",
+      "Exclusive access to two complimentary one-on-one consultations with a service management expert post-event.",
+    list3: "Dedicated event concierge for personalized assistance.",
     list4: "Priority booking for future Alluvium events and workshops.",
   },
 ];

@@ -403,3 +403,20 @@
     }
   }
 }
+
+.paragrap {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: 400;
+  text-align: justify;
+  color: #454545;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

@@ -3,14 +3,14 @@ import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Layout from "components/layout";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import Link from "next/link";
-import styles from "../../../styles/atlassian-services-style/aws-services.module.scss";
+import styles from "../../styles//atlassian-services-style/aws-services.module.scss";
 import { awsServicesPage, awsTrainingData, awsSolutions } from "data";
 
 const AWSServices = () => {
   return (
     <Layout>
       <ServicesHero
-        contentsheading1="Comprehensive AWS Solutions Tailored to Your Needs."
+        contentsheading1="Partner with Alluvium for AWS excellence."
         contentsheading2="From data transformation to full cloud solutions, we help you leverage the power of AWS."
         button1={
           <Link href="/support/contact#schedule-a-call" passHref>

@@ -79,7 +79,7 @@ const Header = () => {
   );
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header}`}>
       <nav>
         <Link href="/cloud-connect" className={styles.logoDiv}>
           <div className={styles.flexBetween}>
@@ -93,7 +93,7 @@ const Header = () => {
               <span>The Zone, Plot 9, Gbagada</span>
               <span>Industrial Scheme beside UPS,</span>
               <span>Lagos, Nigeria</span>
-              <span>November 26th, 2024</span>
+              <span>November 28th, 2024</span>
             </div>
           </div>
         </Link>
