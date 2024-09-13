@@ -21,8 +21,6 @@ const SponsorsForm = () => {
   });
   const [loading, setLoading] = useState(false);
 
-  console.log(form);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prevForm) => ({
@@ -386,9 +384,9 @@ const SponsorsForm = () => {
                     onChange={handleChange}
                   >
                     <option value=""></option>
-                    <option value="Social media">Google</option>
+                    <option value="Google">Google</option>
                     <option value="Social media">Social media</option>
-                    <option value="Social media">
+                    <option value="Referral from a Friend or Colleague">
                       Referral from a Friend or Colleague
                     </option>
                     <option value="Event Website">Event Website</option>
@@ -461,13 +459,14 @@ const SponsorsForm = () => {
                   style={{ marginBottom: "10px" }}
                 >
                   Please provide additional information or context about your
-                  objectives for a potential partnership with us
+                  objectives for a potential partnership with us*
                 </label>
                 <textarea
                   id="additional_info_14"
                   name="additional_info_14"
                   rows="10"
                   cols="100"
+                  required
                   value={form.additional_info_14 || ""}
                   onChange={handleChange}
                   className={styles.textareastyle}
