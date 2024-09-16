@@ -496,6 +496,7 @@ const SponsorsForm = () => {
                   name="additional_info_14"
                   rows="10"
                   cols="100"
+                  required
                   value={form.additional_info_14 || ""}
                   onChange={handleChange}
                   className={styles.textareastyle}
