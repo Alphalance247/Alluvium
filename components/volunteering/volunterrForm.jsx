@@ -5,7 +5,6 @@ import styles from "../../styles/cloud2.4/volunteering.module.scss";
 import Input from "components/licence-component/inputP";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import { FaChevronDown } from "react-icons/fa";
 import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import LoadingScreen from "components/loading";
@@ -56,7 +55,6 @@ const VolunterForm = () => {
       isoCode: country?.isoCode,
     }));
 
-    console.log(countryOptions);
     setCountries(countryOptions);
   }, []);
 
@@ -86,10 +84,14 @@ const VolunterForm = () => {
     ) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/cloud-connect/vounteer-form", {
-          ...form,
-          country_5: form.countryName, // Send country name instead of isoCode
-        })
+        .post(
+          "https://vast.ec2.alluvium.net/cloud-connect/vounteer-form",
+          {
+            ...form,
+            country_5: form.countryName, // Send country name instead of isoCode
+          },
+          { timeout: 40000 }
+        )
         .then((res) => {
           setLoading(false);
 
@@ -98,6 +100,8 @@ const VolunterForm = () => {
               "Your request has been submitted successfully. Thank you, we'll be in touch.",
               {
                 appearance: "success",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 5000, // Dismiss after 5 seconds
               }
             );
             setForm({
@@ -116,23 +120,47 @@ const VolunterForm = () => {
               question_comment_info_12: "",
             });
           } else {
-            addToast("Error occured, please try again or contact Admin", {
-              appearance: "error",
-            });
+            addToast(
+              "Unexpected response from server. Please try again or contact Admin",
+              {
+                appearance: "error",
+              }
+            );
             return;
           }
         })
         .catch((err) => {
           setLoading(false);
-          let errMessage =
-            "Oops something went wrong. Please try again or contact Admin";
-          if (err?.response?.status < 500) {
+          let errMessage;
+
+          // Handle timeout error
+          if (err.code === "ECONNABORTED") {
             errMessage =
-              err?.response?.data?.error ||
-              "Oops something went wrong. Please try again or contact Admin";
+              "The request took too long. Please check your internet connection and try again.";
           }
-          addToast(errMessage, { appearance: "error" });
-          return;
+
+          // Handle network error
+          if (!err.response) {
+            errMessage =
+              "Network error. Please check your internet connection and try again.";
+          }
+
+          // Handle server-side error (response error)
+          if (err.response) {
+            if (err.response.status < 500) {
+              errMessage =
+                err?.response?.data?.error ||
+                "Request failed. Please check the form and try again.";
+            } else {
+              errMessage = "Server error. Please try again later.";
+            }
+          }
+
+          addToast(errMessage, {
+            appearance: "error",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          });
         });
     } else {
       setFormError({
@@ -375,7 +403,7 @@ const VolunterForm = () => {
                     onChange={handleChange}
                   >
                     <option value="">Select</option>
-                    <option value="">Event Management</option>
+                    <option value="Event Management">Event Management</option>
                     <option value="Social media">Social media</option>
                     <option value="Customer service">Customer service</option>
                     <option value="Marketing and communications">
