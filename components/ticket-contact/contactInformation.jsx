@@ -86,12 +86,16 @@ const ContactInformation = () => {
     ) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/cloud-connect/ticket-form", {
-          ...form,
-          bronze_ticket_10: bronze,
-          siver_ticket_11: silver,
-          gold_ticket_12: gold,
-        })
+        .post(
+          "https://vast.ec2.alluvium.net/cloud-connect/ticket-form",
+          {
+            ...form,
+            bronze_ticket_10: bronze,
+            siver_ticket_11: silver,
+            gold_ticket_12: gold,
+          },
+          { timeout: 40000 }
+        )
         .then((res) => {
           setLoading(false);
 
@@ -99,6 +103,8 @@ const ContactInformation = () => {
             router.push(res?.data?.data?.paystack_auth_url);
             addToast("Details submitted successfully. Redirecting...", {
               appearance: "success",
+              autoDismiss: true, // Enable auto dismiss
+              autoDismissTimeout: 5000, // Dismiss after 5 seconds
             });
 
             setForm({
@@ -115,23 +121,46 @@ const ContactInformation = () => {
           } else {
             addToast(
               res.data.error ||
-                "Error occured, please try again or contact Admin",
-              { appearance: "error" }
+                "Unexpected response from server. Please try again or contact Admin",
+              {
+                appearance: "error",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 5000, // Dismiss after 5 seconds
+              }
             );
             return;
           }
         })
         .catch((err) => {
           setLoading(false);
-          let errMessage =
-            "Oops something went wrong. Please try again or contact Admin";
-          if (err?.response?.status < 500) {
+          // Handle timeout error
+          if (err.code === "ECONNABORTED") {
             errMessage =
-              err?.response?.data?.error ||
-              "Oops something went wrong. Please try again or contact Admin";
+              "The request took too long. Please check your internet connection and try again.";
           }
-          addToast(errMessage, { appearance: "error" });
-          return;
+
+          // Handle network error
+          if (!err.response) {
+            errMessage =
+              "Network error. Please check your internet connection and try again.";
+          }
+
+          // Handle server-side error (response error)
+          if (err.response) {
+            if (err.response.status < 500) {
+              errMessage =
+                err?.response?.data?.error ||
+                "Request failed. Please check the form and try again.";
+            } else {
+              errMessage = "Server error. Please try again later.";
+            }
+          }
+
+          addToast(errMessage, {
+            appearance: "error",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          });
         });
     } else {
       setFormError({
