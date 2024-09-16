@@ -27,7 +27,7 @@ export default function () {
           infinite={true}
         >
           {/* <CommunityEvent /> */}
-          {/* <CloudConnectBanner /> */}
+          <CloudConnectBanner />
           <AtPartner />
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
