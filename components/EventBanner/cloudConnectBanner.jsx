@@ -47,7 +47,7 @@ const CloudConnectBanner = () => {
             <div className=" position-absolute">
               <Image
                 width={689}
-                height={457}
+                height={447}
                 src="/assets/cloud-connect/images/Shape.png"
                 alt="cloudconnect"
                 className={styles.image__border}
@@ -56,7 +56,7 @@ const CloudConnectBanner = () => {
             <div className="position-absolute">
               <Image
                 width={689}
-                height={457}
+                height={447}
                 src="/assets/cloud-connect/images/picture.png"
                 alt="cloudconnect"
                 className={styles.image__border}
