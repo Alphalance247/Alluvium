@@ -24,31 +24,27 @@ const CloudConnectBanner = () => {
           </div>
           <div>
             <Link href="/cloud-connect/book-a-ticket">
-              <Button size="large">Buy Tickets</Button>
+              <Button size="large">Register Now</Button>
             </Link>
           </div>
         </div>
 
-        <div className={styles.adress}>
-          <div className={styles["hero__content-date"]}>
-            Nov 28, 2024 | The Zone, Plot 9, Gbagada Industrial Scheme beside
-            UPS, Lagos Nigeria
+        <div className={styles.address}>
+          <div className="d-sm-inline-block d-lg-flex justify-content-between gap-3 align-items-center ">
+            <p className={styles.time}>November 28, 2024</p>
+            <p className={styles.address__venue}>
+              The Zone, Plot 9, Gbagada Industrial Scheme beside UPS, Lagos
+              Nigeria
+            </p>
           </div>
 
           <div className={`${styles.image__connect}`}>
             <Image
-              width={790}
-              height={346}
+              width={1009}
+              height={700}
               src="/assets/cloud-connect/images/idconnect.png"
               alt="cloudconnect"
-            />
-          </div>
-          <div className={`${styles.image__ride}`}>
-            <Image
-              width={646}
-              height={300}
-              src="/assets/cloud-connect/images/image 82.png"
-              alt="cloudconnect"
+              className={styles.image__border}
             />
           </div>
         </div>

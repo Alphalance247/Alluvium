@@ -40,7 +40,7 @@
     }
 
     @media (min-width: 1024px) {
-      max-width: 500px;
+      max-width: 600px;
     }
 
     &-date {
@@ -180,20 +180,29 @@
   padding-bottom: 4rem;
 
   .image__connect {
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 
-  .adress {
-    padding-top: 4rem;
-    position: relative;
-    z-index: 1;
-  }
+  .address {
+    padding-top: 2rem;
 
-  .image__ride {
-    position: absolute;
-    transform: translateZ(-50%);
-    top: 60%;
-    z-index: -10;
+    .time {
+      color: black;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 1rem;
+      background: #f3ebeb;
+      border-radius: 0.5rem;
+    }
+
+    .address__venue {
+      color: black;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 1rem;
+      background: #f3ebeb;
+      border-radius: 0.5rem;
+    }
   }
 
   .new__hero__content_title {
@@ -204,5 +213,16 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     color: white;
+    @media screen and (max-width: 992px) {
+      font-size: 4rem;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 3rem;
+    }
+  }
+
+  .image__border {
+    border: 20px solid black;
+    border-radius: 6rem;
   }
 }
