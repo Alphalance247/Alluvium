@@ -38,14 +38,30 @@ const CloudConnectBanner = () => {
             </p>
           </div>
 
-          <div className={`${styles.image__connect}`}>
-            <Image
-              width={1009}
-              height={700}
-              src="/assets/cloud-connect/images/idconnect.png"
-              alt="cloudconnect"
-              className={styles.image__border}
-            />
+          <div
+            className={`${styles.image__connect} position-relative`}
+            style={{
+              filter: "drop-shadow(0px 4px 250px rgba(255, 201, 62, 0.18))", // Yellow shadow with blur and opacity
+            }}
+          >
+            <div className=" position-absolute">
+              <Image
+                width={689}
+                height={457}
+                src="/assets/cloud-connect/images/Shape.png"
+                alt="cloudconnect"
+                className={styles.image__border}
+              />
+            </div>
+            <div className="position-absolute">
+              <Image
+                width={689}
+                height={457}
+                src="/assets/cloud-connect/images/picture.png"
+                alt="cloudconnect"
+                className={styles.image__border}
+              />
+            </div>
           </div>
         </div>
       </div>
