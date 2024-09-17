@@ -64,7 +64,7 @@ export default function () {
                   className={`img-fluid ${styles.fimages}`}
                   width={176}
                   height={101}
-                  src="/assets/home/Image2.svg"
+                  src="/assets/home/image2.svg"
                 />
               </div>
               <div className="ml-3 mt-2">
