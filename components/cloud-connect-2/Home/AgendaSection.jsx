@@ -17,7 +17,7 @@ const AgendaSection = () => {
       <div className={styles.agendaContent}>
         <div className={styles.agendaHeader}>
           <h2 className={styles.title}>Agenda</h2>
-          <p className={styles.date}>Wednesday, November 28th, 2024</p>
+          <p className={styles.date}>Thursday, November 28th, 2024</p>
         </div>
         <div className={styles.agendaItems}>
           {agendaItems.map((item, index) => (
