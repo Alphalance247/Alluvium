@@ -166,7 +166,7 @@
     display: block;
     cursor: pointer;
 
-    @media (min-width: 768px) {
+    @media (min-width: 994px) {
       display: none;
     }
 
@@ -180,7 +180,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    // background-color: rgba(6, 26, 36, 0.781);
     background-color: #061a24;
     backdrop-filter: blur(10px);
     position: absolute;
@@ -209,7 +208,7 @@
       }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 994px) {
       display: flex;
       flex-direction: row;
       width: auto;
