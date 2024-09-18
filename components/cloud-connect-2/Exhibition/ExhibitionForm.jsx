@@ -1,6 +1,5 @@
 import BecomeReuse from "components/cloud-connect-common/becomeReuse";
 import Input from "components/licence-component/inputP";
-import styles from "../../styles/cloud2.4/sponsor.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useState } from "react";
@@ -8,17 +7,21 @@ import { Country } from "country-state-city";
 import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import LoadingScreen from "components/loading";
+import styles from "../../../styles/cloud2.4/sponsor.module.scss";
 
-const SponsorsForm = () => {
+const ExhibitionForm = () => {
   const [country] = useState(Country.getAllCountries());
   const [form, setForm] = useState({
-    phone_number_6: "",
+    phone_number_5: "",
+    explore_sponsorship_16: "Yes",
   });
   const { addToast } = useToasts();
   const [formError, setFormError] = useState({
-    phone_number_6: false,
+    phone_number_5: false,
   });
   const [loading, setLoading] = useState(false);
+
+  console.log(form);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -31,18 +34,18 @@ const SponsorsForm = () => {
   };
 
   const handleNumber = (value) => {
-    setForm((prev) => ({ ...prev, phone_number_6: value }));
-    setFormError((prev) => ({ ...prev, phone_number_6: false }));
+    setForm((prev) => ({ ...prev, phone_number_5: value }));
+    setFormError((prev) => ({ ...prev, phone_number_5: false }));
   };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
 
     if (
-      form.country_7 &&
-      form.phone_number_6 &&
-      form.What_are_your_primary_objectives_12 &&
-      form.preferred_sponsorship_tier_10 &&
+      form.company_name_7 &&
+      form.phone_number_5 &&
+      form.industry_8 &&
+      form.country_6 &&
       form.budget_9 &&
       form.hear_about_us_11
     ) {
@@ -69,7 +72,7 @@ const SponsorsForm = () => {
             );
             setForm({
               ...form,
-              first_name_20: "",
+              first_name_1: "",
               last_name_2: "",
               job_title_4: "",
               company_organization_3: "",
@@ -86,7 +89,7 @@ const SponsorsForm = () => {
           } else {
             addToast(
               res.data.error ||
-                "Unexpected response from server. Please try again or contact Admin",
+                "Error occured, please try again or contact Admin",
               {
                 appearance: "error",
                 autoDismiss: true, // Enable auto dismiss
@@ -98,8 +101,7 @@ const SponsorsForm = () => {
         })
         .catch((err) => {
           setLoading(false);
-          let errMessage =
-            "Oops something went wrong. Please try again or contact Admin";
+          let errMessage;
 
           // Handle timeout error
           if (err.code === "ECONNABORTED") {
@@ -154,7 +156,7 @@ const SponsorsForm = () => {
           <LoadingScreen message="Your request is being processed......" />
         )}
         <BecomeReuse
-          heading=" BECOME A CLOUD CONNECT SPONSOR"
+          heading="BECOME AN EXHIBITOR"
           paragraph="Explore our sponsorship packages and join us in making a significant impact."
         />
         <div className={styles.formdetails}>
@@ -163,26 +165,26 @@ const SponsorsForm = () => {
             className={styles.formlogic}
             onSubmit={handleSubmitForm}
           >
-            <p>Your Details</p>
+            <p>BASIC INFORMATION</p>
             <div className={styles.input1style}>
               <div>
                 <Input
-                  id="first_name"
-                  label="first_name"
+                  id="first_name_1"
+                  label="first_name_1"
                   text="First Name"
-                  name="first_name_20"
+                  name="first_name_1"
                   type="text"
-                  value={form.first_name_20 || ""}
+                  value={form.first_name_1 || ""}
                   placeholder=""
                   onChange={handleChange}
-                  errorF={formError.first_name_20}
+                  errorF={formError.first_name_1}
                 />
               </div>
 
               <div>
                 <Input
-                  id="last_name"
-                  label="last_name"
+                  id="last_name_2"
+                  label="last_name_2"
                   text="Last Name"
                   name="last_name_2"
                   type="text"
@@ -195,44 +197,29 @@ const SponsorsForm = () => {
 
               <div>
                 <Input
-                  id="jobFunction"
-                  label="jobFunction"
-                  text="Company/organization "
-                  name="company_organization_3"
-                  type="text"
-                  value={form.company_organization_3 || ""}
-                  placeholder=""
-                  onChange={handleChange}
-                  errorF={formError.company_organization_3}
-                />
-              </div>
-              <div>
-                <Input
-                  id="job_title_4"
-                  label="job_title_4"
+                  id="Job title"
+                  label="Job title"
                   text="Job title "
-                  name="job_title_4"
+                  name="job_title_3"
                   type="text"
-                  value={form.job_title_4 || ""}
+                  value={form.job_title_3 || ""}
                   placeholder=""
                   onChange={handleChange}
-                  errorF={formError.job_title_4}
+                  errorF={formError.job_title_3}
                 />
               </div>
-            </div>
 
-            <div className={styles.input2style}>
               <div>
                 <Input
-                  id="current_technical_email"
-                  label="current_technical_email"
-                  text="Email "
-                  name="email_5"
+                  id="Email"
+                  label="Email"
+                  text="Email"
+                  name="email_4"
                   type="email"
-                  value={form.email_5 || ""}
+                  value={form.email_4 || ""}
                   placeholder=""
                   onChange={handleChange}
-                  errorF={formError.email_5}
+                  errorF={formError.email_4}
                 />
               </div>
 
@@ -245,14 +232,14 @@ const SponsorsForm = () => {
                   international
                   required
                   defaultCountry="NG"
-                  value={form.phone_number_6 ?? ""}
+                  value={form.phone_number_5 ?? ""}
                   onChange={handleNumber}
                   className={`${styles.PhoneInput} ${
                     styles.PhoneInputCountry
-                  } ${formError.phone_number_6 ? styles.error : ""}`}
+                  } ${formError.phone_number_5 ? styles.error : ""}`}
                 />
 
-                {formError.phone_number_6 && (
+                {formError.phone_number_5 && (
                   <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                     Please enter your phone number
                   </h6>
@@ -265,12 +252,12 @@ const SponsorsForm = () => {
                 </label>
 
                 <select
-                  name="country_7"
+                  name="country_6"
                   id="Country"
                   className={`${styles.countrySelect} ${
-                    formError.country_7 ? styles.error : ""
+                    formError.country_6 ? styles.error : ""
                   }`}
-                  value={form.country_7}
+                  value={form.country_6}
                   onChange={handleChange}
                 >
                   <option value=""></option>
@@ -281,147 +268,153 @@ const SponsorsForm = () => {
                   ))}
                 </select>
                 {/* <FaChevronDown className={styles.iconic} /> */}
-                {formError.country_7 && (
+                {formError.country_6 && (
                   <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                     Please enter your country
                   </h6>
                 )}
               </div>
-
-              <div>
-                <Input
-                  id="website_url_8"
-                  label="website_url_8"
-                  text="Website URL"
-                  name="website_url_8"
-                  type="text"
-                  value={form.website_url_8 || ""}
-                  placeholder=""
-                  onChange={handleChange}
-                  errorF={formError.website_url_8}
-                />
-              </div>
             </div>
 
             <div className={styles.packageForm}>
-              <p>Sponsorship Packages</p>
+              <p>Company details</p>
 
               <div className={styles.input3style}>
+                <div>
+                  <Input
+                    id="company_name_7"
+                    label="company_name_7"
+                    text="Company name"
+                    name="company_name_7"
+                    type="text"
+                    value={form.company_name_7 || ""}
+                    placeholder=""
+                    onChange={handleChange}
+                    errorF={formError.company_name_7}
+                  />
+                </div>
+
                 <div className=" position-relative">
                   <label
                     htmlFor="Country"
                     className={styles.labelStyle}
                     style={{ marginBottom: "10px" }}
                   >
-                    What is your budget for partnership *
+                    Industry
                   </label>
 
                   <select
-                    name="budget_9"
-                    id="budget_9"
+                    name="industry_8"
+                    id="industry_8"
                     className={`${styles.countrySelect} ${
-                      formError.budget_9 ? styles.error : ""
+                      formError.industry_8 ? styles.error : ""
                     }`}
-                    value={form.budget_9}
+                    value={form.industry_8}
                     onChange={handleChange}
                   >
                     <option value=""></option>
-
-                    <option value="NGN 300,000 - 450,000">
-                      NGN 300,000 - 450,000
+                    <option value="Finance">Finance</option>
+                    <option value="Logistics">Logistics</option>
+                    <option value="Education">Education</option>
+                    <option value="Government">Government</option>
+                    <option value="Artificial Intelligence">
+                      Artificial Intelligence
                     </option>
-                    <option value="NGN 500,000 - 1,000,000">
-                      NGN 500,000 - 1,000,000
-                    </option>
+                    <option value="Ecommerce+">Ecommerce+</option>
                   </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
-                  {/* {formError. && (
-                    <p style={{ color: "red" }}>This field is Required</p>
-                  )} */}
-                  {formError.budget_9 && (
+
+                  {formError.industry_8 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
-                      Please select your budget
+                      This field is required
                     </h6>
                   )}
                 </div>
+              </div>
 
-                {form.budget_9 === "NGN 300,000 - 450,000" && (
-                  <div className=" position-relative">
-                    <label
-                      htmlFor="Country"
-                      className={styles.labelStyle}
-                      style={{ marginBottom: "10px" }}
-                    >
-                      Preferred sponsorship tier
-                    </label>
+              <div>
+                <label
+                  htmlFor="additional_info_14"
+                  className={styles.labelStyle}
+                  style={{ marginBottom: "10px" }}
+                >
+                  Provide a brief description of your company (150 words or
+                  less).
+                </label>
+                <textarea
+                  id="additional_info_14"
+                  name="additional_info_14"
+                  rows="10"
+                  cols="100"
+                  value={form.additional_info_14 || ""}
+                  onChange={handleChange}
+                  className={styles.textareastyle}
+                ></textarea>
+              </div>
+            </div>
 
-                    <select
-                      name="preferred_sponsorship_tier_10"
-                      id="preferred_sponsorship_tier_10"
-                      className={`${styles.countrySelect} ${
-                        formError.preferred_sponsorship_tier_10
-                          ? styles.error
-                          : ""
-                      }`}
-                      value={form.preferred_sponsorship_tier_10}
-                      onChange={handleChange}
-                    >
-                      <option value=""></option>
-                      <option value="Silver">Silver</option>
-                    </select>
-                    {/* <FaChevronDown className={styles.iconic} /> */}
-                    {/* {formError.preferred_sponsorship_tier_10 && (
-                    <p style={{ color: "red" }}>This field is Required</p>
-                  )} */}
-                    {formError.preferred_sponsorship_tier_10 && (
-                      <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
-                        Please select your preferred tier
-                      </h6>
-                    )}
-                  </div>
-                )}
-                {form.budget_9 === "NGN 500,000 - 1,000,000" && (
-                  <div className=" position-relative">
-                    <label
-                      htmlFor="Country"
-                      className={styles.labelStyle}
-                      style={{ marginBottom: "10px" }}
-                    >
-                      Preferred sponsorship tier
-                    </label>
-
-                    <select
-                      name="preferred_sponsorship_tier_10"
-                      id="preferred_sponsorship_tier_10"
-                      className={`${styles.countrySelect} ${
-                        formError.preferred_sponsorship_tier_10
-                          ? styles.error
-                          : ""
-                      }`}
-                      value={form.preferred_sponsorship_tier_10}
-                      onChange={handleChange}
-                    >
-                      <option value=""></option>
-                      <option value="Gold">Gold</option>
-                    </select>
-                    {/* <FaChevronDown className={styles.iconic} /> */}
-                    {/* {formError.preferred_sponsorship_tier_10 && (
-                    <p style={{ color: "red" }}>This field is Required</p>
-                  )} */}
-                    {formError.preferred_sponsorship_tier_10 && (
-                      <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
-                        Please select your preferred tier
-                      </h6>
-                    )}
-                  </div>
-                )}
+            <div className={styles.packageForm}>
+              <p>EXHIBITORS Packages</p>
+              <div className=" d-grid gap-3">
+                <div>
+                  <label
+                    htmlFor="describe_product_service_12"
+                    className={styles.labelStyle}
+                    style={{ marginBottom: "10px" }}
+                  >
+                    Describe the products or services you plan to showcase
+                  </label>
+                  <textarea
+                    id="describe_product_service_12"
+                    name="describe_product_service_12"
+                    rows="10"
+                    cols="100"
+                    value={form.describe_product_service_12 || ""}
+                    onChange={handleChange}
+                    className={styles.textareastyle}
+                  ></textarea>
+                </div>
+                <div>
+                  <label
+                    htmlFor="target_audience_13"
+                    className={styles.labelStyle}
+                    style={{ marginBottom: "10px" }}
+                  >
+                    Who is your target audience at the event
+                  </label>
+                  <textarea
+                    id="target_audience_13"
+                    name="target_audience_13"
+                    rows="10"
+                    cols="100"
+                    value={form.target_audience_13 || ""}
+                    onChange={handleChange}
+                    className={styles.textareastyle}
+                  ></textarea>
+                </div>
+                <div>
+                  <label
+                    htmlFor="booth_req_14"
+                    className={styles.labelStyle}
+                    style={{ marginBottom: "10px" }}
+                  >
+                    Do you have any special requirements for your booth
+                  </label>
+                  <textarea
+                    id="booth_req_14"
+                    name="booth_req_14"
+                    rows="10"
+                    cols="100"
+                    value={form.booth_req_14 || ""}
+                    onChange={handleChange}
+                    className={styles.textareastyle}
+                  ></textarea>
+                </div>
               </div>
             </div>
 
             <div className={styles.additionalDetails}>
               <p>Additional Information</p>
-
-              <div className={styles.input4style}>
+              <div className=" d-grid gap-3">
                 <div className=" position-relative">
                   <label
                     htmlFor="hear_about_us_11"
@@ -439,7 +432,7 @@ const SponsorsForm = () => {
                     value={form.hear_about_us_11}
                     onChange={handleChange}
                   >
-                    <option value=""></option>
+                    <option value="">Select</option>
                     <option value="Google">Google</option>
                     <option value="Social media">Social media</option>
                     <option value="Referral from a Friend or Colleague">
@@ -461,77 +454,73 @@ const SponsorsForm = () => {
                   )}
                 </div>
 
-                <div className=" position-relative">
+                <div>
                   <label
-                    htmlFor="What_are_your_primary_objectives_12"
+                    htmlFor="explore_sponsorship_16"
+                    className={styles.labelStyle}
+                    style={{ marginBottom: "0.5rem" }}
+                  >
+                    Would you like to explore sponsorship opportunities to
+                    enhance your presence
+                  </label>
+
+                  <div>
+                    <input
+                      type="radio"
+                      name="explore_sponsorship_16"
+                      value="Yes"
+                      id=""
+                      checked={form?.explore_sponsorship_16 === "Yes"}
+                      onChange={handleChange}
+                    />
+                    <h6
+                      className="d-inline-block mx-2"
+                      style={{ color: "#374151" }}
+                    >
+                      Yes
+                    </h6>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="explore_sponsorship_16"
+                      id=""
+                      value="No"
+                      checked={form?.explore_sponsorship_16 === "No"}
+                      onChange={handleChange}
+                    />
+                    <h6
+                      className="d-inline-block mx-2"
+                      style={{ color: "#374151" }}
+                    >
+                      No
+                    </h6>
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="other_questsion_17"
                     className={styles.labelStyle}
                     style={{ marginBottom: "10px" }}
                   >
-                    What are your primary objectives? *
+                    Do you have any other questions or comments?
                   </label>
-
-                  <select
-                    name="What_are_your_primary_objectives_12"
-                    id="What_are_your_primary_objectives_12"
-                    className={`${styles.countrySelect} ${
-                      formError.What_are_your_primary_objectives_12
-                        ? styles.error
-                        : ""
-                    }`}
-                    value={form.What_are_your_primary_objectives_12}
+                  <input
+                    id="other_questsion_17"
+                    name="other_questsion_17"
+                    type="text"
+                    placeholder=""
+                    className={styles.textareastyle}
+                    value={form.other_questsion_17 || ""}
                     onChange={handleChange}
-                  >
-                    <option value=""></option>
-                    <option value="Brand Awareness and Visibility">
-                      Brand Awareness and Visibility
-                    </option>
-                    <option value="Lead Generation and Sales">
-                      Lead Generation and Sales
-                    </option>
-                    <option value="Partnership and Networking">
-                      Partnership and Networking
-                    </option>
-                    <option value="Share knowledge and insights with the target audience">
-                      Share knowledge and insights with the target audience
-                    </option>
-                  </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
-                  {/* {formError.What_are_your_primary_objectives_12 && (
-                    <p style={{ color: "red" }}>Country is Required</p>
-                  )} */}
-
-                  {formError.What_are_your_primary_objectives_12 && (
-                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
-                      This field is required
-                    </h6>
-                  )}
+                  />
                 </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="additional_info_14"
-                  className={styles.labelStyle}
-                  style={{ marginBottom: "10px" }}
-                >
-                  Please provide additional information or context about your
-                  objectives for a potential partnership with us*
-                </label>
-                <textarea
-                  id="additional_info_14"
-                  name="additional_info_14"
-                  rows="10"
-                  cols="100"
-                  required
-                  value={form.additional_info_14 || ""}
-                  onChange={handleChange}
-                  className={styles.textareastyle}
-                ></textarea>
               </div>
             </div>
 
             <div>
-              <button className={styles.button1}>Submit Request</button>
+              <button className={styles.button1}>Submit Application</button>
             </div>
           </form>
         </div>
@@ -540,4 +529,4 @@ const SponsorsForm = () => {
   );
 };
 
-export default SponsorsForm;
+export default ExhibitionForm;

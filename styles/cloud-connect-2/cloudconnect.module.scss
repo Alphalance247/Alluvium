@@ -166,7 +166,7 @@
     display: block;
     cursor: pointer;
 
-    @media (min-width: 768px) {
+    @media (min-width: 994px) {
       display: none;
     }
 
@@ -180,7 +180,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    // background-color: rgba(6, 26, 36, 0.781);
     background-color: #061a24;
     backdrop-filter: blur(10px);
     position: absolute;
@@ -209,7 +208,7 @@
       }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 994px) {
       display: flex;
       flex-direction: row;
       width: auto;
@@ -229,6 +228,7 @@
   width: 100%;
   object-fit: cover;
   height: 500px;
+  margin: auto;
 
   @media (min-width: 768px) {
     height: 1055px;
@@ -453,4 +453,22 @@
 .sponsor_hero {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.spinner {
+  height: 16px;
+  width: 16px;
+  border: 2px solid #f3f3f3; // Light grey border
+  border-top: 2px solid #3498db; // Blue top border
+  border-radius: 50%; // Makes it a circle
+  animation: spin 1s linear infinite; // Spin animation
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
