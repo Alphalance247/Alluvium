@@ -6,7 +6,6 @@ import PhoneInput from "react-phone-number-input";
 import { useState } from "react";
 import { Country } from "country-state-city";
 import { useToasts } from "react-toast-notifications";
-import { FaChevronDown } from "react-icons/fa";
 import axios from "axios";
 import LoadingScreen from "components/loading";
 
@@ -90,6 +89,8 @@ const SponsorsForm = () => {
                 "Unexpected response from server. Please try again or contact Admin",
               {
                 appearance: "error",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 5000, // Dismiss after 5 seconds
               }
             );
             return;
@@ -326,8 +327,8 @@ const SponsorsForm = () => {
                   >
                     <option value=""></option>
 
-                    <option value="NGN 300,000 - 500,000">
-                      NGN 300,000 - 500,000
+                    <option value="NGN 300,000 - 450,000">
+                      NGN 300,000 - 450,000
                     </option>
                     <option value="NGN 500,000 - 1,000,000">
                       NGN 500,000 - 1,000,000
@@ -344,7 +345,7 @@ const SponsorsForm = () => {
                   )}
                 </div>
 
-                {form.budget_9 === "NGN 300,000 - 500,000" && (
+                {form.budget_9 === "NGN 300,000 - 450,000" && (
                   <div className=" position-relative">
                     <label
                       htmlFor="Country"

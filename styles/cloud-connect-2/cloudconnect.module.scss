@@ -454,3 +454,21 @@
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+
+.spinner {
+  height: 16px;
+  width: 16px;
+  border: 2px solid #f3f3f3; // Light grey border
+  border-top: 2px solid #3498db; // Blue top border
+  border-radius: 50%; // Makes it a circle
+  animation: spin 1s linear infinite; // Spin animation
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

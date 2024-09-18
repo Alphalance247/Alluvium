@@ -80,7 +80,8 @@ const VolunterForm = () => {
       form.phone_number_4 &&
       form.state_6 &&
       form.volunteer_reason_9 &&
-      form.which_experience_8
+      form.which_experience_8 &&
+      form.volunteer_role_13
     ) {
       setLoading(true);
       await axios
@@ -118,12 +119,15 @@ const VolunterForm = () => {
               volunteer_before_10: "No",
               experience_desc_11: "",
               question_comment_info_12: "",
+              volunteer_role_13: "",
             });
           } else {
             addToast(
               "Unexpected response from server. Please try again or contact Admin",
               {
                 appearance: "error",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 5000, // Dismiss after 5 seconds
               }
             );
             return;
@@ -170,11 +174,10 @@ const VolunterForm = () => {
         state_6: !form.state_6,
         which_experience_8: !form.which_experience_8,
         volunteer_reason_9: !form.volunteer_reason_9,
+        volunteer_role_13: !form.volunteer_role_13,
       });
     }
   };
-
-  console.log(form);
 
   return (
     <section className={`container-fluid ${styles.volunteeringForm}`}>
@@ -279,7 +282,6 @@ const VolunterForm = () => {
                     </option>
                   ))}
                 </select>
-                {/* <FaChevronDown className={styles.iconic} /> */}
                 {formError.country_5 && (
                   <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                     This field is required
@@ -335,6 +337,44 @@ const VolunterForm = () => {
               <p>VOLUNTEER INFORMATION</p>
 
               <div className={styles.volunteerstyleform2}>
+                <div className=" position-relative">
+                  <label
+                    htmlFor="volunteer_role_13"
+                    className={styles.labelStyle}
+                  >
+                    Volunteer's role *
+                  </label>
+                  <select
+                    name="volunteer_role_13"
+                    id="volunteer_role_13"
+                    className={`${styles.countrySelect} ${
+                      formError.volunteer_role_13 ? styles.error : ""
+                    }`}
+                    value={form.volunteer_role_13}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select</option>
+                    <option value="Registration/Checking">
+                      Registration/Checking
+                    </option>
+                    <option value="Ushering department">
+                      Ushering department
+                    </option>
+                    <option value="VIP speaker liaison">
+                      VIP speaker liaison
+                    </option>
+                    <option value="Information Desk">Information Desk</option>
+                    <option value="Section/technical Assistant">
+                      Section/technical Assistant
+                    </option>
+                  </select>
+                  {/* <FaChevronDown className={styles.iconic} /> */}
+                  {formError.volunteer_role_13 && (
+                    <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                      This field is required
+                    </h6>
+                  )}
+                </div>
                 <div className=" position-relative">
                   <label
                     htmlFor="volunteer_reason_9"
@@ -436,6 +476,7 @@ const VolunterForm = () => {
                     />
                     <text className={styles.radioP}>Yes</text>
                   </div>
+
                   <div>
                     <input
                       type="radio"
@@ -448,26 +489,25 @@ const VolunterForm = () => {
                     <text className={styles.radioP}>No</text>
                   </div>
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="experience_desc_11"
-                    className={styles.labelStyle}
-                  >
-                    If yes, can you describe your experience
-                  </label>
-                  <textarea
-                    id="experience_desc_11"
-                    name="experience_desc_11"
-                    rows="10"
-                    cols="100"
-                    value={form.experience_desc_11 || ""}
-                    onChange={handleChange}
-                    className={`${styles.textareastyle} ${
-                      formError.volunteer_reason_9 ? styles.error : ""
-                    }`}
-                  ></textarea>
-                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="experience_desc_11"
+                  className={styles.labelStyle}
+                >
+                  If yes, can you describe your experience
+                </label>
+                <textarea
+                  id="experience_desc_11"
+                  name="experience_desc_11"
+                  rows="10"
+                  cols="100"
+                  value={form.experience_desc_11 || ""}
+                  onChange={handleChange}
+                  className={`${styles.textareastyle} ${
+                    formError.volunteer_reason_9 ? styles.error : ""
+                  }`}
+                ></textarea>
               </div>
             </div>
 

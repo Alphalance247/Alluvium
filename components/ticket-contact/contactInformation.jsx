@@ -8,6 +8,7 @@ import OrderSummary from "components/cloud-connect-common/orderSummary";
 import axios from "axios";
 import { useToasts } from "react-toast-notifications";
 import { useRouter } from "next/router";
+import { environment } from "env/env.local";
 
 const ContactInformation = () => {
   const [form, setForm] = useState({});
@@ -82,12 +83,13 @@ const ContactInformation = () => {
       form.first_name_1 &&
       form.last_name_2 &&
       emailRegex.test(form.email_3) &&
-      form.phone_number_5
+      form.phone_number_5 &&
+      hear_about_us_27
     ) {
       setLoading(true);
       await axios
         .post(
-          "https://vast.ec2.alluvium.net/cloud-connect/ticket-form",
+          `${environment.baseUrl}${environment.TicketUrl}`,
           {
             ...form,
             bronze_ticket_10: bronze,
@@ -117,6 +119,7 @@ const ContactInformation = () => {
               recipient_first_name_6: "",
               recipient_last_name_7: "",
               recipient_phone_number_9: "",
+              hear_about_us_27: "",
             });
           } else {
             addToast(
@@ -133,6 +136,7 @@ const ContactInformation = () => {
         })
         .catch((err) => {
           setLoading(false);
+          let errMessage;
           // Handle timeout error
           if (err.code === "ECONNABORTED") {
             errMessage =
@@ -142,7 +146,7 @@ const ContactInformation = () => {
           // Handle network error
           if (!err.response) {
             errMessage =
-              "Network error. Please check your internet connection and try again.";
+              "Unexpected response from server. Please check your details and try again";
           }
 
           // Handle server-side error (response error)
@@ -169,6 +173,7 @@ const ContactInformation = () => {
         last_name_2: !form.last_name_2,
         email_3: !emailRegex.test(form.email_3),
         phone_number_5: !form.phone_number_5,
+        hear_about_us_27: !form.hear_about_us_27,
       });
     }
   };
@@ -267,6 +272,43 @@ const ContactInformation = () => {
               }`}
             />
             {formError.phone_number_5 && (
+              <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                This field is required
+              </h6>
+            )}
+          </div>
+
+          <div className=" position-relative">
+            <label
+              htmlFor="hear_about_us_27"
+              className={styles.labelStyle}
+              style={{ marginBottom: "8px" }}
+            >
+              How did you hear about us? *
+            </label>
+            <select
+              name="hear_about_us_27"
+              id="hear_about_us_27"
+              className={`${styles.countrySelect} ${
+                formError.hear_about_us_27 ? styles.error : ""
+              }`}
+              value={form.hear_about_us_27}
+              onChange={handleChange}
+            >
+              <option value=""></option>
+              <option value="Google">Google</option>
+              <option value="Social media">Social media</option>
+              <option value="Referral from a Friend or Colleague">
+                Referral from a Friend or Colleague
+              </option>
+              <option value="Event Website">Event Website</option>
+              <option value="Company Website">Company Website</option>
+              <option value="Email Newsletter">Email Newsletter</option>
+              <option value="Previous Attendance">Previous Attendance</option>
+            </select>
+            {/* <FaChevronDown className={styles.iconic} /> */}
+
+            {formError.hear_about_us_27 && (
               <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                 This field is required
               </h6>

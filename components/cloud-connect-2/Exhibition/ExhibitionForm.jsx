@@ -13,6 +13,7 @@ const ExhibitionForm = () => {
   const [country] = useState(Country.getAllCountries());
   const [form, setForm] = useState({
     phone_number_5: "",
+    explore_sponsorship_16: "Yes",
   });
   const { addToast } = useToasts();
   const [formError, setFormError] = useState({
@@ -33,26 +34,30 @@ const ExhibitionForm = () => {
   };
 
   const handleNumber = (value) => {
-    setForm((prev) => ({ ...prev, phone_number_6: value }));
-    setFormError((prev) => ({ ...prev, phone_number_6: false }));
+    setForm((prev) => ({ ...prev, phone_number_5: value }));
+    setFormError((prev) => ({ ...prev, phone_number_5: false }));
   };
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
 
     if (
-      form.country_7 &&
-      form.phone_number_6 &&
-      form.What_are_your_primary_objectives_12 &&
-      form.preferred_sponsorship_tier_10 &&
+      form.company_name_7 &&
+      form.phone_number_5 &&
+      form.industry_8 &&
+      form.country_6 &&
       form.budget_9 &&
       form.hear_about_us_11
     ) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/cloud-connect/sponsorship-form", {
-          ...form,
-        })
+        .post(
+          "https://vast.ec2.alluvium.net/cloud-connect/sponsorship-form",
+          {
+            ...form,
+          },
+          { timeout: 40000 }
+        )
         .then((res) => {
           setLoading(false);
 
@@ -61,11 +66,13 @@ const ExhibitionForm = () => {
               "Your request has been submitted successfully. Thank you, we'll be in touch.",
               {
                 appearance: "success",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 5000, // Dismiss after 5 seconds
               }
             );
             setForm({
               ...form,
-              first_name_20: "",
+              first_name_1: "",
               last_name_2: "",
               job_title_4: "",
               company_organization_3: "",
@@ -83,22 +90,47 @@ const ExhibitionForm = () => {
             addToast(
               res.data.error ||
                 "Error occured, please try again or contact Admin",
-              { appearance: "error" }
+              {
+                appearance: "error",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 5000, // Dismiss after 5 seconds
+              }
             );
             return;
           }
         })
         .catch((err) => {
           setLoading(false);
-          let errMessage =
-            "Oops something went wrong. Please try again or contact Admin";
-          if (err?.response?.status < 500) {
+          let errMessage;
+
+          // Handle timeout error
+          if (err.code === "ECONNABORTED") {
             errMessage =
-              err?.response?.data?.error ||
-              "Oops something went wrong. Please try again or contact Admin";
+              "The request took too long. Please check your internet connection and try again.";
           }
-          addToast(errMessage, { appearance: "error" });
-          return;
+
+          // Handle network error
+          if (!err.response) {
+            errMessage =
+              "Network error. Please check your internet connection and try again.";
+          }
+
+          // Handle server-side error (response error)
+          if (err.response) {
+            if (err.response.status < 500) {
+              errMessage =
+                err?.response?.data?.error ||
+                "Request failed. Please check the form and try again.";
+            } else {
+              errMessage = "Server error. Please try again later.";
+            }
+          }
+
+          addToast(errMessage, {
+            appearance: "error",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          });
         });
     } else {
       setFormError({
@@ -290,10 +322,7 @@ const ExhibitionForm = () => {
                     </option>
                     <option value="Ecommerce+">Ecommerce+</option>
                   </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
-                  {/* {formError.preferred_sponsorship_tier_10 && (
-                    <p style={{ color: "red" }}>This field is Required</p>
-                  )} */}
+
                   {formError.industry_8 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                       This field is required
