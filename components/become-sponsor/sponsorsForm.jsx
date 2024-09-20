@@ -440,6 +440,9 @@ const SponsorsForm = () => {
                     onChange={handleChange}
                   >
                     <option value=""></option>
+                    <option value="Atlassian Facebook Promotion">
+                      Atlassian Facebook Promotion
+                    </option>
                     <option value="Google">Google</option>
                     <option value="Social media">Social media</option>
                     <option value="Referral from a Friend or Colleague">

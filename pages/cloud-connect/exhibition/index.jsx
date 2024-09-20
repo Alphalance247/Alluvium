@@ -9,6 +9,7 @@ import AttendCloud from "components/cloud-connect-2/AttendCloud";
 import Packages from "components/cloud-connect-2/Packages";
 import ExhibitionForm from "components/cloud-connect-2/Exhibition/ExhibitionForm";
 import Link from "next/link";
+import { sponsorPackage } from "data";
 
 const data = [
   {
@@ -45,12 +46,10 @@ export const exhibitorsPackage = [
 
     paragraphs:
       "Become the cornerstone of Cloud Connect with our premier Title Sponsorship. This exclusive package offers unparalleled brand visibility and engagement opportunities,",
-    list1: "3 by 4 booth space",
-    list2: "6 chairs, 1 table, 1 socket, 1 wastebin",
-    list3: "6 complimentary meals",
-    list4: "Complimentary TV",
-    list5: "Brand backdrop",
-    list6: "Access to all events & workshop",
+    list1: "1 by 2 booth space",
+    list2: " Co-branding opportunities with Alluvium",
+    list3: "Host a dedicated workshop or roundtable",
+    list4: "Three complimentary registrations (VIP Admission)",
   },
   {
     id: "2",
@@ -59,12 +58,15 @@ export const exhibitorsPackage = [
 
     paragraphs:
       "Elevate your brand presence with our Platinum Sponsorship. This package provides significant exposure and engagement with event attendees.",
-    list1: "3 by 4 booth space",
-    list2: "6 chairs, 1 table, 1 socket, 1 wastebin",
-    list3: "6 complimentary meals",
-    list4: "Complimentary TV",
-    list5: "Brand backdrop",
-    list5: "Access to all events & workshop",
+    list1: "2 by 2 booth space",
+    list2: "All Silver Sponsor Benefits",
+    list3: " Top placement on event website & marketing materials",
+    list4: "Exclusive advertisement on our remote work website",
+    list5:
+      "Prime opportunity to feature your product in our widely distributed magazine",
+    list6: "Five complimentary registrations (Platinum Admission)",
+    list7:
+      "Priority consideration for future collaborations and partnerships with Alluvium.",
   },
 ];
 
@@ -138,7 +140,7 @@ const Exhibition = () => {
           Have questions or need more information? We are here to help you make
           the most of your Cloud Connect experience
         </p>
-        <Link href="/">
+        <Link href="/support/contact#schedule-a-call">
           <Button size="large">Contact Us</Button>
         </Link>
       </section>

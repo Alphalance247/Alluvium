@@ -47,6 +47,12 @@ const Header = () => {
       <li className={isActive("/cloud-connect/sponsor") ? styles.active : ""}>
         <Link href="/cloud-connect/sponsor">Sponsor</Link>
       </li>
+
+      <li
+        className={isActive("/cloud-connect/exhibition") ? styles.active : ""}
+      >
+        <Link href="/cloud-connect/exhibition">Exhibit</Link>
+      </li>
       <li className={isActive("/cloud-connect/volunteer") ? styles.active : ""}>
         <Link href="/cloud-connect/volunteer">Volunteer</Link>
       </li>
@@ -79,45 +85,50 @@ const Header = () => {
   );
 
   return (
-    <header className={`${styles.header}`}>
-      <nav>
-        <Link href="/cloud-connect" className={styles.logoDiv}>
-          <div className={styles.flexBetween}>
-            <Image
-              src={"/assets/cloud-connect/images/logo.png"}
-              alt="Cloud connect logo"
-              width={135}
-              height={71}
-            />
-            <div className={styles.eventDetails}>
-              <span>The Zone, Plot 9, Gbagada</span>
-              <span>Industrial Scheme beside UPS,</span>
-              <span>Lagos, Nigeria</span>
-              <span>November 28th, 2024</span>
+    <section className={`${styles.header__section} container-fluid`}>
+      <header className={`container m-auto ${styles.header}`}>
+        <nav>
+          <Link href="/cloud-connect" className={styles.logoDiv}>
+            <div className={styles.flexBetween}>
+              <Image
+                src={"/assets/cloud-connect/images/logo.png"}
+                alt="Cloud connect logo"
+                width={135}
+                height={71}
+              />
+              <div className={styles.eventDetails}>
+                <span>The Zone, Plot 9, Gbagada</span>
+                <span>Industrial Scheme beside UPS,</span>
+                <span>Lagos, Nigeria</span>
+                <span>November 28th, 2024</span>
+              </div>
             </div>
-          </div>
-        </Link>
-        {isMobile && (
-          <div className={styles.mobileMenuToggle} onClick={toggleMobileMenu}>
-            <img src="/assets/cloud-connect/icons/menu-sharp.svg" alt="menu" />
-          </div>
-        )}
-        {(!isMobile || isMobileMenuOpen) && (
-          <ul
-            className={`${styles.navList} ${
-              isMobileMenuOpen ? styles.mobileMenu : ""
-            }`}
-          >
-            {renderNavItems()}
-          </ul>
-        )}
-        <div className={styles.ctaButton}>
-          <Link href="/cloud-connect/book-a-ticket">
-            <Button>Buy Tickets</Button>
           </Link>
-        </div>
-      </nav>
-    </header>
+          {isMobile && (
+            <div className={styles.mobileMenuToggle} onClick={toggleMobileMenu}>
+              <img
+                src="/assets/cloud-connect/icons/menu-sharp.svg"
+                alt="menu"
+              />
+            </div>
+          )}
+          {(!isMobile || isMobileMenuOpen) && (
+            <ul
+              className={`${styles.navList} ${
+                isMobileMenuOpen ? styles.mobileMenu : ""
+              }`}
+            >
+              {renderNavItems()}
+            </ul>
+          )}
+          <div className={styles.ctaButton}>
+            <Link href="/cloud-connect/book-a-ticket">
+              <Button>Buy Tickets</Button>
+            </Link>
+          </div>
+        </nav>
+      </header>
+    </section>
   );
 };
 

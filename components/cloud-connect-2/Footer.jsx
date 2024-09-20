@@ -135,14 +135,9 @@ const Footer = () => {
                 placeholder="Enter your email"
                 onChange={handleChange}
                 style={{
-                  border: emailError ? "2px solid orangered" : "",
+                  border: emailError ? "2px solid orangered" : null,
                 }}
               />
-              {emailError && (
-                <p className=" text-start">
-                  Please provide a valid email address
-                </p>
-              )}
 
               <Button onClick={handleSubmit}>
                 {loading ? (
@@ -163,6 +158,11 @@ const Footer = () => {
                 )}
               </Button>
             </div>
+            {emailError && (
+              <p className=" text-start" style={{ marginTop: "1rem" }}>
+                Please provide a valid email address
+              </p>
+            )}
           </div>
         </div>
 

@@ -31,6 +31,8 @@ const Packages = ({
                 <li>{item?.list3}</li>
                 <li>{item?.list4}</li>
                 {item.list5 && <li>{item?.list5}</li>}
+                {item.list6 && <li>{item?.list6}</li>}
+                {item.list7 && <li>{item?.list7}</li>}
               </ul>
               {showButton && (
                 <Button variant="outline" onClick={handleScrollToView}>
