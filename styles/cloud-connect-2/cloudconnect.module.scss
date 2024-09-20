@@ -4,9 +4,11 @@
   color: #fff;
 }
 
-.header {
-  padding: 20px;
+.header__section {
   border-bottom: 1px solid #ffffff1a;
+}
+
+.header {
   height: 98px;
   display: flex;
   align-items: center;
@@ -32,7 +34,7 @@
     padding: 0;
 
     @media (min-width: 768px) {
-      gap: 56px;
+      gap: 16px;
       margin: 0;
     }
 
@@ -143,7 +145,7 @@
     display: none;
     margin-top: 10px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1225px) {
       margin-top: 0;
       margin-left: 20px;
       display: flex;
@@ -375,6 +377,7 @@
 
       @media (min-width: 768px) {
         align-items: center;
+        flex-direction: row;
       }
     }
 

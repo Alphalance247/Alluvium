@@ -8,6 +8,7 @@ import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import LoadingScreen from "components/loading";
 import styles from "../../../styles/cloud2.4/sponsor.module.scss";
+import { environment } from "env/env.local";
 
 const ExhibitionForm = () => {
   const [country] = useState(Country.getAllCountries());
@@ -42,17 +43,15 @@ const ExhibitionForm = () => {
     e.preventDefault();
 
     if (
-      form.company_name_7 &&
       form.phone_number_5 &&
       form.industry_8 &&
       form.country_6 &&
-      form.budget_9 &&
-      form.hear_about_us_11
+      form.hear_about_us_15
     ) {
       setLoading(true);
       await axios
         .post(
-          "https://vast.ec2.alluvium.net/cloud-connect/sponsorship-form",
+          `${environment.baseUrl}${environment.ExhibitionUrl}`,
           {
             ...form,
           },
@@ -74,17 +73,19 @@ const ExhibitionForm = () => {
               ...form,
               first_name_1: "",
               last_name_2: "",
-              job_title_4: "",
-              company_organization_3: "",
-              phone_number_6: "",
-              additional_info_14: "",
-              email_5: "",
-              country_7: "",
-              website_url_8: "",
-              hear_about_us_11: "",
-              What_are_your_primary_objectives_12: "",
-              preferred_sponsorship_tier_10: "",
-              budget_9: "",
+              job_title_3: "",
+              company_desc_9: "",
+              phone_number_5: "",
+              email_4: "",
+              country_6: "",
+              describe_product_service_12: "",
+              booth_req_14: "",
+              other_questsion_17: "",
+              hear_about_us_15: "",
+              company_name_7: "",
+              explore_sponsorship_16: "Yes",
+              target_audience_13: "",
+              industry_8: "",
             });
           } else {
             addToast(
@@ -135,13 +136,10 @@ const ExhibitionForm = () => {
     } else {
       setFormError({
         ...formError,
-        phone_number_6: !form.phone_number_6,
-        hear_about_us_11: !form.hear_about_us_11,
-        budget_9: !form.budget_9,
-        What_are_your_primary_objectives_12:
-          !form.What_are_your_primary_objectives_12,
-        preferred_sponsorship_tier_10: !form.preferred_sponsorship_tier_10,
-        country_7: !form.country_7,
+        industry_8: !form.industry_8,
+        hear_about_us_15: !form.hear_about_us_15,
+        country_6: !form.country_6,
+        phone_number_5: !form.phone_number_5,
       });
     }
   };
@@ -267,7 +265,6 @@ const ExhibitionForm = () => {
                     </option>
                   ))}
                 </select>
-                {/* <FaChevronDown className={styles.iconic} /> */}
                 {formError.country_6 && (
                   <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                     Please enter your country
@@ -296,7 +293,7 @@ const ExhibitionForm = () => {
 
                 <div className=" position-relative">
                   <label
-                    htmlFor="Country"
+                    htmlFor="industry_8"
                     className={styles.labelStyle}
                     style={{ marginBottom: "10px" }}
                   >
@@ -309,7 +306,7 @@ const ExhibitionForm = () => {
                     className={`${styles.countrySelect} ${
                       formError.industry_8 ? styles.error : ""
                     }`}
-                    value={form.industry_8}
+                    value={form?.industry_8}
                     onChange={handleChange}
                   >
                     <option value=""></option>
@@ -323,29 +320,29 @@ const ExhibitionForm = () => {
                     <option value="Ecommerce+">Ecommerce+</option>
                   </select>
 
-                  {formError.industry_8 && (
+                  {formError?.industry_8 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                       This field is required
                     </h6>
                   )}
                 </div>
               </div>
-
               <div>
                 <label
-                  htmlFor="additional_info_14"
+                  htmlFor="company_desc_9"
                   className={styles.labelStyle}
                   style={{ marginBottom: "10px" }}
                 >
                   Provide a brief description of your company (150 words or
-                  less).
+                  less). *
                 </label>
                 <textarea
-                  id="additional_info_14"
-                  name="additional_info_14"
+                  id="company_desc_9"
+                  name="company_desc_9"
                   rows="10"
                   cols="100"
-                  value={form.additional_info_14 || ""}
+                  required
+                  value={form?.company_desc_9 || ""}
                   onChange={handleChange}
                   className={styles.textareastyle}
                 ></textarea>
@@ -361,14 +358,15 @@ const ExhibitionForm = () => {
                     className={styles.labelStyle}
                     style={{ marginBottom: "10px" }}
                   >
-                    Describe the products or services you plan to showcase
+                    Describe the products or services you plan to showcase *
                   </label>
                   <textarea
                     id="describe_product_service_12"
                     name="describe_product_service_12"
                     rows="10"
                     cols="100"
-                    value={form.describe_product_service_12 || ""}
+                    required
+                    value={form?.describe_product_service_12 || ""}
                     onChange={handleChange}
                     className={styles.textareastyle}
                   ></textarea>
@@ -379,32 +377,34 @@ const ExhibitionForm = () => {
                     className={styles.labelStyle}
                     style={{ marginBottom: "10px" }}
                   >
-                    Who is your target audience at the event
+                    Who is your target audience at the event *
                   </label>
                   <textarea
                     id="target_audience_13"
                     name="target_audience_13"
                     rows="10"
                     cols="100"
-                    value={form.target_audience_13 || ""}
+                    required
+                    value={form?.target_audience_13 || ""}
                     onChange={handleChange}
                     className={styles.textareastyle}
                   ></textarea>
                 </div>
+
                 <div>
                   <label
                     htmlFor="booth_req_14"
                     className={styles.labelStyle}
                     style={{ marginBottom: "10px" }}
                   >
-                    Do you have any special requirements for your booth
+                    Do you have any special requirements for your booth *
                   </label>
                   <textarea
                     id="booth_req_14"
                     name="booth_req_14"
                     rows="10"
                     cols="100"
-                    value={form.booth_req_14 || ""}
+                    value={form?.booth_req_14 || ""}
                     onChange={handleChange}
                     className={styles.textareastyle}
                   ></textarea>
@@ -417,22 +417,25 @@ const ExhibitionForm = () => {
               <div className=" d-grid gap-3">
                 <div className=" position-relative">
                   <label
-                    htmlFor="hear_about_us_11"
+                    htmlFor="hear_about_us_15"
                     className={styles.labelStyle}
                     style={{ marginBottom: "10px" }}
                   >
                     How did you hear about us? *
                   </label>
                   <select
-                    name="hear_about_us_11"
-                    id="hear_about_us_11"
+                    name="hear_about_us_15"
+                    id="hear_about_us_15"
                     className={`${styles.countrySelect} ${
-                      formError.hear_about_us_11 ? styles.error : ""
+                      formError?.hear_about_us_15 ? styles.error : ""
                     }`}
-                    value={form.hear_about_us_11}
+                    value={form?.hear_about_us_15}
                     onChange={handleChange}
                   >
                     <option value="">Select</option>
+                    <option value="Atlassian Facebook Promotion">
+                      Atlassian Facebook Promotion
+                    </option>
                     <option value="Google">Google</option>
                     <option value="Social media">Social media</option>
                     <option value="Referral from a Friend or Colleague">
@@ -447,7 +450,7 @@ const ExhibitionForm = () => {
                   </select>
                   {/* <FaChevronDown className={styles.iconic} /> */}
 
-                  {formError.hear_about_us_11 && (
+                  {formError?.hear_about_us_15 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                       This field is required
                     </h6>

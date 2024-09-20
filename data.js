@@ -2534,9 +2534,9 @@ export const sponsorPackage = [
 
     // paragraphs:
     //   "Elevate your brand presence with our Platinum Sponsorship. This package provides significant exposure and engagement with event attendees.",
-    list1: "All Silver Sponsor Benefits, Plus",
+    list1: "All Silver Sponsor Benefits.",
     list2: " Top placement on event website & marketing materials",
-    list3: "First media interview opportunity)",
+    list3: "First media interview opportunity",
     list4: " Five complimentary registrations",
     list5:
       "Priority consideration for future collaborations and partnerships with Alluvium.",
