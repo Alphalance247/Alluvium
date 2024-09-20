@@ -12,7 +12,7 @@ const CloudConnect = () => {
     <>
       <Layout>
         <Head>
-          <title>Cloud Connect | Alluvium</title>
+          <title>Cloud Connect"23 | Alluvium</title>
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
