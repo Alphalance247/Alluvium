@@ -8,26 +8,76 @@ import { Country } from "country-state-city";
 import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import LoadingScreen from "components/loading";
+import { environment } from "env/env.local";
+import { useRouter } from "next/router";
 
 const SponsorsForm = () => {
   const [country] = useState(Country.getAllCountries());
   const [form, setForm] = useState({
     phone_number_6: "",
   });
+  const [rawAmount, setRawAmount] = useState("");
   const { addToast } = useToasts();
   const [formError, setFormError] = useState({
     phone_number_6: false,
+    amount: false,
   });
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setForm((prevForm) => ({
-      ...prevForm,
-      [name]: value,
-    }));
+    // When the tier is changed, reset the amount field
+    if (name === "preferred_sponsorship_tier_10") {
+      setForm((prevForm) => ({
+        ...prevForm,
+        [name]: value,
+        amount: "", // Clear the amount field when tier changes
+      }));
+    } else {
+      setForm((prevForm) => ({
+        ...prevForm,
+        [name]: value,
+      }));
+    }
 
     setFormError((prev) => ({ ...prev, [name]: false }));
+  };
+
+  // Utility function to format number with commas
+  const formatCurrency = (value) => {
+    return value.replace(/\B(?=(\d{3})+(?!\d))/g, ","); // Adds commas for thousands
+  };
+
+  // Handle change for the input field
+  const handleAmountChange = (e) => {
+    const { value, name } = e.target;
+
+    // Remove commas and Naira symbol before processing the raw value
+    const rawValue = value.replace(/,/g, "").replace("₦", "");
+
+    // Only allow numbers and prevent invalid input
+    if (/^\d*\.?\d*$/.test(rawValue)) {
+      setRawAmount(rawValue);
+      setForm({
+        ...form,
+        amount: "₦" + formatCurrency(rawValue), // Format with commas
+      });
+    }
+
+    const amountNumber = Number(rawValue);
+
+    if (
+      form.preferred_sponsorship_tier_10 === "Silver" &&
+      amountNumber < 300000
+    ) {
+      setFormError((prev) => ({ ...prev, amount: true }));
+    } else if (
+      form.preferred_sponsorship_tier_10 === "Gold" &&
+      amountNumber < 500000
+    ) {
+      setFormError((prev) => ({ ...prev, amount: true }));
+    } else setFormError((prev) => ({ ...prev, amount: false }));
   };
 
   const handleNumber = (value) => {
@@ -49,24 +99,23 @@ const SponsorsForm = () => {
       setLoading(true);
       await axios
         .post(
-          "https://vast.ec2.alluvium.net/cloud-connect/sponsorship-form",
+          `${environment.baseUrl}${environment.SponsorUrl}`,
           {
             ...form,
+            amount: rawAmount,
           },
           { timeout: 40000 }
         )
         .then((res) => {
           setLoading(false);
 
-          if (res.status >= 200 && res.status < 300) {
-            addToast(
-              "Your request has been submitted successfully. Thank you, we'll be in touch.",
-              {
-                appearance: "success",
-                autoDismiss: true, // Enable auto dismiss
-                autoDismissTimeout: 5000, // Dismiss after 5 seconds
-              }
-            );
+          if (res.status >= 200 && res?.status < 300) {
+            router.push(res?.data?.data?.paystack_auth_url);
+            addToast("Details submitted successfully. Redirecting...", {
+              appearance: "success",
+              autoDismiss: true, // Enable auto dismiss
+              autoDismissTimeout: 5000, // Dismiss after 5 seconds
+            });
             setForm({
               ...form,
               first_name_20: "",
@@ -82,6 +131,7 @@ const SponsorsForm = () => {
               What_are_your_primary_objectives_12: "",
               preferred_sponsorship_tier_10: "",
               budget_9: "",
+              amount: "",
             });
           } else {
             addToast(
@@ -326,7 +376,6 @@ const SponsorsForm = () => {
                     onChange={handleChange}
                   >
                     <option value=""></option>
-
                     <option value="NGN 300,000 - 450,000">
                       NGN 300,000 - 450,000
                     </option>
@@ -334,10 +383,7 @@ const SponsorsForm = () => {
                       NGN 500,000 - 1,000,000
                     </option>
                   </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
-                  {/* {formError. && (
-                    <p style={{ color: "red" }}>This field is Required</p>
-                  )} */}
+
                   {formError.budget_9 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                       Please select your budget
@@ -369,10 +415,7 @@ const SponsorsForm = () => {
                       <option value=""></option>
                       <option value="Silver">Silver</option>
                     </select>
-                    {/* <FaChevronDown className={styles.iconic} /> */}
-                    {/* {formError.preferred_sponsorship_tier_10 && (
-                    <p style={{ color: "red" }}>This field is Required</p>
-                  )} */}
+
                     {formError.preferred_sponsorship_tier_10 && (
                       <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                         Please select your preferred tier
@@ -380,6 +423,7 @@ const SponsorsForm = () => {
                     )}
                   </div>
                 )}
+
                 {form.budget_9 === "NGN 500,000 - 1,000,000" && (
                   <div className=" position-relative">
                     <label
@@ -404,10 +448,7 @@ const SponsorsForm = () => {
                       <option value=""></option>
                       <option value="Gold">Gold</option>
                     </select>
-                    {/* <FaChevronDown className={styles.iconic} /> */}
-                    {/* {formError.preferred_sponsorship_tier_10 && (
-                    <p style={{ color: "red" }}>This field is Required</p>
-                  )} */}
+
                     {formError.preferred_sponsorship_tier_10 && (
                       <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                         Please select your preferred tier
@@ -416,6 +457,57 @@ const SponsorsForm = () => {
                   </div>
                 )}
               </div>
+
+              {form?.preferred_sponsorship_tier_10 === "Silver" &&
+                form.budget_9 === "NGN 300,000 - 450,000" && (
+                  <div>
+                    <Input
+                      type="currency"
+                      placeholder="Enter sponsorship amount"
+                      text="Enter your sponsorship amount for Silver (₦300,000 to ₦450,000)"
+                      value={form?.amount || ""}
+                      name="amount"
+                      id="broker_fees"
+                      onChange={handleAmountChange}
+                      errorF={formError?.amount}
+                    />
+                  </div>
+                )}
+              {formError.amount &&
+                form?.preferred_sponsorship_tier_10 === "Silver" &&
+                form.budget_9 === "NGN 300,000 - 450,000" && (
+                  <span style={{ color: "red" }}>
+                    Please enter an amount between ₦300,000 and ₦450,000 for
+                    Silver sponsorship.
+                  </span>
+                )}
+            </div>
+
+            <div>
+              {form?.preferred_sponsorship_tier_10 === "Gold" &&
+                form.budget_9 === "NGN 500,000 - 1,000,000" && (
+                  <div>
+                    <Input
+                      type="currency"
+                      placeholder="Enter sponsorship amount"
+                      text="Enter your sponsorship amount for Gold (₦500,000 - ₦1,000,000)"
+                      value={form?.amount || ""}
+                      name="amount"
+                      id="broker_fees"
+                      onChange={handleAmountChange}
+                      errorF={formError?.amount}
+                    />
+                  </div>
+                )}
+
+              {formError.amount &&
+                form?.preferred_sponsorship_tier_10 === "Gold" &&
+                form.budget_9 === "NGN 500,000 - 1,000,000" && (
+                  <span style={{ color: "red" }}>
+                    Please enter an amount between ₦300,000 and ₦450,000 for
+                    Gold sponsorship.
+                  </span>
+                )}
             </div>
 
             <div className={styles.additionalDetails}>

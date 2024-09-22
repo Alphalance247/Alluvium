@@ -395,7 +395,7 @@ const RequestForm = () => {
           <br />
           <select name="" id="" value={dropDown} onChange={handleDropDown}>
             <option value="" disabled></option>
-            <option value="Atlassianlicenses">Atlassian licenses</option>
+            <option value="Atlassianlicenses">Atlassian Licenses</option>
             <option value="AtlassianConsultancy">Atlassian Consultancy</option>
             <option value="AtlassianTraining">Atlassian Training</option>
           </select>
