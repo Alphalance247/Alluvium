@@ -24,7 +24,6 @@ const Input = ({
         placeholder={placeholder}
         onChange={onChange}
         required
-        autoComplete="false"
         className={`${errorF ? styles.error : styles.inputStyle}`}
       />
     </div>
