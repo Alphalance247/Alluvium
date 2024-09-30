@@ -116,9 +116,14 @@ export const Articledata = [
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Deployment",
+    imageInfo: "/assets/blogImages/2.png",
     content: [
       {
-        paragraph: "",
+        id: 1,
+        contentHeading: "Title",
+        paragraph: [
+          "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
+        ],
       },
     ],
   },
@@ -129,6 +134,16 @@ export const Articledata = [
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Setup",
+    imageInfo: "/assets/blogImages/3.png",
+    content: [
+      {
+        id: 1,
+        contentHeading: "Title",
+        paragraph: [
+          "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
+        ],
+      },
+    ],
   },
   {
     id: "4",
@@ -137,6 +152,16 @@ export const Articledata = [
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Maintenance and Updates",
+    imageInfo: "/assets/blogImages/4.png",
+    content: [
+      {
+        id: 1,
+        contentHeading: "Title",
+        paragraph: [
+          "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
+        ],
+      },
+    ],
   },
   {
     id: "5",
@@ -146,6 +171,16 @@ export const Articledata = [
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Data recidency",
+    imageInfo: "/assets/blogImages/5.png",
+    content: [
+      {
+        id: 4,
+        contentHeading: "Title",
+        paragraph: [
+          "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
+        ],
+      },
+    ],
   },
   {
     id: "6",
@@ -155,6 +190,16 @@ export const Articledata = [
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Functionality",
+    imageInfo: "/assets/blogImages/6.png",
+    content: [
+      {
+        id: 1,
+        contentHeading: "Title",
+        paragraph: [
+          "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
+        ],
+      },
+    ],
   },
 
   {
@@ -165,5 +210,15 @@ export const Articledata = [
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Licence management and cost",
+    imageInfo: "/assets/blogImages/7.png",
+    content: [
+      {
+        id: 1,
+        contentHeading: "Title",
+        paragraph: [
+          "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
+        ],
+      },
+    ],
   },
 ];
