@@ -30,10 +30,6 @@ export const articles = [
           },
           {
             type: "paragraph",
-            text: "Senectus fermentum adipiscing diam mattis. Turpis purus ut hac morbi feugiat egestas feugiat luctus faucibus. Pharetra lacus viverra risus a sit. Enim a pretium nullam nec at scelerisque. Nunc aliquam ac sed morbi vestibulum nullam ac.",
-          },
-          {
-            type: "paragraph",
             text: "Limited spaces available! See you soon at Cloud Connect 24!",
           },
         ],

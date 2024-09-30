@@ -10,7 +10,7 @@ const images = [
     alt: "About Cloud Connect image 1",
   },
   {
-    imageSrc: "/assets/cloud-connect/images/AboutCC2.jpg",
+    imageSrc: "/assets/cloud-connect/images/cloud8.jpg",
     alt: "About Cloud Connect image 2",
   },
   {
@@ -38,7 +38,7 @@ const AboutCloudConnect = () => {
         <SectionHeader
           size="large"
           heading="What is cloud connect?"
-          description="At Cloud Connect, we go beyond the traditional IT-centric service management to enfold present a holistic view of business operations. Our focus is on leveraging cloud technologies to streamline processes, enhance efficiency, and drive sustainable growth across all facets parts of your organization."
+          description="Cloud Connect focuses on leveraging cloud technologies to streamline processes, enhance efficiency, and drive sustainable growth in every aspect of an organization. It goes beyond the traditional IT-centric Service Management to detailing and enfolding current and holistic view of business operations."
           button1={
             <Link href="/cloud-connect/book-a-ticket">
               <Button size="large">Buy Tickets</Button>
@@ -64,7 +64,7 @@ const AboutCloudConnect = () => {
         ))}
       </div>
 
-      <div className={styles["about-cloud-connect__stats"]}>
+      {/* <div className={styles["about-cloud-connect__stats"]}>
         {stats.map((stat, index) => (
           <div key={index} className={styles["about-cloud-connect__stat-item"]}>
             <p className={styles["about-cloud-connect__stat-value"]}>
@@ -75,7 +75,7 @@ const AboutCloudConnect = () => {
             </span>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

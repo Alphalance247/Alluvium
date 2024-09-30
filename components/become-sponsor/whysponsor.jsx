@@ -1,15 +1,9 @@
 import { becomeSponsor } from "data";
 import { sponsorPackage } from "data";
 import styles from "../../styles/cloud2.4/sponsor.module.scss";
-import Button from "components/cloud-connect-2/Button";
 import Packages from "components/cloud-connect-2/Packages";
 
 const WhySponsor = () => {
-  const handleScrollToView = () => {
-    document
-      .getElementById("sponsor-form-section")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <>
       <section

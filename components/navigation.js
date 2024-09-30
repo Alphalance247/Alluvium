@@ -110,47 +110,7 @@ export default function Navigation({ theme }) {
               <li>
                 <Link href="/#services">Services</Link>
               </li>
-              {/* <li>
-              <div>
-                <p
-                  onClick={() => toggleDropdown("services")}
-                  className={
-                    dropdownActive && currentDropdown === "services"
-                      ? styles.dropdownActive
-                      : styles.dropdownToggler
-                  }
-                >
-                  <span>Services</span>
-                  {dropdownActive && currentDropdown === "services" ? (
-                    <MdOutlineKeyboardArrowUp
-                      size={"1.5em"}
-                      className="fw-bold text-dark"
-                    />
-                  ) : (
-                    <MdOutlineKeyboardArrowDown
-                      size={"1.5em"}
-                      className="fw-bold text-dark"
-                    />
-                  )}
-                </p>
-                <div
-                  className={
-                    dropdownActive && currentDropdown === "services"
-                      ? styles.dropdownDiv
-                      : styles.dropdownHidden
-                  }
-                >
-                  <ul>
-                    {ourServicesData?.length &&
-                      ourServicesData.map((service) => (
-                        <li key={service.id}>
-                          <Link href="/#services">{service.title}</Link>
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-              </div>
-            </li> */}
+
               <li>
                 <a
                   href="https://marketplace.atlassian.com/vendors/1218751/alluvium"
