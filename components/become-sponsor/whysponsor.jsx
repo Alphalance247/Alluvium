@@ -1,17 +1,21 @@
 import { becomeSponsor } from "data";
 import { sponsorPackage } from "data";
 import styles from "../../styles/cloud2.4/sponsor.module.scss";
-import Button from "components/cloud-connect-2/Button";
 import Packages from "components/cloud-connect-2/Packages";
 
 const WhySponsor = () => {
-  const handleScrollToView = () => {
-    document
-      .getElementById("sponsor-form-section")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <>
+      <section
+        className={`container-fluid ${styles.whybecomesponsor}`}
+        style={{ background: "#082433" }}
+      >
+        <Packages
+          sponsorPackage={sponsorPackage}
+          heading="SPONSORSHIP PACKAGES"
+        />
+      </section>
+
       <section
         className={`container-fluid ${styles.whybecomesponsor}`}
         style={{ background: "#009bc0" }}
@@ -38,16 +42,6 @@ const WhySponsor = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      <section
-        className={`container-fluid ${styles.whybecomesponsor}`}
-        style={{ background: "#082433" }}
-      >
-        <Packages
-          sponsorPackage={sponsorPackage}
-          heading="SPONSORSHIP PACKAGES"
-        />
       </section>
     </>
   );

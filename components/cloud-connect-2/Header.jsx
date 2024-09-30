@@ -42,7 +42,7 @@ const Header = () => {
         <Link href="/cloud-connect">Home</Link>
       </li>
       <li className={isActive("/cloud-connect/agenda") ? styles.active : ""}>
-        <Link href="/cloud-connect">Agenda</Link>
+        <Link href="/cloud-connect/agenda">Agenda</Link>
       </li>
       <li className={isActive("/cloud-connect/sponsor") ? styles.active : ""}>
         <Link href="/cloud-connect/sponsor">Sponsor</Link>
@@ -85,7 +85,11 @@ const Header = () => {
   );
 
   return (
-    <section className={`${styles.header__section} container-fluid`}>
+    <section
+      className={`${styles.header__section} container-fluid`}
+      data-aos-delay="300"
+      data-aos="fade-down"
+    >
       <header className={`container m-auto ${styles.header}`}>
         <nav>
           <Link href="/cloud-connect" className={styles.logoDiv}>

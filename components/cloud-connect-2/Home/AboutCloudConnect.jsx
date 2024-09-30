@@ -10,7 +10,7 @@ const images = [
     alt: "About Cloud Connect image 1",
   },
   {
-    imageSrc: "/assets/cloud-connect/images/AboutCC2.jpg",
+    imageSrc: "/assets/cloud-connect/images/cloud8.jpg",
     alt: "About Cloud Connect image 2",
   },
   {
@@ -64,7 +64,7 @@ const AboutCloudConnect = () => {
         ))}
       </div>
 
-      <div className={styles["about-cloud-connect__stats"]}>
+      {/* <div className={styles["about-cloud-connect__stats"]}>
         {stats.map((stat, index) => (
           <div key={index} className={styles["about-cloud-connect__stat-item"]}>
             <p className={styles["about-cloud-connect__stat-value"]}>
@@ -75,7 +75,7 @@ const AboutCloudConnect = () => {
             </span>
           </div>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

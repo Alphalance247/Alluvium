@@ -28,17 +28,17 @@ const AgendaSection = () => {
           ))}
         </div>
         <div className={styles.buttonContainer}>
-          <Link href="/cloud-connect">
-            <Button size="large" variant="outline">
+          {/* <Link href="/cloud-connect">
+            <Button size="large" variant="primary">
               View full agenda
             </Button>
-          </Link>
+          </Link> */}
           <Link href="/cloud-connect/book-a-ticket">
             <Button size="large">Buy Ticket</Button>
           </Link>
         </div>
       </div>
-      <div className={styles.sponsorSection}>
+      {/* <div className={styles.sponsorSection}>
         <div className={styles.sponsorContent}>
           <p className={styles.sponsorText}>Sponsor Cloud Connect</p>
           <SectionHeader
@@ -53,7 +53,7 @@ const AgendaSection = () => {
             }
           />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
