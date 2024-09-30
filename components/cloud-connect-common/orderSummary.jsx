@@ -9,12 +9,17 @@ const OrderSummary = ({
   newButton = false,
   onClick,
   loading,
+  // setShowInput,
 }) => {
   const router = useRouter();
 
   const handleClick = () => {
     router.push("/cloud-connect/book-a-ticket/contact-details");
   };
+
+  // if (ticketNumbers[0] || ticketNumbers[1] || ticketNumbers[2] >= 1) {
+  //   setShowInput(true);
+  // }
 
   return (
     <div className={`${styles.orderSummary}`}>

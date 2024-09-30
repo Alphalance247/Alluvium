@@ -22,6 +22,7 @@ const ContactInformation = () => {
   const { addToast } = useToasts();
   const router = useRouter();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const [showInput, setShowInput] = useState(false);
 
   console.log(form);
 
@@ -30,6 +31,11 @@ const ContactInformation = () => {
     setForm((prevForm) => ({
       ...prevForm,
       [name]: value,
+
+      additionalProp1: {
+        ...prevForm.additionalProp1,
+        [name]: value,
+      },
     }));
     setFormError((prev) => ({ ...prev, [name]: false }));
   };
@@ -306,6 +312,50 @@ const ContactInformation = () => {
             )}
           </div>
         </div>
+
+        {showInput && (
+          <div className={styles.input__details}>
+            <div>
+              <Input
+                id="name1"
+                label="name1"
+                text="First Name"
+                name="name_1"
+                type="text"
+                value={form.additionalProp1.name_1 || ""}
+                placeholder=""
+                onChange={handleChange}
+                errorF={formError.additionalProp1}
+              />
+
+              {formError.additionalProp1 && (
+                <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                  This field is required
+                </h6>
+              )}
+            </div>
+
+            <div>
+              <Input
+                id="email1"
+                label="email1"
+                text="Email"
+                name="email_1"
+                type="email"
+                value={form.additionalProp1.email_1 || ""}
+                placeholder=""
+                onChange={handleChange}
+                errorF={formError.additionalProp1}
+              />
+
+              {formError.additionalProp1 && (
+                <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                  Please enter a valid email
+                </h6>
+              )}
+            </div>
+          </div>
+        )}
 
         <div className={styles.ticket__pickup}>
           <div>
