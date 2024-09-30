@@ -18,16 +18,16 @@ const Hero = () => {
             Service Management Beyond it.
           </h2>
           <p className={styles["hero__content-description"]}>
-            This innovative event is designed to enhance your approach to
-            business optimization by extending service management practices
-            beyond IT boundaries.
+            This innovative event is designed to refine and advance the
+            approaches to business optimization by extending Service Management
+            practices beyond IT boundaries.
           </p>
         </div>
-        <div>
+        {/* <div>
           <Link href="/cloud-connect/book-a-ticket">
             <Button size="large">Buy Tickets</Button>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className={styles.hero__images}>

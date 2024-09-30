@@ -49,7 +49,7 @@ export const exhibitorsPackage = [
     list1: "1 by 2 booth space",
     list2: " Co-branding opportunities with Alluvium",
     list3: "Host a dedicated workshop or roundtable",
-    list4: "Three complimentary registrations (VIP Admission)",
+    list4: "Three complimentary registrations (General Admission)",
   },
   {
     id: "2",
@@ -64,7 +64,7 @@ export const exhibitorsPackage = [
     list4: "Exclusive advertisement on our remote work website",
     list5:
       "Prime opportunity to feature your product in our widely distributed magazine",
-    list6: "Five complimentary registrations (Platinum Admission)",
+    list6: "Five complimentary registrations (General Admission)",
     list7:
       "Priority consideration for future collaborations and partnerships with Alluvium.",
   },
@@ -79,7 +79,7 @@ const Exhibition = () => {
       <section className={`container ${styles.exhibition__style}`}>
         <SectionHeader
           heading="Exhibition"
-          description="Unlock unparalleled opportunities by becoming a sponsor at Cloud Connect. Gain exclusive access to a highly engaged audience of industry leaders, innovators, and decision-makers. Elevate your brand, generate high-quality leads, and position your company at the forefront of cloud technology."
+          description="Connect with and showcase your products and services to a targeted audience of potential customers, industry leaders, IT professionals, and decision-makers seeking innovative solutions. Elevate your brand, generate high-quality leads, and position your company at the forefront of cloud technology."
           button1={
             <Button size="large" variant="default">
               <a href="/cloud-connect-brochure.pdf" download>
@@ -87,6 +87,14 @@ const Exhibition = () => {
               </a>
             </Button>
           }
+        />
+      </section>
+      <section className={`container-fluid ${styles.exhibitor__packages}`}>
+        <Packages
+          sponsorPackage={exhibitorsPackage}
+          heading="EXHIBITORS PACKAGES"
+          showButton={false}
+          subText={true}
         />
       </section>
 
@@ -118,14 +126,8 @@ const Exhibition = () => {
         <AttendCloud data={data} />
       </section>
 
-      <section className={`container-fluid ${styles.exhibitor__packages}`}>
-        <Packages
-          sponsorPackage={exhibitorsPackage}
-          heading="EXHIBITORS PACKAGES"
-          showButton={false}
-          subText={true}
-        />
-      </section>
+      <ExhibitionForm />
+
       <img
         src="/assets/cloud-connect/images/imagey.png"
         alt="Cloud connect event image"
@@ -133,7 +135,6 @@ const Exhibition = () => {
         width={1440}
         height={557}
       />
-      <ExhibitionForm />
 
       <section className={`container text-center ${styles.feedback}`}>
         <p>

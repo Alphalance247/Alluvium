@@ -1,0 +1,55 @@
+import Layout from "components/layout";
+import styles from "../../styles/Blogs/blogs.module.scss";
+import Image from "next/image";
+import Articles from "components/blog-component/article";
+
+const Blogs = () => {
+  return (
+    <Layout>
+      <section className={styles.hero__blog}>
+        <div className={styles.hero__overlay}></div>
+        <h1>Blog, Insights & News</h1>
+      </section>
+
+      <section className={`container-fluid  ${styles.insight__section}`}>
+        <div className="container mx-auto">
+          <div>
+            <input
+              type="text"
+              className={styles.insight__input}
+              placeholder="Search our insights"
+              style={{
+                filter: "drop-shadow(0px 4px 250px rgba(255, 201, 62, 0.18))", // Yellow shadow with blur and opacity
+              }}
+            />
+          </div>
+
+          <div className={styles.team24__blog}>
+            <div className={styles.Image}>
+              <Image
+                src="/assets/blogImages/team24recap.png"
+                alt="team24recap"
+                width={710}
+                height={389}
+              />
+            </div>
+            <div>
+              <h2>From Africa with love: A recap of Atlassian Team 24 event</h2>
+              <p>
+                We experienced a lot of goodness in Vegas that we can’t just
+                keep it to ourselves.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.blogs__cards}>
+            <p className={styles.latest}>Latest Release</p>
+            <Articles />
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Blogs;

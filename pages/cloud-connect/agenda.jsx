@@ -4,6 +4,7 @@ import SectionHeader from "../../components/cloud-connect-2/SectionHeader";
 import styles from "../../styles/cloud-connect-2/Agenda/agenda.module.scss";
 import SpeakerDetails from "../../components/cloud-connect-2/AgendaPage/SpeakerDetails";
 import Button from "../../components/cloud-connect-2/Button";
+import AgendaSection from "components/cloud-connect-2/Home/AgendaSection";
 
 export default function Agenda() {
   const events = [
@@ -222,7 +223,7 @@ export default function Agenda() {
       <section className={styles.agendaSection}>
         <SectionHeader heading="Cloud Connect Agenda" />
       </section>
-      <section className={styles.timelineSection}>
+      {/* <section className={styles.timelineSection}>
         <div className={styles.container}>
           <div className={styles.dateHeader}>
             <p className={styles.date}>Tuesday, November 12</p>
@@ -243,7 +244,8 @@ export default function Agenda() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      <AgendaSection />
     </Layout>
   );
 }

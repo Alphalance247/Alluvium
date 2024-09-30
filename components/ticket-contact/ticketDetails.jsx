@@ -66,6 +66,10 @@ const TicketDetails = () => {
             <span>Early Bird Special:</span> Save 30% on Cloud Connect '24 VIP
             and Platinum Tickets!
           </p>
+
+          <p className={styles.early__birds__ends}>
+            Early bird ends on October 23, 2024
+          </p>
           <div className={`${styles.ticketTitle}`}>
             <p>TICKET</p>
             <p>PRICE</p>

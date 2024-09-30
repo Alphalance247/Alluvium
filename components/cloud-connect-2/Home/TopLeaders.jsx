@@ -60,7 +60,7 @@ const TopLeaders = () => {
   return (
     <section className={styles["top-leaders"]}>
       <h2 className={styles["top-leaders__title"]}>
-        Missed our past events? Catch up with our previous speakers!{" "}
+        Missed our past events? Catch up with previous speakers
       </h2>
       <div className={styles["top-leaders__grid"]}>
         {speakers.slice(0, visibleSpeakers).map((speaker, index) => (
