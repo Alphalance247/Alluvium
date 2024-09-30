@@ -79,7 +79,7 @@ const Exhibition = () => {
       <section className={`container ${styles.exhibition__style}`}>
         <SectionHeader
           heading="Exhibition"
-          description="Unlock unparalleled opportunities by becoming a sponsor at Cloud Connect. Gain exclusive access to a highly engaged audience of industry leaders, innovators, and decision-makers. Elevate your brand, generate high-quality leads, and position your company at the forefront of cloud technology."
+          description="Connect with and showcase your products and services to a targeted audience of potential customers, industry leaders, IT professionals, and decision-makers seeking innovative solutions. Elevate your brand, generate high-quality leads, and position your company at the forefront of cloud technology."
           button1={
             <Button size="large" variant="default">
               <a href="/cloud-connect-brochure.pdf" download>
@@ -96,14 +96,6 @@ const Exhibition = () => {
           showButton={false}
           subText={true}
         />
-      </section>
-
-      <ExhibitionForm />
-
-      <section className={`container mx-auto ${styles.exhibitors}`}>
-        <SectionHeader heading="Why YOU SHOULD EXHIBIT" />
-
-        <AttendCloud data={data} />
       </section>
 
       <div className={`container-fluid ${styles.exhibition}`}>
@@ -127,6 +119,14 @@ const Exhibition = () => {
           </div>
         </div>
       </div>
+
+      <section className={`container mx-auto ${styles.exhibitors}`}>
+        <SectionHeader heading="Why YOU SHOULD EXHIBIT" />
+
+        <AttendCloud data={data} />
+      </section>
+
+      <ExhibitionForm />
 
       <img
         src="/assets/cloud-connect/images/imagey.png"

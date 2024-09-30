@@ -38,7 +38,7 @@ const AboutCloudConnect = () => {
         <SectionHeader
           size="large"
           heading="What is cloud connect?"
-          description="At Cloud Connect, we go beyond the traditional IT-centric service management to enfold present a holistic view of business operations. Our focus is on leveraging cloud technologies to streamline processes, enhance efficiency, and drive sustainable growth across all facets parts of your organization."
+          description="Cloud Connect focuses on leveraging cloud technologies to streamline processes, enhance efficiency, and drive sustainable growth in every aspect of an organization. It goes beyond the traditional IT-centric Service Management to detailing and enfolding current and holistic view of business operations."
           button1={
             <Link href="/cloud-connect/book-a-ticket">
               <Button size="large">Buy Tickets</Button>

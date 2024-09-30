@@ -8,16 +8,6 @@ const WhySponsor = () => {
     <>
       <section
         className={`container-fluid ${styles.whybecomesponsor}`}
-        style={{ background: "#082433" }}
-      >
-        <Packages
-          sponsorPackage={sponsorPackage}
-          heading="SPONSORSHIP PACKAGES"
-        />
-      </section>
-
-      <section
-        className={`container-fluid ${styles.whybecomesponsor}`}
         style={{ background: "#009bc0" }}
       >
         <div className="container">
@@ -42,6 +32,16 @@ const WhySponsor = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section
+        className={`container-fluid ${styles.whybecomesponsor}`}
+        style={{ background: "#082433" }}
+      >
+        <Packages
+          sponsorPackage={sponsorPackage}
+          heading="SPONSORSHIP PACKAGES"
+        />
       </section>
     </>
   );

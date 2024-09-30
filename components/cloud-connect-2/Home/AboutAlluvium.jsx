@@ -4,10 +4,9 @@ import Button from "../Button";
 
 const AboutAlluvium = () => {
   const listItems = [
-    "Understanding your unique needs and challenges.",
-    "Leveraging our extensive service management expertise.",
+    "Understanding your unique needs and peculiar challenges.",
+    "Leveraging our extensive Service Management expertise.",
     "Providing innovative solutions for your business.",
-    "Whether you're just starting your service management journey or looking to take it to the next level, Alluvium is here to guide you every step of the way.",
   ];
 
   return (
@@ -19,17 +18,13 @@ const AboutAlluvium = () => {
           className={styles.logo}
         />
         <p className={styles.description}>
-          About Alluvium:
-          <br />
-          At Alluvium, we're passionate about helping businesses achieve the
-          essence of service management. We are a team of experts dedicated to
-          providing you with the tools and strategies you need to optimize
-          service delivery across your entire organization.
-        </p>
-        <p className={styles.description}>
+          We are a team of dedicated experts providing tools and strategies
+          needed to optimize Service Delivery in all aspects of an organization.
           Our mission is to empower you to deliver exceptional service, every
-          time. We achieve this by:
+          time, as we passionately help businesses achieve the essence of
+          Service Management. We do this by:
         </p>
+
         <ul className={styles.list}>
           {listItems.map((item, index) => (
             <li key={index} className={styles.listItem}>
@@ -37,6 +32,10 @@ const AboutAlluvium = () => {
             </li>
           ))}
         </ul>
+        <p className={styles.description}>
+          Just starting your Service Management journey or need upgrading?
+          Alluvium guides you every step of the way.
+        </p>
         <a href="/" target="_blank">
           <Button size="large" className={styles.button}>
             Learn More About Us
