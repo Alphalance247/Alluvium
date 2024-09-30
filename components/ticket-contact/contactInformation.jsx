@@ -11,7 +11,9 @@ import { useRouter } from "next/router";
 import { environment } from "env/env.local";
 
 const ContactInformation = () => {
-  const [form, setForm] = useState({});
+  const [form, setForm] = useState({
+    additionalProp1: {},
+  });
   const [formError, setFormError] = useState({});
   const [ticketNumbers, setTicketNumbers] = useState([0, 0, 0]);
   const [isMounted, setIsMounted] = useState(false);
@@ -68,7 +70,7 @@ const ContactInformation = () => {
 
   const handleNumber = (value) => {
     setForm((prev) => ({ ...prev, phone_number_5: value }));
-    setForm((prev) => ({ ...prev, recipient_phone_number_9: value }));
+    // setForm((prev) => ({ ...prev, recipient_phone_number_9: value }));
     setFormError((prev) => ({ ...prev, phone_number_5: false }));
   };
 
@@ -240,20 +242,6 @@ const ContactInformation = () => {
                 Please enter a valid email
               </h6>
             )}
-          </div>
-
-          <div>
-            <Input
-              id="email_4"
-              label="email_4"
-              text="Confirm Email"
-              name="email_4"
-              type="email"
-              value={form.email_4 || ""}
-              placeholder=""
-              onChange={handleChange}
-              errorF={formError.email_4}
-            />
           </div>
 
           <div>
