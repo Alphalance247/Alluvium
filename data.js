@@ -2519,9 +2519,6 @@ export const sponsorPackage = [
     id: "1",
     title: "SILVER",
     price: "NGN 350,000 (₦)",
-
-    // paragraphs:
-    //   "Become the cornerstone of Cloud Connect with our premier Title Sponsorship. This exclusive package offers unparalleled brand visibility and engagement opportunities,",
     list1: "Premium booth space",
     list2: " Co-branding opportunities with Alluvium",
     list3: "Host a dedicated workshop or roundtable",
@@ -2532,8 +2529,6 @@ export const sponsorPackage = [
     title: "GOLD",
     price: "NGN 500,000 (₦)",
 
-    // paragraphs:
-    //   "Elevate your brand presence with our Platinum Sponsorship. This package provides significant exposure and engagement with event attendees.",
     list1: "All Silver Sponsor Benefits.",
     list2: " Top placement on event website & marketing materials",
     list3: "First media interview opportunity",
@@ -2541,24 +2536,6 @@ export const sponsorPackage = [
     list5:
       "Priority consideration for future collaborations and partnerships with Alluvium.",
   },
-
-  // {
-  //   id: "3",
-  //   title: "Plantinum",
-  //   price: "USD($) 5000",
-
-  //   paragraphs:
-  //     "Our Gold Sponsorship offers excellent value, providing strong brand visibility and engagement opportunities at an affordable investment.",
-  //   list1: "All benefits of Bronze Sponsor tier",
-
-  //   list2:
-  //     "We'll make sure their companies stand out on the event website and all the promotional materials, grabbing everyone's attention",
-  //   list3:
-  //     "They’ll have the first chance to talk to the media at the event, ensuring their company gets the best press coverage.",
-  //   list4: "Fifteen complimentary attendee registrations.",
-  //   list5:
-  //     "Data and Lead Generation: Provide a high-rank sponsor with access to data collected from event attendees, such as leads or demographics, to support their marketing efforts.",
-  // },
 ];
 
 export const eventTicket = [

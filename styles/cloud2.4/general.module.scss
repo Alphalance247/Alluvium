@@ -56,6 +56,16 @@
       }
     }
 
+    .early__birds__ends {
+      font-size: 15px;
+      font-weight: 600;
+      background: #009bc0;
+      padding: 4px 12px;
+      width: fit-content;
+      margin-left: 2rem;
+      border-radius: 2px;
+    }
+
     .ticketTitle {
       display: grid;
       grid-template-columns: 50% auto auto;

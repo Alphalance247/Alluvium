@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <Hero />
       <img
-        src="/assets/cloud-connect/images/Cloud connect event image.jpg"
+        src="/assets/cloud-connect/images/podiumpic.jpg"
         alt="Cloud connect event image"
         className={styles.eventImg}
       />
@@ -28,7 +28,6 @@ export default function Home() {
       <TopLeaders />
       <EventVideo />
       <WhyAttend />
-      <AgendaSection />
       <AboutAlluvium />
     </Layout>
   );

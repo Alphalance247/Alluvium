@@ -7,25 +7,25 @@ const data = [
     icon: "/assets/cloud-connect/icons/ic_outline-insights.svg",
     title: "Strategic Insights",
     description:
-      "Learn how leading organizations are harnessing Service Management strategy ies to optimize their business operations.",
+      "Learn how world leading organizations and giants are maximizing Service Management strategies to optimize their operations and business.",
   },
   {
     icon: "/assets/cloud-connect/icons/la_handshake-solid.svg",
     title: "Cross-Functional Collaboration",
     description:
-      "Discover how extending service management practices beyond IT can create synergies and drive innovation throughout your entire organization.",
+      "Discover how extending Service Management practices beyond IT can create synergies and drive innovation in all areas of your organization.",
   },
   {
     icon: "/assets/cloud-connect/icons/icons8_idea.svg",
     title: "Business Transformation",
     description:
-      "From customer service to HR and beyond, Cloud Connect will show you how to maximize new opportunities for growth and efficiency within the an organization.",
+      "From Customer Service to Human Resources and beyond, Cloud Connect demonstrates how to maximize new opportunities for growth and efficiency within an organization.",
   },
   {
     icon: "/assets/cloud-connect/icons/icon-park-outline_database-success.svg",
     title: "Networking Opportunities",
     description:
-      "Connect with industry experts, thought leaders, and peers who are at the forefront of service management. Share experiences, exchange ideas, and forge valuable connections that can propel your business forward.",
+      "Connect with industry experts, thought leaders and peers at the forefront of Service Management. Share experiences, exchange ideas and make valuable networks; propellant of a rapid growth of your business.",
   },
 ];
 
@@ -36,7 +36,7 @@ const WhyAttend = () => {
         <div className={styles.whyAttend__header}>
           <SectionHeader
             heading="Why Attend Cloud Connect?"
-            description="Cloud Connect offers a platform to explore how to outshine traditional IT service management and align service delivery with broader business objectives. Discover innovative strategies to optimize operations, enhance customer experiences, and drive sustainable growth."
+            description="Cloud Connect offers a platform to explore ways to outshining traditional IT service management and align Service Delivery with broader business objectives, discover innovative strategies to optimize operations, enhance customer experiences, as well as drive sustainable growth."
             size="small"
             variant="dark"
             width="small"
