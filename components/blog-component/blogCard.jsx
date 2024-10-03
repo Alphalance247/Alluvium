@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const BlogCard = ({ el }) => {
   return (
-    <Link href="/blogs" passHref>
+    <Link href={`/blogs/${el.id}`} passHref>
       <div className={styles.articlencap} key={el.id}>
         <div className={styles.imgs}>
           <Image src={el.image} alt="casestudyImg" width={389} height={229} />

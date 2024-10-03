@@ -22,15 +22,43 @@ const ContactInformation = () => {
   const { addToast } = useToasts();
   const router = useRouter();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const [extraTickets, setExtraTickets] = useState(0);
 
   console.log(form);
 
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
+  //   setForm((prevForm) => ({
+  //     ...prevForm,
+  //     [name]: value,
+
+  //     additionalProp1: {
+  //       ...prevForm.additionalProp1,
+  //       [name]: value,
+  //     },
+  //   }));
+  //   setFormError((prev) => ({ ...prev, [name]: false }));
+  // };
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setForm((prevForm) => ({
-      ...prevForm,
-      [name]: value,
-    }));
+
+    // Check if the input is for extra participants
+    if (name.startsWith("emailextra_") || name.startsWith("name_")) {
+      const index = name.split("_")[1]; // Get the index from the name
+      setForm((prevForm) => ({
+        ...prevForm,
+        additionalProp1: {
+          ...prevForm.additionalProp1,
+          [name]: value, // Update the dynamic field
+        },
+      }));
+    } else {
+      setForm((prevForm) => ({
+        ...prevForm,
+        [name]: value,
+      }));
+    }
+
     setFormError((prev) => ({ ...prev, [name]: false }));
   };
 
@@ -43,7 +71,11 @@ const ContactInformation = () => {
     if (typeof window !== "undefined") {
       const savedTickets = localStorage.getItem("ticketNumbers");
       if (savedTickets) {
-        setTicketNumbers(JSON.parse(savedTickets));
+        const numbers = JSON.parse(savedTickets);
+        setTicketNumbers(numbers);
+        // Calculate extra tickets here
+        const totalTickets = numbers.reduce((sum, num) => sum + num, 0);
+        setExtraTickets(totalTickets > 1 ? totalTickets - 1 : 0);
       }
     }
   }, []);
@@ -82,11 +114,11 @@ const ContactInformation = () => {
     e.preventDefault();
 
     if (
-      form.first_name_1 &&
-      form.last_name_2 &&
-      emailRegex.test(form.email_3) &&
-      form.phone_number_5 &&
-      hear_about_us_27
+      form?.first_name_1 &&
+      form?.last_name_2 &&
+      emailRegex.test(form?.email_3) &&
+      form?.phone_number_5 &&
+      form?.hear_about_us_27
     ) {
       setLoading(true);
       await axios
@@ -307,6 +339,43 @@ const ContactInformation = () => {
           </div>
         </div>
 
+        {/* Dynamically render additional participant input fields */}
+        {extraTickets > 0 && (
+          <div>
+            {[...Array(extraTickets)].map((_, i) => (
+              <div key={i} className={styles.input__details}>
+                <div>
+                  <Input
+                    id={`name${i + 1}`}
+                    label={`name${i + 1}`}
+                    text={`Participant ${i + 1} Name`}
+                    name={`name_${i + 1}`}
+                    type="text"
+                    value={form.additionalProp1[`name_${i + 1}`] || ""} // Set dynamic value
+                    placeholder=""
+                    onChange={handleChange}
+                    errorF={formError.additionalProp1}
+                  />
+                </div>
+
+                <div>
+                  <Input
+                    id={`email${i + 1}`}
+                    label={`email${i + 1}`}
+                    text={`Participant ${i + 1} Email`}
+                    name={`emailextra_${i + 1}`}
+                    type="email"
+                    value={form.additionalProp1[`emailextra_${i + 1}`] || ""} // Set dynamic value
+                    placeholder=""
+                    onChange={handleChange}
+                    errorF={formError.additionalProp1}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
         <div className={styles.ticket__pickup}>
           <div>
             <input
@@ -322,10 +391,6 @@ const ContactInformation = () => {
             <p className={styles.send__ticket__to}>
               Send ticket(s) to a different email address?
             </p>
-            {/* <p className={styles.receive__mail}>
-              Lorem ipsum dolor sit amet consectetur. Habitasse in lectus tortor
-              purus{" "}
-            </p> */}
           </div>
         </div>
         {isChecked && (

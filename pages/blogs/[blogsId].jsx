@@ -69,17 +69,23 @@ export default function BlogsId({ article }) {
               })}
             </div>
 
-            <div className=" d-flex flex-column row-gap-5">
+            <div className=" d-flex flex-column row-gap-4">
               {article.content
                 .filter((_, index) => index >= activeTab)
                 .map((el, i) => {
                   return (
                     <div className={styles.content} key={i}>
-                      <h4>{el.contentHeading}</h4>
+                      <h4>{el?.textHeading || el?.contentHeading}</h4>
                       {el.paragraph.map((el, index) => {
                         return (
-                          <div className="d-flex flex-column gap-2" key={index}>
-                            <p>{el}</p>
+                          <div className="d-flex flex-column gap-5" key={index}>
+                            <p
+                              className={`mb-${
+                                index === el.length - 1 ? null : "1rem"
+                              }`}
+                            >
+                              {el}
+                            </p>
                           </div>
                         );
                       })}

@@ -7,18 +7,25 @@ import OrderSummary from "components/cloud-connect-common/orderSummary";
 const TicketDetails = () => {
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
   const ticketPrices = [5000, 15000, 70000];
+  const [extraTickets, setExtraTickets] = useState(0); // Track extra tickets
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       const savedTickets = localStorage.getItem("ticketNumbers");
+      const savedExtraTickets = localStorage.getItem("extraTickets");
       if (savedTickets) {
         setTicketNumbers(JSON.parse(savedTickets));
+      }
+      if (savedExtraTickets) {
+        setExtraTickets(JSON.parse(savedExtraTickets));
       }
 
       // Add event listener for beforeunload to clear localStorage and state
       const handleBeforeUnload = () => {
         localStorage.removeItem("ticketNumbers");
         setTicketNumbers(eventTicket.map(() => 0));
+        localStorage.removeItem("extraTickets");
+        setExtraTickets(0);
       };
 
       window.addEventListener("beforeunload", handleBeforeUnload);
@@ -33,7 +40,11 @@ const TicketDetails = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("ticketNumbers", JSON.stringify(ticketNumbers));
+      localStorage.setItem("extraTickets", JSON.stringify(extraTickets));
     }
+    // Calculate the number of extra tickets (i.e., total tickets minus 1)
+    const totalTickets = ticketNumbers.reduce((sum, num) => sum + num, 0);
+    setExtraTickets(totalTickets > 1 ? totalTickets - 1 : 0);
   }, [ticketNumbers]);
 
   const handlePlusTicket = (index) => {
