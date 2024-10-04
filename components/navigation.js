@@ -102,7 +102,9 @@ export default function Navigation({ theme }) {
                       <li>
                         <Link href="/support/contact">Contact Us</Link>
                       </li>
-                      {/* <li><Link href="/#services">Our Services</Link></li> */}
+                      <li>
+                        <Link href="/blogs">blogs</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
