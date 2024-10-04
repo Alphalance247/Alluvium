@@ -9,6 +9,7 @@ import { useToasts } from "react-toast-notifications";
 import axios from "axios";
 import LoadingScreen from "components/loading";
 import { useEffect } from "react";
+import Button from "components/cloud-connect-2/Button";
 
 const VolunterForm = () => {
   const [countries, setCountries] = useState([]);
@@ -22,6 +23,7 @@ const VolunterForm = () => {
   const { addToast } = useToasts();
   const [formError, setFormError] = useState({});
   const [loading, setLoading] = useState(false);
+  const [disabledForm, setDisabledForm] = useState(true);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -189,7 +191,18 @@ const VolunterForm = () => {
           heading="REGISTER AS A VOLUNTEER"
           paragraph="Join our dynamic team and be part of something bigger. Help make Cloud Connect '24 a resounding success by joining the Cloud Connect volunteer force."
         />
-        <div className={styles.formdetailsvolunteer}>
+
+        <h2 className={styles.interest}>
+          {/* Thanks for showing interest for the cloud connect volunteer role,
+          We've reached our desired number of volunteers and are no longer
+          accepting new registrations.  */}
+          "Thank you for your interest in the Cloud Connect Volunteer Role.{" "}
+          <br />
+          <br />
+          We appreciate your enthusiasm, but we've reached our desired number of
+          volunteers and are no longer accepting new registrations.
+        </h2>
+        {/* <div className={styles.formdetailsvolunteer}>
           <form
             action=""
             className={styles.formlogic}
@@ -309,7 +322,6 @@ const VolunterForm = () => {
                     </option>
                   ))}
                 </select>
-                {/* <FaChevronDown className={styles.iconic} /> */}
 
                 {formError.state_6 && (
                   <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
@@ -368,7 +380,6 @@ const VolunterForm = () => {
                       Section/technical Assistant
                     </option>
                   </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
                   {formError.volunteer_role_13 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                       This field is required
@@ -418,7 +429,6 @@ const VolunterForm = () => {
                       To enhance my resume and gain valuable skills.
                     </option>
                   </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
                   {formError.volunteer_reason_9 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                       This field is required
@@ -453,7 +463,6 @@ const VolunterForm = () => {
                     <option value="Tech aspirant">Tech aspirant</option>
                     <option value="Student">Student</option>
                   </select>
-                  {/* <FaChevronDown className={styles.iconic} /> */}
                   {formError.which_experience_8 && (
                     <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                       This field is required
@@ -535,10 +544,10 @@ const VolunterForm = () => {
             </div>
 
             <div>
-              <button className={styles.button1}>Submit Request</button>
+              <Button disabled={true}>Submit Request</Button>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </section>
   );
