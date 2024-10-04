@@ -13,7 +13,6 @@ import Link from "next/link";
 const Verify = () => {
   const [post, setPost] = useState(false);
   const router = useRouter();
-  const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
 
   const verify__payment_url = `https://vast.ec2.alluvium.net/cloud-connect/verify-payment/`;
@@ -28,18 +27,8 @@ const Verify = () => {
         .then((res) => {
           setLoading(false);
           if (res.status >= 200 && res.status < 300) {
-            addToast("Payment Successfully Verified, Thank you", {
-              appearance: "success",
-            });
-            let res_data = res.data.message;
-            console.log(res_data);
-            setPost(res.data.message);
+            setPost(true);
           } else {
-            addToast(
-              res.data.error ||
-                "Error occured, please try again or contact Admin",
-              { appearance: "error" }
-            );
             router.push("/cloud-connect/book-a-ticket/contact-details");
             setPost("Error occured, please try again or contact Admin");
             return;
@@ -54,8 +43,6 @@ const Verify = () => {
               err?.response?.data?.error ||
               "Oops something went wrong. Please try again or contact Admin";
           }
-          addToast(errMessage, { appearance: "error" });
-          // router.push("/cloud-connect/book-a-ticket/contact-details");
           return;
         });
     };

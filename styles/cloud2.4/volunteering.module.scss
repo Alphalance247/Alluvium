@@ -112,6 +112,25 @@
   }
 }
 
+.interest {
+  font-weight: 600;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 5rem;
+  color: #082433;
+  text-align: center;
+  font-family: "Helvetica Compressed", sans-serif;
+
+  @media screen and (max-width: 992px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .iconic {
   position: absolute;
   top: 65%;
