@@ -12,7 +12,7 @@
       margin-top: 4rem;
       text-align: center;
       margin-bottom: 3.4rem;
-      width: 70%;
+      width: 90%;
       margin-right: auto;
       margin-left: auto;
 
@@ -39,6 +39,7 @@
         color: white;
         margin-bottom: 10px;
         text-transform: uppercase;
+        font-family: "DelaGothic";
 
         @media screen and (max-width: 992px) {
           font-size: 2.5rem;
@@ -46,8 +47,8 @@
         }
 
         @media screen and (max-width: 576px) {
-          font-size: 1.5rem;
-          line-height: 2rem;
+          font-size: 1rem;
+          line-height: 1.5rem;
         }
       }
       span {
