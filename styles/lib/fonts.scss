@@ -77,3 +77,12 @@
   src: url("/assets/fonts/Helvetica_Compressed/helvetica-compressed.otf")
     format("opentype");
 }
+
+@font-face {
+  font-family: "DelaGothic";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/DelaGothic/DelaGothicOne-Regular.ttf")
+    format("truetype");
+}
