@@ -443,10 +443,10 @@
   padding-bottom: 96px;
   row-gap: 2rem;
   justify-content: center;
-  width: 50%;
+  width: 90%;
 
   @media screen and (max-width: 992px) {
-    width: 80%;
+    width: 90%;
   }
 
   @media screen and (max-width: 576px) {
@@ -493,18 +493,22 @@
       padding: 12px 14px;
       outline: none;
     }
-
-    .optionGroup {
-      padding: 2rem;
-    }
   }
 }
 
 .formStyle {
+  .grid__styling {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
   form {
-    border: 2px dashed #9747ff;
     border-radius: 5px;
-    padding: 1.2rem;
 
     label {
       font-size: 14px;
@@ -516,7 +520,7 @@
       width: 100%;
       border: 1px solid #d0d5dd;
       border-radius: 5px;
-      padding: 12px 1rem;
+      padding: 18px 1rem;
       outline: none;
     }
 
@@ -538,14 +542,20 @@
       font-size: 14px;
       line-height: 15px;
       font-weight: 500;
+      margin-bottom: 0.4rem;
     }
 
     .selectStyle {
       width: 100%;
       border: 1px solid #d0d5dd;
       border-radius: 5px;
-      padding: 12px 14px;
+      padding: 14px 14px;
       outline: none;
+
+      &:focus {
+        border-color: #f2c193;
+        box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+      }
     }
 
     .errorSelect {
@@ -562,7 +572,6 @@
   }
 
   .formInput {
-    margin-bottom: 2rem;
     label {
       font-size: 14px;
       line-height: 15px;
@@ -586,39 +595,12 @@
       outline: none;
 
       &:focus {
-        border-radius: 4;
         border-color: #f2c193;
         box-shadow: 0px 0px 0px 4px #f6d5b6b2;
       }
     }
   }
 }
-
-// .formInput {
-//   // margin-bottom: 2rem;
-//   label {
-//     font-size: 15px;
-//     line-height: 15px;
-//     font-weight: 500;
-
-//   }
-
-//   .error {
-//     border: 2px solid #ec6401;
-//     width: 100%;
-//     border-radius: 5px;
-//     padding: 12px 1rem;
-//     outline: none;
-//   }
-
-//   .inputStyle {
-//     width: 100%;
-//     border: 1px solid #d0d5dd;
-//     border-radius: 5px;
-//     padding: 14px;
-//     outline: none;
-
-//   }
 
 .PhoneInput input {
   width: 100%;
@@ -629,6 +611,11 @@
   background: white;
   color: #11202d;
   padding: 12px 1rem;
+
+  &:focus {
+    border-color: #f2c193;
+    box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+  }
 }
 
 .PhoneInput > div {

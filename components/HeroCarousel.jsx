@@ -11,6 +11,7 @@ import Gitex24 from "components/gitex24/gitex";
 import Webinar from "components/webinar/webinar";
 import CommunityEvent from "./hero-component/communityEvent";
 import CloudConnectBanner from "./EventBanner/cloudConnectBanner";
+import GitexGlobal24 from "./EventBanner/GitexGlobal";
 
 export default function () {
   return (
@@ -27,8 +28,9 @@ export default function () {
           infinite={true}
         >
           {/* <CommunityEvent /> */}
-          <CloudConnectBanner />
-          <AtPartner />
+          {/* <CloudConnectBanner />
+          <AtPartner /> */}
+          <GitexGlobal24 />
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
           {/* <Team24Banner /> */}
