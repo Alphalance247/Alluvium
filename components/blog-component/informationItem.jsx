@@ -33,6 +33,7 @@ export const Articledata = [
   {
     id: "1",
     image: "/assets/blogImages/1.png",
+    pageTitle: "differences-between-cloud-data-center",
     heading: "Differences between Atlassian Data Center and Atlassian Cloud",
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
@@ -42,6 +43,7 @@ export const Articledata = [
       {
         id: 1,
         contentHeading: "Title",
+        textHeading: "",
         paragraph: [
           "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
         ],
@@ -50,6 +52,7 @@ export const Articledata = [
       {
         id: 2,
         contentHeading: "Deployment",
+        textHeading: "Deployment",
         paragraph: [
           "The biggest difference between Data Center and Atlassian Cloud is the deployment option. With Data Center, you can host your Atlassian apps on your own servers or opt for a third party to host your Atlassian apps and data. This option is particularly useful for governmental organizations that must host their own data due to data policies.",
           "Atlassian Cloud, on the other hand, is Atlassian's SaaS solution, where Atlassian hosts the data for you on their servers. This also applies to any third-party Marketplace apps you might want to use. While not all Marketplace apps offer Cloud versions, the number is increasing daily.",
@@ -59,6 +62,7 @@ export const Articledata = [
       {
         id: 3,
         contentHeading: "Setup",
+        textHeading: "Setup",
         paragraph: [
           "Setting up Atlassian Data Center involves installing and configuring servers and databases, as well as installing the Atlassian apps. This requires effort from your technical and application teams.",
           "The setup for Cloud is very straightforward. You can set up your first Jira or Confluence instance in just a few minutes, with Atlassian handling all the technical work for you.",
@@ -67,6 +71,7 @@ export const Articledata = [
       {
         id: 4,
         contentHeading: "Maintenance and Updates",
+        textHeading: "Maintenance and Updates",
         paragraph: [
           "With Data Center, you are responsible for maintaining your own servers and databases and keeping them up to date. This requires additional technical resources within your organization. Additionally, when a security advisory is issued, you need to update your servers to remain secure.",
           "In contrast, choosing Atlassian Cloud means you are automatically updated with the latest versions released by Atlassian and third-party Marketplace apps. Security advisories are implemented automatically by Atlassian, reducing the workload for your teams.",
@@ -75,6 +80,7 @@ export const Articledata = [
       {
         id: 5,
         contentHeading: "Data Residency",
+        textHeading: "Data Residency",
         paragraph: [
           "When you host your apps on Data Center, you can keep all data in-house or with another party that offers managed services.",
           "With Atlassian Cloud, you cannot choose the specific country where the data is hosted. However, Atlassian offers data residency in different regions around the globe, such as Europe and the US. This may not apply to all Marketplace vendors, but some do offer data residency based on different locations.",
@@ -83,6 +89,7 @@ export const Articledata = [
       {
         id: 6,
         contentHeading: "Functionalities",
+        textHeading: "Functionalities",
         paragraph: [
           "The look and feel, as well as the functionalities offered on both platforms, are quite different. Atlassian releases new features primarily on Cloud, viewing it as the future solution.",
           "Features like AI (Atlassian Intelligence), Confluence whiteboards, reporting, scheduled publishing, and various templates are primarily offered on Cloud. See the comparison for Confluence Cloud vs. Data Center here and the Jira comparison for Cloud vs. Data Center here.",
@@ -91,6 +98,7 @@ export const Articledata = [
       {
         id: 7,
         contentHeading: "License Management and Costs",
+        textHeading: "License Management and Costs",
         paragraph: [
           "Data Center has only one type of license, which is an annual license based on user tiers.",
           "Cloud, however, offers multiple subscription types. You can choose between a monthly Cloud subscription or an annual Cloud subscription.",
@@ -101,6 +109,7 @@ export const Articledata = [
       {
         id: 8,
         contentHeading: "Offered Features vs. Plans",
+        textHeading: "Offered Features vs. Plans",
         paragraph: [
           "Data Center has a single license model and one type of license plan, giving you access to all Data Center features.",
           "Cloud, however, offers multiple subscription types. You can choose between a monthly Cloud subscription or an annual Cloud subscription.",
@@ -112,6 +121,7 @@ export const Articledata = [
   {
     id: "2",
     image: "/assets/blogImages/3a.png",
+    pageTitle: "alluvium-makes-a-splash-at-atlassian-team-24",
     heading:
       "From Africa with Love: Alluvium Makes a Splash at Atlassian Team '24",
     artcleName: "Data Migration",
@@ -176,6 +186,7 @@ export const Articledata = [
     id: "3",
     image: "/assets/blogImages/3.png",
     heading: "Alluvium shines At Gitex Africa 2024",
+    pageTitle: "alluvium-shines-at-gitex-africa-2024",
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Setup",
@@ -207,6 +218,7 @@ export const Articledata = [
       {
         id: 4,
         contentHeading: "Learning from the Masters",
+        textHeading: "Learning from the Masters",
         paragraph: [
           "GITEX AFRICA wasn't just an event, it was about a collective journey of learning and inspiration. The event featured a stellar lineup of speakers, including renowned figures like Ghita Mezzour, PhD, Dr. Tunji Alausa, and many more. Their invaluable insights and expertise further ignited our passion for driving positive change through technology, particularly within the framework of Atlassian tools.",
         ],
@@ -214,6 +226,7 @@ export const Articledata = [
       {
         id: 5,
         contentHeading: "Memories Made, Partnerships established",
+        textHeading: "Memories Made, Partnerships established",
         paragraph: [
           "The lasting impact of GITEX AFRICA extends far beyond the three action-packed days. The connections forged, the knowledge gained, and the inspiration sparked will undoubtedly propel exciting new ventures. As a lasting reminder of this transformative experience, we offered unique souvenirs to those who visited our booth.",
         ],
@@ -233,6 +246,7 @@ export const Articledata = [
     id: "4",
     image: "/assets/blogImages/4.png",
     heading: "Is Jira Service Management the right solution for you?",
+    pageTitle: "is-jira-service-management-the-right-solution-for-you",
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Maintenance and Updates",
@@ -241,6 +255,7 @@ export const Articledata = [
       {
         id: 1,
         contentHeading: "Intro",
+        textHeading: "Intro",
         paragraph: [
           "In a market flooded with service management apps, selecting the right solution for your organization can be daunting. This blog post aims to guide you in determining whether Jira Service Management (JSM) is the optimal choice to meet your service management goals.",
         ],
@@ -297,6 +312,8 @@ export const Articledata = [
     image: "/assets/blogImages/5.png",
     heading:
       "Agile Way of Working implementation on a large scale at a top tier UK bank.",
+    pageTitle:
+      "agile-way-of-working-implementation-on-a-large-csale-at-a-top-tier-uk-bank",
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Data recidency",
@@ -316,6 +333,8 @@ export const Articledata = [
     image: "/assets/blogImages/6.png",
     heading:
       "Agile Way of Working implementation on a large scale at a top tier UK bank.",
+    pageTitle:
+      "agile-way-of-working-implementation-on-a-large-csale-at-a-top-tier-uk-bank",
     artcleName: "Data Migration",
     publishedDate: "7 mins read | Sept 15th, 2024",
     contentHeading: "Functionality",

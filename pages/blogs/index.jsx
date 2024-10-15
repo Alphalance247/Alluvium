@@ -2,10 +2,23 @@ import Layout from "components/layout";
 import styles from "../../styles/Blogs/blogs.module.scss";
 import Image from "next/image";
 import Articles from "components/blog-component/article";
+import Head from "next/head";
 
 const Blogs = () => {
   return (
     <Layout>
+      <Head>
+        <title>Blogs | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+        />
+      </Head>
       <section className={styles.hero__blog}>
         <div className={styles.hero__overlay}></div>
         <h1>Blog, Insights & News</h1>
