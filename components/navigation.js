@@ -122,13 +122,10 @@ export default function Navigation({ theme }) {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://blog.alluvium.net/"
-                  rel="Alluvium"
-                  target="_blank"
-                >
-                  Blog
-                </a>
+                <Link href="/blogs">Blog</Link>
+                {/* <a href="/blogs" rel="Alluvium" target="_blank">
+                  Blogs
+                </a> */}
               </li>
               <li>
                 <Link href="/case-studies">Case Studies</Link>

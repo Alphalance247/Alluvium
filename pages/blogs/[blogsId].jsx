@@ -8,6 +8,7 @@ import Image from "next/image";
 import Potential from "components/blog-component/unlockquote";
 import Articles from "components/blog-component/article";
 import BlogCard from "components/blog-component/blogCard";
+import Head from "next/head";
 
 export default function BlogsId({ article }) {
   let nextid = 0;
@@ -23,12 +24,24 @@ export default function BlogsId({ article }) {
     return <div>Loading...</div>;
   }
 
-  if (!article) {
+  if (!article.pageTitle) {
     return <div>Article not found</div>;
   }
 
   return (
     <Layout>
+      <Head>
+        <title>{article.pageTitle}</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+        />
+      </Head>
       <article className={`${styles.blog__content} container-fluid px-0`}>
         <div className={`${styles.blog__hero} `}>
           <div className="container">
@@ -75,7 +88,7 @@ export default function BlogsId({ article }) {
                 .map((el, i) => {
                   return (
                     <div className={styles.content} key={i}>
-                      <h4>{el?.textHeading || el?.contentHeading}</h4>
+                      <h4>{el?.textHeading}</h4>
                       {el.paragraph.map((el, index) => {
                         return (
                           <div className="d-flex flex-column gap-5" key={index}>
@@ -114,14 +127,14 @@ export default function BlogsId({ article }) {
 
 export async function getStaticPaths() {
   const paths = Articledata.map((article) => ({
-    params: { blogsId: article.id.toString() },
+    params: { blogsId: article.pageTitle },
   }));
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const article = Articledata.find((a) => a.id.toString() === params.blogsId);
+  const article = Articledata.find((el) => el.pageTitle === params.blogsId);
 
   if (!article) {
     return { notFound: true };
