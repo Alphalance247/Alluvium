@@ -12,8 +12,8 @@ const Services = () => {
     >
       <div className={`container mx-auto `}>
         <div className={styles.ourServicesHeader}>
-          <h2 className={styles.ourServicesT}>WHAT WE DO</h2>
-          <h3 className={styles.ourServicesTitle}>Our Services</h3>
+          <p className={styles.ourServicesT}>WHAT WE DO</p>
+          <h2 className={styles.ourServicesTitle}>Our Services</h2>
           <p className={styles.ourServicesSubtitle}>
             Unlock the full potential of your business with our comprehensive
             suite of services
@@ -29,6 +29,7 @@ const Services = () => {
               width={542}
               height={510}
               src="/assets/home/atlassconsult.png"
+              alt="atlassian-consult"
             />
           </div>
           <div className={` ${styles.servmd} ${styles.servmd0}`}>
@@ -108,6 +109,7 @@ const Services = () => {
                 width={542}
                 height={510}
                 src="/assets/home/awsconsult.png"
+                alt="aws-consultancy"
               />
             </div>
           </div>
@@ -121,6 +123,7 @@ const Services = () => {
                 width={542}
                 height={510}
                 src="/assets/home/dev.png"
+                alt="software-development"
               />
             </div>
             <div className={`${styles.servmd} ${styles.servmd2}`}>
