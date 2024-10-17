@@ -1,6 +1,7 @@
 import Link from "next/link";
 import styles from "../../../styles/cloud-connect-2/Home/aboutAlluvium.module.scss";
 import Button from "../Button";
+import Image from "next/image";
 
 const AboutAlluvium = () => {
   const listItems = [
@@ -12,10 +13,12 @@ const AboutAlluvium = () => {
   return (
     <section className={styles.aboutAlluvium}>
       <div className={styles.content}>
-        <img
+        <Image
           src="/assets/cloud-connect/images/Alluvium Logo.png"
           alt="Alluvium Logo"
           className={styles.logo}
+          width={56}
+          height={56}
         />
         <p className={styles.description}>
           We are a team of dedicated experts providing tools and strategies
@@ -43,10 +46,12 @@ const AboutAlluvium = () => {
         </a>
       </div>
       <div className={styles.imageWrapper}>
-        <img
+        <Image
           src="/assets/cloud-connect/images/AboutAlluvium.png"
           alt="About Alluvium"
           className={styles.image}
+          width={484}
+          height={506}
         />
       </div>
     </section>

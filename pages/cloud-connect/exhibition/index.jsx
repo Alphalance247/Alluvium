@@ -128,12 +128,13 @@ const Exhibition = () => {
 
       <ExhibitionForm />
 
-      <img
+      <Image
         src="/assets/cloud-connect/images/imagey.png"
         alt="Cloud connect event image"
         className={styles.eventImg}
         width={1440}
         height={557}
+        layout="responsive"
       />
 
       <section className={`container text-center ${styles.feedback}`}>

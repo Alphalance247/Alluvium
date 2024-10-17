@@ -118,6 +118,7 @@ export default function AboutUs() {
                         src={imagePath + "Image-2.png"}
                         width={256 * 1.2}
                         height={241 * 1.2}
+                        alt="about-us-learning"
                       />
                     </div>
                     <div className="col-6 ps-1">
@@ -125,6 +126,7 @@ export default function AboutUs() {
                         src={imagePath + "Image-3.png"}
                         width={256 * 1.2}
                         height={241 * 1.2}
+                        alt="about-us-1"
                       />
                     </div>
                     <div className="col-12">
@@ -132,6 +134,7 @@ export default function AboutUs() {
                         src={imagePath + "Image-1.png"}
                         width={532 * 1.2}
                         height={283 * 1.2}
+                        alt="about-us-2"
                       />
                     </div>
                   </div>

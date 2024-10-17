@@ -12,7 +12,7 @@ const BlogCard = ({ el }) => {
           <p>{el.artcleName}</p>
         </div>
         <div className={styles.articleContent}>
-          <a>{el.heading}</a>
+          <h5>{el.heading}</h5>
           <p className={styles.articleName}>{el.publisherName}</p>
 
           <p>{el.publishedDate}</p>
