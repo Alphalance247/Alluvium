@@ -133,7 +133,7 @@ export function AltFooter() {
               CONTACT US
             </h3>
             <ul className={styles.altFooterContactList}>
-              <li className={styles.contactListItem}>
+              {/* <li className={styles.contactListItem}>
                 <p>
                   <b>America:</b> <br /> Connecticut: 680 E Main Street Ste A
                   Stamford, CT 06901 US.
@@ -160,14 +160,14 @@ export function AltFooter() {
                     Nairobi, Kenya.
                   </p>
                 </div>
-              </li>
+              </li> */}
               <li className={styles.contactListItem}>
                 <b>Email:</b>
                 <a href="mailto:contact@alluvium.net"> contact@alluvium.net</a>
               </li>
               <li className={styles.contactListItem}>
                 <b>Phone Number:</b>
-                <a href="tel:+442035762028"> +442035762028</a>
+                <a href="tel:+442035762028">+442035762028</a>
               </li>
             </ul>
           </div>

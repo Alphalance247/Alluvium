@@ -194,5 +194,30 @@
       border-bottom-right-radius: 15px;
       border-top-right-radius: 0px;
     }
+
+    .contact__us {
+      font-weight: 700 !important;
+      font-size: 24px !important;
+      line-height: 30px !important;
+      letter-spacing: 0.0125em !important;
+      color: #595959;
+      margin: 0 !important;
+
+      @media screen and (max-width: 768px) {
+        margin-bottom: 40px !important;
+      }
+    }
+
+    .follow__us {
+      font-weight: 500 !important;
+      font-size: 18px !important;
+      color: #1f1f1f !important;
+    }
+
+    .contact__us__text {
+      color: #374151;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
   }
 }

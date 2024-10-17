@@ -3,6 +3,30 @@ import { ToastProvider, useToasts } from "react-toast-notifications";
 import { validateEmail } from "lib/validation";
 import Link from "next/link";
 import styles from "../styles/booking.module.scss";
+import Image from "next/image";
+
+const socialButton = [
+  {
+    image: "/assets/icons/facebook.svg",
+    alt: "facebook",
+    url: "https://www.facebook.com/alluviumhq/?ti=as",
+  },
+  {
+    image: "/assets/icons/instagram.svg",
+    alt: "instagram",
+    url: "https://twitter.com/alluviumhq?s=08",
+  },
+  {
+    image: "/assets/icons/linkedIn.svg",
+    alt: "linkedIn",
+    url: "https://www.linkedin.com/company/alluvium-hq/",
+  },
+  {
+    image: "/assets/icons/twitter.svg",
+    alt: "twitter",
+    url: "https://x.com/alluviumhq",
+  },
+];
 
 export const BookingCTA = () => {
   return (
@@ -234,41 +258,61 @@ export const ConsultationForm = () => {
           </div>
 
           <div className={`${styles.location}`}>
-            <h3>Our Locations</h3>
-            <p>
-              <strong>America:</strong> <br />
-              Connecticut: 680 E Main Street Ste A Stamford, CT 06901 US.
-              <br /> <br />
-              Florida: 27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL
-              32819 US.
+            <h3 className={`${styles.contact__us}`}>Contact Us</h3>
+            <p className={`${styles.contact__us__text}`}>
+              We’re here to help! Whether you have questions, need assistance,
+              or want to provide feedback, our team at Alluvium is always ready
+              to assist you.
             </p>
-            <p>
-              <strong>Europe:</strong> Kemp House 160, City Road London, EC1V
-              2NX, UK.
-            </p>
-            <div>
-              <strong>Africa:</strong>
-              <p>
-                Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki,
-                Lagos 106104, Nigeria.
-              </p>
-              <p>
-                Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti,
-                Ekiti State, Nigeria.
-              </p>
-              <p>
-                Kenya: 4th Floor, Laiboni Centre, Lenana Road, Kilimani,
-                Nairobi, Kenya.
-              </p>
+
+            <div className="d-flex align-items-center gap-2">
+              <Image
+                src="/assets/icons/Email.svg"
+                alt="email"
+                width={32}
+                height={32}
+              />
+              <a
+                href="mailto:contact@alluvium.net"
+                className="text-decoration-underline"
+              >
+                contact@alluvium.net
+              </a>
             </div>
-            <p>
-              <strong>Email:</strong>{" "}
-              <a href="mailto:contact@alluvium.net">contact@alluvium.net</a>{" "}
-            </p>
-            <p>
-              <strong>Phone Number:</strong>{" "}
-              <a href="tel:+442035762028"> +442035762028</a>{" "}
-            </p>
+
+            <div className="d-flex align-items-center gap-2">
+              <Image
+                src="/assets/icons/Call.svg"
+                alt="call"
+                width={32}
+                height={32}
+              />
+              <a
+                href="tel:+442035762028"
+                className="cursor-pointer text-decoration-underline"
+              >
+                +442035762028
+              </a>
+            </div>
+
+            <div>
+              <p className={styles.follow__us}>Follow us</p>
+
+              <div className="d-flex justify-content-between">
+                {socialButton.map((el, i) => (
+                  <div key={i} className="cursor-pointer">
+                    <a href={el.url}>
+                      <Image
+                        src={el.image}
+                        alt={el.alt}
+                        width={25}
+                        height={25}
+                      />
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
