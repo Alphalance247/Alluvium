@@ -3,12 +3,6 @@ import Link from "next/link";
 import styles from "../styles/hero-carousel.module.scss";
 
 export default function () {
-  // const handleScrollToView = () => {
-  //   document
-  //     .getElementById("case-studies")
-  //     ?.scrollIntoView({ behavior: "smooth" });
-  // };
-
   return (
     <div className={`${styles.customxs}`}>
       <div className={`${styles.featured}`}>
@@ -24,6 +18,7 @@ export default function () {
                   width={176}
                   height={101}
                   src="/assets/home/Image.svg"
+                  alt="atlassian-licence"
                 />
               </div>
               <div className="ml-2 mt-2">
@@ -46,6 +41,7 @@ export default function () {
                   width={176}
                   height={101}
                   src="/assets/home/Image1.svg"
+                  alt="jsm-implementation"
                 />
               </div>
               <div className="ml-3 mt-2">
@@ -65,6 +61,7 @@ export default function () {
                   width={176}
                   height={101}
                   src="/assets/home/image2.svg"
+                  alt="cloud-services"
                 />
               </div>
               <div className="ml-3 mt-2">

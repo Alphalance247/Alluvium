@@ -1,6 +1,7 @@
 import Button from "../Button";
 import styles from "../../../styles/cloud-connect-2/Home/hero.module.scss";
 import Link from "next/link";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -32,25 +33,31 @@ const Hero = () => {
 
       <div className={styles.hero__images}>
         <div className={styles["hero__images-main"]}>
-          <img
+          <Image
             src="/assets/cloud-connect/images/Hero_Img1.png"
             alt="Cloud connect Hero image"
             className={styles.image}
+            width={450}
+            height={307}
           />
         </div>
         <div className={styles["hero__images-secondary"]}>
           <div>
-            <img
+            <Image
               src="/assets/cloud-connect/images/Hero_Img2.png"
               alt="Cloud connect Hero image 2"
               className={styles.image}
+              width={221}
+              height={307}
             />
           </div>
           <div>
-            <img
+            <Image
               src="/assets/cloud-connect/images/Hero_Img3.png"
               alt="Cloud connect Hero image 3"
               className={styles.image}
+              width={221}
+              height={307}
             />
           </div>
         </div>
