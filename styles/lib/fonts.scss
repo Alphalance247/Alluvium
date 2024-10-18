@@ -86,3 +86,11 @@
   src: url("/assets/fonts/DelaGothic/DelaGothicOne-Regular.ttf")
     format("truetype");
 }
+
+@font-face {
+  font-family: "Lalezar";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Lalezar/Lalezar-Regular.ttf") format("truetype");
+}
