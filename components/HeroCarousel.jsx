@@ -28,9 +28,9 @@ export default function () {
           infinite={true}
         >
           {/* <CommunityEvent /> */}
-          <CloudConnectBanner />
-          <GitexGlobal24 />
           <AtPartner />
+          <CloudConnectBanner />
+          {/* <GitexGlobal24 /> */}
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
           {/* <Team24Banner /> */}
