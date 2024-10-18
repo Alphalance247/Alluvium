@@ -54,7 +54,7 @@ const WhySponsor = () => {
 
       <section className={styles.get__started}>
         <div className="container mx-auto">
-          {/* <BecomeReuse heading="How to get started" /> */}
+          <BecomeReuse heading="How to get started" />
           <div className={styles.get__started__info}>
             {getStarted.map((item, i) => {
               return (
