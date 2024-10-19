@@ -56,6 +56,8 @@
         font-size: 1.2rem;
         line-height: 1.7rem;
         color: #111827;
+        text-wrap: balance;
+        margin-bottom: 0px;
 
         @media screen and (max-width: 576px) {
           font-size: 0.9rem;

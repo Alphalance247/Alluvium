@@ -37,12 +37,12 @@ export default class MyDocument extends Document {
             t=d.getElementsByTagName("script")[0];
             t.parentNode.insertBefore(s,t);
           </script> */}
-          {/* <script
+          <script
             type="text/javascript"
             src="https://salesiq.zohopublic.com/widget"
             defer={true}
             id="zsiqscript"
-          ></script> */}
+          ></script>
           <script
             dangerouslySetInnerHTML={{
               __html: `

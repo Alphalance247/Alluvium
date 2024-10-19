@@ -39,7 +39,7 @@ const FAQss = () => {
             )}
           </div>
           {expandIndex === i && (
-            <p>
+            <p data-aos-delay="100" data-aos="fade-down">
               {item?.answer}{" "}
               <Link href="/#consultationForm">
                 <span
@@ -47,6 +47,7 @@ const FAQss = () => {
                     color: "#e37915",
                     cursor: "pointer",
                     textDecoration: "underline",
+                    textWrap: "balance",
                   }}
                 >
                   {item?.subAnswer}
