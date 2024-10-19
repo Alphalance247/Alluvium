@@ -9,11 +9,6 @@ const FaQuestions = () => {
         <div className={`${styles.faqContent}`}>
           <h5>FAQ</h5>
           <h3>Frequently Asked Questions</h3>
-          {/* <p>
-            Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-            arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit
-            id.
-          </p> */}
         </div>
 
         <FAQss />
