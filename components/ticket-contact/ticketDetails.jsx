@@ -3,11 +3,14 @@ import styles from "../../styles/cloud2.4/general.module.scss";
 import { eventTicket } from "data";
 import DetailsContact from "components/cloud-connect-common/details";
 import OrderSummary from "components/cloud-connect-common/orderSummary";
+import { useRef } from "react";
 
 const TicketDetails = () => {
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
   const ticketPrices = [5000, 15000, 70000];
   const [extraTickets, setExtraTickets] = useState(0); // Track extra tickets
+  const [isFixed, setIsFixed] = useState(false); // Track if OrderSummary is fixed
+  const sectionRef = useRef(null); // Reference to the section for calculating boundarie
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -68,8 +71,31 @@ const TicketDetails = () => {
     return total.toLocaleString();
   };
 
+  // // Scroll behavior
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const summaryPosition = window.scrollY;
+  //     const headerHeight = 325; // Height of the fixed navbar
+  //     if (summaryPosition >= window.innerHeight - headerHeight) {
+  //       setIsFixed(true);
+  //     } else {
+  //       setIsFixed(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   // Cleanup event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
   return (
-    <section className={`container-fluid ${styles.ticketBooking}`}>
+    <section
+      className={`container-fluid ${styles.ticketBooking} `}
+      ref={sectionRef}
+    >
       <div className={styles.ticketBookings}>
         <div className={`${styles.chooseTicket} container`}>
           <DetailsContact content="CHOOSE YOUR event TICKET" />
@@ -145,12 +171,14 @@ const TicketDetails = () => {
           ))}
         </div>
       </div>
-
-      <OrderSummary
-        ticketNumbers={ticketNumbers}
-        calculateTotal={calculateTotal}
-        contBtn={true}
-      />
+      <div className={`${isFixed ? styles.fixed__section : ""}`}>
+        <OrderSummary
+          ticketNumbers={ticketNumbers}
+          calculateTotal={calculateTotal}
+          contBtn={true}
+          sectionRef={sectionRef}
+        />
+      </div>
     </section>
   );
 };

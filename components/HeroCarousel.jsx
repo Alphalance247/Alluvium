@@ -12,6 +12,7 @@ import Webinar from "components/webinar/webinar";
 import CommunityEvent from "./hero-component/communityEvent";
 import CloudConnectBanner from "./EventBanner/cloudConnectBanner";
 import GitexGlobal24 from "./EventBanner/GitexGlobal";
+import AtlassianCampaign from "./EventBanner/AtlassianCampaign";
 
 export default function () {
   return (
@@ -29,7 +30,9 @@ export default function () {
         >
           {/* <CommunityEvent /> */}
           <AtPartner />
+          <AtlassianCampaign />
           <CloudConnectBanner />
+
           {/* <GitexGlobal24 /> */}
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
