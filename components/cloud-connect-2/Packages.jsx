@@ -34,11 +34,11 @@ const Packages = ({
                 {item.list6 && <li>{item?.list6}</li>}
                 {item.list7 && <li>{item?.list7}</li>}
               </ul>
-              {showButton && (
+              {/* {showButton && (
                 <Button variant="outline" onClick={handleScrollToView}>
                   Get Started
                 </Button>
-              )}
+              )} */}
             </div>
           );
         })}

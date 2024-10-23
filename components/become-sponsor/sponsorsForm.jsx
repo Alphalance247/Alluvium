@@ -626,7 +626,9 @@ const SponsorsForm = () => {
             </div>
 
             <div>
-              <button className={styles.button1}>Submit Request</button>
+              <button className={styles.button1}>
+                Proceed to Make Payment
+              </button>
             </div>
           </form>
         </div>

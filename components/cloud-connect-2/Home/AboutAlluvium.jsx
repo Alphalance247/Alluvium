@@ -17,8 +17,8 @@ const AboutAlluvium = () => {
           src="/assets/cloud-connect/images/Alluvium Logo.png"
           alt="Alluvium Logo"
           className={styles.logo}
-          width={56}
-          height={56}
+          width={185}
+          height={48}
         />
         <p className={styles.description}>
           We are a team of dedicated experts providing tools and strategies

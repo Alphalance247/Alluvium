@@ -17,6 +17,7 @@ const BookTicket = () => {
           description="Sales ends on the 31st of October, 2024"
         />
       </div>
+
       <TicketDetails />
     </Layout>
   );

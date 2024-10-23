@@ -291,11 +291,11 @@ const ExhibitionForm = () => {
                   />
                 </div>
 
-                <div className=" position-relative">
+                <div>
                   <label
                     htmlFor="industry_8"
                     className={styles.labelStyle}
-                    style={{ marginBottom: "10px" }}
+                    style={{ marginBottom: "7px" }}
                   >
                     Industry
                   </label>
