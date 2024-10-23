@@ -3,7 +3,7 @@ import styles from "../../styles/cloud2.4/general.module.scss";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import DetailsContact from "components/cloud-connect-common/details";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import OrderSummary from "components/cloud-connect-common/orderSummary";
 import axios from "axios";
 import { useToasts } from "react-toast-notifications";
@@ -23,6 +23,7 @@ const ContactInformation = () => {
   const router = useRouter();
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const [extraTickets, setExtraTickets] = useState(0);
+  const sectionRef = useRef(null); // Reference to the section for calculating boundarie
 
   console.log(form);
 
@@ -213,7 +214,10 @@ const ContactInformation = () => {
   };
 
   return (
-    <section className={`container-fluid ${styles.details__contact}`}>
+    <section
+      className={`container-fluid ${styles.details__contact}`}
+      ref={sectionRef}
+    >
       <div className={`${styles.details__encap} container`}>
         <DetailsContact content="Enter your Contact Details" pad={false} />
         <div className={styles.input__details}>
@@ -341,14 +345,15 @@ const ContactInformation = () => {
 
         {/* Dynamically render additional participant input fields */}
         {extraTickets > 0 && (
-          <div>
+          <div className={styles.extra__tickets}>
+            <p>ENTER THE OTHER PARTICIPANTS DETAILS BELOW</p>
             {[...Array(extraTickets)].map((_, i) => (
               <div key={i} className={styles.input__details}>
                 <div>
                   <Input
                     id={`name${i + 1}`}
                     label={`name${i + 1}`}
-                    text={`Participant ${i + 1} Name`}
+                    text={`Full Name ${i + 1}`}
                     name={`name_${i + 1}`}
                     type="text"
                     value={form.additionalProp1[`name_${i + 1}`] || ""} // Set dynamic value
@@ -362,7 +367,7 @@ const ContactInformation = () => {
                   <Input
                     id={`email${i + 1}`}
                     label={`email${i + 1}`}
-                    text={`Participant ${i + 1} Email`}
+                    text={`Email address ${i + 1}`}
                     name={`emailextra_${i + 1}`}
                     type="email"
                     value={form.additionalProp1[`emailextra_${i + 1}`] || ""} // Set dynamic value
@@ -485,6 +490,7 @@ const ContactInformation = () => {
           newButton={true}
           onClick={handleSubmitTicket}
           loading={loading}
+          sectionRef={sectionRef}
         />
       </div>
     </section>
