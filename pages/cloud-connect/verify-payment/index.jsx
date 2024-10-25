@@ -324,7 +324,13 @@ const Verify = () => {
                   onClick={handleSubmitForm}
                   className={styles.feedback_btn_container}
                 >
-                  <Button variant="default" className={styles.feedback_btn}>
+                  <Button
+                    variant="default"
+                    disabled={
+                      (suggestion && rating && recommendation).length === 0
+                    }
+                    className={styles.feedback_btn}
+                  >
                     {submitting ? "Submitting..." : "Submit"}
                   </Button>
                 </div>
