@@ -1,6 +1,7 @@
 import Button from "components/cloud-connect-2/Button";
 import styles from "../../styles/cloud2.4/general.module.scss";
 import { useRouter } from "next/router";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 
 const OrderSummary = ({
@@ -22,13 +23,6 @@ const OrderSummary = ({
   // Scroll behavior
   useEffect(() => {
     const handleScroll = () => {
-      // const summaryPosition = window.scrollY;
-      // const headerHeight = 330; // Height of the fixed navbar
-      // if (summaryPosition >= window.innerHeight - headerHeight) {
-      //   setIsFixed(true);
-      // } else {
-      //   setIsFixed(false);
-      // }
       const sectionTop = sectionRef.current.offsetTop;
       const sectionHeight = sectionRef.current.offsetHeight;
       const scrollY = window.scrollY;
@@ -107,6 +101,15 @@ const OrderSummary = ({
           </div>
         </section>
       )}
+
+      <div className="py-4 text-center" style={{ background: "#F8F7FA" }}>
+        <Image
+          src="/assets/cloud-connect/icons/paystack_badge.svg"
+          alt="paystack__badge"
+          width={179}
+          height={38}
+        />
+      </div>
     </div>
   );
 };
