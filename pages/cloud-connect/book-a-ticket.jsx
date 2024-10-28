@@ -14,7 +14,7 @@ const BookTicket = () => {
       <div className={`container ${styles.sponsor_hero}`}>
         <SectionHeader
           heading="get your ticket"
-          description="Sales ends on the 31st of October, 2024"
+          description="Sales ends on the 20th of November, 2024"
         />
       </div>
 

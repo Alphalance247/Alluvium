@@ -1,14 +1,17 @@
 .agendaSection {
-  padding: 48px 16px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
   max-width: 100%;
   margin: 0 auto;
 
   @media (min-width: 768px) {
-    padding: 72px 24px;
+    padding: 8rem 24px;
   }
 
   @media (min-width: 1024px) {
-    padding: 96px 12px;
+    padding: 8rem 12px;
     max-width: 1320px;
   }
 }
@@ -322,7 +325,6 @@
       line-height: 16px;
       color: #1f1f1f;
 
-
       @media (min-width: 768px) {
         font-size: 10.5px;
         line-height: 17px;
@@ -341,7 +343,6 @@
       font-weight: 500;
       margin-bottom: 0;
 
-
       @media (min-width: 768px) {
         font-size: 17px;
         line-height: 24px;
@@ -358,8 +359,6 @@
       line-height: 18px;
       color: #454545;
       margin-bottom: 0;
-
-
 
       @media (min-width: 768px) {
         font-size: 13px;

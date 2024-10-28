@@ -5,11 +5,21 @@ import SectionHeader from "../SectionHeader";
 
 const AgendaSection = () => {
   const agendaItems = [
-    { time: "9:00AM - 9:30AM", description: "Registration & Welcome" },
-    { time: "9:30AM - 2:30PM", description: "Presentation sessions" },
-    { time: "2:30PM - 4:30PM", description: "Lunch & Break" },
-    { time: "4:30PM - 5:30PM", description: "Networking & Exhibition" },
-    { time: "5:30PM - 6:00PM", description: "Closing remarks" },
+    { time: "9:00AM - 9:50AM", description: "Registration" },
+    { time: "9:50am - 10:00AM", description: "Welcome speech" },
+    { time: "10:00am - 10:30am", description: "Keynote speaker" },
+    { time: "10:30am - 11:00am", description: "Speaker 1" },
+    { time: "11:00am - 11:30am", description: "Panel session 1" },
+    { time: "11:30am - 12:00pm", description: "Networking" },
+    { time: "12:00pm - 12:30pm", description: "Speaker 2" },
+    { time: "12:30pm - 1:00pm", description: "Demo" },
+    { time: "1:00pm - 1:30pm", description: "Speaker 3" },
+    { time: "1:30pm - 2:00pm", description: "Lunch break" },
+    { time: "2:00pm - 2:30pm", description: "Panel session 2" },
+    { time: "2:30pm - 3:00pm", description: "Speaker 4" },
+    { time: "3:00pm - 3:30pm", description: "Speaker 5" },
+    { time: "3:30pm - 4:00pm", description: "Closing remarks" },
+    { time: "4:00pm - 6:00pm", description: "Networking, exhibition" },
   ];
 
   return (

@@ -99,17 +99,17 @@ const OrderSummary = ({
               </Button>
             )}
           </div>
+
+          <div className="py-4 text-center" style={{ background: "#F8F7FA" }}>
+            <Image
+              src="/assets/cloud-connect/icons/paystack_badge.svg"
+              alt="paystack__badge"
+              width={179}
+              height={38}
+            />
+          </div>
         </section>
       )}
-
-      <div className="py-4 text-center" style={{ background: "#F8F7FA" }}>
-        <Image
-          src="/assets/cloud-connect/icons/paystack_badge.svg"
-          alt="paystack__badge"
-          width={179}
-          height={38}
-        />
-      </div>
     </div>
   );
 };
