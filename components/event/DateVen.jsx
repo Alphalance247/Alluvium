@@ -1,11 +1,9 @@
-import Image from "next/image";
-import Link from "next/link";
 import styles from "../../styles/eventblog.module.scss";
 
 export default function () {
   return (
     <div className={`container-fluid ${styles.customxs}`}>
-      <div className={`container m-auto ${styles.featuredHero}`}>
+      {/* <div className={`container m-auto ${styles.featuredHero}`}>
         <div className="row">
           <div className="col">
             <label>Date</label>
@@ -22,10 +20,10 @@ export default function () {
             />
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className={`${styles.latestevents}`}>
-        <text>Latest Events</text>
+        <p>Latest Events</p>
       </div>
     </div>
   );

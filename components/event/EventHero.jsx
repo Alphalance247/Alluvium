@@ -14,9 +14,9 @@ export default function () {
           <div>
             <Image
               className={` ${styles.customdiv}`}
-              width={539}
-              height={227.43}
-              src="/assets/event/ccimg.png"
+              width={600}
+              height={227}
+              src="/assets/cloud-connect/images/logo.png"
             />
           </div>
         </div>
