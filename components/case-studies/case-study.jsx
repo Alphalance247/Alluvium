@@ -10,7 +10,7 @@ const CaseStudy = ({ caseStudy }) => {
       <div className={`container-fluid p-0 m-0 mb-4 ${styles.caseStudy}`}>
         <Image
           src={caseStudy?.clientLogo}
-          alt={caseStudy?.title}
+          alt={caseStudy?.filename}
           height={161}
           width={381}
           priority

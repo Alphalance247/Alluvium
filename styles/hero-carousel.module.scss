@@ -105,6 +105,11 @@
     font-size: 3rem;
     line-height: 3.5rem;
   }
+
+  @media screen and (max-width: 576px) {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
 }
 
 .prg {
@@ -354,5 +359,78 @@
         }
       }
     }
+  }
+}
+
+.localEvent {
+  display: flex;
+  padding: 0px;
+  justify-content: center;
+
+  @media screen and (max-width: 1280px) {
+    .imagrespon {
+      width: 600px;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .imagrespon {
+      width: 350px;
+    }
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+
+  .speakersSec {
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+    text-align: center;
+    margin-left: -13rem;
+
+    @media screen and (max-width: 576px) {
+      margin-left: 0rem;
+      padding-top: 0rem;
+    }
+
+    .speakrespon {
+      @media screen and (max-width: 576px) {
+        margin-left: 0rem;
+        width: 370px;
+        height: 210px;
+      }
+    }
+
+    .paraG {
+      display: flex;
+      column-gap: 9px;
+      justify-content: center;
+      margin-top: -1.3rem;
+      margin-bottom: 1.5rem;
+
+      @media screen and (max-width: 576px) {
+        flex-direction: column;
+        margin-top: 1rem;
+        padding: 0px 1rem;
+      }
+
+      p {
+        padding: 10px 1.4rem;
+        background: #0f1825;
+        color: white;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  button {
+    background: #e37915;
+    padding: 16px 60px;
+    font-size: 21px;
+    font-weight: 600;
+    border: none;
+    border-radius: 9.8px;
+    color: white;
   }
 }

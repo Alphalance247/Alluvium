@@ -9,6 +9,10 @@ import EventHero from "./cloud-connect/EventHero";
 import Team24Banner from "./TEAM24/banner";
 import Gitex24 from "components/gitex24/gitex";
 import Webinar from "components/webinar/webinar";
+import CommunityEvent from "./hero-component/communityEvent";
+import CloudConnectBanner from "./EventBanner/cloudConnectBanner";
+import GitexGlobal24 from "./EventBanner/GitexGlobal";
+import AtlassianCampaign from "./EventBanner/AtlassianCampaign";
 
 export default function () {
   return (
@@ -24,7 +28,12 @@ export default function () {
           pauseOnFocus={false}
           infinite={true}
         >
+          {/* <CommunityEvent /> */}
           <AtPartner />
+          <AtlassianCampaign />
+          <CloudConnectBanner />
+
+          {/* <GitexGlobal24 /> */}
           {/* this <Webinar /> */}
           {/* this <Hero /> */}
           {/* <Team24Banner /> */}

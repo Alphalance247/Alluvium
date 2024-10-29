@@ -6,34 +6,41 @@ const DepOption = () => {
       <div>
         <h5>Atlassian License Deployment Options</h5>
         <p>
-          Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue
-          arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit id.
+          With the end of Server licenses in February 2024, we are here to guide
+          you in choosing the right path for your organization and help you set
+          up your new Cloud or Data Center environment.
         </p>
       </div>
       <div className={`${styles.optionwrap}`}>
         <div className={`${styles.divop}`}>
           <h6>Data Center</h6>
           <p>
-            The Data Center option is recommended for larger organizations with
-            250 or more users, for whom the availability and speed of Atlassian
-            products is critical. <br /> <br /> The main difference to the
-            Single Server option is the high availability and speed. Your
-            systems will run distributed on several servers simultaneously.{" "}
-            <br />
-            <br /> This allows software updates or even maintenance work on
-            individual machines during operation. Otherwise, you can use all the
-            advantages of the Single Server option extended by some additional
-            features like project archiving (i.e., Jira) or read-only mode
-            (i.e., Confluence).
+            For larger organizations (20.000+ users) or those with specific
+            regulatory requirements, Data Center licenses are the way to go.
+            With Data Center, you can deploy your Atlassian instance
+            on-premises, giving you complete control over your environments and
+            data. <br />
+            <br /> Alluvium can also host your environments through our managed
+            services solution. This means you won’t have to worry about
+            maintaining and scaling your environments—we’ll handle it all for
+            you. <br />
+            <br /> Data Center licenses are only available on an annual basis,
+            but you can lock in your pricing by purchasing multiple years
+            upfront. Request your quote here(link to form).
           </p>
         </div>
         <div className={`${styles.divop}`}>
           <h6>Atlassian Cloud</h6>
           <p>
-            With Atlassian’s Cloud solution, you do not need to set up and
-            maintain your own infrastructure. The systems, including all data,
-            are managed on Atlassian’s servers. The Cloud solution is
-            immediately ready for use and thus enables a quick introduction.
+            If you're new to Atlassian, Atlassian Cloud is probably the best
+            choice for you. By choosing Atlassian Cloud, you're letting
+            Atlassian take care of hosting and maintaining your environments and
+            data. This means your environments will always be up-to-date and you
+            will benefit directly from the latest features. <br />
+            <br /> With our help, you can opt for either annual or monthly Cloud
+            subscriptions. We’ll guide you in selecting the perfect Cloud plan
+            (Basic, Premium, or Enterprise) that best fits your organization’s
+            unique needs.
           </p>
         </div>
       </div>

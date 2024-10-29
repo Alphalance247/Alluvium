@@ -1,0 +1,7 @@
+# Block all crawlers for /accounts
+User-agent: *
+Disallow:/api/
+
+# Allow all crawlers
+User-agent: *
+Allow: http://localhost:3000/hidden-s-map/sitemap.xml

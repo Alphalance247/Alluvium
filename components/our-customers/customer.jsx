@@ -28,7 +28,7 @@ const CustomerReview = () => {
             </p>
 
             <div className={styles.customer}>
-              <p className={styles.customerName}>Jane Brown</p>
+              <p className={styles.customerName}>Antonette Patrick</p>
               <p className={styles.customerRole}>
                 MARKETING DIRECTOR, ATLASSIAN
               </p>
@@ -44,7 +44,7 @@ const CustomerReview = () => {
             </p>
 
             <div className={styles.customer}>
-              <p className={styles.customerName}>Jane Brown</p>
+              <p className={styles.customerName}>Antonette Patrick</p>
               <p className={styles.customerRole}>
                 MARKETING DIRECTOR, ATLASSIAN
               </p>

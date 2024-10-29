@@ -133,13 +133,16 @@ export function AltFooter() {
               CONTACT US
             </h3>
             <ul className={styles.altFooterContactList}>
-              <li className={styles.contactListItem}>
+              {/* <li className={styles.contactListItem}>
                 <p>
-                  <b>Europe:</b> Kemp House 160, City Road London, EC1V 2NX, UK.
+                  <b>America:</b> <br /> Connecticut: 680 E Main Street Ste A
+                  Stamford, CT 06901 US.
+                  <br /> <br />
+                  Florida: 27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, FL
+                  32819 US.
                 </p>
                 <p>
-                  <b>America:</b> 7345 W Sand Lake Rd, STE 210 Office 3190
-                  Orlando, FL 32819 US.
+                  <b>Europe:</b> Kemp House 160, City Road London, EC1V 2NX, UK.
                 </p>
                 <div>
                   <b>Africa:</b>
@@ -151,15 +154,20 @@ export function AltFooter() {
                     Ekiti: No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro
                     Ekiti, Ekiti State, Nigeria.
                   </p>
+
+                  <p>
+                    Kenya: 4th Floor, Laiboni Centre, Lenana Road, Kilimani,
+                    Nairobi, Kenya.
+                  </p>
                 </div>
-              </li>
+              </li> */}
               <li className={styles.contactListItem}>
                 <b>Email:</b>
                 <a href="mailto:contact@alluvium.net"> contact@alluvium.net</a>
               </li>
               <li className={styles.contactListItem}>
                 <b>Phone Number:</b>
-                <a href="tel:+442035762028"> +442035762028</a>
+                <a href="tel:+442035762028">+442035762028</a>
               </li>
             </ul>
           </div>
@@ -204,12 +212,11 @@ export function AltFooter() {
             </p>
           </div>
           <div className={styles.extralinks}>
-            {/* <a href="#" className="me-3">
-              Cookie Settings
-            </a>
-            <a href="#" className="me-3">
-              Legal Information
-            </a> */}
+            <Link href="/atlassian-services/terms-conditions">
+              <a aria-label="privacy-policy" className="px-3">
+                Terms & Conditions
+              </a>
+            </Link>
             <Link href={"/privacy-policy"}>
               <a aria-label="privacy-policy">Privacy Policy</a>
             </Link>

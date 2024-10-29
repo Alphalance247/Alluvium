@@ -15,7 +15,7 @@ const HeroBlog = () => {
             </p>
           </div>
 
-          <div className={`${styles.social}`}>
+          {/* <div className={`${styles.social}`}>
             <p className={`${styles.contentname}`}>Share This Article</p>
             <div className={styles.socialImg}>
               <div>
@@ -37,7 +37,7 @@ const HeroBlog = () => {
                 <AssetImg src="/assets/blogImages/insta.svg" alt="instagram" />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

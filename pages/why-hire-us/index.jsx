@@ -1,8 +1,8 @@
 import Layout from "components/layout";
 import ContentTab from "components/blog-component/contentInfo";
 import Potential from "components/blog-component/unlockquote";
-import Articles from "components/blog-component/article";
 import HeroBlog from "components/blog-component/heroBlog";
+// import Articles from "components/blog-component/article";
 
 const Whyhire = () => {
   return (
@@ -11,7 +11,7 @@ const Whyhire = () => {
         <HeroBlog />
         <ContentTab />
         <Potential />
-        <Articles />
+        {/* <Articles /> */}
       </div>
     </Layout>
   );

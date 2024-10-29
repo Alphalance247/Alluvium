@@ -39,6 +39,7 @@ export default function () {
             width={393.77}
             height={302}
             src="/assets/bdg.png"
+            alt="atlassian-badges"
           />
         </div>
       </div>

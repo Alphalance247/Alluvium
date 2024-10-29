@@ -10,13 +10,20 @@ import "../styles/globals.scss";
 import "../styles/globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { eventTicket } from "data";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
-    var $zoho={ ...window?.$zoho} || { };
-    $zoho.salesiq = $zoho.salesiq || { widgetcode: "siqd802d9d0f485dfaac340ddc20306f3d11ecdc5f9d155bc34c062992d6745a323", values:{ },ready:function(){ }};
-    window.$zoho = { ...window?.$zoho, ...$zoho};
+    var $zoho = { ...window?.$zoho } || {};
+    $zoho.salesiq = $zoho.salesiq || {
+      widgetcode:
+        "siqd802d9d0f485dfaac340ddc20306f3d11ecdc5f9d155bc34c062992d6745a323",
+      values: {},
+      ready: function () {},
+    };
+    window.$zoho = { ...window?.$zoho, ...$zoho };
   }, []);
 
   useEffect(() => {
@@ -24,6 +31,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const router = useRouter();
+  const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
 
   useEffect(() => {
     const handleRouteChange = (url) => {
@@ -38,7 +46,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <ToastProvider placement="top-center">
       {/* <Layout> */}
-      <Component {...pageProps} />
+      <Component
+        {...pageProps}
+        ticketNumbers={ticketNumbers}
+        setTicketNumbers={setTicketNumbers}
+      />
       {/* </Layout> */}
     </ToastProvider>
   );

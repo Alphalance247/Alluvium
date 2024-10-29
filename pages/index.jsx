@@ -37,14 +37,6 @@ const Home = () => {
           <div className="container-fluid p-0" style={{ background: "" }}>
             <HeroCarousel />
             <Featured />
-
-            {/* <div className="container-fluid d-sm-none">
-              <div
-                className={`d-flex ${styles.badges_container} mt-5 mt-sm-4 pb-5`}
-              >
-                <Badges />
-              </div>
-            </div> */}
           </div>
           <Services />
           <Solutions />
@@ -54,7 +46,7 @@ const Home = () => {
           {/* <WhyAlluvium /> */}
           {/* <OurPartners /> */}
           <CaseStudies />
-          <CustomerReview />
+          {/* <CustomerReview /> */}
           {/* <News /> */}
         </div>
       </Layout>

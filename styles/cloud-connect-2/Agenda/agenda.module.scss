@@ -1,0 +1,374 @@
+.agendaSection {
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 8rem 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 8rem 12px;
+    max-width: 1320px;
+  }
+}
+
+.timelineSection {
+  padding: 48px 16px;
+  background-color: white;
+
+  @media (min-width: 768px) {
+    padding: 72px 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 96px 12px;
+  }
+
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 1024px) {
+      max-width: 1320px;
+    }
+  }
+
+  .dateHeader {
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 72px;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 96px;
+    }
+
+    .date {
+      margin-bottom: 8px;
+      color: #262626;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: -0.5px;
+
+      @media (min-width: 768px) {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 12px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 32px;
+        line-height: 36px;
+        margin-bottom: 16px;
+      }
+    }
+
+    .timeZone {
+      color: #595959;
+      font-size: 14px;
+      line-height: 18px;
+
+      @media (min-width: 768px) {
+        font-size: 15px;
+        line-height: 19px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .timeline {
+    position: relative;
+
+    .event {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+      position: relative;
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        margin-bottom: 48px;
+      }
+
+      @media (min-width: 1024px) {
+        margin-bottom: 61px;
+      }
+
+      .time {
+        width: 100%;
+        font-size: 16px;
+        line-height: 24px;
+        color: #595959;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+          width: 150px;
+          font-size: 17px;
+          line-height: 26px;
+          margin-right: 24px;
+          margin-bottom: 0;
+        }
+
+        @media (min-width: 1024px) {
+          width: 200px;
+          font-size: 18px;
+          line-height: 28px;
+          margin-right: 50px;
+        }
+      }
+
+      .timelineIndicator {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: block;
+          flex: 0 0 30px;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: -48px;
+            width: 2px;
+            background-color: #d9d9d9;
+            transform: translateX(-50%);
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: white;
+            border: 1px solid #d9d9d9;
+            transform: translateX(-50%);
+          }
+        }
+
+        @media (min-width: 1024px) {
+          &::before {
+            bottom: -61px;
+          }
+        }
+      }
+
+      .details {
+        flex: 1;
+
+        @media (min-width: 768px) {
+          padding-left: 24px;
+        }
+
+        @media (min-width: 1024px) {
+          padding-left: 32px;
+        }
+
+        .heading {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #454545;
+          margin-bottom: 8px;
+
+          @media (min-width: 768px) {
+            font-size: 17px;
+            line-height: 26px;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 24px;
+
+          @media (min-width: 768px) {
+            font-size: 17px;
+            line-height: 26px;
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 18px;
+            line-height: 28px;
+          }
+
+          p {
+            color: #454545;
+          }
+
+          .bold {
+            font-weight: 500;
+          }
+        }
+
+        .agendaButton {
+          background-color: transparent;
+          border: 1.2px solid #8c8c8c;
+          color: #454545;
+          transition: all 0.3s ease;
+          margin-bottom: 1rem;
+          font-size: 13px;
+          line-height: 20px;
+          padding: 8px 16px;
+          height: 36px;
+
+          &:hover {
+            background-color: #0086c0;
+            color: white;
+          }
+        }
+
+        .speakersGrid {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+
+          @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+          }
+
+          @media (min-width: 1024px) {
+            gap: 2rem;
+          }
+
+          .speakersColumn {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            @media (min-width: 768px) {
+              gap: 20px;
+            }
+
+            @media (min-width: 1024px) {
+              gap: 24px;
+            }
+          }
+        }
+      }
+
+      &:last-child {
+        .timelineIndicator::before {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.speakerDetails {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: auto;
+
+  @media (min-width: 768px) {
+    gap: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 20px;
+    height: 81px;
+  }
+
+  .speakerImage {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+
+    @media (min-width: 768px) {
+      width: 64px;
+      height: 64px;
+    }
+
+    @media (min-width: 1024px) {
+      width: 72px;
+      height: 72px;
+    }
+  }
+
+  .speakerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    @media (min-width: 768px) {
+      gap: 6px;
+    }
+
+    @media (min-width: 1024px) {
+      gap: 0px;
+    }
+
+    .speakerType {
+      font-size: 10px;
+      line-height: 16px;
+      color: #1f1f1f;
+
+      @media (min-width: 768px) {
+        font-size: 10.5px;
+        line-height: 17px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 11px;
+        line-height: 18px;
+      }
+    }
+
+    .speakerName {
+      font-size: 16px;
+      line-height: 22px;
+      color: #454545;
+      font-weight: 500;
+      margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        font-size: 17px;
+        line-height: 24px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+
+    .speakerTitle {
+      font-size: 12px;
+      line-height: 18px;
+      color: #454545;
+      margin-bottom: 0;
+
+      @media (min-width: 768px) {
+        font-size: 13px;
+        line-height: 19px;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
