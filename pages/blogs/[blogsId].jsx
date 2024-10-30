@@ -3,17 +3,19 @@ import styles from "../../styles/Blogs/blogs.module.scss";
 import { Articledata } from "components/blog-component/informationItem";
 import { articles } from "articles";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Potential from "components/blog-component/unlockquote";
 import Articles from "components/blog-component/article";
 import BlogCard from "components/blog-component/blogCard";
 import Head from "next/head";
+import useSticky from "components/customhooks/UseSticky";
 
 export default function BlogsId({ article }) {
   let nextid = 0;
   const [activeTab, setActiveTab] = useState(nextid);
   const relatedBlog = Articledata.slice(0, 3);
+  const { isSticky, sectionRef } = useSticky();
 
   const handleClick = (i) => {
     setActiveTab(i);
@@ -64,8 +66,8 @@ export default function BlogsId({ article }) {
               className={styles.article__image}
             />
           </div>
-          <div className={styles.table__of__content}>
-            <div className=" ">
+          <div className={`${styles.table__of__content}`}>
+            <div className={` ${isSticky ? styles.sticky : null} `}>
               <h3 className=" mb-4">TABLE OF CONTENTS</h3>
               {article.content.map((el, i) => {
                 return (
@@ -82,7 +84,7 @@ export default function BlogsId({ article }) {
               })}
             </div>
 
-            <div className=" d-flex flex-column row-gap-4">
+            <div className={`d-flex flex-column row-gap-4`} ref={sectionRef}>
               {article.content
                 .filter((_, index) => index >= activeTab)
                 .map((el, i) => {
