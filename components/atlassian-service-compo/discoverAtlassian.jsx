@@ -2,23 +2,10 @@ import Link from "next/link";
 import styles from "../../styles/atlassian-services-style/atlassianlicenceservices.module.scss";
 import { discoverAtlassiansServ } from "data";
 import { GoArrowRight } from "react-icons/go";
-import { useEffect, useRef, useState } from "react";
+import useSticky from "components/customhooks/UseSticky";
 
 const DiscoverAtlassian = () => {
-  const [isSticky, setIsSticky] = useState(false);
-  const sectionRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const sectionTop = sectionRef.current.getBoundingClientRect().top;
-      setIsSticky(sectionTop <= 0);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { isSticky, sectionRef } = useSticky();
 
   return (
     <section className={`container-fluid ${styles.atlassiandiscover}`}>

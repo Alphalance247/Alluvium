@@ -191,6 +191,12 @@
       row-gap: 2rem;
     }
 
+    .sticky {
+      position: sticky;
+      top: 2rem;
+      height: fit-content;
+    }
+
     h3 {
       font-size: 14px;
       line-height: 1.25rem;
