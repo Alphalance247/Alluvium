@@ -2,12 +2,30 @@ import Link from "next/link";
 import styles from "../../styles/atlassian-services-style/atlassianlicenceservices.module.scss";
 import { discoverAtlassiansServ } from "data";
 import { GoArrowRight } from "react-icons/go";
+import { useEffect, useRef, useState } from "react";
 
 const DiscoverAtlassian = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top;
+      setIsSticky(sectionTop <= 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <section className={`container-fluid ${styles.atlassiandiscover}`}>
       <div className={`container ${styles.services}`}>
-        <div className={`${styles.discoverfaq}`}>
+        <div
+          className={`${styles.discoverfaq} ${isSticky ? styles.sticky : ""}`}
+        >
           <h5>OUR SERVICES</h5>
           <h3>Discover Our Atlassian Services</h3>
           <p>
@@ -18,7 +36,7 @@ const DiscoverAtlassian = () => {
             <button className={styles.button1}>Schedule a Call</button>
           </Link>
         </div>
-        <div className={`${styles.discoverdropdown}`}>
+        <div ref={sectionRef} className={`${styles.discoverdropdown}`}>
           {discoverAtlassiansServ.map((item, i) => (
             <div key={item?.id}>
               <Link href={"/atlassian-services/" + item?.servicepage} passHref>
