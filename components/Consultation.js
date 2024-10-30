@@ -265,7 +265,7 @@ export const ConsultationForm = () => {
               to assist you.
             </p>
 
-            <div className="d-flex align-items-center gap-2">
+            {/* <div className="d-flex align-items-center gap-2">
               <Image
                 src="/assets/icons/Email.svg"
                 alt="email"
@@ -293,7 +293,7 @@ export const ConsultationForm = () => {
               >
                 +442035762028
               </a>
-            </div>
+            </div> */}
 
             <div>
               <p className={styles.follow__us}>Follow us</p>
