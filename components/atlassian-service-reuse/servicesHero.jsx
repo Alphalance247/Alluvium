@@ -8,13 +8,36 @@ const ServicesHero = ({
   withSlide = false,
   button1,
   button2,
+  variant = "default",
+  fonts = "default",
+  width = "default",
 }) => {
   return (
-    <div className={`container-fluid ${styles.licencelayout}`}>
-      <div className={`container mx-auto ${styles.licencehero}`}>
+    <div
+      className={`container-fluid ${styles.licencelayout} ${
+        styles[`licencelayout--${variant}`]
+      }`}
+    >
+      <div
+        className={`container mx-auto ${styles.licencehero} ${
+          styles[`licencehero--${width}`]
+        }`}
+      >
         <p className={styles.textlicence}>{contentsheading}</p>
-        <h1>{contentsheading1}</h1>
-        <p>{contentsheading2}</p>
+        <h1
+          className={`${styles.services__head} ${
+            styles[`services__head--${fonts}`]
+          }`}
+        >
+          {contentsheading1}
+        </h1>
+        <p
+          className={`${styles.services__subhead} ${
+            styles[`services__subhead--${fonts}`]
+          }`}
+        >
+          {contentsheading2}
+        </p>
 
         {(button1 || button2) && (
           <div>
