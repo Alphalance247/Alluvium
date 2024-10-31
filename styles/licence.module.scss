@@ -1,12 +1,33 @@
 .licencelayout {
-  background: #0b141c;
   padding-top: 96px;
   padding-bottom: 96px;
   text-align: center;
+  @media screen and (max-width: 992px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  //Variants
+  &--default {
+    background: #0b141c;
+  }
+  &--primary {
+    background: #091e42;
+  }
 
   .licencehero {
-    width: 60%;
-    margin: auto;
+    &--default {
+      width: 60%;
+      margin: auto;
+    }
+
+    &--primary {
+      width: 100%;
+    }
 
     @media screen and (max-width: 1030px) {
       width: 80%;
@@ -26,15 +47,34 @@
       line-height: 16px;
       color: #009bc0;
       margin-bottom: 1.5rem;
+
+      @media screen and (max-width: 576px) {
+        margin-bottom: 0.5rem;
+      }
     }
 
-    h1 {
-      font-size: 51px;
-      line-height: 59px;
+    .services__head {
       margin-bottom: 2rem;
       color: white;
       font-weight: 700;
       letter-spacing: -1px;
+
+      @media screen and (max-width: 576px) {
+        margin-bottom: 1rem;
+      }
+
+      &--default {
+        font-weight: 700;
+        font-size: 51px;
+        line-height: 59px;
+      }
+
+      &--primary {
+        font-weight: 800;
+        font-family: "charlie";
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
 
       @media screen and (max-width: 992px) {
         font-size: 2.5rem;
@@ -46,11 +86,32 @@
       }
     }
 
-    p {
+    .services__subhead {
       font-size: 20px;
       line-height: 32px;
       color: #e7e8e9;
-      margin-bottom: 48px;
+
+      &--default {
+        font-size: 20px;
+        line-height: 32px;
+        margin-bottom: 48px;
+
+        @media screen and (max-width: 576px) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      &--primary {
+        font-size: 24px;
+        line-height: 32px;
+        width: 70%;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 40px;
+        @media screen and (max-width: 576px) {
+          margin-bottom: 1rem;
+        }
+      }
 
       @media screen and (max-width: 992px) {
         font-size: 1rem;

@@ -128,7 +128,7 @@ export function AltFooter() {
               </li> */}
             </ul>
           </div>
-          {/* <div className={styles.altFooterMainSectionComponent}>
+          <div className={styles.altFooterMainSectionComponent}>
             <h3 className={styles.altFooterMainSectionComponentTitle}>
               CONTACT US
             </h3>
@@ -144,7 +144,7 @@ export function AltFooter() {
                 <p>
                   <b>Europe:</b> Kemp House 160, City Road London, EC1V 2NX, UK.
                 </p>
-                <div>
+                {/* <div>
                   <b>Africa:</b>
                   <p>
                     Lagos: Dominion Plaza, 140/141 Lekki - Epe Expressway,
@@ -159,7 +159,7 @@ export function AltFooter() {
                     Kenya: 4th Floor, Laiboni Centre, Lenana Road, Kilimani,
                     Nairobi, Kenya.
                   </p>
-                </div>
+                </div> */}
               </li>
               <li className={styles.contactListItem}>
                 <b>Email:</b>
@@ -170,7 +170,7 @@ export function AltFooter() {
                 <a href="tel:+442035762028">+442035762028</a>
               </li>
             </ul>
-          </div> */}
+          </div>
         </div>
         <div className="row">
           <div className="col-md-5">

@@ -1,0 +1,67 @@
+.advantage__section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .success {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 2.5rem;
+    color: #091e42;
+    margin-bottom: 5rem;
+    font-family: "charlie";
+    text-align: center;
+
+    @media screen and (max-width: 992px) {
+      font-size: 1.4rem;
+      line-height: 2rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+  .percentage__feedback {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 3rem;
+    justify-content: center;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      row-gap: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+
+    .percentage__horizontal {
+      padding-left: 1.5rem;
+      border-left: 1px solid #e5e7eb;
+
+      .percentage {
+        font-size: 72px;
+        font-family: "charlie";
+        line-height: 8rem;
+        color: #009bc0;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .feedback {
+        font-size: 20px;
+        line-height: 28px;
+        color: #6b7280;
+      }
+    }
+  }
+}
