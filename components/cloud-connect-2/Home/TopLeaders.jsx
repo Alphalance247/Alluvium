@@ -4,34 +4,36 @@ import Button from "../Button";
 
 const speakers = [
   {
-    name: "Kevin Tuei",
-    title: "Cloud Developer | Certified Educator",
-    image: "/cloudImg/1.png",
+    name: "Olawale Ajiboye",
+    title: "Senior Scrum Master",
+    image: "/assets/cloud-connect/images/speakers/1.png",
   },
   {
-    name: "Hon Seun Fakuade",
-    title: "Commissioner for Innovation",
-    image: "/cloudImg/2.png",
+    name: "Kingsley Owadara",
+    title: "Pan-Africa Center for AI Ethics",
+    image: "/assets/cloud-connect/images/speakers/4.png",
   },
   {
-    name: "Katarzyna Zofia Pawlak",
-    title: "Chief Product Officer & Co-founder @Appsvio",
-    image: "/cloudImg/3.png",
+    name: "Michael Kimathi (MK)",
+    title: "Head of Developer Community at Africa's Talking",
+    image: "/assets/cloud-connect/images/speakers/3.png",
   },
   {
-    name: "Rodney Nissen",
-    title: "Sr. Atlassian Toolsmith | Atlassian Certified Expert ",
-    image: "/cloudImg/4.png",
+    name: "Elisha Odemakinde",
+    title: "CEO Rectlabs Inc",
+    image: "/assets/cloud-connect/images/speakers/5.png",
   },
   {
-    name: "Naj Irshrad",
-    title: "Vice President of Federal Sales at ISOS",
-    image: "/cloudImg/5.png",
+    name: "Dr. Samba Otavise",
+    title: `Medical Doctor | Cloud & DevOps Professional Founder & CEO SolaviseTech 
+    Co-Founder Medics In Tech
+    `,
+    image: "/assets/cloud-connect/images/speakers/2.png",
   },
   {
-    name: "Erica Larson",
-    title: "People/Project/Process Leader, Atlassian Cloud Administrator.",
-    image: "/cloudImg/6.png",
+    name: "Katakyie Kojo Desu",
+    title: "Business Development Manager at On Point, Africa ",
+    image: "/cloudImg/9.png",
   },
   // {
   //   name: "Erica Larson",
@@ -60,7 +62,8 @@ const TopLeaders = () => {
   return (
     <section className={styles["top-leaders"]}>
       <h2 className={styles["top-leaders__title"]}>
-        Missed our past events? Catch up with previous speakers
+        {/* Missed our past events? Catch up with previous speakers */}
+        Top Global Innovators and Corporate Leaders Speaking
       </h2>
       <div className={styles["top-leaders__grid"]}>
         {speakers.slice(0, visibleSpeakers).map((speaker, index) => (

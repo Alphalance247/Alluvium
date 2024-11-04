@@ -1,6 +1,6 @@
 .top-leaders {
   // max-width: 1320px;
-  background-color: white;
+  background: #061a24;
   margin: 0 auto;
   padding: 48px 16px;
 
@@ -20,7 +20,7 @@
     line-height: 1.2;
     text-align: center;
     letter-spacing: 0.5px;
-    color: black;
+    color: white;
     max-width: 100%;
     margin: 0 auto 40px;
 
@@ -103,7 +103,7 @@
     font-weight: 500;
     line-height: 1.2;
     margin-bottom: 8px;
-    color: black;
+    color: white;
     font-family: "Helvetica Compressed", sans-serif;
 
     @media (min-width: 768px) {
@@ -121,7 +121,7 @@
   &__speaker-title {
     font-size: 14px;
     line-height: 1.4;
-    color: black;
+    color: white;
 
     @media (min-width: 768px) {
       font-size: 15px;
