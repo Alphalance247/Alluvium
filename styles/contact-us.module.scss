@@ -1,0 +1,27 @@
+.contact__us__card {
+  position: relative;
+
+  .card {
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0px 2px 6px 0px #1018280f;
+    background: white;
+    height: 329px;
+
+    .contact__sales {
+      color: #0b141c;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact__sales_p {
+      font-size: 1rem;
+      color: #595959;
+      line-height: 27px;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

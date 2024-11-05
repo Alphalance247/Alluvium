@@ -15,14 +15,15 @@
 }
 
 .customxs {
-  background: #fcfcfc;
+  background: white;
+  // #fcfcfc
 
   .featured {
     width: 90%;
     margin: auto;
     position: relative;
     bottom: 3rem;
-    background: #fcfcfc;
+    background: white;
     padding: 2rem 2.5rem;
 
     @media (max-width: 768px) {
@@ -80,7 +81,7 @@
   color: #009bc0;
   font-size: 12px;
   margin-top: 10px;
-  margin-left: 10px;
+  // margin-left: 10px;
   line-height: 20px;
   font-weight: 500;
 }
@@ -88,7 +89,7 @@
 .fcontent {
   font-size: 13px;
   margin-top: -10px;
-  margin-left: 10px;
+  // margin-left: 10px;
   font-weight: 600;
 
   @media (max-width: 992px) {
