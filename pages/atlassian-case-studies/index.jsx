@@ -6,6 +6,7 @@ import Advantages from "components/AtlassianCaseStudy/advantages";
 import SuccessStories from "components/AtlassianCaseStudy/successStories";
 import MeetAlluvium from "components/AtlassianCaseStudy/meetAlluvium";
 import Elevate from "components/AtlassianCaseStudy/elevate";
+import Head from "next/head";
 
 const AtlassianCaseStudy = () => {
   return (

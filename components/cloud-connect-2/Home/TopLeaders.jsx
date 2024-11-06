@@ -1,17 +1,23 @@
 import { useState } from "react";
 import styles from "../../../styles/cloud-connect-2/Home/speakers.module.scss";
 import Button from "../Button";
+import Image from "next/image";
 
 const speakers = [
+  {
+    name: "Samuel Desu",
+    title: "Sales Team Lead, Onpoint Africa | Atlassian Community Lead, Accra.",
+    image: "/assets/cloud-connect/images/speakers/6.png",
+  },
+  {
+    name: "Dr. Samba Otavise",
+    title: `Founder & CEO of SolaviseTech | Co-Founder of Medics In Tech`,
+    image: "/assets/cloud-connect/images/speakers/2.png",
+  },
   {
     name: "Olawale Ajiboye",
     title: "Senior Scrum Master",
     image: "/assets/cloud-connect/images/speakers/1.png",
-  },
-  {
-    name: "Kingsley Owadara",
-    title: "Pan-Africa Center for AI Ethics",
-    image: "/assets/cloud-connect/images/speakers/4.png",
   },
   {
     name: "Michael Kimathi (MK)",
@@ -19,22 +25,17 @@ const speakers = [
     image: "/assets/cloud-connect/images/speakers/3.png",
   },
   {
+    name: "Kingsley Owadara",
+    title: "Pan-Africa Center for AI Ethics",
+    image: "/assets/cloud-connect/images/speakers/4.png",
+  },
+
+  {
     name: "Elisha Odemakinde",
     title: "CEO Rectlabs Inc",
     image: "/assets/cloud-connect/images/speakers/5.png",
   },
-  {
-    name: "Dr. Samba Otavise",
-    title: `Medical Doctor | Cloud & DevOps Professional Founder & CEO SolaviseTech 
-    Co-Founder Medics In Tech
-    `,
-    image: "/assets/cloud-connect/images/speakers/2.png",
-  },
-  {
-    name: "Katakyie Kojo Desu",
-    title: "Business Development Manager at On Point, Africa ",
-    image: "/cloudImg/9.png",
-  },
+
   // {
   //   name: "Erica Larson",
   //   title: "People/Project/Process Leader, Atlassian Cloud Administrator",
@@ -69,7 +70,12 @@ const TopLeaders = () => {
         {speakers.slice(0, visibleSpeakers).map((speaker, index) => (
           <div key={index} className={styles["top-leaders__speaker"]}>
             <div className={styles["top-leaders__speaker-image"]}>
-              <img src={speaker.image} alt={speaker.name} />
+              <Image
+                width={384}
+                height={400}
+                src={speaker.image}
+                alt={speaker.name}
+              />
             </div>
             <h3 className={styles["top-leaders__speaker-name"]}>
               {speaker.name}
