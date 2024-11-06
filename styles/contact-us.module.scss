@@ -1,27 +1,105 @@
 .contact__us__card {
   position: relative;
+  padding-top: 3rem;
+  padding-bottom: 0rem;
+  bottom: 10rem;
 
-  .card {
-    padding: 2rem;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0px 2px 6px 0px #1018280f;
-    background: white;
-    height: 329px;
+  .contact__us {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 1.5rem;
 
-    .contact__sales {
-      color: #0b141c;
+    .card {
+      padding: 2rem;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0px 2px 6px 0px #1018280f;
+      background: white;
+      height: 329px;
+      border-radius: 8px;
+
+      .contact__sales {
+        color: #0b141c;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .contact__sales_p {
+        font-size: 1rem;
+        color: #595959;
+        line-height: 27px;
+        margin-bottom: 2.5rem;
+      }
+    }
+  }
+}
+
+.office__location {
+  padding-bottom: 5rem;
+  h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: -1px;
+    color: #0f1a24;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 6rem;
+  }
+
+  .office {
+    display: flex;
+    justify-content: center;
+    column-gap: 4rem;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+    h5 {
+      font-size: 18px;
+      color: #262626;
       font-weight: 600;
-      font-size: 20px;
-      line-height: 2rem;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
     }
 
-    .contact__sales_p {
-      font-size: 1rem;
+    p {
       color: #595959;
-      line-height: 27px;
-      margin-bottom: 2.5rem;
+      font-size: 16px;
+      line-height: 1.5rem;
+    }
+
+    a {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #e37915;
+      font-weight: 600;
+      text-decoration: underline !important;
+      text-decoration-color: #e37915 !important;
+      text-underline-offset: 5px;
+    }
+  }
+}
+
+.badges {
+  padding-bottom: 5rem;
+
+  .badges__border {
+    border: 1px solid #e5e7eb !important;
+    padding: 96px 162px;
+    border-radius: 0.5rem;
+
+    h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      letter-spacing: -1px;
+      color: #0f1a24;
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 2rem;
     }
   }
 }

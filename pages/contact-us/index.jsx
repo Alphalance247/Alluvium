@@ -7,22 +7,44 @@ import Button from "components/atlassian-service-reuse/Button";
 const ContactUs = () => {
   const data = [
     {
-      icon: "assets/icons/meet.svg",
+      icon: "/assets/icons/meet.svg",
       contact: "Contact Sales",
       subcontent:
         "Speak to our sales team about plans, pricing, enterprise contracts, or request a demo.",
+      btn: "Book a Meeting",
     },
     {
-      icon: "assets/icons/meet.svg",
+      icon: "/assets/icons/contact.svg",
       contact: "Contact Sales",
       subcontent:
         "Speak to our sales team about plans, pricing, enterprise contracts, or request a demo.",
+      btn: "Contact Support",
     },
     {
-      icon: "assets/icons/meet.svg",
+      icon: "/assets/icons/contact.svg",
       contact: "Contact Sales",
       subcontent:
         "Speak to our sales team about plans, pricing, enterprise contracts, or request a demo.",
+      btn: "Create a Ticket",
+    },
+  ];
+
+  const officeLocation = [
+    {
+      country: "London",
+      location: "Kemp House 160, City Road London, EC1V 2NX.",
+      tel: "+442035762028",
+    },
+    {
+      country: "America",
+      location: "Connecticut: 680 E Main Street Ste AStamford, CT 06901 US.",
+      tel: "+442035762028",
+    },
+    {
+      country: "America",
+      location:
+        "27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, Florida  32819 US..",
+      tel: "+442035762028",
     },
   ];
   return (
@@ -32,22 +54,49 @@ const ContactUs = () => {
         contentsheading2="Lorem ipsum dolor sit amet consectetur. Leo arcu eget neque tellus"
       />
 
-      <section className={styles.contact__us__card}>
-        {data.map((el) => {
-          return (
-            <div className={styles.card}>
-              <Image
-                src="assets/icons/meet.svg"
-                alt="contact"
-                width={40}
-                height={40}
-              />
-              <p className={styles.contact__sales}>{el.contact}</p>
-              <p className={styles.contact__sales_p}>{el.subcontent}</p>
-              <Button variant="outline">Book a Meeting</Button>
-            </div>
-          );
-        })}
+      <section className={`container ${styles.contact__us__card}`}>
+        <div className={`${styles.contact__us}`}>
+          {data.map((el, i) => {
+            return (
+              <div className={styles.card} id={i}>
+                <Image src={el.icon} alt="contact" width={40} height={40} />
+                <p className={styles.contact__sales}>{el.contact}</p>
+                <p className={styles.contact__sales_p}>{el.subcontent}</p>
+                <Button variant="outline">{el.btn}</Button>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className={`container ${styles.office__location}`}>
+        <h2>Our Office Locations</h2>
+
+        <div className={styles.office}>
+          {officeLocation.map((el, i) => {
+            return (
+              <div className={styles.location} id={i}>
+                <h5>{el.country}</h5>
+                <p>{el.location}</p>
+                <a href="tel:+442035762028">{el.tel}</a>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className={`container ${styles.badges}`}>
+        <div className={`${styles.badges__border}`}>
+          <h2>Alluvium are Trusted Solution Partner of Atlassian</h2>
+          <div className="text-center">
+            <Image
+              src="/assets/icons/badges.svg"
+              alt="badges"
+              width={891}
+              height={159}
+            />
+          </div>
+        </div>
       </section>
     </Layout>
   );
