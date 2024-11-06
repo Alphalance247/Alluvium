@@ -36,7 +36,7 @@ const WhyAttend = () => {
         <div className={styles.whyAttend__header}>
           <SectionHeader
             heading="Why Attend Cloud Connect?"
-            description="Cloud Connect offers a platform to explore ways to outshining traditional IT service management and align Service Delivery with broader business objectives, discover innovative strategies to optimize operations, enhance customer experiences, as well as drive sustainable growth."
+            description="Cloud Connect offers a platform to explore how to outshine traditional IT service management and align service delivery with broader business objectives. Discover innovative strategies to optimize operations, enhance customer experiences, and drive sustainable growth."
             size="small"
             variant="dark"
             width="small"
