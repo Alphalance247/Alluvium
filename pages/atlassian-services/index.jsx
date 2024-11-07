@@ -21,7 +21,7 @@ const AtlassianService = () => {
         withSlide={true}
         button1={
           <Link href="/support/contact#schedule-a-call">
-            <Button size="large" className="mx-4 my-4">
+            <Button size="large" className="mx-md-3 my-4">
               Schedule a Call
             </Button>
           </Link>
@@ -43,7 +43,7 @@ const AtlassianService = () => {
         text="Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
         button1={
           <Link href="/support/contact#schedule-a-call">
-            <Button size="large" className="mx-4 my-4">
+            <Button size="large" className="mx-md-3 my-4">
               Schedule a Call
             </Button>
           </Link>

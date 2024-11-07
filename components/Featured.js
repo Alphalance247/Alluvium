@@ -1,45 +1,81 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/hero-carousel.module.scss";
+import Button from "./atlassian-service-reuse/Button";
 
 export default function () {
+  const data = [
+    {
+      // img: "/assets/home/Image.svg",
+      img: "/assets/home/yale.png",
+      title:
+        "How Yale School of Management excels in higher education with Atlassian",
+      subtitle:
+        "Meeting student expectations by standardizing on a single platform",
+      btn: "",
+      alt: "atlassian-licence",
+      url: "/atlassian-case-studies",
+    },
+    {
+      img: "/assets/home/Image1.svg",
+      title: "JSM/ITSM Implementation",
+      subtitle: "",
+      btn: "",
+      alt: "jsm-implementation",
+      url: "/atlassian-services/itsm-services",
+    },
+    {
+      img: "/assets/home/Image2.svg",
+      title: "Cloud & Data Migration",
+      subtitle: "",
+      btn: "",
+      alt: "cloud-services",
+      url: "/atlassian-services/cloud-migration",
+    },
+  ];
   return (
     <div className={`${styles.customxs}`}>
-      <div className={`${styles.featured}`}>
-        <div className="row container mx-auto">
-          <h3 className={`${styles.featuredsec}`}>FEATURED SECTION</h3>
-          <Link href="/atlassian-services/atlassian-licence" passHref>
-            <div
-              className={`col-md-4 d-flex align-items-center ${styles.points}`}
-            >
-              <div>
-                <Image
-                  className={`img-fluid ${styles.fimages}`}
-                  width={176}
-                  height={101}
-                  src="/assets/home/Image.svg"
-                  alt="atlassian-licence"
-                />
-              </div>
-              <div className="ml-2 mt-2">
-                <p className={` ${styles.ftitle}`}>OUR SERVICES</p>
-                <p className={` ${styles.fcontent}`}>
-                  Atlassian Licence Management
-                </p>
-              </div>
-            </div>
-          </Link>
+      <div className={`container mx-auto ${styles.featured}`}>
+        <h3 className={`${styles.featuredsec}`}>CASE STUDIES</h3>
+        <div className="d-md-flex gap-3">
+          {data.map((el) => {
+            return (
+              <Link href={el.url} passHref>
+                <div className={` ${styles.points}`}>
+                  <div>
+                    <Image
+                      width={363}
+                      height={226}
+                      src={el.img}
+                      alt={el.alt}
+                      layout="responsive"
+                    />
+                  </div>
+                  <div className="">
+                    <p className={` ${styles.ftitle}`}>OUR SERVICES</p>
+                    <p className={` ${styles.fcontent}`}>{el.title}</p>
+                    <Button variant="outline">Learn More</Button>
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
 
-          <Link href="/atlassian-services/itsm-services" passHref>
-            {/* https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8 */}
+{
+  /* <Link href="/atlassian-services/itsm-services" passHref>
             <div
-              className={`col-md-4 d-flex align-items-center ${styles.points}`}
+              className={`col-md-4 d-flex flex-column align-items-center ${styles.points}`}
             >
               <div>
                 <Image
                   className={`img-fluid ${styles.fimages}`}
-                  width={176}
-                  height={101}
+                  width={363}
+                  height={226}
                   src="/assets/home/Image1.svg"
                   alt="jsm-implementation"
                 />
@@ -53,13 +89,13 @@ export default function () {
 
           <Link href="/atlassian-services/cloud-migration" passHref>
             <div
-              className={`col-md-4 d-flex align-items-center ${styles.points}`}
+              className={`col-md-4 d-flex flex-column align-items-start ${styles.points}`}
             >
               <div>
                 <Image
                   className={`img-fluid ${styles.fimages}`}
-                  width={176}
-                  height={101}
+                  width={363}
+                  height={226}
                   src="/assets/home/image2.svg"
                   alt="cloud-services"
                 />
@@ -69,9 +105,5 @@ export default function () {
                 <p className={` ${styles.fcontent}`}>Cloud & Data Migration</p>
               </div>
             </div>
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+          </Link> */
 }

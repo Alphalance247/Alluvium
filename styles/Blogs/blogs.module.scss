@@ -195,6 +195,11 @@
       position: sticky;
       top: 2rem;
       height: fit-content;
+
+      @media screen and (max-width: 576px) {
+        position: relative;
+        top: auto;
+      }
     }
 
     h3 {
