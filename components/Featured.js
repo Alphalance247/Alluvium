@@ -6,7 +6,6 @@ import Button from "./atlassian-service-reuse/Button";
 export default function () {
   const data = [
     {
-      // img: "/assets/home/Image.svg",
       img: "/assets/home/yale.png",
       title:
         "How Yale School of Management excels in higher education with Atlassian",
@@ -25,7 +24,7 @@ export default function () {
       url: "/atlassian-services/itsm-services",
     },
     {
-      img: "/assets/home/Image2.svg",
+      img: "/assets/home/image2.svg",
       title: "Cloud & Data Migration",
       subtitle: "",
       btn: "",
