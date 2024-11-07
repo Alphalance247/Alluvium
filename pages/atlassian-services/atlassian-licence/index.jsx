@@ -20,7 +20,7 @@ const AtlassianLicence = () => {
         withSlide={false}
         button1={
           <Link href="/atlassian-services/atlassian-licence/licence-request">
-            <Button size="large" className="mx-4 my-4">
+            <Button size="large" className="mx-md-3 my-4">
               Request License Quote
             </Button>
           </Link>
@@ -51,7 +51,7 @@ const AtlassianLicence = () => {
         text="Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
         button1={
           <Link href="/atlassian-services/atlassian-licence/licence-request">
-            <Button size="large" className="mx-4 my-4">
+            <Button size="large" className="mx-md-3 my-4">
               Request License Quote
             </Button>
           </Link>

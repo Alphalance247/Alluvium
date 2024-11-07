@@ -2,6 +2,7 @@
   padding-top: 96px;
   padding-bottom: 96px;
   text-align: center;
+
   @media screen and (max-width: 992px) {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -11,12 +12,20 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+
   //Variants
   &--default {
     background: #0b141c;
   }
   &--primary {
     background: #091e42;
+  }
+
+  //Variants
+  &--secondary {
+    background: #0b141c;
+    padding-top: 96px;
+    padding-bottom: 10rem;
   }
 
   .licencehero {
