@@ -158,11 +158,12 @@
   background-attachment: fixed;
   background-color: transparent;
   font-family: serif !important;
-  padding-top: 4rem !important;
+  padding-top: 0rem !important;
   padding-bottom: 4rem !important;
+  margin-top: -2rem;
 
   @media screen and (max-width: 992px) {
-    padding: 1rem 0 !important;
+    margin-top: -4rem;
   }
 
   h2 {

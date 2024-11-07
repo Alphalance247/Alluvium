@@ -2,21 +2,37 @@
   position: relative;
   padding-top: 3rem;
   padding-bottom: 0rem;
-  bottom: 10rem;
+  bottom: 11rem;
 
   .contact__us {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 1.5rem;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      row-gap: 1.5rem;
+    }
 
     .card {
-      padding: 2rem;
+      padding: 2.3rem 2rem;
       border: 1px solid #e5e7eb;
       box-shadow: 0px 2px 6px 0px #1018280f;
       background: white;
-      height: 329px;
+      height: fit-content;
       border-radius: 8px;
+
+      @media screen and (max-width: 992px) {
+        padding: 1rem;
+      }
 
       .contact__sales {
         color: #0b141c;
@@ -39,6 +55,12 @@
 
 .office__location {
   padding-bottom: 5rem;
+  margin-top: -3rem;
+
+  @media screen and (max-width: 576px) {
+    margin-top: -8rem;
+  }
+
   h2 {
     font-size: 2rem;
     line-height: 2.5rem;
@@ -47,12 +69,23 @@
     text-align: center;
     font-weight: 700;
     margin-bottom: 6rem;
+
+    @media screen and (max-width: 576px) {
+      text-align: left;
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+    }
   }
 
   .office {
     display: flex;
     justify-content: center;
     column-gap: 4rem;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+      row-gap: 1.5rem;
+    }
   }
 
   .location {
@@ -92,6 +125,10 @@
     padding: 96px 162px;
     border-radius: 0.5rem;
 
+    @media screen and (max-width: 576px) {
+      padding: 2rem 1rem;
+    }
+
     h2 {
       font-size: 2rem;
       line-height: 2.5rem;
@@ -100,6 +137,101 @@
       text-align: center;
       font-weight: 700;
       margin-bottom: 2rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+.contact_sales_team {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .contact__sales {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    column-gap: 3rem;
+
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+      row-gap: 3rem;
+    }
+
+    h2 {
+      color: #0f1a24;
+      font-size: 2.5rem;
+      line-height: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+
+      @media screen and (max-width: 992px) {
+        font-size: 1.8rem;
+        line-height: 2rem;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      color: #595959;
+      margin-bottom: 2.5rem;
+
+      @media screen and (max-width: 992px) {
+        font-size: 16px;
+        line-height: 1.3rem;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #595959;
+      margin-bottom: 1.5rem;
+      padding-left: 2.5rem;
+
+      @media screen and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 1.3rem;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding-left: 1.5rem;
+      }
+    }
+
+    li::before {
+      content: "";
+      position: absolute;
+      border-color: #595959;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      left: 7rem;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 7px;
+
+      @media screen and (max-width: 992px) {
+        left: 3rem;
+      }
+
+      @media screen and (max-width: 576px) {
+        left: 1.8rem;
+      }
     }
   }
 }

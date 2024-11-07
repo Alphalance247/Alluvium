@@ -35,25 +35,23 @@ export default function () {
   ];
   return (
     <div className={`${styles.customxs}`}>
-      <div className={`${styles.featured}`}>
-        <div className="row container mx-auto">
-          <h3 className={`${styles.featuredsec}`}>CASE STUDIES</h3>
+      <div className={`container mx-auto ${styles.featured}`}>
+        <h3 className={`${styles.featuredsec}`}>CASE STUDIES</h3>
+        <div className="d-md-flex gap-3">
           {data.map((el) => {
             return (
               <Link href={el.url} passHref>
-                <div
-                  className={`col-md-4 d-flex flex-column align-items-start ${styles.points}`}
-                >
+                <div className={` ${styles.points}`}>
                   <div>
                     <Image
-                      className={`img-fluid ${styles.fimages}`}
                       width={363}
                       height={226}
                       src={el.img}
                       alt={el.alt}
+                      layout="responsive"
                     />
                   </div>
-                  <div className="ml-2 mt-2">
+                  <div className="">
                     <p className={` ${styles.ftitle}`}>OUR SERVICES</p>
                     <p className={` ${styles.fcontent}`}>{el.title}</p>
                     <Button variant="outline">Learn More</Button>
@@ -62,8 +60,14 @@ export default function () {
               </Link>
             );
           })}
+        </div>
+      </div>
+    </div>
+  );
+}
 
-          {/* <Link href="/atlassian-services/itsm-services" passHref>
+{
+  /* <Link href="/atlassian-services/itsm-services" passHref>
             <div
               className={`col-md-4 d-flex flex-column align-items-center ${styles.points}`}
             >
@@ -101,9 +105,5 @@ export default function () {
                 <p className={` ${styles.fcontent}`}>Cloud & Data Migration</p>
               </div>
             </div>
-          </Link> */}
-        </div>
-      </div>
-    </div>
-  );
+          </Link> */
 }

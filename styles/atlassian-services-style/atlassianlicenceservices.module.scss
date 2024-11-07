@@ -94,7 +94,7 @@
 
     .discoverfaq {
       position: relative;
-      height: 100vh; // Restrict height to the viewport
+      // height: 100vh; // Restrict height to the viewport
       top: 0;
 
       h5 {
@@ -132,6 +132,11 @@
         position: sticky;
         top: 96px;
         height: fit-content;
+
+        @media screen and (max-width: 576px) {
+          position: relative;
+          // top: auto;
+        }
       }
     }
   }

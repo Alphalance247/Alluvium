@@ -157,8 +157,8 @@ export default function Navigation({ theme }) {
               <Link href="/atlassian-services/support">
                 <a className={styles.contactUsButton}>Support</a>
               </Link>
-              <Link href="/support/contact#schedule-a-call">
-                <a className={styles.scheduleButton}>Schedule a Call</a>
+              <Link href="/contact-us">
+                <a className={styles.scheduleButton}>Contact Us Today</a>
               </Link>
             </div>
           </nav>
