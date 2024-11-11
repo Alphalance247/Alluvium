@@ -8,10 +8,23 @@ import Link from "next/link";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import { chooseUsAlluvium } from "data";
+import Head from "next/head";
 
 const AtlassianLicence = () => {
   return (
     <Layout>
+      <Head>
+        <title>Support | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="Atlassian license management, atlassian jira service management license, atlassian license types, atlassian license cost, atlassian licenses, atlassian jira license, atlassian license agreement, license atlassian, jira license management, jira license management plugin, confluence license management, atlassian software license agreement, atlassian license, license jira service management"
+        />
+      </Head>
       <ServicesHero
         contentsheading="ATLASSIAN LICENSE MANAGEMENT"
         contentsheading1="Streamlined Atlassian License Management"

@@ -6,10 +6,23 @@ import { consultingPageCards } from "data";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
+import Head from "next/head";
 
 const Consulting = () => {
   return (
     <Layout>
+      <Head>
+        <title>Consulting | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="atlassian consulting, atlassian and confluence, agile atlassian, atlassian agile coach, atlassian jira and confluence, atlassian consulting suite, atlassian consulting services"
+        />
+      </Head>
       <ServicesHero
         contentsheading="ATLASSIAN CONSULTANCY & STRATEGY"
         contentsheading1="Strategic Atlassian Consultancy for Optimal Results"
