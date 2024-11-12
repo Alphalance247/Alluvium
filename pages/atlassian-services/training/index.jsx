@@ -7,10 +7,23 @@ import GetStarted from "components/atlassian-service-reuse/getStarted";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
+import Head from "next/head";
 
 const Training = () => {
   return (
     <Layout>
+      <Head>
+        <title>Atlassian-Training | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="Atlassian training, jira atlassian training, confluence atlassian training, bamboo atlassian training, atlassian training certification, atlassian training partner, atlassian admin training, atlassian access training, jira training and certification, atlassian jira align training, atlassian jira administrator training, atlassian jira and confluence training, atlassian bitbucket training, atlassian bamboo training, jira training basics"
+        />
+      </Head>
       <ServicesHero
         contentsheading1="Atlassian Training"
         contentsheading2="Upgrade your Atlassian tool skills and master the best practises for your daily work by getting trained by our certified Atlassian trainers."

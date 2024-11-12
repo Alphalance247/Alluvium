@@ -10,10 +10,23 @@ import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import { chooseUsAlluvium } from "data";
+import Head from "next/head";
 
 const AtlassianService = () => {
   return (
     <Layout>
+      <Head>
+        <title>Atlassian-Services | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+        />
+      </Head>
       <ServicesHero
         contentsheading="ATLASSIAN SERVICES"
         contentsheading1="Customized Atlassian Services for Enhanced Productivity"
