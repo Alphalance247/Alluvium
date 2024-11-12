@@ -192,17 +192,15 @@ const VolunterForm = () => {
           paragraph="Join our dynamic team and be part of something bigger. Help make Cloud Connect '24 a resounding success by joining the Cloud Connect volunteer force."
         />
 
-        <h2 className={styles.interest}>
-          {/* Thanks for showing interest for the cloud connect volunteer role,
-          We've reached our desired number of volunteers and are no longer
-          accepting new registrations.  */}
+        {/* <h2 className={styles.interest}>
+          
           "Thank you for your interest in the Cloud Connect Volunteer Role.{" "}
           <br />
           <br />
           We appreciate your enthusiasm, but we've reached our desired number of
           volunteers and are no longer accepting new registrations.
-        </h2>
-        {/* <div className={styles.formdetailsvolunteer}>
+        </h2> */}
+        <div className={styles.formdetailsvolunteer}>
           <form
             action=""
             className={styles.formlogic}
@@ -544,10 +542,10 @@ const VolunterForm = () => {
             </div>
 
             <div>
-              <Button disabled={true}>Submit Request</Button>
+              <Button>Submit Request</Button>
             </div>
           </form>
-        </div> */}
+        </div>
       </div>
     </section>
   );
