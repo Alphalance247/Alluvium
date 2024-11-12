@@ -341,6 +341,26 @@ const ContactInformation = () => {
               </h6>
             )}
           </div>
+
+          <div>
+            <Input
+              id="email_3"
+              label="email_3"
+              text="Email"
+              name="email_3"
+              type="email"
+              value={form.email_3 || ""}
+              placeholder=""
+              onChange={handleChange}
+              errorF={formError.email_3}
+            />
+
+            {formError.email_3 && (
+              <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
+                Please enter a valid email
+              </h6>
+            )}
+          </div>
         </div>
 
         {/* Dynamically render additional participant input fields */}

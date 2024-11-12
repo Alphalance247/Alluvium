@@ -35,6 +35,11 @@ const speakers = [
     title: "CEO Rectlabs Inc",
     image: "/assets/cloud-connect/images/speakers/5.png",
   },
+  {
+    name: "	David Oladeji",
+    title: "Founder & CEO @ Uphiva Enterprises & Networks",
+    image: "/assets/cloud-connect/images/speakers/7.png",
+  },
 
   // {
   //   name: "Erica Larson",

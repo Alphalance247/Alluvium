@@ -24,19 +24,19 @@ const TicketDetails = () => {
       }
 
       // Add event listener for beforeunload to clear localStorage and state
-      const handleBeforeUnload = () => {
-        localStorage.removeItem("ticketNumbers");
-        setTicketNumbers(eventTicket.map(() => 0));
-        localStorage.removeItem("extraTickets");
-        setExtraTickets(0);
-      };
+      // const handleBeforeUnload = () => {
+      //   localStorage.removeItem("ticketNumbers");
+      //   setTicketNumbers(eventTicket.map(() => 0));
+      //   localStorage.removeItem("extraTickets");
+      //   setExtraTickets(0);
+      // };
 
-      window.addEventListener("beforeunload", handleBeforeUnload);
+      // window.addEventListener("beforeunload", handleBeforeUnload);
 
-      // Cleanup event listener on component unmount
-      return () => {
-        window.removeEventListener("beforeunload", handleBeforeUnload);
-      };
+      // // Cleanup event listener on component unmount
+      // return () => {
+      //   window.removeEventListener("beforeunload", handleBeforeUnload);
+      // };
     }
   }, []);
 

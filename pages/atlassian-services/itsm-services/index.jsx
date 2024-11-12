@@ -7,10 +7,23 @@ import JiraService from "components/ITSM-SERVICES/jiraService";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import styles from "../../../styles/licence.module.scss";
 import JiraTools from "components/ITSM-SERVICES/jiraTools";
+import Head from "next/head";
 
 const ItsmServices = () => {
   return (
     <Layout>
+      <Head>
+        <title>ITSM Services | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="jsm schedule, stages of implementation, implementation model example, jsm incident management, jsm insight, jsm itsm, jsm integration, jsm benefits, jsm best practices, jsm tutorial, jsm demo, jsm documentation, jsm jira, jsm kanban board, jsm knowledge base, jsm opsgenie, jsm project management, jsm problem management, what is jsm, jsm workflow"
+        />
+      </Head>
       <ServicesHero
         contentsheading1="IT SERVICE MANAGEMENT"
         contentsheading2="Empower your service teams with industry-leading IT Service Management tool Jira Service Management to deliver exceptional service"

@@ -12,10 +12,23 @@ import Button from "components/atlassian-service-reuse/Button";
 import GetStarted from "components/atlassian-service-reuse/getStarted";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import { chooseUsAlluvium } from "data";
+import Head from "next/head";
 
 const CloudMigration = () => {
   return (
     <Layout>
+      <Head>
+        <title>Cloud Migration | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content="Why Cloud Migration, What does Cloud Migration mean?, How much does Cloud migration cost, Atlassian cloud migration, cloud migration approach, cloud migration benefits, cloud migration best practices, cloud migration case study, cloud migration companies, cloud migration checklist, cloud migration consultant, cloud migration vs data migration, cloud migration benefits and its challenges issues, cloud migration assessment, cloud migration assessment tools"
+        />
+      </Head>
       <ServicesHero
         contentsheading="ATLASSIAN MIGRATION AND CONSOLIDATION"
         contentsheading1="Effortless Atlassian Migration"
