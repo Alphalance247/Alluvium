@@ -28,7 +28,7 @@ const AtlassianCaseStudy = () => {
         contentsheading2="Transform Your Service Management with the Proven Power of Atlassian Products."
         button1={
           <Link href="/support/contact#schedule-a-call">
-            <Button size="large" className="mx-4 my-4">
+            <Button size="large" className="">
               Schedule a Call
             </Button>
           </Link>
