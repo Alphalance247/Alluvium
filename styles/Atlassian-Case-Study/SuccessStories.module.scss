@@ -128,13 +128,24 @@
       }
     }
 
+    .heading__right {
+      margin-bottom: 2.5rem;
+
+      @media screen and (max-width: 576px) {
+        margin-bottom: 1rem;
+      }
+    }
+
     .body__content {
       display: grid;
       grid-template-columns: 25% auto;
       grid-gap: 5rem;
 
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 992px) {
         column-gap: 2rem;
+      }
+      @media screen and (max-width: 576px) {
+        column-gap: 1rem;
       }
 
       .heading__styles {
@@ -144,15 +155,24 @@
         line-height: 1rem;
         color: #595c61;
         margin-bottom: 0.5rem;
+
+        @media screen and (max-width: 576px) {
+          font-size: 10px;
+          margin-bottom: 0rem;
+        }
       }
 
       .subHeading__styles {
         color: #595c61;
         font-size: 1rem;
         line-height: 20px;
-
+        @media screen and (max-width: 992px) {
+          font-size: 14px;
+          line-height: 1.4rem;
+        }
         @media screen and (max-width: 576px) {
           font-size: 10px;
+          margin-bottom: 0px;
         }
       }
 
@@ -173,9 +193,14 @@
         font-size: 18px;
         line-height: 28px;
 
+        @media screen and (max-width: 992px) {
+          font-size: 14px;
+          line-height: 1.4rem;
+        }
+
         @media screen and (max-width: 576px) {
-          font-size: 12px;
-          line-height: 20px;
+          font-size: 10px;
+          line-height: 16px;
         }
       }
 
@@ -188,6 +213,20 @@
         padding-left: 1rem;
         padding-top: 4rem;
         padding-bottom: 4rem;
+
+        @media screen and (max-width: 992px) {
+          font-size: 14px;
+          line-height: 1.4rem;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 10px;
+          line-height: 16px;
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
       }
 
       .quote__span {
@@ -196,6 +235,10 @@
         line-height: 17px;
         letter-spacing: -0.5px;
         font-style: normal;
+
+        @media screen and (max-width: 576px) {
+          font-size: 10px;
+        }
       }
 
       .improvement__quote {
@@ -207,6 +250,16 @@
         span {
           font-weight: 600;
         }
+
+        @media screen and (max-width: 992px) {
+          font-size: 14px;
+          line-height: 1.4rem;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 10px;
+          line-height: 1rem;
+        }
       }
 
       .rating {
@@ -214,8 +267,16 @@
         color: #595c61;
         gap: 1.2rem;
 
+        @media screen and (max-width: 576px) {
+          flex-direction: column;
+        }
+
         .rating__comment {
           width: 167px;
+          @media screen and (max-width: 992px) {
+            width: 100%;
+          }
+          
         }
 
         .rate {
@@ -223,6 +284,11 @@
           font-weight: 600;
           line-height: 4rem;
           margin-bottom: 0px;
+
+          @media screen and (max-width: 576px) {
+            font-size: 1.3rem;
+            line-height: 2rem;
+          }
         }
         .comment {
           font-size: 12px;
