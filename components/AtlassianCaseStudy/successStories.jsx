@@ -278,14 +278,17 @@ const SuccessStories = () => {
                 </p>
                 <div className={styles.body__content}>
                   <div>
-                    {yale.map((el) => {
+                    {yale.map((el, i) => {
                       return (
-                        <div className={styles.heading__right}>
+                        <div className={styles.heading__right} key={i}>
                           <p className={styles.heading__styles}>{el.heading}</p>
 
                           {el.subHead.map((item, i) => {
                             return (
-                              <p className={`${styles.subHeading__styles}`}>
+                              <p
+                                className={`${styles.subHeading__styles}`}
+                                key={i}
+                              >
                                 {item}
                               </p>
                             );
@@ -400,14 +403,17 @@ const SuccessStories = () => {
                 </p>
                 <div className={styles.body__content}>
                   <div>
-                    {twitter.map((el) => {
+                    {twitter.map((el, i) => {
                       return (
-                        <div className={styles.heading__right}>
+                        <div className={styles.heading__right} key={i}>
                           <p className={styles.heading__styles}>{el.heading}</p>
 
                           {el.subHead.map((item, i) => {
                             return (
-                              <p className={`${styles.subHeading__styles}`}>
+                              <p
+                                className={`${styles.subHeading__styles}`}
+                                key={i}
+                              >
                                 {item}
                               </p>
                             );
@@ -509,14 +515,17 @@ const SuccessStories = () => {
                 </p>
                 <div className={styles.body__content}>
                   <div>
-                    {DHI.map((el) => {
+                    {DHI.map((el, i) => {
                       return (
-                        <div className={styles.heading__right}>
+                        <div className={styles.heading__right} key={i}>
                           <p className={styles.heading__styles}>{el.heading}</p>
 
                           {el.subHead.map((item, i) => {
                             return (
-                              <p className={`${styles.subHeading__styles}`}>
+                              <p
+                                className={`${styles.subHeading__styles}`}
+                                key={i}
+                              >
                                 {item}
                               </p>
                             );
@@ -625,14 +634,17 @@ const SuccessStories = () => {
                 </p>
                 <div className={styles.body__content}>
                   <div>
-                    {CBS.map((el) => {
+                    {CBS.map((el, i) => {
                       return (
-                        <div className={styles.heading__right}>
+                        <div className={styles.heading__right} key={i}>
                           <p className={styles.heading__styles}>{el.heading}</p>
 
                           {el.subHead.map((item, i) => {
                             return (
-                              <p className={`${styles.subHeading__styles}`}>
+                              <p
+                                className={`${styles.subHeading__styles}`}
+                                key={i}
+                              >
                                 {item}
                               </p>
                             );
@@ -729,14 +741,17 @@ const SuccessStories = () => {
                 </p>
                 <div className={styles.body__content}>
                   <div>
-                    {Telegraph.map((el) => {
+                    {Telegraph.map((el, i) => {
                       return (
-                        <div className={styles.heading__right}>
+                        <div className={styles.heading__right} key={i}>
                           <p className={styles.heading__styles}>{el.heading}</p>
 
                           {el.subHead.map((item, i) => {
                             return (
-                              <p className={`${styles.subHeading__styles}`}>
+                              <p
+                                className={`${styles.subHeading__styles}`}
+                                key={i}
+                              >
                                 {item}
                               </p>
                             );
@@ -844,17 +859,3 @@ const SuccessStories = () => {
 };
 
 export default SuccessStories;
-
-{
-  /* <>
-              <div style={{ width: "100%", height: "500px" }}>
-                <iframe
-                  src="/case-study.pdf"
-                  title="PDF Document"
-                  width="100%"
-                  height="100%"
-                  style={{ border: "none" }}
-                />
-              </div>
-            </> */
-}
