@@ -88,7 +88,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
-    color: #091e42;
+    color: #e37915;
     outline: none;
     cursor: pointer;
     border: none;
@@ -173,7 +173,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
-    color: #091e42;
+    color: #e37915;
     outline: none;
     cursor: pointer;
     border: none;
@@ -263,5 +263,118 @@
     bottom: 0px;
     max-width: 1500px;
     margin: auto;
+  }
+}
+
+// /////////////////////////////////////////////
+.case__study__feedbacks {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: grid;
+  grid-template-columns: 30% auto;
+  grid-gap: 5rem;
+
+  @media screen and (max-width: 992px) {
+    column-gap: 2rem;
+  }
+  @media screen and (max-width: 576px) {
+    column-gap: 1rem;
+  }
+
+  .summary__section {
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0px 1px 2px 0px #1018280a;
+    height: 595px;
+
+    .summary__head {
+      font-size: 18px;
+      font-weight: 800;
+      color: #595c61;
+      line-height: 28px;
+      margin-bottom: 1rem;
+    }
+
+    .summary {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 1.5rem;
+    }
+
+    .summary__p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #595c61;
+      margin-bottom: 0px;
+    }
+
+    .heading__styles {
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1rem;
+      color: #595c61;
+      margin-bottom: 0.5rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 10px;
+        margin-bottom: 0rem;
+      }
+    }
+
+    .subHeading__styles {
+      color: #595c61;
+      font-size: 1rem;
+      line-height: 20px;
+      margin-bottom: 0px;
+      @media screen and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 1.4rem;
+      }
+      @media screen and (max-width: 576px) {
+        font-size: 10px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .content__display {
+    row-gap: 5rem;
+
+    .paragraph__content {
+      font-size: 18px;
+      line-height: 28px;
+      color: #595c61;
+    }
+
+    .quote__section {
+      padding: 3rem;
+      border-top: 12px solid #091e42;
+      background: #f5f4f5;
+
+      .quote__words {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+      }
+
+      .quote__name {
+        font-size: 18px;
+        line-height: 28px;
+        color: #595c61;
+      }
+    }
+
+    .rest__heading {
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 2rem;
+      letter-spacing: -1px;
+      color: #0f1a24;
+      margin-bottom: 1rem;
+    }
   }
 }

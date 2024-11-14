@@ -8,7 +8,6 @@ const CloudMigrationCaseStudy = () => {
     <Layout>
       <CloudMain />
       <CaseStudyCard />
-      <HeroCloud />
     </Layout>
   );
 };

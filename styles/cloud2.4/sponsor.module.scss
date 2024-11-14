@@ -127,23 +127,10 @@
     @media screen and (max-width: 1025px) {
       grid-template-columns: repeat(2, 1fr);
       row-gap: 2rem;
-      // & > div:nth-child(2) {
-      //   width: 60%;
-      // }
-    }
-
-    @media screen and (max-width: 992px) {
-      // & > div:nth-child(3) {
-      //   grid-column: span 2;
-      // }
     }
 
     @media screen and (max-width: 576px) {
-      display: flex;
-      flex-wrap: wrap;
-      // & > div:nth-child(2) {
-      //   width: 100%;
-      // }
+      flex-direction: column;
     }
 
     .packagesItem {
@@ -156,6 +143,10 @@
       row-gap: 1.5rem;
       width: 45%;
       // margin: auto;
+
+      @media screen and (max-width: 992px) {
+        width: 100%;
+      }
 
       @media screen and (max-width: 576px) {
         padding: 1rem;
