@@ -104,9 +104,9 @@ const TicketDetails = () => {
             and Platinum Tickets!
           </p>
 
-          <p className={styles.early__birds__ends}>
+          {/* <p className={styles.early__birds__ends}>
             Early bird ends on November 10, 2024
-          </p>
+          </p> */}
           <div className={`${styles.ticketTitle}`}>
             <p>TICKET</p>
             <p>PRICE</p>

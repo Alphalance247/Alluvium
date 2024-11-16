@@ -119,7 +119,7 @@ const ContactInformation = () => {
       form?.last_name_2 &&
       emailRegex.test(form?.email_3) &&
       form?.phone_number_5 &&
-      form?.hear_about_us_27
+      form?.refrerred_by_42
     ) {
       setLoading(true);
       await axios
@@ -154,7 +154,7 @@ const ContactInformation = () => {
               recipient_first_name_6: "",
               recipient_last_name_7: "",
               recipient_phone_number_9: "",
-              hear_about_us_27: "",
+              refrerred_by_42: "",
             });
           } else {
             addToast(
@@ -208,7 +208,7 @@ const ContactInformation = () => {
         last_name_2: !form.last_name_2,
         email_3: !emailRegex.test(form.email_3),
         phone_number_5: !form.phone_number_5,
-        hear_about_us_27: !form.hear_about_us_27,
+        refrerred_by_42: !form.refrerred_by_42,
       });
     }
   };
@@ -304,60 +304,56 @@ const ContactInformation = () => {
 
           <div className=" position-relative">
             <label
-              htmlFor="hear_about_us_27"
+              htmlFor="refrerred_by_42"
               className={styles.labelStyle}
               style={{ marginBottom: "8px" }}
             >
-              How did you hear about us? *
+              Who refered you? *
             </label>
             <select
-              name="hear_about_us_27"
-              id="hear_about_us_27"
+              name="refrerred_by_42"
+              id="refrerred_by_42"
               className={`${styles.countrySelect} ${
-                formError.hear_about_us_27 ? styles.error : ""
+                formError.refrerred_by_42 ? styles.error : ""
               }`}
-              value={form.hear_about_us_27}
+              value={form.refrerred_by_42}
               onChange={handleChange}
             >
               <option value=""></option>
-              <option value="Atlassian Facebook Promotion">
-                Atlassian Facebook Promotion
+              <option value="Onyeka Odichukwu">Onyeka Odichukwu</option>
+              <option value="Tioluwanimi Egunjobi">Tioluwanimi Egunjobi</option>
+              <option value="Folorunsho Mary"> Folorunsho Mary</option>
+              <option value="Dolapo Oderinde">Dolapo Oderinde</option>
+              <option value="Mohammed Oluwafemi">Mohammed Oluwafemi</option>
+              <option value="Abigail Ogbogo">Abigail Ogbogo</option>
+              <option value="Oyeyemi Aminat Jumoke">
+                Oyeyemi Aminat Jumoke
               </option>
-              <option value="Google">Google</option>
-              <option value="Social media">Social media</option>
-              <option value="Referral from a Friend or Colleague">
-                Referral from a Friend or Colleague
+              <option value="Oluwanisola Akinnitire">
+                Oluwanisola Akinnitire
               </option>
-              <option value="Event Website">Event Website</option>
-              <option value="Company Website">Company Website</option>
-              <option value="Email Newsletter">Email Newsletter</option>
-              <option value="Previous Attendance">Previous Attendance</option>
+              <option value="Akande Jesutofunmi">Akande Jesutofunmi</option>
+              <option value="Folorunsho Elizabeth">Folorunsho Elizabeth</option>
+              <option value="Precious Okunola">Precious Okunola</option>
+              <option value="Chukwunonso Godswill Onyiagha">
+                Chukwunonso Godswill Onyiagha
+              </option>
+              <option value="Abdul Hameed">Abdul Hameed</option>
+              <option value="Sakiru Sanusi">Sakiru Sanusi</option>
+              <option value="Gbayi-oni  Oluwabusayo">
+                Gbayi-oni Oluwabusayo
+              </option>
+              <option value="Aderonke Awolaja">Aderonke Awolaja</option>
+              <option value="Tolulope Adegboola">Tolulope Adegboola</option>
+              <option value="Fafowora Bernice Shola">
+                Fafowora Bernice Shola
+              </option>
             </select>
             {/* <FaChevronDown className={styles.iconic} /> */}
 
-            {formError.hear_about_us_27 && (
+            {formError.refrerred_by_42 && (
               <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
                 This field is required
-              </h6>
-            )}
-          </div>
-
-          <div>
-            <Input
-              id="email_3"
-              label="email_3"
-              text="Email"
-              name="email_3"
-              type="email"
-              value={form.email_3 || ""}
-              placeholder=""
-              onChange={handleChange}
-              errorF={formError.email_3}
-            />
-
-            {formError.email_3 && (
-              <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
-                Please enter a valid email
               </h6>
             )}
           </div>
