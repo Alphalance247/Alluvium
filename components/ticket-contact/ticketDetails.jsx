@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const TicketDetails = () => {
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
-  const ticketPrices = [5000, 15000, 70000];
+  const ticketPrices = [5000, 20000, 100000];
   const [extraTickets, setExtraTickets] = useState(0); // Track extra tickets
   const [isFixed, setIsFixed] = useState(false); // Track if OrderSummary is fixed
   const sectionRef = useRef(null); // Reference to the section for calculating boundarie
@@ -145,7 +145,7 @@ const TicketDetails = () => {
                 >
                   {item?.price}
                 </p>
-                <p className={styles.early__birds__price}>{item?.earlybirds}</p>
+                {/* <p className={styles.early__birds__price}>{item?.earlybirds}</p> */}
               </div>
 
               <div className={styles.ticketUpdate}>
