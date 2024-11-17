@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const TicketDetails = () => {
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
-  const ticketPrices = [5000, 15000, 70000];
+  const ticketPrices = [5000, 20000, 100000];
   const [extraTickets, setExtraTickets] = useState(0); // Track extra tickets
   const [isFixed, setIsFixed] = useState(false); // Track if OrderSummary is fixed
   const sectionRef = useRef(null); // Reference to the section for calculating boundarie
@@ -99,10 +99,10 @@ const TicketDetails = () => {
       <div className={styles.ticketBookings}>
         <div className={`${styles.chooseTicket} container`}>
           <DetailsContact content="CHOOSE YOUR event TICKET" />
-          <p className={styles.early__birds__chance}>
+          {/* <p className={styles.early__birds__chance}>
             <span>Early Bird Special:</span> Save 30% on Cloud Connect '24 VIP
             and Platinum Tickets!
-          </p>
+          </p> */}
 
           {/* <p className={styles.early__birds__ends}>
             Early bird ends on November 10, 2024
@@ -145,7 +145,7 @@ const TicketDetails = () => {
                 >
                   {item?.price}
                 </p>
-                <p className={styles.early__birds__price}>{item?.earlybirds}</p>
+                {/* <p className={styles.early__birds__price}>{item?.earlybirds}</p> */}
               </div>
 
               <div className={styles.ticketUpdate}>

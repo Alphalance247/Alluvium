@@ -82,7 +82,7 @@ const ContactInformation = () => {
   }, []);
 
   const calculateTotal = () => {
-    const ticketPrices = [5000, 15000, 70000];
+    const ticketPrices = [5000, 20000, 100000];
     const total = ticketNumbers.reduce(
       (total, num, index) => total + num * ticketPrices[index],
       0
