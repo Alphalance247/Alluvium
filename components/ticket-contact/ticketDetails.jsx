@@ -99,10 +99,10 @@ const TicketDetails = () => {
       <div className={styles.ticketBookings}>
         <div className={`${styles.chooseTicket} container`}>
           <DetailsContact content="CHOOSE YOUR event TICKET" />
-          <p className={styles.early__birds__chance}>
+          {/* <p className={styles.early__birds__chance}>
             <span>Early Bird Special:</span> Save 30% on Cloud Connect '24 VIP
             and Platinum Tickets!
-          </p>
+          </p> */}
 
           {/* <p className={styles.early__birds__ends}>
             Early bird ends on November 10, 2024
