@@ -28,10 +28,9 @@ export function AltFooter() {
             </div>
             <div>
               <p>
-                We supply the highest quality remote and onsite engineers AND We
-                deliver some of the highest quality Jira, Confluence and
-                Bitbucket migrations, faster and at much lower cost, for some of
-                the biggest Atlassian partners and Enterprise companies.
+                Alluvium creates, maintains and deploys high velocity service
+                desk to allow teams deliver value to their internal and
+                external customers.
               </p>
             </div>
             <div>
