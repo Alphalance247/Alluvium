@@ -320,9 +320,15 @@ const ContactInformation = () => {
               onChange={handleChange}
             >
               <option value=""></option>
+              <option value="Dusanwo Titilope Olayinka">
+                Dusanwo Titilope Olayinka
+              </option>
+              <option value="Ayodeji">Ayodeji</option>
               <option value="Onyeka Odichukwu">Onyeka Odichukwu</option>
+              <option value="Joy Babatunde">Joy Babatunde</option>
+              <option value="Oluwatosin Samuel">Oluwatosin Samuel</option>
               <option value="Tioluwanimi Egunjobi">Tioluwanimi Egunjobi</option>
-              <option value="Folorunsho Mary"> Folorunsho Mary</option>
+              <option value="Folorunsho Mary">Folorunsho Mary</option>
               <option value="Dolapo Oderinde">Dolapo Oderinde</option>
               <option value="Mohammed Oluwafemi">Mohammed Oluwafemi</option>
               <option value="Abigail Ogbogo">Abigail Ogbogo</option>
@@ -339,17 +345,21 @@ const ContactInformation = () => {
                 Chukwunonso Godswill Onyiagha
               </option>
               <option value="Abdul Hameed">Abdul Hameed</option>
+              <option value="Balogun">Balogun</option>
               <option value="Sakiru Sanusi">Sakiru Sanusi</option>
+              <option value="Glory Chioma">Glory Chioma</option>
               <option value="Gbayi-oni  Oluwabusayo">
                 Gbayi-oni Oluwabusayo
               </option>
+              <option value="Adeyinka">Adeyinka</option>
               <option value="Aderonke Awolaja">Aderonke Awolaja</option>
               <option value="Tolulope Adegboola">Tolulope Adegboola</option>
-              <option value="Fafowora Bernice Shola">
-                Fafowora Bernice Shola
-              </option>
+              <option value="Muritala busayo">Muritala busayo</option>
+              <option value="Stella Chekwbe">Stella Chekwbe</option>
+              <option value="Muritala busayo">Obuseh Elizabeth</option>
+              <option value="Ester Adesina">Ester Adesina</option>
+              <option value="Babatunde">Babatunde</option>
             </select>
-            {/* <FaChevronDown className={styles.iconic} /> */}
 
             {formError.refrerred_by_42 && (
               <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
