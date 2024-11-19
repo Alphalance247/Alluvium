@@ -13,7 +13,7 @@ const HeroCloud = ({ item }) => {
           <div className={styles.percentage__return}>
             {item.analytics.map((el, i) => {
               return (
-                <div key={i}>
+                <div key={i} className={styles.return__div}>
                   <p className={styles.percentage}>{el.score}</p>
                   <p className={styles.return}>{el.dexcription}</p>
                 </div>
@@ -24,13 +24,12 @@ const HeroCloud = ({ item }) => {
         <Image
           src={item.imageSrc}
           alt="case__study__image"
-          width={740}
+          width={640}
           height={580}
+          className={styles.img}
         />
       </div>
-      <div className={styles.background__set}>
-        
-      </div>
+      <div className={styles.background__set}></div>
     </section>
   );
 };

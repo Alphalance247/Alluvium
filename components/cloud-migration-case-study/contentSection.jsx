@@ -1,12 +1,26 @@
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../styles/cloud-migration-case-study/migartionmain.module.scss";
+import Image from "next/image";
 
 const ContentSection = ({ item }) => {
   return (
-    <section className={`container mx-auto `}>
+    <section
+      className={`container mx-auto ${styles.case__study__feedbacks__heading}`}
+    >
       <div className={styles.case__study__feedbacks} key={item.title}>
         <div className={styles.summary__section}>
-          <p className={styles.summary__head}>{item?.industryFeedback}</p>
+          <div style={{ marginBottom: "1rem" }}>
+            {item.title === "dhcs" ? (
+              <p className={styles.summary__head}>{item?.industryFeedback}</p>
+            ) : (
+              <Image
+                src={item?.industryIcon}
+                width={item?.width}
+                height={item?.height}
+                alt="industryicon"
+              />
+            )}
+          </div>
 
           <div className={styles.summary}>
             <p className={styles.summary__p}>
@@ -43,6 +57,12 @@ const ContentSection = ({ item }) => {
 
           <div className={styles.quote__section}>
             <p className={styles.quote__words}>{item?.quote}</p>
+            {item?.quoter && (
+              <>
+                <span>{item?.quoter}</span> <br />
+                <br />
+              </>
+            )}
             <span className={styles.quote__name}>{item?.quotename}</span>
           </div>
 
