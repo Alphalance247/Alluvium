@@ -16,11 +16,11 @@ const AtlassianCaseStudy = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="See how leading organizations modernize with Atlassian ITSM implementation. Just like YALE School of Management and Twitter, Alluvium can help you implement a successful ITSM solution."
         />
         <meta
           name="keywords"
-          content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+          content="atlassian case studies, atlassian itsm, atlassian itsm guide, atlassian jira itsm, itsm atlassian, atlassian use cases, jsm case studies, atlassian case study, itsm case study, atlassian problem management, jira case study, Incident nanagement, atlassian jira service management, jira service management asset management, jira service management training, jira service management assets, jira service management automation"
         />
       </Head>
       <ServicesHero
