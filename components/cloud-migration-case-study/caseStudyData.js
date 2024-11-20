@@ -1,6 +1,6 @@
 const CaseStudyData = [
   {
-    title: "dhcs",
+    title: "boosting-productivity-with-jira-data-center-to-cloud-migration",
     aboutAlluvium: "Alluvium are Trusted Solution Partner of Atlassian",
     caseStudyTitle:
       "Boosting Productivity with Jira Data Center to Cloud Migration",
@@ -350,6 +350,270 @@ const CaseStudyData = [
         highlightHeading: "Long-Term Impacts",
         Highlightpargraph: [
           "The modernization of DHCS’s internal systems with Atlassian Cloud Enterprise tools has been a resounding success. The improvements in collaboration, efficiency, and governance have not only saved the agency millions but have also helped them deliver better services to Californians. By continuing to expand their use of Atlassian products, DHCS is positioning itself to evolve and meet the challenges of the future, ensuring that they remain focused on their mission of providing high-quality, affordable healthcare to all Californians.",
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "how-sun-life-unlocked-a-brighter-future-by-migrating-to-atlassian-cloud",
+    aboutAlluvium: "Alluvium are Trusted Solution Partner of Atlassian",
+    caseStudyTitle:
+      "How Sun Life Unlocked a Brighter Future by Migrating to Atlassian Cloud",
+    whyMigrate:
+      "Sun Life’s shift to Atlassian Cloud brought teams closer, making work faster and easier. Moving away from old systems, they streamlined processes and boosted productivity. This change sets them up for a brighter, more successful future.",
+    imageSrc: "/assets/Cloud-Migration-Case-Study/5.png",
+    analytics: [
+      {
+        score: "> $250k",
+        dexcription: "Time savings captured in the first 10 months",
+      },
+      {
+        score: "97%",
+        dexcription: "Atlassian Cloud user satisfaction scores",
+      },
+      {
+        score: "80%",
+        dexcription: "Increase in efficiency with Confluence Cloud",
+      },
+    ],
+    industryIcon: "/assets/Cloud-Migration-Case-Study/icon4.svg",
+    width: 129,
+    height: 41,
+    industryFeedbackSubcontent:
+      "Turns out, old firms can learn new tricks. Learn how Sun Life migrated to Atlassian Cloud products to digitally transform and increase speed, security, and collaboration.",
+    industry: [
+      {
+        heading: "INDUSTRY",
+        subHead: ["Financial Services"],
+      },
+      {
+        heading: "LOCATIONS",
+        subHead: ["Toronto, Canada"],
+      },
+      {
+        heading: "NUMBER OF USERS",
+        subHead: ["1,300"],
+      },
+    ],
+    paragragh: [
+      "Sun Life, a 150-year-old financial services firm, recognized the need for digital transformation to stay competitive and enhance the customer experience. However, they faced challenges due to the mix of legacy systems and scattered tools in use, such as Lotus Notes, SharePoint, and Microsoft Excel.",
+      "These disparate tools made collaboration difficult, and employees struggled to locate information efficiently. Despite concerns about security and the transition process, Sun Life decided to embark on a comprehensive migration to a cloud-based platform with Atlassian to unify their operations and boost productivity.",
+    ],
+    quote:
+      "“I’ve done dozens of migrations in the past, and our Atlassian Cloud migration at Sun Life is the best I’ve seen.”",
+    quoter: "PAUL MCNALLY",
+    quotename: "Jira Cloud Technical Product Owner",
+    highlight: [
+      {
+        highlightHeading: "Cloud Migration and Transformation with Atlassian",
+        Highlightpargraph: [
+          "The digital transformation initiative centered around migrating to Atlassian Cloud, specifically using Confluence and Jira Software for collaboration and project management. Cynthia Brind’Amour, with her extensive experience and understanding of company workflows, played a key role in leading this migration.",
+          "The plan included an “optimize and shift” approach for Confluence, where each team’s needs were assessed to determine which sites and workflows were best suited for migration. This strategic approach allowed Sun Life to modernize incrementally and manage resources effectively, resulting in a smooth transition and a phased migration.",
+        ],
+      },
+      {
+        highlightHeading: "Methodical Migration with Phased Rollouts",
+        Highlightpargraph: [
+          "Sun Life's migration to Confluence Cloud was conducted in carefully planned waves. Working closely with an Atlassian Solution Partner, they established a timeline to migrate 25 prioritized sites out of an initial 350, completing each phase over two weeks. This phased rollout included sandbox testing for user training and feedback.",
+          "Cynthia’s team introduced cloud-based tools such as Aura for enhanced design, and Table Filter and Charts for data visualization. After the Confluence migration, they shifted focus to Jira Software Cloud, following similar phased rollouts with user consultations to standardize workflows and prioritize security. This collaborative and iterative approach minimized disruption and maximized user buy-in.",
+        ],
+      },
+      {
+        highlightHeading: "Security and Change Management",
+        Highlightpargraph: [
+          "Throughout the migration, Sun Life encountered common challenges, such as user hesitancy and concerns over data security. By educating leadership and end-users on cloud security benefits, including advanced permissions and centralized controls, Sun Life effectively managed these concerns.",
+          "They also utilized the Atlassian Cloud Migration Manager (CMM) to resolve technical issues, like addressing duplicate email addresses in Active Directory. Paul McNally, Jira Cloud Technical Product Owner, acknowledged that close collaboration with the CMM and early data testing were essential to the project’s success. These efforts ensured a secure, well-organized migration process that safeguarded sensitive data and enhanced organizational confidence in the cloud",
+        ],
+      },
+      {
+        highlightHeading:
+          "Improved Efficiency, Collaboration, and User Satisfaction",
+        Highlightpargraph: [
+          "Sun Life’s transition to Atlassian Cloud delivered immediate results in terms of efficiency and satisfaction. The platform’s centralized features empowered teams to streamline processes, reducing reliance on emails and other outdated tools.",
+          "Confluence Cloud’s new features, such as in-line commenting and analytics, improved communication, while Jira Software Cloud enabled cross-departmental collaboration. In a survey conducted post-migration, Sun Life reported that Confluence Cloud improved efficiency by 80%, while Jira Cloud saved enough time to offset 94% of the company’s license costs.",
+          "Furthermore, user satisfaction soared, with 97% of employees expressing approval of the new system, praising its intuitive functionality and positive impact on daily operations.",
+        ],
+      },
+      {
+        highlightHeading: "Sustaining Growth and Excellence in the Cloud",
+        Highlightpargraph: [
+          "Looking ahead, Sun Life is excited to expand their cloud capabilities by adding Atlassian’s Jira Align to improve portfolio management and goal tracking. They also plan to incorporate cloud apps like qTest and Tableau Connector Pro for IT and Operations, as well as native cloud features such as Advanced Roadmaps.",
+          "Sun Life anticipates these enhancements will drive continued efficiency and innovation, cementing its status as a leading financial services provider and a progressive workplace. By embracing cloud-based tools and agile workflows, Sun Life is well-prepared to maintain its reputation and competitive edge for years to come.",
+        ],
+      },
+      {
+        highlightHeading: "A Bright Future with Cloud-Driven Innovation",
+        Highlightpargraph: [
+          "Sun Life’s successful migration to Atlassian Cloud has transformed its operational landscape, proving that even legacy firms can thrive through innovation. This cloud-based modernization has fostered a more agile, collaborative environment, enabling Sun Life to provide superior service and attract top talent. With the foundation laid by the migration, Sun Life is positioned to achieve sustainable growth and resilience, adapting quickly to industry changes and meeting the evolving needs of their clients and employees.",
+        ],
+      },
+    ],
+  },
+  {
+    title: "iress-improves-service-with-jira-service-management-cloud",
+    aboutAlluvium: "Alluvium are Trusted Solution Partner of Atlassian",
+    caseStudyTitle: "Iress improves service with Jira Service Management Cloud",
+    whyMigrate:
+      "By migrating to Jira Service Management Cloud Enterprise, Iress has reduced ticket volume, resolution time, and  maintenance to focus more on service",
+    imageSrc: "/assets/Cloud-Migration-Case-Study/6.png",
+    analytics: [
+      {
+        score: "20%",
+        dexcription:
+          "lower ticket volume using Jira Service Management vs. email",
+      },
+      {
+        score: "46%",
+        dexcription: "tickets resolved in one day or less",
+      },
+      {
+        score: "500k",
+        dexcription: "customers serviced through the portal",
+      },
+    ],
+    industryIcon: "/assets/Cloud-Migration-Case-Study/icon5.svg",
+    width: 88,
+    height: 68,
+    industryFeedbackSubcontent:
+      "From the world’s most iconic financial services brands to advice firms of all sizes, challenger banks, insurers, investment managers, traders and brokers, more than 10,000 businesses and 500,000 people use Iress’ software to help them perform better and deliver more.",
+    industry: [
+      {
+        heading: "INDUSTRY",
+        subHead: ["Internet & Software"],
+      },
+      {
+        heading: "LOCATIONS",
+        subHead: ["Asia Pacific"],
+      },
+      {
+        heading: "NUMBER OF USERS",
+        subHead: ["1,001-5,000 employees"],
+      },
+    ],
+    paragragh: [
+      "Iress, a financial services software provider, faced increasing challenges as their business grew. They initially managed IT and service requests through server-based deployments of Jira Service Management, Jira Software, and Confluence. However, as ticket volumes surged to 7,000 per month and over 70 administrators customized projects and fields, the system became difficult to maintain. Performance issues emerged, and keeping up with customer requests became a struggle for the support team. This complex, on-premise setup was no longer able to meet Iress' evolving needs.",
+    ],
+    quote:
+      "“ The synergies of having everyone on one platform  has been a blessing for everyone. It’s so much easier!”",
+    quoter: "FIONA GALLAGHER",
+    quotename: "Global Head of Product Support",
+    highlight: [
+      {
+        highlightHeading: "Migrating to the Cloud",
+        Highlightpargraph: [
+          "To address these challenges, Iress’ Product Support team decided to migrate to Jira Service Management Cloud Enterprise. This transition was driven by a need to improve performance, reduce the load of internal maintenance, and provide a seamless experience for customers and employees. The cloud version of Jira Service Management offered new features, including automation and easy integrations with Jira Software, enabling closer collaboration between support and engineering teams. The cloud platform’s scalability and stability were a perfect match for Iress' growing operations.",
+        ],
+      },
+      {
+        highlightHeading: "Implementation Process",
+        Highlightpargraph: [
+          "The migration was led by Fiona Gallagher and Hercules du Preez, who worked closely with Atlassian’s Advisory Services to tailor the migration to Iress' needs. They involved stakeholders early in the process, fostering buy-in and a smoother transition. The team also simplified their system by removing unnecessary apps and integrations. After comprehensive testing and preparation, the migration went live without disrupting service, marking a successful shift to a cloud-based model that immediately improved performance.",
+        ],
+      },
+      {
+        highlightHeading: "Impact and Results",
+        Highlightpargraph: [
+          "The results of the migration were significant and measurable. Ticket volumes decreased by 20%, and 46% of tickets were resolved within one day. Customers now had access to a self-service portal and a comprehensive knowledge base, which allowed them to find answers independently. This setup not only improved customer satisfaction but also reduced the workload on support staff. Internally, the cloud platform brought teams from engineering, operations, and support onto one system, improving collaboration and enabling faster ticket escalations and resolutions.",
+        ],
+      },
+      {
+        highlightHeading: "Future Plans",
+        Highlightpargraph: [
+          "Building on these early successes, Iress plans to further enhance their service management capabilities. They intend to expand automation, incorporate problem and incident management processes, and bring additional business teams onto the Atlassian cloud platform. By consolidating operations onto one cohesive system, Iress is transforming its approach to support, moving from reactive to proactive service management. This shift empowers their teams to deliver a more responsive, high-quality experience for customers and employees, laying the groundwork for sustainable improvements in service delivery.",
+        ],
+      },
+    ],
+  },
+
+  {
+    title:
+      "sophos-elevates-cybersecurity,productivity,and-impact-with-atlassian-cloud",
+    aboutAlluvium: "Alluvium are Trusted Solution Partner of Atlassian",
+    caseStudyTitle:
+      "Sophos elevates cybersecurity,  productivity, and impact with  Atlassian cloud",
+    whyMigrate:
+      "Sophos’ migration to Atlassian Cloud enhanced service availability and streamlined IT workflows, supporting their growth as a global cybersecurity leader.",
+    imageSrc: "/assets/Cloud-Migration-Case-Study/7.png",
+    analytics: [
+      {
+        score: "300%",
+        dexcription: "increase in global workforce capacity.",
+      },
+      {
+        score: "100%",
+        dexcription: "shift from IT maintenance to strategic enablement",
+      },
+      {
+        score: "5,000",
+        dexcription: "total users supported on Atlassian Cloud.",
+      },
+    ],
+    industryIcon: "/assets/Cloud-Migration-Case-Study/icon6.svg",
+    width: 137,
+    height: 41,
+    industryFeedbackSubcontent:
+      "As Sophos evolved from a regional firm to a global  cybersecurity leader, managing their on-premise   Atlassian infrastructure and processes grew more complex.  By migrating to the cloud with the help of an Atlassian  Solution Partner, Sophos has increased availability of   their services while tripling their global workforce.",
+    industry: [
+      {
+        heading: "INDUSTRY",
+        subHead: ["Internet & Software"],
+      },
+      {
+        heading: "LOCATIONS",
+        subHead: ["Asia Pacific"],
+      },
+      {
+        heading: "NUMBER OF USERS",
+        subHead: ["1,001-5,000 employees"],
+      },
+    ],
+    paragragh: [
+      "Sophos, a global cybersecurity firm, began using Atlassian’s server-based tools for project management and collaboration in the early 2000s. As they expanded, both their workforce and reliance on these tools grew, placing significant strain on the on-premises infrastructure. IT resources became consumed by routine maintenance and troubleshooting, leaving little room for innovation. Sophos decided to migrate to Atlassian Cloud to streamline operations and align their IT infrastructure with their mission to provide top-tier cybersecurity solutions.",
+    ],
+    quote:
+      "“By migrating to Atlassian cloud, we moved away  from being pure support to focusing on process  enablement and adding value back to the business.”",
+    quoter: "DANIEL CAVE",
+    quotename: "Senior Infrastructure Engineer",
+    highlight: [
+      {
+        highlightHeading:
+          "Migration Decision: Choosing Cloud for Simplicity and Enablement",
+        Highlightpargraph: [
+          "After experiencing limitations with their existing system, Sophos viewed cloud migration as an opportunity to simplify operations and improve efficiency. The guiding principle for this transformation was “simplicity and enablement.” The goal was to reduce the time spent on configuration and management, enabling teams to concentrate on delivering value. Sophos engaged an Atlassian Solution Partner and leveraged the Atlassian Migration Program, aiming to adopt a phased approach that minimized disruption and facilitated quicker returns on investment.",
+        ],
+      },
+      {
+        highlightHeading:
+          "Phased Migration: Minimizing Risk, Maximizing Adoption",
+        Highlightpargraph: [
+          "Sophos implemented a phased migration strategy to mitigate potential risks and ensure a smooth transition. Each wave of migration was meticulously planned, targeting different business units sequentially. This approach allowed the IT team to gather insights and refine processes, improving the migration experience for subsequent groups. Key stakeholders from each unit played a pivotal role in testing and advocating for the changes, helping to streamline adoption across the organization.",
+        ],
+      },
+      {
+        highlightHeading: "Partnering for Success: Collaboration and Support",
+        Highlightpargraph: [
+          "Throughout the migration, Sophos collaborated closely with their Solution Partner, which provided expertise in migration planning, testing, and technical support. The partner's insights were invaluable in addressing the specific needs of different business units and managing stakeholder expectations. Additionally, Atlassian’s APIs and migration tools, including the Jira Cloud Migration Assistant and Confluence Cloud Migration Assistant, facilitated efficient data transfer and reduced administrative overhead.",
+        ],
+      },
+      {
+        highlightHeading:
+          "Operational Transformation: From Maintenance to Strategic Enablement",
+        Highlightpargraph: [
+          "Post-migration, Sophos' IT team shifted focus from system administration to process enablement and strategic support. Tasks that previously required manual oversight were now automated, allowing IT to work on initiatives that directly impacted business outcomes. Automation features in Jira, for example, streamlined project tracking, improving response times and collaboration. This shift empowered IT to serve as a proactive business partner, enhancing both operational efficiency and employee satisfaction.",
+        ],
+      },
+
+      {
+        highlightHeading: "Enhanced Efficiency and Future Growth",
+        Highlightpargraph: [
+          "The migration has enabled Sophos to better align its internal systems with the demands of a fast-growing organization. With cloud-based infrastructure, Sophos now benefits from increased uptime, scalable resources, and a simplified user experience. The organization is positioned to continue expanding globally while maintaining a robust, adaptable IT foundation. As they embrace automation and further integrations, Sophos remains committed to evolving its processes and delivering innovative cybersecurity solutions.",
+        ],
+      },
+      {
+        highlightHeading: "Realizing the Value of Cloud Migration",
+        Highlightpargraph: [
+          "By moving to Atlassian Cloud, Sophos transformed its IT infrastructure from a maintenance-heavy system to an enabler of productivity and strategic growth. The transition has not only improved service availability and scalability but also redefined IT’s role within the company. Sophos’ journey underscores the benefits of cloud migration for organizations seeking to enhance efficiency, reduce complexity, and foster a forward-thinking work environment.",
         ],
       },
     ],

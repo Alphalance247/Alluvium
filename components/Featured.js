@@ -16,20 +16,23 @@ export default function () {
       url: "/atlassian-case-studies",
     },
     {
-      img: "/assets/home/Image1.svg",
-      title: "JSM/ITSM Implementation",
-      subtitle: "",
+      img: "/assets/Cloud-Migration-Case-Study/bhcs.png",
+      title:
+        "California’s Health Department saved millions with Atlassian Cloud Enterprise",
+      subtitle:
+        "California’s Health Department saved millions with Atlassian Cloud Enterprise",
       btn: "",
-      alt: "jsm-implementation",
-      url: "/atlassian-services/itsm-services",
+      alt: "atlassian-cloud-migration-case-studies image",
+      url: "/atlassian-cloud-migration-case-studies",
     },
     {
-      img: "/assets/home/image2.svg",
-      title: "Cloud & Data Migration",
+      img: "/assets/Cloud-Migration-Case-Study/twitter.png",
+      title:
+        "Satisfying high demand through self-service with Jira Service Desk",
       subtitle: "",
       btn: "",
       alt: "cloud-services",
-      url: "/atlassian-services/cloud-migration",
+      url: "/atlassian-case-studies",
     },
   ];
   return (

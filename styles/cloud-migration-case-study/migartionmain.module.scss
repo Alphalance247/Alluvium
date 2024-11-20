@@ -55,9 +55,10 @@
     color: #4b5563;
     padding: 2px 12px;
     border-radius: 13px;
-    border: 1px solid #4b5563;
+    border: 1px solid #d1d5db;
     margin-bottom: 1rem;
     width: fit-content;
+    background: #f3f4f6;
   }
 
   h4 {
@@ -119,6 +120,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+
     @media screen and (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -129,17 +131,16 @@
   }
 
   .card {
-    // flex: 0 0 100%;
     max-width: 390px;
-    // justify-content: center;
+    cursor: pointer;
 
-    // @media (min-width: 768px) {
-    //   flex: 0 0 calc(50% - 20px);
-    // }
+    &:hover {
+      transform: scale(1.025);
 
-    // @media (min-width: 1024px) {
-    //   flex: 0 0 calc(33.333% - 21.333px);
-    // }
+      h4 {
+        text-decoration: underline;
+      }
+    }
   }
 
   .dhcs__head {
@@ -149,11 +150,11 @@
     color: #4b5563;
     padding: 2px 12px;
     border-radius: 13px;
-    border: 1px solid #4b5563;
+    border: 1px solid #d1d5db;
     margin-bottom: 1rem;
     margin-top: 1.5rem;
     width: fit-content;
-    background: #f7f8f9;
+    background: #f3f4f6;
   }
 
   h4 {
@@ -238,6 +239,7 @@
         padding-left: 1rem;
         margin-bottom: 2rem;
         width: 100%;
+        padding-right: 1rem;
       }
 
       .trusted_solution {
@@ -245,8 +247,9 @@
         color: #00ceff;
         font-size: 15px;
         line-height: 16px;
-        letter-spacing: -1px;
+        letter-spacing: -0.5px;
         margin-bottom: 2rem;
+        text-transform: uppercase;
 
         @media screen and (max-width: 992px) {
           margin-bottom: 1rem;
@@ -318,6 +321,10 @@
 
         @media screen and (max-width: 992px) {
           font-size: 10px;
+        }
+
+        @media screen and (max-width: 576px) {
+          font-size: 8px;
         }
       }
     }

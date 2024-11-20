@@ -3,6 +3,7 @@ import HeroCloud from "components/cloud-migration-case-study/hero";
 import ContentSection from "components/cloud-migration-case-study/contentSection";
 import CaseStudyData from "components/cloud-migration-case-study/caseStudyData";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function CaseStudyId({ caseStudy }) {
   const router = useRouter();
@@ -17,8 +18,18 @@ export default function CaseStudyId({ caseStudy }) {
 
   return (
     <Layout>
-      <HeroCloud item={caseStudy} />
-      <ContentSection item={caseStudy} />
+      <Head>
+        <title>
+          {caseStudy?.caseStudyTitle
+            ? `${caseStudy.caseStudyTitle} | Alluvium`
+            : "Alluvium"}
+        </title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <>
+        <HeroCloud item={caseStudy} />
+        <ContentSection item={caseStudy} />
+      </>
     </Layout>
   );
 }
