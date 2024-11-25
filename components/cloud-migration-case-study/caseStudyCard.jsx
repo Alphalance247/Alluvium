@@ -43,8 +43,9 @@ const CaseStudyCard = () => {
       title: "Internet & Software",
       heading:
         "Sophos elevates cybersecurity, productivity, and impact with Atlassian cloud",
-      imgSrc: "/assets/Cloud-Migration-Case-Study/sophos.png",      
-      pageTitle: "sophos-elevates-cybersecurity,productivity,and-impact-with-atlassian-cloud",
+      imgSrc: "/assets/Cloud-Migration-Case-Study/sophos.png",
+      pageTitle:
+        "sophos-elevates-cybersecurity,productivity,and-impact-with-atlassian-cloud",
     },
   ];
 
@@ -56,8 +57,9 @@ const CaseStudyCard = () => {
             <Link
               href={`/atlassian-cloud-migration-case-studies/${el?.pageTitle}`}
               passHref
+              key={i}
             >
-              <div className={styles.card} key={i}>
+              <div className={styles.card}>
                 <Image
                   src={el?.imgSrc}
                   width={389}
