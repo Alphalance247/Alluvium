@@ -31,23 +31,20 @@ const CaseStudyCard = () => {
       title: "GOVERNMENT",
       heading: "The State of Utah Successful Migration to Atlassian Cloud",
       imgSrc: "/assets/Cloud-Migration-Case-Study/utah.png",
-      pageTitle: "",
-      // the-state-of-utah-successful-migration-to-atlassian-cloud
+      pageTitle: "the-state-of-utah-successful-migration-to-atlassian-cloud",
     },
     {
       title: "Internet & Software",
       heading: "Iress improves service with Jira Service Management Cloud",
       imgSrc: "/assets/Cloud-Migration-Case-Study/iress.png",
-      pageTitle: "",
-      // iress-improves-service-with-jira-service-management-cloud
+      pageTitle: "iress-improves-service-with-jira-service-management-cloud",
     },
     {
       title: "Internet & Software",
       heading:
         "Sophos elevates cybersecurity, productivity, and impact with Atlassian cloud",
-      imgSrc: "/assets/Cloud-Migration-Case-Study/sophos.png",
-      pageTitle: "",
-      // sophos-elevates-cybersecurity,productivity,and-impact-with-atlassian-cloud
+      imgSrc: "/assets/Cloud-Migration-Case-Study/sophos.png",      
+      pageTitle: "sophos-elevates-cybersecurity,productivity,and-impact-with-atlassian-cloud",
     },
   ];
 
