@@ -20,17 +20,17 @@ const ContactUs = () => {
       icon: "/assets/icons/contact.svg",
       contact: "Contact Support",
       subcontent:
-        "Speak to our sales team about plans, pricing, enterprise contracts, or request a demo.",
+        "Have a specific request? Fill out the support form, and our team will get back to you as soon as possible.",
       btn: "Contact Support",
       url: "/contact-us/contact-sales-team",
     },
     {
       icon: "/assets/icons/contact.svg",
-      contact: "Contact Support",
+      contact: "Create Support ticket",
       subcontent:
-        "Speak to our sales team about plans, pricing, enterprise contracts, or request a demo.",
+        "Need assistance? Reach out to our support team for help with your questions or issues",
       btn: "Create a Ticket",
-      url: "/support/contact#schedule-a-call",
+      url: "https://support.portal.alluvium.net/servicedesk/customer/portals",
     },
   ];
 
@@ -56,7 +56,6 @@ const ContactUs = () => {
     <Layout>
       <ServicesHero
         contentsheading1="How Can We Help You?"
-        // contentsheading2="Lorem ipsum dolor sit amet consectetur. Leo arcu eget neque tellus"
         variant="secondary"
       />
 
