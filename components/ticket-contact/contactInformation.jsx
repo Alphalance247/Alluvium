@@ -383,7 +383,7 @@ const ContactInformation = () => {
             <Input
               id="coupon_code"
               label="coupon_code"
-              text="Do you have a coupon code?"
+              text="coupon code"
               name="coupon_code"
               type="text"
               value={form.coupon_code || ""}
