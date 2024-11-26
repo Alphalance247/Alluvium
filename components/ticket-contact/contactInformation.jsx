@@ -25,8 +25,6 @@ const ContactInformation = () => {
   const [extraTickets, setExtraTickets] = useState(0);
   const sectionRef = useRef(null); // Reference to the section for calculating boundarie
 
-  console.log(form);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
 
