@@ -27,19 +27,6 @@ const ContactInformation = () => {
 
   console.log(form);
 
-  // const handleChange = (event) => {
-  //   const { name, value } = event.target;
-  //   setForm((prevForm) => ({
-  //     ...prevForm,
-  //     [name]: value,
-
-  //     additionalProp1: {
-  //       ...prevForm.additionalProp1,
-  //       [name]: value,
-  //     },
-  //   }));
-  //   setFormError((prev) => ({ ...prev, [name]: false }));
-  // };
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -118,8 +105,7 @@ const ContactInformation = () => {
       form?.first_name_1 &&
       form?.last_name_2 &&
       emailRegex.test(form?.email_3) &&
-      form?.phone_number_5 &&
-      form?.refrerred_by_42
+      form?.phone_number_5
     ) {
       setLoading(true);
       await axios
@@ -208,7 +194,6 @@ const ContactInformation = () => {
         last_name_2: !form.last_name_2,
         email_3: !emailRegex.test(form.email_3),
         phone_number_5: !form.phone_number_5,
-        refrerred_by_42: !form.refrerred_by_42,
       });
     }
   };
@@ -320,6 +305,7 @@ const ContactInformation = () => {
               onChange={handleChange}
             >
               <option value=""></option>
+
               <option value="Dusanwo Titilope Olayinka">
                 Dusanwo Titilope Olayinka
               </option>
@@ -359,6 +345,7 @@ const ContactInformation = () => {
               <option value="Muritala busayo">Obuseh Elizabeth</option>
               <option value="Ester Adesina">Ester Adesina</option>
               <option value="Babatunde">Babatunde</option>
+              <option value="None of the above">None of the above</option>
             </select>
 
             {formError.refrerred_by_42 && (
@@ -366,6 +353,19 @@ const ContactInformation = () => {
                 This field is required
               </h6>
             )}
+          </div>
+
+          <div>
+            <Input
+              id="coupon_code"
+              label="coupon_code"
+              text="Do you have a coupon code?"
+              name="coupon_code"
+              type="text"
+              value={form.coupon_code || ""}
+              placeholder=""
+              onChange={handleChange}
+            />
           </div>
         </div>
 
