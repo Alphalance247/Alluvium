@@ -123,12 +123,38 @@ const ContactInformation = () => {
           setLoading(false);
 
           if (res.status >= 200 && res.status < 300) {
-            router.push(res?.data?.data?.paystack_auth_url);
-            addToast("Details submitted successfully. Redirecting...", {
-              appearance: "success",
-              autoDismiss: true, // Enable auto dismiss
-              autoDismissTimeout: 5000, // Dismiss after 5 seconds
-            });
+            if (res?.data?.coupon_applied === "yes") {
+              addToast("Details submitted successfully.", {
+                appearance: "success",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 8000, // Dismiss after 5 seconds
+              });
+              setForm({
+                ...form,
+                first_name_1: "",
+                last_name_2: "",
+                phone_number_5: "",
+                email_3: "",
+                coupon_code: "",
+              });
+              return;
+            } else if (res?.data?.coupon_applied === "no") {
+              router.push(res?.data?.data?.paystack_auth_url);
+              addToast("Details submitted successfully. Redirecting...", {
+                appearance: "success",
+                autoDismiss: true, // Enable auto dismiss
+                autoDismissTimeout: 5000, // Dismiss after 5 seconds
+              });
+
+              setForm({
+                ...form,
+                first_name_1: "",
+                last_name_2: "",
+                phone_number_5: "",
+                email_3: "",
+                coupon_code: "",
+              });
+            }
 
             setForm({
               ...form,
