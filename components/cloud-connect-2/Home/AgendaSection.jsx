@@ -6,20 +6,41 @@ import SectionHeader from "../SectionHeader";
 const AgendaSection = () => {
   const agendaItems = [
     { time: "9:00AM - 9:50AM", description: "Registration" },
+    { time: "9:00AM - 9:50AM", description: "Networking, Exhibition" },
     { time: "9:50am - 10:00AM", description: "Welcome speech" },
-    { time: "10:00am - 10:30am", description: "Keynote speaker" },
-    { time: "10:30am - 11:00am", description: "Speaker 1" },
+    {
+      time: "10:00am - 10:20am",
+      description: "Keynote speaker",
+    },
+    {
+      time: "10:20am - 10:40am",
+      description: "Speaker 1",
+    },
+    {
+      time: "10:40am - 11:00am",
+      description: "Speaker 2",
+    },
     { time: "11:00am - 11:30am", description: "Panel session 1" },
-    { time: "11:30am - 12:00pm", description: "Networking" },
-    { time: "12:00pm - 12:30pm", description: "Speaker 2" },
-    { time: "12:30pm - 1:00pm", description: "Demo" },
-    { time: "1:00pm - 1:30pm", description: "Speaker 3" },
-    { time: "1:30pm - 2:00pm", description: "Lunch break" },
-    { time: "2:00pm - 2:30pm", description: "Panel session 2" },
-    { time: "2:30pm - 3:00pm", description: "Speaker 4" },
-    { time: "3:00pm - 3:30pm", description: "Speaker 5" },
-    { time: "3:30pm - 4:00pm", description: "Closing remarks" },
-    { time: "4:00pm - 6:00pm", description: "Networking, exhibition" },
+    {
+      time: "11:30am - 12:00pm",
+      description: "Tea Break / Networking / Exhibition",
+    },
+    {
+      time: "11:30am - 12:00pm",
+      description: "Speaker 4",
+    },
+    { time: "12:00pm - 12:20pm", description: "Demo (Scrum companion)" },
+    { time: "12:20pm - 12:40pm", description: "Panel session 2" },
+    {
+      time: "12:40pm - 1:00pm",
+      description: "Lunch / Networking / Exhibition",
+    },
+    {
+      time: "1:00pm - 1:30pm",
+      description: "Speaker 4",
+    },
+    { time: "1:30pm - 2:00pm", description: "Speaker 5" },
+    { time: "2:00pm - 2:20pm", description: "Closing remarks" },
   ];
 
   return (
