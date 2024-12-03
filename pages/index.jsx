@@ -17,6 +17,9 @@ import Badges from "components/badges";
 import Featured from "components/Featured";
 import Solutions from "components/our-solutions/solutions";
 import CustomerReview from "components/our-customers/customer";
+import Hero from "components/Alluvium-Redesign-2025/hero";
+import Expertise from "components/Alluvium-Redesign-2025/expertise";
+import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSolution";
 const Home = () => {
   return (
     <>
@@ -33,10 +36,13 @@ const Home = () => {
             content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
           />
         </Head>
+        <Hero />
+        <Expertise />
+        <AtlassianSolution />
         <div className="container-fluid p-0 m-0">
           <div className="container-fluid p-0" style={{ background: "" }}>
-            <HeroCarousel />
-            <Featured />
+            {/* <HeroCarousel /> */}
+            {/* <Featured /> */}
           </div>
           <Services />
           <Solutions />

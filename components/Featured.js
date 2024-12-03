@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/hero-carousel.module.scss";
-import Button from "./atlassian-service-reuse/Button";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function () {
   const data = [
@@ -27,9 +27,9 @@ export default function () {
     },
     {
       img: "/assets/Cloud-Migration-Case-Study/twitter.png",
-      title:
-        "Satisfying high demand through self-service with Jira Service Desk",
-      subtitle: "",
+      title: "How  Twitter Satisfies High Demand Through Jira Service Desk",
+      subtitle:
+        "Meeting student expectations by standardizing on a single platform",
       btn: "",
       alt: "cloud-services",
       url: "/atlassian-case-studies",
@@ -38,7 +38,7 @@ export default function () {
   return (
     <div className={`${styles.customxs}`}>
       <div className={`container mx-auto ${styles.featured}`}>
-        <h3 className={`${styles.featuredsec}`}>CASE STUDIES</h3>
+        {/* <h3 className={`${styles.featuredsec}`}>CASE STUDIES</h3> */}
         <div className="d-md-flex gap-3">
           {data.map((el) => {
             return (
@@ -54,9 +54,14 @@ export default function () {
                     />
                   </div>
                   <div className="">
-                    <p className={` ${styles.ftitle}`}>OUR SERVICES</p>
-                    <p className={` ${styles.fcontent}`}>{el.title}</p>
-                    <Button variant="outline">Learn More</Button>
+                    <p className={` ${styles.fcontent}`}>{el?.title}</p>
+                    <p className={` ${styles.ftitle}`}>{el?.subtitle}</p>
+                    <button>
+                      Read More{" "}
+                      <span>
+                        <FaArrowRightLong />
+                      </span>
+                    </button>
                   </div>
                 </div>
               </Link>

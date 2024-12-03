@@ -2965,3 +2965,27 @@ export const expoimages = [
     imgChoose: "/assets/event/expo17.png",
   },
 ];
+
+export const servicesContent = [
+  {
+    img: "/assets/redesign-2025/atlassian.svg",
+    heading: "Atlassian Solutions",
+    subHeading:
+      "Our Atlassian consultants bring the experience of hundreds of Atlassian projects to your company. They support you with the introduction, migration and optimization of your tools - on a project-related or permanent basis.",
+    btn: "Explore Atlassian Solutions",
+  },
+  {
+    img: "/assets/redesign-2025/aws.svg",
+    heading: "AWS Services",
+    subHeading:
+      "Optimize your Atlassian environment with our AWS consulting services. We offer managed services, infrastructure review, modernization, and DevOps solutions, delivered by our team of experienced consultants.",
+    btn: "Speak to our consultant",
+  },
+  {
+    img: "/assets/redesign-2025/atlassian.svg",
+    heading: "Design & Development",
+    subHeading:
+      "Enhance your projects with our comprehensive Design as a Service and cutting-edge software development. Our expert team delivers tailored, innovative solutions to meet your unique needs and drive your business forward.",
+    btn: "Schedule a meeting",
+  },
+];
