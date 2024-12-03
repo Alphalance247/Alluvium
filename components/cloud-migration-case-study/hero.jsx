@@ -4,7 +4,7 @@ import styles from "../../styles/cloud-migration-case-study/migartionmain.module
 const HeroCloud = ({ item }) => {
   return (
     <section className={`container-fluid ${styles.hero__cloud}`}>
-      <div className={`"container mx-auto" ${styles.hero__cloud__sub}`}>
+      <div className={`container mx-auto" ${styles.hero__cloud__sub}`}>
         <div className={styles.cloud__content}>
           <p className={styles.trusted_solution}>{item.aboutAlluvium}</p>
           <h1 className={styles.boost__product}>{item.caseStudyTitle}</h1>

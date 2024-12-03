@@ -31,7 +31,7 @@ export default function () {
           {/* <CommunityEvent /> */}
           <AtPartner />
           <AtlassianCampaign />
-          <CloudConnectBanner />
+          {/* <CloudConnectBanner /> */}
 
           {/* <GitexGlobal24 /> */}
           {/* this <Webinar /> */}
