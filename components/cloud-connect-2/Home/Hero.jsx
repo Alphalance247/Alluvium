@@ -24,11 +24,9 @@ const Hero = () => {
             practices beyond IT boundaries.
           </p>
         </div>
-        {/* <div>
-          <Link href="/cloud-connect/book-a-ticket">
-            <Button size="large">Buy Tickets</Button>
-          </Link>
-        </div> */}
+        <Link href="/cloud-connect/event-feedback">
+          <Button>Give us a feedback</Button>
+        </Link>
       </div>
 
       <div className={styles.hero__images}>
