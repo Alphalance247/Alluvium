@@ -6,21 +6,14 @@ const Expertise = () => {
   return (
     <section className={styles.expertise__section}>
       <div className={styles.expertise__encap}>
-        {/* <div className={styles.expertise__heading}>
-          <p className={styles.how__we__help}>
-          
-          </p>
-          <h2></h2>
-          <p className={styles.discover__business}>
-          
-          </p>
-        </div> */}
-        <Heading
-          title="HOW ALLUVIUM CAN HELP YOU ACHIEVE SUCCESS"
-          heading="Achieve Success with Atlassian and Our Expertise."
-          subhead="  Discover how businesses like yours have thrived with Atlassian
-            solutions."
-        />
+        <div className={styles.expertise__heading}>
+          <Heading
+            title="HOW ALLUVIUM CAN HELP YOU ACHIEVE SUCCESS"
+            heading="Driving Business Success with Atlassian Solutions"
+            subhead="Discover how companies like yours have embraced Atlassian’s ecosystem to drive innovation and growth."
+            variant="primary"
+          />
+        </div>
         <Featured />
       </div>
     </section>

@@ -2989,3 +2989,97 @@ export const servicesContent = [
     btn: "Schedule a meeting",
   },
 ];
+
+export const redesignCaseStudy = [
+  {
+    img: "/assets/case-studies2/case-study-03/situation.png",
+    title: "INSURANCE",
+    heading:
+      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+    btn: "Read Case Study",
+  },
+  {
+    img: "/assets/case-studies2/case-study-01/situation.png",
+    title: "AGRICULTURE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+  },
+  {
+    img: "/assets/case-studies2/case-study-06/situation.png",
+    title: "SOFTWARE DEVELOPMENT",
+    heading:
+      "Server to Cloud Migration for Top Rated Software Development Company",
+    btn: "Read Case Study",
+  },
+];
+
+export const PluginData = [
+  {
+    icon1: "/assets/redesign-2025/exportandcounticon.svg",
+    icon2: "/assets/redesign-2025/Arrow button.svg",
+    title: "Export and Count for Cloud",
+    content:
+      "Export and Count for Cloud optimizes Scrum workflows and collaboration",
+    img: "/assets/redesign-2025/exportandcount.png",
+  },
+  {
+    icon1: "/assets/redesign-2025/cloudcountericon.svg",
+    icon2: "/assets/redesign-2025/Arrow button.svg",
+    title: "Cloud Counter",
+    content:
+      "The Alluvium Cloud counter summarizes instance resources and usage.",
+    img: "/assets/redesign-2025/cloudcounter.png",
+  },
+  {
+    icon1: "/assets/redesign-2025/cjrIcon.svg",
+    icon2: "/assets/redesign-2025/Arrow button.svg",
+    title: "Resource Compare for Jira",
+    content:
+      "Compare your Cloud site with any Jira site across all hosting types.",
+    img: "/assets/redesign-2025/cjr.png",
+  },
+];
+
+export const badges = [
+  {
+    img: "/assets/redesign-2025/Solution partner.svg",
+    width: 191,
+    height: 58,
+    alt: "solution partner",
+  },
+  {
+    img: "/assets/redesign-2025/Certs.svg",
+    width: 191,
+    height: 70,
+    alt: "marketplace partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Cert.svg",
+    width: 191,
+    height: 68,
+    alt: "training partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/AWS Certs.svg",
+    width: 84,
+    height: 78,
+    alt: "aws partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Chamber of Commerce.svg",
+    width: 132,
+    height: 78,
+    alt: "stamford chamber of commerce",
+  },
+
+  {
+    img: "/assets/redesign-2025/londonchamber.svg",
+    width: 231,
+    height: 78,
+    alt: "london chamber of commerce",
+  },
+];

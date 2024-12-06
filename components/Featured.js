@@ -39,7 +39,7 @@ export default function () {
     <div className={`${styles.customxs}`}>
       <div className={`container mx-auto ${styles.featured}`}>
         {/* <h3 className={`${styles.featuredsec}`}>CASE STUDIES</h3> */}
-        <div className="d-md-flex gap-3">
+        <div className="d-md-flex gap-4">
           {data.map((el) => {
             return (
               <Link href={el.url} passHref>
@@ -55,7 +55,7 @@ export default function () {
                   </div>
                   <div className="">
                     <p className={` ${styles.fcontent}`}>{el?.title}</p>
-                    <p className={` ${styles.ftitle}`}>{el?.subtitle}</p>
+                    {/* <p className={` ${styles.ftitle}`}>{el?.subtitle}</p> */}
                     <button>
                       Read More{" "}
                       <span>

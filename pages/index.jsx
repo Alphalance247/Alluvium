@@ -20,6 +20,8 @@ import CustomerReview from "components/our-customers/customer";
 import Hero from "components/Alluvium-Redesign-2025/hero";
 import Expertise from "components/Alluvium-Redesign-2025/expertise";
 import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSolution";
+import Impact from "components/Alluvium-Redesign-2025/ourImpact";
+import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
 const Home = () => {
   return (
     <>
@@ -39,6 +41,8 @@ const Home = () => {
         <Hero />
         <Expertise />
         <AtlassianSolution />
+        <Impact />
+        <MarketPlacePlugin />
         <div className="container-fluid p-0 m-0">
           <div className="container-fluid p-0" style={{ background: "" }}>
             {/* <HeroCarousel /> */}
