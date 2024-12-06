@@ -5,6 +5,7 @@ import styles from "../../../styles/cloud-connect-2/event-feedback/eventFeedback
 import Button from "components/cloud-connect-2/Button";
 import axios from "axios";
 import { useToasts } from "react-toast-notifications";
+import Image from "next/image";
 
 const option = {
   very_satisfied: "Very satisfied",
@@ -98,15 +99,17 @@ const FeedbackPage = () => {
         <title>Event Feedback | Cloud Connect 2024</title>
       </Head>
       <div className={styles.heroSection}>
-        <img
+        <Image
           src={"/assets/cloud-connect/images/logo.png"}
           alt="Cloud connect logo"
           className={styles.heroLogo}
+          width={640}
+          height={262}
         />
       </div>
       <div className={styles.section1}>
         <h3>
-          Thank you for Joining Us,We <br /> Value Your Feedback!
+          Thank you for Joining Us, We <br /> Value Your Feedback!
         </h3>
         <p>
           Share your thoughts about the event. help us grow and serve you better

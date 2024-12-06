@@ -10,20 +10,12 @@
   justify-content: center;
   align-items: center;
 
+  @media screen and (max-width: 576px) {
+    height: 500px;
+  }
+
   .heroLogo {
     width: 100%;
-    max-width: 600px;
-    height: 260px;
-
-    @media (max-width: 1024px) {
-      max-width: 400px;
-      height: 180px;
-    }
-
-    @media (max-width: 768px) {
-      max-width: 280px;
-      height: 140px;
-    }
   }
 }
 
@@ -38,27 +30,18 @@
     font-weight: 700;
     font-size: 51px;
     line-height: 58.65px;
+
+    @media screen and (max-width: 576px) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
   }
+
   p {
     font-size: 18px;
     font-weight: 700;
     line-height: 22px;
     margin-top: 38px;
-  }
-
-  /* Media query for mobile (max width: 768px) */
-  @media (max-width: 768px) {
-    padding-top: 48px;
-    padding-bottom: 24px;
-    h3 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    p {
-      font-size: 12px;
-      line-height: 16px;
-      margin-top: 24px;
-    }
   }
 }
 .section2 {
@@ -87,6 +70,11 @@
       font-size: 16px;
       line-height: 18px;
       font-weight: 500;
+
+      @media screen and (max-width: 576px) {
+        flex-direction: column;
+        row-gap: 3rem;
+      }
 
       .inputDiv {
         width: 100%;
