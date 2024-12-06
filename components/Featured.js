@@ -38,8 +38,7 @@ export default function () {
   return (
     <div className={`${styles.customxs}`}>
       <div className={`container mx-auto ${styles.featured}`}>
-        {/* <h3 className={`${styles.featuredsec}`}>CASE STUDIES</h3> */}
-        <div className="d-md-flex gap-4">
+        <div className={styles.featured__card}>
           {data.map((el) => {
             return (
               <Link href={el.url} passHref>

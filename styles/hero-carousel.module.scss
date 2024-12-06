@@ -14,21 +14,21 @@
   }
 }
 
+.featured__card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+
+  // @media screen and (max-width: 992px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  // }
+
+  @media screen and (max-width: 640px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .customxs {
   background: white;
-
-  // .featured {
-  //   width: 90%;
-  //   margin: auto;
-  //   position: relative;
-  //   bottom: 3rem;
-  //   background: white;
-  //   padding: 2rem 2.5rem;
-
-  //   @media (max-width: 768px) {
-  //     padding: 1rem;
-  //   }
-  // }
 
   .points {
     width: 370px;
@@ -40,6 +40,14 @@
         text-decoration: 1px solid underline !important; /* or any other decoration you want */
         color: black !important;
       }
+    }
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
     }
   }
 }
@@ -94,13 +102,13 @@
   line-height: 28px;
   line-height: -0.5px;
   text-wrap: wrap;
-
   color: #1f1f1f;
   margin-top: 1.5rem;
   margin-bottom: 10px;
 
   @media (max-width: 992px) {
-    font-size: 10px;
+    font-size: 14px;
+    line-height: 20px;
   }
 }
 
