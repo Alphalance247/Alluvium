@@ -22,6 +22,7 @@ import Expertise from "components/Alluvium-Redesign-2025/expertise";
 import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSolution";
 import Impact from "components/Alluvium-Redesign-2025/ourImpact";
 import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
+import Footer from "components/Alluvium-Redesign-2025/footer";
 const Home = () => {
   return (
     <>
@@ -43,19 +44,24 @@ const Home = () => {
         <AtlassianSolution />
         <Impact />
         <MarketPlacePlugin />
+        <Footer />
         <div className="container-fluid p-0 m-0">
           <div className="container-fluid p-0" style={{ background: "" }}>
             {/* <HeroCarousel /> */}
             {/* <Featured /> */}
           </div>
-          <Services />
+
+          {/* new comment out */}
+          {/* <Services />
           <Solutions />
+          <CaseStudies /> */}
+          {/*  new comment out */}
           {/* <OurSolution /> */}
           {/* <WelcomeToAlluvium /> */}
           {/* <ToolsAndPlatforms /> */}
           {/* <WhyAlluvium /> */}
           {/* <OurPartners /> */}
-          <CaseStudies />
+
           {/* <CustomerReview /> */}
           {/* <News /> */}
         </div>
