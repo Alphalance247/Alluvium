@@ -16,8 +16,9 @@ const Hero = () => {
             <Image
               src="/assets/redesign-2025/diagonal.png"
               alt="diagonal"
-              width={111}
+              width={100}
               height={385}
+              // layout="responsive"
             />
           </div>
         </div>
@@ -107,7 +108,7 @@ const Hero = () => {
             <Image
               src="/assets/redesign-2025/diagonal.png"
               alt="diagonal"
-              width={111}
+              width={100}
               height={385}
             />
           </div>
