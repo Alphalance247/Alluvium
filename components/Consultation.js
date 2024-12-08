@@ -46,8 +46,6 @@ export const ConsultationForm = () => {
   return (
     <section id="consultationForm" className={styles.contact}>
       <div className={`container ${styles.book} p-0`}>
-        <ConsutomerConsultation />
-
         <div className={`${styles.location}`}>
           <h3 className={`${styles.contact__us}`}>Contact Us</h3>
           <p className={`${styles.contact__us__text}`}>
@@ -110,6 +108,7 @@ export const ConsultationForm = () => {
             </div>
           </div>
         </div>
+        <ConsutomerConsultation />
       </div>
     </section>
   );
