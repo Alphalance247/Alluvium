@@ -3072,7 +3072,7 @@ export const badges = [
   },
 
   {
-    img: "/assets/redesign-2025/AWS Certs.svg",
+    img: "/assets/redesign-2025/awscerts.svg",
     width: 84,
     height: 78,
     alt: "aws partner",
