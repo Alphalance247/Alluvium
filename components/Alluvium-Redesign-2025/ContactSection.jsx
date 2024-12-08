@@ -9,37 +9,37 @@ const contactArr = [
   {
     icon: "/assets/redesign-2025/mail.svg",
     alt: "mail",
-    url: "#",
+    url: "mailto:contact@alluvium.net",
     title: "contact@alluvium.net",
   },
   {
     icon: "/assets/redesign-2025/phone.svg",
     alt: "phone number",
-    url: "#",
-    title: "+234 812 345 6789",
+    url: "tel:+442035762028",
+    title: "+442035762028",
   },
   {
     icon: "/assets/redesign-2025/map.svg",
     alt: "office location",
     url: "#",
-    title: "Kemp House 160, City Road <br /> London, EC1V 2NX, UK.",
+    title: "Connecticut: 680 E Main Street Ste A Stamford, CT 06901 US.",
   },
   {
     icon: "/assets/redesign-2025/newFB.svg",
     alt: "facebook",
-    url: "#",
+    url: "https://www.facebook.com/alluviumhq/?ti=as",
     title: "Facebook",
   },
   {
     icon: "/assets/redesign-2025/newX.svg",
     alt: "twitter/X",
-    url: "#",
+    url: "https://twitter.com/alluviumhq?s=08",
     title: "X",
   },
   {
     icon: "/assets/redesign-2025/newLinkedin.svg",
     alt: "Linkedin",
-    url: "#",
+    url: "https://www.linkedin.com/company/alluvium-hq/",
     title: "LinkedIn",
   },
 ];
@@ -132,197 +132,206 @@ const ContactSection = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.lineContainer}>
-        {rowsData.map((row, index) => (
-          <div key={index} className={styles.row}></div>
-        ))}
-      </div>
-      <div className={styles.mainContainer}>
-        <div className={styles.section1}>
-          <div className={styles.question}>
-            <h4>
-              We Can’t Wait to <br /> Hear From You
-            </h4>
-            <p className={styles.Pdesktop}>
-              Have questions or need assistance? We're here to <br /> help.
-              Reach out to us for support, inquiries, or <br />
-              feedback, and our team will get back to you promptly.
-            </p>
-            <p className={styles.Pmobile}>
-              Have questions or need assistance? We're here to help. Reach out
-              to us for support, inquiries, or feedback, and our team will get
-              back to you promptly.
-            </p>
-          </div>
-          <div className={styles.ourDetail}>
-            <div style={{ paddingRight: "37px" }} className={styles.contact}>
-              <h5>CONTACT DETAILS</h5>
-              <ul>
-                {contactArr.slice(0, 3).map((contact, index) => (
-                  <li key={index}>
-                    <div className={styles.iconContainer}>
-                      <a href={contact.url}>
-                        <img
-                          src={contact.icon}
-                          alt={contact.alt}
-                          width={20}
-                          height={20}
-                        />
+    <section className={styles.consultation}>
+      <div className={styles.container}>
+        <div className={styles.lineContainer}>
+          {rowsData.map((row, index) => (
+            <div key={index} className={styles.row}></div>
+          ))}
+        </div>
+        <div className={styles.mainContainer}>
+          <div className={styles.section1}>
+            <div className={styles.question}>
+              <h4>
+                We Can’t Wait to <br /> Hear From You
+              </h4>
+              <p className={styles.Pdesktop}>
+                Have questions or need assistance? We're here to <br /> help.
+                Reach out to us for support, inquiries, or <br />
+                feedback, and our team will get back to you promptly.
+              </p>
+              <p className={styles.Pmobile}>
+                Have questions or need assistance? We're here to help. Reach out
+                to us for support, inquiries, or feedback, and our team will get
+                back to you promptly.
+              </p>
+            </div>
+            <div className={styles.ourDetail}>
+              <div style={{ paddingRight: "37px" }} className={styles.contact}>
+                <h5>CONTACT DETAILS</h5>
+                <ul>
+                  {contactArr.slice(0, 3).map((contact, index) => (
+                    <li key={index}>
+                      <div className={styles.iconContainer}>
+                        <a href={contact?.url}>
+                          <img
+                            src={contact?.icon}
+                            alt={contact?.alt}
+                            width={20}
+                            height={20}
+                          />
+                        </a>
+                      </div>
+                      <a href={contact?.url}>
+                        <div
+                          dangerouslySetInnerHTML={{ __html: contact?.title }}
+                          className={styles.title}
+                        ></div>
                       </a>
-                    </div>
-                    <div
-                      dangerouslySetInnerHTML={{ __html: contact.title }}
-                      className={styles.title}
-                    ></div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className={`${styles.contact} ${styles.social}`}>
-              <h5>SOCIAL MEDIAS</h5>
-              <ul>
-                {contactArr.slice(3, 6).map((contact, index) => (
-                  <li key={index}>
-                    <div className={styles.iconContainer}>
-                      <a href={contact.url}>
-                        <img
-                          src={contact.icon}
-                          alt={contact.alt}
-                          width={20}
-                          height={20}
-                        />
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className={`${styles.contact} ${styles.social}`}>
+                <h5>SOCIAL MEDIAS</h5>
+                <ul>
+                  {contactArr.slice(3, 6).map((contact, index) => (
+                    <li key={index}>
+                      <div className={styles.iconContainer}>
+                        <a href={contact.url}>
+                          <img
+                            src={contact.icon}
+                            alt={contact.alt}
+                            width={20}
+                            height={20}
+                          />
+                        </a>
+                      </div>
+                      <a href={contact?.url}>
+                        <div className={styles.title}>{contact.title}</div>
                       </a>
-                    </div>
-                    <div className={styles.title}>{contact.title}</div>
-                  </li>
-                ))}
-              </ul>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className={styles.core}>
+              <p style={{ fontStyle: "italic" }}>
+                <span>
+                  "At Alluvium, we’re all about making technology work for
+                  people.{" "}
+                </span>
+                We focus on building smart solutions that make life easier, more
+                connected, and efficient."
+              </p>
+
+              <div className={styles.ceo}>
+                <p>TAIWO OJO</p>
+                <p className={styles.title}>
+                  Chief Executive Officer, Alluvium
+                </p>
+              </div>
             </div>
           </div>
+          <div className={styles.section2}>
+            <form onSubmit={onsubmit} action="">
+              <div className={styles.contact_form}>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="firstName">
+                    First Name <span className="text-required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="firstName"
+                    id="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="lastName">
+                    Last Name <span className="text-required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="lastName"
+                    id="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
 
-          <div className={styles.core}>
-            <p style={{ fontStyle: "italic" }}>
-              <span>
-                "At Alluvium, we’re all about making technology work for people.{" "}
-              </span>
-              We focus on building smart solutions that make life easier, more
-              connected, and efficient."
-            </p>
+              <div className={styles.contact_form}>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="phone">
+                    Phone Number <span className="text-required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="phone"
+                    id="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                  />
+                </div>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="jobTitle">Job Title</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="jobTitle"
+                    id="jobTitle"
+                    value={formData.jobTitle}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
 
-            <div className={styles.ceo}>
-              <p>TAIWO OJO</p>
-              <p className={styles.title}>Chief Executive Officer, Alluvium</p>
-            </div>
+              <div className={styles.contact_form}>
+                <div style={{ width: "100%" }}>
+                  <label htmlFor="email">Work Email</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="email"
+                    id="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
+              <div className="">
+                <label htmlFor="message">Your message</label>
+                <textarea
+                  style={{ height: "216px" }}
+                  name="message"
+                  id="message"
+                  className="form-control"
+                  rows="7"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+
+              <p>
+                By submitting this form, you are agreeing to receive additional
+                communications from Alluvium. Please review our{" "}
+                <span style={{ color: "#E37915" }}>Privacy Policy</span> for
+                additional information about how Alluvium protects your privacy.
+              </p>
+
+              <button type="submit" aria-label="submit">
+                {isSubmitting ? "Submitting..." : "Contact Sales"}
+              </button>
+            </form>
           </div>
         </div>
-        <div className={styles.section2}>
-          <form onSubmit={onsubmit} action="">
-            <div className={styles.contact_form}>
-              <div style={{ width: "100%" }}>
-                <label htmlFor="firstName">
-                  First Name <span className="text-required">*</span>
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="firstName"
-                  id="firstName"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div style={{ width: "100%" }}>
-                <label htmlFor="lastName">
-                  Last Name <span className="text-required">*</span>
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="lastName"
-                  id="lastName"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                />
-              </div>
+
+        <div className={styles.lineContainer}>
+          {rowsData.map((row, index) => (
+            <div key={index} className={styles.row}>
+              {row.dotted && <span className={styles.dottedLine}></span>}
             </div>
-
-            <div className={styles.contact_form}>
-              <div style={{ width: "100%" }}>
-                <label htmlFor="phone">
-                  Phone Number <span className="text-required">*</span>
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="phone"
-                  id="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div style={{ width: "100%" }}>
-                <label htmlFor="jobTitle">Job Title</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="jobTitle"
-                  id="jobTitle"
-                  value={formData.jobTitle}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            <div className={styles.contact_form}>
-              <div style={{ width: "100%" }}>
-                <label htmlFor="email">Work Email</label>
-                <input
-                  type="text"
-                  className="form-control"
-                  name="email"
-                  id="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            <div className="">
-              <label htmlFor="message">Your message</label>
-              <textarea
-                style={{ height: "216px" }}
-                name="message"
-                id="message"
-                className="form-control"
-                rows="7"
-                value={formData.message}
-                onChange={handleInputChange}
-              ></textarea>
-            </div>
-
-            <p>
-              By submitting this form, you are agreeing to receive additional
-              communications from Alluvium. Please review our{" "}
-              <span style={{ color: "#E37915" }}>Privacy Policy</span> for
-              additional information about how Alluvium protects your privacy.
-            </p>
-
-            <button type="submit" aria-label="submit">
-              {isSubmitting ? "Submitting..." : "Contact Sales"}
-            </button>
-          </form>
+          ))}
         </div>
       </div>
-
-      <div className={styles.lineContainer}>
-        {rowsData.map((row, index) => (
-          <div key={index} className={styles.row}>
-            {row.dotted && <span className={styles.dottedLine}></span>}
-          </div>
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 

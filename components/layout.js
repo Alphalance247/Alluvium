@@ -4,6 +4,7 @@ import Navigation from "./navigation";
 import styles from "../styles/layout.module.scss";
 import { ConsultationForm } from "./Consultation";
 import ContactSection from "./Alluvium-Redesign-2025/ContactSection";
+import Footer from "./Alluvium-Redesign-2025/footer";
 
 export default function Layout({ children, withoutForm }) {
   return (
@@ -12,8 +13,9 @@ export default function Layout({ children, withoutForm }) {
       <div className={styles.layoutBody}>{children}</div>
       {/* {!withoutForm && <ConsultationForm />} */}
 
+      {/* <AltFooter /> */}
       <ContactSection />
-      <AltFooter />
+      <Footer />
     </div>
   );
 }

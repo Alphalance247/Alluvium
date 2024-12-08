@@ -27,16 +27,19 @@ const MarketPlacePlugin = () => {
 
                   <h6>{item?.title}</h6>
                   <p>{item?.content}</p>
-                  <Image
-                    src={item?.img}
-                    alt={item?.title}
-                    width={341}
-                    height={200}
-                    layout="responsive"
+                  <div
                     style={{
                       marginLeft: "-1rem",
                     }}
-                  />
+                  >
+                    <Image
+                      src={item?.img}
+                      alt={item?.title}
+                      width={341}
+                      height={200}
+                      layout="responsive"
+                    />
+                  </div>
                 </div>
               </a>
             );

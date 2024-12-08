@@ -84,14 +84,15 @@ const Footer = () => {
 
   const blogContainer = [
     {
-      img: "/assets/redesign-2025/chamberbloog.png",
-      content: "Alluvium joins the Stanford Chamber...",
-      btn: "Read more",
+      img: "/assets/redesign-2025/press.png",
+      content: "Tech Experts Converge on...",
+      url: "https://remotework.business/2024/12/02/tech-experts-converge-on-the-zone-arena-lagos-for-alluvium-hqs-2024-cloud-connect-propel-smes-in-africa-to-full-digitization/ ",
     },
     {
-      img: "/assets/redesign-2025/press.png",
+      img: "/assets/redesign-2025/chamberbloog.png",
       content: "Alluvium joins the Stanford Chamber...",
-      fullhighlight: "Alluvium joins the Stanford Chambe",
+      // fullhighlight: "Alluvium joins the Stanford Chambe",
+      url: "#",
     },
   ];
 
@@ -212,32 +213,34 @@ const Footer = () => {
               <div className={styles.blogs}>
                 {blogContainer.map((item, i) => {
                   return (
-                    <div
-                      key={i}
-                      className={styles.blog}
-                      onMouseEnter={() => handleMouseEnter(i)}
-                      onMouseLeave={handleMouseLeave}
-                    >
-                      <Image
-                        src={item?.img}
-                        width={134}
-                        height={120}
-                        alt={item?.content}
-                        style={{
-                          borderTopLeftRadius: "1rem",
-                          borderBottomLeftRadius: "1rem",
-                        }}
-                      />
-                      <div className={styles.content}>
-                        <p>{item?.content}</p>
+                    <a href={item?.url}>
+                      <div
+                        key={i}
+                        className={styles.blog}
+                        onMouseEnter={() => handleMouseEnter(i)}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        <Image
+                          src={item?.img}
+                          width={134}
+                          height={120}
+                          alt={item?.content}
+                          style={{
+                            borderTopLeftRadius: "1rem",
+                            borderBottomLeftRadius: "1rem",
+                          }}
+                        />
+                        <div className={styles.content}>
+                          <p>{item?.content}</p>
 
-                        {showreadmore === i && (
-                          <div data-aos-delay="300" data-aos="fade-up">
-                            <ReadMore content="Read More" />
-                          </div>
-                        )}
+                          {showreadmore === i && (
+                            <div data-aos-delay="300" data-aos="fade-up">
+                              <ReadMore content="Read More" />
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    </a>
                   );
                 })}
               </div>
@@ -255,12 +258,49 @@ const Footer = () => {
             </div>
             <div className={styles.extralinks}>
               <Link href="/atlassian-services/terms-conditions">
-                <a aria-label="privacy-policy" className="px-3">
-                  Terms & Conditions
-                </a>
+                <div
+                  className="px-3"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    columnGap: ".4rem",
+                    cursor: "pointer",
+                  }}
+                >
+                  <a aria-label="Terms-Condition">Terms & Conditions </a>
+                  <span
+                    style={{
+                      width: "2px",
+                      height: "2px",
+                      backgroundColor: "#BFBFBF",
+                      borderRadius: "99px",
+                      display: "inline-block",
+                    }}
+                  ></span>
+                </div>
               </Link>
+
               <Link href={"/privacy-policy"}>
-                <a aria-label="privacy-policy">Privacy Policy</a>
+                <div
+                  className="px-3"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    columnGap: ".4rem",
+                    cursor: "pointer",
+                  }}
+                >
+                  <a aria-label="privacy-policy">Privacy Policy</a>
+                  <span
+                    style={{
+                      width: "2px",
+                      height: "2px",
+                      backgroundColor: "#BFBFBF",
+                      borderRadius: "99px",
+                      display: "inline-block",
+                    }}
+                  ></span>
+                </div>
               </Link>
 
               {/* <Link href={"/privacy-policy"}>
