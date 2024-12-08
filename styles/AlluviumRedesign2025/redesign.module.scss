@@ -1,25 +1,33 @@
 .hero__section {
-  background: #fcfcfc;
   border-bottom: 1px solid #f0f0f0;
   position: relative;
   max-width: 1550px;
   margin: auto;
+  display: flex;
 
   .diagonal__encap {
     padding-top: 10rem;
-    position: absolute;
-    left: 0;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
 
     @media screen and (max-width: 1035px) {
       display: none;
+    }
+
+    .diagonal {
+      object-fit: cover;
+      object-position: center;
     }
   }
 
   .diagonal__encap1 {
     padding-top: 10rem;
-    position: absolute;
-    right: 0;
 
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     @media screen and (max-width: 1035px) {
       display: none;
     }
@@ -40,7 +48,7 @@
       }
 
       .content {
-        width: 50%;
+        width: 55%;
         padding-top: 5rem;
         padding-bottom: 6rem;
         padding-left: 28px;
@@ -71,14 +79,14 @@
 
         .new__update {
           font-size: 14px;
-          font-weight: 500;
+          font-weight: 400;
           color: #595959;
           line-height: 20px;
           border: 1px solid #e37915;
           background: #fcf2e8;
-          border-radius: 4px;
+          border-radius: 10px;
           width: fit-content;
-          padding: 4px 8px 4px 1px;
+          padding: 4px 8px 4px 4px;
           cursor: pointer;
 
           @media screen and (max-width: 992px) {
@@ -98,6 +106,11 @@
             border-radius: 6px;
             border: 1px solid #e37915;
             margin-right: 12px;
+
+            @media screen and (max-width: 640px) {
+              padding-left: 5px;
+              padding-right: 5px;
+            }
           }
 
           .span2 {
@@ -113,6 +126,7 @@
           letter-spacing: -2px;
           margin-bottom: 1.5rem;
           font-weight: 700;
+          font-family: "Grotesk";
 
           @media screen and (max-width: 1035px) {
             font-size: 50px;
@@ -202,7 +216,7 @@
     }
 
     .how__we__help {
-      // font-size: 1rem;
+      font-size: 13px;
       // font-weight: 500;
       // color: #595959;
       // line-height: 20px;
@@ -364,7 +378,7 @@
         }
       }
 
-      p {
+      .solution {
         font-size: 18px;
         line-height: 28px;
         color: #595959;
@@ -395,6 +409,14 @@
         padding: 1rem 1rem 1.5rem 1rem;
         border: 1px solid #d9d9d9;
         border-radius: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.15);
+          h5 {
+            text-decoration: 2px solid underline !important; /* or any other decoration you want */
+          }
+        }
 
         @media screen and (max-width: 992px) {
           padding: 0.5rem 0.5rem 0.8rem 0.5rem;
@@ -501,6 +523,7 @@
         box-shadow: 0px 2px 6px 0px #1018280f;
         border-radius: 1rem;
         text-align: start;
+        cursor: pointer;
 
         @media screen and (max-width: 992px) {
           padding: 0.7rem 0.6rem 0px 0.6rem;
@@ -521,7 +544,7 @@
         }
 
         p {
-          font-weight: 500;
+          font-weight: 400;
           font-size: 1rem;
           margin-bottom: 1.5rem;
           line-height: 1.5rem;
@@ -582,7 +605,7 @@
   }
 
   .how__we__help {
-    font-size: 1rem;
+    font-size: 13px;
     font-weight: 500;
     color: #595959;
     line-height: 20px;
@@ -606,6 +629,7 @@
     letter-spacing: -2px;
     margin-top: 1rem;
     margin-bottom: 0px;
+    font-family: "Grotesk";
 
     @media screen and (max-width: 992px) {
       font-size: 2rem;
@@ -626,6 +650,7 @@
     font-weight: 400;
     margin-top: 1.5rem;
     margin-bottom: 0px;
+    font-weight: 400;
 
     @media screen and (max-width: 768px) {
       font-size: 14px;

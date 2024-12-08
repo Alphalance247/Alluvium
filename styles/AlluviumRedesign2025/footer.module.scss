@@ -8,11 +8,20 @@
     border-right: 1px solid #454545;
 
     .get__in__touch {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 35% auto;
       padding: 3.5rem 18px;
-      column-gap: 4rem;
+      column-gap: 6rem;
       border-bottom: 1px solid #454545;
+
+      @media screen and (max-width: 992px) {
+        column-gap: 3rem;
+      }
+
+      @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+      }
 
       p {
         font-size: 36px;
@@ -20,12 +29,27 @@
         line-height: 44px;
         color: #fcfcfc;
         letter-spacing: -2%;
-        width: 360px;
+
+        @media screen and (max-width: 992px) {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
       }
 
       .schedule__format {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         column-gap: 3rem;
+        width: 100%;
+
+        @media screen and (max-width: 992px) {
+          column-gap: 1.5rem;
+        }
+
+        @media screen and (max-width: 640px) {
+          grid-template-columns: 1fr;
+          row-gap: 1.5rem;
+        }
 
         .format {
           //   width: 350px;
@@ -37,6 +61,16 @@
             color: #fcfcfc;
             margin-top: 1.5rem;
             margin-bottom: 1rem;
+
+            @media screen and (max-width: 992px) {
+              font-size: 14px;
+              line-height: 20px;
+            }
+
+            @media screen and (max-width: 640px) {
+              margin-top: 1rem;
+              margin-bottom: 0.7rem;
+            }
           }
 
           button {
@@ -55,13 +89,27 @@
       display: grid;
       grid-template-columns: 38% auto;
 
+      @media screen and (max-width: 992px) {
+        grid-template-columns: 1fr;
+      }
+
       .about {
         padding: 42px;
         border-right: 1px solid #454545;
 
+        @media screen and (max-width: 992px) {
+          width: 70%;
+          border-right: none;
+        }
+
+        @media screen and (max-width: 640px) {
+          padding: 18px;
+          width: 90%;
+        }
+
         p {
           color: white;
-          font-weight: 500;
+          font-weight: 400;
           font-size: 1rem;
           line-height: 1.5rem;
           margin-top: 1.5rem;
@@ -74,6 +122,11 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       width: 100%;
+
+      @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+      }
 
       .links {
         border: 1px solid #454545;
@@ -93,11 +146,15 @@
           row-gap: 1rem;
 
           li {
-            font-weight: 500;
+            font-weight: 400;
             font-size: 1rem;
             line-height: 1.5rem;
             color: #d9d9d9;
             list-style: none;
+
+            @media screen and (max-width: 640px) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -109,22 +166,37 @@
       row-gap: 1.5rem;
       padding: 25px 40px;
 
+      @media screen and (max-width: 640px) {
+        row-gap: 1rem;
+        padding: 18px;
+      }
+
       .blog__heading {
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 700;
         color: white;
+        margin-bottom: 0px;
       }
 
       .showcase {
         display: flex;
         column-gap: 0.5rem;
+
+        @media screen and (max-width: 640px) {
+          flex-direction: column;
+          row-gap: 1rem;
+        }
       }
 
       .blogs {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 17px;
+
+        @media screen and (max-width: 640px) {
+          grid-template-columns: 1fr;
+        }
 
         .blog {
           display: grid;
@@ -133,7 +205,7 @@
           background: #262626;
           border-radius: 1rem;
           cursor: pointer;
-          // height: 160px;
+          height: 145px;
 
           .content {
             padding: 36px 25px;
@@ -142,6 +214,17 @@
               line-height: 1.5rem;
               letter-spacing: -2%;
               color: #f0f0f0;
+              margin: 0px;
+
+              @media screen and (max-width: 992px) {
+                font-size: 14px;
+                line-height: 1.2rem;
+              }
+
+              @media screen and (max-width: 640px) {
+                font-size: 13px;
+                line-height: 1.2rem;
+              }
             }
           }
         }
@@ -171,12 +254,17 @@
       .extralinks {
         display: flex;
 
+        @media screen and (max-width: 640px) {
+          flex-direction: column;
+          align-items: center;
+          row-gap: 1rem;
+        }
+
         a {
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 20px;
-          // text-decoration-line: underline !important;
           color: #858585 !important;
 
           &:hover {

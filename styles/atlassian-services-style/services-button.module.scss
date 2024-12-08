@@ -4,6 +4,7 @@
   cursor: pointer;
   font-weight: 600;
   transition: background-color 0.3s ease;
+  text-transform: capitalize;
 
   @media screen and (max-width: 576px) {
     width: 100%;
@@ -58,10 +59,13 @@
     background: #fff;
     border-radius: 0.5rem;
     color: #595959;
-    // box-shadow: 0px 0px 0px 1px #0000000d inset;
-    // box-shadow: 0px -2px 4px 0px #ffffff33;
-    // box-shadow: 0px 1px 2px 0px #0000001a;
-    box-shadow: 0px 2px 1px 0px #ffffff33 inset;
+    box-shadow: 0px -2px 4px 0px #ffffff33;
+    box-shadow: 0px 1px 2px 0px #0000001a;
+
+    &:hover:not(:disabled) {
+      background: #595959;
+      color: white;
+    }
   }
 
   &--block {
@@ -72,6 +76,13 @@
     width: 100%;
     color: #595959;
     background: white;
+    box-shadow: 0px -2px 4px 0px #ffffff33;
+    box-shadow: 0px 1px 2px 0px #0000001a;
+
+    &:hover:not(:disabled) {
+      background: #595959;
+      color: white;
+    }
   }
 
   // Sizes
@@ -90,6 +101,8 @@
     padding: 12px 24px;
     font-size: 18px;
     height: 52px;
+    box-shadow: 0px -2px 4px 0px #ffffff33;
+    box-shadow: 0px 1px 2px 0px #0000001a;
 
     @media screen and (max-width: 1035px) {
       display: block;
@@ -108,9 +121,10 @@
   }
 
   &--xxlarge {
-    padding: 14px 40px;
+    padding: 14px 12px;
     font-size: 18px;
     height: 52px;
+    text-transform: capitalize;
 
     @media screen and (max-width: 1035px) {
       display: block;

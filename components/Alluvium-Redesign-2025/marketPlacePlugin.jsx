@@ -18,25 +18,27 @@ const MarketPlacePlugin = () => {
         <div className={styles.card__encap}>
           {PluginData.map((item, i) => {
             return (
-              <div key={i} className={styles.cards}>
-                <div className="d-flex justify-content-between">
-                  <Image src={item?.icon1} alt="" width={56} height={56} />
-                  <Image src={item?.icon2} alt="" width={40} height={40} />
-                </div>
+              <a href={item?.url} target="_blank">
+                <div key={i} className={styles.cards}>
+                  <div className="d-flex justify-content-between">
+                    <Image src={item?.icon1} alt="" width={64} height={64} />
+                    <Image src={item?.icon2} alt="" width={40} height={40} />
+                  </div>
 
-                <h6>{item?.title}</h6>
-                <p>{item?.content}</p>
-                <Image
-                  src={item?.img}
-                  alt={item?.title}
-                  width={341}
-                  height={200}
-                  layout="responsive"
-                  style={{
-                    marginLeft: "-1rem",
-                  }}
-                />
-              </div>
+                  <h6>{item?.title}</h6>
+                  <p>{item?.content}</p>
+                  <Image
+                    src={item?.img}
+                    alt={item?.title}
+                    width={341}
+                    height={200}
+                    layout="responsive"
+                    style={{
+                      marginLeft: "-1rem",
+                    }}
+                  />
+                </div>
+              </a>
             );
           })}
         </div>

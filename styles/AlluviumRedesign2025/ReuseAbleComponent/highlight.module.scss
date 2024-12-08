@@ -7,4 +7,15 @@
   padding: 6px 12px;
   width: fit-content;
   border-radius: 21px;
+  margin-bottom: 0px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 640px) {
+    font-size: 11px;
+    line-height: 13px;
+  }
 }

@@ -6,7 +6,7 @@ import ReadMore from "./ReuseComponents/readmore";
 import { useState } from "react";
 
 const Footer = () => {
-  const [showreadmore, setShowreadMore] = useState(false);
+  const [showreadmore, setShowreadMore] = useState(null);
 
   const data = [
     {
@@ -14,12 +14,14 @@ const Footer = () => {
       content:
         "Need a quick chat? Skip the form and book a time that works for you.",
       btn: "Book a Meeting",
+      url: "/support/contact#schedule-a-call",
     },
     {
       img: "/assets/redesign-2025/base2.svg",
       content:
         "Need help? Raise a ticket, and our team will get back to you very soon.",
       btn: "Raise a Ticket",
+      url: "https://support.portal.alluvium.net/servicedesk/customer/portals",
     },
   ];
 
@@ -29,6 +31,9 @@ const Footer = () => {
       text1: "Atlassian Services",
       text2: "AWS Services",
       text3: "Design & Development",
+      url1: "/atlassian-services",
+      url2: "/aws-services",
+      url3: "/software-development",
     },
     {
       heading: "Company",
@@ -38,29 +43,42 @@ const Footer = () => {
       text4: "Team ‘24",
       text5: "Booth 53",
       text6: "Contact Us",
+      url1: "/about",
+      url2: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
+      url3: "/cloud-connect",
+      url4: "/event/team24",
+      url5: "/booth53#hero",
+      url6: "/contact-us",
     },
     {
       heading: "Resources",
-      text1: "Success Stories",
-      text2: "Blog",
-      text3: "Migration Case Study",
-      text4: "ITSM/JSM Case study",
-      text5: "Events",
+      text1: "Blog",
+      text2: "Migration Case Study",
+      text3: "ITSM/JSM Case study",
+      text4: "Events",
+      url1: " /blogs",
+      url2: " /atlassian-services/cloud-migration",
+      url3: " /atlassian-services/itsm-services",
+      url4: "/event/event-blog",
     },
   ];
 
   const text = [
     {
       text: "MARKETPLACE PLUGINS",
+      url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
     },
     {
       text: "REMOTE WORK NEWS",
+      url: "https://remotework.business/",
     },
     {
       text: "CLOUD CONNECT",
+      url: "/cloud-connect",
     },
     {
       text: "ALLUVIUM UNIVERSITY",
+      url: "https://university.alluvium.net/",
     },
   ];
 
@@ -77,13 +95,14 @@ const Footer = () => {
     },
   ];
 
-  const handleMouseEnter = () => {
-    setShowreadMore(!showreadmore);
+  const handleMouseEnter = (i) => {
+    setShowreadMore(i);
   };
 
   const handleMouseLeave = () => {
-    setShowreadMore(!showreadmore);
+    setShowreadMore(null);
   };
+
   return (
     <footer className={styles.footer}>
       <div className={styles.footer__container}>
@@ -101,7 +120,9 @@ const Footer = () => {
                     alt={item?.btn}
                   />
                   <p>{item?.content}</p>
-                  <ReadMore content={item?.btn} />
+                  <a href={item?.url}>
+                    <ReadMore content={item?.btn} />
+                  </a>
                 </div>
               );
             })}
@@ -141,12 +162,35 @@ const Footer = () => {
 
                     <div>
                       <ul>
-                        <li>{item?.text1}</li>
-                        <li>{item?.text2}</li>
-                        <li>{item?.text3}</li>
-                        <li>{item?.text4}</li>
-                        <li>{item?.text5}</li>
-                        <li>{item?.text6}</li>
+                        <li>
+                          <Link href={item?.url1}>{item?.text1}</Link>
+                        </li>
+
+                        <li>
+                          <Link href={item?.url2}>{item?.text2}</Link>
+                        </li>
+
+                        <li>
+                          <Link href={item?.url3}>{item?.text3}</Link>
+                        </li>
+
+                        {item?.text4 && item?.url4 && (
+                          <li>
+                            <Link href={item?.url4}>{item?.text4}</Link>
+                          </li>
+                        )}
+
+                        {item?.text5 && item?.url5 && (
+                          <li>
+                            <Link href={item?.url5}>{item?.text5}</Link>
+                          </li>
+                        )}
+
+                        {item?.text6 && item?.url6 && (
+                          <li>
+                            <Link href={item?.url6}>{item?.text6}</Link>
+                          </li>
+                        )}
                       </ul>
                     </div>
                   </div>
@@ -158,7 +202,11 @@ const Footer = () => {
               <p className={styles.blog__heading}>Blog</p>
               <div className={styles.showcase}>
                 {text.map((item, i) => {
-                  return <HighLight text={item?.text} key={i} />;
+                  return (
+                    <a href={item?.url} target="_blank">
+                      <HighLight text={item?.text} i={i} />
+                    </a>
+                  );
                 })}
               </div>
               <div className={styles.blogs}>
@@ -168,7 +216,7 @@ const Footer = () => {
                       key={i}
                       className={styles.blog}
                       onMouseEnter={() => handleMouseEnter(i)}
-                      onMouseLeave={() => handleMouseLeave(i)}
+                      onMouseLeave={handleMouseLeave}
                     >
                       <Image
                         src={item?.img}
@@ -183,8 +231,8 @@ const Footer = () => {
                       <div className={styles.content}>
                         <p>{item?.content}</p>
 
-                        {showreadmore && (
-                          <div data-aos-delay="300" data-aos="fade-down">
+                        {showreadmore === i && (
+                          <div data-aos-delay="300" data-aos="fade-up">
                             <ReadMore content="Read More" />
                           </div>
                         )}
@@ -215,11 +263,11 @@ const Footer = () => {
                 <a aria-label="privacy-policy">Privacy Policy</a>
               </Link>
 
-              <Link href={"/privacy-policy"}>
+              {/* <Link href={"/privacy-policy"}>
                 <a aria-label="privacy-policy" className="px-3">
                   Cookie Preferences
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

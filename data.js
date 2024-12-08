@@ -2973,6 +2973,7 @@ export const servicesContent = [
     subHeading:
       "Our Atlassian consultants bring the experience of hundreds of Atlassian projects to your company. They support you with the introduction, migration and optimization of your tools - on a project-related or permanent basis.",
     btn: "Explore Atlassian Solutions",
+    url: "/atlassian-services",
   },
   {
     img: "/assets/redesign-2025/aws.svg",
@@ -2980,6 +2981,7 @@ export const servicesContent = [
     subHeading:
       "Optimize your Atlassian environment with our AWS consulting services. We offer managed services, infrastructure review, modernization, and DevOps solutions, delivered by our team of experienced consultants.",
     btn: "Speak to our consultant",
+    url: "/contact-us/contact-sales-team",
   },
   {
     img: "/assets/redesign-2025/atlassian.svg",
@@ -2987,6 +2989,7 @@ export const servicesContent = [
     subHeading:
       "Enhance your projects with our comprehensive Design as a Service and cutting-edge software development. Our expert team delivers tailored, innovative solutions to meet your unique needs and drive your business forward.",
     btn: "Schedule a meeting",
+    url: "/support/contact#schedule-a-call",
   },
 ];
 
@@ -2997,6 +3000,7 @@ export const redesignCaseStudy = [
     heading:
       "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
     btn: "Read Case Study",
+    url: "/case-studies/Atlassian-Suite-to-Atlassian-Cloud-Migration-for-a-Fintech-Company",
   },
   {
     img: "/assets/case-studies2/case-study-01/situation.png",
@@ -3004,6 +3008,7 @@ export const redesignCaseStudy = [
     heading:
       "A Successful Server to Cloud Migration for an Agricultural business",
     btn: "Read Case Study",
+    url: "/case-studies/Thirst-for-better-Agile-Environment-Pivotal-tracker-to-Jira-Cloud",
   },
   {
     img: "/assets/case-studies2/case-study-06/situation.png",
@@ -3011,6 +3016,7 @@ export const redesignCaseStudy = [
     heading:
       "Server to Cloud Migration for Top Rated Software Development Company",
     btn: "Read Case Study",
+    url: "/case-studies/Server-to-Cloud-migration-for-top-rated-software-development-company",
   },
 ];
 
@@ -3022,6 +3028,7 @@ export const PluginData = [
     content:
       "Export and Count for Cloud optimizes Scrum workflows and collaboration",
     img: "/assets/redesign-2025/exportandcount.png",
+    url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
   },
   {
     icon1: "/assets/redesign-2025/cloudcountericon.svg",
@@ -3030,6 +3037,7 @@ export const PluginData = [
     content:
       "The Alluvium Cloud counter summarizes instance resources and usage.",
     img: "/assets/redesign-2025/cloudcounter.png",
+    url: "https://marketplace.atlassian.com/",
   },
   {
     icon1: "/assets/redesign-2025/cjrIcon.svg",
@@ -3038,6 +3046,7 @@ export const PluginData = [
     content:
       "Compare your Cloud site with any Jira site across all hosting types.",
     img: "/assets/redesign-2025/cjr.png",
+    url: "https://marketplace.atlassian.com/apps/1223507/resource-compare-for-jira",
   },
 ];
 

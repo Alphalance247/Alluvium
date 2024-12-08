@@ -3,6 +3,7 @@ import styles from "../../styles/AlluviumRedesign2025/redesign.module.scss";
 import { servicesContent } from "data";
 import Image from "next/image";
 import Heading from "./heading";
+import Link from "next/link";
 
 const AtlassianSolution = () => {
   return (
@@ -26,7 +27,9 @@ const AtlassianSolution = () => {
                   <p>{item?.subHeading}</p>
                 </div>
                 <div className={styles.btn}>
-                  <Button variant="block">{item?.btn}</Button>
+                  <Link href={item?.url}>
+                    <Button variant="block">{item?.btn}</Button>
+                  </Link>
                 </div>
               </div>
             );

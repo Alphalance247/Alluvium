@@ -102,3 +102,11 @@
   font-weight: 400;
   src: url("/assets/fonts/Charlie/charlie-display.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Grotesk";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Mena__Grotesk/MenaGrotesk.otf") format("opentype");
+}

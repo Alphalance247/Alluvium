@@ -2,6 +2,7 @@ import Button from "components/atlassian-service-reuse/Button";
 import Heading from "./heading";
 import CaseStudyCard from "./caseStudyCard";
 import styles from "../../styles/AlluviumRedesign2025/redesign.module.scss";
+import Link from "next/link";
 
 const Impact = () => {
   return (
@@ -17,11 +18,13 @@ const Impact = () => {
             />
           </div>
           <div className={styles.view__case__study}>
-            <p>
+            <p className={styles.solution}>
               Discover how our tailored solutions have helped businesses achieve
               their goals and drive meaningful results.
             </p>
-            <Button size="large">See All Case Studies</Button>
+            <Link href="/case-studies">
+              <Button size="large">See All Case Studies</Button>
+            </Link>
           </div>
         </div>
 
