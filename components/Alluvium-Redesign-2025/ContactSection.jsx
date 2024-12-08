@@ -63,7 +63,6 @@ const ContactSection = () => {
     if (name === "phone" && !/^\d*$/.test(value)) {
       return;
     }
-
     setFormData({
       ...formData,
       [name]: value,
@@ -203,7 +202,7 @@ const ContactSection = () => {
           </div>
 
           <div className={styles.core}>
-            <p className={styles.pp} style={{ fontStyle: "italic" }}>
+            <p style={{ fontStyle: "italic" }}>
               <span>
                 "At Alluvium, we’re all about making technology work for people.{" "}
               </span>
