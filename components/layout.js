@@ -3,13 +3,16 @@ import { AltFooter } from "./footer";
 import Navigation from "./navigation";
 import styles from "../styles/layout.module.scss";
 import { ConsultationForm } from "./Consultation";
+import ContactSection from "./Alluvium-Redesign-2025/ContactSection";
 
 export default function Layout({ children, withoutForm }) {
   return (
     <div>
       <Navigation />
       <div className={styles.layoutBody}>{children}</div>
-      {!withoutForm && <ConsultationForm />}
+      {/* {!withoutForm && <ConsultationForm />} */}
+
+      <ContactSection />
       <AltFooter />
     </div>
   );
