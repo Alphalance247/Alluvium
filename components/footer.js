@@ -166,11 +166,11 @@ export function AltFooter() {
               </li>
               <li className={styles.contactListItem}>
                 <b>Phone Number: </b>
-                <a href="tel:+442035762028"> +442035762028</a>
+                <a href="tel:+12073607252">+1 (207) 360-7252</a>
               </li>
               <li className={styles.contactListItem}>
-                <b>Connecticut Office:</b>
-                <a href="tel:+12073607252"> +1 (207) 360-7252</a>
+                <b>London Office: </b>
+                <a href="tel:+442035762028">+442035762028</a>
               </li>
             </ul>
           </div>

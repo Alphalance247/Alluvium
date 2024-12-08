@@ -77,20 +77,20 @@ export const ConsultationForm = () => {
               height={32}
             />
             <a
-              href="tel:+442035762028"
-              className="cursor-pointer text-decoration-underline"
-            >
-              +442035762028
-            </a>
-          </div>
-
-          <div className="d-flex align-items-center gap-2">
-            <b>Connecticut Office:</b>
-            <a
               href="tel:+12073607252"
               className="cursor-pointer text-decoration-underline"
             >
               +1 (207) 360-7252
+            </a>
+          </div>
+
+          <div className="d-flex align-items-center gap-2">
+            <b>London Office: </b>
+            <a
+              href="tel:+442035762028"
+              className="cursor-pointer text-decoration-underline"
+            >
+              +442035762028
             </a>
           </div>
 
