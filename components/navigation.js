@@ -112,7 +112,7 @@ export default function Navigation({ theme }) {
                 </div>
               </li>
               <li>
-                <Link href="/#services">Services</Link>
+                <Link href="/atlassian-services">Services</Link>
               </li>
 
               <li>
