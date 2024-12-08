@@ -3,7 +3,7 @@ import styles from "../../styles/cloud-migration-case-study/migartionmain.module
 
 const HeroCloud = ({ item }) => {
   return (
-    <section className={`container-fluid ${styles.hero__cloud}`}>
+    <section className={`${styles.hero__cloud}`}>
       <div className={`container mx-auto" ${styles.hero__cloud__sub}`}>
         <div className={styles.cloud__content}>
           <p className={styles.trusted_solution}>{item.aboutAlluvium}</p>

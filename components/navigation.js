@@ -38,7 +38,9 @@ export default function Navigation({ theme }) {
       data-aos="fade-down"
       onMouseLeave={() => toggleDropdown("")}
     >
-      <div className="container d-flex gap-5 justify-content-between align-items-center">
+      <div
+        className={`d-flex gap-5 justify-content-between align-items-center ${styles.heading__new}`}
+      >
         <div className={styles.logo}>
           <Link href="/">
             <img src="/assets/alluvium-logo-dark.svg" alt="logo" />
