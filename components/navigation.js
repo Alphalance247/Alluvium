@@ -84,9 +84,7 @@ export default function Navigation({ theme }) {
                     }
                   >
                     <ul>
-                      <li>
-                        <Link href="/about">About us</Link>
-                      </li>
+                      <li>{/* <Link href="/about">About us</Link> */}</li>
                       <li>
                         <a
                           href="http://university.alluvium.net"
@@ -104,9 +102,7 @@ export default function Navigation({ theme }) {
                       <li>
                         <Link href="/support/contact">Contact Us</Link>
                       </li>
-                      <li>
-                        <Link href="/blogs">blogs</Link>
-                      </li>
+                      <li>{/* <Link href="/blogs">blogs</Link> */}</li>
                     </ul>
                   </div>
                 </div>
@@ -124,14 +120,12 @@ export default function Navigation({ theme }) {
                 </a>
               </li>
               <li>
-                <Link href="/blogs">Blog</Link>
+                {/* <Link href="/blogs">Blog</Link> */}
                 {/* <a href="/blogs" rel="Alluvium" target="_blank">
                   Blogs
                 </a> */}
               </li>
-              <li>
-                <Link href="/case-studies">Case Studies</Link>
-              </li>
+              <li>{/* <Link href="/case-studies">Case Studies</Link> */}</li>
               {/* <li>
                             <div>
                                 <p onClick={() => toggleDropdown('Case Studies')} className={(dropdownActive && (currentDropdown === 'Case Studies')) ? styles.dropdownActive : styles.dropdownToggler}>
