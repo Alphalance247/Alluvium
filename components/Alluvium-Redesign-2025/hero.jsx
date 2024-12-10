@@ -4,6 +4,7 @@ import styles from "../../styles/AlluviumRedesign2025/redesign.module.scss";
 import { badges } from "data";
 import Link from "next/link";
 import { Lines } from "./ReuseComponents/Lines";
+import HeroHeading from "./ReuseComponents/heroHeading";
 
 const Hero = () => {
   return (
@@ -17,29 +18,14 @@ const Hero = () => {
         <div className={styles.sub__hero}>
           <div className={styles.hero__context}>
             <div className={styles.content}>
-              <Link href="/">
-                <p className={styles.new__update}>
-                  <span className={styles.span1}>
-                    {" "}
-                    <Image
-                      src="/assets/redesign-2025/Dots.svg"
-                      width={10}
-                      height={10}
-                      alt="dot"
-                    />{" "}
-                    NEW UPDATE
-                  </span>
-                  Alluvium Joins the Stanford Chambers of Commerce{" "}
-                  <span className={styles.span2}>{" > "}</span>
-                </p>
-              </Link>
-
-              <h1>Empower Your Teams with Expert Atlassian Solutions</h1>
-              <p className={styles.paragraph__transform}>
-                Alluvium transforms teamwork and processes with Atlassian
-                solutions, empowering collaboration and efficiency through Agile
-                tools and expertise.
-              </p>
+              <HeroHeading
+                update="Alluvium Joins the Stanford Chambers of Commerce"
+                updateSub="NEW UPDATE"
+                updateSign={true}
+                heading="Empower Your Teams with Expert Atlassian Solutions"
+                subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
+                variant="primary"
+              />
               <div className={styles.btns}>
                 <Link href="/support/contact#schedule-a-call">
                   <Button size="mediumL">Contact Us</Button>
