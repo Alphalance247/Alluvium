@@ -10,6 +10,8 @@ import OurSolution from "components/ourSolutions";
 // import OurPartners from "components/ourPartners";
 import Layout from "components/layout";
 import { milestonesData } from "data";
+import Hero from "components/Alluvium-Redesign-2025/AboutUs/hero";
+import AboutAlluvium from "components/Alluvium-Redesign-2025/AboutUs/aboutAlluvium";
 
 export default function AboutUs() {
   const imagePath = "/assets/about/";
@@ -31,6 +33,8 @@ export default function AboutUs() {
         </Head>
         {/* <Navigation /> */}
         <main>
+          <Hero />
+          <AboutAlluvium />
           <section className={styles.welcome}>
             <div className={styles.shape}></div>
             <div className={styles.content}>

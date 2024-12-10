@@ -9,28 +9,31 @@ const HeroHeading = ({
   updateSub,
   updateSign = false,
   variant,
+  withLink = true,
 }) => {
   return (
     <div className={styles.hero__heading}>
-      <Link href="/">
-        <p className={styles.new__update}>
-          {updateSign && (
-            <span className={styles.span1}>
-              {" "}
-              <Image
-                src="/assets/redesign-2025/Dots.svg"
-                width={10}
-                height={10}
-                alt="dot"
-              />{" "}
-              {updateSub}
-            </span>
-          )}
+      {withLink && (
+        <Link href="/">
+          <p className={styles.new__update}>
+            {updateSign && (
+              <span className={styles.span1}>
+                {" "}
+                <Image
+                  src="/assets/redesign-2025/Dots.svg"
+                  width={10}
+                  height={10}
+                  alt="dot"
+                />{" "}
+                {updateSub}
+              </span>
+            )}
 
-          {update}
-          {updateSign && <span className={styles.span2}>{" > "}</span>}
-        </p>
-      </Link>
+            {update}
+            {updateSign && <span className={styles.span2}>{" > "}</span>}
+          </p>
+        </Link>
+      )}
 
       <h1 className={`${styles.headings} ${styles[`headings--${variant}`]}`}>
         {heading}

@@ -1,0 +1,67 @@
+.about__hero {
+  background: #fcfcfc;
+
+  .sub__head__hero {
+    max-width: 1272px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    margin: auto;
+  }
+
+  .hero__head {
+    padding-top: 6rem;
+    margin-bottom: 6rem;
+    width: 60%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.about__alluvium {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  padding-right: 57px;
+  padding-left: 58px;
+  max-width: 1272px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin: auto;
+
+  .about__us {
+    display: grid;
+    grid-template-columns: auto 58%;
+    grid-gap: 24px;
+    margin-bottom: 6rem;
+
+    p {
+      color: #595959;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .customer__satisfaction {
+    border-top: 1px solid #e0e0e0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4rem;
+
+    h6 {
+      font-size: 4rem;
+      line-height: 4rem;
+      color: #009bc0;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #454545;
+      font-weight: 400;
+      text-align: center;
+    }
+  }
+}
