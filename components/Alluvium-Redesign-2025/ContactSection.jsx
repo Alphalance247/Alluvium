@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useToasts } from "react-toast-notifications";
 import { validateEmail } from "lib/validation";
 import axios from "axios";
+import { Lines } from "./ReuseComponents/Lines";
 
 const contactArr = [
   {
@@ -43,8 +44,6 @@ const contactArr = [
     title: "LinkedIn",
   },
 ];
-
-const rowsData = ["", "", "", "", "", "", "", "", "", ""];
 
 const ContactSection = () => {
   const { addToast } = useToasts();
@@ -134,11 +133,7 @@ const ContactSection = () => {
   return (
     <section className={styles.consultation}>
       <div className={styles.container}>
-        <div className={styles.lineContainer}>
-          {rowsData.map((row, index) => (
-            <div key={index} className={styles.row}></div>
-          ))}
-        </div>
+        <Lines variant="primary" />
         <div className={styles.mainContainer}>
           <div className={styles.section1}>
             <div className={styles.question}>
@@ -160,7 +155,7 @@ const ContactSection = () => {
               <div style={{ paddingRight: "37px" }} className={styles.contact}>
                 <h5>CONTACT DETAILS</h5>
                 <ul>
-                  {contactArr.slice(0, 3).map((contact, index) => (
+                  {contactArr.slice(0, 2).map((contact, index) => (
                     <li key={index}>
                       <div className={styles.iconContainer}>
                         <a href={contact?.url}>
@@ -173,15 +168,36 @@ const ContactSection = () => {
                         </a>
                       </div>
                       <a href={contact?.url}>
-                        <div
-                          dangerouslySetInnerHTML={{ __html: contact?.title }}
-                          className={styles.title}
-                        ></div>
+                        <div className={styles.title}>{contact.title}</div>
                       </a>
                     </li>
                   ))}
                 </ul>
+                <ul style={{ marginTop: "24px" }}>
+                  <li style={{ alignItems: "start" }}>
+                    <div className={styles.iconContainer}>
+                      <a href={"#"}>
+                        <img
+                          src={"/assets/redesign-2025/map.svg"}
+                          alt={"office location"}
+                          width={20}
+                          height={20}
+                        />
+                      </a>
+                    </div>
+                    <a href={"#"}>
+                      <div
+                        style={{ textDecoration: "none" }}
+                        className={styles.title}
+                      >
+                        Connecticut: 680 E Main Street Ste A Stamford, CT 06901
+                        US.
+                      </div>
+                    </a>
+                  </li>
+                </ul>
               </div>
+
               <div className={`${styles.contact} ${styles.social}`}>
                 <h5>SOCIAL MEDIAS</h5>
                 <ul>
@@ -312,8 +328,11 @@ const ContactSection = () => {
               <p>
                 By submitting this form, you are agreeing to receive additional
                 communications from Alluvium. Please review our{" "}
-                <span style={{ color: "#E37915" }}>Privacy Policy</span> for
-                additional information about how Alluvium protects your privacy.
+                <span style={{ color: "#E37915", textDecoration: "underline" }}>
+                  Privacy Policy
+                </span>{" "}
+                for additional information about how Alluvium protects your
+                privacy.
               </p>
 
               <button type="submit" aria-label="submit">
@@ -323,13 +342,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <div className={styles.lineContainer}>
-          {rowsData.map((row, index) => (
-            <div key={index} className={styles.row}>
-              {row.dotted && <span className={styles.dottedLine}></span>}
-            </div>
-          ))}
-        </div>
+        <Lines variant="secondary" />
       </div>
     </section>
   );
