@@ -3,25 +3,16 @@ import Image from "next/image";
 import styles from "../../styles/AlluviumRedesign2025/redesign.module.scss";
 import { badges } from "data";
 import Link from "next/link";
+import { Lines } from "./ReuseComponents/Lines";
 
 const Hero = () => {
   return (
     <section style={{ background: "#fcfcfc" }}>
       <div className={`${styles.hero__section}`}>
-        <div className={styles.diagonal__encap}>
-          <div
-            style={{ borderTop: "1px solid #f0f0f0", marginBottom: "4rem" }}
-          ></div>
-          <div className={styles.diagonal}>
-            <Image
-              src="/assets/redesign-2025/diagonal.png"
-              alt="diagonal"
-              width={100}
-              height={385}
-              // layout="responsive"
-            />
-          </div>
-        </div>
+        {/* <div className={styles.hero__left}>
+          <div className={styles.hero_top_border}></div>
+          <div className={styles.diagonal__encap}></div>
+        </div> */}
 
         <div className={styles.sub__hero}>
           <div className={styles.hero__context}>
@@ -84,35 +75,13 @@ const Hero = () => {
             })}
           </div>
 
-          <div
-            style={{
-              borderRight: "1px solid #f0f0f0",
-              marginBottom: "-0.3rem",
-            }}
-          >
-            <Image
-              src="/assets/redesign-2025/Lines.png"
-              width={1700}
-              height={99}
-              layout="responsive"
-              alt=""
-            />
-          </div>
+          <Lines variant="default" />
         </div>
 
-        <div className={styles.diagonal__encap1}>
-          <div
-            style={{ borderTop: "1px solid #f0f0f0", marginBottom: "4rem" }}
-          ></div>
-          <div className={styles.diagonal}>
-            <Image
-              src="/assets/redesign-2025/diagonal.png"
-              alt="diagonal"
-              width={100}
-              height={385}
-            />
-          </div>
-        </div>
+        {/* <div className={styles.hero__right}>
+          <div className={styles.hero_top_border}></div>
+          <div className={styles.diagonal__encap1}></div>
+        </div> */}
       </div>
     </section>
   );

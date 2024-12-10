@@ -21,7 +21,7 @@ const CaseStudyCard = () => {
               />
               <div className={styles.content}>
                 <p>{item?.title}</p>
-                <h5>{item?.heading}</h5>
+                <h6>{item?.heading}</h6>
                 <ReadMore content="Read More" />
               </div>
             </div>

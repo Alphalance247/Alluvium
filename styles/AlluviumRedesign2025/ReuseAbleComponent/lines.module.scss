@@ -1,0 +1,33 @@
+.lineContainer {
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); // Adjust the number of columns
+  height: 84px; // Adjust height to fit the design
+  overflow: hidden;
+
+  // Variants
+  &--default {
+    border-top: 1px solid #f0f0f0; // Blue border
+  }
+
+  &--primary {
+    border-bottom: 1px solid #f0f0f0; // Blue border
+    border-left: 1px solid #f0f0f0;
+  }
+
+  &--secondary {
+    border-top: 1px solid #f0f0f0; // Blue border
+    border-left: 1px solid #f0f0f0;
+  }
+
+  .row {
+    border-right: 1px solid #f0f0f0; // Vertical lines
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+}
