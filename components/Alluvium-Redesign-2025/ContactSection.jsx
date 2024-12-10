@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useToasts } from "react-toast-notifications";
 import { validateEmail } from "lib/validation";
 import axios from "axios";
+import { Lines } from "./ReuseComponents/Lines";
 
 const contactArr = [
   {
@@ -43,8 +44,6 @@ const contactArr = [
     title: "LinkedIn",
   },
 ];
-
-const rowsData = ["", "", "", "", "", "", "", "", "", "", "", ""];
 
 const ContactSection = () => {
   const { addToast } = useToasts();
@@ -134,11 +133,7 @@ const ContactSection = () => {
   return (
     <section className={styles.consultation}>
       <div className={styles.container}>
-        <div className={styles.lineContainer}>
-          {rowsData.map((row, index) => (
-            <div key={index} className={styles.row}></div>
-          ))}
-        </div>
+        <Lines />
         <div className={styles.mainContainer}>
           <div className={styles.section1}>
             <div className={styles.question}>
@@ -347,13 +342,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <div className={styles.lineContainer}>
-          {rowsData.map((row, index) => (
-            <div key={index} className={styles.row}>
-              {row.dotted && <span className={styles.dottedLine}></span>}
-            </div>
-          ))}
-        </div>
+        <Lines />
       </div>
     </section>
   );
