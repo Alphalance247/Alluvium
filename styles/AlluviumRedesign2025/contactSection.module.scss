@@ -1,14 +1,14 @@
 .consultation {
   background: #fcfcfc;
   .container {
-    max-width: 1275px;
+    max-width: 1272px;
     width: 100%;
     margin: 0 auto;
 
     .mainContainer {
       width: 100%;
       display: flex;
-      border: 1px solid #e0e0e0;
+      border-left: 1px solid #e0e0e0;
 
       @media (max-width: 768px) {
         flex-direction: column;
@@ -49,6 +49,7 @@
             margin-bottom: 0 !important;
             font-family: "Grotesk";
           }
+
           p {
             font-size: 18px;
             line-height: 28px;
@@ -71,22 +72,23 @@
         }
 
         .ourDetail {
-          padding: 48px;
           display: grid;
           grid-template-columns: 1fr 1fr;
           width: 100%;
-          border: 1px solid #f0f0f0;
+          border-top: 1px solid #f0f0f0;
+          border-bottom: 1px solid #f0f0f0;
 
           @media (max-width: 768px) {
             grid-template-columns: 1fr;
           }
 
           .contact {
+            padding: 48px;
             h5 {
               color: #8c8c8c;
               font-size: 12px;
               line-height: 14px;
-              letter-spacing: 1%;
+              letter-spacing: 1px;
               margin-bottom: 24px;
               font-weight: 500;
             }
@@ -185,9 +187,9 @@
       .section2 {
         width: 47%;
         padding: 40px;
-        border-left: 1px;
         background: white;
-        border: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+        border-left: 1px solid #f0f0f0;
 
         @media (max-width: 768px) {
           padding: 24px;

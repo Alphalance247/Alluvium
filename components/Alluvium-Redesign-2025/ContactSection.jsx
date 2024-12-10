@@ -133,7 +133,7 @@ const ContactSection = () => {
   return (
     <section className={styles.consultation}>
       <div className={styles.container}>
-        <Lines />
+        <Lines variant="primary" />
         <div className={styles.mainContainer}>
           <div className={styles.section1}>
             <div className={styles.question}>
@@ -342,7 +342,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <Lines />
+        <Lines variant="secondary" />
       </div>
     </section>
   );
