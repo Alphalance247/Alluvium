@@ -14,6 +14,7 @@ import Hero from "components/Alluvium-Redesign-2025/AboutUs/hero";
 import AboutAlluvium from "components/Alluvium-Redesign-2025/AboutUs/aboutAlluvium";
 import OurMission from "components/Alluvium-Redesign-2025/AboutUs/ourMission";
 import HowItStarted from "components/Alluvium-Redesign-2025/AboutUs/howItStarted";
+import CoreValueAbout from "components/Alluvium-Redesign-2025/AboutUs/coreValueAbout";
 
 export default function AboutUs() {
   const imagePath = "/assets/about/";
@@ -39,6 +40,7 @@ export default function AboutUs() {
           <AboutAlluvium />
           <OurMission />
           <HowItStarted />
+          <CoreValueAbout />
           {/* <section className={styles.welcome}>
             <div className={styles.shape}></div>
             <div className={styles.content}>

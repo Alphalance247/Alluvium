@@ -8,9 +8,10 @@ const Hero = () => {
     <section className={styles.about__hero}>
       <div className={styles.sub__head__hero}>
         <div className={styles.hero__head}>
+          <p className={styles.new__update}>The Alluvium Journey</p>
           <HeroHeading
-            update="The Alluvium Journey"
             variant="primary"
+            withLink={false}
             heading="Redefining Collaboration and Efficiency Together"
             subhead="At Alluvium, we help teams thrive with powerful Atlassian solutions. We’re here to make collaboration seamless and processes more efficient."
           />

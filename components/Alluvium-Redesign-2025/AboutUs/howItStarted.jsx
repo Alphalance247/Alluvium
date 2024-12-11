@@ -9,11 +9,16 @@ const HowItStarted = () => {
     "After the success of that programme, we went to repeat a similar delivery for one of UK's biggest telecom providers. We have since delivered some of the largest Atlassian tools Consolidation and accompanying Administration, Engineering, Integration, and long-term Support of the Atlassian products for all ways of working.",
     "We routinely put back into the customers' pockets, 15 – 45% of their annual license costs, by consolidating and scaling their use of Jira, Confluence, Bitbucket and other Atlassian products, from multiple Atlassian and third-party applications.",
   ];
+
   return (
     <section className={styles.our__story}>
       <div className={styles.story}>
-        <div>
-          <HeroHeading update="OUR STORY" heading="How it All started" />
+        <div className={styles.story__heading}>
+          <HeroHeading
+            update="OUR STORY"
+            heading="How it All started"
+            variant="secondary"
+          />
         </div>
 
         <div>

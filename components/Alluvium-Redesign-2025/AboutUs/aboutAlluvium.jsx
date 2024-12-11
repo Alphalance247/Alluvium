@@ -27,6 +27,7 @@ const AboutAlluvium = () => {
       feed: "Migration Experts",
     },
   ];
+
   return (
     <section className={styles.about__alluvium}>
       <div className={styles.about__us}>

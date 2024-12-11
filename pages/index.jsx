@@ -23,6 +23,7 @@ import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSoluti
 import Impact from "components/Alluvium-Redesign-2025/ourImpact";
 import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
 import Footer from "components/Alluvium-Redesign-2025/footer";
+import { CoreValue } from "components/about-us/CoreValues";
 const Home = () => {
   return (
     <>
