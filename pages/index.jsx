@@ -42,7 +42,7 @@ const Home = () => {
         <Hero />
         <Expertise />
         <AtlassianSolution />
-        <Impact />
+        {/* <Impact /> */}
         <MarketPlacePlugin />
 
         <div className="container-fluid p-0 m-0">
