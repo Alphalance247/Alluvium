@@ -12,6 +12,8 @@ import Layout from "components/layout";
 import { milestonesData } from "data";
 import Hero from "components/Alluvium-Redesign-2025/AboutUs/hero";
 import AboutAlluvium from "components/Alluvium-Redesign-2025/AboutUs/aboutAlluvium";
+import OurMission from "components/Alluvium-Redesign-2025/AboutUs/ourMission";
+import HowItStarted from "components/Alluvium-Redesign-2025/AboutUs/howItStarted";
 
 export default function AboutUs() {
   const imagePath = "/assets/about/";
@@ -35,7 +37,9 @@ export default function AboutUs() {
         <main>
           <Hero />
           <AboutAlluvium />
-          <section className={styles.welcome}>
+          <OurMission />
+          <HowItStarted />
+          {/* <section className={styles.welcome}>
             <div className={styles.shape}></div>
             <div className={styles.content}>
               <div className="container">
@@ -46,9 +50,9 @@ export default function AboutUs() {
                 </p>
               </div>
             </div>
-          </section>
+          </section> */}
 
-          <section className={styles.about}>
+          {/* <section className={styles.about}>
             <div className="container">
               <div className="row gap-5 justify-content-between align-items-center">
                 <div className="col-md-6">
@@ -106,9 +110,9 @@ export default function AboutUs() {
                 </div>
               </div>
             </div>
-          </section>
+          </section> */}
 
-          <section className={styles.story}>
+          {/* <section className={styles.story}>
             <div className={`${styles.content}  container`}>
               <div className={` text-center ${styles.heading}`}>
                 <h2>Our Story</h2>
@@ -209,11 +213,11 @@ export default function AboutUs() {
 
           <Services />
 
-          <WhyAlluvium />
+          <WhyAlluvium /> */}
 
           {/* <OurPartners /> */}
 
-          <section className={styles.values}>
+          {/* <section className={styles.values}>
             <div className="container">
               <h2 className={styles.h2}>Our Core Values</h2>
               <p className={styles.p}>
@@ -282,7 +286,7 @@ export default function AboutUs() {
               </a>
             </div>
             <div className={styles.contentRight}></div>
-          </section>
+          </section> */}
 
           {/* <section>
             <ConsultationForm />
