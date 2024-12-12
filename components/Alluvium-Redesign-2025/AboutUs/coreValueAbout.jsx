@@ -11,6 +11,7 @@ const CoreValueAbout = () => {
           <HeroHeading
             withLink={false}
             heading="Our Core Values"
+            variant="secondary"
             subhead="At Alluvium, our values of Ownership, Leadership, and Excellence drive us to empower businesses with the tools to succeed in the digital world."
           />
         </div>

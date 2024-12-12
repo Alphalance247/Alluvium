@@ -10,11 +10,6 @@ const Hero = () => {
   return (
     <section style={{ background: "#fcfcfc" }}>
       <div className={`${styles.hero__section}`}>
-        {/* <div className={styles.hero__left}>
-          <div className={styles.hero_top_border}></div>
-          <div className={styles.diagonal__encap}></div>
-        </div> */}
-
         <div className={styles.sub__hero}>
           <div className={styles.hero__context}>
             <div className={styles.content}>
@@ -63,11 +58,6 @@ const Hero = () => {
 
           <Lines variant="default" />
         </div>
-
-        {/* <div className={styles.hero__right}>
-          <div className={styles.hero_top_border}></div>
-          <div className={styles.diagonal__encap1}></div>
-        </div> */}
       </div>
     </section>
   );
