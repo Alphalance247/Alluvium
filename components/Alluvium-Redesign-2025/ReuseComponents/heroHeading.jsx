@@ -7,6 +7,7 @@ const HeroHeading = ({
   heading,
   subhead,
   updateSub,
+  updateVariant,
   updateSign = false,
   variant,
   withLink = true,
@@ -15,7 +16,11 @@ const HeroHeading = ({
     <div className={styles.hero__heading}>
       {withLink && (
         <Link href="/">
-          <p className={styles.new__update}>
+          <p
+            className={`${styles.new__update} ${
+              updateVariant ? styles[`new__update--${updateVariant}`] : ""
+            }`}
+          >
             {updateSign && (
               <span className={styles.span1}>
                 {" "}

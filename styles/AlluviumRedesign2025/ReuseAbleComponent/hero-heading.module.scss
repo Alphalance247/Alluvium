@@ -11,6 +11,10 @@
     padding: 4px 8px 4px 4px;
     cursor: pointer;
 
+    &--only_update {
+      border-radius: 4px;
+    }
+
     @media screen and (max-width: 992px) {
       font-size: 12px;
       line-height: 22px;
