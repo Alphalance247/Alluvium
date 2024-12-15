@@ -2,7 +2,7 @@
   background: #ffffff;
 
   main {
-    max-width: 1277px;
+    max-width: 1272px;
     width: 100%;
     margin: 0 auto;
     border-right: 1px solid #f0f0f0;
@@ -18,7 +18,7 @@
       .headingss {
         font-size: 48px;
         line-height: 60px;
-        letter-spacing: -2%;
+        letter-spacing: -2px !important;
         font-weight: 700;
         color: #141414;
         font-family: "Grotesk";
@@ -36,10 +36,14 @@
         line-height: 28px;
         color: #595959;
         margin-bottom: 0px !important;
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
 
         @media (max-width: 768px) {
           font-size: 16px;
           line-height: 24px;
+          width: 90%;
         }
       }
     }

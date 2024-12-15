@@ -41,7 +41,7 @@ const HeroSection = () => {
             // layout="responsive"
           />
         </div>
-        <Lines />
+        <Lines variant={"secondary"} />
       </main>
     </section>
   );
