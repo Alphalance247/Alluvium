@@ -16,8 +16,8 @@ const contactArr = [
   {
     icon: "/assets/redesign-2025/phone.svg",
     alt: "phone number",
-    url: "tel:+442035762028",
-    title: "+442035762028",
+    url: "tel:+12073607252",
+    title: "+1 (207) 360-7252",
   },
   {
     icon: "/assets/redesign-2025/map.svg",
