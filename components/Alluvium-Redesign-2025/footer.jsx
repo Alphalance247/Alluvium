@@ -37,29 +37,25 @@ const Footer = () => {
     },
     {
       heading: "Company",
-      text1: "About us",
-      text2: "Marketplace Plugins",
-      text3: "Cloud Connect",
-      text4: "Team ‘24",
-      text5: "Booth 53",
-      text6: "Contact Us",
-      url1: "/about",
-      url2: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
-      url3: "/cloud-connect",
-      url4: "/event/team24",
-      url5: "/booth53#hero",
-      url6: "/contact-us",
+      text1: "Marketplace Plugins",
+      text2: "Cloud Connect",
+      text3: "Team ‘24",
+      text4: "Booth 53",
+      text5: "Contact Us",
+      url1: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
+      url2: "/cloud-connect",
+      url3: "/event/team24",
+      url4: "/booth53#hero",
+      url5: "/contact-us",
     },
     {
       heading: "Resources",
-      text1: "Blog",
-      text2: "Migration Case Study",
-      text3: "ITSM/JSM Case study",
-      text4: "Events",
-      url1: " /blogs",
-      url2: " /atlassian-services/cloud-migration",
-      url3: " /atlassian-services/itsm-services",
-      url4: "/event/event-blog",
+      text1: "Migration Case Study",
+      text2: "ITSM/JSM Case study",
+      text3: "Events",
+      url1: "/atlassian-services/cloud-migration",
+      url2: "/atlassian-services/itsm-services",
+      url3: "/event/event-blog",
     },
   ];
 
@@ -90,7 +86,7 @@ const Footer = () => {
     },
     {
       img: "/assets/redesign-2025/chamberbloog.png",
-      content: "Alluvium joins the Stanford Chamber...",
+      content: "Alluvium joins the Stamford Chamber...",
       // fullhighlight: "Alluvium joins the Stanford Chambe",
       url: "#",
     },
@@ -184,12 +180,6 @@ const Footer = () => {
                         {item?.text5 && item?.url5 && (
                           <li>
                             <Link href={item?.url5}>{item?.text5}</Link>
-                          </li>
-                        )}
-
-                        {item?.text6 && item?.url6 && (
-                          <li>
-                            <Link href={item?.url6}>{item?.text6}</Link>
                           </li>
                         )}
                       </ul>

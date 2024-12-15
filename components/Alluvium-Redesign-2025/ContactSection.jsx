@@ -16,8 +16,8 @@ const contactArr = [
   {
     icon: "/assets/redesign-2025/phone.svg",
     alt: "phone number",
-    url: "tel:+442035762028",
-    title: "+442035762028",
+    url: "tel:+12073607252",
+    title: "+1 (207) 360-7252",
   },
   {
     icon: "/assets/redesign-2025/map.svg",
@@ -115,6 +115,15 @@ const ContactSection = () => {
         addToast("Your inquiry has been submitted successfully.", {
           appearance: "success",
         });
+        if (typeof window !== "undefined" && window.gtag) {
+          window.gtag({
+            on: "visible",
+            vars: {
+              event_name: "conversion",
+              send_to: ["AW-16717401169/JfbzCLmEovYZENGYvaM-"],
+            },
+          });
+        }
       } else {
         addToast("There was an issue submitting your inquiry. try again.", {
           appearance: "info",
