@@ -14,16 +14,22 @@ const HowItStarted = () => {
     <section className={styles.our__story}>
       <div className={styles.story}>
         <div className={styles.story__heading}>
+          <p className={styles.new__update}>OUR STORY</p>
           <HeroHeading
-            update="OUR STORY"
             heading="How it All started"
+            withLink={false}
             variant="secondary"
           />
         </div>
 
         <div>
           {paragraph.map((items, i) => {
-            return <p key={i}> {items}</p>;
+            return (
+              <p key={i} className={styles.story__update}>
+                {" "}
+                {items}
+              </p>
+            );
           })}
         </div>
       </div>

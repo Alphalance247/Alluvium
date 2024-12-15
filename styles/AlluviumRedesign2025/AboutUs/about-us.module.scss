@@ -1,11 +1,12 @@
 .about__hero {
   background: #fcfcfc;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
 
   .sub__head__hero {
     max-width: 1272px;
     border-left: 1px solid #e0e0e0;
     border-right: 1px solid #e0e0e0;
-    border-bottom: 1px solid #e0e0e0;
     margin: auto;
   }
 
@@ -30,35 +31,35 @@
       width: 100%;
       text-align: left;
       padding-left: 18px;
-      //   padding-right: 18px;
     }
+  }
+}
 
-    .new__update {
-      font-size: 14px;
-      font-weight: 500;
-      color: #595959;
-      line-height: 20px;
-      border: 1px solid #e37915;
-      background: #fcf2e8;
-      border-radius: 10px;
-      width: fit-content;
-      padding: 4px 8px 4px 4px;
-      margin-right: auto;
-      margin-left: auto;
+.new__update {
+  font-size: 14px;
+  font-weight: 500;
+  color: #595959;
+  line-height: 20px;
+  border: 1px solid #e37915;
+  background: #fcf2e8;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 4px 8px 4px 4px;
+  margin-right: auto;
+  margin-left: auto;
+  text-transform: uppercase;
 
-      @media screen and (max-width: 992px) {
-        font-size: 12px;
-        line-height: 22px;
-      }
+  @media screen and (max-width: 992px) {
+    font-size: 12px;
+    line-height: 22px;
+  }
 
-      @media screen and (max-width: 640px) {
-        font-size: 8px;
-        line-height: 20px;
-        text-align: left;
-        margin-right: 0px;
-        margin-left: 0px;
-      }
-    }
+  @media screen and (max-width: 640px) {
+    font-size: 8px;
+    line-height: 20px;
+    text-align: left;
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }
 
@@ -70,7 +71,6 @@
   max-width: 1272px;
   border-left: 1px solid #e0e0e0;
   border-right: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
   margin: auto;
 
   @media screen and (max-width: 992px) {
@@ -104,8 +104,8 @@
   }
 
   .customer__satisfaction {
-    border-top: 1px solid #e0e0e0;
     display: grid;
+    border-top: 1px solid #e0e0e0;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4rem;
 
@@ -247,9 +247,15 @@
       text-align: center;
       width: fit-content;
       margin: auto;
+
+      @media screen and (max-width: 640px) {
+        text-align: left;
+        width: 100%;
+        padding-left: 18px;
+      }
     }
 
-    p {
+    .story__update {
       color: #595959;
       font-size: 18px;
       line-height: 28px;
