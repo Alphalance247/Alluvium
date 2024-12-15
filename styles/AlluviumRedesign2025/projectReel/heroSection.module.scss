@@ -1,0 +1,45 @@
+.mainContainer {
+  background: #fcfcfc;
+  width: 100%;
+  box-shadow: 0px -1px 2px 0px rgba(16, 24, 40, 0.04);
+
+  main {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+
+    .heroContainer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 7.3%;
+      padding-left: 26px;
+      border-left: 1px solid #f0f0f0; // Blue border
+      border-top: 1px solid #f0f0f0;
+      border-right: 1px solid #f0f0f0;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        padding-left: 0px;
+      }
+
+      .containerBg {
+        width: 46%;
+
+        @media (max-width: 768px) {
+          width: 100%;
+          padding: 18px;
+        }
+      }
+
+      .btns {
+        display: flex;
+        gap: 1rem;
+
+        @media screen and (max-width: 1024px) {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+.hero__heading {
+  .new__update {
+    font-size: 14px;
+    font-weight: 500;
+    color: #595959;
+    line-height: 20px;
+    border: 1px solid #e37915;
+    background: #fcf2e8;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 4px 8px 4px 4px;
+    cursor: pointer;
+
+    &--only_update {
+      border-radius: 4px;
+    }
+
+    @media screen and (max-width: 992px) {
+      font-size: 12px;
+      line-height: 22px;
+    }
+
+    @media screen and (max-width: 640px) {
+      font-size: 8px;
+      line-height: 20px;
+    }
+
+    .span1 {
+      color: #e37915;
+      background: white;
+      padding: 3px 10px;
+      border-radius: 6px;
+      border: 1px solid #e37915;
+      margin-right: 12px;
+
+      @media screen and (max-width: 640px) {
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+
+    .span2 {
+      color: #e37915;
+      margin-left: 6px;
+    }
+  }
+
+  .headings {
+    color: #141414;
+    letter-spacing: -2px;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-family: "Grotesk";
+    // variant
+    // primary
+    &--primary {
+      font-size: 60px;
+      line-height: 72px;
+
+      @media screen and (max-width: 1035px) {
+        font-size: 50px;
+        line-height: 62px;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 40px;
+        line-height: 3rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 2.3rem;
+        line-height: 2.7rem;
+      }
+    }
+
+    &--secondary {
+      font-size: 3rem;
+      line-height: 60px;
+
+      @media screen and (max-width: 1035px) {
+        font-size: 38px;
+        line-height: 4rem;
+      }
+
+      @media screen and (max-width: 992px) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+  }
+
+  .paragraph__transform {
+    font-weight: 400;
+    color: #595959;
+    margin-bottom: 48px;
+
+    ///pvariant
+    &--primary {
+      font-size: 20px;
+      line-height: 30px;
+
+      @media screen and (max-width: 1035px) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    ///////secondary
+    &--secondary {
+      font-size: 18px;
+      line-height: 28px;
+
+      @media screen and (max-width: 1035px) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}
