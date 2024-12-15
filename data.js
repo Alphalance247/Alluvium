@@ -3092,3 +3092,24 @@ export const badges = [
     alt: "london chamber of commerce",
   },
 ];
+
+export const aboutServices = [
+  {
+    img: "/assets/redesign-2025//about/leader.svg",
+    heading: "Leadership",
+    subHeading:
+      "Leadership is about driving innovation and continuously improving our services and products. We believe in staying ahead of the curve and exploring new ways to enhance our offerings and deliver greater value to our clients.",
+  },
+  {
+    img: "/assets/redesign-2025/about/ownership.svg",
+    heading: "Excellence",
+    subHeading:
+      "Excellence is about delivering top-quality results and exceeding our clients’ expectations. We are committed to delivering the best possible outcomes and consistently exceeding our clients’ goals and objectives.",
+  },
+  {
+    img: "/assets/redesign-2025/about/excellence.svg",
+    heading: "Ownership",
+    subHeading:
+      "Ownership is about taking personal responsibility for our work and delivering results. Our team is encouraged to bring their unique skills and perspectives to each project, and we strive to create a culture of collaboration and mutual support.",
+  },
+];
