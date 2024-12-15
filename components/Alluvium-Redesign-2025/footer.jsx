@@ -86,7 +86,7 @@ const Footer = () => {
     },
     {
       img: "/assets/redesign-2025/chamberbloog.png",
-      content: "Alluvium joins the Stanford Chamber...",
+      content: "Alluvium joins the Stamford Chamber...",
       // fullhighlight: "Alluvium joins the Stanford Chambe",
       url: "#",
     },
@@ -180,12 +180,6 @@ const Footer = () => {
                         {item?.text5 && item?.url5 && (
                           <li>
                             <Link href={item?.url5}>{item?.text5}</Link>
-                          </li>
-                        )}
-
-                        {item?.text6 && item?.url6 && (
-                          <li>
-                            <Link href={item?.url6}>{item?.text6}</Link>
                           </li>
                         )}
                       </ul>
