@@ -210,23 +210,31 @@ const Footer = () => {
                         onMouseEnter={() => handleMouseEnter(i)}
                         onMouseLeave={handleMouseLeave}
                       >
-                        <Image
-                          src={item?.img}
-                          width={134}
-                          height={120}
-                          alt={item?.content}
-                          style={{
-                            borderTopLeftRadius: "1rem",
-                            borderBottomLeftRadius: "1rem",
-                          }}
-                        />
-                        <div className={styles.content}>
-                          <p>{item?.content}</p>
+                        <div>
+                          <Image
+                            src={item?.img}
+                            width={134}
+                            height={120}
+                            alt={item?.content}
+                            style={{
+                              borderTopLeftRadius: "1rem",
+                              borderBottomLeftRadius: "1rem",
+                            }}
+                          />
+                        </div>
+                        <div
+                          className={`${
+                            showreadmore === i
+                              ? styles.contentHover
+                              : styles.content
+                          }`}
+                        >
+                          <p className={styles.readmore}>{item?.content}</p>
 
                           {showreadmore === i && (
-                            <div data-aos-delay="300" data-aos="fade-up">
-                              <ReadMore content="Read More" />
-                            </div>
+                            // <div data-aos-delay="300" data-aos="fade-up">
+                            <ReadMore content="Read More" />
+                            // </div>
                           )}
                         </div>
                       </div>

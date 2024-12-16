@@ -13,11 +13,14 @@ const HeroSection = () => {
         <div className={styles.heroContainer}>
           <div className={styles.containerBg}>
             <HeroHeading
-              update="OUR PROJECT REELS"
               heading="Agile Transformation with Atlassian Expertise"
               subhead="We help organizations streamline processes, ensure compliance, and migrate seamlessly to Atlassian tools. From Agile adoption to cloud migrations, our solutions drive efficiency and innovation."
               variant="primary"
               updateVariant="only_update"
+              withLink={true}
+              showParagraph={true}
+              subsec={"OUR PROJECT REELS"}
+              headSection={""}
             />
             <div>
               <div className={styles.btns}>
