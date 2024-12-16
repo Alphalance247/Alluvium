@@ -16,15 +16,15 @@ const Hero = () => {
             subhead="At Alluvium, we help teams thrive with powerful Atlassian solutions. We’re here to make collaboration seamless and processes more efficient."
           />
         </div>
-        <div>
+        <div style={{ marginBottom: "-.5rem" }}>
           <Image
-            src="/assets/redesign-2025/worldmap.png"
+            src="/assets/redesign-2025/about/Map.png"
             width={1271}
             height={602}
             alt="worldmap"
           />
         </div>
-        <Lines />
+        <Lines variant={"default"} />
       </div>
     </section>
   );
