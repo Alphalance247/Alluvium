@@ -35,34 +35,6 @@
   }
 }
 
-.new__update {
-  font-size: 14px;
-  font-weight: 500;
-  color: #595959;
-  line-height: 20px;
-  border: 1px solid #e37915;
-  background: #fcf2e8;
-  border-radius: 10px;
-  width: fit-content;
-  padding: 4px 8px 4px 4px;
-  margin-right: auto;
-  margin-left: auto;
-  text-transform: uppercase;
-
-  @media screen and (max-width: 992px) {
-    font-size: 12px;
-    line-height: 22px;
-  }
-
-  @media screen and (max-width: 640px) {
-    font-size: 8px;
-    line-height: 20px;
-    text-align: left;
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-}
-
 .about__alluvium {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -123,6 +95,7 @@
       color: #009bc0;
       margin-bottom: 1rem;
       text-align: center;
+      font-family: "Grotesk";
 
       @media screen and (max-width: 992px) {
         font-size: 2.5rem;

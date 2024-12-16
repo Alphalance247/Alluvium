@@ -84,7 +84,9 @@ export default function Navigation({ theme }) {
                     }
                   >
                     <ul>
-                      <li>{/* <Link href="/about">About us</Link> */}</li>
+                      <li>
+                        <Link href="/about">About us</Link>
+                      </li>
                       <li>
                         <a
                           href="http://university.alluvium.net"
@@ -97,7 +99,7 @@ export default function Navigation({ theme }) {
                         <Link href="/showing-interest">Show Interest (AU)</Link>
                       </li>
                       <li>
-                        <Link href="/our-project">Project Reel</Link>
+                        <Link href="/project-reel">Project Reel</Link>
                       </li>
                       <li>
                         <Link href="/support/contact">Contact Us</Link>
@@ -106,6 +108,10 @@ export default function Navigation({ theme }) {
                     </ul>
                   </div>
                 </div>
+              </li>
+
+              <li>
+                <Link href="/blogs">About Us</Link>
               </li>
               <li>
                 <Link href="/atlassian-services">Services</Link>
@@ -119,12 +125,7 @@ export default function Navigation({ theme }) {
                   Our Products
                 </a>
               </li>
-              <li>
-                {/* <Link href="/blogs">Blog</Link> */}
-                {/* <a href="/blogs" rel="Alluvium" target="_blank">
-                  Blogs
-                </a> */}
-              </li>
+
               <li>{/* <Link href="/case-studies">Case Studies</Link> */}</li>
               {/* <li>
                             <div>
@@ -201,7 +202,7 @@ export default function Navigation({ theme }) {
               <Link href="/showing-interest">+ Show Interest (AU)</Link>
             </li>
             <li>
-              <Link href="/our-project">+ Project Reel</Link>
+              <Link href="/project-reel">+ Project Reel</Link>
             </li>
             {/* <li><Link href="/support/contact">Contact Us</Link></li> */}
             <li>

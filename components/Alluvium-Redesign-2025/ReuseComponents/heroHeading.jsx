@@ -11,34 +11,46 @@ const HeroHeading = ({
   updateSign = false,
   variant,
   withLink = true,
+  subsec,
+  showParagraph = true,
+  headSection = "primary",
 }) => {
   return (
     <div className={styles.hero__heading}>
-      {withLink && (
-        <Link href="/">
+      {withLink &&
+        (showParagraph ? (
           <p
-            className={`${styles.new__update} ${
-              updateVariant ? styles[`new__update--${updateVariant}`] : ""
+            className={`${styles.sub__sec} ${
+              styles[`sub__sec--${headSection}`]
             }`}
           >
-            {updateSign && (
-              <span className={styles.span1}>
-                {" "}
-                <Image
-                  src="/assets/redesign-2025/Dots.svg"
-                  width={10}
-                  height={10}
-                  alt="dot"
-                />{" "}
-                {updateSub}
-              </span>
-            )}
-
-            {update}
-            {updateSign && <span className={styles.span2}>{" > "}</span>}
+            {subsec}
           </p>
-        </Link>
-      )}
+        ) : (
+          <Link href="/">
+            <p
+              className={`${styles.new__update} ${
+                updateVariant ? styles[`new__update--${updateVariant}`] : ""
+              }`}
+            >
+              {updateSign && (
+                <span className={styles.span1}>
+                  {" "}
+                  <Image
+                    src="/assets/redesign-2025/Dots.svg"
+                    width={10}
+                    height={10}
+                    alt="dot"
+                  />{" "}
+                  {updateSub}
+                </span>
+              )}
+
+              {update}
+              {updateSign && <span className={styles.span2}>{" > "}</span>}
+            </p>
+          </Link>
+        ))}
 
       <h1 className={`${styles.headings} ${styles[`headings--${variant}`]}`}>
         {heading}
