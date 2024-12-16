@@ -109,6 +109,10 @@ export default function Navigation({ theme }) {
                   </div>
                 </div>
               </li>
+
+              <li>
+                <Link href="/blogs">About Us</Link>
+              </li>
               <li>
                 <Link href="/atlassian-services">Services</Link>
               </li>
@@ -121,12 +125,7 @@ export default function Navigation({ theme }) {
                   Our Products
                 </a>
               </li>
-              <li>
-                {/* <Link href="/blogs">Blog</Link> */}
-                {/* <a href="/blogs" rel="Alluvium" target="_blank">
-                  Blogs
-                </a> */}
-              </li>
+
               <li>{/* <Link href="/case-studies">Case Studies</Link> */}</li>
               {/* <li>
                             <div>
