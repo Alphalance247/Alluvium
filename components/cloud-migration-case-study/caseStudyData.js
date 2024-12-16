@@ -258,6 +258,7 @@ const CaseStudyData = [
       },
     ],
   },
+
   {
     title: "california-DHCS-saves-millions-with-atlassian-cloud-modernization",
     aboutAlluvium: "Alluvium are Trusted Solution Partner of Atlassian",
@@ -354,6 +355,7 @@ const CaseStudyData = [
       },
     ],
   },
+
   {
     title:
       "how-sun-life-unlocked-a-brighter-future-by-migrating-to-atlassian-cloud",

@@ -84,7 +84,9 @@ export default function Navigation({ theme }) {
                     }
                   >
                     <ul>
-                      <li>{/* <Link href="/about">About us</Link> */}</li>
+                      <li>
+                        <Link href="/about">About us</Link>
+                      </li>
                       <li>
                         <a
                           href="http://university.alluvium.net"
@@ -97,7 +99,7 @@ export default function Navigation({ theme }) {
                         <Link href="/showing-interest">Show Interest (AU)</Link>
                       </li>
                       <li>
-                        <Link href="/our-project">Project Reel</Link>
+                        <Link href="/project-reel">Project Reel</Link>
                       </li>
                       <li>
                         <Link href="/support/contact">Contact Us</Link>
@@ -201,7 +203,7 @@ export default function Navigation({ theme }) {
               <Link href="/showing-interest">+ Show Interest (AU)</Link>
             </li>
             <li>
-              <Link href="/our-project">+ Project Reel</Link>
+              <Link href="/project-reel">+ Project Reel</Link>
             </li>
             {/* <li><Link href="/support/contact">Contact Us</Link></li> */}
             <li>

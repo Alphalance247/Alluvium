@@ -20,6 +20,8 @@ const Hero = () => {
                 heading="Empower Your Teams with Expert Atlassian Solutions"
                 subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
                 variant="primary"
+                withLink={true}
+                showParagraph={false}
               />
               <div className={styles.btns}>
                 <Link href="/support/contact#schedule-a-call">

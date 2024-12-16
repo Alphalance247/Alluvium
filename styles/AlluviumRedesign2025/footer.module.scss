@@ -209,11 +209,34 @@
           background: #262626;
           border-radius: 1rem;
           cursor: pointer;
-          height: 145px;
+          height: 121px;
+
+          .contentHover {
+            padding: 12px 24px;
+
+            .readmore {
+              font-size: 1rem;
+              line-height: 1.5rem;
+              letter-spacing: -2%;
+              color: #f0f0f0;
+              margin-bottom: 5px;
+
+              @media screen and (max-width: 992px) {
+                font-size: 14px;
+                line-height: 1.2rem;
+              }
+
+              @media screen and (max-width: 640px) {
+                font-size: 13px;
+                line-height: 1.2rem;
+              }
+            }
+          }
 
           .content {
-            padding: 36px 25px;
-            p {
+            padding: 36px 24px;
+
+            .readmore {
               font-size: 1rem;
               line-height: 1.5rem;
               letter-spacing: -2%;

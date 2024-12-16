@@ -14,11 +14,11 @@ const HowItStarted = () => {
     <section className={styles.our__story}>
       <div className={styles.story}>
         <div className={styles.story__heading}>
-          <p className={styles.new__update}>OUR STORY</p>
           <HeroHeading
             heading="How it All started"
-            withLink={false}
+            withLink={true}
             variant="secondary"
+            subsec={"OUR STORY"}
           />
         </div>
 
