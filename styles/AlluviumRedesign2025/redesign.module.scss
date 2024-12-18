@@ -87,7 +87,7 @@
       }
 
       .content {
-        width: 55%;
+        width: 50%;
         padding-top: 5rem;
         padding-bottom: 6rem;
         padding-left: 28px;
@@ -458,7 +458,7 @@
 .services__heading {
   // sizes and alignment
   &--default {
-    width: 50%;
+    width: 40%;
     text-align: left;
 
     @media screen and (max-width: 992px) {
@@ -515,8 +515,8 @@
   }
 
   h2 {
-    font-size: 3rem;
-    line-height: 60px;
+    font-size: 2rem;
+    line-height: 2.5rem;
     color: #141414;
     font-weight: 700;
     letter-spacing: -2px;
@@ -525,13 +525,13 @@
     font-family: "Grotesk";
 
     @media screen and (max-width: 992px) {
-      font-size: 2rem;
-      line-height: 40px;
+      font-size: 1.7rem;
+      line-height: 2rem;
     }
 
     @media screen and (max-width: 768px) {
-      font-size: 1.5rem;
-      line-height: 2rem;
+      font-size: 1.3rem;
+      line-height: 1.5rem;
       letter-spacing: -1px;
     }
   }
