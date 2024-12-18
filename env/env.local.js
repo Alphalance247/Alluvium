@@ -4,4 +4,5 @@ export const environment = {
   TicketUrl: "cloud-connect/ticket-form",
   ExhibitionUrl: "cloud-connect/exhibition-form",
   SponsorUrl: "cloud-connect/sponsorship-form",
+  casestudyUrl: "email/followup/",
 };
