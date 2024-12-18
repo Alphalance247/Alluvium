@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/reelSection.module.scss";
+import SubSectionCard from "./subSectionCard";
 
 const ReelSection = ({
   title,
@@ -41,15 +42,7 @@ const ReelSection = ({
           </div>
         </div>
 
-        <div className={customStyles.gridContainer || styles.gridContainer}>
-          {gridArray.map((item, i) => (
-            <div key={i} className={styles.gridItem}>
-              <div className={styles.iconContainer}>{item.icon}</div>
-              <h5 className={styles.heading5}>{item.title}</h5>
-              <p>{item.paragraph}</p>
-            </div>
-          ))}
-        </div>
+        <SubSectionCard gridArray={gridArray} />
 
         <div className={styles.accomplishments}>
           {accomplishments.map((accomplishment, i) => (

@@ -82,11 +82,15 @@
       margin-left: 6px;
     }
   }
-
+  .headingWithParagrapgh {
+    margin-bottom: 1.5rem;
+  }
+  .headingWithNoParagrapgh {
+    margin-bottom: 3rem;
+  }
   .headings {
     color: #141414;
     letter-spacing: -2px;
-    margin-bottom: 1.5rem;
     font-weight: 700;
     font-family: "Grotesk";
     // variant

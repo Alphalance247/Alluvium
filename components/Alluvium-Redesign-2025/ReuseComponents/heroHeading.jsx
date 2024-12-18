@@ -14,6 +14,7 @@ const HeroHeading = ({
   subsec,
   showParagraph = true,
   headSection = "primary",
+  withParagragh = true,
 }) => {
   return (
     <div className={styles.hero__heading}>
@@ -52,16 +53,24 @@ const HeroHeading = ({
           </Link>
         ))}
 
-      <h1 className={`${styles.headings} ${styles[`headings--${variant}`]}`}>
-        {heading}
-      </h1>
-      <p
-        className={`${styles.paragraph__transform} ${
-          styles[`paragraph__transform--${variant}`]
+      <h1
+        className={`${styles.headings} ${styles[`headings--${variant}`]} ${
+          withParagragh
+            ? styles.headingWithParagrapgh
+            : styles.headingWithNoParagrapgh
         }`}
       >
-        {subhead}
-      </p>
+        {heading}
+      </h1>
+      {withParagragh && (
+        <p
+          className={`${styles.paragraph__transform} ${
+            styles[`paragraph__transform--${variant}`]
+          }`}
+        >
+          {subhead}
+        </p>
+      )}
     </div>
   );
 };

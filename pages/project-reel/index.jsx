@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "components/layout";
 import HeroSection from "components/Alluvium-Redesign-2025/projectReel/Hero";
-import SectionOne from "components/Alluvium-Redesign-2025/projectReel/SectionOne";
 import ReelSection from "components/Alluvium-Redesign-2025/ReuseComponents/ReelSection";
 import ChartIcon from "components/Alluvium-Redesign-2025/icons/ChartIcon";
 import ReportIcon from "components/Alluvium-Redesign-2025/icons/ReportIcon";
@@ -11,6 +10,9 @@ import Settings from "components/Alluvium-Redesign-2025/icons/Settings";
 import IntegrationIcon from "components/Alluvium-Redesign-2025/icons/IntegrationIcon";
 import MarkIcon from "components/Alluvium-Redesign-2025/icons/MarkIcon";
 import LegacyIcon from "components/Alluvium-Redesign-2025/icons/LegacyIcon";
+import Hero from "components/Alluvium-Redesign-2025/case-studies/Hero";
+import ContentSection from "components/Alluvium-Redesign-2025/case-studies/contentSection";
+import CaseStudyCard from "components/Alluvium-Redesign-2025/caseStudyCard";
 
 const gridArray = [
   {
@@ -104,6 +106,9 @@ const ProjectReel = () => {
   return (
     <Layout>
       <HeroSection />
+      <Hero />
+      <ContentSection />
+
       <ReelSection
         title={"Agile Implementation at a UK Bank"}
         subtitle={
@@ -143,6 +148,7 @@ const ProjectReel = () => {
         accomplishments={accomplishments1}
         reverse={true}
       />
+
       <ReelSection
         title={"Jira Migration to Cloud"}
         subtitle={

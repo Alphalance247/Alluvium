@@ -1,6 +1,5 @@
 import styles from "../../styles/AlluviumRedesign2025/redesign.module.scss";
 import { redesignCaseStudy } from "data";
-import { FaArrowRightLong } from "react-icons/fa6";
 import Image from "next/image";
 import Link from "next/link";
 import ReadMore from "./ReuseComponents/readmore";
