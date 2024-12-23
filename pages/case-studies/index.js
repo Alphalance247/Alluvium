@@ -1,52 +1,85 @@
 import Head from "next/head";
-import styles from "../../styles/casestudiespage.module.scss";
 import Layout from "components/layout";
 import { productData, caseStudiesData } from "../../data";
 import Link from "next/link";
 import { AltCaseStudyLink } from "components/caseStudyLink";
+import styles from "../../styles/AlluviumRedesign2025/alluviumCaseStudies/alluviumCaseStudies.module.scss";
+import CaseStudiesCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseStudiesCard";
+import HeroSection from "components/Alluvium-Redesign-2025/alluviumCaseStudies/HeroSection";
+import CaseStudiesSection from "components/Alluvium-Redesign-2025/alluviumCaseStudies/CaseStudiesSection";
 
 export default function Support({ products, caseStudies }) {
   return (
-    <Layout>
-      <div className={styles.casestudiesPage}>
-        <Head>
-          <title>Case Studies | Alluvium</title>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
-          />
-          <meta
-            name="keywords"
-            content={`Alluvium, alluvium,alluvium case studies, atlassian products case studies,  atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
-          />
-        </Head>
-        <section className={styles.hero}></section>
-        <div className={`container ${styles.hero_section}`}>
-          <h1>Case Studies</h1>
-          <p>
-            Explore more of our transformative projects that drive positive
-            change in atlassian world and helped our clients achieve data
-            migration goals.
-          </p>
-          <div className={styles.list}>
-            {caseStudies.map((caseStudy) => {
-              return (
-                <Link
-                  key={caseStudy.id}
-                  href={"/case-studies/" + caseStudy?.caseStudyPageName}
-                >
-                  <a>
-                    <CaseStudyCard key={caseStudy.id} caseStudy={caseStudy} />
-                  </a>
-                </Link>
-              );
-            })}
-          </div>
+    // <Layout>
+    //   <div className={styles.casestudiesPage}>
+    //     <Head>
+    //       <title>Case Studies | Alluvium</title>
+    //       <link rel="icon" href="/favicon.ico" />
+    //       <meta
+    //         name="description"
+    //         content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+    //       />
+    //       <meta
+    //         name="keywords"
+    //         content={`Alluvium, alluvium,alluvium case studies, atlassian products case studies,  atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
+    //       />
+    //     </Head>
+    //     <section className={styles.hero}></section>
+    //     <div className={`container ${styles.hero_section}`}>
+    //       <h1>Case Studies</h1>
+    //       <p>
+    //         Explore more of our transformative projects that drive positive
+    //         change in atlassian world and helped our clients achieve data
+    //         migration goals.
+    //       </p>
+    //       <div className={styles.list}>
+    //         {caseStudies.map((caseStudy) => {
+    //           return (
+    //             <Link
+    //               key={caseStudy.id}
+    //               href={"/case-studies/" + caseStudy?.caseStudyPageName}
+    //             >
+    //               <a>
+    //                 <CaseStudyCard key={caseStudy.id} caseStudy={caseStudy} />
+    //               </a>
+    //             </Link>
+    //           );
+    //         })}
+    //       </div>
 
-          {/* <button className={`btn ${styles.load_btn}`}>Load More</button> */}
-        </div>
+    //       {/* <button className={`btn ${styles.load_btn}`}>Load More</button> */}
+    //     </div>
+    //   </div>
+    // </Layout>
+    <Layout>
+      <Head>
+        <title>Case Studies | Alluvium</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+        />
+        <meta
+          name="keywords"
+          content={`Alluvium, alluvium,alluvium case studies, atlassian products case studies,  atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
+        />
+      </Head>
+      <HeroSection />
+      <div className={styles.caseStudiesSection}>
+        <main>
+          <CaseStudiesCard
+            agileTitle="Streamlining Server to Atlassian Cloud Migration for an Insurance Company"
+            description1="An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution."
+            imageAlt={"Our case studies"}
+            width={635}
+            height={523}
+            imageSrc="/assets/redesign-2025/OurMissionCaseStudies.webp"
+            h4Variant="secondary"
+            pVariant="secondary"
+          />
+        </main>
       </div>
+      <CaseStudiesSection />
     </Layout>
   );
 }
