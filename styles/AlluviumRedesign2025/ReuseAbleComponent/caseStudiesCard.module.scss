@@ -1,0 +1,90 @@
+.agile_way {
+  width: 100%;
+  display: flex;
+
+  @media (max-width: 1024px) {
+    // padding: 24px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &.rowReverse {
+    flex-direction: row-reverse;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .container {
+    max-width: 634px;
+    width: 100%;
+    padding-left: 64px;
+    padding-right: 64px;
+    padding-top: 64px;
+    color: #262626;
+
+    @media (max-width: 1024px) {
+      padding-left: 16px;
+      padding-top: 32px;
+      width: 100%;
+      max-width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      padding: 24px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &.containerReverse {
+      padding-right: 105px;
+      padding-left: 64px;
+
+      @media (max-width: 1024px) {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 32px;
+        max-width: 48%;
+      }
+
+      @media (max-width: 768px) {
+        padding-left: 24px;
+        padding-right: 24px;
+        max-width: 100%;
+      }
+    }
+
+    .h4 {
+      font-family: "Grotesk";
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 600;
+      margin-bottom: 24px !important;
+
+      &--secondary {
+        font-size: 32px;
+        line-height: 40px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+
+    .pClass {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+      &--secondary {
+        font-size: 19.5px;
+        line-height: 32px;
+      }
+    }
+  }
+}

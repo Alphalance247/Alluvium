@@ -127,6 +127,8 @@ const ProjectReel = () => {
         }
         gridArray={gridArray}
         accomplishments={accomplishments}
+        imgHeight={523}
+        imgWidth={635}
       />
       <ReelSection
         title={"Atlassian Tools for a UK Telco"}
@@ -147,6 +149,8 @@ const ProjectReel = () => {
         gridArray={gridArray1}
         accomplishments={accomplishments1}
         reverse={true}
+        imgHeight={523}
+        imgWidth={636.5}
       />
 
       <ReelSection
@@ -165,6 +169,8 @@ const ProjectReel = () => {
         }
         gridArray={gridArray2}
         accomplishments={accomplishments2}
+        imgHeight={613}
+        imgWidth={635}
       />
     </Layout>
   );
