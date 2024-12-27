@@ -10,9 +10,6 @@ import Settings from "components/Alluvium-Redesign-2025/icons/Settings";
 import IntegrationIcon from "components/Alluvium-Redesign-2025/icons/IntegrationIcon";
 import MarkIcon from "components/Alluvium-Redesign-2025/icons/MarkIcon";
 import LegacyIcon from "components/Alluvium-Redesign-2025/icons/LegacyIcon";
-import Hero from "components/Alluvium-Redesign-2025/case-studies/Hero";
-import ContentSection from "components/Alluvium-Redesign-2025/case-studies/contentSection";
-import CaseStudyCard from "components/Alluvium-Redesign-2025/caseStudyCard";
 
 const gridArray = [
   {
@@ -106,8 +103,6 @@ const ProjectReel = () => {
   return (
     <Layout>
       <HeroSection />
-      <Hero />
-      <ContentSection />
 
       <ReelSection
         title={"Agile Implementation at a UK Bank"}

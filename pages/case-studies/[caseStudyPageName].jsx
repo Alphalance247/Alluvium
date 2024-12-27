@@ -9,6 +9,8 @@ import styles from "../../styles/casestudypage.module.scss";
 import { caseStudiesData } from "../../data";
 import BookingCTA from "components/Booking";
 import Layout from "components/layout";
+import Hero from "components/Alluvium-Redesign-2025/case-studies/Hero";
+import ContentSection from "components/Alluvium-Redesign-2025/case-studies/contentSection";
 
 export default function CaseStudy({ caseStudy }) {
   const [activeNav, setActiveNav] = useState(null);
@@ -24,7 +26,7 @@ export default function CaseStudy({ caseStudy }) {
     <Layout>
       <div className={styles.caseStudyPage}>
         <Head>
-          <title>{caseStudy?.title + ' | Alluvium'}</title>
+          <title>{caseStudy?.title + " | Alluvium"}</title>
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
@@ -35,7 +37,8 @@ export default function CaseStudy({ caseStudy }) {
             content={`${caseStudy?.title}, Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
           />
         </Head>
-        <main>
+        {/* The commented out code is not in use anymore, this is only left back for future fallback */}
+        {/* <main>
           <section
             className={`container-fluid ${styles.heroSection}`}
             style={{ backgroundImage: `url(${details.displayImage})` }}
@@ -272,7 +275,9 @@ export default function CaseStudy({ caseStudy }) {
               </div>
             </InView>
           </div>
-        </main>
+        </main> */}
+        <Hero />
+        <ContentSection />
       </div>
     </Layout>
   );

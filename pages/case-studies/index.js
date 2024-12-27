@@ -4,6 +4,8 @@ import Layout from "components/layout";
 import { productData, caseStudiesData } from "../../data";
 import Link from "next/link";
 import { AltCaseStudyLink } from "components/caseStudyLink";
+import Hero from "components/Alluvium-Redesign-2025/case-studies/Hero";
+import ContentSection from "components/Alluvium-Redesign-2025/case-studies/contentSection";
 
 export default function Support({ products, caseStudies }) {
   return (
@@ -21,6 +23,8 @@ export default function Support({ products, caseStudies }) {
             content={`Alluvium, alluvium,alluvium case studies, atlassian products case studies,  atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
           />
         </Head>
+        <Hero />
+        <ContentSection />
         <section className={styles.hero}></section>
         <div className={`container ${styles.hero_section}`}>
           <h1>Case Studies</h1>
