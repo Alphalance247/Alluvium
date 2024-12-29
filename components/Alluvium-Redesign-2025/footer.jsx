@@ -86,7 +86,7 @@ const Footer = () => {
     },
     {
       img: "/assets/redesign-2025/chamberbloog.png",
-      content: "Alluvium joins the Stamford Chamber...",
+      content: "Alluvium Supports the Stamford Chamber...",
       // fullhighlight: "Alluvium joins the Stanford Chambe",
       url: "#",
     },
