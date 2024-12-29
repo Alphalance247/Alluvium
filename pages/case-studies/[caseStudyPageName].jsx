@@ -6,11 +6,12 @@ import Link from "next/link";
 import { MdDownload } from "react-icons/md";
 import { InView } from "react-intersection-observer";
 import styles from "../../styles/casestudypage.module.scss";
-import { caseStudiesData } from "../../data";
+import { CaseStudyDataRedesign2025 } from "../../data";
 import BookingCTA from "components/Booking";
 import Layout from "components/layout";
 import Hero from "components/Alluvium-Redesign-2025/case-studies/Hero";
 import ContentSection from "components/Alluvium-Redesign-2025/case-studies/contentSection";
+import RelatedCard from "components/Alluvium-Redesign-2025/case-studies/relatedStudy";
 
 export default function CaseStudy({ caseStudy }) {
   const [activeNav, setActiveNav] = useState(null);
@@ -37,7 +38,7 @@ export default function CaseStudy({ caseStudy }) {
             content={`${caseStudy?.title}, Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
           />
         </Head>
-        {/* The commented out code is not in use anymore, this is only left back for future fallback */}
+        {/* The commented out code is not in use anymore, this is only left for future fallback */}
         {/* <main>
           <section
             className={`container-fluid ${styles.heroSection}`}
@@ -276,15 +277,17 @@ export default function CaseStudy({ caseStudy }) {
             </InView>
           </div>
         </main> */}
-        <Hero />
-        <ContentSection />
+
+        <Hero caseStudy={caseStudy} />
+        <ContentSection caseStudy={caseStudy} />
+        <RelatedCard />
       </div>
     </Layout>
   );
 }
 
 export const getStaticProps = async ({ params }) => {
-  const caseStudiesArr = caseStudiesData.filter(
+  const caseStudiesArr = CaseStudyDataRedesign2025.filter(
     (caseStudy) =>
       caseStudy.caseStudyPageName.toString() === params.caseStudyPageName
   );
@@ -297,7 +300,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paths = caseStudiesData.map((caseStudy) => ({
+  const paths = CaseStudyDataRedesign2025.map((caseStudy) => ({
     params: { caseStudyPageName: caseStudy.caseStudyPageName.toString() },
   }));
 

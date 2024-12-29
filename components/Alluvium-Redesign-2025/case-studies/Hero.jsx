@@ -3,7 +3,8 @@ import { Lines } from "../ReuseComponents/Lines";
 import SubSectionCard from "../ReuseComponents/subSectionCard";
 import ArrowDownLoad from "../icons/ArrowDownLoad";
 
-const Hero = () => {
+const Hero = ({ caseStudy }) => {
+  const achievements = caseStudy?.details?.caseStudyAchievements;
   const gridArray = [
     {
       icon: <ArrowDownLoad />,
@@ -20,9 +21,11 @@ const Hero = () => {
   ];
   return (
     <section className="">
-      <HeroSection />
+      <HeroSection caseStudy={caseStudy} />
       <SubSectionCard
-        gridArray={gridArray}
+        // gridArray={gridArray}
+        iconImageSwitch={false}
+        gridArray={achievements}
         variant="secondary"
         border="default"
         heading={false}

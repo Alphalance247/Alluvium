@@ -3,14 +3,16 @@ import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/hero
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
 import Image from "next/image";
+import { MdOutlineFileDownload } from "react-icons/md";
+import { HiMiniSpeakerWave } from "react-icons/hi2";
 
-const HeroSection = () => {
+const HeroSection = ({ caseStudy }) => {
   return (
     <div className={styles.hero__encap}>
       <div className={styles.hero__context}>
         <div className={styles.content}>
           <HeroHeading
-            heading="Streamlining Server to Atlassian Cloud Migration for an Insurance Company"
+            heading={caseStudy?.details?.caseStudyTitle}
             subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
             variant="primary"
             withLink={true}
@@ -20,19 +22,46 @@ const HeroSection = () => {
             headSection=""
           />
           <div className={styles.btns}>
-            <Link href="/support/contact#schedule-a-call">
-              <Button size="mediumL">Download PDF</Button>
+            <Link href={caseStudy?.downloadLink}>
+              <Button
+                size="mediumL"
+                withIcon={true}
+                icon={
+                  <MdOutlineFileDownload
+                    style={{
+                      fontSize: "20px",
+                      marginRight: "0.5rem",
+                      marginTop: "-0.3rem",
+                    }}
+                  />
+                }
+              >
+                Download PDF
+              </Button>
             </Link>
 
-            <Link href="/why-hire-us">
-              <Button variant="redesign" size="xxlarge">
+            <Link href="/">
+              <Button
+                variant="redesign"
+                size="xxlarge"
+                withIcon={true}
+                icon={
+                  <HiMiniSpeakerWave
+                    style={{
+                      fontSize: "20px",
+                      marginRight: "0.5rem",
+                      marginTop: "-0.3rem",
+                    }}
+                  />
+                }
+              >
                 Read Aloud
               </Button>
             </Link>
           </div>
         </div>
         <Image
-          src="/assets/redesign-2025/case-studies/hero1.png"
+          src={caseStudy?.clientLogo}
           width={500}
           height={489}
           alt="colllaborate"

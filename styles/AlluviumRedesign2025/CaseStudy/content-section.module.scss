@@ -8,9 +8,17 @@
   display: grid;
   grid-template-columns: 30% auto;
 
+  @media screen and (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
+
   .highlight {
     padding-top: 7rem;
     border-right: 1px solid #f0f0f0;
+
+    @media screen and (max-width: 576px) {
+      padding-top: 3rem;
+    }
 
     .industry__encap {
       padding-left: 28px;
@@ -18,6 +26,10 @@
       flex-direction: column;
       row-gap: 2rem;
       margin-bottom: 1rem;
+
+      @media screen and (max-width: 576px) {
+        padding-left: 18px;
+      }
 
       .industry {
         .heading {
@@ -44,6 +56,10 @@
       padding-left: 28px;
       padding-top: 1.5rem;
 
+      @media screen and (max-width: 576px) {
+        padding-left: 18px;
+      }
+
       p {
         font-size: 12px;
         line-height: 14px;
@@ -63,6 +79,21 @@
     flex-direction: column;
     row-gap: 70px;
 
+    @media screen and (max-width: 992px) {
+      padding-left: 2rem;
+      padding-right: 18px;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+
+    @media screen and (max-width: 576px) {
+      padding-left: 18px;
+      padding-right: 18px;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      row-gap: 3rem;
+    }
+
     .subcontent {
       h4 {
         font-size: 28px;
@@ -72,6 +103,13 @@
         font-family: "Grotesk";
         margin-bottom: 1.5rem;
         font-weight: 700;
+
+        @media screen and (max-width: 576px) {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+          letter-spacing: -0px;
+          margin-bottom: 1rem;
+        }
       }
 
       p {
@@ -79,11 +117,16 @@
         color: #595959;
         font-size: 20px;
         line-height: 28px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 15px;
+          line-height: 1.5rem;
+        }
       }
     }
 
     ul {
-      margin-left: 1.3rem; /* Add a bit of padding for bullets to appear properly */
+      margin-left: 1.3rem;
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
@@ -93,6 +136,11 @@
       font-size: 20px;
       line-height: 28px;
       margin-bottom: 0.5rem;
+
+      @media screen and (max-width: 576px) {
+        font-size: 15px;
+        line-height: 1.5rem;
+      }
     }
   }
 }

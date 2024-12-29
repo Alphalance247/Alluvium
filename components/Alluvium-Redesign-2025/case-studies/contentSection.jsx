@@ -1,65 +1,73 @@
 import styles from "../../../styles/AlluviumRedesign2025/CaseStudy/content-section.module.scss";
 import Image from "next/image";
 
-const ContentSection = () => {
+const ContentSection = ({ caseStudy }) => {
   const data = [
     {
       head: "Industry",
       subhead: "Agriculture",
+      img: "/assets/redesign-2025/case-studies/svg/facebook.svg",
     },
     {
       head: "Tools USED",
       subhead: "Jira, Jira Service Management",
+      img: "/assets/redesign-2025/case-studies/svg/x.svg",
     },
     {
       head: "Service Provided",
       subhead: "Data Migration, Cloud Instance Training",
+      img: "/assets/redesign-2025/case-studies/svg/linkedIn.svg",
     },
     {
       head: "Duration",
       subhead: "5 months",
     },
   ];
+  const image = data.slice(0, 3);
   return (
     <section className={styles.content__section}>
       <div className={styles.highlight}>
         <div className={styles.industry__encap}>
-          {data.map((item, i) => {
+          {caseStudy?.details?.industry?.map((item, i) => {
             return (
               <div key={i} className={styles.industry}>
-                <p className={styles.heading}>{item?.head}</p>
-                <p className={styles.subhead}>{item?.subhead}</p>
+                <p className={styles.heading}>{item?.heading}</p>
+                <p className={styles.subhead}>{item?.subHead}</p>
               </div>
             );
           })}
         </div>
         <div className={styles.share}>
           <p>SHARE THIS STORY</p>
+
+          <div className=" d-flex gap-3">
+            {image.map((el) => {
+              return (
+                <a style={{ cursor: "pointer" }} href="#">
+                  <Image src={el?.img} width={24} height={24} alt="socials" />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </div>
 
       <div className={styles.content}>
-        <div className={styles.subcontent}>
-          <h4>The Situation</h4>
-          <p>
-            Passionate about growth and excellence, our client and their small
-            team of more than 3.000 people across the globe, focus on creating
-            ways for their customers to thrive in the agri-food industry. The
-            organization is headquartered in the UK and they offer their
-            customers data services for the agri-food industry.
-          </p>
-        </div>
+        {caseStudy.content.map((item, i) => {
+          return (
+            <div className={styles.subcontent} key={i}>
+              <h4>{item?.highlightHeading}</h4>
+              <p>{item?.Highlightpargraph}</p>
+            </div>
+          );
+        })}
 
-        <div className={styles.subcontent}>
-          <h4>The Situation</h4>
+        {/* <div className={styles.subcontent}>
+          <h4>The Challenge</h4>
           <p>
-            Passionate about growth and excellence, our client and their small
-            team of more than 3.000 people across the globe, focus on creating
-            ways for their customers to thrive in the agri-food industry. The
-            organization is headquartered in the UK and they offer their
-            customers data services for the agri-food industry.
+          
           </p>
-        </div>
+        </div> */}
 
         <div className={styles.subcontent__img}>
           <Image
@@ -71,7 +79,7 @@ const ContentSection = () => {
         </div>
 
         <div className={styles.subcontent}>
-          <h4>The Situation</h4>
+          <h4>The Solution</h4>
           <p>Our client needed us to come in and assess the situation by:</p>
 
           <div>
@@ -100,7 +108,7 @@ const ContentSection = () => {
         </div>
 
         <div className={styles.subcontent}>
-          <h4>The Solution</h4>
+          <h4>The Result</h4>
 
           <div>
             <ul>

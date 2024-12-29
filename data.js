@@ -3255,10 +3255,23 @@ export const CaseStudyDataRedesign2025 = [
     id: 3,
     downloadLink:
       "/files/Server to Data Center Migration for Major Insurer.pdf",
-    filename: "Server to Data Center Migration for Major Insurer",
+    clientLogo: "/assets/redesign-2025/case-studies/hero1.png",
     caseStudyPageName:
       "streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
-    clientLogo: "/assets/case-studies2/case-study-03/situation.png",
+    content: [
+      {
+        highlightHeading: "Customer Journey",
+        Highlightpargraph: [
+          "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
+        ],
+      },
+      {
+        highlightHeading: "Analysis of Benefits",
+        Highlightpargraph: [
+          "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process.",
+        ],
+      },
+    ],
     details: {
       displayImage: "/assets/case-studies2/case-study-03/header.png",
       caseStudyTitle:
@@ -3271,16 +3284,35 @@ export const CaseStudyDataRedesign2025 = [
       teamComposition: "5 -7 members",
       caseStudyAchievements: [
         {
-          goal: "Reduced maintenance overhead",
+          paragraph: "Successfully Trained In-house Administrator",
           icon: "/assets/case-studies2/icons/icon1.png",
         },
         {
-          goal: "Optimized resource allocation",
+          paragraph: "Cloud Instance setup",
           icon: "/assets/case-studies2/icons/icon2.png",
         },
         {
-          goal: "Efficient, scalable, and enhanced performance",
+          paragraph: "Ticket tracking with Jira Service Management",
           icon: "/assets/case-studies2/icons/icon3.png",
+        },
+      ],
+
+      industry: [
+        {
+          heading: "INDUSTRY",
+          subHead: ["Agriculture"],
+        },
+        {
+          heading: "Tools USED",
+          subHead: ["Jira, Jira Service Management"],
+        },
+        {
+          heading: "Service Provided",
+          subHead: ["Data Migration, Cloud Instance Training"],
+        },
+        {
+          heading: "Duration",
+          subHead: ["5 months"],
         },
       ],
       caseStudyImg: "/assets/case-studies/case-study-2-img.png",
