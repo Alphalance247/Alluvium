@@ -1,8 +1,37 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../../styles/Atlassian-Case-Study/SuccessStories.module.scss";
+import PopUpForm from "components/popupform/popUpForm";
 
 const SuccessStories = () => {
   const [activeTab, setActiveTab] = useState(0);
+  const thirdSectionRef = useRef(null);
+  const [showPopUp, setShowPopUp] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const storedEmail = localStorage.getItem("UserEmail");
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && !storedEmail) {
+              setShowPopUp(true);
+            }
+          });
+        },
+        { threshold: 0.5 }
+      );
+
+      if (thirdSectionRef.current) {
+        observer.observe(thirdSectionRef.current);
+      }
+
+      return () => {
+        if (thirdSectionRef.current) {
+          observer.unobserve(thirdSectionRef.current);
+        }
+      };
+    }
+  }, []);
 
   const btnContent = [
     {
@@ -244,8 +273,21 @@ const SuccessStories = () => {
   const handleClick = (i) => {
     setActiveTab(i);
   };
+
+  const handleEmailSubmit = (email) => {
+    localStorage.setItem("UserEmail", email);
+    setShowPopUp(false);
+  };
+
   return (
-    <section className={`container-fluid px-0 ${styles.success__stories}`}>
+    <section
+      className={`container-fluid px-0 ${styles.success__stories}`}
+      ref={thirdSectionRef}
+    >
+      {showPopUp && (
+        <PopUpForm setShowPopUp={setShowPopUp} onSubmit={handleEmailSubmit} />
+      )}
+
       <div className={`${styles.tab}`}>
         <div>
           <p className={`${styles.success}`}>

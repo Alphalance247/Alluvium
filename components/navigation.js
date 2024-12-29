@@ -111,7 +111,7 @@ export default function Navigation({ theme }) {
               </li>
 
               <li>
-                <Link href="/blogs">About Us</Link>
+                <Link href="/about">About Us</Link>
               </li>
               <li>
                 <Link href="/atlassian-services">Services</Link>

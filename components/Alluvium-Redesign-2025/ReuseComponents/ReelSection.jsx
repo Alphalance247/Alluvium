@@ -1,7 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/reelSection.module.scss";
 import SubSectionCard from "./subSectionCard";
+import CaseStudiesCard from "./CaseStudiesCard";
 
 const ReelSection = ({
   title,
@@ -18,14 +18,6 @@ const ReelSection = ({
   imgWidth,
   imgHeight,
 }) => {
-  const agileWayClass = reverse
-    ? `${styles.agile_way} ${styles.rowReverse}`
-    : styles.agile_way;
-
-  const containerClass = reverse
-    ? `${styles.container} ${styles.containerReverse}`
-    : styles.container;
-
   return (
     <div className={customStyles.mainContainer || styles.mainContainer}>
       <main>
@@ -33,14 +25,17 @@ const ReelSection = ({
           <h3 className={styles.headingss}>{title}</h3>
           <p>{subtitle}</p>
         </div>
-        <div className={agileWayClass}>
-          <Image src={imageSrc} alt={imageAlt} width={635} height={523} />
-          <div className={containerClass}>
-            <h4>{agileTitle}</h4>
-            <p>{description1}</p>
-            <p>{description2}</p>
-          </div>
-        </div>
+
+        <CaseStudiesCard
+          imageSrc={imageSrc}
+          imageAlt={imageAlt}
+          width={imgWidth}
+          height={imgHeight}
+          agileTitle={agileTitle}
+          description1={description1}
+          description2={description2}
+          reverse={reverse}
+        />
 
         <SubSectionCard gridArray={gridArray} />
 
