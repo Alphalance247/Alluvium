@@ -47,7 +47,7 @@ const HeroHeading = ({
               )}
 
               {update}
-              {updateSign && <span className={styles.span2}>{" > "}</span>}
+              {/* {updateSign && <span className={styles.span2}>{" > "}</span>} */}
             </p>
           </Link>
         ))}
