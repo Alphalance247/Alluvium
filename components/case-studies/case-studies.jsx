@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../styles/case-studies.module.scss";
-import { caseStudiesData } from "data";
-import CaseStudy from "./case-study";
-import BookingCTA from "components/Booking";
+// import { caseStudiesData } from "data";
+// import CaseStudy from "./case-study";
+// import BookingCTA from "components/Booking";
 import Link from "next/link";
 
 const CaseStudies = ({ showBooking = true }) => {
@@ -24,13 +24,13 @@ const CaseStudies = ({ showBooking = true }) => {
             </div>
           </div>
           <div className={`container mx-auto ${styles.caseStudyList}`}>
-            {caseStudiesData.slice(-3).map((caseStudy) => {
+            {/* {caseStudiesData.slice(-3).map((caseStudy) => {
               return (
                 !!caseStudy && (
                   <CaseStudy caseStudy={caseStudy} key={caseStudy.id} />
                 )
               );
-            })}
+            })} */}
           </div>
           {/* {showBooking && <BookingCTA />} */}
 
