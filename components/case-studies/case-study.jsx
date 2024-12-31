@@ -7,7 +7,7 @@ import Image from "next/image";
 const CaseStudy = ({ caseStudy }) => {
   return (
     <>
-      <div className={`container-fluid p-0 m-0 mb-4 ${styles.caseStudy}`}>
+      {/* <div className={`container-fluid p-0 m-0 mb-4 ${styles.caseStudy}`}>
         <Image
           src={caseStudy?.clientLogo}
           alt={caseStudy?.filename}
@@ -29,7 +29,7 @@ const CaseStudy = ({ caseStudy }) => {
             </Link>
           )}
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
