@@ -7,6 +7,8 @@ const Button = ({
   size = "medium",
   disabled = false,
   className = "",
+  withIcon = true,
+  icon,
   ...props
 }) => {
   return (
@@ -18,6 +20,7 @@ const Button = ({
       disabled={disabled}
       {...props}
     >
+      <span>{withIcon && icon}</span>
       {children}
     </button>
   );

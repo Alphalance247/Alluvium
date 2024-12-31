@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "components/layout";
 import HeroSection from "components/Alluvium-Redesign-2025/projectReel/Hero";
-import SectionOne from "components/Alluvium-Redesign-2025/projectReel/SectionOne";
 import ReelSection from "components/Alluvium-Redesign-2025/ReuseComponents/ReelSection";
 import ChartIcon from "components/Alluvium-Redesign-2025/icons/ChartIcon";
 import ReportIcon from "components/Alluvium-Redesign-2025/icons/ReportIcon";
@@ -104,6 +103,7 @@ const ProjectReel = () => {
   return (
     <Layout>
       <HeroSection />
+
       <ReelSection
         title={"Agile Implementation at a UK Bank"}
         subtitle={
@@ -122,6 +122,8 @@ const ProjectReel = () => {
         }
         gridArray={gridArray}
         accomplishments={accomplishments}
+        imgHeight={523}
+        imgWidth={635}
       />
       <ReelSection
         title={"Atlassian Tools for a UK Telco"}
@@ -142,7 +144,10 @@ const ProjectReel = () => {
         gridArray={gridArray1}
         accomplishments={accomplishments1}
         reverse={true}
+        imgHeight={523}
+        imgWidth={636.5}
       />
+
       <ReelSection
         title={"Jira Migration to Cloud"}
         subtitle={
@@ -159,6 +164,8 @@ const ProjectReel = () => {
         }
         gridArray={gridArray2}
         accomplishments={accomplishments2}
+        imgHeight={613}
+        imgWidth={635}
       />
     </Layout>
   );

@@ -32,7 +32,11 @@ const AboutAlluvium = () => {
     <section className={styles.about__alluvium}>
       <div className={styles.about__us}>
         <div>
-          <HeroHeading withLink={false} heading="About Alluvium" />
+          <HeroHeading
+            withLink={false}
+            variant={"secondary"}
+            heading="About Alluvium"
+          />
         </div>
 
         <div>

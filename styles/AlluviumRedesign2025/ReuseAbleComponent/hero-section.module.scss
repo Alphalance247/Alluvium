@@ -1,0 +1,52 @@
+.hero__encap {
+  max-width: 1272px;
+  margin: auto;
+  border-left: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.hero__context {
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 2rem;
+  align-items: center;
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+  }
+
+  .content {
+    width: 45%;
+    padding-top: 5rem;
+    padding-bottom: 6rem;
+    padding-left: 28px;
+
+    @media screen and (max-width: 1035px) {
+      padding-left: 16px;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      width: 70%;
+    }
+
+    @media screen and (max-width: 576px) {
+      width: 100%;
+      padding-right: 0.5rem;
+    }
+
+    .btns {
+      display: flex;
+      gap: 1rem;
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+    }
+
+    .btn {
+      margin-right: 1rem;
+    }
+  }
+}
