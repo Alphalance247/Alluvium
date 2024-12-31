@@ -11,6 +11,7 @@ const arrayCaseStudies = [
     title:
       "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
     imgAlt: "image sof a woman",
+    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
   },
   {
     src: "/assets/redesign-2025/pexels.webp",
@@ -18,6 +19,7 @@ const arrayCaseStudies = [
     title:
       "A Successful Server to Cloud Migration for an Agricultural business",
     imgAlt: "image sof a woman",
+    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
   },
   {
     src: "/assets/redesign-2025/pexels1.webp",
@@ -25,6 +27,7 @@ const arrayCaseStudies = [
     title:
       "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
     imgAlt: "image sof a woman",
+    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
   },
   {
     src: "/assets/redesign-2025/pexels.webp",
@@ -32,49 +35,50 @@ const arrayCaseStudies = [
     title:
       "A Successful Server to Cloud Migration for an Agricultural business",
     imgAlt: "image sof a woman",
+    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
   },
-  {
-    src: "/assets/redesign-2025/pexels1.webp",
-    industry: "INSURANCE",
-    title:
-      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
-    imgAlt: "image sof a woman",
-  },
-  {
-    src: "/assets/redesign-2025/pexels.webp",
-    industry: "AGRICULTURE",
-    title:
-      "A Successful Server to Cloud Migration for an Agricultural business",
-    imgAlt: "image sof a woman",
-  },
-  {
-    src: "/assets/redesign-2025/pexels1.webp",
-    industry: "INSURANCE",
-    title:
-      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
-    imgAlt: "image sof a woman",
-  },
-  {
-    src: "/assets/redesign-2025/pexels.webp",
-    industry: "AGRICULTURE",
-    title:
-      "A Successful Server to Cloud Migration for an Agricultural business",
-    imgAlt: "image sof a woman",
-  },
-  {
-    src: "/assets/redesign-2025/pexels1.webp",
-    industry: "INSURANCE",
-    title:
-      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
-    imgAlt: "image sof a woman",
-  },
-  {
-    src: "/assets/redesign-2025/pexels.webp",
-    industry: "AGRICULTURE",
-    title:
-      "A Successful Server to Cloud Migration for an Agricultural business",
-    imgAlt: "image sof a woman",
-  },
+  // {
+  //   src: "/assets/redesign-2025/pexels1.webp",
+  //   industry: "INSURANCE",
+  //   title:
+  //     "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+  //   imgAlt: "image sof a woman",
+  // },
+  // {
+  //   src: "/assets/redesign-2025/pexels.webp",
+  //   industry: "AGRICULTURE",
+  //   title:
+  //     "A Successful Server to Cloud Migration for an Agricultural business",
+  //   imgAlt: "image sof a woman",
+  // },
+  // {
+  //   src: "/assets/redesign-2025/pexels1.webp",
+  //   industry: "INSURANCE",
+  //   title:
+  //     "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+  //   imgAlt: "image sof a woman",
+  // },
+  // {
+  //   src: "/assets/redesign-2025/pexels.webp",
+  //   industry: "AGRICULTURE",
+  //   title:
+  //     "A Successful Server to Cloud Migration for an Agricultural business",
+  //   imgAlt: "image sof a woman",
+  // },
+  // {
+  //   src: "/assets/redesign-2025/pexels1.webp",
+  //   industry: "INSURANCE",
+  //   title:
+  //     "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+  //   imgAlt: "image sof a woman",
+  // },
+  // {
+  //   src: "/assets/redesign-2025/pexels.webp",
+  //   industry: "AGRICULTURE",
+  //   title:
+  //     "A Successful Server to Cloud Migration for an Agricultural business",
+  //   imgAlt: "image sof a woman",
+  // },
 ];
 
 const CaseStudiesSection = () => {
@@ -138,6 +142,7 @@ const CaseStudiesSection = () => {
                 industry={card.industry}
                 title={card.title}
                 imgAlt={card.imgAlt}
+                url={card?.url}
               />
             ))}
           </div>
