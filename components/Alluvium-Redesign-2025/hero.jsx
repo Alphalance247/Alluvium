@@ -14,7 +14,7 @@ const Hero = () => {
           <div className={styles.hero__context}>
             <div className={styles.content}>
               <HeroHeading
-                update="Alluvium Joins the Stanford Chambers of Commerce"
+                update="Alluvium Supports the Stanford Chambers of Commerce"
                 updateSub="NEW UPDATE"
                 updateSign={true}
                 heading="Empower Your Teams with Expert Atlassian Solutions"

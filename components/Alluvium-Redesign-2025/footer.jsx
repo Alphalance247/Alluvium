@@ -86,9 +86,8 @@ const Footer = () => {
     },
     {
       img: "/assets/redesign-2025/chamberbloog.png",
-      content: "Alluvium joins the Stamford Chamber...",
-      // fullhighlight: "Alluvium joins the Stanford Chambe",
-      url: "#",
+      content: "Atlassian unveils rovo a game....",
+      url: "https://remotework.business/2024/08/02/atlassian-unveils-rovo-a-game-changer-for-team-collaboration/",
     },
   ];
 
