@@ -85,7 +85,7 @@ const Footer = () => {
       url: "https://remotework.business/2024/12/02/tech-experts-converge-on-the-zone-arena-lagos-for-alluvium-hqs-2024-cloud-connect-propel-smes-in-africa-to-full-digitization/ ",
     },
     {
-      img: "/assets/redesign-2025/chamberbloog.png",
+      img: "/assets/redesign-2025/rovoagent.jpg",
       content: "Atlassian unveils rovo a game....",
       url: "https://remotework.business/2024/08/02/atlassian-unveils-rovo-a-game-changer-for-team-collaboration/",
     },
@@ -199,6 +199,7 @@ const Footer = () => {
                   );
                 })}
               </div>
+
               <div className={styles.blogs}>
                 {blogContainer.map((item, i) => {
                   return (
