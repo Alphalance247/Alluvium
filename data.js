@@ -522,423 +522,6 @@ export const clientTestimonies = [
   },
 ];
 
-export const caseStudiesData = [
-  {
-    id: 1,
-    downloadLink: "/files/AgroBiz-Server-to-Cloud.pdf",
-    filename:
-      "A Successful Server to Cloud Migration for an Agricultural business",
-    caseStudyPageName:
-      "a-successful-server-to-cloud-migration-for-an-agricultural-business",
-    clientLogo: "/assets/case-studies2/case-study-01/situation.png",
-    details: {
-      displayImage: "/assets/case-studies2/case-study-01/header.png",
-      caseStudyTitle:
-        "A Successful Server to Cloud Migration for an Agricultural business",
-      teamComposition: "5 Members",
-      tools: "Jira, Jira Service Management",
-      duration: "5 months",
-      clientName: "5 members",
-      serviceProvided: "Data Migration, Cloud Instance Training",
-      industry: "Agriculture",
-      caseStudyAchievements: [
-        {
-          goal: "Successfully Trained In-house Administrator",
-          icon: "/assets/case-studies2/icons/first.png",
-        },
-        {
-          goal: "Cloud Instance setup",
-          icon: "/assets/case-studies2/icons/second.png",
-        },
-        {
-          goal: "Ticket tracking with Jira Service Management",
-          icon: "/assets/case-studies2/icons/third.png",
-        },
-      ],
-      caseStudyImg: "/assets/case-studies/case-study-1-img.png",
-      description:
-        "Atlassian`s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
-      caseStudySituation:
-        "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
-      caseStudySituationImage:
-        "/assets/case-studies2/case-study-01/situation.png",
-      caseStudyChallenge:
-        "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process. ",
-      solution: [
-        {
-          caseStudySolutionSubtitle:
-            "Our client needed us to come in and assess the situation by:",
-          caseStudySolutions: [
-            " Presenting a cost-efficient solution",
-            " Deploying and training their staff",
-            " Delivering a secure migration to simplify the internal processes",
-          ],
-          caseStudySolutionsParagraphs: [
-            "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
-            "The second option Server to Cloud was chosen by us and approved by the client.",
-            "Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud.",
-          ],
-        },
-      ],
-
-      caseStudyResultsImage: "/assets/case-studies2/case-study-01/result.png",
-      caseStudyResults: [
-        "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
-        "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
-        "Jira Service Management was chosen as their tickets tracking tool.",
-      ],
-      hasPie: false,
-    },
-  },
-  {
-    id: 2,
-    downloadLink:
-      "/files/Server to Data Center Migration for Major Insurer.pdf",
-    filename: "Server to Data Center Migration for Major Insurer",
-    caseStudyPageName: "server-to-data-center-migration-for-major-insurer",
-    clientLogo: "/assets/case-studies2/case-study-02/situation.png",
-    details: {
-      displayImage: "/assets/case-studies2/case-study-02/header.png",
-      caseStudyTitle: "Server to Data Center Migration for Major Insurer",
-      teamComposition: "5 Members",
-      tools: "Jira, Jira Service Management",
-      duration: "5 months",
-      clientName: "5 members",
-      serviceProvided: "Data Migration, Cloud Instance Training",
-      industry: "Insurance",
-      caseStudyAchievements: [
-        {
-          goal: "40% saved on license cost",
-          icon: "/assets/case-studies2/icons/checkIcon.png",
-        },
-        {
-          goal: "Improved and unified user experience.",
-          icon: "/assets/case-studies2/icons/arrowIcon.png",
-        },
-        {
-          goal: "Scalable administration of the tools.",
-          icon: "/assets/case-studies2/icons/scaleIcon.png",
-        },
-      ],
-      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
-      description:
-        "A major insurance and asset management company needed to improve Atlassian product user experiences and optimize the product`s performances across their entire company, they turned to our team of certified experts with Jira and Confluence knowledge base for a solution.",
-      caseStudySituation:
-        "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
-      caseStudySituationImage:
-        "/assets/case-studies2/case-study-02/situation.png",
-      caseStudyChallenge:
-        "Before working with us, our clients` focus was on improving Atlassian product user experiences and optimizing the products' performances. The top challenges our client was facing were as a result of having redundant resources, duplicate resources etc. Furthermore, our client was struggling with performing a successful migration by taking into consideration all possible blockers that might cause a migration failure.",
-      solution: [
-        {
-          caseStudySolutionSubtitle:
-            "We stood out amongst others owing to the fact that we came to the table with not just a well robust experience in building Jira to support the Agile ways of working but also a strong experience in performing Atlassian products migrations successfully for our clients.",
-          caseStudySolutions: [
-            "Comparing the database count of all Jira and Confluence resources",
-            "Checking for duplicate resources",
-            "Checking that all Apps and macros that can/can`t be migrated plus alternatives.",
-            "Checking, documenting and comparing all references - App links, Webhooks as well as Issue and page Links/references.",
-            "Checking that all Jira / Confluence cross-references are maintained for UAT/Prod.",
-            "Contingency Planning: What happens in a “No-Go” and roll back plans ?",
-            "Risk about communication style with client/customer.",
-          ],
-          caseStudySolutionsParagraphs: [
-            "We assisted our client with a full Migration plan with detailed risk analysis documentation which called out all things to look out for in pre-and post-migration, and a detailed UAT test plan for a successful migration.",
-            "These results formed a solid and good foundation to inform the migration strategies,plans, methodology and process.",
-          ],
-        },
-      ],
-      caseStudyResultsImage: "/assets/case-studies2/case-study-02/result.png",
-      caseStudyResults: [
-        "Our client saved 40% on license costs",
-        "Improved and unified user experience.",
-        "Scalable administration of the tools.",
-      ],
-      hasPie: true,
-    },
-  },
-  {
-    id: 3,
-    downloadLink:
-      "/files/Server to Data Center Migration for Major Insurer.pdf",
-    filename: "Server to Data Center Migration for Major Insurer",
-    caseStudyPageName:
-      "streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
-    clientLogo: "/assets/case-studies2/case-study-03/situation.png",
-    details: {
-      displayImage: "/assets/case-studies2/case-study-03/header.png",
-      caseStudyTitle:
-        "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
-      tools: "Jira, Confluence",
-      duration: "5 months",
-      users: "1,000 - 3,000+",
-      serviceProvided: "Data migration for Jira and Confluence",
-      industry: "Insurance",
-      teamComposition: "5 -7 members",
-      caseStudyAchievements: [
-        {
-          goal: "Reduced maintenance overhead",
-          icon: "/assets/case-studies2/icons/icon1.png",
-        },
-        {
-          goal: "Optimized resource allocation",
-          icon: "/assets/case-studies2/icons/icon2.png",
-        },
-        {
-          goal: "Efficient, scalable, and enhanced performance",
-          icon: "/assets/case-studies2/icons/icon3.png",
-        },
-      ],
-      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
-      description:
-        "An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution.",
-      caseStudySituation:
-        "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
-      caseStudySituationImage:
-        "/assets/case-studies2/case-study-03/situation.png",
-      caseStudyChallenge:
-        "Before working with us, our clients` focus was on improving Atlassian product user experiences and optimizing the products' performances. The top challenges our client was facing were as a result of having redundant resources, duplicate resources etc. Furthermore, our client was struggling with performing a successful migration by taking into consideration all possible blockers that might cause a migration failure.",
-      solution: [
-        {
-          caseStudySolutionSubtitle:
-            "We stood out amongst others owing to the fact that we came to the table with not just a well robust experience in building Jira to support the Agile ways of working but also a strong experience in performing Atlassian products migrations successfully for our clients.",
-          caseStudySolutions: [
-            "Comparing the database count of all Jira and Confluence resources",
-            "Checking for duplicate resources",
-            "Checking that all Apps and macros that can/can`t be migrated plus alternatives.",
-            "Checking, documenting and comparing all references - App links, Webhooks as well as Issue and page Links/references.",
-            "Checking that all Jira / Confluence cross-references are maintained for UAT/Prod.",
-            "Contingency Planning: What happens in a “No-Go” and roll back plans ?",
-            "Risk about communication style with client/customer.",
-          ],
-          caseStudySolutionsParagraphs: [
-            "We assisted our client with a full Migration plan with detailed risk analysis documentation which called out all things to look out for in pre-and post-migration, and a detailed UAT test plan for a successful migration.",
-            "These results formed a solid and good foundation to inform the migration strategies,plans, methodology and process.",
-          ],
-        },
-      ],
-      caseStudyResultsImage: "/assets/case-studies2/case-study-03/result.png",
-      caseStudyResults: [
-        "Our client saved 40% on license costs",
-        "Improved and unified user experience.",
-        "Scalable administration of the tools.",
-      ],
-      hasPie: true,
-    },
-  },
-  {
-    id: 4,
-    downloadLink:
-      "/files/Server to Data Center Migration for Major Insurer.pdf",
-    filename: "Server to Data Center Migration for Major Insurer",
-    caseStudyPageName:
-      "Atlassian-Suite-to-Atlassian-Cloud-Migration-for-a-Fintech-Company",
-    clientLogo: "/assets/case-studies2/case-study-04/casestudynew1.png",
-    details: {
-      displayImage: "/assets/case-studies2/case-study-04/header.png",
-      caseStudyTitle:
-        "Atlassian Suite to Atlassian Cloud Migration for a Fintech Company",
-      tools: "Jira, Jira service Management",
-      duration: "5 months",
-      users: " - ",
-      serviceProvided: "Data migration",
-      industry: "Insurance",
-      teamComposition: "5 members",
-      caseStudyAchievements: [
-        {
-          goal: "Reduced cost on AWS ",
-          icon: "/assets/case-studies2/icons/icon1.png",
-        },
-        {
-          goal: "Improved efficiency and performance",
-          icon: "/assets/case-studies2/icons/icon2.png",
-        },
-        {
-          goal: "Optimized resource allocation",
-          icon: "/assets/case-studies2/icons/icon3.png",
-        },
-      ],
-      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
-      description:
-        "The client is a US-based fintech company that provides automated investment accounting, performance, compliance, reporting services to a diverse client base including financial and government institutions. The company needed to migrate its entire Atlassian Suite (Jira, Confluence, Bitbucket, Statuspage, and Opsgenie) from its datacenter to Atlassian Cloud.",
-      caseStudySituation:
-        "Our client company consists of a group of specialists committed to offering tailored financial advice to a wide range of clients, including investment professionals, individual investors, and institutional investors. Understanding that each client's financial journey is unique, they provide personalized solutions to meet their specific needs",
-      caseStudySituationImage:
-        "/assets/case-studies2/case-study-04/situation.png",
-      caseStudyChallenge:
-        "The company's on-premises Atlassian environment was becoming increasingly difficult to manage and main. This was leading to performance issues and security vulnerabilities. A migration to Atlassian was necessary in order to:",
-      caseStudyChallengePoints: [
-        "Decrease time and effort associated with server maintenance",
-        "Enhance the user experience by taking advantage of Atlassian Cloud features",
-        "Enhance site security",
-      ],
-      solution: [
-        {
-          caseStudySolutionSubtitle:
-            "Throughout the project, a systematic approach was adopted to ensure effective migration.",
-          caseStudySolutions: [
-            "Biweekly meetings and stand-ups were conducted to gather requirements and refine feedback for continuous improvement.",
-            "Python was utilized to extend the capabilities of the Atlassian REST API, while structured Query Language (SQL) was employed to query the applications' databases for data collection and analysis.",
-            "The migration of Jira was completed by utilizing the site import feature to migrate the bulk of the application data, combined with Atlassian's automated migration tool; Jira Cloud Migration Assistance (JCMA), to migrate attachments and most of the installed plugin data.",
-            "Confluence and Bitbucket migrations were also completed by employing Atlassian's automated migration tools for each application, Confluence Cloud Migration Assistant (CCMA) and Bitbucket Cloud Migration Assistant (BCMA).",
-            "Custom scripts from the Alluvium script library were deployed to handle multiple migrations tasks including the migration of calendars, automation rules and to automate the cloning of Bitbucket repositories to the target cloud instance.",
-          ],
-        },
-      ],
-      caseStudyResultsImage: "/assets/case-studies2/case-study-04/result.png",
-      caseStudyResults: [
-        "Leveraging a combination of Atlassian's automated migration tools, XML site import, custom scripts, and our comprehensive expertise, the migration project was successfully executed.",
-        " All projects, spaces, and Bitbucket repositories were migrated seamlessly to the cloud environment.",
-        "The post-migration issues were effectively resolved, ensuring a smooth transition and delivering a successful migration overall.",
-        "The client achieved their objectives of cost reduction saving ~70000 USD on AWS cost, improved performance, increased security, enhanced user experience and increased scalability.",
-        "The company is now well-positioned to take advantage of the latest Atlassian Cloud features and to continue to grow its business.",
-      ],
-      hasPie: true,
-    },
-  },
-  {
-    id: 5,
-    downloadLink:
-      "/files/Server to Data Center Migration for Major Insurer.pdf",
-    filename: "Server to Data Center Migration for Major Insurer",
-    caseStudyPageName:
-      "Thirst-for-better-Agile-Environment-Pivotal-tracker-to-Jira-Cloud",
-    clientLogo: "/assets/case-studies2/case-study-05/casestudynew2.png",
-    details: {
-      displayImage: "/assets/case-studies2/case-study-05/header.png",
-      caseStudyTitle:
-        "Thirst for better Agile Environment: Pivotal tracker to Jira Cloud",
-      tools: "Jira, Jira service Management",
-      duration: "2 months",
-      users: "500 - 1,000",
-      serviceProvided: "Data migration, Training",
-      industry: "Software Development",
-      teamComposition: "3 members",
-      caseStudyAchievements: [
-        {
-          goal: "Seamless Atlassian Products Integration",
-          icon: "/assets/case-studies2/icons/icon1.png",
-        },
-        {
-          goal: "Effective use of Jira Service Management",
-          icon: "/assets/case-studies2/icons/icon2.png",
-        },
-        {
-          goal: "Successful data migration",
-          icon: "/assets/case-studies2/icons/icon3.png",
-        },
-      ],
-      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
-      description:
-        "A software development company makes use of Pivotal tracker platform to practice agile development tracking but they heard about Jira software with its advantages and what it can offer and they decided to move their data to Jira cloud. They reached out to to us as Atlassian migration expert to help plan, execute and migrate their data into Jira.",
-      caseStudySituation:
-        "Creating solutions that protect organizations against cybersecurity issues is the primary objectives of our client company. With their team of experts, they have successfully assisted their customers to in mitigating potential breaches and cyber attacks. They decided to moved their data from Pivotal Tracker to Jira cloud to enjoy numerous advantages Jira cloud provides",
-      caseStudySituationImage:
-        "/assets/case-studies2/case-study-05/situation.png",
-      caseStudyChallenge:
-        "The client's main challenge on Pivotal is the inability to practice agile development tracking at scale at low charges. They needed a platform that lets them practice agile software development at scale but with low prices. Additionally, they required a high-security mindset to ensure their data is secure during migration and got migrated seamlessly. ",
-      // caseStudyChallengePoints: [
-      //   "Decrease time and effort associated with server maintenance",
-      //   "Enhance the user experience by taking advantage of Atlassian Cloud features",
-      //   "Enhance site security"
-      // ],
-      solution: [
-        {
-          caseStudySolutionSubtitle: "Why Jira",
-          caseStudySubParagraph:
-            "As an Atlassian migration expert, we were able to introduce to them advantages of jumping to Jira cloud to practice agile development tracking which include but not limited to:",
-          caseStudySolutions: [
-            "Integration with other Atlassian products like Confluence, Bitbucket, and Trello, creating a unified ecosystem for software development and project management.",
-            "Security and Reliability: Atlassian invests heavily in security measures, data backups, and disaster recovery, providing a secure and reliable environment for your data.",
-            "Extensive Marketplace: The Atlassian Marketplace offers a wide range of add-ons and integrations that extend Jira Cloud’s functionality, allowing you to tailor it to your specific needs.",
-            "Support: Atlassian provides customer support for Jira Cloud users, ensuring that you have assistance available when you encounter any issues.",
-          ],
-        },
-        {
-          caseStudySolutionSubtitle: "Migrating data",
-          caseStudySubParagraph:
-            "Haven being convinced to migrate over to Jira, the migration was done by:",
-          caseStudySolutions: [
-            "Discovery: This is where we got to know quantity of the data and all configurations they have set up on Pivotal",
-            "Mapping: We set out to map various Pivotal fields to suitable fields in Jira",
-            "User Acceptance Testing: Here we perform a test migration for the client to go into Jira and see how their data will look and confirm to us any changes to be made",
-            "Training: This is where we equip the client team on how Jira works and best practices",
-            "Production Migration: We provided the client with a full migration plan which include stopping the client from adding more data to Pivotal, migrate over all up to date data to Jira, perform smoke test and we then LAUNCHED!",
-          ],
-        },
-      ],
-      caseStudyResultsImage: "/assets/case-studies2/case-study-05/result.png",
-      caseStudyResults: [
-        "Successfully launch them on Jira cloud with better agile development tracking system.",
-        "The migration provided the client access to an extensive marketplace of add-ons and integrations, allowing them to customize Jira Cloud to suit their specific needs.",
-        "The client's team received training on how to effectively use Jira and its best practices, ensuring they could fully leverage the platform for their software development and project management needs.",
-      ],
-      hasPie: true,
-    },
-  },
-  {
-    id: 6,
-    downloadLink:
-      "/files/Server to Data Center Migration for Major Insurer.pdf",
-    filename: "Server to Data Center Migration for Major Insurer",
-    caseStudyPageName:
-      "Server-to-Cloud-migration-for-top-rated-software-development-company",
-    clientLogo: "/assets/case-studies2/case-study-06/casestudynew3.png",
-    details: {
-      displayImage: "/assets/case-studies2/case-study-06/header.png",
-      caseStudyTitle:
-        "Server to Cloud migration for top rated software development company",
-      tools: "Confluence",
-      duration: "8 months",
-      users: "-",
-      serviceProvided: "Data migration, Cloud Instance Training",
-      industry: "Software Development",
-      teamComposition: "6 members",
-      caseStudyAchievements: [
-        {
-          goal: "Secured cloud environment",
-          icon: "/assets/case-studies2/icons/icon1.png",
-        },
-        {
-          goal: "Improved team performance",
-          icon: "/assets/case-studies2/icons/icon2.png",
-        },
-        {
-          goal: "Seamless data migration",
-          icon: "/assets/case-studies2/icons/icon3.png",
-        },
-      ],
-      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
-      description:
-        "Collaboration is at the core of every high performing team’s values, and Confluence helps teams collaborate effectively by sharing knowledge bases and documenting key business data, in a highly organised and central manner. We were able to help  a software company focused on the development of documentand email management application software to move their Confluence data to a more secure Confluence cloud environment",
-      caseStudySituation:
-        "Headquartered in Chicago, our client is an innovative software company that provides document and email management solutions for accounting, corporate legal, financial services and law firms. They wanted to further improve team output and performance by moving Confluence to cloud and letting Atlassian do the heavy lifting, as regards platform maintenance, while they focus on what matters the most, collaboration",
-      caseStudySituationImage:
-        "/assets/case-studies2/case-study-06/situation.png",
-      caseStudyChallenge:
-        "They major documentation spaces were configured using a plugin that structuredthe spaces in a way that was not cloud compatible. With assistance from the plug-in vendors, we spent months converting and debugging problematic spaces one after the other, until we were able to successfully convert all the spaces to a cloud compatible format. A resulting issue from the conversions, were spaces with significantly bigger sizes which gave Atlassian’s confluence cloud migration tool issues.",
-      // caseStudyChallengePoints: [
-      //   "Decrease time and effort associated with server maintenance",
-      //   "Enhance the user experience by taking advantage of Atlassian Cloud features",
-      //   "Enhance site security"
-      // ],
-      solution: [
-        {
-          caseStudySubParagraph:
-            "From finding and fixing bugs to manually restructuring certain spaces and taking advantage of Atlassian dark features, we worked with the plug-in vendors and Atlassian support to not only convert every space to a cloud compatible format, but also to ensure that the spaces were migrated to cloud successfully",
-        },
-      ],
-      caseStudyResultsImage: "/assets/case-studies2/case-study-06/result.png",
-      caseStudyResults: [
-        "Reduced expenses",
-        "A happy team relieved of the burden of platform maintenance",
-        "Highly secured cloud environment",
-      ],
-      hasPie: true,
-    },
-  },
-];
-
 export const ourServicesData = [
   {
     id: 1,
@@ -1115,275 +698,6 @@ export const ourSolutions = [
       "Training offering for customers who need foundational Atlassian training and enablement OR advanced configuration and add-on specific workshops.",
   },
 ];
-
-// not in use anymore, kept in case it will be needed in future versions
-// export const oldToolsAndPlatforms = [
-//   {
-//     name: "Programming Language",
-//     tools: [
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "C#",
-//         icon: "/assets/tools/c.png"
-//       },
-//       {
-//         name: "PHP",
-//         icon: "/assets/tools/php.png"
-//       },
-//       {
-//         name: "NodeJs",
-//         icon: "/assets/tools/nodejs.png"
-//       },
-//       {
-//         name: "React",
-//         icon: "/assets/tools/react.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       }
-//     ]
-//   },
-//   {
-//     name: "Web Framework",
-//     tools: [
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "C#",
-//         icon: "/assets/tools/c.png"
-//       },
-//       {
-//         name: "PHP",
-//         icon: "/assets/tools/php.png"
-//       },
-//       {
-//         name: "NodeJs",
-//         icon: "/assets/tools/nodejs.png"
-//       },
-//       {
-//         name: "React",
-//         icon: "/assets/tools/react.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       }
-//     ]
-//   },
-//   {
-//     name: "Databases",
-//     tools: [
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "C#",
-//         icon: "/assets/tools/c.png"
-//       },
-//       {
-//         name: "PHP",
-//         icon: "/assets/tools/php.png"
-//       },
-//       {
-//         name: "NodeJs",
-//         icon: "/assets/tools/nodejs.png"
-//       },
-//       {
-//         name: "React",
-//         icon: "/assets/tools/react.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       }
-//     ]
-//   },
-//   {
-//     name: "Other Frameworks",
-//     tools: [
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "C#",
-//         icon: "/assets/tools/c.png"
-//       },
-//       {
-//         name: "PHP",
-//         icon: "/assets/tools/php.png"
-//       },
-//       {
-//         name: "NodeJs",
-//         icon: "/assets/tools/nodejs.png"
-//       },
-//       {
-//         name: "React",
-//         icon: "/assets/tools/react.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       }
-//     ]
-//   },
-//   {
-//     name: "Platforms",
-//     tools: [
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "C#",
-//         icon: "/assets/tools/c.png"
-//       },
-//       {
-//         name: "PHP",
-//         icon: "/assets/tools/php.png"
-//       },
-//       {
-//         name: "NodeJs",
-//         icon: "/assets/tools/nodejs.png"
-//       },
-//       {
-//         name: "React",
-//         icon: "/assets/tools/react.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       },
-//       {
-//         name: "Python",
-//         icon: "/assets/tools/python.png"
-//       }
-//     ]
-//   }
-// ]
 
 export const toolsAndPlatforms = [
   {
@@ -3000,7 +2314,7 @@ export const redesignCaseStudy = [
     heading:
       "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
     btn: "Read Case Study",
-    url: "/case-studies/Atlassian-Suite-to-Atlassian-Cloud-Migration-for-a-Fintech-Company",
+    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
   },
   {
     img: "/assets/case-studies2/case-study-01/situation.png",
@@ -3008,7 +2322,7 @@ export const redesignCaseStudy = [
     heading:
       "A Successful Server to Cloud Migration for an Agricultural business",
     btn: "Read Case Study",
-    url: "/case-studies/Thirst-for-better-Agile-Environment-Pivotal-tracker-to-Jira-Cloud",
+    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
   },
   {
     img: "/assets/case-studies2/case-study-06/situation.png",
@@ -3016,7 +2330,7 @@ export const redesignCaseStudy = [
     heading:
       "Server to Cloud Migration for Top Rated Software Development Company",
     btn: "Read Case Study",
-    url: "/case-studies/Server-to-Cloud-migration-for-top-rated-software-development-company",
+    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
   },
 ];
 
@@ -3111,5 +2425,334 @@ export const aboutServices = [
     heading: "Ownership",
     subHeading:
       "Ownership is about taking personal responsibility for our work and delivering results. Our team is encouraged to bring their unique skills and perspectives to each project, and we strive to create a culture of collaboration and mutual support.",
+  },
+];
+
+export const CaseStudyDataRedesign2025 = [
+  {
+    id: 1,
+    downloadLink: "/files/AgroBiz-Server-to-Cloud.pdf",
+    filename:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    caseStudyPageName:
+      "a-successful-server-to-cloud-migration-for-an-agricultural-business",
+    clientLogo: "/assets/case-studies2/case-study-01/situation.png",
+    details: {
+      displayImage: "/assets/case-studies2/case-study-01/header.png",
+      caseStudyTitle:
+        "A Successful Server to Cloud Migration for an Agricultural business",
+      teamComposition: "5 Members",
+      tools: "Jira, Jira Service Management",
+      duration: "5 months",
+      clientName: "5 members",
+      serviceProvided: "Data Migration, Cloud Instance Training",
+      industry: "Agriculture",
+      caseStudyAchievements: [
+        {
+          goal: "Successfully Trained In-house Administrator",
+          icon: "/assets/case-studies2/icons/first.png",
+        },
+        {
+          goal: "Cloud Instance setup",
+          icon: "/assets/case-studies2/icons/second.png",
+        },
+        {
+          goal: "Ticket tracking with Jira Service Management",
+          icon: "/assets/case-studies2/icons/third.png",
+        },
+      ],
+
+      content: [
+        {
+          type: "subcontent",
+          highlightHeading: "Customer Journey",
+          Highlightpargraph: [
+            "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
+          ],
+        },
+        {
+          type: "subcontent",
+          highlightHeading: "The Challenge",
+          Highlightpargraph: [
+            "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process.",
+          ],
+        },
+
+        {
+          type: "image",
+          src: "/assets/redesign-2025/case-studies/furistic.png",
+          width: 686,
+          height: 425,
+          alt: "furistic",
+        },
+
+        {
+          type: "subcontent",
+          highlightHeading: "Customer Journey",
+          Highlightpargraph: [
+            "Our client needed us to come in and assess the situation by:",
+          ],
+          list: [
+            "Presenting a cost-efficient solution",
+            "Deploying and training their staff",
+            "Delivering a secure migration to simplify the internal processes",
+          ],
+          additionalText: [
+            "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
+            "The second option Server to Cloud was chosen by us and approved by the client. Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud.",
+          ],
+        },
+
+        {
+          type: "subcontent",
+          highlightHeading: "The Result",
+          list: [
+            "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
+            "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
+            "Jira Service Management was chosen as their tickets tracking tool.",
+          ],
+        },
+      ],
+      caseStudyImg: "/assets/case-studies/case-study-1-img.png",
+      description:
+        "Atlassian`s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
+      caseStudySituation:
+        "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
+      caseStudySituationImage:
+        "/assets/case-studies2/case-study-01/situation.png",
+      caseStudyChallenge:
+        "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process. ",
+      solution: [
+        {
+          caseStudySolutionSubtitle:
+            "Our client needed us to come in and assess the situation by:",
+          caseStudySolutions: [
+            " Presenting a cost-efficient solution",
+            " Deploying and training their staff",
+            " Delivering a secure migration to simplify the internal processes",
+          ],
+          caseStudySolutionsParagraphs: [
+            "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
+            "The second option Server to Cloud was chosen by us and approved by the client.",
+            "Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud.",
+          ],
+        },
+      ],
+
+      caseStudyResultsImage: "/assets/case-studies2/case-study-01/result.png",
+      caseStudyResults: [
+        "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
+        "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
+        "Jira Service Management was chosen as their tickets tracking tool.",
+      ],
+      hasPie: false,
+    },
+  },
+
+  {
+    id: 2,
+    downloadLink:
+      "/files/Server to Data Center Migration for Major Insurer.pdf",
+    filename: "Server to Data Center Migration for Major Insurer",
+    caseStudyPageName: "server-to-data-center-migration-for-major-insurer",
+    clientLogo: "/assets/case-studies2/case-study-02/situation.png",
+    details: {
+      displayImage: "/assets/case-studies2/case-study-02/header.png",
+      caseStudyTitle: "Server to Data Center Migration for Major Insurer",
+      teamComposition: "5 Members",
+      tools: "Jira, Jira Service Management",
+      duration: "5 months",
+      clientName: "5 members",
+      serviceProvided: "Data Migration, Cloud Instance Training",
+      industry: "Insurance",
+      caseStudyAchievements: [
+        {
+          goal: "40% saved on license cost",
+          icon: "/assets/case-studies2/icons/checkIcon.png",
+        },
+        {
+          goal: "Improved and unified user experience.",
+          icon: "/assets/case-studies2/icons/arrowIcon.png",
+        },
+        {
+          goal: "Scalable administration of the tools.",
+          icon: "/assets/case-studies2/icons/scaleIcon.png",
+        },
+      ],
+      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
+      description:
+        "A major insurance and asset management company needed to improve Atlassian product user experiences and optimize the product`s performances across their entire company, they turned to our team of certified experts with Jira and Confluence knowledge base for a solution.",
+      caseStudySituation:
+        "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
+      caseStudySituationImage:
+        "/assets/case-studies2/case-study-02/situation.png",
+      caseStudyChallenge:
+        "Before working with us, our clients` focus was on improving Atlassian product user experiences and optimizing the products' performances. The top challenges our client was facing were as a result of having redundant resources, duplicate resources etc. Furthermore, our client was struggling with performing a successful migration by taking into consideration all possible blockers that might cause a migration failure.",
+      solution: [
+        {
+          caseStudySolutionSubtitle:
+            "We stood out amongst others owing to the fact that we came to the table with not just a well robust experience in building Jira to support the Agile ways of working but also a strong experience in performing Atlassian products migrations successfully for our clients.",
+          caseStudySolutions: [
+            "Comparing the database count of all Jira and Confluence resources",
+            "Checking for duplicate resources",
+            "Checking that all Apps and macros that can/can`t be migrated plus alternatives.",
+            "Checking, documenting and comparing all references - App links, Webhooks as well as Issue and page Links/references.",
+            "Checking that all Jira / Confluence cross-references are maintained for UAT/Prod.",
+            "Contingency Planning: What happens in a “No-Go” and roll back plans ?",
+            "Risk about communication style with client/customer.",
+          ],
+          caseStudySolutionsParagraphs: [
+            "We assisted our client with a full Migration plan with detailed risk analysis documentation which called out all things to look out for in pre-and post-migration, and a detailed UAT test plan for a successful migration.",
+            "These results formed a solid and good foundation to inform the migration strategies,plans, methodology and process.",
+          ],
+        },
+      ],
+      caseStudyResultsImage: "/assets/case-studies2/case-study-02/result.png",
+      caseStudyResults: [
+        "Our client saved 40% on license costs",
+        "Improved and unified user experience.",
+        "Scalable administration of the tools.",
+      ],
+      hasPie: true,
+    },
+  },
+
+  {
+    id: 3,
+    downloadLink:
+      "/files/Server to Data Center Migration for Major Insurer.pdf",
+    clientLogo: "/assets/redesign-2025/case-studies/hero1.png",
+    caseStudyPageName:
+      "streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
+    content: [
+      {
+        type: "subcontent",
+        highlightHeading: "Customer Journey",
+        Highlightpargraph: [
+          "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
+        ],
+      },
+      {
+        type: "subcontent",
+        highlightHeading: "The Challenge",
+        Highlightpargraph: [
+          "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process.",
+        ],
+      },
+
+      {
+        type: "image",
+        src: "/assets/redesign-2025/case-studies/furistic.png",
+        width: 686,
+        height: 425,
+        alt: "furistic",
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Customer Journey",
+        Highlightpargraph: [
+          "Our client needed us to come in and assess the situation by:",
+        ],
+        list: [
+          "Presenting a cost-efficient solution",
+          "Deploying and training their staff",
+          "Delivering a secure migration to simplify the internal processes",
+        ],
+        additionalText: [
+          "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
+          "The second option Server to Cloud was chosen by us and approved by the client. Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud.",
+        ],
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "The Result",
+        list: [
+          "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
+          "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
+          "Jira Service Management was chosen as their tickets tracking tool.",
+        ],
+      },
+    ],
+    details: {
+      displayImage: "/assets/case-studies2/case-study-03/header.png",
+      caseStudyTitle:
+        "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+      tools: "Jira, Confluence",
+      duration: "5 months",
+      users: "1,000 - 3,000+",
+      serviceProvided: "Data migration for Jira and Confluence",
+      industry: "Insurance",
+      teamComposition: "5 -7 members",
+      caseStudyAchievements: [
+        {
+          paragraph: "Successfully Trained In-house Administrator",
+          icon: "/assets/case-studies2/icons/icon1.png",
+        },
+        {
+          paragraph: "Cloud Instance setup",
+          icon: "/assets/case-studies2/icons/icon2.png",
+        },
+        {
+          paragraph: "Ticket tracking with Jira Service Management",
+          icon: "/assets/case-studies2/icons/icon3.png",
+        },
+      ],
+
+      industry: [
+        {
+          heading: "INDUSTRY",
+          subHead: ["Agriculture"],
+        },
+        {
+          heading: "Tools USED",
+          subHead: ["Jira, Jira Service Management"],
+        },
+        {
+          heading: "Service Provided",
+          subHead: ["Data Migration, Cloud Instance Training"],
+        },
+        {
+          heading: "Duration",
+          subHead: ["5 months"],
+        },
+      ],
+      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
+      description:
+        "An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution.",
+      caseStudySituation:
+        "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
+      caseStudySituationImage:
+        "/assets/case-studies2/case-study-03/situation.png",
+      caseStudyChallenge:
+        "Before working with us, our clients` focus was on improving Atlassian product user experiences and optimizing the products' performances. The top challenges our client was facing were as a result of having redundant resources, duplicate resources etc. Furthermore, our client was struggling with performing a successful migration by taking into consideration all possible blockers that might cause a migration failure.",
+      solution: [
+        {
+          caseStudySolutionSubtitle:
+            "We stood out amongst others owing to the fact that we came to the table with not just a well robust experience in building Jira to support the Agile ways of working but also a strong experience in performing Atlassian products migrations successfully for our clients.",
+          caseStudySolutions: [
+            "Comparing the database count of all Jira and Confluence resources",
+            "Checking for duplicate resources",
+            "Checking that all Apps and macros that can/can`t be migrated plus alternatives.",
+            "Checking, documenting and comparing all references - App links, Webhooks as well as Issue and page Links/references.",
+            "Checking that all Jira / Confluence cross-references are maintained for UAT/Prod.",
+            "Contingency Planning: What happens in a “No-Go” and roll back plans ?",
+            "Risk about communication style with client/customer.",
+          ],
+          caseStudySolutionsParagraphs: [
+            "We assisted our client with a full Migration plan with detailed risk analysis documentation which called out all things to look out for in pre-and post-migration, and a detailed UAT test plan for a successful migration.",
+            "These results formed a solid and good foundation to inform the migration strategies,plans, methodology and process.",
+          ],
+        },
+      ],
+      caseStudyResultsImage: "/assets/case-studies2/case-study-03/result.png",
+      caseStudyResults: [
+        "Our client saved 40% on license costs",
+        "Improved and unified user experience.",
+        "Scalable administration of the tools.",
+      ],
+      hasPie: true,
+    },
   },
 ];

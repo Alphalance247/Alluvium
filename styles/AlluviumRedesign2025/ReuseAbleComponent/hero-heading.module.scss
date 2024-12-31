@@ -82,11 +82,15 @@
       margin-left: 6px;
     }
   }
-
+  .headingWithParagrapgh {
+    margin-bottom: 1.5rem;
+  }
+  .headingWithNoParagrapgh {
+    margin-bottom: 3rem;
+  }
   .headings {
     color: #141414;
     letter-spacing: -2px;
-    margin-bottom: 1.5rem;
     font-weight: 700;
     font-family: "Grotesk";
     // variant
@@ -101,8 +105,8 @@
       }
 
       @media screen and (max-width: 992px) {
-        font-size: 40px;
-        line-height: 3rem;
+        font-size: 20px;
+        line-height: 1.5rem;
       }
 
       @media screen and (max-width: 768px) {
@@ -139,12 +143,12 @@
 
     ///pvariant
     &--primary {
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 18px;
+      line-height: 28px;
 
       @media screen and (max-width: 1035px) {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 26px;
       }
       @media screen and (max-width: 768px) {
         font-size: 14px;
