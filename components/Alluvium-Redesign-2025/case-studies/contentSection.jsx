@@ -53,32 +53,52 @@ const ContentSection = ({ caseStudy }) => {
       </div>
 
       <div className={styles.content}>
-        {caseStudy.content.map((item, i) => {
-          return (
-            <div className={styles.subcontent} key={i}>
-              <h4>{item?.highlightHeading}</h4>
-              <p>{item?.Highlightpargraph}</p>
-            </div>
-          );
+        {caseStudy?.content.map((item, i) => {
+          if (item.type === "subcontent") {
+            return (
+              <div className={styles.subcontent} key={i}>
+                {/* sub content with just paragraph */}
+
+                <h4>{item?.highlightHeading}</h4>
+                {item?.Highlightpargraph &&
+                  item?.Highlightpargraph.map((paragraph, i) => (
+                    <p key={i}>{paragraph}</p>
+                  ))}
+
+                {/* sub content with paragraph and list */}
+
+                {item?.list && (
+                  <ul>
+                    {item?.list.map((listItem, i) => (
+                      <li key={i}>{listItem}</li>
+                    ))}
+                  </ul>
+                )}
+
+                {item?.additionalText &&
+                  item?.additionalText.map((text, i) => (
+                    <p key={i} style={{ marginBottom: "1rem" }}>
+                      {text}
+                    </p>
+                  ))}
+              </div>
+            );
+          }
+
+          if (item?.type === "image") {
+            return (
+              <div className={styles.subcontent__img} key={i}>
+                <Image
+                  src={item?.src}
+                  width={item?.width}
+                  height={item?.height}
+                  alt={item?.alt}
+                />
+              </div>
+            );
+          }
         })}
-
         {/* <div className={styles.subcontent}>
-          <h4>The Challenge</h4>
-          <p>
-          
-          </p>
-        </div> */}
-
-        <div className={styles.subcontent__img}>
-          <Image
-            src="/assets/redesign-2025/case-studies/furistic.png"
-            width={686}
-            height={425}
-            alt="furistic"
-          />
-        </div>
-
-        <div className={styles.subcontent}>
           <h4>The Solution</h4>
           <p>Our client needed us to come in and assess the situation by:</p>
 
@@ -107,6 +127,15 @@ const ContentSection = ({ caseStudy }) => {
           </p>
         </div>
 
+        <div className={styles.subcontent__img}>
+          <Image
+            src="/assets/redesign-2025/case-studies/furistic.png"
+            width={686}
+            height={425}
+            alt="furistic"
+          />
+        </div>
+
         <div className={styles.subcontent}>
           <h4>The Result</h4>
 
@@ -127,7 +156,7 @@ const ContentSection = ({ caseStudy }) => {
               </li>
             </ul>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

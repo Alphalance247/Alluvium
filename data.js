@@ -3260,15 +3260,52 @@ export const CaseStudyDataRedesign2025 = [
       "streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
     content: [
       {
+        type: "subcontent",
         highlightHeading: "Customer Journey",
         Highlightpargraph: [
           "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
         ],
       },
       {
-        highlightHeading: "Analysis of Benefits",
+        type: "subcontent",
+        highlightHeading: "The Challenge",
         Highlightpargraph: [
           "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process.",
+        ],
+      },
+
+      {
+        type: "image",
+        src: "/assets/redesign-2025/case-studies/furistic.png",
+        width: 686,
+        height: 425,
+        alt: "furistic",
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Customer Journey",
+        Highlightpargraph: [
+          "Our client needed us to come in and assess the situation by:",
+        ],
+        list: [
+          "Presenting a cost-efficient solution",
+          "Deploying and training their staff",
+          "Delivering a secure migration to simplify the internal processes",
+        ],
+        additionalText: [
+          "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
+          "The second option Server to Cloud was chosen by us and approved by the client. Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud.",
+        ],
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "The Result",
+        list: [
+          "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
+          "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
+          "Jira Service Management was chosen as their tickets tracking tool.",
         ],
       },
     ],
