@@ -1,10 +1,10 @@
 import Button from "components/atlassian-service-reuse/Button";
 import Image from "next/image";
 import styles from "../../styles/AlluviumRedesign2025/redesign.module.scss";
-import { badges } from "data";
 import Link from "next/link";
 import { Lines } from "./ReuseComponents/Lines";
 import HeroHeading from "./ReuseComponents/heroHeading";
+import Badges from "./ReuseComponents/badges";
 
 const Hero = () => {
   return (
@@ -44,19 +44,8 @@ const Hero = () => {
               // layout="responsive"
             />
           </div>
-          <div className={`${styles.cert__section}`}>
-            {badges.map((item, i) => {
-              return (
-                <Image
-                  src={item?.img}
-                  width={item?.width}
-                  height={item?.height}
-                  alt={item?.alt}
-                  key={i}
-                />
-              );
-            })}
-          </div>
+
+          <Badges variant={"default"} />
 
           <Lines variant="default" />
         </div>

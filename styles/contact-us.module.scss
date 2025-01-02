@@ -54,11 +54,14 @@
 }
 
 .office__location {
-  padding-bottom: 5rem;
-  margin-top: -3rem;
-
-  @media screen and (max-width: 576px) {
-    margin-top: -8rem;
+  border-top: 1px solid #f0f0f0;
+  .locate {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    padding: 6rem 2.5rem 6rem 2.5rem;
   }
 
   h2 {
@@ -118,16 +121,17 @@
 }
 
 .badges {
-  padding-bottom: 5rem;
+  background: #fcfcfc;
 
   .badges__border {
-    border: 1px solid #e5e7eb !important;
-    padding: 96px 162px;
-    border-radius: 0.5rem;
-
-    @media screen and (max-width: 576px) {
-      padding: 2rem 1rem;
-    }
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+    padding-bottom: 6rem;
+    padding-top: 6rem;
 
     h2 {
       font-size: 2rem;
@@ -137,10 +141,18 @@
       text-align: center;
       font-weight: 700;
       margin-bottom: 2rem;
+      width: 40%;
+      margin-right: auto;
+      margin-left: auto;
+
+      @media screen and (max-width: 992px) {
+        width: 80%;
+      }
 
       @media screen and (max-width: 576px) {
         font-size: 1.2rem;
-        line-height: 2rem;
+        line-height: 1.7rem;
+        width: 80%;
       }
     }
   }
