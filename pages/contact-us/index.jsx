@@ -5,6 +5,8 @@ import Image from "next/image";
 import Button from "components/atlassian-service-reuse/Button";
 import ConsutomerConsultation from "components/consutomerConsultation";
 import Link from "next/link";
+import ContactSection from "components/Alluvium-Redesign-2025/ContactSection";
+import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 
 const ContactUs = () => {
   const data = [
@@ -53,13 +55,13 @@ const ContactUs = () => {
     },
   ];
   return (
-    <Layout>
-      <ServicesHero
+    <Layout withoutForm={true}>
+      {/* <ServicesHero
         contentsheading1="How Can We Help You?"
         variant="secondary"
-      />
+      /> */}
 
-      <section className={`container ${styles.contact__us__card}`}>
+      {/* <section className={`container ${styles.contact__us__card}`}>
         <div className={`${styles.contact__us}`}>
           {data.map((el, i) => {
             return (
@@ -74,35 +76,39 @@ const ContactUs = () => {
             );
           })}
         </div>
-      </section>
+      </section> */}
+      <ContactSection />
 
-      <section className={`container ${styles.office__location}`}>
-        <h2>Our Office Locations</h2>
+      <section className={`${styles.office__location}`}>
+        <div className={styles.locate}>
+          <h2>Our Office Locations</h2>
 
-        <div className={styles.office}>
-          {officeLocation.map((el, i) => {
-            return (
-              <div className={styles.location} id={i}>
-                <h5>{el?.country}</h5>
-                <p>{el?.location}</p>
-                <a href="tel:+442035762028">{el?.tel}</a>
-              </div>
-            );
-          })}
+          <div className={styles.office}>
+            {officeLocation.map((el, i) => {
+              return (
+                <div className={styles.location} id={i}>
+                  <h5>{el?.country}</h5>
+                  <p>{el?.location}</p>
+                  <a href="tel:+442035762028">{el?.tel}</a>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
-      <section className={`container ${styles.badges}`}>
+      <section className={`${styles.badges}`}>
         <div className={`${styles.badges__border}`}>
           <h2>Alluvium are Trusted Solution Partner of Atlassian</h2>
-          <div className="text-center">
+          <Badges />
+          {/* <div className="text-center">
             <Image
               src="/assets/icons/badges.svg"
               alt="badges"
               width={891}
               height={159}
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </Layout>

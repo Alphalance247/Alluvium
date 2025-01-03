@@ -11,10 +11,10 @@ export default function Layout({ children, withoutForm }) {
     <div>
       <Navigation />
       <div className={styles.layoutBody}>{children}</div>
-      {/* {!withoutForm && <ConsultationForm />} */}
+      {/* {<ConsultationForm />} */}
 
       {/* <AltFooter /> */}
-      <ContactSection />
+      {!withoutForm && <ContactSection />}
       <Footer />
     </div>
   );
