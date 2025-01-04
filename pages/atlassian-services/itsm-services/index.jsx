@@ -8,8 +8,22 @@ import GetStarted from "components/atlassian-service-reuse/getStarted";
 import styles from "../../../styles/licence.module.scss";
 import JiraTools from "components/ITSM-SERVICES/jiraTools";
 import Head from "next/head";
+import { useEffect } from "react";
 
 const ItsmServices = () => {
+  useEffect(() => {
+    // Load Calendly script
+    const script = document.createElement("script");
+    script.src = "https://assets.calendly.com/assets/external/widget.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Clean up
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <Layout>
       <Head>
@@ -24,7 +38,12 @@ const ItsmServices = () => {
           content="jsm schedule, stages of implementation, implementation model example, jsm incident management, jsm insight, jsm itsm, jsm integration, jsm benefits, jsm best practices, jsm tutorial, jsm demo, jsm documentation, jsm jira, jsm kanban board, jsm knowledge base, jsm opsgenie, jsm project management, jsm problem management, what is jsm, jsm workflow"
         />
       </Head>
-      <ServicesHero
+      <div
+        className="calendly-inline-widget"
+        data-url="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983a0941717d501942bae0d304e03"
+        style={{ minWidth: "100%", height: "800px", borderRadius: "25px" }}
+      ></div>
+      {/* <ServicesHero
         contentsheading1="IT SERVICE MANAGEMENT"
         contentsheading2="Empower your service teams with industry-leading IT Service Management tool Jira Service Management to deliver exceptional service"
         button1={
@@ -108,7 +127,7 @@ const ItsmServices = () => {
         alt2="cloudpic"
         display="primary"
         variant="secondary"
-      />
+      /> */}
     </Layout>
   );
 };
