@@ -41,17 +41,34 @@ const ContactUs = () => {
       country: "London",
       location: "Kemp House 160, City Road London, EC1V 2NX.",
       tel: "+442035762028",
+      url: "",
     },
     {
-      country: "America",
+      country: "Stamford",
       location: "Connecticut: 680 E Main Street Ste AStamford, CT 06901 US.",
-      tel: "+442035762028",
+      tel: "+1 (567) 331 0070",
+      url: "",
     },
     {
-      country: "America",
+      country: "Orlando",
       location:
-        "27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, Florida  32819 US..",
+        "27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, Florida  32819 US.",
       tel: "+442035762028",
+      url: "",
+    },
+    {
+      country: "Lagos",
+      location:
+        " No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti, Ekiti State.",
+      tel: "+442035762028",
+      url: "",
+    },
+    {
+      country: "Nairobi",
+      location:
+        "4th Floor, Laiboni Centre, Lenana Road, Kilimani, Nairobi, Kenya.",
+      tel: "+442035762028",
+      url: "",
     },
   ];
   return (
@@ -89,7 +106,7 @@ const ContactUs = () => {
                 <div className={styles.location} id={i}>
                   <h5>{el?.country}</h5>
                   <p>{el?.location}</p>
-                  <a href="tel:+442035762028">{el?.tel}</a>
+                  <a href={el?.url}>{el?.tel}</a>
                 </div>
               );
             })}

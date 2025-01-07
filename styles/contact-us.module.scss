@@ -81,9 +81,10 @@
   }
 
   .office {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    column-gap: 4rem;
+    gap: 4rem;
 
     @media screen and (max-width: 576px) {
       flex-direction: column;
