@@ -147,49 +147,86 @@
           }
         }
 
-        .core {
-          padding: 48px;
-          @media (max-width: 768px) {
-            padding: 24px 18px;
-            .core,
-            p {
-              text-align: center;
-            }
+        .quick__call {
+          display: flex;
+          gap: 1.5rem;
+          padding-top: 3rem;
+          padding-left: 3rem;
+          align-items: flex-start;
+
+          @media screen and (max-width: 992px) {
+            padding-left: 18px;
+          }
+
+          @media screen and (max-width: 640px) {
+            flex-direction: column;
+            padding-right: 18px;
+          }
+
+          h4 {
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #595959;
           }
 
           p {
-            font-size: 18px;
-            line-height: 28px;
-            font-weight: 500;
-            color: #1f1f1f;
-            margin-bottom: 0 !important;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            color: #595959;
+            width: 60%;
 
-            span {
-              color: #8c8c8c;
-            }
-          }
-
-          .ceo {
-            margin-top: 24px;
-            p {
-              color: #595c61;
-              font-size: 12px;
-              line-height: 17px;
-              font-weight: 800;
-              letter-spacing: 0.5px;
-
-              @media (max-width: 768px) {
-              }
-            }
-            .title {
-              font-size: 16px;
-              line-height: 24px;
-              font-weight: 400;
-              margin-top: 4px;
-              color: #595c61;
+            @media screen and (max-width: 992px) {
+              width: 80%;
             }
           }
         }
+        // .core {
+        //   padding: 48px;
+        //   @media (max-width: 768px) {
+        //     padding: 24px 18px;
+        //     .core,
+        //     p {
+        //       text-align: center;
+        //     }
+        //   }
+
+        //   p {
+        //     font-size: 18px;
+        //     line-height: 28px;
+        //     font-weight: 500;
+        //     color: #1f1f1f;
+        //     margin-bottom: 0 !important;
+
+        //     span {
+        //       color: #8c8c8c;
+        //     }
+        //   }
+
+        //   .ceo {
+        //     margin-top: 24px;
+        //     p {
+        //       color: #595c61;
+        //       font-size: 12px;
+        //       line-height: 17px;
+        //       font-weight: 800;
+        //       letter-spacing: 0.5px;
+
+        //       @media (max-width: 768px) {
+        //       }
+        //     }
+        //     .title {
+        //       font-size: 16px;
+        //       line-height: 24px;
+        //       font-weight: 400;
+        //       margin-top: 4px;
+        //       color: #595c61;
+        //     }
+        //   }
+        // }
       }
 
       .section2 {
