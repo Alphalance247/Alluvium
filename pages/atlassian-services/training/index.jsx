@@ -20,7 +20,6 @@ const Training = () => {
     {
       title: "Jira Admin Training",
       image: "/assets/redesign-2025/cardIcons/jira.svg",
-      text: "01",
       width: 54,
       height: 54,
       description: [

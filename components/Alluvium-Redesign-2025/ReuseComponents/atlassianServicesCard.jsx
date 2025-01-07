@@ -17,9 +17,7 @@ const AtlassianServicesCard = ({
 }) => {
   return (
     <div className={`${styles.card}`}>
-      {<p>{text}</p> || (
-        <Image width={width} height={height} src={img} alt="icons" />
-      )}
+      <Image width={width} height={height} src={img} alt="icons" />
 
       <h6
         className={`${styles.heading} ${styles[`heading--${headingVariant}`]} ${
