@@ -139,7 +139,15 @@
   .paragraph__transform {
     font-weight: 400;
     color: #595959;
-    margin-bottom: 48px;
+
+    //////variantMarginFix
+    &--default {
+      margin-bottom: 48px;
+    }
+
+    &--primary {
+      margin-bottom: 0px;
+    }
 
     ///pvariant
     &--primary {
