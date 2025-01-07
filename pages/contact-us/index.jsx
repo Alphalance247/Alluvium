@@ -7,6 +7,8 @@ import ConsutomerConsultation from "components/consutomerConsultation";
 import Link from "next/link";
 import ContactSection from "components/Alluvium-Redesign-2025/ContactSection";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
+import CalendlyWidget from "components/calendlyWidget";
+import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 
 const ContactUs = () => {
   const data = [
@@ -41,36 +43,39 @@ const ContactUs = () => {
       country: "London",
       location: "Kemp House 160, City Road London, EC1V 2NX.",
       tel: "+442035762028",
-      url: "",
+      url: "tel:+442035762028",
     },
     {
       country: "Stamford",
       location: "Connecticut: 680 E Main Street Ste AStamford, CT 06901 US.",
-      tel: "+1 (567) 331 0070",
-      url: "",
+      tel: "+1 (207) 360-7252",
+      url: "tel:+12073607252",
     },
     {
       country: "Orlando",
       location:
         "27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, Florida  32819 US.",
-      tel: "+442035762028",
-      url: "",
+      tel: "+1 (207) 360-7252",
+      url: "tel:+12073607252",
     },
-    {
-      country: "Lagos",
-      location:
-        " No.1 JayTee Ojo Crescent, Off Okemesi Road, Ikoro Ekiti, Ekiti State.",
-      tel: "+442035762028",
-      url: "",
-    },
+
     {
       country: "Nairobi",
       location:
         "4th Floor, Laiboni Centre, Lenana Road, Kilimani, Nairobi, Kenya.",
-      tel: "+442035762028",
-      url: "",
+      tel: "+254 742 090807",
+      url: "tel:+254742090807",
     },
+
+    // {
+    //   country: "Lagos",
+    //   location:
+    //     "Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104, Nigeria.",
+    //   // tel: "+442035762028",
+    //   url: "",
+    // },
   ];
+
   return (
     <Layout withoutForm={true}>
       {/* <ServicesHero
@@ -94,7 +99,27 @@ const ContactUs = () => {
           })}
         </div>
       </section> */}
-      <ContactSection />
+      <div style={{ maxWidth: "1272px", margin: "auto" }}>
+        <Lines variant={"primary"} />
+      </div>
+      <div className={styles.booking}>
+        <div className={styles.book_a_call}>
+          <div>
+            <h2>Book a Meeting</h2>
+            <p>
+              Have questions or need assistance? We're here to help. Reach out
+              to us for support, inquiries, or feedback, and our team will get
+              back to you promptly.
+            </p>
+          </div>
+          {/* className="container-fluid my-5" */}
+          <section id="schedule-a-call" className={styles.widget}>
+            <CalendlyWidget />
+          </section>
+        </div>
+      </div>
+
+      <ContactSection withLines={false} />
 
       <section className={`${styles.office__location}`}>
         <div className={styles.locate}>
