@@ -5,6 +5,8 @@ import { useToasts } from "react-toast-notifications";
 import { validateEmail } from "lib/validation";
 import axios from "axios";
 import { Lines } from "./ReuseComponents/Lines";
+import Button from "components/atlassian-service-reuse/Button";
+import Link from "next/link";
 
 const contactArr = [
   {
@@ -45,7 +47,7 @@ const contactArr = [
   },
 ];
 
-const ContactSection = () => {
+const ContactSection = ({ withLines = true }) => {
   const { addToast } = useToasts();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -142,7 +144,7 @@ const ContactSection = () => {
   return (
     <section className={styles.consultation}>
       <div className={styles.container}>
-        <Lines variant="primary" />
+        {withLines && <Lines variant="primary" />}
         <div className={styles.mainContainer}>
           <div className={styles.section1}>
             <div className={styles.question}>
@@ -231,7 +233,7 @@ const ContactSection = () => {
               </div>
             </div>
 
-            <div className={styles.core}>
+            {/* <div className={styles.core}>
               <p style={{ fontStyle: "italic" }}>
                 <span>
                   "At Alluvium, we’re all about making technology work for
@@ -246,6 +248,26 @@ const ContactSection = () => {
                 <p className={styles.title}>
                   Chief Executive Officer, Alluvium
                 </p>
+              </div>
+            </div> */}
+            <div className={styles.quick__call}>
+              <Image
+                src="/assets/redesign-2025/contact-us/call.svg"
+                width={40}
+                height={40}
+                alt="meeticon"
+              />
+              <div>
+                <h4>Reach Out to Us</h4>
+                <p>
+                  Need a quick chat? Skip the form and book a time that works
+                  for you.
+                </p>
+                <Link href={"/support/contact#schedule-a-call"}>
+                  <Button variant="redesign" size="xxlarge">
+                    Book a Meeting
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
