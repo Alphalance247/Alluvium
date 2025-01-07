@@ -1,0 +1,68 @@
+.card {
+  padding: 48px;
+  border-right: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+
+  .heading {
+    font-weight: 600;
+    color: #141414;
+    font-family: "Grotesk";
+
+    ///////size
+    &--default {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &--primary {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    ///////Margin
+    &--marginDefault {
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &--marginPrimary {
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .sub__head {
+    font-weight: 400;
+    color: #595959;
+
+    &--default {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    &--primary {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  span {
+    color: #e37915;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  ul {
+    padding: 0px !important;
+    margin-left: 1.5rem;
+    li {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: 400;
+      color: #595959;
+    }
+  }
+}

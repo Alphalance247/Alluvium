@@ -15,6 +15,7 @@ const HeroHeading = ({
   showParagraph = true,
   headSection = "primary",
   withParagragh = true,
+  variantMargingFix = "default",
 }) => {
   return (
     <div className={styles.hero__heading}>
@@ -66,7 +67,7 @@ const HeroHeading = ({
         <p
           className={`${styles.paragraph__transform} ${
             styles[`paragraph__transform--${variant}`]
-          }`}
+          } ${styles[`paragraph__transform--${variantMargingFix}`]}`}
         >
           {subhead}
         </p>
