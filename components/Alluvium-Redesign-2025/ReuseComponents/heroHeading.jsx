@@ -15,7 +15,7 @@ const HeroHeading = ({
   showParagraph = true,
   headSection = "primary",
   withParagragh = true,
-  variantMargingFix = "default",
+  variantMargingFix = "independent",
 }) => {
   return (
     <div className={styles.hero__heading}>

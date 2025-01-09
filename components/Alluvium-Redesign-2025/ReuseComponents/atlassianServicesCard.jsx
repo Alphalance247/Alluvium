@@ -14,9 +14,14 @@ const AtlassianServicesCard = ({
   subHeadingVariant = "default",
   marginVariant = "marginDefault",
   text,
+  index,
 }) => {
   return (
-    <div className={`${styles.card}`}>
+    <div
+      className={`${styles.card} ${
+        index.length === index ? styles.lastCard : styles.other
+      }`}
+    >
       <Image width={width} height={height} src={img} alt="icons" />
 
       <h6

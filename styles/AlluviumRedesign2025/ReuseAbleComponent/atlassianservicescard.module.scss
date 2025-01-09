@@ -1,7 +1,15 @@
+.lastCard {
+  border-bottom: 3px solid black;
+}
+
+.other {
+  border-bottom: 1px solid #f0f0f0;
+}
+
 .card {
   padding: 48px;
   border-right: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+  // border-bottom: 1px solid #f0f0f0;
 
   .heading {
     font-weight: 600;

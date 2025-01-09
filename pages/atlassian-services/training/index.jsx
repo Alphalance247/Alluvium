@@ -12,7 +12,6 @@ import HeroHeading from "components/Alluvium-Redesign-2025/ReuseComponents/heroH
 import styles from "../../../styles/AlluviumRedesign2025/training/training.module.scss";
 import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 import AtlassianServicesHero from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesHero";
-import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesCard";
 import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents/ServicesCardReuse";
 
 const Training = () => {
@@ -99,86 +98,7 @@ const Training = () => {
       ],
     },
   ];
-  const data1 = [
-    {
-      title: "Installation",
-      image: "/assets/redesign-2025/cardIcons/btn1.svg",
-      width: 44,
-      height: 44,
-      description: [
-        {
-          text: "Struggling with installing new Atlassian apps in your on-premise environment? Let Alluvium handle it. We specialize in installing databases, servers, Atlassian apps, and Marketplace apps to ensure your environment runs at peak performance.",
-          withLink: false,
-        },
-      ],
-    },
-    {
-      title: "Configuration",
-      image: "/assets/redesign-2025/cardIcons/btn2.svg",
-      width: 40,
-      height: 40,
-      description: [
-        {
-          text: "Need assistance configuring Atlassian tools? As a certified Atlassian partner, we bring extensive experience in configuring both Atlassian and Marketplace apps. Together, we'll tailor these tools to optimally support your internal processes.",
-          withLink: false,
-        },
-      ],
-    },
-    {
-      title: "License Management",
-      image: "/assets/redesign-2025/cardIcons/btn3.svg",
-      width: 40,
-      height: 40,
-      description: [
-        {
-          text: "Looking for guidance on managing your licenses? Our expertise has helped clients save significant time and money on licensing. Discover more on our ",
-          withLink: true,
-          url: "#",
-          urlText: "License Management page",
-        },
-      ],
-    },
 
-    {
-      title: "Troubleshooting",
-      image: "/assets/redesign-2025/cardIcons/btn4.svg",
-      width: 40,
-      height: 40,
-      description: [
-        {
-          text: "Facing technical or functional challenges? Let us handle the troubleshooting so you can quickly identify and resolve issues, saving valuable time and effort.",
-          withLink: false,
-        },
-      ],
-    },
-    {
-      title: "App-Specific Workshops",
-      image: "/assets/redesign-2025/cardIcons/btn5.svg",
-      width: 40,
-      height: 40,
-      description: [
-        {
-          text: "Planning to migrate or consolidate your data into a new Atlassian instance? Whether you need support during the migration process or prefer a full-service data migration, we're here to help. Learn more about our migration services ",
-          withLink: true,
-          url: "#",
-          urlText: "here",
-        },
-      ],
-    },
-
-    {
-      title: "Maintenance",
-      image: "/assets/redesign-2025/cardIcons/btn6.svg",
-      width: 40,
-      height: 40,
-      description: [
-        {
-          text: "Keep your Atlassian Data Center secure, up-to-date, and running smoothly with our expert maintenance support. Regular updates enhance security and unlock new features to boost performance. Contact us today to learn how we can help optimize your environment.",
-          withLink: false,
-        },
-      ],
-    },
-  ];
   return (
     <Layout>
       <Head>
@@ -200,6 +120,17 @@ const Training = () => {
           "Upgrade your Atlassian tool skills and master the best practices for your daily work by getting trained by our certified Atlassian trainers."
         }
         buttonText={"Schedule a Call"}
+        url={"/contact-us"}
+      />
+
+      <Exceptional
+        heading="Specialized Training to Master the Atlassian Tooling"
+        paragraphs={[
+          "More than being a licensed Atlassian training partner, we have a proven track record of expertise and smooth deliveries. We’ll provide comprehensive Atlassian training customized to suit your personal, business, and budget needs. ",
+          "Our Experienced Atlassian Consultants will make it a point of duty to equip you with Atlassian customized solutions. Regardless of your team size, we will ensure you fully leverage the benefits of Atlassian tools. By listening to your needs and customizing your training program, we equip your team with the precise skills required for success.",
+        ]}
+        image="/assets/services/training-partner.png"
+        redesignStyle={true}
       />
 
       <AtlassianServicesHero
@@ -213,23 +144,13 @@ const Training = () => {
         withBtn={false}
         showParagraph={true}
         subsec={"Our ATLASSIAN Training EXPERTISE"}
-        variantMargingFix={"primary"}
+        variantMargingFix={"second"}
       />
 
-      {/* <AtlassianServicesCard withList={true} /> */}
       <ServicesCardReuse
         withList={true}
         data={data}
         showAdditionalCard={true}
-      />
-
-      <ServicesCardReuse
-        withList={false}
-        marginVariant={"marginPrimary"}
-        subHeadingVariant={"primary"}
-        headingVariant={"primary"}
-        gridVariant="primary"
-        data={data1}
       />
 
       {/* <ServicesHero
@@ -242,14 +163,7 @@ const Training = () => {
           </Link>
         }
       /> */}
-      {/* <Exceptional
-        heading="Specialized Training to Master the Atlassian Tooling"
-        paragraphs={[
-          "More than being a licensed Atlassian training partner, we have a proven track record of expertise and smooth deliveries. We’ll provide comprehensive Atlassian training customized to suit your personal, business, and budget needs. ",
-          "Our Experienced Atlassian Consultants will make it a point of duty to equip you with Atlassian customized solutions. Regardless of your team size, we will ensure you fully leverage the benefits of Atlassian tools. By listening to your needs and customizing your training program, we equip your team with the precise skills required for success.",
-        ]}
-        image="/assets/services/training-partner.png"
-      /> */}
+
       {/* <WhyMigrate
         heading="Our Training Programs"
         description="Explore our Atlassian training options to identify which one fits your needs best."

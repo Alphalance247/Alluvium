@@ -13,29 +13,32 @@ const ServicesCardReuse = ({
 }) => {
   return (
     <section className={styles.services__card__reuse}>
-      <div
-        className={`${styles.services__card} ${
-          styles[`services__card--${gridVariant}`]
-        }`}
-      >
-        {data.map((item, i) => (
-          <AtlassianServicesCard
-            key={i}
-            text={item?.text}
-            img={item?.image}
-            width={item?.width}
-            height={item?.height}
-            title={item?.title}
-            description={item?.description}
-            list={item?.list}
-            withList={withList}
-            marginVariant={marginVariant}
-            subHeadingVariant={subHeadingVariant}
-            headingVariant={headingVariant}
-          />
-        ))}
+      <div className={styles.card__encap}>
+        <div
+          className={`${styles.services__card} ${
+            styles[`services__card--${gridVariant}`]
+          }`}
+        >
+          {data.map((item, i) => (
+            <AtlassianServicesCard
+              index={i}
+              key={i}
+              text={item?.text}
+              img={item?.image}
+              width={item?.width}
+              height={item?.height}
+              title={item?.title}
+              description={item?.description}
+              list={item?.list}
+              withList={withList}
+              marginVariant={marginVariant}
+              subHeadingVariant={subHeadingVariant}
+              headingVariant={headingVariant}
+            />
+          ))}
 
-        {showAdditionalCard && <ConsultationCardServices />}
+          {showAdditionalCard && <ConsultationCardServices />}
+        </div>
       </div>
     </section>
   );

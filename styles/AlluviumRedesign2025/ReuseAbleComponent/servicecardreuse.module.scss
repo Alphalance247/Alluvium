@@ -1,14 +1,12 @@
 .services__card__reuse {
-  max-width: 1272px;
-  margin: auto;
-  border-left: 1px solid #f0f0f0;
-  border-right: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
-  width: 100%;
-  //   padding-left: 3.5rem;
-  //   padding-right: 3.5rem;
-  //   padding-top: 7rem;
-  //   padding-bottom: 7rem;
+
+  .card__encap {
+    max-width: 1272px;
+    margin: auto;
+    border-left: 1px solid #f0f0f0;
+    width: 100%;
+  }
 
   @media screen and (max-width: 992px) {
     padding: 4rem 1rem;
