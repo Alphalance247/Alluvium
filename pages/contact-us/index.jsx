@@ -55,8 +55,8 @@ const ContactUs = () => {
       country: "Orlando",
       location:
         "27345 W Sand Lake Rd, STE 210 Office 3190 Orlando, Florida  32819 US.",
-      tel: "+1 (207) 360-7252",
-      url: "tel:+12073607252",
+      tel: "+1 (567) 331-0070",
+      url: "tel:+15673310070",
     },
 
     {
