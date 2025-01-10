@@ -13,11 +13,16 @@ const AtlassianServicesCard = ({
   headingVariant = "default",
   subHeadingVariant = "default",
   marginVariant = "marginDefault",
-  text,
+  mainText,
+  useImage = true,
+  useText = false,
 }) => {
   return (
     <div className={`${styles.card}`}>
-      <Image width={width} height={height} src={img} alt="icons" />
+      {useImage && (
+        <Image width={width} height={height} src={img} alt="icons" />
+      )}
+      {useText && <h1 className={styles.mainText}>{mainText}</h1>}
 
       <h6
         className={`${styles.heading} ${styles[`heading--${headingVariant}`]} ${

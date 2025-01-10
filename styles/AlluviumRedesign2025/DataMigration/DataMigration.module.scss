@@ -1,34 +1,43 @@
-.section2 {
+.whyMigrate {
   background: #ffffff;
   width: 100%;
   main {
     max-width: 1272px;
     width: 100%;
     margin: 0 auto;
-    padding: 96px 0;
+    display: flex;
     border-left: 1px solid #f0f0f0;
     border-right: 1px solid #f0f0f0;
   }
 }
 
-.content {
-  max-width: 61%;
-  padding: 0 48px;
-  margin: 0 auto;
-
-  .title {
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 1.5rem;
-    color: #141414;
-    text-align: center;
+.section {
+  background: #ffffff;
+  width: 100%;
+  main {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
   }
+}
 
-  .description {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    color: #595959;
-  }
+.imgChild {
+  max-width: 635px;
+  width: 100%;
+}
+
+.infoChild {
+  padding: 75px 48px;
+  width: 50%;
+}
+
+.child1 {
+  width: 40%;
+}
+
+.child2 {
+  width: 62%;
 }

@@ -14,7 +14,7 @@
     .hero__head {
       padding-top: 6rem;
       margin-bottom: 6rem;
-      width: 40%;
+      width: 62%;
       text-align: center;
       margin-right: auto;
       margin-left: auto;
@@ -37,6 +37,18 @@
       .heroButton {
         margin-top: 48px;
         text-transform: none;
+      }
+    }
+
+    .btns {
+      width: 100%;
+      margin-top: 48px;
+      justify-content: center;
+      display: flex;
+      gap: 1rem;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
       }
     }
   }

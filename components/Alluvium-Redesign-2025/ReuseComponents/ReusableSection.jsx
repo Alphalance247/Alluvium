@@ -8,12 +8,14 @@ const ReusableSection = ({
   icon,
   extraContent,
   isColumn,
+  height,
+  width,
 }) => {
   return (
     <div className={`${styles.card} ${isColumn ? styles.column : styles.row}`}>
       {icon && (
         <div className={styles.icon}>
-          <Image src={icon} alt={title} width={233} height={146} />
+          <Image src={icon} alt={title} width={width} height={height} />
         </div>
       )}
 

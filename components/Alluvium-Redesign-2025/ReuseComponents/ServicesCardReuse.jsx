@@ -1,6 +1,6 @@
 import AtlassianServicesCard from "./atlassianServicesCard";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/servicecardreuse.module.scss";
-import ConsultationCardServices from "./consultationCard";
+// import ConsultationCardServices from "./consultationCard";
 const ServicesCardReuse = ({
   withList,
   marginVariant,
@@ -9,7 +9,9 @@ const ServicesCardReuse = ({
   gridVariant = "default",
   data,
   showAdditionalCard = false,
-  img,
+  useText,
+  useImage,
+  ConsultationCardServices,
 }) => {
   return (
     <section className={styles.services__card__reuse}>
@@ -21,7 +23,7 @@ const ServicesCardReuse = ({
         {data.map((item, i) => (
           <AtlassianServicesCard
             key={i}
-            text={item?.text}
+            mainText={item?.mainText}
             img={item?.image}
             width={item?.width}
             height={item?.height}
@@ -32,10 +34,12 @@ const ServicesCardReuse = ({
             marginVariant={marginVariant}
             subHeadingVariant={subHeadingVariant}
             headingVariant={headingVariant}
+            useImage={useImage}
+            useText={useText}
           />
         ))}
 
-        {showAdditionalCard && <ConsultationCardServices />}
+        {showAdditionalCard && ConsultationCardServices}
       </div>
     </section>
   );

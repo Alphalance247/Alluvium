@@ -5,10 +5,6 @@
   border-right: 1px solid #f0f0f0;
   border-bottom: 1px solid #f0f0f0;
   width: 100%;
-  //   padding-left: 3.5rem;
-  //   padding-right: 3.5rem;
-  //   padding-top: 7rem;
-  //   padding-bottom: 7rem;
 
   @media screen and (max-width: 992px) {
     padding: 4rem 1rem;
@@ -19,9 +15,21 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+    &--single {
+      display: grid;
+    }
     &--primary {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 768px) {
+      &--default,
+      &--single,
+      &--primary {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

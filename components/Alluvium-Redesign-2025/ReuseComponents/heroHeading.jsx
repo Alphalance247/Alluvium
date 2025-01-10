@@ -6,6 +6,7 @@ const HeroHeading = ({
   update,
   heading,
   subhead,
+  extraContent,
   updateSub,
   updateVariant,
   updateSign = false,
@@ -16,6 +17,7 @@ const HeroHeading = ({
   headSection = "primary",
   withParagragh = true,
   variantMargingFix = "default",
+  variantTransform,
 }) => {
   return (
     <div className={styles.hero__heading}>
@@ -67,9 +69,24 @@ const HeroHeading = ({
         <p
           className={`${styles.paragraph__transform} ${
             styles[`paragraph__transform--${variant}`]
-          } ${styles[`paragraph__transform--${variantMargingFix}`]}`}
+          } ${styles[`paragraph__transform--${variantMargingFix}`]}
+          ${styles[`paragraph__transform--${variantTransform}`]}
+          `}
         >
           {subhead}
+        </p>
+      )}
+      {extraContent && (
+        <p
+          style={{ marginTop: "16px" }}
+          className={`
+          ${styles.paragraph__transform} ${
+            styles[`paragraph__transform--${variant}`]
+          } ${styles[`paragraph__transform--${variantMargingFix}`]}
+          ${styles[`paragraph__transform--${variantTransform}`]}
+          `}
+        >
+          {extraContent}
         </p>
       )}
     </div>
