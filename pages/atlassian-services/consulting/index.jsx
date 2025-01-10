@@ -29,7 +29,7 @@ const Consulting = () => {
         contentsheading2="Are you seeking Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? Let us help you tackle your teams' challenges."
         withSlide={false}
         button1={
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <Button size="large">Schedule a Call</Button>
           </Link>
         }

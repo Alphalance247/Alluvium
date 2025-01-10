@@ -862,7 +862,7 @@ export const consultingPageCards = [
       "Our services include thorough training for end-users to ensure smooth adoption and effective utilization of Agile practices.",
     ],
     variant: "border",
-    link: "/support/contact#schedule-a-call",
+    link: "/contact-us",
     buttonText: "Book a Free Consult",
     buttonVariant: "outline",
   },
@@ -884,7 +884,7 @@ export const consultingPageCards = [
       "We provide specialized health checks and consultancy to ensure your business processes are fully supported, enabling you to utilize your Atlassian tools to their fullest potential.",
     ],
     variant: "border",
-    link: "/support/contact#schedule-a-call",
+    link: "/contact-us",
     buttonText: "Book a Free Consult",
     buttonVariant: "outline",
   },
@@ -2295,7 +2295,7 @@ export const servicesContent = [
     subHeading:
       "Optimize your Atlassian environment with our AWS consulting services. We offer managed services, infrastructure review, modernization, and DevOps solutions, delivered by our team of experienced consultants.",
     btn: "Speak to our consultant",
-    url: "/contact-us/contact-sales-team",
+    url: "#consultationForm",
   },
   {
     img: "/assets/redesign-2025/atlassian.svg",
@@ -2303,7 +2303,7 @@ export const servicesContent = [
     subHeading:
       "Enhance your projects with our comprehensive Design as a Service and cutting-edge software development. Our expert team delivers tailored, innovative solutions to meet your unique needs and drive your business forward.",
     btn: "Schedule a meeting",
-    url: "/support/contact#schedule-a-call",
+    url: "/contact-us",
   },
 ];
 

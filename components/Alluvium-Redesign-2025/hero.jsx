@@ -24,7 +24,7 @@ const Hero = () => {
                 showParagraph={false}
               />
               <div className={styles.btns}>
-                <Link href="/support/contact#schedule-a-call">
+                <Link href="/contact-us">
                   <Button size="mediumL">Contact Us</Button>
                 </Link>
 

@@ -22,7 +22,7 @@ const Potential = () => {
             Boost your business productivity with expert Atlassian solutions
             from Alluvium.
           </p>
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <button>Schedule a Meeting</button>
           </Link>
         </div>

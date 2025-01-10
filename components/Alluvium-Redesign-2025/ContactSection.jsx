@@ -142,7 +142,7 @@ const ContactSection = ({ withLines = true }) => {
   };
 
   return (
-    <section className={styles.consultation}>
+    <section className={styles.consultation} id="consultationForm">
       <div className={styles.container}>
         {withLines && <Lines variant="primary" />}
         <div className={styles.mainContainer}>
