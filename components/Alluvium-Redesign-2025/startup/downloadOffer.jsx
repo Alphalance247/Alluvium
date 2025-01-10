@@ -12,7 +12,11 @@ const DownLoadOffer = () => {
           Get a comprehensive overview of our $31,000 Atlassian AI license and
           support package. Click the button below to download the detailed PDF
         </p>
-        <Button size="large">Download PDF</Button>
+        <Link
+          href={"/files/Server to Data Center Migration for Major Insurer.pdf"}
+        >
+          <Button size="large">Download PDF</Button>
+        </Link>
       </div>
       <div>
         <Image

@@ -14,7 +14,7 @@ const HeroSection = () => {
           <div className={styles.heroLeft}>
             <HeroHeading
               heading="Supporting Growth + Innovation"
-              subhead="A $31,000 in Atlassian AI license and support.."
+              subhead="$31,000+ Atlassian AI Licenses, Implementation and Support package free for startup"
               variant="primary"
               withLink={false}
               showParagraph={false}

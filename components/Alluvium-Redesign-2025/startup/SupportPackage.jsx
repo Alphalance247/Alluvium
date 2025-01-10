@@ -1,6 +1,8 @@
 import React from "react";
 import HeroHeading from "../ReuseComponents/heroHeading";
+// import styles from "../../../styles/AlluviumRedesign2025/startup/SupportPackage.module.scss";
 import styles from "../../../styles/AlluviumRedesign2025/startup/SupportPackage.module.scss";
+import StartupPackage from "./StartupPackage";
 
 const SupportPackage = () => {
   const list = [
@@ -19,6 +21,8 @@ const SupportPackage = () => {
             withLink={false}
           />
         </div>
+
+        <StartupPackage />
 
         <div>
           <ul className={styles.list__package}>

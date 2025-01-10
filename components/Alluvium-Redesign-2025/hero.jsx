@@ -17,29 +17,34 @@ const Hero = () => {
                 update="Alluvium Supports the Stanford Chambers of Commerce"
                 updateSub="NEW UPDATE"
                 updateSign={true}
-                heading="Empower Your Teams with Expert Atlassian Solutions"
-                subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
-                variant="primary"
-                withLink={true}
+                heading="Supporting Growth Innovation - "
+                // subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
+                variant="secondary"
+                withLink={false}
                 showParagraph={false}
+                span={"$31,000+ "}
+                headingcont={
+                  "Atlassian AI Licenses, Implementation and Support package"
+                }
+                span1={"Free for Startup"}
               />
               <div className={styles.btns}>
-                <Link href="/contact-us">
-                  <Button size="mediumL">Contact Us</Button>
+                <Link href="#consultationForm">
+                  <Button size="mediumL">Request a Demo</Button>
                 </Link>
 
-                <Link href="/why-hire-us">
+                <Link href="/startup">
                   <Button variant="redesign" size="xxlarge">
-                    Why hire us as your Atlassian Partner
+                    Learn More About Our Offer
                   </Button>
                 </Link>
               </div>
             </div>
 
             <Image
-              src="/assets/redesign-2025/collaborate.png"
-              width={500}
-              height={598}
+              src="/assets/redesign-2025/image.png"
+              width={494}
+              height={472}
               alt="colllaborate"
               // layout="responsive"
             />
