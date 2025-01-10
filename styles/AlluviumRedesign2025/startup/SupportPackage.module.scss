@@ -20,6 +20,13 @@
 
   .heading__start {
     width: 60%;
+
+    @media screen and (max-width: 992px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 640px) {
+      width: 100%;
+    }
   }
 
   .list__package {

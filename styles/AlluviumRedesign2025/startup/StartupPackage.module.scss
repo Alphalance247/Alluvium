@@ -2,21 +2,35 @@
   margin-top: 2rem;
   font-family: Arial, sans-serif;
 
+  @media screen and (max-width: 640px) {
+    overflow: scroll;
+  }
+
   .heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     h2 {
       font-weight: 700;
-      font-weight: 32px;
+      font-size: 32px;
       line-height: 60px;
       color: #141414;
+
+      @media screen and (max-width: 640px) {
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
     }
     p {
       font-weight: 700;
       font-size: 24px;
       line-height: 60px;
       color: #e37915;
+
+      @media screen and (max-width: 640px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
     }
   }
 
@@ -61,6 +75,11 @@
       font-size: 18px;
       line-height: 28px;
       margin-bottom: 0;
+
+      @media screen and (max-width: 640px) {
+        font-size: 14px;
+        line-height: 1.3rem;
+      }
     }
   }
 
@@ -72,10 +91,23 @@
     font-size: 18px;
     line-height: 20px;
 
+    @media screen and (max-width: 640px) {
+      font-size: 14px;
+      line-height: 1.3rem;
+    }
+
     .figures {
       display: flex;
       gap: 260px;
       padding: 13px 44px 19px 29px;
+    }
+
+    .dollar {
+      margin-left: 1.5rem;
+
+      @media screen and (max-width: 640px) {
+        margin-left: 0px;
+      }
     }
 
     .strikethrough {
