@@ -16,11 +16,11 @@ const HeroSection = () => {
               heading="Supporting Growth + Innovation"
               subhead="A $31,000 in Atlassian AI license and support.."
               variant="primary"
-              withLink={true}
+              withLink={false}
               showParagraph={false}
             />
             <div className={styles.btns}>
-              <Link href="#">
+              <Link href="#consultationForm">
                 <Button size="mediumL">Request Demo</Button>
               </Link>
             </div>

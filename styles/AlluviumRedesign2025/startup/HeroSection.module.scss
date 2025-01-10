@@ -4,10 +4,12 @@
   box-shadow: 0px -1px 2px 0px rgba(16, 24, 40, 0.04);
 
   main {
-    max-width: 1274px;
+    max-width: 1272px;
     width: 100%;
     align-items: center;
-    margin: 0 auto;
+    margin: auto;
+
+    border-left: 1px solid #f0f0f0;
   }
 }
 
@@ -16,6 +18,7 @@
   display: flex;
   align-items: center;
   gap: 7.3%;
+  padding-left: 3.5rem;
 
   .heroLeft {
     width: 42%;
