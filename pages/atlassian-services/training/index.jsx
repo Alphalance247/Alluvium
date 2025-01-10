@@ -29,7 +29,7 @@ const Training = () => {
         contentsheading2="Upgrade your Atlassian tool skills and master the best practises for your daily work by getting trained by our certified Atlassian trainers."
         withSlide={false}
         button1={
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <Button size="large">Get in Touch</Button>
           </Link>
         }
@@ -54,7 +54,7 @@ const Training = () => {
           text={false}
           variant="primary"
           button1={
-            <Link href="/support/contact#schedule-a-call" passHref>
+            <Link href="/contact-us" passHref>
               <Button size="large">Schedule a Call</Button>
             </Link>
           }

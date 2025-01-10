@@ -30,7 +30,7 @@ const MeetAlluvium = () => {
             Migrations, Support Services, Training, Holistic Site Audit and
             Governance, plus access to Atlassian Certified Experts on demand.
           </p>
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <Button>Get in Touch</Button>
           </Link>
         </div>
