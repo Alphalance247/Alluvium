@@ -1,6 +1,7 @@
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../styles/cloud-migration-case-study/migartionmain.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const ContentSection = ({ item }) => {
   return (
@@ -39,7 +40,9 @@ const ContentSection = ({ item }) => {
               })}
             </div>
             <div>
-              <Button size="large">Contact Our Sales Team</Button>
+              <Link href={"/contact-us"}>
+                <Button size="large">Contact Our Sales Team</Button>
+              </Link>
             </div>
           </div>
         </div>

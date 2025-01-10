@@ -14,7 +14,7 @@ const SoftwareDevelopment = () => {
         contentsheading1="Innovative Software Development & Design Services"
         contentsheading2="Our team of experts go beyond traditional software development to provide comprehensive solutions that drive efficiency, enhance customer experiences, and propel your business forward."
         button1={
-          <Link href="/support/contact#schedule-a-call" passHref>
+          <Link href="/contact-us" passHref>
             <Button size="large">Schedule a Call</Button>
           </Link>
         }

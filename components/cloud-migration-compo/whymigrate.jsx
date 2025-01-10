@@ -46,10 +46,7 @@ const WhyMigrate = ({
         </div>
         {freeconsult && (
           <div className=" text-center my-5">
-            <Link
-              className={styles.link}
-              href="/support/contact#schedule-a-call"
-            >
+            <Link className={styles.link} href="/contact-us">
               <Button size="large">Book a Free Consult</Button>
             </Link>
           </div>

@@ -14,7 +14,7 @@ const Footer = () => {
       content:
         "Need a quick chat? Skip the form and book a time that works for you.",
       btn: "Book a Meeting",
-      url: "/support/contact#schedule-a-call",
+      url: "/contact-us",
     },
     {
       img: "/assets/redesign-2025/base2.svg",
@@ -53,8 +53,8 @@ const Footer = () => {
       text1: "Migration Case Study",
       text2: "ITSM/JSM Case study",
       text3: "Events",
-      url1: "/atlassian-services/cloud-migration",
-      url2: "/atlassian-services/itsm-services",
+      url1: "/atlassian-cloud-migration-case-studies",
+      url2: "/atlassian-case-studies",
       url3: "/event/event-blog",
     },
   ];
