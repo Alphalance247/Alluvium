@@ -8,8 +8,11 @@
     width: 100%;
     align-items: center;
     margin: auto;
-
     border-left: 1px solid #f0f0f0;
+
+    @media screen and (max-width: 640px) {
+      align-items: start;
+    }
   }
 }
 
@@ -17,10 +20,31 @@
   width: 100%;
   display: flex;
   align-items: center;
-  // gap: 7.3%;
+
   padding-left: 3.5rem;
+
+  @media screen and (max-width: 992px) {
+    padding-left: 2rem;
+    gap: 7.3%;
+    padding-top: 3rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-left: 18px;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-right: 18px;
+  }
 
   .heroLeft {
     width: 42%;
+
+    @media screen and (max-width: 992px) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+    }
   }
 }

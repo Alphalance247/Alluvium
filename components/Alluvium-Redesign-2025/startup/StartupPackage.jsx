@@ -80,7 +80,7 @@ const StartupPackage = () => {
           <p>Total:</p>{" "}
           <p>
             <span className={styles.strikethrough}>$31,600 </span>
-            <span style={{ marginLeft: "24px" }}>$0.00</span>
+            <span className={styles.dollar}>$0.00</span>
           </p>
         </div>
       </div>
