@@ -53,8 +53,25 @@
   border-right: 1px solid #f0f0f0;
   border-left: 1px solid #f0f0f0;
 
+  @media screen and (max-width: 992px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    padding-left: 18px;
+    padding-right: 18px;
+    flex-direction: column;
+    grid-gap: 2rem;
+  }
+
   .download {
     width: 60%;
+
+    @media screen and (max-width: 640px) {
+      width: 90%;
+    }
+
     h3 {
       color: #11202d;
       font-family: "Grotesk";
@@ -62,6 +79,11 @@
       line-height: 51px;
       font-weight: 700;
       margin-bottom: 26px;
+
+      @media screen and (max-width: 992px) {
+        font-size: 2.3rem;
+        line-height: 3rem;
+      }
     }
 
     p {
@@ -69,6 +91,11 @@
       font-weight: 500;
       color: #000000;
       margin-bottom: 26px;
+
+      @media screen and (max-width: 992px) {
+        font-size: 1rem;
+        line-height: 1.3rem;
+      }
     }
   }
 }
