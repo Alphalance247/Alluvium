@@ -1,0 +1,28 @@
+.migrationSection {
+  background: #fcfcfc;
+  width: 100%;
+  main {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.child1 {
+  width: 48%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.child2 {
+  width: 100%;
+  margin-top: -16px;
+}

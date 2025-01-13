@@ -12,9 +12,15 @@ const ServicesCardReuse = ({
   useText,
   useImage,
   ConsultationCardServices,
+  noBorder,
+  noBorderCard,
 }) => {
   return (
-    <section className={styles.services__card__reuse}>
+    <section
+      className={`${styles.services__card__reuse} ${
+        styles[`services__card__reuse--${noBorder}`]
+      }`}
+    >
       <div
         className={`${styles.services__card} ${
           styles[`services__card--${gridVariant}`]
@@ -36,6 +42,7 @@ const ServicesCardReuse = ({
             headingVariant={headingVariant}
             useImage={useImage}
             useText={useText}
+            noBorderCard={noBorderCard}
           />
         ))}
 

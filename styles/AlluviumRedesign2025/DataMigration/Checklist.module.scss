@@ -14,22 +14,40 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 }
 .section1 {
   padding: 64px 0 64px 48px;
   color: #ffffff;
   width: 54%;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 24px;
+  }
+
   h4 {
     font-family: "Grotesk";
     font-weight: 700;
     font-size: 32px;
     line-height: 40px;
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
   }
   p {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   button {
     background: #ffffff;
@@ -49,4 +67,9 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 24px;
+  }
 }

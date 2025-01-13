@@ -16,9 +16,10 @@ const AtlassianServicesCard = ({
   mainText,
   useImage = true,
   useText = false,
+  noBorderCard,
 }) => {
   return (
-    <div className={`${styles.card}`}>
+    <div className={`${styles.card} ${styles[`card--${noBorderCard}`]}`}>
       {useImage && (
         <Image width={width} height={height} src={img} alt="icons" />
       )}

@@ -13,6 +13,7 @@ import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseCompon
 import ReadMore from "components/Alluvium-Redesign-2025/ReuseComponents/readmore";
 import Heading from "components/Alluvium-Redesign-2025/heading";
 import Image from "next/image";
+import MigrationProcess from "components/Alluvium-Redesign-2025/data-migration/MigrationProcess";
 
 const description = [
   {
@@ -34,6 +35,7 @@ const DataMigration = () => {
           }
           variantTransform={"left-aligned"}
         />
+        <MigrationProcess />
         <Checklist />
         <CloudMigrationSection
           variant={"secondary"}

@@ -105,3 +105,46 @@ export const migrationWithAlluvium = [
     ],
   },
 ];
+
+export const migrationProcess = [
+  {
+    title: "The Discovery Phase",
+    description: [
+      {
+        text: "Before starting your migration journey, we take the time to truly understand your unique Atlassian landscape. Through a comprehensive analysis of your current instance, we uncover your specific needs and pain points. This phase which takes about 14-21 days allows us to customize a migration strategy that seamlessly aligns with your business objectives.",
+      },
+    ],
+  },
+  {
+    title: "Smoke Testing (1 month)",
+    description: [
+      {
+        text: 'With a clear understanding of your requirements, we construct a migration blueprint in 3-4 weeks. This is to ensure a smooth transition, we meticulously test this plan in a controlled environment. This "smoke test" helps us identify potential challenges and refine our approach, minimizing surprises during the actual migration.',
+      },
+    ],
+  },
+  {
+    title: "User Acceptance Testing",
+    description: [
+      {
+        text: "Your active involvement is crucial to the success of the migration. The User Acceptance Testing(UAT) takes around 14-21 days and during this phase, you'll be the captain at the helm, testing every aspect of the new environment. Your feedback is invaluable as we fine-tune the migration plan, addressing any issues and ensuring a smooth transition for your team.",
+      },
+    ],
+  },
+  {
+    title: "Production Migration",
+    description: [
+      {
+        text: "With confidence and expertise, we execute the final migration based on the insights gathered from the previous phases. Our meticulously crafted migration runbook, combined with your valuable feedback, ensures a smooth transition to your new Atlassian instance.",
+      },
+    ],
+  },
+  {
+    title: "Post Migration Support",
+    description: [
+      {
+        text: "Our commitment doesn't end with the migration. Within 7-14 days, we offer dedicated post-migration support to help you settle into your new environment and maximize the benefits of your upgraded Atlassian instance.",
+      },
+    ],
+  },
+];
