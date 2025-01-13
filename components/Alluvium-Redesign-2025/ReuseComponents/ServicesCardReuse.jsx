@@ -11,6 +11,12 @@ const ServicesCardReuse = ({
   showAdditionalCard = false,
   img,
 }) => {
+  const totalCards = data.length;
+
+  // Determine how many borders to remove
+  const removeCount = totalCards >= 6 ? 3 : 2;
+  const startIndexToRemove = totalCards - removeCount;
+
   return (
     <section className={styles.services__card__reuse}>
       <div className={styles.card__encap}>
@@ -34,6 +40,7 @@ const ServicesCardReuse = ({
               marginVariant={marginVariant}
               subHeadingVariant={subHeadingVariant}
               headingVariant={headingVariant}
+              removeBorder={i >= startIndexToRemove}
             />
           ))}
 

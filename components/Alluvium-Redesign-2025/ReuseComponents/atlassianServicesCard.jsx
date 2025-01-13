@@ -1,6 +1,5 @@
 import Image from "next/image";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/atlassianservicescard.module.scss";
-import Link from "next/link";
 
 const AtlassianServicesCard = ({
   title,
@@ -13,13 +12,12 @@ const AtlassianServicesCard = ({
   headingVariant = "default",
   subHeadingVariant = "default",
   marginVariant = "marginDefault",
-  text,
-  index,
+  removeBorder = false,
 }) => {
   return (
     <div
       className={`${styles.card} ${
-        index.length === index ? styles.lastCard : styles.other
+        removeBorder ? styles.noBorder : styles.withBorder
       }`}
     >
       <Image width={width} height={height} src={img} alt="icons" />

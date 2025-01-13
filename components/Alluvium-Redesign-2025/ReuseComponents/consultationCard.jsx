@@ -1,4 +1,5 @@
 import Button from "components/atlassian-service-reuse/Button";
+import Link from "next/link";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/consultation.module.scss";
 const ConsultationCardServices = ({ title, description, image }) => {
   return (
@@ -14,7 +15,9 @@ const ConsultationCardServices = ({ title, description, image }) => {
       </div>
 
       <div>
-        <Button>Book Free Consultation</Button>
+        <Link href={"/contact-us"}>
+          <Button>Book Free Consultation</Button>
+        </Link>
       </div>
     </div>
   );

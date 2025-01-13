@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (max-width: 992px) {
+    padding: 4rem 18px;
+  }
+
   h3 {
     font-family: "Grotesk";
     font-size: 1.5rem;
@@ -12,11 +16,17 @@
     font-weight: 700;
     color: #141414;
     margin-bottom: 1.5rem;
+
+    @media screen and (max-width: 992px) {
+      font-size: 1.2rem;
+      line-height: 1.75rem;
+    }
   }
 
   p {
     font-size: 18px;
     line-height: 28px;
     color: #595959;
+    margin-bottom: 3rem;
   }
 }

@@ -1,15 +1,25 @@
-.lastCard {
-  border-bottom: 3px solid black;
+.noBorder {
+  border-bottom: 0px solid black;
 }
 
-.other {
+.withBorder {
   border-bottom: 1px solid #f0f0f0;
 }
 
 .card {
   padding: 48px;
   border-right: 1px solid #f0f0f0;
-  // border-bottom: 1px solid #f0f0f0;
+
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+    border: none;
+  }
+
+  // @media screen and (max-width: 640px) {
+  //   width: 100%;
+  //   text-align: left;
+  //   padding-left: 18px;
+  // }
 
   .heading {
     font-weight: 600;
