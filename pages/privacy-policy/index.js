@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Head from "next/head";
 // import Footer from "../components/Footer";
 import BannerRotate from "../../components/BannerRotate";
+import styles from "../../styles/Privacypolicy.module.scss";
 import List from "../../components/privacy_policy/List";
 import { productData } from "../../data";
 import Layout from "components/layout";
