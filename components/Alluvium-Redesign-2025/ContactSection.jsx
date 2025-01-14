@@ -117,15 +117,15 @@ const ContactSection = ({ withLines = true }) => {
         addToast("Your inquiry has been submitted successfully.", {
           appearance: "success",
         });
-        if (typeof window !== "undefined" && window.gtag) {
-          window.gtag({
-            on: "visible",
-            vars: {
-              event_name: "conversion",
-              send_to: ["AW-16717401169/JfbzCLmEovYZENGYvaM-"],
-            },
-          });
-        }
+        // if (typeof window !== "undefined" && window.gtag) {
+        //   window.gtag({
+        //     on: "visible",
+        //     vars: {
+        //       event_name: "conversion",
+        //       send_to: ["AW-16717401169/JfbzCLmEovYZENGYvaM-"],
+        //     },
+        //   });
+        // }
       } else {
         addToast("There was an issue submitting your inquiry. try again.", {
           appearance: "info",
