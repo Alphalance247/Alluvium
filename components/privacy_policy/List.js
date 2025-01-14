@@ -16,7 +16,7 @@ const List = ({ color, content }) => {
               visit and use`,
           isLinkAvailable: true,
           linkText: " https://alluvium.net/ ",
-          url: " https://alluvium.net ",
+          url: "https://alluvium.net",
           textCont: ` ("website", "service"). We reserve the right to change this policy at any given time, of which you
                        will be promptly updated. If you want to make sure that you are up to date with the latest changes,
                         we advise you to frequently visit this page.`,
@@ -37,7 +37,7 @@ const List = ({ color, content }) => {
           text: " Alluvium has in compliance with the GDPR appointed a Data Protection Officer to guide and manage our processing activities. If you have any question and issue regarding this Notice, kindly contact our DPO @",
           isLinkAvailable: true,
           linkText: " contact@alluvium.net ",
-          url: " mailto:contact@alluvium.net",
+          url: "mailto:contact@alluvium.net",
         },
       ],
     },
