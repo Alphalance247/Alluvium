@@ -8,12 +8,21 @@
   padding-left: 3.5rem;
   padding-right: 3.5rem;
 
+  @media screen and (max-width: 640px) {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
   .privacy__policy__heading {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
     font-family: "Grotesk";
     text-align: center;
+    @media screen and (max-width: 640px) {
+      font-size: 1.7rem;
+      line-height: 2rem;
+    }
   }
 
   .privacy__policy__content {
@@ -21,24 +30,44 @@
     flex-direction: column;
     row-gap: 3rem;
 
+    @media screen and (max-width: 640px) {
+      row-gap: 1rem;
+    }
+
     .privacy__policy__content__text {
       h3 {
         font-size: 1.5rem;
         font-weight: 700;
         margin-bottom: 2.5rem;
         font-family: "Grotesk";
+
+        @media screen and (max-width: 640px) {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          margin-bottom: 0.7rem;
+        }
       }
 
       p {
         font-size: 1.2rem;
         font-weight: 400;
         color: #333333;
+
+        @media screen and (max-width: 640px) {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
       }
 
       .boldSpan {
         font-weight: 600;
         font-size: 1.5rem;
         color: #121212;
+
+        @media screen and (max-width: 640px) {
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+        }
       }
     }
 
@@ -49,15 +78,30 @@
 
     .privacy__list {
       padding-left: 1rem;
+
+      @media screen and (max-width: 640px) {
+        padding-left: 0.4rem;
+      }
+
       span {
         font-weight: 600;
         font-size: 1.2rem;
         color: #121212;
+
+        @media screen and (max-width: 640px) {
+          font-size: 1rem;
+          line-height: 1.2rem;
+        }
       }
       li {
         font-size: 1.2rem;
         font-weight: 400;
         color: #333333;
+
+        @media screen and (max-width: 640px) {
+          font-size: 1rem;
+          line-height: 1.2rem;
+        }
       }
     }
   }
