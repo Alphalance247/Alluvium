@@ -1,34 +1,27 @@
-.services__card__reuse {
-  max-width: 1272px;
-  margin: auto;
-  border-left: 1px solid #f0f0f0;
-  border-right: 1px solid #f0f0f0;
+.mainSection {
   border-bottom: 1px solid #f0f0f0;
-  width: 100%;
+  .services__card__reuse {
+    max-width: 1272px;
+    margin: auto;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    width: 100%;
 
-  &--noBorder {
-    border: transparent;
-  }
-
-  .services__card {
-    &--default {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    &--single {
-      display: grid;
-    }
-    &--primary {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+    &--noBorder {
+      border: transparent;
     }
 
-    @media (max-width: 768px) {
-      &--default,
-      &--single,
+    .services__card {
+      &--default {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      &--single {
+        display: grid;
+      }
       &--primary {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }

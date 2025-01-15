@@ -22,8 +22,12 @@ const HeroSection = () => {
                 <Button size="medium">Request License Quote</Button>
               </Link>
 
-              <Link href="/atlassian-services/atlassian-licence/licence-request">
-                <Button variant="redesign" size="medium">
+              <Link href="/contact-us">
+                <Button
+                  className={styles.freeButton}
+                  variant="redesign"
+                  size="medium"
+                >
                   Get a Free Atlassian Audit
                 </Button>
               </Link>

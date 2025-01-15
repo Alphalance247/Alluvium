@@ -48,10 +48,12 @@ const AtlassianLicence = () => {
                 label: "Request License",
                 variant: "redesign",
                 size: "medium",
+                href: "/atlassian-services/atlassian-licence/licence-request",
               },
               {
                 label: "Request Site Audit",
                 size: "medium",
+                href: "/contact-us",
               },
             ]}
           />

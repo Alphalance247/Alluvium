@@ -72,7 +72,9 @@ const CloudMigration = () => {
               titleVariant="whiteVar"
               variant="secondary"
             />
-            <ReadMore content={"Read More"} />
+            <div className={styles.readMore}>
+              <ReadMore content={"Read More"} />
+            </div>
           </div>
         </main>
       </div>
@@ -86,6 +88,7 @@ const CloudMigration = () => {
               useText={false}
               headingVariant={"main"}
               subHeadingVariant={"primary"}
+              noBorderCard={"noBorderCard"}
             />
           </div>
           <div className={styles.child2}>

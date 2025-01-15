@@ -7,23 +7,12 @@
     border: transparent;
   }
 
-  @media (max-width: 1024px) {
-    padding: 32px;
-  }
-  @media (max-width: 768px) {
-    padding: 24px;
-  }
-
   .mainText {
     font-family: "Grotesk";
     font-weight: 600;
     font-size: 28px;
     line-height: 32px;
     color: #a2a8b6;
-    @media (max-width: 768px) {
-      font-size: 20px;
-      line-height: 28px;
-    }
   }
 
   .heading {
@@ -41,15 +30,6 @@
       font-weight: 700;
       font-size: 32px;
       line-height: 40px;
-
-      @media (max-width: 1024px) {
-        font-size: 28px;
-        line-height: 32px;
-      }
-      @media (max-width: 768px) {
-        font-size: 20px;
-        line-height: 28px;
-      }
     }
 
     &--primary {
@@ -76,25 +56,11 @@
     &--default {
       font-size: 18px;
       line-height: 28px;
-
-      @media (max-width: 1024px) {
-        font-size: 16px;
-        line-height: 24px;
-      }
-      @media (max-width: 768px) {
-        font-size: 14px;
-        line-height: 20px;
-      }
     }
 
     &--primary {
       font-size: 1rem;
       line-height: 1.5rem;
-
-      @media (max-width: 768px) {
-        font-size: 14px;
-        line-height: 20px;
-      }
     }
   }
 

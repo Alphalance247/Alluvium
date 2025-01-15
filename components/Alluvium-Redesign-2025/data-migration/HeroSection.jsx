@@ -17,7 +17,7 @@ const HeroSection = () => {
               subhead="When smooth and secure data migration matters, make Alluvium your go-to partner."
               subsec={"ATLASSIAN MIGRATION AND CONSOLIDATION"}
             />
-            <Link className={styles.heroButton} href="#">
+            <Link className={styles.heroButton} href="/contact-us">
               <Button className={styles.heroButton} size="mediumL">
                 Schedule a Demo
               </Button>

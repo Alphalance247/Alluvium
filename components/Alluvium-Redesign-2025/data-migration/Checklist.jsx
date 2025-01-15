@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2025/DataMigration/Checklist.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const Checklist = () => {
   return (
@@ -18,7 +19,9 @@ const Checklist = () => {
               and discover if <br /> you have everything in place to migrate
               successfully to Atlassian Cloud.
             </p>
-            <button>Take Me to the Checklist</button>
+            <Link href="https://support.portal.alluvium.net/servicedesk/customer/portal/59/group/181/create/691">
+              <button>Take Me to the Checklist</button>
+            </Link>
           </div>
           <div className={styles.section2}>
             <Image

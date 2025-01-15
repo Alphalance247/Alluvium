@@ -22,6 +22,7 @@ const LicenseManager = () => {
             useText={false}
             headingVariant={"main"}
             subHeadingVariant={"primary"}
+            noBorderCard={"noBorderCard"}
           />
         </div>
         <div className={styles.child2}>
