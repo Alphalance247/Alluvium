@@ -85,9 +85,6 @@ export default function Navigation({ theme }) {
                   >
                     <ul>
                       <li>
-                        <Link href="/about">About us</Link>
-                      </li>
-                      <li>
                         <a
                           href="http://university.alluvium.net"
                           target="_blank"
@@ -100,9 +97,6 @@ export default function Navigation({ theme }) {
                       </li>
                       <li>
                         <Link href="/project-reel">Project Reel</Link>
-                      </li>
-                      <li>
-                        <Link href="/support/contact">Contact Us</Link>
                       </li>
                       <li>{/* <Link href="/blogs">blogs</Link> */}</li>
                     </ul>
@@ -238,7 +232,7 @@ export default function Navigation({ theme }) {
               <Link href="/support">+ Support (FAQs)</Link>
             </li>
             <li>
-              <Link href="/support/contact">+ Contact Us</Link>
+              <Link href="/contact">+ Contact Us</Link>
             </li>
             <li>
               <a

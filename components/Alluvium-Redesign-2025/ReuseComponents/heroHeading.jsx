@@ -18,6 +18,9 @@ const HeroHeading = ({
   withParagragh = true,
   variantMargingFix = "default",
   variantTransform,
+  span,
+  headingcont,
+  span1,
 }) => {
   return (
     <div className={styles.hero__heading}>
@@ -63,7 +66,8 @@ const HeroHeading = ({
             : styles.headingWithNoParagrapgh
         }`}
       >
-        {heading}
+        {heading} <span style={{ color: "#E37915" }}>{span}</span> {headingcont}{" "}
+        <span style={{ color: "#E37915" }}>{span1}</span>
       </h1>
       {withParagragh && (
         <p

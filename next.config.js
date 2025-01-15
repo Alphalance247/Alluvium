@@ -1,8 +1,6 @@
-const path = require('path')
-const withSass = require('@zeit/next-sass');
-const withImages = require('next-images');
-
-
+const path = require("path");
+const withSass = require("@zeit/next-sass");
+const withImages = require("next-images");
 
 module.exports = withSass({
   /* bydefault config  option Read For More Optios 
@@ -10,10 +8,9 @@ module.exports = withSass({
 
   cssModules: true,
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
+    includePaths: [path.join(__dirname, "styles")],
   },
-})
-
+});
 
 // module.exports = {
 //   /* Add Your Scss File Folder Path Here */
@@ -23,8 +20,8 @@ module.exports = withSass({
 // }
 
 module.exports = {
-  basePath: '/docs',
-}
+  basePath: "/docs",
+};
 
 // module.exports = {
 //   webpack(config) {
@@ -39,7 +36,6 @@ module.exports = {
 //     return config;
 //   },
 // };
-
 
 // module.exports = withImages({
 //   exclude: path.resolve(__dirname, 'public/assets'),
@@ -62,14 +58,27 @@ module.exports = {
   env: {
     NEXT_PUBLIC_SMTP_USERNAME: process.env.NEXT_PUBLIC_SMTP_USERNAME,
     NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS,
-    AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE: process.env.AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE
+    AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE:
+      process.env.AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE,
   },
-}
+};
 
 module.exports = {
-  images:{
+  images: {
     // loader:"cloudinary",
     // path:"https://res.cloudinary.com/geniesys",
     domains: ["blog.alluvium.net"],
-  }
-}
+  },
+};
+
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/support/contact",
+        destination: "/contact-us",
+        permanent: true, // triggers 308
+      },
+    ];
+  },
+};

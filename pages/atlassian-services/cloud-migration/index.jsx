@@ -36,9 +36,31 @@ const CloudMigration = () => {
           content="Why Cloud Migration, What does Cloud Migration mean?, How much does Cloud migration cost, Atlassian cloud migration, cloud migration approach, cloud migration benefits, cloud migration best practices, cloud migration case study, cloud migration companies, cloud migration checklist, cloud migration consultant, cloud migration vs data migration, cloud migration benefits and its challenges issues, cloud migration assessment, cloud migration assessment tools"
         />
       </Head>
+<<<<<<< HEAD
       <HeroSection />
       <CloudMigrationSection
         variant={"secondary"}
+=======
+      <ServicesHero
+        contentsheading="ATLASSIAN MIGRATION AND CONSOLIDATION"
+        contentsheading1="Effortless Atlassian Migration"
+        contentsheading2="When smooth and secure data migration matters, make Alluvium your go-to partner."
+        withSlide={false}
+        button1={
+          <Link href="/contact-us">
+            <Button size="large">Schedule a Demo</Button>
+          </Link>
+        }
+      />
+
+      <ServerToCloud
+        image1={true}
+        paragraph="From strategy to execution, our team of experts will provide the
+          utmost guidance and smooth delivery throughout your data migration
+          journey. We’ll help your team prepare for Cloud or Data Center
+          migration by scrutinizing your systems and focusing on the estimation
+          process and timeframe during business hours. Moving forward, we'll conduct an in-depth analysis of the finances and technical aspects of your project and evaluate any probable risks. We ultimately get the job done and smoothly delivered—no dent, no stain. Just sit back and watch us bring your migration dream to life."
+>>>>>>> dev
         heading="Atlassian Server to Cloud Migration"
         subhead="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery throughout your data migration journey. We’ll help your team prepare for Cloud or Data Center migration by scrutinizing your systems and focusing on the estimation process and timeframe during business hours."
         extraContent={
@@ -46,6 +68,33 @@ const CloudMigration = () => {
         }
         variantTransform={"left-aligned"}
       />
+<<<<<<< HEAD
+=======
+
+      <WhyMigrate
+        heading="The Benefits of Migrating to Atlassian Cloud"
+        description=""
+        data={cloudOptions}
+        largeGap={true}
+      />
+      <ChooseAlluvium
+        choose="Why Plan Your Migration With Alluvium?"
+        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
+        chooseUsAlluvium={chooseUsAlluvium}
+      />
+      <div className={`container-fluid ${styles.seamlessMigration}`}>
+        <GetStarted
+          heading="Seamlessly migrate your data with Alluvium – Get started now!"
+          text={false}
+          variant="primary"
+          button1={
+            <Link href="/contact-us">
+              <Button size="large">Schedule a Free Consult</Button>
+            </Link>
+          }
+        />
+      </div>
+>>>>>>> dev
       <MigrationProcess />
       <Checklist />
       <CloudMigrationSection

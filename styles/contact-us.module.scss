@@ -53,6 +53,62 @@
   }
 }
 
+.booking {
+  border-bottom: 1px solid #f0f0f0;
+
+  .book_a_call {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    padding: 6rem 2.5rem 6rem 2.5rem;
+    display: grid;
+    grid-template-columns: 30% auto;
+    align-items: flex-start;
+    grid-gap: 3rem;
+
+    @media screen and (max-width: 992px) {
+      padding: 3rem 1.5rem 3rem 1.5rem;
+      grid-gap: 1.5rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      padding: 3rem 18px;
+      grid-template-columns: 1fr;
+    }
+
+    h2 {
+      font-size: 2rem;
+      line-height: 2.5rem;
+      letter-spacing: -2%;
+      font-weight: 700;
+      color: #141414;
+      font-family: "Grotesk";
+
+      @media screen and (max-width: 992px) {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: #595959;
+
+      @media screen and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 1.2rem;
+      }
+    }
+
+    .widget {
+      margin-top: -1rem;
+    }
+  }
+}
+
 .office__location {
   border-top: 1px solid #f0f0f0;
   .locate {
@@ -62,6 +118,10 @@
     border-left: 1px solid #f0f0f0;
     border-right: 1px solid #f0f0f0;
     padding: 6rem 2.5rem 6rem 2.5rem;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 18px;
+    }
   }
 
   h2 {
@@ -81,13 +141,17 @@
   }
 
   .office {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    column-gap: 4rem;
+    gap: 4rem;
 
-    @media screen and (max-width: 576px) {
-      flex-direction: column;
-      row-gap: 1.5rem;
+    @media screen and (max-width: 992px) {
+      gap: 2rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
     }
   }
 

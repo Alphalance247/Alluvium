@@ -33,7 +33,7 @@ const AtlassianService = () => {
         contentsheading2="Implement or optimize your Atlassian apps through our Atlassian products and services."
         withSlide={true}
         button1={
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <Button size="large" className="mx-md-3 my-4">
               Schedule a Call
             </Button>
@@ -55,7 +55,7 @@ const AtlassianService = () => {
         heading="Your Atlassian Partner and Solution Expert"
         text="Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
         button1={
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <Button size="large" className="mx-md-3 my-4">
               Schedule a Call
             </Button>
