@@ -40,9 +40,34 @@ const List = ({ heading, content }) => {
                       );
                     }
 
+                    if (para.type === "italic") {
+                      return (
+                        <p key={i} className={styles.paraItalics}>
+                          {para?.italicText}
+                        </p>
+                      );
+                    }
+
                     if (para?.type === "list") {
                       return (
                         <div className={styles.privacy__list} key={i}>
+                          <ul>
+                            <li>
+                              {para?.isBold && (
+                                <span className={styles.boldSpan}>
+                                  {para?.boldText}
+                                </span>
+                              )}{" "}
+                              {para?.list}
+                            </li>
+                          </ul>
+                        </div>
+                      );
+                    }
+
+                    if (para?.type === "sublist") {
+                      return (
+                        <div className={styles.privacy__sub__list} key={i}>
                           <ul>
                             <li>
                               {para?.isBold && (
