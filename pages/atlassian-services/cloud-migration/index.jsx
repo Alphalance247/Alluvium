@@ -1,18 +1,25 @@
 import Layout from "components/layout";
-import styles from "./../../../styles/licence.module.scss";
-import Link from "next/link";
-import WhyMigrate from "components/cloud-migration-compo/whymigrate";
-import CaseStudies from "components/case-studies/case-studies";
-import FaQuestions from "components/licence-component/faQuestion";
-import { cloudOptions } from "data";
-import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
-import MigrationProcess from "components/cloud-migration-compo/migrationProcess";
-import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
-import Button from "components/atlassian-service-reuse/Button";
-import GetStarted from "components/atlassian-service-reuse/getStarted";
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
-import { chooseUsAlluvium } from "data";
+import styles from "./../../../styles/AlluviumRedesign2025/DataMigration/DataMigration.module.scss";
 import Head from "next/head";
+import HeroSection from "components/Alluvium-Redesign-2025/data-migration/HeroSection";
+import CloudMigrationSection from "components/Alluvium-Redesign-2025/data-migration/CloudMIgrationSection";
+import MigrationProcess from "components/Alluvium-Redesign-2025/data-migration/MigrationProcess";
+import Checklist from "components/Alluvium-Redesign-2025/data-migration/Checklist";
+import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents/ServicesCardReuse";
+import Heading from "components/Alluvium-Redesign-2025/heading";
+import Image from "next/image";
+import ReadMore from "components/Alluvium-Redesign-2025/ReuseComponents/readmore";
+import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesCard";
+import {
+  CloudBenefits,
+  migrationWithAlluvium,
+} from "constants/data-migration/DataMigraton";
+
+const description = [
+  {
+    text: "From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey",
+  },
+];
 
 const CloudMigration = () => {
   return (
@@ -29,75 +36,66 @@ const CloudMigration = () => {
           content="Why Cloud Migration, What does Cloud Migration mean?, How much does Cloud migration cost, Atlassian cloud migration, cloud migration approach, cloud migration benefits, cloud migration best practices, cloud migration case study, cloud migration companies, cloud migration checklist, cloud migration consultant, cloud migration vs data migration, cloud migration benefits and its challenges issues, cloud migration assessment, cloud migration assessment tools"
         />
       </Head>
-      <ServicesHero
-        contentsheading="ATLASSIAN MIGRATION AND CONSOLIDATION"
-        contentsheading1="Effortless Atlassian Migration"
-        contentsheading2="When smooth and secure data migration matters, make Alluvium your go-to partner."
-        withSlide={false}
-        button1={
-          <Link href="/contact-us">
-            <Button size="large">Schedule a Demo</Button>
-          </Link>
-        }
-      />
-
-      <ServerToCloud
-        image1={true}
-        paragraph="From strategy to execution, our team of experts will provide the
-          utmost guidance and smooth delivery throughout your data migration
-          journey. We’ll help your team prepare for Cloud or Data Center
-          migration by scrutinizing your systems and focusing on the estimation
-          process and timeframe during business hours. Moving forward, we'll conduct an in-depth analysis of the finances and technical aspects of your project and evaluate any probable risks. We ultimately get the job done and smoothly delivered—no dent, no stain. Just sit back and watch us bring your migration dream to life."
+      <HeroSection />
+      <CloudMigrationSection
+        variant={"secondary"}
         heading="Atlassian Server to Cloud Migration"
-        image1Url="/assets/licence-image/cloudpic.svg"
-        alt2="cloudpic"
-      />
-
-      <ServerToCloud
-        image1={true}
-        paragraph="Is your organization ready to migrate from Server to Atlassian Cloud?"
-        heading="The Essential Migration Checklist"
-        paragraphs={true}
-        para1="Fill in our 5-minute checklist created by our Atlassian experts and discover if you have everything in place to migrate successfully to Atlassian Cloud."
-        image1Url="/assets/licence-image/checklist.png"
-        alt2="cloudpic"
-        variant="checklist"
-        display="secondary"
-        callToAction={
-          <Link href="https://support.portal.alluvium.net/servicedesk/customer/portal/59/group/181/create/691">
-            <Button size="large">Take Me to checklist</Button>
-          </Link>
+        subhead="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery throughout your data migration journey. We’ll help your team prepare for Cloud or Data Center migration by scrutinizing your systems and focusing on the estimation process and timeframe during business hours."
+        extraContent={
+          "Moving forward, we'll conduct an in-depth analysis of the finances and technical aspects of your project and evaluate any probable risks. We ultimately get the job done and smoothly delivered—no dent, no stain. Just sit back and watch us bring your migration dream to life."
         }
-        newP={true}
-        color="secondary"
+        variantTransform={"left-aligned"}
       />
-
-      <WhyMigrate
-        heading="The Benefits of Migrating to Atlassian Cloud"
-        description=""
-        data={cloudOptions}
-        largeGap={true}
-      />
-      <ChooseAlluvium
-        choose="Why Plan Your Migration With Alluvium?"
-        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
-        chooseUsAlluvium={chooseUsAlluvium}
-      />
-      <div className={`container-fluid ${styles.seamlessMigration}`}>
-        <GetStarted
-          heading="Seamlessly migrate your data with Alluvium – Get started now!"
-          text={false}
-          variant="primary"
-          button1={
-            <Link href="/contact-us">
-              <Button size="large">Schedule a Free Consult</Button>
-            </Link>
-          }
-        />
-      </div>
       <MigrationProcess />
-      <CaseStudies />
-      <FaQuestions />
+      <Checklist />
+      <CloudMigrationSection
+        variant={"secondary"}
+        heading="The Benefits of Migrating to Atlassian Cloud"
+        subhead="Our team of Atlassian certified experts is ready to help you tackle any of your Atlassian challenges."
+      />
+      <ServicesCardReuse data={CloudBenefits} useText={true} useImage={false} />
+      <div className={styles.whyMigrate}>
+        <main>
+          <div className={styles.imgChild}>
+            <Image
+              src="/assets/redesign-2025/data-migration/OurMission1.webp"
+              width={635}
+              height={523}
+              alt="hii"
+            />
+          </div>
+          <div className={styles.infoChild}>
+            <Heading
+              title="INSURANCE"
+              heading="Streamlining Server to Atlassian Cloud Migration for an Insurance Company"
+              subhead="An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution."
+              titleVariant="whiteVar"
+              variant="secondary"
+            />
+            <div className={styles.readMore}>
+              <ReadMore content={"Read More"} />
+            </div>
+          </div>
+        </main>
+      </div>
+      <div className={styles.whyMigrate}>
+        <main>
+          <div className={styles.child1}>
+            <AtlassianServicesCard
+              title={"Why Plan Your Migration With Alluvium?"}
+              description={description}
+              useImage={false}
+              useText={false}
+              headingVariant={"main"}
+              subHeadingVariant={"primary"}
+              noBorderCard={"noBorderCard"}
+            />
+          </div>
+          <div className={styles.child2}>
+            <ServicesCardReuse data={migrationWithAlluvium} />
+          </div>
+        </main>
+      </div>
     </Layout>
   );
 };

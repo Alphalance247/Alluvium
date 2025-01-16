@@ -193,7 +193,7 @@ const Footer = () => {
               <div className={styles.showcase}>
                 {text.map((item, i) => {
                   return (
-                    <a href={item?.url} target="_blank">
+                    <a href={item?.url} target="_blank" key={i}>
                       <HighLight text={item?.text} i={i} />
                     </a>
                   );
@@ -203,7 +203,7 @@ const Footer = () => {
               <div className={styles.blogs}>
                 {blogContainer.map((item, i) => {
                   return (
-                    <a href={item?.url}>
+                    <a href={item?.url} key={i}>
                       <div
                         key={i}
                         className={styles.blog}
