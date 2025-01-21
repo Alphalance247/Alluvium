@@ -9,6 +9,8 @@ const Exceptional = ({
   redesignStyle = false,
   variantPadding = "primary",
   variantPadd = "primary",
+  width = 424,
+  height = 113,
 }) => {
   return (
     <div className={`${redesignStyle ? styles.redesign__style : styles.prev}`}>
@@ -22,7 +24,7 @@ const Exceptional = ({
             styles[`imageContainer--${variantPadding}`]
           }`}
         >
-          <Image src={image} alt="certs" width={424} height={113} />
+          <Image src={image} alt="certs" width={width} height={height} />
         </div>
 
         <div

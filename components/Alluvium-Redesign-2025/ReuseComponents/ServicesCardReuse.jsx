@@ -1,6 +1,7 @@
 import AtlassianServicesCard from "./atlassianServicesCard";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/servicecardreuse.module.scss";
 import ConsultationCardServices from "./consultationCard";
+import TrustedAtlassian from "../Atlassian-Services/TrustedAtlassian";
 const ServicesCardReuse = ({
   withList,
   marginVariant,
@@ -9,16 +10,26 @@ const ServicesCardReuse = ({
   gridVariant = "default",
   data,
   showAdditionalCard = false,
-  img,
+  isBtn,
+  borderRemove = false,
+  trusted = false,
+  borderVariant = "default",
+  imageAvailable,
 }) => {
   const totalCards = data.length;
 
   // Determine how many borders to remove
   const removeCount = totalCards >= 6 ? 3 : 2;
-  const startIndexToRemove = totalCards - removeCount;
+  const removeThree = totalCards >= 6 && 2;
+  const removeType = borderRemove ? removeCount : removeThree;
+  const startIndexToRemove = totalCards - removeType;
 
   return (
-    <section className={styles.services__card__reuse}>
+    <section
+      className={` ${styles.services__card__reuse} ${
+        styles[`services__card__reuse--${borderVariant}`]
+      } `}
+    >
       <div className={styles.card__encap}>
         <div
           className={`${styles.services__card} ${
@@ -41,12 +52,16 @@ const ServicesCardReuse = ({
               subHeadingVariant={subHeadingVariant}
               headingVariant={headingVariant}
               removeBorder={i >= startIndexToRemove}
+              isBtn={isBtn}
+              imageAvailable={imageAvailable}
             />
           ))}
 
           {showAdditionalCard && <ConsultationCardServices />}
         </div>
       </div>
+
+      {trusted && <TrustedAtlassian />}
     </section>
   );
 };

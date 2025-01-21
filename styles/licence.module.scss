@@ -507,14 +507,17 @@
 }
 
 .faqDiv {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  background: #f9fafb;
+  background: white;
+  border-bottom: 1px solid #f0f0f0;
 
   .faqsEncap {
+    max-width: 1272px;
+    margin: auto;
+    width: 100%;
+    border-right: 1px solid #f0f0f0;
+    border-left: 1px solid #f0f0f0;
     display: grid;
-    grid-template-columns: 40% auto;
-    column-gap: 5.5rem;
+    grid-template-columns: 35% auto;
 
     @media screen and (max-width: 992px) {
       column-gap: 3.5;
@@ -528,6 +531,13 @@
   }
 
   .faqContent {
+    border-right: 1px solid #f0f0f0;
+    padding: 5rem 3rem;
+
+    @media screen and (max-width: 640px) {
+      padding: 3rem 18px 0rem 18px;
+    }
+
     h5 {
       font-weight: 600;
       font-size: 14px;
@@ -538,13 +548,14 @@
 
     h3 {
       font-weight: 700;
-      line-height: 53px;
-      font-size: 45px;
-      color: #0f1a24;
-      margin-bottom: 1.5rem;
+      line-height: 40px;
+      font-size: 32px;
+      color: #141414;
+      font-family: "Grotesk";
+      letter-spacing: -2%;
 
       @media screen and (max-width: 992px) {
-        font-size: 2rem;
+        font-size: 1.5rem;
       }
     }
 

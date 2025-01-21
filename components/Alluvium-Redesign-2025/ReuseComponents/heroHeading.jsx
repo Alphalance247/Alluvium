@@ -16,6 +16,7 @@ const HeroHeading = ({
   headSection = "primary",
   withParagragh = true,
   variantMargingFix = "independent",
+  headingAvailable = true,
 }) => {
   return (
     <div className={styles.hero__heading}>
@@ -53,16 +54,17 @@ const HeroHeading = ({
             </p>
           </Link>
         ))}
-
-      <h1
-        className={`${styles.headings} ${styles[`headings--${variant}`]} ${
-          withParagragh
-            ? styles.headingWithParagrapgh
-            : styles.headingWithNoParagrapgh
-        }`}
-      >
-        {heading}
-      </h1>
+      {headingAvailable && (
+        <h1
+          className={`${styles.headings} ${styles[`headings--${variant}`]} ${
+            withParagragh
+              ? styles.headingWithParagrapgh
+              : styles.headingWithNoParagrapgh
+          }`}
+        >
+          {heading}
+        </h1>
+      )}
       {withParagragh && (
         <p
           className={`${styles.paragraph__transform} ${

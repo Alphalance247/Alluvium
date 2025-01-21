@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/atlassianservicescard.module.scss";
+import Button from "components/atlassian-service-reuse/Button";
+import Link from "next/link";
 
 const AtlassianServicesCard = ({
   title,
@@ -13,6 +15,9 @@ const AtlassianServicesCard = ({
   subHeadingVariant = "default",
   marginVariant = "marginDefault",
   removeBorder = false,
+  isBtn = false,
+  index,
+  imageAvailable = true,
 }) => {
   return (
     <div
@@ -20,7 +25,9 @@ const AtlassianServicesCard = ({
         removeBorder ? styles.noBorder : styles.withBorder
       }`}
     >
-      <Image width={width} height={height} src={img} alt="icons" />
+      {imageAvailable && (
+        <Image width={width} height={height} src={img} alt="icons" />
+      )}
 
       <h6
         className={`${styles.heading} ${styles[`heading--${headingVariant}`]} ${
@@ -47,6 +54,14 @@ const AtlassianServicesCard = ({
           )}
         </p>
       ))}
+
+      {isBtn && (
+        <Link href="/support/contact#schedule-a-call">
+          <Button className={`${index === 0 ? styles.buttonMargin : null}`}>
+            Learn More
+          </Button>
+        </Link>
+      )}
 
       {withList && (
         <ul>

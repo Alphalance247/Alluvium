@@ -1245,30 +1245,6 @@ export const atlassianTools = [
   },
   {
     id: "2",
-    headings: "Confluence",
-    subhead: "WORK MANAGEMENT",
-    imgChoose: "/assets/licence-image/confluence.svg",
-    paragraphs:
-      "Collaborate with colleagues in real time on documentation and improve knowledge sharing across your entire organization.",
-  },
-  {
-    id: "3",
-    headings: "Jira Work Management",
-    subhead: "WORK MANAGEMENT",
-    imgChoose: "/assets/licence-image/jirawork.svg",
-    paragraphs:
-      "Deliver the best support to your customers with Jira Service Management while promoting self-service and offering a one-stop-show for every support request.",
-  },
-  // {
-  //   id: "4",
-  //   subhead: "WORK MANAGEMENT",
-  //   headings: "Trello",
-  //   imgChoose: "/assets/licence-image/bluejira.svg",
-  //   paragraphs:
-  //     "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
-  // },
-  {
-    id: "5",
     headings: "Trello",
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/trello.svg",
@@ -1276,7 +1252,15 @@ export const atlassianTools = [
       "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
   },
   {
-    id: "6",
+    id: "3",
+    headings: "Confluence",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/confluence.svg",
+    paragraphs:
+      "Collaborate with colleagues in real time on documentation and improve knowledge sharing across your entire organization.",
+  },
+  {
+    id: "4",
     headings: "Jira Align",
     subhead: "WORK MANAGEMENT",
     imgChoose: "/assets/licence-image/jiraalign.svg",
@@ -1284,21 +1268,39 @@ export const atlassianTools = [
       "Take your strategy from plan to payout. Move everyone to the same page so you can solve for dependencies, scope, and roadmaps across teams and portfolios.",
   },
   {
-    id: "7",
+    id: "5",
     headings: "Bitbucket",
     subhead: "CODE HOSTING & COLLABORATION",
     imgChoose: "/assets/licence-image/bitbucket.svg",
     paragraphs:
       "Bitbucket Cloud is Atlassian’s source code management and CI/CD tool. It offers a central place to manage Git repositories, collaborate on source code, and build CI/CD workflows.",
   },
+
   {
-    id: "8",
+    id: "6",
+    headings: "Trello",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/trello.svg",
+    paragraphs:
+      "Keep everything in the same place—even if your team isn’t. Trello makes it super easy to track work progress through boards, lists and cards.",
+  },
+  {
+    id: "7",
     headings: "Opsgenie",
     subhead: "APPS & PLUGINS INTEGRATIONS",
     imgChoose: "/assets/licence-image/opsgenie.svg",
     paragraphs:
       "Notify the right people at the right time with powerful incident alerting and on-call schedules. Opsgenie integrates with over 200 of the best monitoring, ITSM, ChatOps, and collaboration tools. ",
   },
+  {
+    id: "8",
+    headings: "Jira Work Management",
+    subhead: "WORK MANAGEMENT",
+    imgChoose: "/assets/licence-image/jirawork.svg",
+    paragraphs:
+      "Deliver the best support to your customers with Jira Service Management while promoting self-service and offering a one-stop-show for every support request.",
+  },
+
   // {
   //   id: "9",
   //   headings: "Atlassian Marketplace",

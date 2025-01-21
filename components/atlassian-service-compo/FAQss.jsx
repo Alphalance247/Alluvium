@@ -29,17 +29,21 @@ const FAQss = () => {
             {expandIndex === i ? (
               <SlArrowUp
                 onClick={() => handleDropdown(i)}
-                style={{ cursor: "pointer", color: "#E37915" }}
+                style={{ cursor: "pointer", color: "#595959" }}
               />
             ) : (
               <SlArrowDown
                 onClick={() => handleDropdown(i)}
-                style={{ cursor: "pointer", color: "#E37915" }}
+                style={{ cursor: "pointer", color: "#595959" }}
               />
             )}
           </div>
           {expandIndex === i && (
-            <p data-aos-delay="100" data-aos="fade-down">
+            <p
+              data-aos-delay="100"
+              data-aos="fade-down"
+              style={{ paddingLeft: "2rem", paddingRight: "2rem" }}
+            >
               {item?.answer}{" "}
               <Link href="/#consultationForm">
                 <span
@@ -56,7 +60,14 @@ const FAQss = () => {
               <span>{item?.subAnswer1}</span>
             </p>
           )}
-          <hr className={` ${styles.horizon}`} />
+          {frequentlyAsked.length - 1 !== i ? (
+            <hr
+              style={{ background: "none" }}
+              className={` ${styles.horizon}`}
+            />
+          ) : (
+            ""
+          )}
         </div>
       ))}
     </div>
