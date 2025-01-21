@@ -19,7 +19,8 @@
 
   &.column {
     flex-direction: column;
-    text-align: center; // Center-align content for column layout
+    text-align: center;
+    align-items: center;
   }
 }
 
@@ -50,7 +51,6 @@
 }
 
 .content {
-  flex: 1;
   @media (max-width: 820px) {
     margin-top: 1.5rem;
   }

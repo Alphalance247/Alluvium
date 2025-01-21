@@ -1,81 +1,86 @@
 import Layout from "components/layout";
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
-import Link from "next/link";
-import Button from "components/atlassian-service-reuse/Button";
-import AtlassianSubHead from "components/atlassian-service-reuse/atlassianSubhead";
-import Image from "next/image";
-import styles from "../../../styles/atlassian-services-style/aws.module.scss";
-import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
-import { transformativeChanges } from "data";
-import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
-import GetStarted from "components/atlassian-service-reuse/getStarted";
-import WhyMigrate from "components/cloud-migration-compo/whymigrate";
-import { DevOpsCard } from "data";
+import styles from "../../../styles/AlluviumRedesign2025/devOps/Devops.module.scss";
+import HeroSection from "components/Alluvium-Redesign-2025/devOps/HeroSection";
+import SecondSection from "components/Alluvium-Redesign-2025/devOps/SecondSection";
+import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents/ServicesCardReuse";
+import { devOpServices, devOpsOptions } from "constants/devOps";
+import DevOpsSolution from "components/Alluvium-Redesign-2025/devOps/DevOpsSolution";
+import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesCard";
+
+const description = [
+  {
+    text: "Explore the range of Atlassian support services we offer to meet your needs.",
+  },
+];
+const description2 = [
+  {
+    text: "Empower your business with Alluvium's comprehensive DevOps solutions. Our expert team offers a wide range of services, from consulting and implementation to cloud migration and security, to help you optimize your software development and delivery processes. Improve software quality, enhance collaboration, reduce costs, and gain a competitive advantage. Contact us today to learn more.",
+  },
+];
+const description3 = [
+  {
+    text: "At Alluvium, we offer comprehensive DevOps solutions designed to meet your unique needs. Our team of experts will work closely with you to implement best practices, optimize workflows, and drive innovation.",
+  },
+];
 
 const DevOps = () => {
   return (
     <Layout>
-      <ServicesHero
-        contentsheading=""
-        contentsheading1="Accelerate Innovation with Seamless DevOps Solutions"
-        contentsheading2="DevOps has reformed the way software is developed, delivered, and maintained. It fosters collaboration, efficiency, and continuous improvement by bridging the gap between development and operations teams"
-        withSlide={false}
-        button1={
-          <Link href="/support/contact#schedule-a-call">
-            <Button size="large">Get in Touch</Button>
-          </Link>
-        }
-      />
-
-      <section className={styles.aws__operation}>
-        <AtlassianSubHead
-          headings="A Modern Approach to Software Development and Operations"
-          strategy="At Alluvium, we understand that in today's fast-paced business environment, software development and delivery need to be efficient and effective. Our DevOps solutions are designed to streamline your processes, improve collaboration, and accelerate innovation."
-        />
-        <div className="text-center">
-          <Image
-            src="/assets/licence-image/awsimage.svg"
-            alt="aws image"
-            width={563}
-            height={267}
+      <HeroSection />
+      <SecondSection />
+      <div className={styles.sectionContainer}>
+        <div className={styles.innerContainer}>
+          <AtlassianServicesCard
+            title={
+              "DevOps Brings Transformative Changes to Your Business in Multiple Ways"
+            }
+            description={description}
+            useImage={false}
+            useText={false}
+            headingVariant="main"
+            containerStyle={styles.containerStyle1}
+            noBorderCard={"noBorderCard"}
           />
         </div>
-      </section>
-
-      <ChooseAlluvium
-        choose="DevOps Brings Transformative Changes to Your Business in Multiple Ways"
-        strategy="Lorem ipsum dolor sit amet consectetur. Purus dui eget felis congue arcu praesent proin. Nec varius orci placerat laoreet ut hendrerit id."
-        chooseUsAlluvium={transformativeChanges}
-        backgroundVariant="primary"
-        variant="primary"
-      />
-
-      <ServerToCloud
-        paragraph="Empower your business with Alluvium's comprehensive DevOps solutions. Our expert team offers a wide range of services, from consulting and implementation to cloud migration and security, to help you optimize your software development and delivery processes. Improve software quality, enhance collaboration, reduce costs, and gain a competitive advantage. Contact us today to learn more."
-        heading="Comprehensive DevOps Solutions for Seamless Delivery"
-        showWithImage={false}
-        variant="newdefaults"
-        display="newdefaults"
-      />
-
-      <div className={`container-fluid ${styles.seamlessMigration}`}>
-        <GetStarted
-          heading="Transform your business with our tailored DevOps solutions."
-          showText={false}
-          button1={
-            <Link href="/support/contact#schedule-a-call">
-              <Button size="large">Schedule a Call</Button>
-            </Link>
-          }
-          variant="secondary"
-        />
       </div>
 
-      <WhyMigrate
-        heading="Our Comprehensive DevOps Service Offerings"
-        description="At Alluvium, we offer comprehensive DevOps solutions designed to meet your unique needs. Our team of experts will work closely with you to implement best practices, optimize workflows, and drive innovation."
-        data={DevOpsCard}
+      <ServicesCardReuse
+        data={devOpsOptions}
+        useText={false}
+        useImage={true}
+        gridVariant={"primary"}
       />
+      <div className={styles.sectionContainer}>
+        <div className={styles.innerContainer}>
+          <AtlassianServicesCard
+            title={"Our Comprehensive DevOps solution for seamless delivery"}
+            description={description2}
+            useImage={false}
+            useText={false}
+            headingVariant="main"
+            containerStyle={styles.containerStyle2}
+            noBorderCard={"noBorderCard"}
+          />
+        </div>
+      </div>
+
+      <DevOpsSolution />
+
+      <div className={styles.sectionContainer}>
+        <div className={styles.innerContainer}>
+          <AtlassianServicesCard
+            title={"Our Comprehensive DevOps Service Offerings"}
+            description={description3}
+            useImage={false}
+            useText={false}
+            headingVariant="main"
+            containerStyle={styles.containerStyle3}
+            noBorderCard={"noBorderCard"}
+          />
+        </div>
+      </div>
+
+      <ServicesCardReuse data={devOpServices} useText={false} useImage={true} />
     </Layout>
   );
 };

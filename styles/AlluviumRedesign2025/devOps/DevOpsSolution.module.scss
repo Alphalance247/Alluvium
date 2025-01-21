@@ -1,0 +1,68 @@
+.mainContainer {
+  background: #1f1f1f;
+  width: 100%;
+  border-bottom: 1px solid #f0f0f0;
+
+  main {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #595959;
+    border-right: 1px solid #595959;
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.child1 {
+  width: 57%;
+  padding: 96px 48px 124px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 48px 24px 36px;
+  }
+
+  h3 {
+    width: 77%;
+    color: #ffffff;
+    font-family: "Grotesk";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+
+.child2 {
+  width: 43%;
+  padding: 96px 48px;
+  border-left: 1px solid #595959;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0px 24px 48px;
+    border-left: none;
+  }
+
+  p {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.heroButton {
+  margin-top: 40px;
+  text-transform: none;
+}

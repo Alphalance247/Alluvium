@@ -14,6 +14,7 @@ const ServicesCardReuse = ({
   ConsultationCardServices,
   noBorder,
   noBorderCard,
+  containerStyle,
 }) => {
   return (
     <section className={styles.mainSection}>
@@ -44,6 +45,7 @@ const ServicesCardReuse = ({
               useImage={useImage}
               useText={useText}
               noBorderCard={noBorderCard}
+              containerStyle={containerStyle}
             />
           ))}
 

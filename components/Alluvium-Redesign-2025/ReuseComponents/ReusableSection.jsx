@@ -10,18 +10,26 @@ const ReusableSection = ({
   isColumn,
   height,
   width,
+  noLine = false,
+  iconStyles,
+  contentStyles,
+  containerStyles,
 }) => {
   return (
-    <div className={`${styles.card} ${isColumn ? styles.column : styles.row}`}>
+    <div
+      className={`${styles.card} ${
+        isColumn ? styles.column : styles.row
+      } ${containerStyles}`}
+    >
       {icon && (
-        <div className={styles.icon}>
+        <div className={`${styles.icon} ${iconStyles}`}>
           <Image src={icon} alt={title} width={width} height={height} />
         </div>
       )}
 
-      {!isColumn && <div className={styles.vertical} />}
+      {!noLine && <div className={styles.vertical} />}
 
-      <div className={styles.content}>
+      <div className={`${styles.content} ${contentStyles}`}>
         {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
