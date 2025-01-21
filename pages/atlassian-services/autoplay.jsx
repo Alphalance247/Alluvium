@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { atlassianToolsImage } from "data";
 import Image from "next/image";
 import styles from "../../styles/atlassian-services-style/atlassianlicenceservices.module.scss";
+
 function AutoPlay() {
   const settings = {
     dots: false,

@@ -9,17 +9,22 @@ const Badges = ({ variant }) => {
         styles[`cert__section--${variant}`]
       }`}
     >
-      {badges.map((item, i) => {
-        return (
-          <Image
-            src={item?.img}
-            width={item?.width}
-            height={item?.height}
-            alt={item?.alt}
-            key={i}
-          />
-        );
-      })}
+      <div className={styles.scroll__wrapper}>
+        {[...badges, ...badges, ...badges, ...badges, ...badges].map(
+          (item, i) => {
+            return (
+              <div className={styles.imageWrapper} key={i}>
+                <Image
+                  src={item.img}
+                  width={item.width}
+                  height={item.height}
+                  alt={item.alt}
+                />
+              </div>
+            );
+          }
+        )}
+      </div>
     </div>
   );
 };

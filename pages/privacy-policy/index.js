@@ -572,17 +572,17 @@ your request to speed up our response.`,
         {
           type: "linkWithList",
           linkListText: "IT & CyberSecurity Policy",
-          isLinkAvailable: false,
-          linkUrl: "",
-          linkText: "",
+          isLinkAvailable: true,
+          linkUrl: "/IT-cyber-security-policy",
+          linkText: " https://alluvium.net/IT-cyber-security-policy",
         },
 
         {
           type: "linkWithList",
           linkListText: "Cookies Policy ",
-          isLinkAvailable: false,
-          linkUrl: "",
-          linkText: "",
+          isLinkAvailable: true,
+          linkUrl: "/cookie-policy",
+          linkText: " https://alluvium.net/cookie-policy",
         },
 
         {

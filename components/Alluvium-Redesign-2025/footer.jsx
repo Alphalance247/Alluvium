@@ -301,11 +301,28 @@ const Footer = () => {
                 </div>
               </Link>
 
-              {/* <Link href={"/privacy-policy"}>
-                <a aria-label="privacy-policy" className="px-3">
-                  Cookie Preferences
-                </a>
-              </Link> */}
+              <Link href={"/cookie-policy"}>
+                <div
+                  className="px-3"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    columnGap: ".4rem",
+                    cursor: "pointer",
+                  }}
+                >
+                  <a aria-label="privacy-policy"> Cookie Preferences</a>
+                  <span
+                    style={{
+                      width: "2px",
+                      height: "2px",
+                      backgroundColor: "#BFBFBF",
+                      borderRadius: "99px",
+                      display: "inline-block",
+                    }}
+                  ></span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
