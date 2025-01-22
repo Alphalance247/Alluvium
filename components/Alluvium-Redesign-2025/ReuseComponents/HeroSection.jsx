@@ -40,7 +40,7 @@ const HeroSection = ({ caseStudy }) => {
               </Button>
             </Link>
 
-            <Link href="/">
+            {/* <Link href="/">
               <Button
                 variant="redesign"
                 size="xxlarge"
@@ -57,7 +57,7 @@ const HeroSection = ({ caseStudy }) => {
               >
                 Read Aloud
               </Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <Image
