@@ -21,21 +21,16 @@ const SubSectionCard = ({
             {iconImageSwitch ? (
               <div className={styles.iconContainer}>{item.icon}</div>
             ) : (
-              <Image
-                src="/assets/redesign-2025/case-studies/svg/downicon.svg"
-                width={40}
-                height={40}
-                alt="icon"
-              />
+              <Image src={item?.icon} width={40} height={40} alt="icon" />
             )}
 
-            {heading && <h5 className={styles.heading5}>{item.title}</h5>}
+            {heading && <h5 className={styles.heading5}>{item?.title}</h5>}
             <p
               className={`${styles.sub__heading} ${
                 styles[`sub__heading--${variant}`]
               }`}
             >
-              {item.paragraph}
+              {item?.paragraph}
             </p>
           </div>
         ))}

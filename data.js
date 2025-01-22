@@ -2497,15 +2497,15 @@ export const CaseStudyDataRedesign2025 = [
       caseStudyAchievements: [
         {
           paragraph: "Successfully Trained In-house Administrator",
-          icon: "/assets/case-studies2/icons/icon1.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1a.svg",
         },
         {
           paragraph: "Cloud Instance setup",
-          icon: "/assets/case-studies2/icons/icon2.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1b.svg",
         },
         {
           paragraph: "Ticket tracking with Jira Service Management",
-          icon: "/assets/case-studies2/icons/icon3.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1f.svg",
         },
       ],
 
@@ -2664,15 +2664,15 @@ export const CaseStudyDataRedesign2025 = [
       caseStudyAchievements: [
         {
           paragraph: "Reduction in ServiceNow customization costs",
-          icon: "/assets/case-studies2/icons/icon1.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1a.svg",
         },
         {
           paragraph: "Decrease in maintenance costs",
-          icon: "/assets/case-studies2/icons/icon2.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1b.svg",
         },
         {
           paragraph: "Substantial savings for the company",
-          icon: "/assets/case-studies2/icons/icon3.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1c.svg",
         },
       ],
 
@@ -2823,17 +2823,17 @@ export const CaseStudyDataRedesign2025 = [
         {
           paragraph:
             "The migration centralized documents into a secure, accessible repository.",
-          icon: "/assets/case-studies2/icons/icon1.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1d.svg",
         },
         {
           paragraph:
             "The company saved by reducing ServiceNow customization and maintenance costs.",
-          icon: "/assets/case-studies2/icons/icon2.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1k.svg",
         },
         {
           paragraph:
             "The platform's scalability supported growing documentation needs and operations.",
-          icon: "/assets/case-studies2/icons/icon3.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1f.svg",
         },
       ],
 
@@ -2931,16 +2931,16 @@ export const CaseStudyDataRedesign2025 = [
       caseStudyAchievements: [
         {
           paragraph: "Percentage increase in user satisfaction.",
-          icon: "/assets/case-studies2/icons/icon1.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1f.svg",
         },
         {
           paragraph:
             "Number of ITSM features consolidated into a unified platform.",
-          icon: "/assets/case-studies2/icons/icon2.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1h.svg",
         },
         {
           paragraph: "Total savings achieved by optimizing ITSM tool expenses.",
-          icon: "/assets/case-studies2/icons/icon3.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1c.svg",
         },
       ],
 
