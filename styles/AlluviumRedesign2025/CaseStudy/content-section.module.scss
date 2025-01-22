@@ -75,9 +75,9 @@
     padding-bottom: 6rem;
     padding-left: 8rem;
     padding-right: 3.3rem;
-    display: flex;
-    flex-direction: column;
-    row-gap: 70px;
+    // display: flex;
+    // flex-direction: column;
+    // row-gap: 70px;
 
     @media screen and (max-width: 992px) {
       padding-left: 2rem;
@@ -92,6 +92,14 @@
       padding-top: 3rem;
       padding-bottom: 3rem;
       row-gap: 3rem;
+    }
+
+    .noMargin {
+      margin-bottom: 0px;
+    }
+
+    .marginAvailable {
+      margin-bottom: 70px;
     }
 
     .subcontent {
@@ -115,7 +123,7 @@
       p {
         margin-bottom: 0px;
         color: #595959;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 28px;
 
         @media screen and (max-width: 576px) {
@@ -125,15 +133,70 @@
       }
     }
 
+    .subcontent__img {
+      margin-bottom: 70px;
+      margin-top: 70px;
+    }
+
+    .subcontent2 {
+      h4 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -2px;
+        color: #141414;
+        font-family: "Grotesk";
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+
+        @media screen and (max-width: 576px) {
+          font-size: 1.3rem;
+          line-height: 1.8rem;
+          letter-spacing: -0px;
+          margin-bottom: 1rem;
+        }
+      }
+
+      p {
+        margin-bottom: 0px;
+        color: #595959;
+        font-size: 18px;
+        line-height: 28px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 15px;
+          line-height: 1.5rem;
+        }
+      }
+    }
+
+    .subsub__list {
+      ul {
+        margin-left: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      li {
+        color: #595959;
+        font-size: 18px;
+        line-height: 28px;
+        margin-bottom: 0.5rem;
+
+        @media screen and (max-width: 576px) {
+          font-size: 15px;
+          line-height: 1.5rem;
+        }
+      }
+    }
     ul {
-      margin-left: 1.3rem;
+      margin-left: 2.5rem;
       margin-top: 1rem;
       margin-bottom: 1rem;
     }
 
     li {
       color: #595959;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 28px;
       margin-bottom: 0.5rem;
 

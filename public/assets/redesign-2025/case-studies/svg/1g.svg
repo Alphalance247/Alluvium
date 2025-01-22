@@ -1,0 +1,37 @@
+<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddii_1216_7613)">
+<rect x="4" y="6" width="40" height="40" rx="8" fill="white"/>
+<rect x="4.5" y="6.5" width="39" height="39" rx="7.5" stroke="#D9D9D9"/>
+<path d="M19.8333 29.3332C20.1649 29.3332 20.4828 29.2015 20.7172 28.9671C20.9516 28.7326 21.0833 28.4147 21.0833 28.0832C21.0865 28.0416 21.0865 27.9998 21.0833 27.9582L23.4083 25.6332H23.7917L25.1333 26.9748V27.0415C25.1333 27.373 25.265 27.691 25.4995 27.9254C25.7339 28.1598 26.0518 28.2915 26.3833 28.2915C26.7149 28.2915 27.0328 28.1598 27.2672 27.9254C27.5016 27.691 27.6333 27.373 27.6333 27.0415V26.9748L30.6667 23.9165C30.9139 23.9165 31.1556 23.8432 31.3611 23.7058C31.5667 23.5685 31.7269 23.3733 31.8215 23.1449C31.9161 22.9165 31.9409 22.6651 31.8926 22.4226C31.8444 22.1802 31.7254 21.9574 31.5506 21.7826C31.3757 21.6078 31.153 21.4888 30.9105 21.4405C30.6681 21.3923 30.4167 21.417 30.1883 21.5117C29.9599 21.6063 29.7647 21.7665 29.6273 21.972C29.49 22.1776 29.4167 22.4193 29.4167 22.6665C29.4135 22.7081 29.4135 22.7499 29.4167 22.7915L26.4083 25.7998H26.275L24.8333 24.3332C24.8333 24.0017 24.7016 23.6837 24.4672 23.4493C24.2328 23.2149 23.9149 23.0832 23.5833 23.0832C23.2518 23.0832 22.9339 23.2149 22.6995 23.4493C22.465 23.6837 22.3333 24.0017 22.3333 24.3332L19.8333 26.8332C19.5018 26.8332 19.1839 26.9649 18.9494 27.1993C18.715 27.4337 18.5833 27.7517 18.5833 28.0832C18.5833 28.4147 18.715 28.7326 18.9494 28.9671C19.1839 29.2015 19.5018 29.3332 19.8333 29.3332ZM31.0833 32.6665H16.9167V18.4998C16.9167 18.2788 16.8289 18.0669 16.6726 17.9106C16.5163 17.7543 16.3043 17.6665 16.0833 17.6665C15.8623 17.6665 15.6504 17.7543 15.4941 17.9106C15.3378 18.0669 15.25 18.2788 15.25 18.4998V33.4998C15.25 33.7209 15.3378 33.9328 15.4941 34.0891C15.6504 34.2454 15.8623 34.3332 16.0833 34.3332H31.0833C31.3043 34.3332 31.5163 34.2454 31.6726 34.0891C31.8289 33.9328 31.9167 33.7209 31.9167 33.4998C31.9167 33.2788 31.8289 33.0669 31.6726 32.9106C31.5163 32.7543 31.3043 32.6665 31.0833 32.6665Z" fill="#595959"/>
+</g>
+<defs>
+<filter id="filter0_ddii_1216_7613" x="0" y="0" width="48" height="49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1216_7613"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_1216_7613" result="effect2_dropShadow_1216_7613"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1216_7613" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect3_innerShadow_1216_7613"/>
+<feOffset/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_1216_7613"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect3_innerShadow_1216_7613" result="effect4_innerShadow_1216_7613"/>
+</filter>
+</defs>
+</svg>
