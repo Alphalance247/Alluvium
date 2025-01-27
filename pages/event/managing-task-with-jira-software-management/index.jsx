@@ -26,21 +26,18 @@ const ManagingTaskWithJira = () => {
     },
     {
       icon: "/assets/events/jira-software-class/4.svg",
-      heading: "Interactive Hands-on Sessions",
-      subhead:
-        "Practical exercises to apply Jira skills in real-world scenarios.",
+      heading: "Expert-led Demonstrations",
+      subhead: "Live walkthroughs of Jira tools and techniques by experts",
     },
     {
       icon: "/assets/events/jira-software-class/3.svg",
-      heading: "Interactive Hands-on Sessions",
-      subhead:
-        "Practical exercises to apply Jira skills in real-world scenarios.",
+      heading: "Networking Opportunities",
+      subhead: "Connect with professionals and industry leaders",
     },
     {
       icon: "/assets/events/jira-software-class/2.svg",
-      heading: "Interactive Hands-on Sessions",
-      subhead:
-        "Practical exercises to apply Jira skills in real-world scenarios.",
+      heading: "Live Q&A with Experts",
+      subhead: "Ask questions and get tailored advice from Jira experts.",
     },
   ];
   return (
