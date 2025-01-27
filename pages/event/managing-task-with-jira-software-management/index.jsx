@@ -76,7 +76,7 @@ const ManagingTaskWithJira = () => {
         <div className={styles.description}>
           <p>
             Curious about how Jira Work Management can enhance your team's task
-            handling? Join us on [Event Date] at [Event Time] WAT for "Managing
+            handling? Join us on at 31st January 2025 11am WAT for "Managing
             Tasks with Jira Work Management." Discover how this tool can
             streamline your workflows and boost productivity. See if it's the
             right fit for your organization.
