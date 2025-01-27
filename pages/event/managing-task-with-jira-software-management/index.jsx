@@ -103,7 +103,7 @@ const ManagingTaskWithJira = () => {
               </div>
             </div>
             <div className={styles.form} id="form">
-              <p className={styles.event}>Rgister here</p>
+              <p className={styles.event}>Register here</p>
               <LeadForm />
             </div>
           </div>
