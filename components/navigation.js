@@ -232,7 +232,7 @@ export default function Navigation({ theme }) {
               <Link href="/support">+ Support (FAQs)</Link>
             </li>
             <li>
-              <Link href="/contact">+ Contact Us</Link>
+              <Link href="/contact-us">+ Contact Us</Link>
             </li>
             <li>
               <a
