@@ -21,7 +21,7 @@ const DataCenterToCloudMigration = () => {
     <Layout>
       <div
         className="calendly-inline-widget"
-        data-url="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a99836894a3af130194b2d41a6a1f29"
+        data-url="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a99935a94d300880194d5c09ad651d8"
         style={{ minWidth: "100%", height: "800px", borderRadius: "25px" }}
       ></div>
     </Layout>
