@@ -78,6 +78,7 @@ const ContactSection = ({ withLines = true }) => {
       addToast("All fields marked with asterisks are required", {
         appearance: "error",
       });
+
       return;
     }
     if (!validateEmail(email)) {
@@ -126,6 +127,9 @@ const ContactSection = ({ withLines = true }) => {
         //     },
         //   });
         // }
+        dataLayer.push({
+          event: "ajaxFormSubmission",
+        });
       } else {
         addToast("There was an issue submitting your inquiry. try again.", {
           appearance: "info",
