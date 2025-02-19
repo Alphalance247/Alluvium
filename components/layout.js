@@ -5,7 +5,6 @@ import styles from "../styles/layout.module.scss";
 import { ConsultationForm } from "./Consultation";
 import ContactSection from "./Alluvium-Redesign-2025/ContactSection";
 import Footer from "./Alluvium-Redesign-2025/footer";
-import CookieConsent from "./Alluvium-Redesign-2025/CookieConsent";
 
 export default function Layout({ children, withoutForm }) {
   return (
@@ -16,7 +15,6 @@ export default function Layout({ children, withoutForm }) {
 
       {/* <AltFooter /> */}
       {!withoutForm && <ContactSection />}
-      <CookieConsent />
       <Footer />
     </div>
   );
