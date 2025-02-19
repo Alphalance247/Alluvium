@@ -98,12 +98,11 @@ const CaseStudiesSection = () => {
             <FilterComponent
               onSelect={handleSelected}
               options={[
-                "chelsea",
-                "arsenal",
-                "manchester",
-                "tothenham",
-                "liverpool",
-                "newcastle",
+                "insurance",
+                "agriculture",
+                "business",
+                "academics",
+                "hospitality",
               ]}
               title="THEME"
             />
