@@ -10,6 +10,7 @@ import Articles from "components/blog-component/article";
 import BlogCard from "components/blog-component/blogCard";
 import Head from "next/head";
 import useSticky from "components/customhooks/UseSticky";
+import CardBlogDetails from "components/Alluvium-Redesign-2025/ReuseComponents/cardBlogDetails";
 
 export default function BlogsId({ article }) {
   let nextid = 0;
@@ -44,7 +45,26 @@ export default function BlogsId({ article }) {
           content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
         />
       </Head>
-      <article className={`${styles.blog__content} container-fluid px-0`}>
+      <article className={styles.blog__main__details}>
+        <div className={styles.article__main}>
+          <div className={styles.article__hero}>
+            <h1>Shadow AI: The Hidden Threat Lurking in Your Organization</h1>
+            <CardBlogDetails variant="secondary" />
+          </div>
+          <div className={styles.article__image__div}>
+            <Image
+              src="/assets/blogImages/artificial.png"
+              alt="imageContent"
+              width={838}
+              height={475}
+              className={styles.article__image}
+            />
+          </div>
+        </div>
+
+        {/* Article overview and mainContent */}
+      </article>
+      {/* <article className={`${styles.blog__content} container-fluid px-0`}>
         <div className={`${styles.blog__hero} `}>
           <div className="container">
             <h1>{article.heading}</h1>
@@ -122,7 +142,7 @@ export default function BlogsId({ article }) {
             </div>
           </div>
         </section>
-      </article>
+      </article> */}
     </Layout>
   );
 }
