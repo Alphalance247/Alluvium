@@ -20,7 +20,7 @@ const LeadForm = () => {
     <>
       <div
         className="calendly-inline-widget"
-        data-url="https://api.leadconnectorhq.com/widget/form/HPY7IVD9x9Cl6Y8s4zd2"
+        data-url="https://api.leadconnectorhq.com/widget/form/11k2AW90MBYdYeszQ6iD"
         style={{ minWidth: "80%", height: "700px", borderRadius: "25px" }}
       ></div>
     </>
