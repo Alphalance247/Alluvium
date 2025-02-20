@@ -61,8 +61,38 @@ export default function BlogsId({ article }) {
             />
           </div>
         </div>
+      </article>
 
+      <article className={styles.artcle__overview__content__heading}>
         {/* Article overview and mainContent */}
+        <div className={styles.artcle__overview__content}>
+          <div className={styles.article__overview}>
+            <h3>IN THIS BLOG</h3>
+            <div className={styles.overview__head}>
+              <div className={styles.overview}>
+                <h6 className={styles.overview__heading}>Introduction</h6>
+                <div>
+                  <p>Case Study 1: The Compliance Nightmare</p>
+                  <p>Case Study 2: The AI Hallucination Disaster</p>
+                  <p>Case Study 3: The Cybersecurity Loophole</p>
+                </div>
+              </div>
+              <div className={styles.overview}>
+                <h6 className={styles.overview__heading}>Introduction</h6>
+                <div>
+                  <p>Case Study 1: The Compliance Nightmare</p>
+                  <p>Case Study 2: The AI Hallucination Disaster</p>
+                  <p>Case Study 3: The Cybersecurity Loophole</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p>SHARE THIS STORY</p>
+            </div>
+          </div>
+          <div className={styles.article__content}></div>
+        </div>
       </article>
       {/* <article className={`${styles.blog__content} container-fluid px-0`}>
         <div className={`${styles.blog__hero} `}>

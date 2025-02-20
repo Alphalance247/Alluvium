@@ -41,7 +41,7 @@ const CaseCard = ({
             {title}
           </h6>
 
-          <CardBlogDetails />
+          {variant === "secondary" && <CardBlogDetails />}
           {variant === "primary" && <ReadMore content="Read More" />}
         </div>
       </div>
