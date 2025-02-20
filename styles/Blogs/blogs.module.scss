@@ -259,6 +259,58 @@
     text-align: center;
   }
 }
+
+.artcle__overview__content__heading {
+  border-bottom: 1px solid #e0e0e0;
+
+  .artcle__overview__content {
+    display: grid;
+    grid-template-columns: 40% auto;
+    max-width: 1272px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    margin: auto;
+
+    .article__overview {
+      h3 {
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 2rem;
+        padding-top: 6rem;
+        padding-left: 3rem;
+      }
+
+      .overview__head {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        border-bottom: 1px solid #e0e0e0;
+        padding: 0px 3rem 1.5rem 3rem;
+
+        .overview {
+          .overview__heading {
+            margin-bottom: 0.5rem;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            color: #e37915;
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 20px;
+            border-left: 2px solid #d9d9d9;
+            color: #595959;
+            padding: 8px 0px 8px 1rem;
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+}
 // .hero__blog {
 //   position: relative;
 //   background: url("../../public/assets/blogImages/Image.png");
