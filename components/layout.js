@@ -16,7 +16,7 @@ export default function Layout({ children, withoutForm }) {
 
       {/* <AltFooter /> */}
       {!withoutForm && <ContactSection />}
-      <CookieConsent />
+      {/* <CookieConsent /> */}
       <Footer />
     </div>
   );
