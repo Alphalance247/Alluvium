@@ -15,6 +15,7 @@ const CaseCard = ({
   title,
   url = "",
   variant = "primary",
+  publisherName,
 }) => {
   return (
     <Link href={url}>
@@ -41,7 +42,7 @@ const CaseCard = ({
             {title}
           </h6>
 
-          {variant === "secondary" && <CardBlogDetails />}
+          {variant === "secondary" && <CardBlogDetails name={publisherName} />}
           {variant === "primary" && <ReadMore content="Read More" />}
         </div>
       </div>

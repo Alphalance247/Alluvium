@@ -98,7 +98,9 @@ export default function Navigation({ theme }) {
                       <li>
                         <Link href="/project-reel">Project Reel</Link>
                       </li>
-                      <li>{/* <Link href="/blogs">blogs</Link> */}</li>
+                      <li>
+                        <Link href="/blogs">blogs</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -211,13 +213,14 @@ export default function Navigation({ theme }) {
               </a>
             </li>
             <li>
-              <a
-                href="https://blog.alluvium.net/"
-                rel="Alluvium"
-                target="_blank"
+              <Link
+                // href="https://blog.alluvium.net/"
+                // rel="Alluvium"
+                // target="_blank"
+                href={"/blogs"}
               >
                 + Blog
-              </a>
+              </Link>
             </li>
             {/* <li><Link href="/reel">+ Project Reel</Link></li> */}
             <li>

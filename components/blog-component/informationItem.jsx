@@ -33,90 +33,244 @@ export const Articledata = [
   {
     id: "1",
     image: "/assets/blogImages/1.png",
-    pageTitle: "differences-between-cloud-data-center",
-    heading: "Differences between Atlassian Data Center and Atlassian Cloud",
-    artcleName: "Data Migration",
+    pageTitle: "shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    artcleName: "Taiwo Ojo",
     publishedDate: "7 mins read | Sept 15th, 2024",
-    imageInfo: "/assets/blogImages/1a.png",
+    imageInfo: "/assets/blogImages/artificial.png",
+    social: [
+      {
+        img: "/assets/redesign-2025/case-studies/svg/facebook.svg",
+        link: "https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#",
+      },
+      {
+        img: "/assets/redesign-2025/case-studies/svg/x.svg",
+        link: "https://x.com/alluviumhq?s=08",
+      },
+      {
+        img: "/assets/redesign-2025/case-studies/svg/linkedIn.svg",
+        link: "https://www.linkedin.com/company/alluvium-hq/",
+      },
+    ],
+    overview: [
+      {
+        heading: "Introduction",
+        subHead: [
+          "Case Study 1: The Compliance Nightmare",
+          "Case Study 2: The AI Hallucination Disaster",
+          "Case Study 3: The Cybersecurity Loophole",
+        ],
+      },
+      {
+        heading: "How to Contain Shadow AI and Turn It into an Advantage",
+        subHead: [
+          "Establish an AI Usage Policy",
+          "Deploy AI Monitoring & Detection Tools",
+          "Provide Secure, Enterprise-Approved AI",
+          "Educate Employees on AI Risks",
+          "Create an AI Governance Team",
+        ],
+      },
+      {
+        heading: "Take Action: Protect Your Organization from Shadow AI",
+        // subHead: [
+        //   "Case Study 1: The Compliance Nightmare",
+        //   "Case Study 2: The AI Hallucination Disaster",
+        //   "Case Study 3: The Cybersecurity Loophole",
+        // ],
+      },
+    ],
 
     content: [
       {
-        id: 1,
-        contentHeading: "Title",
-        textHeading: "",
-        paragraph: [
-          "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
-        ],
-      },
-
-      {
-        id: 2,
-        contentHeading: "Deployment",
-        textHeading: "Deployment",
-        paragraph: [
-          "The biggest difference between Data Center and Atlassian Cloud is the deployment option. With Data Center, you can host your Atlassian apps on your own servers or opt for a third party to host your Atlassian apps and data. This option is particularly useful for governmental organizations that must host their own data due to data policies.",
-          "Atlassian Cloud, on the other hand, is Atlassian's SaaS solution, where Atlassian hosts the data for you on their servers. This also applies to any third-party Marketplace apps you might want to use. While not all Marketplace apps offer Cloud versions, the number is increasing daily.",
-        ],
-      },
-
-      {
-        id: 3,
-        contentHeading: "Setup",
-        textHeading: "Setup",
-        paragraph: [
-          "Setting up Atlassian Data Center involves installing and configuring servers and databases, as well as installing the Atlassian apps. This requires effort from your technical and application teams.",
-          "The setup for Cloud is very straightforward. You can set up your first Jira or Confluence instance in just a few minutes, with Atlassian handling all the technical work for you.",
+        type: "headingWithParagraph",
+        heading: "Introduction",
+        subhead: [
+          ` Artificial Intelligence (AI) is reshaping businesses,
+                    accelerating productivity, and driving innovation. But what
+                    happens when AI operates outside of IT’s control? Enter
+                    Shadow AI—the unauthorized use of AI tools, models, and
+                    automation within enterprises. While Shadow AI can fuel
+                    efficiency, it also exposes organizations to security risks,
+                    compliance failures, and financial losses`,
         ],
       },
       {
-        id: 4,
-        contentHeading: "Maintenance and Updates",
-        textHeading: "Maintenance and Updates",
-        paragraph: [
-          "With Data Center, you are responsible for maintaining your own servers and databases and keeping them up to date. This requires additional technical resources within your organization. Additionally, when a security advisory is issued, you need to update your servers to remain secure.",
-          "In contrast, choosing Atlassian Cloud means you are automatically updated with the latest versions released by Atlassian and third-party Marketplace apps. Security advisories are implemented automatically by Atlassian, reducing the workload for your teams.",
+        type: "headingWithParagraph",
+        fontStyle: "iamsubheading",
+        heading: "Case Study 1: The Compliance Nightmare",
+        subhead: [
+          `A major financial institution recently discovered that its employees were using generative AI tools to draft customer communications. The catch? They were feeding confidential client data into public AI models. This resulted in a data privacy violation that nearly triggered a regulatory fine of millions of dollars. The lesson? Without proper oversight, AI tools can lead to catastrophic compliance breaches.`,
         ],
       },
       {
-        id: 5,
-        contentHeading: "Data Residency",
-        textHeading: "Data Residency",
-        paragraph: [
-          "When you host your apps on Data Center, you can keep all data in-house or with another party that offers managed services.",
-          "With Atlassian Cloud, you cannot choose the specific country where the data is hosted. However, Atlassian offers data residency in different regions around the globe, such as Europe and the US. This may not apply to all Marketplace vendors, but some do offer data residency based on different locations.",
+        type: "headingWithParagraph",
+        fontStyle: "iamsubheading",
+        heading: "Case Study 2: The AI Hallucination Disaster",
+        subhead: [
+          `A global consulting firm faced a credibility crisis when employees used AI to generate financial forecasts for clients. However, the AI model hallucinated data, creating false projections. When these inaccuracies came to light, clients lost trust, leading to contract terminations and legal disputes. This showcases the dangers of unverified AI-generated outputs.`,
         ],
       },
       {
-        id: 6,
-        contentHeading: "Functionalities",
-        textHeading: "Functionalities",
-        paragraph: [
-          "The look and feel, as well as the functionalities offered on both platforms, are quite different. Atlassian releases new features primarily on Cloud, viewing it as the future solution.",
-          "Features like AI (Atlassian Intelligence), Confluence whiteboards, reporting, scheduled publishing, and various templates are primarily offered on Cloud. See the comparison for Confluence Cloud vs. Data Center here and the Jira comparison for Cloud vs. Data Center here.",
+        type: "headingWithParagraph",
+        fontStyle: "iamsubheading",
+        heading: "Case Study 3: The Cybersecurity Loophole",
+        subhead: [
+          `A global consulting firm faced a credibility crisis when employees used AI to generate financial forecasts for clients. However, the AI model hallucinated data, creating false projections. When these inaccuracies came to light, clients lost trust, leading to contract terminations and legal disputes. This showcases the dangers of unverified AI-generated outputs.`,
         ],
       },
       {
-        id: 7,
-        contentHeading: "License Management and Costs",
-        textHeading: "License Management and Costs",
-        paragraph: [
-          "Data Center has only one type of license, which is an annual license based on user tiers.",
-          "Cloud, however, offers multiple subscription types. You can choose between a monthly Cloud subscription or an annual Cloud subscription.",
-          "The benefit of a monthly Cloud subscription is that you pay per user, allowing for monthly adjustments in user count.",
-          "The benefit of an annual Cloud subscription is that you pay for 10 out of 12 months, with multiple payment methods available. However, there are user tiers, making it a less flexible model. The best subscription depends on your current user tiers.",
+        type: "headingWithParagraphList",
+        heading: "How to Contain Shadow AI and Turn It into an Advantage",
+        subhead: [
+          `Shadow AI isn’t inherently bad—it exists because employees want efficiency. The key is governance. Here’s how leaders can regain control:`,
+        ],
+        sublist: [
+          {
+            headingList: "1. Establish an AI Usage Policy",
+            subHeadList:
+              "Set clear guidelines on which AI tools employees can use, what data they can process, and who approves AI adoption. Organizations need an AI governance framework that outlines security, compliance, and ethical considerations.",
+            fontStyle: "iamsubheading",
+          },
+          {
+            headingList: "2. Deploy AI Monitoring & Detection Tools",
+            subHeadList:
+              "Use AI security tools to detect unapproved AI usage in the enterprise network. AI governance platforms can track data flows, automation scripts, and model deployments to prevent Shadow AI from operating unchecked.",
+            fontStyle: "iamsubheading",
+          },
+          {
+            headingList: "3. Provide Secure, Enterprise-Approved AI",
+            subHeadList:
+              "Instead of banning AI, offer secure AI alternatives. Deploy internal AI assistants trained on proprietary data while ensuring they meet security and compliance standards. If employees have access to safe AI tools, they won’t resort to Shadow AI.",
+            fontStyle: "iamsubheading",
+          },
+          {
+            headingList: "4. Educate Employees on AI Risks",
+            subHeadList:
+              "Shadow AI often emerges due to a lack of awareness. Conduct AI literacy training to help employees understand why unauthorized AI use is risky and how they can safely leverage AI within corporate policies.",
+            fontStyle: "iamsubheading",
+          },
+          {
+            headingList: "5. Create an AI Governance Team",
+            subHeadList:
+              "Form an internal AI oversight committee with experts from IT, cybersecurity, legal, and business units. This team should assess AI risks, approve new tools, and ensure AI adoption aligns with compliance and strategic goals.",
+            fontStyle: "iamsubheading",
+          },
+          {
+            headingList: "6. Post-Production Support:",
+            subHeadList:
+              "After production migration, ongoing support was provided to address any issues, ensure system stability, and optimize performance.",
+            fontStyle: "iamsubheading",
+          },
         ],
       },
       {
-        id: 8,
-        contentHeading: "Offered Features vs. Plans",
-        textHeading: "Offered Features vs. Plans",
-        paragraph: [
-          "Data Center has a single license model and one type of license plan, giving you access to all Data Center features.",
-          "Cloud, however, offers multiple subscription types. You can choose between a monthly Cloud subscription or an annual Cloud subscription.",
-          "Cloud offers multiple plans: Free (up to 10 users), Basic, Premium, or Enterprise, each with its own set of features. See a short overview here. This allows you to choose which features you need and want to pay for.",
+        type: "image",
+        url: "/assets/blogImages/ais.png",
+      },
+      {
+        type: "headingWithParagraphwithUrl",
+        heading: "Take Action: Protect Your Organization from Shadow AI",
+        textWithUrl: [
+          {
+            link: "mailto:taiwoojo@alluvium.net",
+            textUrl: "taiwoojo@alluvium.net",
+            text: "Email me at",
+          },
+          {
+            link: "https://www.linkedin.com/in/taiwoojo/",
+            textUrl: "LinkedIn",
+            text: "Find me on ",
+          },
+        ],
+        subtext:
+          "Let’s build a secure, AI-powered future—without the hidden risks of Shadow AI.",
+        subhead: [
+          `AI is here to stay, but how it’s used will determine whether it’s an asset or a liability. If you’re an executive, IT leader, or cybersecurity professional, don’t wait for an AI disaster to unfold—take control now.`,
+          `With years of experience as an AI, Cybersecurity, and Service Management Consultant, I have helped companies of all sizes—from 100-person startups to Fortune 500 enterprises—navigate the complex landscape of AI governance. I understand the risks you’re facing and the solutions that can safeguard your organization.`,
+          `If you have concerns about Shadow AI or need a roadmap for safe AI adoption, let's discuss how I can help you implement a secure, compliant, and efficient AI strategy.`,
         ],
       },
     ],
+
+    // content: [
+    //   {
+    //     id: 1,
+    //     contentHeading: "Title",
+    //     textHeading: "",
+    //     paragraph: [
+    //       "What are the key differences between Atlassian Data Center apps and Atlassian Cloud apps? How can you make the right decision when choosing the best deployment option for your organization? Read all about it in this new blog.",
+    //     ],
+    //   },
+
+    //   {
+    //     id: 2,
+    //     contentHeading: "Deployment",
+    //     textHeading: "Deployment",
+    //     paragraph: [
+    //       "The biggest difference between Data Center and Atlassian Cloud is the deployment option. With Data Center, you can host your Atlassian apps on your own servers or opt for a third party to host your Atlassian apps and data. This option is particularly useful for governmental organizations that must host their own data due to data policies.",
+    //       "Atlassian Cloud, on the other hand, is Atlassian's SaaS solution, where Atlassian hosts the data for you on their servers. This also applies to any third-party Marketplace apps you might want to use. While not all Marketplace apps offer Cloud versions, the number is increasing daily.",
+    //     ],
+    //   },
+
+    //   {
+    //     id: 3,
+    //     contentHeading: "Setup",
+    //     textHeading: "Setup",
+    //     paragraph: [
+    //       "Setting up Atlassian Data Center involves installing and configuring servers and databases, as well as installing the Atlassian apps. This requires effort from your technical and application teams.",
+    //       "The setup for Cloud is very straightforward. You can set up your first Jira or Confluence instance in just a few minutes, with Atlassian handling all the technical work for you.",
+    //     ],
+    //   },
+    //   {
+    //     id: 4,
+    //     contentHeading: "Maintenance and Updates",
+    //     textHeading: "Maintenance and Updates",
+    //     paragraph: [
+    //       "With Data Center, you are responsible for maintaining your own servers and databases and keeping them up to date. This requires additional technical resources within your organization. Additionally, when a security advisory is issued, you need to update your servers to remain secure.",
+    //       "In contrast, choosing Atlassian Cloud means you are automatically updated with the latest versions released by Atlassian and third-party Marketplace apps. Security advisories are implemented automatically by Atlassian, reducing the workload for your teams.",
+    //     ],
+    //   },
+    //   {
+    //     id: 5,
+    //     contentHeading: "Data Residency",
+    //     textHeading: "Data Residency",
+    //     paragraph: [
+    //       "When you host your apps on Data Center, you can keep all data in-house or with another party that offers managed services.",
+    //       "With Atlassian Cloud, you cannot choose the specific country where the data is hosted. However, Atlassian offers data residency in different regions around the globe, such as Europe and the US. This may not apply to all Marketplace vendors, but some do offer data residency based on different locations.",
+    //     ],
+    //   },
+    //   {
+    //     id: 6,
+    //     contentHeading: "Functionalities",
+    //     textHeading: "Functionalities",
+    //     paragraph: [
+    //       "The look and feel, as well as the functionalities offered on both platforms, are quite different. Atlassian releases new features primarily on Cloud, viewing it as the future solution.",
+    //       "Features like AI (Atlassian Intelligence), Confluence whiteboards, reporting, scheduled publishing, and various templates are primarily offered on Cloud. See the comparison for Confluence Cloud vs. Data Center here and the Jira comparison for Cloud vs. Data Center here.",
+    //     ],
+    //   },
+    //   {
+    //     id: 7,
+    //     contentHeading: "License Management and Costs",
+    //     textHeading: "License Management and Costs",
+    //     paragraph: [
+    //       "Data Center has only one type of license, which is an annual license based on user tiers.",
+    //       "Cloud, however, offers multiple subscription types. You can choose between a monthly Cloud subscription or an annual Cloud subscription.",
+    //       "The benefit of a monthly Cloud subscription is that you pay per user, allowing for monthly adjustments in user count.",
+    //       "The benefit of an annual Cloud subscription is that you pay for 10 out of 12 months, with multiple payment methods available. However, there are user tiers, making it a less flexible model. The best subscription depends on your current user tiers.",
+    //     ],
+    //   },
+    //   {
+    //     id: 8,
+    //     contentHeading: "Offered Features vs. Plans",
+    //     textHeading: "Offered Features vs. Plans",
+    //     paragraph: [
+    //       "Data Center has a single license model and one type of license plan, giving you access to all Data Center features.",
+    //       "Cloud, however, offers multiple subscription types. You can choose between a monthly Cloud subscription or an annual Cloud subscription.",
+    //       "Cloud offers multiple plans: Free (up to 10 users), Basic, Premium, or Enterprise, each with its own set of features. See a short overview here. This allows you to choose which features you need and want to pay for.",
+    //     ],
+    //   },
+    // ],
   },
   {
     id: "2",
