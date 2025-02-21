@@ -2,10 +2,10 @@ import { IoMdTime } from "react-icons/io";
 import { LuDot } from "react-icons/lu";
 import styles from "../../../styles/Blogs/blogs.module.scss";
 
-const CardBlogDetails = ({ variant = "primary" }) => {
+const CardBlogDetails = ({ variant = "primary", name }) => {
   return (
     <div className={`${styles.blog__details} `}>
-      <p className={styles.author}>By James Akinlabi</p>
+      <p className={styles.author}>{name || "James Akinlabi"}</p>
       <p
         className={`${styles.blog__date__time} ${
           styles[`blog__date__time--${variant}`]
