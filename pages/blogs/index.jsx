@@ -43,7 +43,7 @@ const Blogs = () => {
 
           <div className={styles.article__hero}>
             <Link
-              href="/atlassian-cloud-migration-case-studies/california-DHCS-saves-millions-with-atlassian-cloud-modernization"
+              href="/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization"
               passHref
             >
               <div className={styles.dhcs__main}>
@@ -129,23 +129,26 @@ const Blogs = () => {
       </section>
 
       <section className={styles.cards}>
-        <div className={styles.card__encap}>
-          {blogCards.map((item, i) => {
-            return (
-              <CaseCard
-                variant="secondary"
-                url={item?.url}
-                imgAlt={item?.title}
-                width={357}
-                height={191}
-                industry={item?.title}
-                industry1={item?.title1}
-                title={item?.heading}
-                imgSrc={item?.img}
-                key={i}
-              />
-            );
-          })}
+        <div className={styles.cards__details}>
+          <div className={styles.card__encap}>
+            {blogCards.map((item, i) => {
+              return (
+                <CaseCard
+                  variant="secondary"
+                  url={item?.url}
+                  imgAlt={item?.title}
+                  width={357}
+                  height={191}
+                  industry={item?.title}
+                  industry1={item?.title1}
+                  title={item?.heading}
+                  imgSrc={item?.img}
+                  key={i}
+                  publisherName={"Taiwo Ojo"}
+                />
+              );
+            })}
+          </div>
         </div>
       </section>
 
