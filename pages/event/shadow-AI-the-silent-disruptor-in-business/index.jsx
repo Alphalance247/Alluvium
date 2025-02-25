@@ -87,7 +87,7 @@ const ShadowAI = ({ variant = "secondary" }) => {
         </div>
       </section>
 
-      <section className={styles.description__section} id="form">
+      <section className={styles.description__section}>
         <div className={styles.description}>
           {variant === "secondary" && (
             <h3 className={styles.subheadAI}>

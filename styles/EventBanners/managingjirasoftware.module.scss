@@ -5,11 +5,11 @@
   &--primary {
     background: url("/assets/events/jira-software-class/bg.png");
   }
-  // &--secondary {
-  //   background: url("/assets/events/shadow-ai/shadow.png");
-  //   background-position: center;
-  //   background-size: cover;
-  // }
+  &--secondary {
+    background: url("/assets/events/shadow-ai/shadowai.png");
+    background-position: center;
+    background-size: cover;
+  }
 
   .jira__software__management {
     max-width: 1272px;

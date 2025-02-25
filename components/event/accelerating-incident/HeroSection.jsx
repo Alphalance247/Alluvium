@@ -18,7 +18,7 @@ const HeroSection = () => {
             downtime, and empower your team with intelligent automation. 
           </p>
           <div>
-            <a href="">Register Now</a>
+            <a href="#form">Register Now</a>
           </div>
         </div>
         <div style={{ marginTop: "64px" }}>

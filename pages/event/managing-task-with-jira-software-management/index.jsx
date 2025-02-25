@@ -114,7 +114,11 @@ const ManagingTaskWithJira = ({ variant = "primary" }) => {
             </div>
             <div className={styles.form} id="form">
               <p className={styles.event}>Register here</p>
-              <LeadForm />
+              <LeadForm
+                dataUrl={
+                  "https://api.leadconnectorhq.com/widget/form/HPY7IVD9x9Cl6Y8s4zd2"
+                }
+              />
             </div>
           </div>
         </div>

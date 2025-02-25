@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const LeadForm = () => {
+const LeadForm = ({ dataUrl }) => {
   useEffect(() => {
     // Load Calendly script
     const script = document.createElement("script");
@@ -20,7 +20,10 @@ const LeadForm = () => {
     <>
       <div
         className="calendly-inline-widget"
-        data-url="https://api.leadconnectorhq.com/widget/form/11k2AW90MBYdYeszQ6iD"
+        data-url={
+          dataUrl ||
+          "https://api.leadconnectorhq.com/widget/form/11k2AW90MBYdYeszQ6iD"
+        }
         style={{ minWidth: "80%", height: "700px", borderRadius: "25px" }}
       ></div>
     </>
