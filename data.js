@@ -2977,3 +2977,95 @@ export const CaseStudyDataRedesign2025 = [
     },
   },
 ];
+
+export const blogCards = [
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+
+  {
+    img: "/assets/redesign-2025/pexels1.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+    url: "/case-studies/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/redesign-2025/pexels.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels1.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+    url: "/case-studies/project-varsity-servicenow-JSM-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels1.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+    url: "/case-studies/project-varsity-servicenow-JSM-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/case-studies/card1.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Omega:-Incident-and-Asset-Management-Migration",
+  },
+];

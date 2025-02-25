@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/case-card.module.scss";
 import Link from "next/link";
 import ReadMore from "./readmore";
+import CardBlogDetails from "./cardBlogDetails";
 
 const CaseCard = ({
   imgSrc,
@@ -10,12 +11,15 @@ const CaseCard = ({
   width,
   height,
   industry,
+  industry1,
   title,
   url = "",
+  variant = "primary",
+  publisherName,
 }) => {
   return (
     <Link href={url}>
-      <div className={styles.card}>
+      <div className={`${styles.card} ${styles[`card--${variant}`]}`}>
         <Image
           layout="responsive"
           src={imgSrc}
@@ -23,10 +27,23 @@ const CaseCard = ({
           width={width}
           height={height}
         />
-        <div className={styles.content}>
-          <p>{industry}</p>
-          <h6>{title}</h6>
-          <ReadMore content="Read More" />
+        <div className={`${styles.content} ${styles[`content--${variant}`]}`}>
+          <div className={styles.industry__style}>
+            <p className={`${styles.head} ${styles[`head--${variant}`]}`}>
+              {industry}
+            </p>
+            {variant === "secondary" && (
+              <p className={`${styles.head} ${styles[`head--${variant}`]}`}>
+                {industry1}
+              </p>
+            )}
+          </div>
+          <h6 className={`${styles.subhead} ${styles[`subhead--${variant}`]}`}>
+            {title}
+          </h6>
+
+          {variant === "secondary" && <CardBlogDetails name={publisherName} />}
+          {variant === "primary" && <ReadMore content="Read More" />}
         </div>
       </div>
     </Link>

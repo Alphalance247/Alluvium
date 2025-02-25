@@ -1,9 +1,19 @@
 .card {
-  padding: 1rem 1rem 1.5rem 1rem;
   border: 1px solid #d9d9d9;
   border-radius: 1rem;
   cursor: pointer;
   max-width: 389px;
+
+  ////variant
+  &--primary {
+    background: transparent;
+    padding: 1rem 1rem 1.5rem 1rem;
+  }
+
+  &--secondary {
+    background: #fcfcfc;
+    padding: 1rem 0.8rem 1rem 0.8rem;
+  }
 
   &:hover {
     box-shadow: 0 0.5rem 0.6rem rgba(0, 0, 0, 0.15);
@@ -20,7 +30,19 @@
 .content {
   width: 90%;
 
-  p {
+  .industry__style {
+    display: flex;
+    column-gap: 0.5rem;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+    @media screen and (max-width: 640px) {
+      flex-direction: row;
+    }
+  }
+
+  .head {
     border: 1px solid #d9d9d9;
     background: #ffffff;
     border-radius: 4px;
@@ -36,12 +58,13 @@
 
     @media screen and (max-width: 992px) {
       font-size: 10px;
-      line-height: 1.3rem;
+      padding: 4px 4px;
+      margin-top: 8px;
+      margin-bottom: 8px;
     }
   }
 
-  h6 {
-    font-size: 20px;
+  .subhead {
     color: #141414;
     font-weight: 600;
     letter-spacing: -2%;
@@ -49,9 +72,33 @@
     line-height: 28px;
     font-family: "Grotesk";
 
+    //variant
+    &--primary {
+      font-size: 20px;
+
+      @media screen and (max-width: 992px) {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--secondary {
+      font-size: 18px;
+
+      @media screen and (max-width: 992px) {
+        font-size: 14px;
+        margin-bottom: 1rem;
+      }
+    }
+
     @media screen and (max-width: 992px) {
       font-size: 15px;
       line-height: 1.3rem;
+
+      @media screen and (max-width: 992px) {
+        font-size: 13px;
+        margin-bottom: 1rem;
+      }
     }
   }
 }
