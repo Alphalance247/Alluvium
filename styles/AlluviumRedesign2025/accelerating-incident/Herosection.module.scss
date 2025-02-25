@@ -1,0 +1,86 @@
+.mainContainer {
+  background: #fcfcfc;
+  width: 100%;
+  box-shadow: 0px -1px 2px 0px rgba(16, 24, 40, 0.04);
+
+  main {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 96px 0px;
+
+    @media screen and (max-width: 992px) {
+      padding: 48px 0px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 24px 0px;
+    }
+  }
+  .heroText {
+    padding: 0 96px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 992px) {
+      padding: 0px 48px;
+    }
+    @media screen and (max-width: 992px) {
+      padding: 0px 24px;
+    }
+  }
+
+  .modal {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #595959;
+    padding: 5px 10px;
+    background: #0099be1f;
+    border-radius: 5px;
+    border: 1px solid #0099be;
+    width: fit-content;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 78px;
+    color: #000000;
+    @media screen and (max-width: 992px) {
+      font-size: 48px;
+      line-height: 64px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 28px;
+      line-height: 48px;
+    }
+  }
+  .discover {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 32px;
+    color: #000000;
+
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  a {
+    border-radius: 8px;
+    background: #e37915;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
