@@ -38,7 +38,7 @@ const CookieConsent = () => {
           enhance your experience. You can disable cookies in your browser
           settings, but some parts of our site may not function properly.{" "}
           <a
-            href="/privacy-policy
+            href="/cookie-policy
           "
           >
             Read cookies policies.
