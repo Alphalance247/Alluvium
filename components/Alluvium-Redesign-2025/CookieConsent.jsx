@@ -37,7 +37,12 @@ const CookieConsent = () => {
           Cookies help us understand what content you find useful so we can
           enhance your experience. You can disable cookies in your browser
           settings, but some parts of our site may not function properly.{" "}
-          <a href="/cookies-policy">Read cookies policies.</a>
+          <a
+            href="/cookie-policy
+          "
+          >
+            Read cookies policies.
+          </a>
         </p>
         <div className={styles.buttonContainer}>
           <button onClick={handleAccept} className={styles.acceptButton}>

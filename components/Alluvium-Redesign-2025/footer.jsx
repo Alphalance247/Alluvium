@@ -53,9 +53,11 @@ const Footer = () => {
       text1: "Migration Case Study",
       text2: "ITSM/JSM Case study",
       text3: "Events",
+      text3: "Blogs",
       url1: "/atlassian-cloud-migration-case-studies",
       url2: "/atlassian-case-studies",
       url3: "/event/event-blog",
+      url3: "/blogs",
     },
   ];
 
