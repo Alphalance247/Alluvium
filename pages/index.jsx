@@ -3,13 +3,6 @@ import React from "react";
 import Head from "next/head";
 import Services from "components/services-components/services";
 import CaseStudies from "components/case-studies/case-studies";
-// import WhyAlluvium from "components/whyAlluvium";
-// import Hero from "components/Hero";
-// import OurSolution from "components/ourSolutions";
-
-// import OurPartners from "components/ourPartners";
-// import WelcomeToAlluvium from "components/welcomeToAlluvium";
-// import ToolsAndPlatforms from "components/toolsAndPlatforms";
 import Layout from "components/layout";
 import HeroCarousel from "components/HeroCarousel";
 import styles from "../styles/hero.module.scss";
@@ -24,6 +17,7 @@ import Impact from "components/Alluvium-Redesign-2025/ourImpact";
 import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
 import Footer from "components/Alluvium-Redesign-2025/footer";
 import { CoreValue } from "components/about-us/CoreValues";
+import Banner from "./help-center/component/banner";
 
 const Home = () => {
   return (
@@ -44,6 +38,7 @@ const Home = () => {
         <Hero />
         <Expertise />
         <AtlassianSolution />
+        <Banner />
         <Impact />
         <MarketPlacePlugin />
 
