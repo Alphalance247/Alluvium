@@ -14,6 +14,7 @@ import CardBlogDetails from "components/Alluvium-Redesign-2025/ReuseComponents/c
 import RelatedCard from "components/Alluvium-Redesign-2025/case-studies/relatedStudy";
 import { blogCards } from "data";
 import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard";
+import { environment } from "env/env.local";
 
 export default function BlogsId({ article }) {
   let nextid = 0;
@@ -30,7 +31,7 @@ export default function BlogsId({ article }) {
     return <div>Loading...</div>;
   }
 
-  if (!article.pageTitle) {
+  if (!article.slug) {
     return <div>Article not found</div>;
   }
 
@@ -51,12 +52,12 @@ export default function BlogsId({ article }) {
       <article className={styles.blog__main__details}>
         <div className={styles.article__main}>
           <div className={styles.article__hero}>
-            <h1>{article?.heading}</h1>
+            <h1>{article?.title}</h1>
             <CardBlogDetails name={article?.artcleName} variant="secondary" />
           </div>
           <div className={styles.article__image__div}>
-            <Image
-              src={article?.imageInfo}
+            <img
+              src={article?.featured_image}
               alt="imageContent"
               width={838}
               height={475}
@@ -69,6 +70,10 @@ export default function BlogsId({ article }) {
       <article className={styles.artcle__overview__content__heading}>
         {/* Article overview and mainContent */}
         <div className={styles.artcle__overview__content}>
+          <div className={styles.article__content}>
+            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+          </div>
+
           <div
             className={`${styles.article__overview}  ${
               isSticky ? styles.sticky : null
@@ -101,23 +106,44 @@ export default function BlogsId({ article }) {
               <p>SHARE THIS STORY</p>
 
               <div className=" d-flex gap-3">
-                {article?.social?.map((el) => {
-                  return (
-                    <a style={{ cursor: "pointer" }} href={el?.link}>
-                      <Image
-                        src={el?.img}
-                        width={24}
-                        height={24}
-                        alt="socials"
-                      />
-                    </a>
-                  );
-                })}
+                <a
+                  style={{ cursor: "pointer" }}
+                  href="https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#"
+                >
+                  <Image
+                    src="/assets/redesign-2025/case-studies/svg/facebook.svg"
+                    width={24}
+                    height={24}
+                    alt="socials"
+                  />
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  href="https://x.com/alluviumhq?s=08"
+                >
+                  <Image
+                    src="/assets/redesign-2025/case-studies/svg/x.svg"
+                    width={24}
+                    height={24}
+                    alt="socials"
+                  />
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  href="https://www.linkedin.com/company/alluvium-hq/"
+                >
+                  <Image
+                    src="/assets/redesign-2025/case-studies/svg/linkedIn.svg"
+                    width={24}
+                    height={24}
+                    alt="socials"
+                  />
+                </a>
               </div>
             </div>
           </div>
 
-          <div className={styles.article__content} ref={sectionRef}>
+          {/* <div className={styles.article__content} ref={sectionRef}>
             {article?.content
               ?.filter((_, index) => index >= activeTab)
               .map((items, i) => {
@@ -230,133 +256,8 @@ export default function BlogsId({ article }) {
                   );
                 }
               })}
-
-            {/* <div
-              className={`${styles.heading__with__subhead__list} ${styles.heading__with__subhead}`}
-            >
-              <div className={styles.heading__with__subhead} key={i}>
-                <h4
-                  className={`${
-                    items?.fontStyle === "iamsubheading"
-                      ? styles.sub__primary
-                      : styles.sub__secondary
-                  }`}
-                >
-                  {items?.heading}
-                </h4>
-                <p>{items?.subhead}</p>
-              </div>
-
-              <div>
-                <h4>1. Establish an AI Usage Policy</h4>
-                <p>
-                  Set clear guidelines on which AI tools employees can use, what
-                  data they can process, and who approves AI adoption.
-                  Organizations need an AI governance framework that outlines
-                  security, compliance, and ethical considerations.
-                </p>
-              </div>
-              <div>
-                <h4>1. Establish an AI Usage Policy</h4>
-                <p>
-                  Set clear guidelines on which AI tools employees can use, what
-                  data they can process, and who approves AI adoption.
-                  Organizations need an AI governance framework that outlines
-                  security, compliance, and ethical considerations.
-                </p>
-              </div>
-              <div>
-                <h4>1. Establish an AI Usage Policy</h4>
-                <p>
-                  Set clear guidelines on which AI tools employees can use, what
-                  data they can process, and who approves AI adoption.
-                  Organizations need an AI governance framework that outlines
-                  security, compliance, and ethical considerations.
-                </p>
-              </div>
-              <div>
-                <h4>1. Establish an AI Usage Policy</h4>
-                <p>
-                  Set clear guidelines on which AI tools employees can use, what
-                  data they can process, and who approves AI adoption.
-                  Organizations need an AI governance framework that outlines
-                  security, compliance, and ethical considerations.
-                </p>
-              </div>
-              <div>
-                <h4>1. Establish an AI Usage Policy</h4>
-                <p>
-                  Set clear guidelines on which AI tools employees can use, what
-                  data they can process, and who approves AI adoption.
-                  Organizations need an AI governance framework that outlines
-                  security, compliance, and ethical considerations.
-                </p>
-              </div>
-
-              <div>
-                <h4>1. Establish an AI Usage Policy</h4>
-                <p>
-                  Set clear guidelines on which AI tools employees can use, what
-                  data they can process, and who approves AI adoption.
-                  Organizations need an AI governance framework that outlines
-                  security, compliance, and ethical considerations.
-                </p>
-              </div>
-            </div> */}
-
-            {/* <div className={styles.heading__with__subhead}>
-              <h4>Introduction</h4>
-              <p>
-                AI is here to stay, but how it’s used will determine whether
-                it’s an asset or a liability. If you’re an executive, IT leader,
-                or cybersecurity professional, don’t wait for an AI disaster to
-                unfold—take control now.
-              </p>
-              <p>
-                With years of experience as an AI, Cybersecurity, and Service
-                Management Consultant, I have helped companies of all sizes—from
-                100-person startups to Fortune 500 enterprises—navigate the
-                complex landscape of AI governance. I understand the risks
-                you’re facing and the solutions that can safeguard your
-                organization.
-              </p>
-              <p>
-                If you have concerns about Shadow AI or need a roadmap for safe
-                AI adoption, let's discuss how I can help you implement a
-                secure, compliant, and efficient AI strategy.
-              </p>
-
-              <p>
-                Email me at tojo{" "}
-                <a href="">
-                  <span>@alluvium.net</span>
-                </a>{" "}
-              </p>
-              <p>
-                Find me on{" "}
-                <a href="http://" target="_blank" rel="noopener noreferrer">
-                  <span> LinkedIn</span>
-                </a>
-              </p>
-
-              <p>
-                Let’s build a secure, AI-powered future—without the hidden risks
-                of Shadow AI.
-              </p>
-            </div> */}
-          </div>
+          </div> */}
         </div>
-
-        {/* <section className={`container-fluid ${styles.related__articles}`}>
-          <div className="container mx-auto">
-        
-            <div className={styles.related__cards}>
-              {relatedBlog.map((el) => {
-                return <BlogCard el={el} key={el.id} />;
-              })}
-            </div>
-          </div>
-        </section> */}
       </article>
       <section className={styles.cards}>
         <div className={styles.cards__details}>
@@ -381,95 +282,63 @@ export default function BlogsId({ article }) {
           </div>
         </div>
       </section>
-      {/* <RelatedCard /> */}
-      {/* <article className={`${styles.blog__content} container-fluid px-0`}>
-        <div className={`${styles.blog__hero} `}>
-          <div className="container">
-            <h1>{article.heading}</h1>
-
-            <div className="mb-4">
-              <p className={styles.author__name}>By James Akinlabi</p>
-              <p className={styles.time__read}>7 mins read | Sept 15th, 2024</p>
-            </div>
-          </div>
-        </div>
-
-        <div className="container mx-auto">
-          <div className={styles.article__image__div}>
-            <Image
-              src={article.imageInfo}
-              alt="imageContent"
-              width={1216}
-              height={574}
-              className={styles.article__image}
-            />
-          </div>
-          <div className={`${styles.table__of__content}`}>
-            <div className={` ${isSticky ? styles.sticky : null} `}>
-              <h3 className=" mb-4">TABLE OF CONTENTS</h3>
-              {article.content.map((el, i) => {
-                return (
-                  <div
-                    className={styles.content__head}
-                    key={i}
-                    onClick={() => handleClick(i)}
-                  >
-                    <p className={activeTab === i ? styles.active : null}>
-                      {el.contentHeading}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className={`d-flex flex-column row-gap-4`} ref={sectionRef}>
-              {article.content
-                .filter((_, index) => index >= activeTab)
-                .map((el, i) => {
-                  return (
-                    <div className={styles.content} key={i}>
-                      <h4>{el?.textHeading}</h4>
-                      {el.paragraph.map((el, index) => {
-                        return (
-                          <div className="d-flex flex-column gap-5" key={index}>
-                            <p
-                              className={`mb-${
-                                index === el.length - 1 ? null : "1rem"
-                              }`}
-                            >
-                              {el}
-                            </p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
-            </div>
-          </div>
-        </div>
-        <Potential />
-
-      
-      </article> */}
     </Layout>
   );
 }
 
+// export async function getStaticPaths() {
+//   const paths = Articledata.map((article) => ({
+//     params: { blogsId: article.pageTitle },
+//   }));
+
+//   return { paths, fallback: false };
+// }
+
+// export async function getStaticProps({ params }) {
+//   const article = Articledata.find((el) => el.pageTitle === params.blogsId);
+
+//   if (!article) {
+//     return { notFound: true };
+//   }
+
+//   return { props: { article } };
+// }
+
 export async function getStaticPaths() {
-  const paths = Articledata.map((article) => ({
-    params: { blogsId: article.pageTitle },
+  // Replace with your API URL for fetching all blog posts
+  const res = await fetch(`${environment.blogBaseUrl2}api/blog/posts/`);
+  const blogsData = await res.json();
+
+  // If your API response is an object with the posts inside, for example:
+  // const blogs = blogsData.posts;
+  // Otherwise, if it's already an array, you can do:
+  const blogs = blogsData;
+
+  console.log(blogs);
+
+  const paths = blogs?.results?.map((blog) => ({
+    params: { blogsId: blog.slug },
   }));
 
   return { paths, fallback: false };
 }
 
 export async function getStaticProps({ params }) {
-  const article = Articledata.find((el) => el.pageTitle === params.blogsId);
+  // Replace with your API URL for fetching a single blog post by slug
+  const res = await fetch(
+    // "https://pest.ec2.alluvium.net/api/blog/posts/shadow-ai-the-hidden-threat-lurking-in-your-organization/"
+    `${environment?.blogBaseUrl2}api/blog/posts/${params?.blogsId}/`
+  );
+  const article = await res.json();
 
-  if (!article) {
+  console.log(article);
+
+  // If no article is found, return a 404 page
+  if (!article || !article.slug) {
     return { notFound: true };
   }
 
-  return { props: { article } };
+  return {
+    props: { article },
+  };
 }

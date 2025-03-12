@@ -33,23 +33,23 @@ export const Articledata = [
   {
     id: "1",
     image: "/assets/blogImages/1.png",
-    pageTitle: "shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+    pageTitle: "shadow-ai-the-hidden-threat-lurking-in-your-organization",
     heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
     artcleName: "Taiwo Ojo",
     publishedDate: "7 mins read | Sept 15th, 2024",
     imageInfo: "/assets/blogImages/artificial.png",
     social: [
       {
-        img: "/assets/redesign-2025/case-studies/svg/facebook.svg",
-        link: "https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#",
+        img: "",
+        link: "",
       },
       {
-        img: "/assets/redesign-2025/case-studies/svg/x.svg",
-        link: "https://x.com/alluviumhq?s=08",
+        img: "",
+        link: "",
       },
       {
-        img: "/assets/redesign-2025/case-studies/svg/linkedIn.svg",
-        link: "https://www.linkedin.com/company/alluvium-hq/",
+        img: "",
+        link: "",
       },
     ],
     overview: [
