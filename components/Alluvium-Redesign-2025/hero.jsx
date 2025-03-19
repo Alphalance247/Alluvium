@@ -33,7 +33,7 @@ const Hero = () => {
                   <Button size="mediumL">Register Now</Button>
                 </Link>
 
-                <Link href="/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization">
+                <Link href="/blogs">
                   <Button variant="redesign" size="xxlarge">
                     Discover More
                   </Button>
