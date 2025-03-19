@@ -17,32 +17,32 @@ const Hero = () => {
                 update="Alluvium Supports the Stanford Chambers of Commerce"
                 updateSub="NEW UPDATE"
                 updateSign={true}
-                heading="Supporting Growth Innovation - "
-                // subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
-                variant="secondary"
+                heading="Shadow AI: Unveiling the Hidden Risk"
+                subhead="AI is evolving, but is your organization prepared for the unseen risks? Join us for expert discussions, live demos, and actionable insights."
+                variant="primary"
                 withLink={false}
                 showParagraph={false}
-                span={"$31,000+ "}
-                headingcont={
-                  "Atlassian AI Licenses, Implementation and Support package"
-                }
-                span1={"Free for Startup"}
+                // span={"$31,000+ "}
+                // headingcont={
+                //   "Atlassian AI Licenses, Implementation and Support package"
+                // }
+                // span1={"Free for Startup"}
               />
               <div className={styles.btns}>
-                <Link href="#consultationForm">
-                  <Button size="mediumL">Request a Demo</Button>
+                <Link href="/event/shadow-AI-the-silent-disruptor-in-business">
+                  <Button size="mediumL">Register Now</Button>
                 </Link>
 
-                <Link href="/startup">
+                <Link href="/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization">
                   <Button variant="redesign" size="xxlarge">
-                    Learn More About Our Offer
+                    Discover More
                   </Button>
                 </Link>
               </div>
             </div>
 
             <Image
-              src="/assets/redesign-2025/image.png"
+              src="/assets/redesign-2025/shadow-ai.png"
               width={494}
               height={472}
               alt="colllaborate"
