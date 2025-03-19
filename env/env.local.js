@@ -5,4 +5,5 @@ export const environment = {
   ExhibitionUrl: "cloud-connect/exhibition-form",
   SponsorUrl: "cloud-connect/sponsorship-form",
   casestudyUrl: "email/followup/",
+  blogBaseUrl2: "https://pest.ec2.alluvium.net/",
 };

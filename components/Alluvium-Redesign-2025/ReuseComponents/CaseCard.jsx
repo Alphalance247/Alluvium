@@ -10,39 +10,50 @@ const CaseCard = ({
   imgAlt,
   width,
   height,
-  industry,
-  industry1,
   title,
   url = "",
   variant = "primary",
   publisherName,
+  blogDate,
+  minRead,
+  industries,
 }) => {
   return (
     <Link href={url}>
       <div className={`${styles.card} ${styles[`card--${variant}`]}`}>
-        <Image
-          layout="responsive"
+        <img
           src={imgSrc}
           alt={imgAlt}
           width={width}
           height={height}
+          style={{ width: "100%", borderRadius: "8px" }}
         />
         <div className={`${styles.content} ${styles[`content--${variant}`]}`}>
           <div className={styles.industry__style}>
-            <p className={`${styles.head} ${styles[`head--${variant}`]}`}>
-              {industry}
-            </p>
-            {variant === "secondary" && (
-              <p className={`${styles.head} ${styles[`head--${variant}`]}`}>
-                {industry1}
-              </p>
-            )}
+            {industries?.slice(1, 3).map((industry, i) => (
+              <>
+                {variant === "secondary" && (
+                  <p
+                    className={`${styles.head} ${styles[`head--${variant}`]}`}
+                    key={i}
+                  >
+                    {industry}
+                  </p>
+                )}
+              </>
+            ))}
           </div>
           <h6 className={`${styles.subhead} ${styles[`subhead--${variant}`]}`}>
             {title}
           </h6>
 
-          {variant === "secondary" && <CardBlogDetails name={publisherName} />}
+          {variant === "secondary" && (
+            <CardBlogDetails
+              name={publisherName}
+              blogDate={blogDate}
+              minRead={minRead}
+            />
+          )}
           {variant === "primary" && <ReadMore content="Read More" />}
         </div>
       </div>
