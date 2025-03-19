@@ -26,7 +26,7 @@ const CaseCard = ({
           alt={imgAlt}
           width={width}
           height={height}
-          style={{ width: "100%" }}
+          style={{ width: "100%", borderRadius: "8px" }}
         />
         <div className={`${styles.content} ${styles[`content--${variant}`]}`}>
           <div className={styles.industry__style}>

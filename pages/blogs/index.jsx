@@ -154,7 +154,11 @@ const Blogs = () => {
                           width={600}
                           height={420}
                           alt="dhcs"
-                          style={{ width: "100%", height: "100%" }}
+                          style={{
+                            width: "100%",
+                            height: "fit-content",
+                            borderRadius: "8px",
+                          }}
                         />
                       </div>
                       <div>
@@ -177,6 +181,10 @@ const Blogs = () => {
                           />
                         </div>
                         <CardBlogDetails
+                          name={
+                            `${postOfTheWeek?.author?.first_name} ${postOfTheWeek?.author?.last_name}` ||
+                            "James Akinlabi"
+                          }
                           blogDate={postOfTheWeek?.formatted_published_at}
                           minRead={postOfTheWeek?.read_time + " mins read"}
                         />
@@ -244,12 +252,12 @@ const Blogs = () => {
             </div>
           </section> */}
 
-          {data?.results?.length > 0 &&
-            data?.results?.map((item, i) => {
-              return (
-                <section className={styles.cards} key={i}>
-                  <div className={styles.cards__details}>
-                    <div className={styles.card__encap}>
+          <section className={styles.cards}>
+            <div className={styles.cards__details}>
+              <div className={styles.card__encap}>
+                {data?.results?.length > 0 &&
+                  data?.results?.map((item, i) => {
+                    return (
                       <CaseCard
                         variant="secondary"
                         url={`/blogs/${item?.slug}`}
@@ -269,11 +277,11 @@ const Blogs = () => {
                         blogDate={item?.formatted_published_at}
                         minRead={item?.read_time + " mins read"}
                       />
-                    </div>
-                  </div>
-                </section>
-              );
-            })}
+                    );
+                  })}
+              </div>
+            </div>
+          </section>
         </>
       )}
     </Layout>

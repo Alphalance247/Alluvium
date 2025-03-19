@@ -18,14 +18,42 @@ import { environment } from "env/env.local";
 
 export default function BlogsId({ article }) {
   let nextid = 0;
-  const [activeTab, setActiveTab] = useState(nextid);
-  const relatedBlog = blogCards.slice(0, 3);
-  const { isSticky, sectionRef } = useSticky();
+  // const relatedBlog = blogCards.slice(0, 3);
+  const [loadingRelated, setLoadingRelated] = useState(true);
+  const [errorRelated, setErrorRelated] = useState(false);
+  const [relatedBlog, setRelatedBlogs] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleClick = (i) => {
-    setActiveTab(i);
-  };
   const router = useRouter();
+
+  useEffect(() => {
+    const fetchRelatedBlogs = async () => {
+      try {
+        setLoadingRelated(true);
+        const res = await fetch(
+          `${environment?.blogBaseUrl2}api/blog/posts/${article?.slug}/related_posts/`
+        );
+        const data = await res.json();
+
+        if (!res.ok || !data) {
+          throw new Error("Failed to fetch related blogs");
+        }
+
+        setRelatedBlogs(data || "No related blog found");
+        setLoadingRelated(false);
+      } catch (error) {
+        setErrorRelated(true);
+        setErrorMessage(
+          error.message || "An error occurred while fetching related blogs."
+        );
+        setLoadingRelated(false);
+      }
+    };
+
+    if (article?.slug) {
+      fetchRelatedBlogs();
+    }
+  }, [article?.slug]);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -53,7 +81,12 @@ export default function BlogsId({ article }) {
         <div className={styles.article__main}>
           <div className={styles.article__hero}>
             <h1>{article?.title}</h1>
-            <CardBlogDetails name={article?.artcleName} variant="secondary" />
+            <CardBlogDetails
+              name={`${article?.author?.first_name} ${article?.author?.last_name}`}
+              blogDate={article?.formatted_published_at}
+              minRead={article?.read_time + " mins read"}
+              variant="secondary"
+            />
           </div>
           <div className={styles.article__image__div}>
             <img
@@ -61,6 +94,7 @@ export default function BlogsId({ article }) {
               alt="imageContent"
               width={838}
               height={475}
+              style={{ borderRadius: "8px" }}
               className={styles.article__image}
             />
           </div>
@@ -74,34 +108,7 @@ export default function BlogsId({ article }) {
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
           </div>
 
-          <div
-            className={`${styles.article__overview}  ${
-              isSticky ? styles.sticky : null
-            } `}
-          >
-            <h3>IN THIS BLOG</h3>
-            <div className={styles.overview__head}>
-              {article?.overview?.map((items, i) => {
-                return (
-                  <div className={styles.overview} key={i}>
-                    <h6
-                      className={`${styles.overview__heading} ${
-                        activeTab === i ? styles.active : styles.non__active
-                      } `}
-                      onClick={() => handleClick(i)}
-                    >
-                      {items?.heading}
-                    </h6>
-                    <div>
-                      {items?.subHead?.map((el, i) => (
-                        <p key={i}>{el}</p>
-                      ))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
+          <div className={`${styles.article__overview} `}>
             <div className={styles.share}>
               <p>SHARE THIS STORY</p>
 
@@ -142,167 +149,46 @@ export default function BlogsId({ article }) {
               </div>
             </div>
           </div>
-
-          {/* <div className={styles.article__content} ref={sectionRef}>
-            {article?.content
-              ?.filter((_, index) => index >= activeTab)
-              .map((items, i) => {
-                if (items?.type === "headingWithParagraph") {
-                  return (
-                    <div className={styles.heading__with__subhead} key={i}>
-                      <h4
-                        className={`${
-                          items?.fontStyle === "iamsubheading"
-                            ? styles.sub__primary
-                            : styles.sub__secondary
-                        }`}
-                      >
-                        {items?.heading}
-                      </h4>
-                      {items?.subhead.map((el, i) => (
-                        <p key={i}>{el}</p>
-                      ))}
-                    </div>
-                  );
-                }
-
-                if (items?.type === "headingWithParagraphList") {
-                  return (
-                    <div
-                      className={`${styles.heading__with__subhead__list} ${styles.heading__with__subhead}`}
-                      key={i}
-                    >
-                      <div className={styles.withList}>
-                        <h4
-                          className={`${
-                            items?.fontStyle === "iamsubheading"
-                              ? styles.sub__primary
-                              : styles.sub__secondary
-                          }`}
-                        >
-                          {items?.heading}
-                        </h4>
-                        <p>{items?.subhead}</p>
-                      </div>
-                      {items?.sublist?.map((list, i) => {
-                        return (
-                          <div key={i}>
-                            <h4
-                              className={`${
-                                list?.fontStyle === "iamsubheading"
-                                  ? styles.sub__primary
-                                  : styles.sub__secondary
-                              }`}
-                            >
-                              {list?.headingList}
-                            </h4>
-                            <p>{list?.subHeadList}</p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  );
-                }
-
-                if (items?.type === "image") {
-                  return (
-                    <div>
-                      <Image
-                        src={items?.url}
-                        alt="imageContent"
-                        width={720}
-                        height={425}
-                      />
-                    </div>
-                  );
-                }
-
-                if (items?.type === "headingWithParagraphwithUrl") {
-                  return (
-                    <div className={styles.heading__with__subhead} key={i}>
-                      <h4
-                        className={`${
-                          items?.fontStyle === "iamsubheading"
-                            ? styles.sub__primary
-                            : styles.sub__secondary
-                        }`}
-                      >
-                        {items?.heading}
-                      </h4>
-                      {items?.subhead.map((el, i) => (
-                        <p key={i}>{el}</p>
-                      ))}
-
-                      {items?.textWithUrl?.map((el, i) => {
-                        return (
-                          <p key={i}>
-                            {el?.text}{" "}
-                            <a href={el?.link}>
-                              <span
-                                style={{
-                                  color: "#E37915",
-                                  textDecoration: "underline",
-                                }}
-                              >
-                                {el?.textUrl}
-                              </span>
-                            </a>{" "}
-                          </p>
-                        );
-                      })}
-
-                      <p>{items?.subtext}</p>
-                    </div>
-                  );
-                }
-              })}
-          </div> */}
         </div>
       </article>
+
       <section className={styles.cards}>
         <div className={styles.cards__details}>
-          <h2>Related Story</h2>
-          <div className={styles.card__encap}>
-            {relatedBlog.map((item, i) => {
-              return (
+          <h2>Related Stories</h2>
+          {loadingRelated && <p>Loading related blogs...</p>}
+          {errorRelated && <p>{errorMessage}</p>}
+          {!loadingRelated && !errorRelated && relatedBlog.length > 0 ? (
+            <div className={styles.card__encap}>
+              {relatedBlog.map((item, i) => (
                 <CaseCard
                   variant="secondary"
-                  url={item?.url}
+                  url={`/blogs/${item?.slug}`}
                   imgAlt={item?.title}
                   width={357}
                   height={191}
-                  industry={item?.title}
-                  industry1={item?.title1}
-                  title={item?.heading}
-                  imgSrc={item?.img}
+                  industry={item?.title2 || "ARTIFICIAL INTELLIGNECE"}
+                  industry1={item?.title1 || "CONFLUENCE"}
+                  title={item?.title}
+                  imgSrc={item?.featured_image}
                   key={i}
+                  industries={item?.tag_names}
+                  publisherName={
+                    `${item?.author?.first_name} ${item?.author?.last_name}` ||
+                    "James Akinlabi"
+                  }
+                  blogDate={item?.formatted_published_at}
+                  minRead={item?.read_time + " mins read"}
                 />
-              );
-            })}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <p>No related blogs found 😪😪</p>
+          )}
         </div>
       </section>
     </Layout>
   );
 }
-
-// export async function getStaticPaths() {
-//   const paths = Articledata.map((article) => ({
-//     params: { blogsId: article.pageTitle },
-//   }));
-
-//   return { paths, fallback: false };
-// }
-
-// export async function getStaticProps({ params }) {
-//   const article = Articledata.find((el) => el.pageTitle === params.blogsId);
-
-//   if (!article) {
-//     return { notFound: true };
-//   }
-
-//   return { props: { article } };
-// }
 
 export async function getStaticPaths() {
   // Replace with your API URL for fetching all blog posts
@@ -326,7 +212,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   // Replace with your API URL for fetching a single blog post by slug
   const res = await fetch(
-    // "https://pest.ec2.alluvium.net/api/blog/posts/shadow-ai-the-hidden-threat-lurking-in-your-organization/"
     `${environment?.blogBaseUrl2}api/blog/posts/${params?.blogsId}/`
   );
   const article = await res.json();
