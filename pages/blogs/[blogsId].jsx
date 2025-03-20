@@ -94,7 +94,10 @@ export default function BlogsId({ article }) {
               alt="imageContent"
               width={838}
               height={475}
-              style={{ borderRadius: "8px" }}
+              style={{
+                width: "100%",
+                borderRadius: "8px",
+              }}
               className={styles.article__image}
             />
           </div>
