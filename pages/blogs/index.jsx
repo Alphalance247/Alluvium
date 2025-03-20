@@ -57,6 +57,7 @@ const Blogs = () => {
 
   const fetchData = async () => {
     setLoading(true);
+    setError(false);
     try {
       const [postsRes, postOfTheWeekRes] = await Promise.all([
         axios.get(`${environment?.blogBaseUrl2}api/blog/posts/`),
