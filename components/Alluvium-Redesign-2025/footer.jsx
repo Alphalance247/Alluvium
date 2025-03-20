@@ -325,6 +325,32 @@ const Footer = () => {
                   ></span>
                 </div>
               </Link>
+
+              <Link href={"/IT-cyber-security-policy"}>
+                <div
+                  className="px-3"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    columnGap: ".4rem",
+                    cursor: "pointer",
+                  }}
+                >
+                  <a aria-label="IT AND CYBER SECURITY">
+                    {" "}
+                    IT AND CYBER SECURITY
+                  </a>
+                  <span
+                    style={{
+                      width: "2px",
+                      height: "2px",
+                      backgroundColor: "#BFBFBF",
+                      borderRadius: "99px",
+                      display: "inline-block",
+                    }}
+                  ></span>
+                </div>
+              </Link>
             </div>
           </div>
         </div>
