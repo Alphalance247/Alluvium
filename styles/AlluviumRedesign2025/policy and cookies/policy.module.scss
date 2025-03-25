@@ -35,6 +35,17 @@
     }
 
     .privacy__policy__content__text {
+      .subhead2 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: "Grotesk";
+        margin-bottom: 0.5rem;
+
+        @media screen and (max-width: 640px) {
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+      }
       h3 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -93,6 +104,17 @@
       .boldSpan {
         font-weight: 600;
         font-size: 1.5rem;
+        color: #121212;
+
+        @media screen and (max-width: 640px) {
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      .boldSpannew {
+        font-weight: 700;
+        font-size: 1.3rem;
         color: #121212;
 
         @media screen and (max-width: 640px) {
