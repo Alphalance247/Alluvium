@@ -30,12 +30,38 @@ const List = ({ heading, content }) => {
                       );
                     }
 
+                    if (para.type === "heading/subhead") {
+                      return (
+                        <>
+                          <h4 className={styles.subhead2}>
+                            {para?.head2 || "uyuyyuyuyu"}
+                          </h4>
+
+                          <p key={i}>
+                            {para.text}
+                            {para?.isLinkAvailable && (
+                              <span key={i} className={styles.url__span}>
+                                <Link href={para?.url}>{para.linkText}</Link>
+                              </span>
+                            )}
+                            {para.textCont}
+                          </p>
+                        </>
+                      );
+                    }
+
                     if (para.type === "paragraphWithBoldText") {
                       return (
                         <p key={i}>
                           {para?.subhead}
-                          <span>{para?.subheadBold}</span>
+                          <span className={styles.boldSpannew}>
+                            {para?.subheadBold}
+                          </span>
                           {para?.subheadCont}
+                          <span className={styles.boldSpannew}>
+                            {para?.subheadBold2}
+                          </span>
+                          {para?.subheadCont2}
                         </p>
                       );
                     }
