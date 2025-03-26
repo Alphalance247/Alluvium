@@ -18,6 +18,7 @@ import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlug
 import Footer from "components/Alluvium-Redesign-2025/footer";
 import { CoreValue } from "components/about-us/CoreValues";
 import Banner from "./help-center/component/banner";
+import Team25Banner from "components/EventBanner/team25Banner";
 
 const Home = () => {
   return (
@@ -37,6 +38,7 @@ const Home = () => {
         </Head>
         <Hero />
         <Expertise />
+        <Team25Banner />
         <AtlassianSolution />
         <Banner />
         <Impact />
