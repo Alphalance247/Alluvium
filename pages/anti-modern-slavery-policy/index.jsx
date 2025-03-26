@@ -219,7 +219,7 @@ trafficking and exploitation.`,
     <Layout>
       <div>
         <Head>
-          <title>Vetting Policy | Alluvium</title>
+          <title>Anti Modern Slavery Policy | Alluvium</title>
 
           <meta name="description" content="Alluvium Vetting policy" />
           <link rel="icon" href="/favicon.ico" />
