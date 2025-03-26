@@ -93,6 +93,39 @@ const Footer = () => {
     },
   ];
 
+  const policyUrls = [
+    {
+      name: "Terms & Conditions",
+      url: "/atlassian-services/terms-conditions",
+      label: "Terms-Condition",
+    },
+    {
+      name: "Privacy Policy",
+      url: "/privacy-policy",
+      label: "privacy-policy",
+    },
+    // {
+    //   name: " Cookie Preferences",
+    //   url: "/cookie-policy",
+    //   label: "cookie-policy",
+    // },
+    {
+      name: "IT AND CYBER SECURITY",
+      url: "/IT-cyber-security-policy",
+      label: "it-and-cybersecurity-policy",
+    },
+    {
+      name: "Vetting Policy",
+      url: "/vetting-policy",
+      label: "vetting-policy",
+    },
+    {
+      name: "Anti Modern Slavery",
+      url: "/anti-modern-slavery-policy",
+      label: "anti modern slavery",
+    },
+  ];
+
   const handleMouseEnter = (i) => {
     setShowreadMore(i);
   };
@@ -257,100 +290,30 @@ const Footer = () => {
               </p>
             </div>
             <div className={styles.extralinks}>
-              <Link href="/atlassian-services/terms-conditions">
-                <div
-                  className="px-3"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: ".4rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  <a aria-label="Terms-Condition">Terms & Conditions </a>
-                  <span
+              {policyUrls.map((el, i) => (
+                <Link href={el?.url} key={i}>
+                  <div
+                    className="px-1"
                     style={{
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "#BFBFBF",
-                      borderRadius: "99px",
-                      display: "inline-block",
+                      display: "flex",
+                      alignItems: "center",
+                      columnGap: ".4rem",
+                      cursor: "pointer",
                     }}
-                  ></span>
-                </div>
-              </Link>
-
-              <Link href={"/privacy-policy"}>
-                <div
-                  className="px-3"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: ".4rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  <a aria-label="privacy-policy">Privacy Policy</a>
-                  <span
-                    style={{
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "#BFBFBF",
-                      borderRadius: "99px",
-                      display: "inline-block",
-                    }}
-                  ></span>
-                </div>
-              </Link>
-
-              <Link href={"/cookie-policy"}>
-                <div
-                  className="px-3"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: ".4rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  <a aria-label="privacy-policy"> Cookie Preferences</a>
-                  <span
-                    style={{
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "#BFBFBF",
-                      borderRadius: "99px",
-                      display: "inline-block",
-                    }}
-                  ></span>
-                </div>
-              </Link>
-
-              <Link href={"/IT-cyber-security-policy"}>
-                <div
-                  className="px-3"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: ".4rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  <a aria-label="IT AND CYBER SECURITY">
-                    {" "}
-                    IT AND CYBER SECURITY
-                  </a>
-                  <span
-                    style={{
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "#BFBFBF",
-                      borderRadius: "99px",
-                      display: "inline-block",
-                    }}
-                  ></span>
-                </div>
-              </Link>
+                  >
+                    <a aria-label={el?.label}>{el?.name}</a>
+                    <span
+                      style={{
+                        width: "2px",
+                        height: "2px",
+                        backgroundColor: "#BFBFBF",
+                        borderRadius: "99px",
+                        display: "inline-block",
+                      }}
+                    ></span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>
