@@ -17,8 +17,6 @@ import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard
 import { environment } from "env/env.local";
 
 export default function BlogsId({ article }) {
-  let nextid = 0;
-  // const relatedBlog = blogCards.slice(0, 3);
   const [loadingRelated, setLoadingRelated] = useState(true);
   const [errorRelated, setErrorRelated] = useState(false);
   const [relatedBlog, setRelatedBlogs] = useState([]);
