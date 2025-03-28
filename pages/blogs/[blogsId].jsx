@@ -1,23 +1,16 @@
 import Layout from "components/layout";
 import styles from "../../styles/Blogs/blogs.module.scss";
-import { Articledata } from "components/blog-component/informationItem";
-import { articles } from "articles";
 import { useRouter } from "next/router";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import Potential from "components/blog-component/unlockquote";
-import Articles from "components/blog-component/article";
-import BlogCard from "components/blog-component/blogCard";
 import Head from "next/head";
-import useSticky from "components/customhooks/UseSticky";
 import CardBlogDetails from "components/Alluvium-Redesign-2025/ReuseComponents/cardBlogDetails";
-import RelatedCard from "components/Alluvium-Redesign-2025/case-studies/relatedStudy";
-import { blogCards } from "data";
 import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard";
 import { environment } from "env/env.local";
+import Button from "components/atlassian-service-reuse/Button";
 
 export default function BlogsId({ article }) {
-  let nextid = 0;
+  console.log(article?.slog);
   // const relatedBlog = blogCards.slice(0, 3);
   const [loadingRelated, setLoadingRelated] = useState(true);
   const [errorRelated, setErrorRelated] = useState(false);
@@ -28,6 +21,8 @@ export default function BlogsId({ article }) {
 
   useEffect(() => {
     const fetchRelatedBlogs = async () => {
+      if (!article?.slug) return;
+
       try {
         setLoadingRelated(true);
         const res = await fetch(
@@ -50,9 +45,7 @@ export default function BlogsId({ article }) {
       }
     };
 
-    if (article?.slug) {
-      fetchRelatedBlogs();
-    }
+    fetchRelatedBlogs();
   }, [article?.slug]);
 
   if (router.isFallback) {
@@ -95,7 +88,6 @@ export default function BlogsId({ article }) {
               width={838}
               height={475}
               style={{
-                width: "100%",
                 borderRadius: "8px",
               }}
               className={styles.article__image}
@@ -110,6 +102,14 @@ export default function BlogsId({ article }) {
           <div className={styles.article__content}>
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
           </div>
+
+          {article &&
+            article?.slog ===
+              "shadow-ai-risks-implications-and-strategic-mitigation-approaches" && (
+              <div>
+                <Button>Download white paper</Button>
+              </div>
+            )}
 
           <div className={`${styles.article__overview} `}>
             <div className={styles.share}>
@@ -193,26 +193,7 @@ export default function BlogsId({ article }) {
   );
 }
 
-export async function getStaticPaths() {
-  // Replace with your API URL for fetching all blog posts
-  const res = await fetch(`${environment.blogBaseUrl2}api/blog/posts/`);
-  const blogsData = await res.json();
-
-  // If your API response is an object with the posts inside, for example:
-  // const blogs = blogsData.posts;
-  // Otherwise, if it's already an array, you can do:
-  const blogs = blogsData;
-
-  console.log(blogs);
-
-  const paths = blogs?.results?.map((blog) => ({
-    params: { blogsId: blog.slug },
-  }));
-
-  return { paths, fallback: false };
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   // Replace with your API URL for fetching a single blog post by slug
   const res = await fetch(
     `${environment?.blogBaseUrl2}api/blog/posts/${params?.blogsId}/`
