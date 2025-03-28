@@ -60,9 +60,9 @@ const Blogs = () => {
     setError(false);
     try {
       const [postsRes, postOfTheWeekRes] = await Promise.all([
-        axios.get(`${environment?.blogBaseUrl2}api/blog/posts/`),
+        axios.get(`${environment?.blogBaseUrl2}/api/blog/posts/`),
         axios.get(
-          `${environment?.blogBaseUrl2}api/blog/posts/post_of_the_week/`
+          `${environment?.blogBaseUrl2}/api/blog/posts/post_of_the_week/`
         ),
       ]);
 
