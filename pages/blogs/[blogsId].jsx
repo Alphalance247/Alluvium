@@ -26,7 +26,7 @@ export default function BlogsId({ article }) {
       try {
         setLoadingRelated(true);
         const res = await fetch(
-          `${environment?.blogBaseUrl2}api/blog/posts/${article?.slug}/related_posts/`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/blog/posts/${article?.slug}/related_posts/`
         );
         const data = await res.json();
 
@@ -196,7 +196,7 @@ export default function BlogsId({ article }) {
 export async function getServerSideProps({ params }) {
   // Replace with your API URL for fetching a single blog post by slug
   const res = await fetch(
-    `${environment?.blogBaseUrl2}api/blog/posts/${params?.blogsId}/`
+    `${process.env.NEXT_PUBLIC_API_URL}/api/blog/posts/${params?.blogsId}/`
   );
   const article = await res.json();
 
