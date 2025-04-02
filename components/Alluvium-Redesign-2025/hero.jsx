@@ -17,8 +17,8 @@ const Hero = () => {
                 update="Alluvium Supports the Stanford Chambers of Commerce"
                 updateSub="NEW UPDATE"
                 updateSign={true}
-                heading="Shadow AI: Unveiling the Hidden Risk"
-                subhead="AI is evolving, but is your organization prepared for the unseen risks? Join us for expert discussions, live demos, and actionable insights."
+                heading="Empower Your Teams with Expert Atlassian Solutions"
+                subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
                 variant="primary"
                 withLink={false}
                 showParagraph={false}
@@ -29,24 +29,24 @@ const Hero = () => {
                 // span1={"Free for Startup"}
               />
               <div className={styles.btns}>
-                <Link href="/event/shadow-AI-the-silent-disruptor-in-business">
-                  <Button size="mediumL">Register Now</Button>
+                <Link href="/contact-us">
+                  <Button size="mediumL">Contact Us</Button>
                 </Link>
 
-                <Link href="/blogs">
+                <Link href="/why-hire-us">
                   <Button variant="redesign" size="xxlarge">
-                    Discover More
+                    Why Hire Us as Your Atlassian Partner
                   </Button>
                 </Link>
               </div>
             </div>
 
             <Image
-              src="/assets/redesign-2025/shadow-ai.png"
+              src="/assets/redesign-2025/collaborate.png"
               width={494}
-              height={472}
+              height={530}
+              // 472
               alt="colllaborate"
-              // layout="responsive"
             />
           </div>
 
