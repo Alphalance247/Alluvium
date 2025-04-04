@@ -2378,6 +2378,126 @@ export const badges = [
     height: 78,
     alt: "london chamber of commerce",
   },
+  {
+    img: "/assets/redesign-2025/Solution partner.svg",
+    width: 191,
+    height: 58,
+    alt: "solution partner",
+  },
+  {
+    img: "/assets/redesign-2025/Certs.svg",
+    width: 191,
+    height: 70,
+    alt: "marketplace partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Cert.svg",
+    width: 191,
+    height: 68,
+    alt: "training partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/awscerts.svg",
+    width: 84,
+    height: 78,
+    alt: "aws partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Chamber of Commerce.svg",
+    width: 132,
+    height: 78,
+    alt: "stamford chamber of commerce",
+  },
+
+  {
+    img: "/assets/redesign-2025/londonchamber.svg",
+    width: 231,
+    height: 78,
+    alt: "london chamber of commerce",
+  },
+  {
+    img: "/assets/redesign-2025/Solution partner.svg",
+    width: 191,
+    height: 58,
+    alt: "solution partner",
+  },
+  {
+    img: "/assets/redesign-2025/Certs.svg",
+    width: 191,
+    height: 70,
+    alt: "marketplace partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Cert.svg",
+    width: 191,
+    height: 68,
+    alt: "training partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/awscerts.svg",
+    width: 84,
+    height: 78,
+    alt: "aws partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Chamber of Commerce.svg",
+    width: 132,
+    height: 78,
+    alt: "stamford chamber of commerce",
+  },
+
+  {
+    img: "/assets/redesign-2025/londonchamber.svg",
+    width: 231,
+    height: 78,
+    alt: "london chamber of commerce",
+  },
+  {
+    img: "/assets/redesign-2025/Solution partner.svg",
+    width: 191,
+    height: 58,
+    alt: "solution partner",
+  },
+  {
+    img: "/assets/redesign-2025/Certs.svg",
+    width: 191,
+    height: 70,
+    alt: "marketplace partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Cert.svg",
+    width: 191,
+    height: 68,
+    alt: "training partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/awscerts.svg",
+    width: 84,
+    height: 78,
+    alt: "aws partner",
+  },
+
+  {
+    img: "/assets/redesign-2025/Chamber of Commerce.svg",
+    width: 132,
+    height: 78,
+    alt: "stamford chamber of commerce",
+  },
+
+  {
+    img: "/assets/redesign-2025/londonchamber.svg",
+    width: 231,
+    height: 78,
+    alt: "london chamber of commerce",
+  },
 ];
 
 export const aboutServices = [
