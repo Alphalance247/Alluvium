@@ -4,9 +4,8 @@ import Image from "next/image";
 import { FiUpload } from "react-icons/fi";
 // import { UploadCloud } from "lucide-react"; // or any upload icon
 
-const ImageUpload = () => {
+const ImageUpload = ({ file, setFile }) => {
   const [preview, setPreview] = useState(null);
-  const [file, setFile] = useState(null);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files?.[0];
@@ -17,6 +16,8 @@ const ImageUpload = () => {
       alert("File must be less than 5MB");
     }
   };
+
+  console.log(file);
 
   return (
     <div>
@@ -51,7 +52,6 @@ const ImageUpload = () => {
             accept="image/*"
             onChange={handleFileChange}
             className="d-none"
-            // style={{ display: "none" }}
           />
         </label>
       </div>

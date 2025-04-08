@@ -6,49 +6,87 @@ import { useState } from "react";
 import { useToasts } from "react-toast-notifications";
 import ImageUpload from "./imageUpload";
 import Button from "components/atlassian-service-reuse/Button";
+import { environment } from "env/env.local";
+import { postRequest } from "pages/api/helpers/postRequest";
 
 const KnowledgeZone = () => {
   const [form, setForm] = useState({
     email: "",
     description: "",
-    image: null,
     fullname: "",
+    social_media: "",
+    socialMediaLink: "",
   });
 
   const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
+  const [file, setFile] = useState(null);
+
+  console.log(form);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setForm({ ...form, image: file });
-    }
+  // Helper function for displaying toast messages
+  const showToast = (message, type = "success") => {
+    addToast(message, {
+      appearance: type,
+      autoDismiss: true,
+      autoDismissTimeout: 5000,
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+
+    if (!form?.social_media || !file) {
+      addToast("Please enter your prefered social media link", {
+        appearance: "error",
+        autoDismiss: true, // Enable auto dismiss
+        autoDismissTimeout: 5000, // Dismiss after 5 seconds
+      });
+      return;
+    }
+
     try {
+      // Create FormData and append all form fields
+      console.log("Setting loading to true...");
+      setLoading(true);
+      console.log("Loading state set to true.");
+      const formData = new FormData();
+      formData.append("fullname", form.fullname);
+      formData.append("email", form.email);
+      formData.append("description", form.description);
+      formData.append("social_media", form.social_media);
+      formData.append("socialMediaLink", form.socialMediaLink);
+      if (file) {
+        formData.append("image", file); // Add the file
+      }
+
       const res = await postRequest(
-        "https://vast.ec2.alluvium.net/challenge/request/",
-        { ...form },
-        { timeout: 10000 }
+        `${environment?.baseUrl}${environment?.EmailSubUrl}`,
+        formData, // Pass only the FormData object
+        {
+          headers: {
+            "Content-Type": "multipart/form-data", // Required for file uploads
+          },
+          timeout: 30000,
+        }
       );
       if (res.status >= 200 && res.status < 300) {
-        addToast(
-          "Your request has been submitted successfully. Thank you, we'll be in touch.",
-          {
-            appearance: "success",
-            autoDismiss: true, // Enable auto dismiss
-            autoDismissTimeout: 5000, // Dismiss after 5 seconds
-          }
+        showToast(
+          `Your request has been submitted successfully. Thank you, we'll be in touch.`,
+          "success"
         );
 
-        setForm({ ...form, email: "", description: "" });
+        setForm({
+          email: "",
+          description: "",
+          fullname: "",
+          social_media: "",
+          socialMediaLink: "",
+        });
       } else {
         addToast(
           "Unexpected response from server. Please try again or contact Admin",
@@ -72,13 +110,9 @@ const KnowledgeZone = () => {
         }
       }
 
-      addToast(
+      showToast(
         errMessage || "Request failed. Please check the form and try again.",
-        {
-          appearance: "error",
-          autoDismiss: true, // Enable auto dismiss
-          autoDismissTimeout: 5000, // Dismiss after 5 seconds
-        }
+        "error"
       );
     } finally {
       setLoading(false);
@@ -247,46 +281,42 @@ const KnowledgeZone = () => {
             </div>
 
             <div className=" position-relative">
-              <label htmlFor="volunteer_reason_9" className={styles.labelStyle}>
+              <label htmlFor="social_media" className={styles.labelStyle}>
                 Social Media
               </label>
               <select
-                name="volunteer_reason_9"
-                id="volunteer_reason_9"
+                name="social_media"
+                id="social_media"
                 className={`${styles.countrySelect} `}
-                value={form.volunteer_reason_9}
+                value={form?.social_media || ""}
                 onChange={handleChange}
               >
                 <option value="">Select</option>
-                <option value="To gain experience in event management or organization">
-                  To gain experience in event management or organization.
-                </option>
-                <option value="To contribute to the success of the IT and service management community">
-                  To contribute to the success of the IT and service management
-                  community.
-                </option>
-                <option value="To network with industry professionals and expand my network">
-                  To network with industry professionals and expand my network.
-                </option>
-                <option value="To learn more about service management and its impact on businesses">
-                  To learn more about service management and its impact on
-                  businesses.
-                </option>
-                <option value="To give back to the community and support a worthwhile cause">
-                  To give back to the community and support a worthwhile cause.
-                </option>
-                <option value="To enhance my resume and gain valuable skills">
-                  To enhance my resume and gain valuable skills.
-                </option>
+                <option value="Facebook">Facebook</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Telegram">Telegram</option>
+                <option value="WhatsApp">WhatsApp</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Instagram">Instagram</option>
               </select>
-              {/* {formError.volunteer_reason_9 && (
-                <h6 style={{ color: "#F30000", marginTop: "1rem" }}>
-                  This field is required
-                </h6>
-              )} */}
             </div>
 
-            <ImageUpload />
+            {form?.social_media && (
+              <div>
+                <Input
+                  id={"socialMediaLink"}
+                  label={"socialMediaLink"}
+                  placeholder={`Enter your ${form?.social_media} link`}
+                  text={`Please enter Your ${form?.social_media} handle or link`}
+                  type={"url"}
+                  name={"socialMediaLink"}
+                  value={form?.socialMediaLink || ""}
+                  onChange={handleChange}
+                />
+              </div>
+            )}
+
+            <ImageUpload file={file} setFile={setFile} />
 
             <div className={styles.description}>
               <label htmlFor="">Short Bio *</label>
@@ -305,7 +335,9 @@ const KnowledgeZone = () => {
             </div>
 
             <div>
-              <Button>Submit request</Button>
+              <Button>{`${
+                loading ? "Submitting..." : "Submit request"
+              }`}</Button>
             </div>
           </form>
         </div>
