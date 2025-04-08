@@ -9,7 +9,7 @@ const HeroBlog = () => {
 
         <div className={`${styles.blogdatastyle}`}>
           <div className={`${styles.contentstyling}`}>
-            <p className={`${styles.contentname}`}>By James Akinlabi</p>
+            <p className={`${styles.contentname}`}>By Taiwo Ojo</p>
             <p className={`${styles.contentdate}`}>
               Sept 15th, 2024 <span>.</span> 5 mins read
             </p>

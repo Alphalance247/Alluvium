@@ -862,7 +862,7 @@ export const consultingPageCards = [
       "Our services include thorough training for end-users to ensure smooth adoption and effective utilization of Agile practices.",
     ],
     variant: "border",
-    link: "/support/contact#schedule-a-call",
+    link: "/contact-us",
     buttonText: "Book a Free Consult",
     buttonVariant: "outline",
   },
@@ -884,7 +884,7 @@ export const consultingPageCards = [
       "We provide specialized health checks and consultancy to ensure your business processes are fully supported, enabling you to utilize your Atlassian tools to their fullest potential.",
     ],
     variant: "border",
-    link: "/support/contact#schedule-a-call",
+    link: "/contact-us",
     buttonText: "Book a Free Consult",
     buttonVariant: "outline",
   },
@@ -2297,7 +2297,7 @@ export const servicesContent = [
     subHeading:
       "Optimize your Atlassian environment with our AWS consulting services. We offer managed services, infrastructure review, modernization, and DevOps solutions, delivered by our team of experienced consultants.",
     btn: "Speak to our consultant",
-    url: "/contact-us/contact-sales-team",
+    url: "#consultationForm",
   },
   {
     img: "/assets/redesign-2025/atlassian.svg",
@@ -2305,34 +2305,7 @@ export const servicesContent = [
     subHeading:
       "Enhance your projects with our comprehensive Design as a Service and cutting-edge software development. Our expert team delivers tailored, innovative solutions to meet your unique needs and drive your business forward.",
     btn: "Schedule a meeting",
-    url: "/support/contact#schedule-a-call",
-  },
-];
-
-export const redesignCaseStudy = [
-  {
-    img: "/assets/case-studies2/case-study-03/situation.png",
-    title: "INSURANCE",
-    heading:
-      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
-    btn: "Read Case Study",
-    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
-  },
-  {
-    img: "/assets/case-studies2/case-study-01/situation.png",
-    title: "AGRICULTURE",
-    heading:
-      "A Successful Server to Cloud Migration for an Agricultural business",
-    btn: "Read Case Study",
-    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
-  },
-  {
-    img: "/assets/case-studies2/case-study-06/situation.png",
-    title: "SOFTWARE DEVELOPMENT",
-    heading:
-      "Server to Cloud Migration for Top Rated Software Development Company",
-    btn: "Read Case Study",
-    url: "/case-studies/streamlining-server-to-Aalassian-cloud-migration-for-an-insurance-company",
+    url: "/contact-us",
   },
 ];
 
@@ -2430,195 +2403,31 @@ export const aboutServices = [
   },
 ];
 
+export const redesignCaseStudy = [
+  {
+    img: "/assets/redesign-2025/case-studies/card.png",
+    title: "SPORT",
+    heading: "Project Learner: ServiceNow / JSM Migration",
+    btn: "Read Case Study",
+    url: "/case-studies/project-varsity-servicenow-JSM-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/case-studies/card2.png",
+    title: "LOGISTICS",
+    heading: "Project Cricket: ServiceNow / Confluence Migration",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/case-studies/card1.png",
+    title: "PUBLICATION",
+    heading: "Project Omega: Incident and Asset Management Migration ",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Omega:-Incident-and-Asset-Management-Migration",
+  },
+];
+
 export const CaseStudyDataRedesign2025 = [
-  // {
-  //   id: 1,
-  //   downloadLink: "/files/AgroBiz-Server-to-Cloud.pdf",
-  //   filename:
-  //     "A Successful Server to Cloud Migration for an Agricultural business",
-  //   caseStudyPageName:
-  //     "a-successful-server-to-cloud-migration-for-an-agricultural-business",
-  //   clientLogo: "/assets/case-studies2/case-study-01/situation.png",
-  //   details: {
-  //     displayImage: "/assets/case-studies2/case-study-01/header.png",
-  //     caseStudyTitle:
-  //       "A Successful Server to Cloud Migration for an Agricultural business",
-  //     teamComposition: "5 Members",
-  //     tools: "Jira, Jira Service Management",
-  //     duration: "5 months",
-  //     clientName: "5 members",
-  //     serviceProvided: "Data Migration, Cloud Instance Training",
-  //     industry: "Agriculture",
-  //     caseStudyAchievements: [
-  //       {
-  //         goal: "Successfully Trained In-house Administrator",
-  //         icon: "/assets/case-studies2/icons/first.png",
-  //       },
-  //       {
-  //         goal: "Cloud Instance setup",
-  //         icon: "/assets/case-studies2/icons/second.png",
-  //       },
-  //       {
-  //         goal: "Ticket tracking with Jira Service Management",
-  //         icon: "/assets/case-studies2/icons/third.png",
-  //       },
-  //     ],
-
-  //     content: [
-  //       {
-  //         type: "subcontent",
-  //         highlightHeading: "Customer Journey",
-  //         Highlightpargraph: [
-  //           "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
-  //         ],
-  //       },
-  //       {
-  //         type: "subcontent",
-  //         highlightHeading: "The Challenge",
-  //         Highlightpargraph: [
-  //           "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process.",
-  //         ],
-  //       },
-
-  //       {
-  //         type: "image",
-  //         src: "/assets/redesign-2025/case-studies/furistic.png",
-  //         width: 686,
-  //         height: 425,
-  //         alt: "furistic",
-  //       },
-
-  //       {
-  //         type: "subcontent",
-  //         highlightHeading: "Customer Journey",
-  //         Highlightpargraph: [
-  //           "Our client needed us to come in and assess the situation by:",
-  //         ],
-  //         list: [
-  //           "Presenting a cost-efficient solution",
-  //           "Deploying and training their staff",
-  //           "Delivering a secure migration to simplify the internal processes",
-  //         ],
-  //         additionalText: [
-  //           "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
-  //           "The second option Server to Cloud was chosen by us and approved by the client. Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud.",
-  //         ],
-  //       },
-
-  //       {
-  //         type: "subcontent",
-  //         highlightHeading: "The Result",
-  //         list: [
-  //           "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
-  //           "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
-  //           "Jira Service Management was chosen as their tickets tracking tool.",
-  //         ],
-  //       },
-  //     ],
-  //     caseStudyImg: "/assets/case-studies/case-study-1-img.png",
-  //     description:
-  //       "Atlassian`s Jira Software as one of the leading issue tracking solutions on the market has proven itself as an efficient tool in every industry - even in the agri-food industry. Find out how we helped our client gain full control over their Jira Service Management and executed a successful migration quickly, securely and cost-effectively for them.",
-  //     caseStudySituation:
-  //       "Passionate about growth and excellence, our client and their small team of more than 3.000 people across the globe, focus on creating ways for their customers to thrive in the agri-food industry. The organization is headquartered in the UK and they offer their customers data services for the agri-food industry.",
-  //     caseStudySituationImage:
-  //       "/assets/case-studies2/case-study-01/situation.png",
-  //     caseStudyChallenge:
-  //       "Our client was faced with several issues at the time they reached out to us for help. First of all, they needed a better way to track tickets effectively across the entire organization. Another challenge presented itself in the Jira instance which was hosted on a third party’s network. Not only was this process expensive for the organization in the long term but also did the organization have little control over their management process. ",
-  //     solution: [
-  //       {
-  //         caseStudySolutionSubtitle:
-  //           "Our client needed us to come in and assess the situation by:",
-  //         caseStudySolutions: [
-  //           " Presenting a cost-efficient solution",
-  //           " Deploying and training their staff",
-  //           " Delivering a secure migration to simplify the internal processes",
-  //         ],
-  //         caseStudySolutionsParagraphs: [
-  //           "We presented two options to our client to choose from. The first option was a Server to DC migration and the second was a Server to Cloud migration.",
-  //           "The second option Server to Cloud was chosen by us and approved by the client.",
-  //           "Our solution needed to meet their specific requirements - they wanted a SaaS solution that was cost-efficient and easy to implement. In addition to this, it was the company’s policy to move to Cloud.",
-  //         ],
-  //       },
-  //     ],
-
-  //     caseStudyResultsImage: "/assets/case-studies2/case-study-01/result.png",
-  //     caseStudyResults: [
-  //       "Our client saved costs by having in-house administrators who were trained by us to manage their tools and reduced the involvement of third-party’s network.",
-  //       "A Cloud instance was set up a month early before their tendency agreement with the third party ended.",
-  //       "Jira Service Management was chosen as their tickets tracking tool.",
-  //     ],
-  //     hasPie: false,
-  //   },
-  // },
-
-  // {
-  //   id: 2,
-  //   downloadLink:
-  //     "/files/Server to Data Center Migration for Major Insurer.pdf",
-  //   filename: "Server to Data Center Migration for Major Insurer",
-  //   caseStudyPageName: "server-to-data-center-migration-for-major-insurer",
-  //   clientLogo: "/assets/case-studies2/case-study-02/situation.png",
-  //   details: {
-  //     displayImage: "/assets/case-studies2/case-study-02/header.png",
-  //     caseStudyTitle: "Server to Data Center Migration for Major Insurer",
-  //     teamComposition: "5 Members",
-  //     tools: "Jira, Jira Service Management",
-  //     duration: "5 months",
-  //     clientName: "5 members",
-  //     serviceProvided: "Data Migration, Cloud Instance Training",
-  //     industry: "Insurance",
-  //     caseStudyAchievements: [
-  //       {
-  //         goal: "40% saved on license cost",
-  //         icon: "/assets/case-studies2/icons/checkIcon.png",
-  //       },
-  //       {
-  //         goal: "Improved and unified user experience.",
-  //         icon: "/assets/case-studies2/icons/arrowIcon.png",
-  //       },
-  //       {
-  //         goal: "Scalable administration of the tools.",
-  //         icon: "/assets/case-studies2/icons/scaleIcon.png",
-  //       },
-  //     ],
-  //     caseStudyImg: "/assets/case-studies/case-study-2-img.png",
-  //     description:
-  //       "A major insurance and asset management company needed to improve Atlassian product user experiences and optimize the product`s performances across their entire company, they turned to our team of certified experts with Jira and Confluence knowledge base for a solution.",
-  //     caseStudySituation:
-  //       "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
-  //     caseStudySituationImage:
-  //       "/assets/case-studies2/case-study-02/situation.png",
-  //     caseStudyChallenge:
-  //       "Before working with us, our clients` focus was on improving Atlassian product user experiences and optimizing the products' performances. The top challenges our client was facing were as a result of having redundant resources, duplicate resources etc. Furthermore, our client was struggling with performing a successful migration by taking into consideration all possible blockers that might cause a migration failure.",
-  //     solution: [
-  //       {
-  //         caseStudySolutionSubtitle:
-  //           "We stood out amongst others owing to the fact that we came to the table with not just a well robust experience in building Jira to support the Agile ways of working but also a strong experience in performing Atlassian products migrations successfully for our clients.",
-  //         caseStudySolutions: [
-  //           "Comparing the database count of all Jira and Confluence resources",
-  //           "Checking for duplicate resources",
-  //           "Checking that all Apps and macros that can/can`t be migrated plus alternatives.",
-  //           "Checking, documenting and comparing all references - App links, Webhooks as well as Issue and page Links/references.",
-  //           "Checking that all Jira / Confluence cross-references are maintained for UAT/Prod.",
-  //           "Contingency Planning: What happens in a “No-Go” and roll back plans ?",
-  //           "Risk about communication style with client/customer.",
-  //         ],
-  //         caseStudySolutionsParagraphs: [
-  //           "We assisted our client with a full Migration plan with detailed risk analysis documentation which called out all things to look out for in pre-and post-migration, and a detailed UAT test plan for a successful migration.",
-  //           "These results formed a solid and good foundation to inform the migration strategies,plans, methodology and process.",
-  //         ],
-  //       },
-  //     ],
-  //     caseStudyResultsImage: "/assets/case-studies2/case-study-02/result.png",
-  //     caseStudyResults: [
-  //       "Our client saved 40% on license costs",
-  //       "Improved and unified user experience.",
-  //       "Scalable administration of the tools.",
-  //     ],
-  //     hasPie: true,
-  //   },
-  // },
-
   {
     id: 1,
     downloadLink:
@@ -2690,15 +2499,15 @@ export const CaseStudyDataRedesign2025 = [
       caseStudyAchievements: [
         {
           paragraph: "Successfully Trained In-house Administrator",
-          icon: "/assets/case-studies2/icons/icon1.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1a.svg",
         },
         {
           paragraph: "Cloud Instance setup",
-          icon: "/assets/case-studies2/icons/icon2.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1b.svg",
         },
         {
           paragraph: "Ticket tracking with Jira Service Management",
-          icon: "/assets/case-studies2/icons/icon3.png",
+          icon: "/assets/redesign-2025/case-studies/svg/1f.svg",
         },
       ],
 
@@ -2756,5 +2565,509 @@ export const CaseStudyDataRedesign2025 = [
       ],
       hasPie: true,
     },
+  },
+  {
+    id: 1,
+    downloadLink:
+      "/files/Server to Data Center Migration for Major Insurer.pdf",
+    clientLogo: "/assets/redesign-2025/case-studies/sport3.png",
+    caseStudyPageName: "project-varsity-servicenow-JSM-Migration",
+    content: [
+      {
+        type: "subcontent",
+        highlightHeading: "Problem Identification",
+        Highlightpargraph: [
+          "Varsity's reliance on ServiceNow for incident and change management, as well as document storage, is proving increasingly costly.  Expanding ServiceNow's service management capabilities (available on platforms like JSM and Confluence by default) without resorting to third-party plugins is also becoming financially unsustainable.",
+        ],
+      },
+      {
+        type: "subcontent",
+        highlightHeading: "Solution Development",
+        Highlightpargraph: [
+          "Solution Implementation Steps:",
+          "1. Initial Assessment: Thoroughly analyze the client servicenow platform to inform JSM and Confluence setup. Define necessary environment configurations, including the number of projects, spaces and permission structures, aligning these with client business needs.",
+          "2. Pilot Migration: Migrate a small subset of data to validate Confluence configuration. Internally review results to identify and resolve any potential problems.",
+          "3. User Acceptance Testing (UAT): Migrate approximately 50% of the ServiceNow data to Confluence.  Facilitate client validation and feedback, using this input to refine the system and optimize its alignment with business requirements.",
+          "4. Production Deployment and Ongoing Support: Following successful UAT, complete the full data migration to the production environment. Provide post-migration support to address any issues and ensure seamless operation.",
+        ],
+      },
+
+      {
+        type: "image",
+        src: "/assets/redesign-2025/case-studies/sport1.png",
+        width: 686,
+        height: 425,
+        alt: "furistic",
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Implementation",
+        subTextAvailable: true,
+        Highlightpargraph: [
+          "The solution was successfully implemented through the following steps:",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["1. Discovery:"],
+        subTextAvailable: true,
+        list: [
+          "An in-depth analysis of the servicenow platforms was conducted, and findings were presented to the client. This included details on how the data would be represented in the new system. Feedback and necessary adjustments were incorporated based on client input.",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["2. Pre-Migration Setup:"],
+        subTextAvailable: true,
+        list: [
+          "The confluence environment was set up and configured in alignment with the proposals outlined in the discovery phase.",
+          "Python scripts were developed to export and transform data from servicenow into formats acceptable by JSM and Confluence.",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["3. Migration"],
+        subTextAvailable: true,
+        list: ["The migration process was carried out in three stages:"],
+      },
+      {
+        type: "subsubList",
+        subTextAvailable: true,
+        list: [
+          "Pilot Test Migration: A small subset of data was migrated to validate the JSM configuration and ensure everything functioned as intended.",
+          "UAT Migration: Approximately 50% of the data was migrated to enable the client to validate the system and provide feedback. This phase allowed for refinements to ensure the solution met the client’s business requirements.",
+          "Production Migration: Following successful UAT, the full data migration was completed.",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["4. Post-Migration Support:"],
+
+        list: [
+          "After production migration, ongoing support was provided to address any issues, ensure system stability, and optimize performance.",
+        ],
+      },
+      {
+        type: "subcontent",
+        highlightHeading: "Results and Impact",
+        Highlightpargraph: [
+          "The elimination of high ServiceNow customization and maintenance costs resulted in substantial savings for the company.",
+        ],
+      },
+    ],
+    details: {
+      displayImage: "/assets/case-studies2/case-study-03/header.png",
+      caseStudyTitle: "Project Varsity: ServiceNow / JSM Migration",
+      caseStudyAchievements: [
+        {
+          paragraph: "Reduction in ServiceNow customization costs",
+          icon: "/assets/redesign-2025/case-studies/svg/1a.svg",
+        },
+        {
+          paragraph: "Decrease in maintenance costs",
+          icon: "/assets/redesign-2025/case-studies/svg/1b.svg",
+        },
+        {
+          paragraph: "Substantial savings for the company",
+          icon: "/assets/redesign-2025/case-studies/svg/1c.svg",
+        },
+      ],
+
+      industry: [
+        {
+          heading: "INDUSTRY",
+          subHead: ["Sports"],
+        },
+        {
+          heading: "Tools USED",
+          subHead: ["Jira Service Management, Confluence"],
+        },
+        {
+          heading: "Service Provided",
+          subHead: ["JSM and Confluence Migrations"],
+        },
+        {
+          heading: "Duration",
+          subHead: ["2 months"],
+        },
+      ],
+      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
+      description:
+        "An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution.",
+      caseStudySituation:
+        "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
+      caseStudySituationImage:
+        "/assets/case-studies2/case-study-03/situation.png",
+      caseStudyResultsImage: "/assets/case-studies2/case-study-03/result.png",
+    },
+  },
+
+  {
+    id: 2,
+    downloadLink:
+      "/files/Server to Data Center Migration for Major Insurer.pdf",
+    clientLogo: "/assets/redesign-2025/case-studies/sport4.png",
+    caseStudyPageName: "Project-Cricket-ServiceNow-Confluence-Migration",
+    content: [
+      {
+        type: "subcontent",
+        highlightHeading: "Problem Identification",
+        subTextAvailable: false,
+        Highlightpargraph: [
+          "CH Robinson initially relied on ServiceNow for knowledge management and operational documentation.  However, several challenges led to a transition to Confluence.  ServiceNow's knowledge base proved inadequate for the company's expanding and diverse documentation needs, hindering efficient retrieval of critical operational and procedural documents.  Furthermore, maintaining and customizing ServiceNow for this purpose became increasingly costly, ultimately exceeding its value.",
+        ],
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Solution Development",
+        subTextAvailable: true,
+        list: [
+          "Establish a centralized knowledge base that is easily accessible and user-friendly for all employees.",
+          "Streamline documentation workflows by leveraging Confluence's robust collaborative editing and sharing features.",
+          "Effectively address the company's expanding operational needs through the platform's scalability and integration capabilities.",
+          "Significantly reduce maintenance costs while simultaneously enhancing usability and efficiency.",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["Solution Implementation Steps:"],
+        subTextAvailable: true,
+        Highlightpargraph: [
+          "Solution Implementation Steps:",
+          "1. Initial Assessment:  Thoroughly analyze the client servicenow platform to inform Confluence setup. Define necessary environment configurations, including the number of spaces and permission structures, aligning these with client business needs.",
+          "2. Pilot Migration: Migrate a small subset of data to validate Confluence configuration.  Internally review results to identify and resolve any potential problems.",
+          "3. User Acceptance Testing (UAT): Migrate approximately 50% of the ServiceNow data to Confluence.  Facilitate client validation and feedback, using this input to refine the system and optimize its alignment with business requirements.",
+          "3. Production Deployment and Ongoing Support: Following successful UAT, complete the full data migration to the production environment. Provide post-migration support to address any issues and ensure seamless operation.",
+        ],
+      },
+
+      {
+        type: "image",
+        src: "/assets/redesign-2025/case-studies/delivery.png",
+        width: 686,
+        height: 425,
+        alt: "furistic",
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Implementation",
+        subTextAvailable: true,
+        Highlightpargraph: [
+          "The solution was successfully implemented through the following steps:",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["1. Discovery:"],
+        subTextAvailable: true,
+        list: [
+          "An in-depth analysis of the servicenow platforms was conducted, and findings were presented to the client. This included details on how the data would be represented in the new system. Feedback and necessary adjustments were incorporated based on client input.",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["2. Pre-Migration Setup:"],
+        subTextAvailable: true,
+        list: [
+          "The confluence environment was set up and configured in alignment with the proposals outlined in the discovery phase.",
+          "Python scripts were developed to export and transform data from servicenow into formats acceptable by JSM and Confluence.",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["3. Migration"],
+        subTextAvailable: true,
+        list: ["The migration process was carried out in three stages:"],
+      },
+      {
+        type: "subsubList",
+        list: [
+          "Pilot Test Migration: A small subset of data was migrated to validate the JSM configuration and ensure everything functioned as intended.",
+          "UAT Migration: Approximately 50% of the data was migrated to enable the client to validate the system and provide feedback. This phase allowed for refinements to ensure the solution met the client’s business requirements.",
+          "Production Migration: Following successful UAT, the full data migration was completed.",
+        ],
+      },
+
+      {
+        type: "headingwithSublist",
+        Highlightpargraph: ["4. Post-Migration Support:"],
+
+        list: [
+          "After production migration, ongoing support was provided to address any issues, ensure system stability, and optimize performance.",
+        ],
+      },
+      {
+        type: "subcontent",
+        highlightHeading: "Results and Impact",
+        subTextAvailable: true,
+        list: [
+          "Centralized Knowledge Base: The migration created a unified, easily accessible repository for all operational and procedural documents with right permissions.",
+          "Enhanced Collaboration: Confluence’s collaborative editing features allowed teams to co-author, update, and share documents efficiently, resolving workflow inefficiencies.",
+          "Scalability and Integration: The platform’s scalability and integration capabilities addressed the company’s growing documentation needs and supported its expanding operations.",
+          "Cost Reduction: By eliminating the high costs associated with customizing and maintaining ServiceNow, the company achieved significant cost savings.",
+        ],
+      },
+    ],
+    details: {
+      caseStudyTitle: "Project Cricket: ServiceNow / Confluence Migration",
+      caseStudyAchievements: [
+        {
+          paragraph:
+            "The migration centralized documents into a secure, accessible repository.",
+          icon: "/assets/redesign-2025/case-studies/svg/1d.svg",
+        },
+        {
+          paragraph:
+            "The company saved by reducing ServiceNow customization and maintenance costs.",
+          icon: "/assets/redesign-2025/case-studies/svg/1k.svg",
+        },
+        {
+          paragraph:
+            "The platform's scalability supported growing documentation needs and operations.",
+          icon: "/assets/redesign-2025/case-studies/svg/1f.svg",
+        },
+      ],
+
+      industry: [
+        {
+          heading: "INDUSTRY",
+          subHead: ["Logistic"],
+        },
+        {
+          heading: "Tools USED",
+          subHead: ["Confluence"],
+        },
+        {
+          heading: "Service Provided",
+          subHead: ["Confluence Migration"],
+        },
+        {
+          heading: "Duration",
+          subHead: ["2 months"],
+        },
+      ],
+      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
+      description:
+        "An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution.",
+      caseStudySituation:
+        "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
+      caseStudySituationImage:
+        "/assets/case-studies2/case-study-03/situation.png",
+      caseStudyResultsImage: "/assets/case-studies2/case-study-03/result.png",
+    },
+  },
+  {
+    id: 1,
+    downloadLink:
+      "/files/Server to Data Center Migration for Major Insurer.pdf",
+    clientLogo: "/assets/redesign-2025/case-studies/sport2.png",
+    caseStudyPageName: "Project-Omega:-Incident-and-Asset-Management-Migration",
+    content: [
+      {
+        type: "subcontent",
+        highlightHeading: "Problem Identification",
+        Highlightpargraph: [
+          "The organization needed a cost-effective IT service management solution that delivered essential features like incident and asset management without the complexity or high cost of their existing tools. This was vital to improve efficiency, reduce expenses, and align IT operations with their preferred suite of applications. Migrating to Jira Service Management Cloud provided a streamlined, affordable solution with strong ITSM capabilities and a better return on investment.",
+          "There were need to confirm the feature disparity between the ITSM Tool servicenow and ensuring that the feature parity does not impact their working system and because as at the time of the Implementation JSM Operations was just launched, ready developer resources to support was available and we had to build, test and find workarounds for some of the configurations before and after the migration and Implementation to aid the project.",
+        ],
+      },
+      {
+        type: "subcontent",
+        highlightHeading: "Background and Context",
+        Highlightpargraph: [
+          "They operated with PagerDuty for incident management and ServiceNow for request and asset management, resulting in a fragmented IT service environment. Relying on separate tools for core ITSM functions created inefficiencies and drove up costs significantly. The lack of integration between these systems made it challenging to streamline processes and gain a unified view of operations. These constraints highlighted the need for a consolidated, cost-effective solution that could deliver the required ITSM features without the burden of managing multiple high-cost applications and also getting more advanced and efficient capabilities.",
+        ],
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Solution Development",
+        list: [
+          "Agile Approach was used where the deliverables of the migration and Implementation were breakdown with set timeline to achieve the requirements of the customer.",
+          " An agile approach was used to achieve the migration and Implementation with phases like planning, Implementation, testing and so on to achieve the requirements",
+          "API and Python was used for some custom solution of data analysis and data migration in some scenarios and configurations were manual in most cases for the Implementations.",
+        ],
+      },
+
+      {
+        type: "image",
+        src: "/assets/redesign-2025/case-studies/book.png",
+        width: 686,
+        height: 425,
+        alt: "furistic",
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Implementation",
+        list: [
+          "The configurations on Pagerduty for their Incident management tool was migrated to JSM Operations using API and manual configurations in some cases which were all tested to ensure data quality.",
+          "There were phases like Investigation & planning, Test Implementation or Migration , UAT, Prod Implementation or Migration.",
+          "API and Python was used for some custom solution of data analysis and data migration in some scenarios and configurations were manual in most cases for the Implementations.",
+        ],
+      },
+
+      {
+        type: "subcontent",
+        highlightHeading: "Results and Impact",
+        subTextAvailable: true,
+        list: [
+          " Reduced Cost, Improved User Experience, Centralized System.",
+          "Reduced cost on ITSM Service tool and also a unified ecosystem for most or all ITSM features delivery by the team like Assets and Incident Management in a simpler interface and learning curve.",
+        ],
+      },
+    ],
+    details: {
+      caseStudyTitle: "Project Omega: Incident and Asset Management Migration ",
+      caseStudyAchievements: [
+        {
+          paragraph: "Percentage increase in user satisfaction.",
+          icon: "/assets/redesign-2025/case-studies/svg/1f.svg",
+        },
+        {
+          paragraph:
+            "Number of ITSM features consolidated into a unified platform.",
+          icon: "/assets/redesign-2025/case-studies/svg/1h.svg",
+        },
+        {
+          paragraph: "Total savings achieved by optimizing ITSM tool expenses.",
+          icon: "/assets/redesign-2025/case-studies/svg/1c.svg",
+        },
+      ],
+
+      industry: [
+        {
+          heading: "INDUSTRY",
+          subHead: ["Publication"],
+        },
+        {
+          heading: "Tools USED",
+          subHead: [
+            "Jira Service Management( Operations and Assets), Python and API Expertise.",
+          ],
+        },
+        {
+          heading: "Service Provided",
+          subHead: [
+            "Incident and Asset Management Migration and Implementation, Support",
+          ],
+        },
+        {
+          heading: "Duration",
+          subHead: ["6 months"],
+        },
+      ],
+      caseStudyImg: "/assets/case-studies/case-study-2-img.png",
+      description:
+        "An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution.",
+      caseStudySituation:
+        "Our client is a multinational life insurance, pensions and asset management company headquartered in Europe. With over 22.000 employees, their purpose is to help their 30.4 million customers achieve a lifetime of financial security. To succeed in this, our client makes use of most Atlassian products for their project management, team management and other business management tasks.",
+      caseStudySituationImage:
+        "/assets/case-studies2/case-study-03/situation.png",
+      caseStudyResultsImage: "/assets/case-studies2/case-study-03/result.png",
+    },
+  },
+];
+
+export const blogCards = [
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/blogImages/ai.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading: "Shadow AI: The Hidden Threat Lurking in Your Organization",
+    url: "/blogs/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+
+  {
+    img: "/assets/redesign-2025/pexels1.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+    url: "/case-studies/shadow-AI:-the-hidden-threat-lurking-in-your-organization",
+  },
+  {
+    img: "/assets/redesign-2025/pexels.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels1.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+    url: "/case-studies/project-varsity-servicenow-JSM-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels1.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "Streamlining Server to Atlassian Cloud Migration for an Insurance Company",
+    url: "/case-studies/project-varsity-servicenow-JSM-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/pexels.webp",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
+  },
+  {
+    img: "/assets/redesign-2025/case-studies/card1.png",
+    title: "ARTIFICIAL INTELLIGNECE",
+    title1: "CONFLUENCE",
+    heading:
+      "A Successful Server to Cloud Migration for an Agricultural business",
+    btn: "Read Case Study",
+    url: "/case-studies/Project-Omega:-Incident-and-Asset-Management-Migration",
   },
 ];

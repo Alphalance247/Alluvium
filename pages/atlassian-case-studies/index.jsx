@@ -27,7 +27,7 @@ const AtlassianCaseStudy = () => {
         contentsheading1="Achieve ITSM Excellence with Alluvium & Atlassian"
         contentsheading2="Transform Your Service Management with the Proven Power of Atlassian Products."
         button1={
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <Button size="large" className="">
               Schedule a Call
             </Button>

@@ -19,7 +19,7 @@ const DiscoverAtlassian = () => {
             Our team of Atlassian certified experts is ready to help you tackle
             any of your Atlassian challenges.
           </p>
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <button className={styles.button1}>Schedule a Call</button>
           </Link>
         </div>

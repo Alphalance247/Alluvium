@@ -35,7 +35,7 @@ const CloudMigration = () => {
         contentsheading2="When smooth and secure data migration matters, make Alluvium your go-to partner."
         withSlide={false}
         button1={
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="/contact-us">
             <Button size="large">Schedule a Demo</Button>
           </Link>
         }
@@ -89,7 +89,7 @@ const CloudMigration = () => {
           text={false}
           variant="primary"
           button1={
-            <Link href="/support/contact#schedule-a-call">
+            <Link href="/contact-us">
               <Button size="large">Schedule a Free Consult</Button>
             </Link>
           }

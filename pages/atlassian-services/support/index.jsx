@@ -152,7 +152,7 @@ const Support = () => {
         contentsheading2="Be assured of having technical and functional Atlassian expertise by your side with our Atlassian support packages."
         withSlide={false}
         button1={
-          <Link href="/support/contact#schedule-a-call">
+          <Link href="https://support.portal.alluvium.net/servicedesk/customer/portals">
             <Button size="large">Go to Support</Button>
           </Link>
         }

@@ -60,7 +60,7 @@ const AWSServices = () => {
         contentsheading1="Partner with Alluvium for AWS excellence."
         contentsheading2="From data transformation to full cloud solutions, we help you leverage the power of AWS."
         button1={
-          <Link href="/support/contact#schedule-a-call" passHref>
+          <Link href="/contact-us" passHref>
             <Button size="large">Schedule a Call</Button>
           </Link>
         }
@@ -96,7 +96,7 @@ const AWSServices = () => {
                     <p>{el.paragraphs}</p>
                   </div>
                   <div className={styles.buttonContainer}>
-                    <Link href="/support/contact#schedule-a-call">
+                    <Link href="/contact-us">
                       <Button variant="outline" size="large">
                         Learn More
                       </Button>
@@ -134,10 +134,7 @@ const AWSServices = () => {
                       className={el.buttonText ? styles.buttonContainer : ""}
                     >
                       {el.buttonText && (
-                        <Link
-                          href="/support/contact#schedule-a-call"
-                          className={styles.link}
-                        >
+                        <Link href="/contact-us" className={styles.link}>
                           <Button
                             variant={el.buttonVariant}
                             size={el.buttonSize}

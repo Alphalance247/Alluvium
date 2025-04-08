@@ -20,17 +20,22 @@ const Hero = () => {
                 heading="Empower Your Teams with Expert Atlassian Solutions"
                 subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
                 variant="primary"
-                withLink={true}
+                withLink={false}
                 showParagraph={false}
+                // span={"$31,000+ "}
+                // headingcont={
+                //   "Atlassian AI Licenses, Implementation and Support package"
+                // }
+                // span1={"Free for Startup"}
               />
               <div className={styles.btns}>
-                <Link href="/support/contact#schedule-a-call">
+                <Link href="/contact-us">
                   <Button size="mediumL">Contact Us</Button>
                 </Link>
 
                 <Link href="/why-hire-us">
                   <Button variant="redesign" size="xxlarge">
-                    Why hire us as your Atlassian Partner
+                    Why Hire Us as Your Atlassian Partner
                   </Button>
                 </Link>
               </div>
@@ -38,10 +43,10 @@ const Hero = () => {
 
             <Image
               src="/assets/redesign-2025/collaborate.png"
-              width={500}
-              height={598}
+              width={494}
+              height={530}
+              // 472
               alt="colllaborate"
-              // layout="responsive"
             />
           </div>
 
