@@ -18,6 +18,7 @@ const AtlassianServicesCard = ({
   isBtn = false,
   index,
   imageAvailable = true,
+  btnUrl,
 }) => {
   return (
     <div
@@ -56,7 +57,7 @@ const AtlassianServicesCard = ({
       ))}
 
       {isBtn && (
-        <Link href="/support/contact#schedule-a-call">
+        <Link href={btnUrl || "/support/contact#schedule-a-call"}>
           <Button className={`${index === 0 ? styles.buttonMargin : null}`}>
             Learn More
           </Button>

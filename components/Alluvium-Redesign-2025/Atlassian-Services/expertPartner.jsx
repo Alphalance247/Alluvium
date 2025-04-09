@@ -7,24 +7,14 @@ const ExpertPartner = () => {
     <section className={styles.expert__partner}>
       <div className={styles.expert}>
         <div className={styles.expert__1}>
-          <HeroHeading
-            withParagragh={false}
-            heading={"Your Atlassian Partner and Solution Expert"}
-            variant={"tertiary"}
-            withLink={false}
-          />
+          <h4>Your Atlassian Partner and Solution Expert</h4>
         </div>
 
         <div className={styles.expert__2}>
-          <HeroHeading
-            headingAvailable={false}
-            subhead={
-              "Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
-            }
-            variantMargingFix="third"
-            variant={"tertiary"}
-            withLink={false}
-          />
+          <p>
+            Let`s discuss your unique needs and challenges, and we`ll develop a
+            customized solution tailored specifically for your use case.
+          </p>
           <Button size="large">Schedule a Call</Button>
         </div>
       </div>

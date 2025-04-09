@@ -209,12 +209,53 @@
       @media screen and (max-width: 640px) {
         padding: 3rem 18px 0rem 18px;
       }
+
+      h4 {
+        font-size: 36px;
+        line-height: 2.5rem;
+        color: white;
+        letter-spacing: -2px;
+        font-weight: 700;
+        font-family: "Grotesk";
+
+        @media screen and (max-width: 1035px) {
+          font-size: 2.4rem;
+          line-height: 2.7rem;
+        }
+
+        @media screen and (max-width: 992px) {
+          font-size: 20px;
+          line-height: 1.5rem;
+        }
+
+        @media screen and (max-width: 768px) {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+      }
     }
     .expert__2 {
       padding: 5rem 3rem;
 
       @media screen and (max-width: 640px) {
         padding: 0rem 18px 3rem 18px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 28px;
+        font-weight: 400;
+        color: white;
+        margin-bottom: 48px;
+
+        @media screen and (max-width: 1035px) {
+          font-size: 16px;
+          line-height: 26px;
+        }
+        @media screen and (max-width: 768px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
     }
   }

@@ -22,11 +22,11 @@ const HeroSection = () => {
                 headSection=""
               />
               <div className={styles.btns}>
-                <Link href="/support/contact#schedule-a-call">
+                <Link href="/contact-us">
                   <Button size="mediumL">Schedule a Call</Button>
                 </Link>
 
-                <Link href="/why-hire-us">
+                <Link href="/atlassian-services/atlassian-licence">
                   <Button variant="redesign" size="xxlarge">
                     Get a Free Atlassian Audit
                   </Button>

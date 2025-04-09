@@ -47,6 +47,7 @@ const ServicesCardReuse = ({
               title={item?.title}
               description={item?.description}
               list={item?.list}
+              btnUrl={item?.btnUrl}
               withList={withList}
               marginVariant={marginVariant}
               subHeadingVariant={subHeadingVariant}

@@ -1,21 +1,9 @@
-import DiscoverAtlassian from "components/atlassian-service-compo/discoverAtlassian";
-import MarketPlace from "components/atlassian-service-compo/marketplace";
-import ProductAtlassian from "components/atlassian-service-compo/productAtlassian";
 import Layout from "components/layout";
-import CustomerReview from "components/our-customers/customer";
-import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
 import FaQuestions from "components/licence-component/faQuestion";
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
-import Button from "components/atlassian-service-reuse/Button";
-import Link from "next/link";
-import GetStarted from "components/atlassian-service-reuse/getStarted";
-import { chooseUsAlluvium } from "data";
 import Head from "next/head";
 import HeroSection from "components/Alluvium-Redesign-2025/Atlassian-Services/HeroSection";
 import AtlassianServicesHero from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesHero";
 import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents/ServicesCardReuse";
-import { FaGalacticSenate } from "react-icons/fa6";
-import TrustedAtlassian from "components/Alluvium-Redesign-2025/Atlassian-Services/TrustedAtlassian";
 import AtlassianSuite from "components/Alluvium-Redesign-2025/Atlassian-Services/AtlassianSuite";
 import ExpertPartner from "components/Alluvium-Redesign-2025/Atlassian-Services/expertPartner";
 import ChoosePartnerAlluvium from "components/Alluvium-Redesign-2025/Atlassian-Services/chooseAlluvium";
@@ -23,10 +11,11 @@ import ChoosePartnerAlluvium from "components/Alluvium-Redesign-2025/Atlassian-S
 const AtlassianService = () => {
   const data = [
     {
-      title: "Jira Admin Training",
-      image: "/assets/redesign-2025/cardIcons/jira.svg",
-      width: 54,
-      height: 54,
+      title: "Cloud & Data Migration",
+      image: "/assets/Atlassian-Services-Assets/icons/1.svg",
+      btnUrl: "/atlassian-services/cloud-migration",
+      width: 36,
+      height: 36,
       description: [
         {
           text: "Let us help you migrate your current Server environments to Atlassian Cloud smoothy.",
@@ -34,10 +23,11 @@ const AtlassianService = () => {
       ],
     },
     {
-      title: "Jira Admin Training",
-      image: "/assets/redesign-2025/cardIcons/jira.svg",
-      width: 54,
-      height: 54,
+      title: "Training",
+      image: "/assets/Atlassian-Services-Assets/icons/2.svg",
+      btnUrl: "/atlassian-services/training",
+      width: 36,
+      height: 36,
       description: [
         {
           text: "Need to train your Jira or Confluence users to become more skilled? We offer various Atlassian training sessions, from user training to advanced admin training.",
@@ -45,10 +35,11 @@ const AtlassianService = () => {
       ],
     },
     {
-      title: "JSM Admin Training",
-      image: "/assets/redesign-2025/cardIcons/training.svg",
-      width: 54,
-      height: 54,
+      title: "Support",
+      image: "/assets/Atlassian-Services-Assets/icons/3.svg",
+      btnUrl: "/atlassian-services/support",
+      width: 36,
+      height: 36,
       description: [
         {
           text: "Our team of experts is ready to support you during every phase of your Atlassian journey. We offer support packages and subscriptions tailored to your needs.",
@@ -57,10 +48,11 @@ const AtlassianService = () => {
     },
 
     {
-      title: "Confluence Mastery",
-      image: "/assets/redesign-2025/cardIcons/mastery.svg",
-      width: 54,
-      height: 54,
+      title: "License Management",
+      image: "/assets/Atlassian-Services-Assets/icons/4.svg",
+      btnUrl: "/atlassian-services/atlassian-licence",
+      width: 36,
+      height: 36,
       description: [
         {
           text: "Are you seeking an Atlassian partner to assist with purchasing Atlassian and Marketplace apps? Maximize your license investment by letting Alluvium manage your licenses.",
@@ -68,10 +60,11 @@ const AtlassianService = () => {
       ],
     },
     {
-      title: "App-Specific Workshops",
-      image: "/assets/redesign-2025/cardIcons/workshop.svg",
-      width: 54,
-      height: 54,
+      title: "Consulting & Strategy",
+      image: "/assets/Atlassian-Services-Assets/icons/5.svg",
+      btnUrl: "/atlassian-services/consulting",
+      width: 36,
+      height: 36,
       description: [
         {
           text: "Looking for Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? We’re here for you.",
@@ -79,10 +72,11 @@ const AtlassianService = () => {
       ],
     },
     {
-      title: "App-Specific Workshops",
-      image: "/assets/redesign-2025/cardIcons/workshop.svg",
-      width: 54,
-      height: 54,
+      title: "ITSM Implementation",
+      image: "/assets/Atlassian-Services-Assets/icons/6.svg",
+      btnUrl: "/atlassian-services/itsm-services",
+      width: 36,
+      height: 36,
       description: [
         {
           text: "Transform your IT service operations into a streamlined and efficient powerhouse with our ITSM implementation using the best-in-class tool: Jira Service Management.",
@@ -134,49 +128,6 @@ const AtlassianService = () => {
       <ExpertPartner />
       <ChoosePartnerAlluvium />
       <FaQuestions />
-
-      {/* <ServicesHero
-        contentsheading="ATLASSIAN SERVICES"
-        contentsheading1="Customized Atlassian Services for Enhanced Productivity"
-        contentsheading2="Implement or optimize your Atlassian apps through our Atlassian products and services."
-        withSlide={true}
-        button1={
-          <Link href="/contact-us">
-            <Button size="large" className="mx-md-3 my-4">
-              Schedule a Call
-            </Button>
-          </Link>
-        }
-        button2={
-          <Link href="/atlassian-services/atlassian-licence/licence-request">
-            <Button size="large" variant="tertiary">
-              Get a Free Atlassian Audit
-            </Button>
-          </Link>
-        }
-      />
-
-      <DiscoverAtlassian />
-      <MarketPlace />
-      <ProductAtlassian />
-      <GetStarted
-        heading="Your Atlassian Partner and Solution Expert"
-        text="Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
-        button1={
-          <Link href="/contact-us">
-            <Button size="large" className="mx-md-3 my-4">
-              Schedule a Call
-            </Button>
-          </Link>
-        }
-      /> */}
-
-      {/* <ChooseAlluvium
-        choose="Why Choose Us"
-        strategy="From strategy to execution, our team of experts will provide the utmost guidance and smooth delivery through your data migration journey."
-        chooseUsAlluvium={chooseUsAlluvium}
-      /> */}
-      {/* <CustomerReview /> */}
     </Layout>
   );
 };
