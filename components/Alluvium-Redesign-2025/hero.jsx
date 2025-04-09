@@ -22,6 +22,7 @@ const Hero = () => {
                 variant="primary"
                 withLink={false}
                 showParagraph={false}
+                withParagragh={true}
                 // span={"$31,000+ "}
                 // headingcont={
                 //   "Atlassian AI Licenses, Implementation and Support package"
