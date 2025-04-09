@@ -1,14 +1,10 @@
 import Layout from "components/layout";
 import styles from "../../styles/Blogs/blogs.module.scss";
-import Image from "next/image";
-import Articles from "components/blog-component/article";
 import Head from "next/head";
 import HeroHeading from "components/Alluvium-Redesign-2025/ReuseComponents/heroHeading";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 import CardBlogDetails from "components/Alluvium-Redesign-2025/ReuseComponents/cardBlogDetails";
-import FilterComponent from "components/Alluvium-Redesign-2025/ReuseComponents/FilterComponent";
-import { blogCards } from "data";
 import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard";
 import { useEffect } from "react";
 import axios from "axios";
@@ -23,47 +19,14 @@ const Blogs = () => {
 
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
-  const handleSelected = (option) => {
-    console.log(option);
-  };
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     setLoading(true);
-  //     axios
-  //       .get(`${environment?.blogBaseUrl2}api/blog/posts/`)
-  //       .then((res) => {
-  //         const data = res.data;
-  //         if (!res || res.status !== 200 || !res.data) {
-  //           setError(true);
-  //           return;
-  //         }
-
-  //         setData(data);
-  //         setLoading(false);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //         setLoading(false);
-  //         setError(true);
-  //       })
-  //       .finally(() => {
-  //         console.log("done");
-  //       });
-  //   };
-
-  //   fetchData();
-  // }, []);
 
   const fetchData = async () => {
     setLoading(true);
     setError(false);
     try {
       const [postsRes, postOfTheWeekRes] = await Promise.all([
-        axios.get(`${environment?.blogBaseUrl2}/api/blog/posts/`),
-        axios.get(
-          `${environment?.blogBaseUrl2}/api/blog/posts/post_of_the_week/`
-        ),
+        axios.get(`${environment?.baseUrl}api/blog/posts/`),
+        axios.get(`${environment?.baseUrl}api/blog/posts/post_of_the_week/`),
       ]);
 
       const postsData = postsRes.data;

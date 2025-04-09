@@ -8,6 +8,7 @@ import axios from "axios";
 import { ToastProvider, useToasts } from "react-toast-notifications";
 import LoadingScreen from "components/loading";
 import styles from "../../../../styles/licence.module.scss";
+import { environment } from "env/env.local";
 
 const RequestForm = () => {
   const [dropDown, setDropDown] = useState("");
@@ -82,7 +83,7 @@ const RequestForm = () => {
     ) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/support/data-center-license/", {
+        .post(`${environment?.baseUrl}support/data-center-license/`, {
           ...form,
         })
         .then((res) => {
@@ -153,7 +154,7 @@ const RequestForm = () => {
     if (form.have_cloud_env && emailRegex.test(form.current_technical_email)) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/support/cloud-license/", {
+        .post(`${environment?.baseUrl}support/cloud-license/`, {
           ...form,
         })
         .then((res) => {
@@ -211,7 +212,7 @@ const RequestForm = () => {
     if (form.instance_size && form.instances_to_migrate_to) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/support/consultancy/", {
+        .post(`${environment?.baseUrl}support/consultancy/`, {
           ...form,
         })
         .then((res) => {
@@ -269,7 +270,7 @@ const RequestForm = () => {
     if (form.instance_size) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/support/consultancy/", {
+        .post(`${environment?.baseUrl}support/consultancy/`, {
           ...form,
         })
         .then((res) => {
@@ -325,7 +326,7 @@ const RequestForm = () => {
     if (form.type_of_training) {
       setLoading(true);
       await axios
-        .post("https://vast.ec2.alluvium.net/support/training/", {
+        .post(`${environment?.baseUrl}support/training/`, {
           ...form,
         })
         .then((res) => {
