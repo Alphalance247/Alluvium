@@ -83,7 +83,7 @@ const RequestForm = () => {
     ) {
       setLoading(true);
       await axios
-        .post(`${environment?.baseUrl}support/data-center-license/`, {
+        .post(`${environment?.baseUrl}utilities/support/data-center-license/`, {
           ...form,
         })
         .then((res) => {
@@ -154,7 +154,7 @@ const RequestForm = () => {
     if (form.have_cloud_env && emailRegex.test(form.current_technical_email)) {
       setLoading(true);
       await axios
-        .post(`${environment?.baseUrl}support/cloud-license/`, {
+        .post(`${environment?.baseUrl}utilities/support/cloud-license/`, {
           ...form,
         })
         .then((res) => {
@@ -212,7 +212,7 @@ const RequestForm = () => {
     if (form.instance_size && form.instances_to_migrate_to) {
       setLoading(true);
       await axios
-        .post(`${environment?.baseUrl}support/consultancy/`, {
+        .post(`${environment?.baseUrl}utilities/support/consultancy/`, {
           ...form,
         })
         .then((res) => {
@@ -270,7 +270,7 @@ const RequestForm = () => {
     if (form.instance_size) {
       setLoading(true);
       await axios
-        .post(`${environment?.baseUrl}support/consultancy/`, {
+        .post(`${environment?.baseUrl}utilities/support/consultancy/`, {
           ...form,
         })
         .then((res) => {
@@ -326,7 +326,7 @@ const RequestForm = () => {
     if (form.type_of_training) {
       setLoading(true);
       await axios
-        .post(`${environment?.baseUrl}support/training/`, {
+        .post(`${environment?.baseUrl}utilities/support/training/`, {
           ...form,
         })
         .then((res) => {

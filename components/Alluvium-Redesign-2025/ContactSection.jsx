@@ -98,7 +98,7 @@ const ContactSection = ({ withLines = true }) => {
     setIsSubmitting(true);
     try {
       const response = await axios.post(
-        `${environment?.baseUrl}support/inquiry/`,
+        `${environment?.baseUrl}utilities/support/inquiry/`,
         newFormData,
         {
           headers: {
