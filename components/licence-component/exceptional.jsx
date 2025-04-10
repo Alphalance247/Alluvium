@@ -24,13 +24,7 @@ const Exceptional = ({
             styles[`imageContainer--${variantPadding}`]
           }`}
         >
-          <Image
-            src={image}
-            alt="certs"
-            width={width}
-            height={height}
-            layout="responsive"
-          />
+          <Image src={image} alt="certs" width={width} height={height} />
         </div>
 
         <div

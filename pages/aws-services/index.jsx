@@ -35,6 +35,7 @@ const AWSServices = () => {
         ]}
         image="/assets/redesign-2025/aws/awslogo.png"
         redesignStyle={true}
+        variantPadding="default"
         width={416}
         height={416}
       />
