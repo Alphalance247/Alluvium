@@ -221,6 +221,22 @@
 
     &--default {
       padding-left: 48px;
+      padding-top: 6rem;
+
+      @media screen and (max-width: 992px) {
+        padding-left: 18px;
+        padding-top: 2rem;
+        height: 50px;
+        max-width: 150px;
+      }
+
+      @media screen and (max-width: 640px) {
+        padding-left: 18px;
+        padding-top: 2rem;
+        height: 50px;
+        max-width: 150px;
+        margin-bottom: 4rem;
+      }
     }
 
     &--primary {
