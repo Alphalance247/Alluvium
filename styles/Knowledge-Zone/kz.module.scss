@@ -1,0 +1,133 @@
+.knowledge__zone {
+  background: url("/assets/KZ/bg.png");
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+
+  .knowledge__zone__content {
+    h1 {
+      font-size: 3rem;
+      font-family: "Grotesk";
+      line-height: 4rem;
+      color: white;
+      font-weight: 700;
+      text-align: center;
+      letter-spacing: -2px;
+    }
+
+    span {
+      font-size: 4rem;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      color: #ffffff;
+      font-weight: 400;
+      text-align: center;
+      width: 50%;
+      margin: 0 auto;
+      margin-bottom: 5rem;
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.knowledge__zone__form {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  width: 1270px;
+  margin-right: auto;
+  margin-left: auto;
+
+  h3 {
+    font-size: 2.4rem;
+    font-family: "Grotesk";
+    line-height: 3rem;
+    color: black;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-family: "Grotesk";
+    color: black;
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+
+  .form__container {
+    width: 60%;
+    margin: auto;
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.8rem;
+
+      .imageUpload {
+        margin-top: 1rem;
+        width: 100%;
+        padding: 18px;
+        outline: none;
+        background: white;
+        border: 1px solid #c2c2c2;
+        border-radius: 0.5rem;
+        color: #11202d;
+
+        label {
+          font-weight: bold;
+          display: block;
+          margin-bottom: 0.5rem;
+          cursor: pointer;
+        }
+
+        input[type="file"] {
+          display: block;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: #555;
+        }
+
+        .upload_here__style {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+
+          .upload__here {
+            margin-bottom: 1rem;
+            font-size: 11px;
+            color: #4b5563;
+          }
+
+          .size {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .countrySelect {
+        width: 100%;
+        padding: 18px;
+        outline: none;
+        background: white;
+        border: 1px solid #c2c2c2;
+        border-radius: 0.5rem;
+        color: #11202d;
+        // appearance: none;
+
+        &:focus {
+          border-radius: 4;
+          border-color: #f2c193;
+          box-shadow: 0px 0px 0px 4px #f6d5b6b2;
+        }
+      }
+    }
+  }
+}

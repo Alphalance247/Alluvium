@@ -3,6 +3,7 @@ import styles from "../../../styles/AlluviumRedesign2025/accelerating-incident/A
 import Button from "components/cloud-connect-2/Button";
 import Link from "next/link";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
+import { badges } from "data";
 
 const AboutSection = () => {
   return (
@@ -25,7 +26,7 @@ const AboutSection = () => {
               <Button size="large">Learn more</Button>
             </Link>
           </div>
-          <Badges variant={"default"} />
+          <Badges variant={"default"} badgesData={badges} />
         </section>
       </main>
     </section>

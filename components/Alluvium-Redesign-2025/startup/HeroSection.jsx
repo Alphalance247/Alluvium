@@ -5,6 +5,7 @@ import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
 import Image from "next/image";
 import Badges from "../ReuseComponents/badges";
+import { badges } from "data";
 
 const HeroSection = () => {
   return (
@@ -32,7 +33,7 @@ const HeroSection = () => {
             alt="colllaborate"
           />
         </div>
-        <Badges variant={"default"} />
+        <Badges variant={"default"} badgesData={badges} />
       </main>
     </section>
   );
