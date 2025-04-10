@@ -1,0 +1,38 @@
+<svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_ddii_900_6440)">
+<rect x="4.5" y="6" width="40" height="40" rx="8" fill="white"/>
+<rect x="5" y="6.5" width="39" height="39" rx="7.5" stroke="#D9D9D9"/>
+<path d="M28.565 27.0224L24.815 24.8349C24.7194 24.7792 24.6107 24.7498 24.5 24.7498C24.3893 24.7498 24.2806 24.7792 24.185 24.8349L20.435 27.0224C20.3406 27.0775 20.2624 27.1563 20.208 27.2511C20.1536 27.3458 20.125 27.4532 20.125 27.5624V31.9374C20.125 32.0467 20.1536 32.154 20.208 32.2488C20.2624 32.3435 20.3406 32.4224 20.435 32.4774L24.185 34.6649C24.2806 34.7207 24.3893 34.7501 24.5 34.7501C24.6107 34.7501 24.7194 34.7207 24.815 34.6649L28.565 32.4774C28.6594 32.4224 28.7376 32.3435 28.792 32.2488C28.8464 32.154 28.875 32.0467 28.875 31.9374V27.5624C28.875 27.4532 28.8464 27.3458 28.792 27.2511C28.7376 27.1563 28.6594 27.0775 28.565 27.0224ZM27.625 30.8962L26.0425 29.9468C26.0506 29.8818 26.0625 29.8174 26.0625 29.7499C26.0621 29.4463 25.9732 29.1493 25.8067 28.8953C25.6402 28.6414 25.4033 28.4414 25.125 28.3199V26.4637L27.625 27.9212V30.8962ZM23.875 26.4631V28.3193C23.5966 28.4408 23.3596 28.6409 23.1931 28.895C23.0266 29.149 22.9378 29.4462 22.9375 29.7499C22.9375 29.8174 22.9494 29.8812 22.9575 29.9468L21.375 30.8962V27.9212L23.875 26.4631ZM24.5 33.4012L22.03 31.9606L23.5969 31.0206C23.8531 31.2024 24.1631 31.3124 24.5 31.3124C24.8369 31.3124 25.1475 31.2024 25.4031 31.0206L26.97 31.9606L24.5 33.4012Z" fill="#595959"/>
+<path d="M30 21.7125C29.4562 19.1375 27.175 17.25 24.5 17.25C21.825 17.25 19.5437 19.1375 19 21.7125C17.1437 22.0875 15.75 23.75 15.75 25.6875C15.75 27.6062 17.0875 29.2062 18.875 29.6312V28.3125C17.7875 27.925 17 26.9125 17 25.6875C17 24.2312 18.1375 22.9938 19.5875 22.8813L20.1 22.8438L20.1625 22.3375C20.4313 20.15 22.2937 18.5 24.5 18.5C26.7063 18.5 28.5688 20.15 28.8375 22.3375L28.9 22.8438L29.4125 22.8813C30.8625 23 32 24.2312 32 25.6875C32 26.9062 31.2125 27.9312 30.125 28.3187V29.6375C31.9125 29.2125 33.25 27.6 33.25 25.6875C33.25 23.7438 31.8562 22.0875 30 21.7125Z" fill="#595959"/>
+</g>
+<defs>
+<filter id="filter0_ddii_900_6440" x="0.5" y="0" width="48" height="49" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="-2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_900_6440"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1"/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_900_6440" result="effect2_dropShadow_900_6440"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_900_6440" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="1" operator="erode" in="SourceAlpha" result="effect3_innerShadow_900_6440"/>
+<feOffset/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
+<feBlend mode="normal" in2="shape" result="effect3_innerShadow_900_6440"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="0.5"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect3_innerShadow_900_6440" result="effect4_innerShadow_900_6440"/>
+</filter>
+</defs>
+</svg>

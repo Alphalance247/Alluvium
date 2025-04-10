@@ -1,15 +1,35 @@
 import Image from "next/image";
 import styles from "../../styles/licence.module.scss";
 
-const Exceptional = ({ categoryTitle, heading, paragraphs, image }) => {
+const Exceptional = ({
+  categoryTitle,
+  heading,
+  paragraphs,
+  image,
+  redesignStyle = false,
+  variantPadding = "primary",
+  variantPadd = "primary",
+  width = 424,
+  height = 113,
+}) => {
   return (
-    <div className="container-fluid" style={{ background: "#f9fafb" }}>
-      <div className={`container mx-auto ${styles.exception}`}>
-        <div className={styles.imageContainer}>
-          <Image src={image} alt="certs" width={424} height={113} />
+    <div className={`${redesignStyle ? styles.redesign__style : styles.prev}`}>
+      <div
+        className={`${
+          redesignStyle ? styles.container__redesign : `container mx-auto`
+        } ${styles.exception}`}
+      >
+        <div
+          className={`${styles.imageContainer} ${
+            styles[`imageContainer--${variantPadding}`]
+          }`}
+        >
+          <Image src={image} alt="certs" width={width} height={height} />
         </div>
 
-        <div className={styles.content}>
+        <div
+          className={`${styles.content} ${styles[`content--${variantPadd}`]}`}
+        >
           {categoryTitle && <p className={styles.manage}>{categoryTitle}</p>}
           <h5>{heading}</h5>
           {paragraphs.map((paragraph, index) => (

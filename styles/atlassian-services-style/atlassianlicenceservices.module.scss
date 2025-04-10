@@ -182,52 +182,50 @@
 }
 
 .Productsection {
-  background: white;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  // padding-top: 6rem;
+  // padding-bottom: 6rem;
 
-  .productfaq {
-    width: 80%;
-    margin: auto;
+  // .productfaq {
+  //   width: 80%;
+  //   margin: auto;
 
-    h5 {
-      font-weight: 600;
-      font-size: 0.9rem;
-      line-height: 1rem;
-      color: #009bc0;
-      margin-bottom: 1.5rem;
-    }
+  //   h5 {
+  //     font-weight: 600;
+  //     font-size: 0.9rem;
+  //     line-height: 1rem;
+  //     color: #009bc0;
+  //     margin-bottom: 1.5rem;
+  //   }
 
-    h3 {
-      font-weight: 700;
-      font-size: 3.2rem;
-      line-height: 53px;
-      margin-bottom: 1.5rem;
-      color: #0f1a24;
+  //   h3 {
+  //     font-weight: 700;
+  //     font-size: 3.2rem;
+  //     line-height: 53px;
+  //     margin-bottom: 1.5rem;
+  //     color: #0f1a24;
 
-      @media screen and (max-width: 992px) {
-        font-size: 2.8rem;
-      }
-      @media screen and (max-width: 576px) {
-        font-size: 1.5rem;
-        line-height: 2rem;
-      }
-    }
+  //     @media screen and (max-width: 992px) {
+  //       font-size: 2.8rem;
+  //     }
+  //     @media screen and (max-width: 576px) {
+  //       font-size: 1.5rem;
+  //       line-height: 2rem;
+  //     }
+  //   }
 
-    p {
-      color: #3d3d3d;
-      font-size: 1.2rem;
-      line-height: 2rem;
-      margin-bottom: 2rem;
+  //   p {
+  //     color: #3d3d3d;
+  //     font-size: 1.2rem;
+  //     line-height: 2rem;
+  //     margin-bottom: 2rem;
 
-      @media screen and (max-width: 576px) {
-        font-size: 0.9rem;
-      }
-    }
-  }
+  //     @media screen and (max-width: 576px) {
+  //       font-size: 0.9rem;
+  //     }
+  //   }
+  // }
 
   .atlassiantool {
-    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -237,36 +235,51 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 640px) {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 1rem;
     }
 
     .atlassiansoftware {
-      padding: 2.5rem 1.5rem;
+      padding: 1.5rem;
+      height: 280px;
       background: #f9fafb;
-      display: flex;
-      flex-direction: column;
-      row-gap: 1rem;
       border-radius: 1rem;
       border: 1px solid #e5e7eb;
+      box-shadow: 0px 1px 2px 0px #1018280a;
 
-      h6 {
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 20px;
-        color: #6b7280;
+      @media screen and (max-width: 1135px) {
+        height: 390px;
+      }
+
+      @media screen and (max-width: 992px) {
+        height: 300px;
+      }
+
+      @media screen and (max-width: 640px) {
+        height: 310px;
       }
 
       h5 {
         color: #3d3d3d;
         font-weight: 600;
-        font-size: 1.5rem;
-        line-height: 2.5rem;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: -0.5px;
+        margin-top: 1.5rem;
+        margin-bottom: 4px;
+        font-family: "Grotesk";
 
         @media screen and (max-width: 992px) {
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: #595959;
+        margin-bottom: 0px;
       }
     }
   }
