@@ -5,6 +5,7 @@ import Image from "next/image";
 import LeadForm from "../itsm-solutions/form/leadform";
 import Link from "next/link";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
+import { badges } from "data";
 
 const ShadowAI = ({ variant = "secondary" }) => {
   const timeData = [
@@ -171,7 +172,7 @@ const ShadowAI = ({ variant = "secondary" }) => {
             </Link>
           </div>
 
-          <Badges variant={"default"} />
+          <Badges variant={"default"} badgesData={badges} />
         </div>
       </section>
     </Layout>

@@ -5,6 +5,7 @@ import Button from "components/atlassian-service-reuse/Button";
 import { useState } from "react";
 import { postRequest } from "pages/api/helpers/postRequest";
 import { useToasts } from "react-toast-notifications";
+import { environment } from "env/env.local";
 
 const HelpCenter = () => {
   const [form, setForm] = useState({ email: "", description: "" });
@@ -20,7 +21,7 @@ const HelpCenter = () => {
     setLoading(true);
     try {
       const res = await postRequest(
-        "https://vast.ec2.alluvium.net/challenge/request/",
+        `${environment?.baseUrl}utilities/challenge/request/`,
         { ...form },
         { timeout: 10000 }
       );
