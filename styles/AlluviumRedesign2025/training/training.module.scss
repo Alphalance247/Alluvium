@@ -1,0 +1,45 @@
+.training__hero {
+  background: #fcfcfc;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+
+  .sub__head__hero {
+    max-width: 1272px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    margin: auto;
+  }
+
+  .hero__head {
+    padding-top: 6rem;
+    margin-bottom: 6rem;
+    width: 55%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 992px) {
+      width: 85%;
+      padding-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      text-align: left;
+      padding-left: 18px;
+    }
+  }
+}
+
+.training__master {
+  max-width: 1272px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  margin: auto;
+  // padding-top: 6rem;
+  // padding-bottom: 6rem;
+}
