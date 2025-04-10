@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Lines } from "./ReuseComponents/Lines";
 import HeroHeading from "./ReuseComponents/heroHeading";
 import Badges from "./ReuseComponents/badges";
+import { badges } from "data";
 
 const Hero = () => {
   return (
@@ -51,7 +52,7 @@ const Hero = () => {
             />
           </div>
 
-          <Badges variant={"default"} />
+          <Badges variant={"default"} badgesData={badges} />
 
           <Lines variant="default" />
         </div>
