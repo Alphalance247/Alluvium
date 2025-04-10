@@ -36,9 +36,9 @@ const HeroSection = () => {
 
             <Image
               src="/assets/redesign-2025/atlassianservices/Images.png"
-              width={500}
-              height={598}
-              alt="colllaborate"
+              width={591}
+              height={614}
+              alt="jira-admin-board"
             />
           </div>
 

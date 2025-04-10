@@ -46,8 +46,7 @@ const Hero = () => {
             <Image
               src="/assets/redesign-2025/collaborate.png"
               width={494}
-              height={530}
-              // 472
+              height={600}
               alt="colllaborate"
             />
           </div>
