@@ -53,9 +53,11 @@ const Footer = () => {
       text1: "Migration Case Study",
       text2: "ITSM/JSM Case study",
       text3: "Events",
+      text3: "Blogs",
       url1: "/atlassian-cloud-migration-case-studies",
       url2: "/atlassian-case-studies",
       url3: "/event/event-blog",
+      url3: "/blogs",
     },
   ];
 
@@ -88,6 +90,39 @@ const Footer = () => {
       img: "/assets/redesign-2025/rovoagent.jpg",
       content: "Atlassian unveils rovo a game....",
       url: "https://remotework.business/2024/08/02/atlassian-unveils-rovo-a-game-changer-for-team-collaboration/",
+    },
+  ];
+
+  const policyUrls = [
+    {
+      name: "Terms & Conditions",
+      url: "/atlassian-services/terms-conditions",
+      label: "Terms-Condition",
+    },
+    {
+      name: "Privacy Policy",
+      url: "/privacy-policy",
+      label: "privacy-policy",
+    },
+    // {
+    //   name: " Cookie Preferences",
+    //   url: "/cookie-policy",
+    //   label: "cookie-policy",
+    // },
+    {
+      name: "IT AND CYBER SECURITY",
+      url: "/IT-cyber-security-policy",
+      label: "it-and-cybersecurity-policy",
+    },
+    {
+      name: "Vetting Policy",
+      url: "/vetting-policy",
+      label: "vetting-policy",
+    },
+    {
+      name: "Anti Modern Slavery",
+      url: "/anti-modern-slavery-policy",
+      label: "anti modern slavery",
     },
   ];
 
@@ -255,74 +290,30 @@ const Footer = () => {
               </p>
             </div>
             <div className={styles.extralinks}>
-              <Link href="/atlassian-services/terms-conditions">
-                <div
-                  className="px-3"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: ".4rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  <a aria-label="Terms-Condition">Terms & Conditions </a>
-                  <span
+              {policyUrls.map((el, i) => (
+                <Link href={el?.url} key={i}>
+                  <div
+                    className="px-1"
                     style={{
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "#BFBFBF",
-                      borderRadius: "99px",
-                      display: "inline-block",
+                      display: "flex",
+                      alignItems: "center",
+                      columnGap: ".4rem",
+                      cursor: "pointer",
                     }}
-                  ></span>
-                </div>
-              </Link>
-
-              <Link href={"/privacy-policy"}>
-                <div
-                  className="px-3"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: ".4rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  <a aria-label="privacy-policy">Privacy Policy</a>
-                  <span
-                    style={{
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "#BFBFBF",
-                      borderRadius: "99px",
-                      display: "inline-block",
-                    }}
-                  ></span>
-                </div>
-              </Link>
-
-              <Link href={"/cookie-policy"}>
-                <div
-                  className="px-3"
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    columnGap: ".4rem",
-                    cursor: "pointer",
-                  }}
-                >
-                  <a aria-label="privacy-policy"> Cookie Preferences</a>
-                  <span
-                    style={{
-                      width: "2px",
-                      height: "2px",
-                      backgroundColor: "#BFBFBF",
-                      borderRadius: "99px",
-                      display: "inline-block",
-                    }}
-                  ></span>
-                </div>
-              </Link>
+                  >
+                    <a aria-label={el?.label}>{el?.name}</a>
+                    <span
+                      style={{
+                        width: "2px",
+                        height: "2px",
+                        backgroundColor: "#BFBFBF",
+                        borderRadius: "99px",
+                        display: "inline-block",
+                      }}
+                    ></span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

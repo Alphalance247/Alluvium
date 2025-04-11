@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/atlassianservicescard.module.scss";
+import Button from "components/atlassian-service-reuse/Button";
+import Link from "next/link";
 
 const AtlassianServicesCard = ({
   title,
@@ -12,22 +14,21 @@ const AtlassianServicesCard = ({
   headingVariant = "default",
   subHeadingVariant = "default",
   marginVariant = "marginDefault",
-  mainText,
-  useImage = true,
-  useText = false,
-  noBorderCard,
-  containerStyle,
+  removeBorder = false,
+  isBtn = false,
+  index,
+  imageAvailable = true,
+  btnUrl,
 }) => {
   return (
     <div
-      className={`${styles.card} ${containerStyle} ${
-        styles[`card--${noBorderCard}`]
+      className={`${styles.card} ${
+        removeBorder ? styles.noBorder : styles.withBorder
       }`}
     >
-      {useImage && (
+      {imageAvailable && (
         <Image width={width} height={height} src={img} alt="icons" />
       )}
-      {useText && <h1 className={styles.mainText}>{mainText}</h1>}
 
       <h6
         className={`${styles.heading} ${styles[`heading--${headingVariant}`]} ${
@@ -54,6 +55,14 @@ const AtlassianServicesCard = ({
           )}
         </p>
       ))}
+
+      {isBtn && (
+        <Link href={btnUrl || "/support/contact#schedule-a-call"}>
+          <Button className={`${index === 0 ? styles.buttonMargin : null}`}>
+            Learn More
+          </Button>
+        </Link>
+      )}
 
       {withList && (
         <ul>

@@ -614,10 +614,7 @@ your request to speed up our response.`,
         <Head>
           <title>Privacy Policy | Alluvium</title>
 
-          <meta
-            name="description"
-            content="Alluvium University privacy policy"
-          />
+          <meta name="description" content="Alluvium privacy policy" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
 

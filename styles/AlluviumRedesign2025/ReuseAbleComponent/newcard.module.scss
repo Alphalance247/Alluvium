@@ -1,0 +1,36 @@
+.new__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1272px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  margin: auto;
+
+  p {
+    color: #262626;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    font-family: "Grotesk";
+    padding: 1.5rem 3rem;
+    margin-right: 0px;
+    margin-bottom: 0rem;
+
+    @media (max-width: 922px) {
+      padding: 1.5rem 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      padding: 1.5rem 18px;
+      font-size: 14px;
+    }
+  }
+
+  .p1 {
+    border-right: 1px solid #e0e0e0;
+  }
+  .p2 {
+    border-right: 0px solid #e0e0e0;
+  }
+}

@@ -56,13 +56,22 @@ const ContentSection = ({ caseStudy }) => {
         {caseStudy?.content.map((item, i) => {
           if (item.type === "subcontent") {
             return (
-              <div className={styles.subcontent} key={i}>
+              <div
+                className={`${styles.subcontent} ${
+                  item?.subTextAvailable
+                    ? styles.noMargin
+                    : styles.marginAvailable
+                }`}
+                key={i}
+              >
                 {/* sub content with just paragraph */}
 
                 <h4>{item?.highlightHeading}</h4>
                 {item?.Highlightpargraph &&
                   item?.Highlightpargraph.map((paragraph, i) => (
-                    <p key={i}>{paragraph}</p>
+                    <p key={i} style={{ marginBottom: "1rem" }}>
+                      {paragraph}
+                    </p>
                   ))}
 
                 {/* sub content with paragraph and list */}
@@ -81,6 +90,48 @@ const ContentSection = ({ caseStudy }) => {
                       {text}
                     </p>
                   ))}
+              </div>
+            );
+          }
+
+          if (item?.type === "headingwithSublist") {
+            return (
+              <div
+                className={`${styles.subcontent2} ${
+                  item?.subTextAvailable
+                    ? styles.noMargin
+                    : styles.marginAvailable
+                }`}
+                key={i}
+              >
+                {item?.Highlightpargraph &&
+                  item?.Highlightpargraph.map((paragraph, i) => (
+                    <p key={i} style={{ marginBottom: "1rem" }}>
+                      {paragraph}
+                    </p>
+                  ))}
+
+                {item?.list && (
+                  <ul>
+                    {item?.list.map((listItem, i) => (
+                      <li key={i}>{listItem}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            );
+          }
+
+          if (item?.type === "subsubList") {
+            return (
+              <div className={styles.subsub__list}>
+                {item?.list && (
+                  <ul>
+                    {item?.list.map((listItem, i) => (
+                      <li key={i}>{listItem}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             );
           }

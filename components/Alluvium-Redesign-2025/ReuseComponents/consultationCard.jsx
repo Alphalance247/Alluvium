@@ -1,6 +1,7 @@
 import Button from "components/atlassian-service-reuse/Button";
-import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/consultation.module.scss";
 import Link from "next/link";
+import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/consultation.module.scss";
+
 const ConsultationCardServices = ({ title, description, buttons }) => {
   return (
     <div className={styles.consultaion__card}>

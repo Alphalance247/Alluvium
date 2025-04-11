@@ -2,6 +2,7 @@ import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/atla
 import HeroHeading from "./heroHeading";
 import { Lines } from "./Lines";
 import Button from "components/atlassian-service-reuse/Button";
+import Link from "next/link";
 
 const AtlassianServicesHero = ({
   variantHeading = "default",
@@ -15,6 +16,7 @@ const AtlassianServicesHero = ({
   showParagraph,
   subsec,
   variantMargingFix,
+  url,
 }) => {
   return (
     <section className={styles.atlassian__services__hero}>
@@ -29,7 +31,12 @@ const AtlassianServicesHero = ({
             subsec={subsec}
             variantMargingFix={variantMargingFix}
           />
-          {withBtn && <Button size="mediumL">{buttonText}</Button>}
+
+          {withBtn && (
+            <Link href={url}>
+              <Button size="mediumL">{buttonText}</Button>
+            </Link>
+          )}
         </div>
         {withLines && (
           <div style={{ maxWidth: "1272px", margin: "auto" }}>

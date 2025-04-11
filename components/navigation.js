@@ -6,11 +6,27 @@ import {
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { ourServicesData } from "data";
+import NewNavbar from "./Alluvium-Redesign-2025/navbar/NewNavbar";
+import MobileNavbar from "./Alluvium-Redesign-2025/navbar/MobileNavbar";
 
 export default function Navigation({ theme }) {
   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
   const [currentDropdown, setCurrentDropdown] = useState("");
   const [dropdownActive, setDropdownActive] = useState(false);
+
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openSubDropdowns, setOpenSubDropdowns] = useState({});
+
+  const toggleDropdownss = (title) => {
+    setOpenDropdown((prev) => (prev === title ? null : title));
+  };
+
+  const toggleSubDropdown = (label) => {
+    setOpenSubDropdowns((prev) => ({
+      ...prev,
+      [label]: !prev[label],
+    }));
+  };
 
   const toggleMenu = () => {
     setDisplayMobileMenu((prev) => !prev);
@@ -48,7 +64,7 @@ export default function Navigation({ theme }) {
         </div>
         {!displayMobileMenu && (
           <nav className={styles.navigation}>
-            <ul
+            {/* <ul
               className={
                 theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu
               }
@@ -98,7 +114,9 @@ export default function Navigation({ theme }) {
                       <li>
                         <Link href="/project-reel">Project Reel</Link>
                       </li>
-                      <li>{/* <Link href="/blogs">blogs</Link> */}</li>
+                      <li>
+                        <Link href="/blogs">blogs</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -119,31 +137,8 @@ export default function Navigation({ theme }) {
                   Our Products
                 </a>
               </li>
-
-              <li>{/* <Link href="/case-studies">Case Studies</Link> */}</li>
-              {/* <li>
-                            <div>
-                                <p onClick={() => toggleDropdown('Case Studies')} className={(dropdownActive && (currentDropdown === 'Case Studies')) ? styles.dropdownActive : styles.dropdownToggler}>
-                                    <span>Case Studies</span>
-                                    {
-                                        (dropdownActive && (currentDropdown === 'Case Studies')) ?
-                                            <MdOutlineKeyboardArrowUp size={'1.5em'} className="fw-bold text-dark" />
-                                            :
-                                            <MdOutlineKeyboardArrowDown size={'1.5em'} className="fw-bold text-dark" />
-                                    }
-                                </p>
-                                <div className={(dropdownActive && (currentDropdown === 'Case Studies')) ? styles.dropdownDiv : styles.dropdownHidden}>
-                                    <ul>
-                                        {
-                                            caseStudiesData?.length && caseStudiesData.map((caseStudy) => (
-                                                <li key={caseStudy.id}><Link href="/#case-studies">{caseStudy.title}</Link></li>
-                                            ))
-                                        }
-                                    </ul>
-                                </div>
-                            </div>
-                        </li> */}
-            </ul>
+            </ul> */}
+            <NewNavbar />
             <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
               <Link href="/atlassian-services/support">
                 <a className={styles.contactUsButton}>Support</a>
@@ -163,7 +158,6 @@ export default function Navigation({ theme }) {
           id="toggleMenu"
           title={`${displayMobileMenu ? "open menu" : "close menu"}`}
         >
-          {/* <div className={theme === "dark" ? styles.menuBtnDark : styles.menuBtn}> */}
           <div className={styles.menuBtnDark}>
             <div className={styles.barOne}></div>
             <div className={styles.barTwo}></div>
@@ -179,11 +173,10 @@ export default function Navigation({ theme }) {
               : styles.hideMobileMenu
           }
         >
-          <ul>
+          {/* <ul>
             <li>
               <Link href="/">+ Home</Link>
             </li>
-            {/* <li><Link href="/products">+ Our Products</Link></li> */}
             <li>
               <Link href="/about">+ About us</Link>
             </li>
@@ -198,7 +191,6 @@ export default function Navigation({ theme }) {
             <li>
               <Link href="/project-reel">+ Project Reel</Link>
             </li>
-            {/* <li><Link href="/support/contact">Contact Us</Link></li> */}
             <li>
               <Link href="/#services">+ Our Services</Link>
             </li>
@@ -211,28 +203,16 @@ export default function Navigation({ theme }) {
               </a>
             </li>
             <li>
-              <a
-                href="https://blog.alluvium.net/"
-                rel="Alluvium"
-                target="_blank"
-              >
-                + Blog
-              </a>
+              <Link href={"/blogs"}>+ Blog</Link>
             </li>
-            {/* <li><Link href="/reel">+ Project Reel</Link></li> */}
             <li>
               <Link href="/case-studies">+ Case Studies</Link>
             </li>
-            {/* <li><Link href="/about">+ About us</Link></li> */}
-            {/* <li><Link href="/team">+ Our Team</Link></li> */}
-            {/* <li><a href="http://university.alluvium.net" target='_blank'>+ Alluvium University (AU)</a></li> */}
-            {/* <li><Link href="/showing-interest">+ Show Interest (AU)</Link></li> */}
-            {/* <li><Link href="/onboarding">+ Onboarding</Link></li> */}
             <li>
               <Link href="/support">+ Support (FAQs)</Link>
             </li>
             <li>
-              <Link href="/contact">+ Contact Us</Link>
+              <Link href="/contact-us">+ Contact Us</Link>
             </li>
             <li>
               <a
@@ -243,7 +223,8 @@ export default function Navigation({ theme }) {
                 + Schedule a Call
               </a>
             </li>
-          </ul>
+          </ul> */}
+          <MobileNavbar />
         </div>
       </div>
     </div>

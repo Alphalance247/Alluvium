@@ -1,32 +1,58 @@
 import Layout from "components/layout";
 import styles from "../../styles/Blogs/blogs.module.scss";
-import { Articledata } from "components/blog-component/informationItem";
-import { articles } from "articles";
 import { useRouter } from "next/router";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import Potential from "components/blog-component/unlockquote";
-import Articles from "components/blog-component/article";
-import BlogCard from "components/blog-component/blogCard";
 import Head from "next/head";
-import useSticky from "components/customhooks/UseSticky";
+import CardBlogDetails from "components/Alluvium-Redesign-2025/ReuseComponents/cardBlogDetails";
+import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard";
+import { environment } from "env/env.local";
+import Button from "components/atlassian-service-reuse/Button";
 
 export default function BlogsId({ article }) {
-  let nextid = 0;
-  const [activeTab, setActiveTab] = useState(nextid);
-  const relatedBlog = Articledata.slice(0, 3);
-  const { isSticky, sectionRef } = useSticky();
+  console.log(article?.slog);
+  // const relatedBlog = blogCards.slice(0, 3);
+  const [loadingRelated, setLoadingRelated] = useState(true);
+  const [errorRelated, setErrorRelated] = useState(false);
+  const [relatedBlog, setRelatedBlogs] = useState([]);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleClick = (i) => {
-    setActiveTab(i);
-  };
   const router = useRouter();
+
+  useEffect(() => {
+    const fetchRelatedBlogs = async () => {
+      if (!article?.slug) return;
+
+      try {
+        setLoadingRelated(true);
+        const res = await fetch(
+          `${environment?.baseUrl}api/blog/posts/${article?.slug}/related_posts/`
+        );
+        const data = await res.json();
+
+        if (!res.ok || !data) {
+          throw new Error("Failed to fetch related blogs");
+        }
+
+        setRelatedBlogs(data || "No related blog found");
+        setLoadingRelated(false);
+      } catch (error) {
+        setErrorRelated(true);
+        setErrorMessage(
+          error.message || "An error occurred while fetching related blogs."
+        );
+        setLoadingRelated(false);
+      }
+    };
+
+    fetchRelatedBlogs();
+  }, [article?.slug]);
 
   if (router.isFallback) {
     return <div>Loading...</div>;
   }
 
-  if (!article.pageTitle) {
+  if (!article.slug) {
     return <div>Article not found</div>;
   }
 
@@ -44,103 +70,144 @@ export default function BlogsId({ article }) {
           content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
         />
       </Head>
-      <article className={`${styles.blog__content} container-fluid px-0`}>
-        <div className={`${styles.blog__hero} `}>
-          <div className="container">
-            <h1>{article.heading}</h1>
-
-            <div className="mb-4">
-              <p className={styles.author__name}>By James Akinlabi</p>
-              <p className={styles.time__read}>7 mins read | Sept 15th, 2024</p>
-            </div>
+      <article className={styles.blog__main__details}>
+        <div className={styles.article__main}>
+          <div className={styles.article__hero}>
+            <h1>{article?.title}</h1>
+            <CardBlogDetails
+              name={`${article?.author?.first_name} ${article?.author?.last_name}`}
+              blogDate={article?.formatted_published_at}
+              minRead={article?.read_time + " mins read"}
+              variant="secondary"
+            />
           </div>
-        </div>
-
-        <div className="container mx-auto">
           <div className={styles.article__image__div}>
-            <Image
-              src={article.imageInfo}
+            <img
+              src={article?.featured_image}
               alt="imageContent"
-              width={1216}
-              height={574}
+              width={838}
+              height={475}
+              style={{
+                borderRadius: "8px",
+              }}
               className={styles.article__image}
             />
           </div>
-          <div className={`${styles.table__of__content}`}>
-            <div className={` ${isSticky ? styles.sticky : null} `}>
-              <h3 className=" mb-4">TABLE OF CONTENTS</h3>
-              {article.content.map((el, i) => {
-                return (
-                  <div
-                    className={styles.content__head}
-                    key={i}
-                    onClick={() => handleClick(i)}
-                  >
-                    <p className={activeTab === i ? styles.active : null}>
-                      {el.contentHeading}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+        </div>
+      </article>
 
-            <div className={`d-flex flex-column row-gap-4`} ref={sectionRef}>
-              {article.content
-                .filter((_, index) => index >= activeTab)
-                .map((el, i) => {
-                  return (
-                    <div className={styles.content} key={i}>
-                      <h4>{el?.textHeading}</h4>
-                      {el.paragraph.map((el, index) => {
-                        return (
-                          <div className="d-flex flex-column gap-5" key={index}>
-                            <p
-                              className={`mb-${
-                                index === el.length - 1 ? null : "1rem"
-                              }`}
-                            >
-                              {el}
-                            </p>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
+      <article className={styles.artcle__overview__content__heading}>
+        {/* Article overview and mainContent */}
+        <div className={styles.artcle__overview__content}>
+          <div className={styles.article__content}>
+            <div dangerouslySetInnerHTML={{ __html: article.content }} />
+          </div>
+
+          {article &&
+            article?.slog ===
+              "shadow-ai-risks-implications-and-strategic-mitigation-approaches" && (
+              <div>
+                <Button>Download white paper</Button>
+              </div>
+            )}
+
+          <div className={`${styles.article__overview} `}>
+            <div className={styles.share}>
+              <p>SHARE THIS STORY</p>
+
+              <div className=" d-flex gap-3">
+                <a
+                  style={{ cursor: "pointer" }}
+                  href="https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#"
+                >
+                  <Image
+                    src="/assets/redesign-2025/case-studies/svg/facebook.svg"
+                    width={24}
+                    height={24}
+                    alt="socials"
+                  />
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  href="https://x.com/alluviumhq?s=08"
+                >
+                  <Image
+                    src="/assets/redesign-2025/case-studies/svg/x.svg"
+                    width={24}
+                    height={24}
+                    alt="socials"
+                  />
+                </a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  href="https://www.linkedin.com/company/alluvium-hq/"
+                >
+                  <Image
+                    src="/assets/redesign-2025/case-studies/svg/linkedIn.svg"
+                    width={24}
+                    height={24}
+                    alt="socials"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <Potential />
-
-        <section className={`container-fluid ${styles.related__articles}`}>
-          <div className="container mx-auto">
-            <h2>Related Articles</h2>
-            <div className={styles.related__cards}>
-              {relatedBlog.map((el) => {
-                return <BlogCard el={el} key={el.id} />;
-              })}
-            </div>
-          </div>
-        </section>
       </article>
+
+      <section className={styles.cards}>
+        <div className={styles.cards__details}>
+          <h2>Related Stories</h2>
+          {loadingRelated && <p>Loading related blogs...</p>}
+          {errorRelated && <p>{errorMessage}</p>}
+          {!loadingRelated && !errorRelated && relatedBlog.length > 0 ? (
+            <div className={styles.card__encap}>
+              {relatedBlog.map((item, i) => (
+                <CaseCard
+                  variant="secondary"
+                  url={`/blogs/${item?.slug}`}
+                  imgAlt={item?.title}
+                  width={357}
+                  height={191}
+                  industry={item?.title2 || "ARTIFICIAL INTELLIGNECE"}
+                  industry1={item?.title1 || "CONFLUENCE"}
+                  title={item?.title}
+                  imgSrc={item?.featured_image}
+                  key={i}
+                  industries={item?.tag_names}
+                  publisherName={
+                    `${item?.author?.first_name} ${item?.author?.last_name}` ||
+                    "James Akinlabi"
+                  }
+                  blogDate={item?.formatted_published_at}
+                  minRead={item?.read_time + " mins read"}
+                />
+              ))}
+            </div>
+          ) : (
+            <p>No related blogs found </p>
+          )}
+        </div>
+      </section>
     </Layout>
   );
 }
 
-export async function getStaticPaths() {
-  const paths = Articledata.map((article) => ({
-    params: { blogsId: article.pageTitle },
-  }));
+export async function getServerSideProps({ params }) {
+  // Replace with your API URL for fetching a single blog post by slug
+  const res = await fetch(
+    `${environment?.baseUrl}api/blog/posts/${params?.blogsId}/`
+  );
+  const article = await res.json();
 
-  return { paths, fallback: false };
-}
+  console.log(article);
 
-export async function getStaticProps({ params }) {
-  const article = Articledata.find((el) => el.pageTitle === params.blogsId);
-
-  if (!article) {
+  // If no article is found, return a 404 page
+  if (!article || !article.slug) {
     return { notFound: true };
   }
 
-  return { props: { article } };
+  return {
+    props: { article },
+  };
 }

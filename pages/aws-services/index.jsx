@@ -1,15 +1,63 @@
 import Button from "components/atlassian-service-reuse/Button";
 import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Layout from "components/layout";
-import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import Link from "next/link";
 import styles from "../../styles//atlassian-services-style/aws-services.module.scss";
-import { awsServicesPage, awsTrainingData, awsSolutions } from "data";
+import AtlassianServicesHero from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesHero";
+import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import Exceptional from "components/licence-component/exceptional";
+import TailoredSolution from "components/Alluvium-Redesign-2025/aws-solutions/TailoredSolution";
+import AwsExpert from "components/Alluvium-Redesign-2025/aws-solutions/AwsExpert";
+import AwsTraining from "components/Alluvium-Redesign-2025/aws-solutions/AwsTraining";
 
 const AWSServices = () => {
   return (
     <Layout>
-      <ServicesHero
+      <div style={{ background: "#fcfcfc" }}>
+        <div style={{ maxWidth: "1272px", margin: "auto" }}>
+          <Lines variant={"secondary"} />
+        </div>
+      </div>
+      <AtlassianServicesHero
+        withLink={true}
+        subsec={"ATLASSIAN SUPPORT"}
+        heading={"Partner with Alluvium for AWS excellence."}
+        subhead={
+          "From data transformation to full cloud solutions, we help you leverage the power of AWS."
+        }
+        buttonText={"Schedule a Call"}
+        url={"/contact-us"}
+      />
+      <Exceptional
+        heading="Digital Transformation"
+        paragraphs={[
+          "Embrace the future of business with our AWS-powered Digital Transformation services. We guide you through every step of your cloud journey, from migrating legacy systems to modernizing your entire infrastructure. By leveraging the power of AWS, we enable your organization to innovate at speed, optimize operations, and scale effortlessly. Whether you’re looking to enhance agility, improve customer experiences, or drive new revenue streams, our tailored solutions are designed to meet your unique needs and propel your business forward in today’s digital age.",
+        ]}
+        image="/assets/redesign-2025/aws/awslogo.png"
+        redesignStyle={true}
+        variantPadding="default"
+        width={416}
+        height={416}
+      />
+
+      <div className={styles.tailored}>
+        <div className={styles.sub__tailored}>
+          <h3>Tailored AWS Solutions for Every Business Need</h3>
+        </div>
+      </div>
+
+      <TailoredSolution />
+
+      <div className={styles.tailored__consulting}>
+        <div className={styles.sub__tailored__consulting}>
+          <h3>Expert AWS Consulting to Drive Your Cloud Success</h3>
+        </div>
+      </div>
+
+      <AwsExpert />
+      <AwsTraining />
+
+      {/* <ServicesHero
         contentsheading1="Partner with Alluvium for AWS excellence."
         contentsheading2="From data transformation to full cloud solutions, we help you leverage the power of AWS."
         button1={
@@ -17,17 +65,17 @@ const AWSServices = () => {
             <Button size="large">Schedule a Call</Button>
           </Link>
         }
-      />
+      /> */}
 
-      <ServerToCloud
+      {/* <ServerToCloud
         image2={true}
         heading="Digital transformation"
         paragraph="Embrace the future of business with our AWS-powered Digital Transformation services. We guide you through every step of your cloud journey, from migrating legacy systems to modernizing your entire infrastructure. By leveraging the power of AWS, we enable your organization to innovate at speed, optimize operations, and scale effortlessly. Whether you’re looking to enhance agility, improve customer experiences, or drive new revenue streams, our tailored solutions are designed to meet your unique needs and propel your business forward in today’s digital age."
         image2Url="/assets/licence-image/AWS certs.png"
         alt2="cloudpic"
-      />
+      /> */}
 
-      <div className={`container-fluid ${styles.awsSolutions}`}>
+      {/* <div className={`container-fluid ${styles.awsSolutions}`}>
         <h2>Tailored AWS Solutions for Every Business Need</h2>
         <div className={`container mx-auto ${styles.grid}`}>
           {awsSolutions.map((el, index) => {
@@ -131,7 +179,7 @@ const AWSServices = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };

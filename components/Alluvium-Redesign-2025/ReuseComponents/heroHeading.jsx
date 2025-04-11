@@ -73,9 +73,7 @@ const HeroHeading = ({
         <p
           className={`${styles.paragraph__transform} ${
             styles[`paragraph__transform--${variant}`]
-          } ${styles[`paragraph__transform--${variantMargingFix}`]}
-          ${styles[`paragraph__transform--${variantTransform}`]}
-          `}
+          }`}
         >
           {subhead}
         </p>

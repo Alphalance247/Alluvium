@@ -7,6 +7,7 @@ import axios from "axios";
 import { Lines } from "./ReuseComponents/Lines";
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
+import { environment } from "env/env.local";
 
 const contactArr = [
   {
@@ -78,6 +79,7 @@ const ContactSection = ({ withLines = true }) => {
       addToast("All fields marked with asterisks are required", {
         appearance: "error",
       });
+
       return;
     }
     if (!validateEmail(email)) {
@@ -96,7 +98,7 @@ const ContactSection = ({ withLines = true }) => {
     setIsSubmitting(true);
     try {
       const response = await axios.post(
-        "https://vast.ec2.alluvium.net/support/inquiry/",
+        `${environment?.baseUrl}utilities/support/inquiry/`,
         newFormData,
         {
           headers: {
@@ -126,6 +128,9 @@ const ContactSection = ({ withLines = true }) => {
         //     },
         //   });
         // }
+        dataLayer.push({
+          event: "ajaxFormSubmission",
+        });
       } else {
         addToast("There was an issue submitting your inquiry. try again.", {
           appearance: "info",

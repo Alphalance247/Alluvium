@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Lines } from "./ReuseComponents/Lines";
 import HeroHeading from "./ReuseComponents/heroHeading";
 import Badges from "./ReuseComponents/badges";
+import { badges } from "data";
 
 const Hero = () => {
   return (
@@ -17,40 +18,40 @@ const Hero = () => {
                 update="Alluvium Supports the Stanford Chambers of Commerce"
                 updateSub="NEW UPDATE"
                 updateSign={true}
-                heading="Supporting Growth Innovation - "
-                // subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
-                variant="secondary"
+                heading="Empower Your Teams with Expert Atlassian Solutions"
+                subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
+                variant="primary"
                 withLink={false}
                 showParagraph={false}
-                span={"$31,000+ "}
-                headingcont={
-                  "Atlassian AI Licenses, Implementation and Support package"
-                }
-                span1={"Free for Startup"}
+                withParagragh={true}
+                // span={"$31,000+ "}
+                // headingcont={
+                //   "Atlassian AI Licenses, Implementation and Support package"
+                // }
+                // span1={"Free for Startup"}
               />
               <div className={styles.btns}>
-                <Link href="#consultationForm">
-                  <Button size="mediumL">Request a Demo</Button>
+                <Link href="/contact-us">
+                  <Button size="mediumL">Contact Us</Button>
                 </Link>
 
-                <Link href="/startup">
+                <Link href="/why-hire-us">
                   <Button variant="redesign" size="xxlarge">
-                    Learn More About Our Offer
+                    Why Hire Us as Your Atlassian Partner
                   </Button>
                 </Link>
               </div>
             </div>
 
             <Image
-              src="/assets/redesign-2025/image.png"
+              src="/assets/redesign-2025/collaborate.png"
               width={494}
-              height={472}
+              height={600}
               alt="colllaborate"
-              // layout="responsive"
             />
           </div>
 
-          <Badges variant={"default"} />
+          <Badges variant={"default"} badgesData={badges} />
 
           <Lines variant="default" />
         </div>

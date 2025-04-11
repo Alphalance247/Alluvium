@@ -1,7 +1,24 @@
+.noBorder {
+  border-bottom: 0px solid black;
+}
+
+.withBorder {
+  border-bottom: 1px solid #f0f0f0;
+}
+
 .card {
   padding: 48px;
   border-right: 1px solid #f0f0f0;
-  border-bottom: 1px solid #f0f0f0;
+
+  @media screen and (max-width: 992px) {
+    padding: 1rem;
+  }
+
+  // @media screen and (max-width: 640px) {
+  //   width: 100%;
+  //   text-align: left;
+  //   padding-left: 18px;
+  // }
 
   &--noBorderCard {
     border: transparent;
@@ -47,6 +64,16 @@
       margin-top: 1.5rem;
       margin-bottom: 1rem;
     }
+
+    &--marginSecondary {
+      margin-top: 20px;
+      margin-bottom: 0.5rem;
+    }
+
+    &--marginTertiary {
+      margin-top: 0rem;
+      margin-bottom: 1.5rem;
+    }
   }
 
   .sub__head {
@@ -62,6 +89,16 @@
       font-size: 1rem;
       line-height: 1.5rem;
     }
+
+    &--tertiary {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      margin-bottom: 4.3rem;
+    }
+  }
+
+  .buttonMargin {
+    margin-top: 1.2rem;
   }
 
   span {
