@@ -3,89 +3,93 @@ import axios from "axios";
 import styles from "../../styles/appForm.module.scss";
 import SideMenuLogo from "components/icons/SideMenuLogo";
 import Image from "next/image";
+import LeadForm from "pages/event/itsm-solutions/form/leadform";
 
 const AppForm = () => {
-    const [formData, setFormData] = useState({
-        firstName: "",
-        lastName: "",
-        email: "",
-        organization: "",
-        role: "",
-    });
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    organization: "",
+    role: "",
+  });
 
-    const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({});
 
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-        setErrors({ ...errors, [e.target.name]: "" });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let newErrors = {};
+    if (!formData.firstName) newErrors.firstName = "First Name is required";
+    if (!formData.lastName) newErrors.lastName = "Last Name is required";
+    if (!formData.email) newErrors.email = "Email is required";
+    if (!formData.organization)
+      newErrors.organization = "Organization is required";
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    const payload = {
+      form: "contact",
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      organization: formData.organization,
+      role: formData.role || "Not specified",
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    try {
+      const response = await axios.post(
+        process.env.REACT_APP_FORM_URL,
+        payload,
+        { headers: { "Content-Type": "application/json" } }
+      );
 
-        let newErrors = {};
-        if (!formData.firstName) newErrors.firstName = "First Name is required";
-        if (!formData.lastName) newErrors.lastName = "Last Name is required";
-        if (!formData.email) newErrors.email = "Email is required";
-        if (!formData.organization) newErrors.organization = "Organization is required";
+      if (response.status === 200) {
+        alert("Form submitted successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          organization: "",
+          role: "",
+        });
+        setErrors({});
+      } else {
+        alert("Error submitting the form. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      alert("Network error. Please check your internet connection.");
+    }
+  };
 
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
-            return;
-        }
-
-        const payload = {
-            form: "contact",
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            organization: formData.organization,
-            role: formData.role || "Not specified",
-        };
-
-        try {
-            const response = await axios.post(
-                process.env.REACT_APP_FORM_URL,
-                payload,
-                { headers: { "Content-Type": "application/json" } }
-            );
-
-            if (response.status === 200) {
-                alert("Form submitted successfully!");
-                setFormData({
-                    firstName: "",
-                    lastName: "",
-                    email: "",
-                    organization: "",
-                    role: "",
-                });
-                setErrors({});
-            } else {
-                alert("Error submitting the form. Please try again.");
-            }
-        } catch (error) {
-            console.error("Submission error:", error);
-            alert("Network error. Please check your internet connection.");
-        }
-    };
-
-    return (
-        <section className={styles.mainContainer}>
+  return (
+    <section className={styles.mainContainer}>
       <main>
         <div className={styles.app_form_container}>
-            <div className={styles.left_panel}>
-                <div className={styles.logo_wrapper}>
-                    <SideMenuLogo />
-                </div>
-                <div className={styles.form_wrapper}>
-                    <h1 className={styles.heading}>Help Us Improve the Plugin</h1>
-                    <p className={styles.description}>
-                        Try out the redesigned interface and share your feedback. Your <br />
-                        insights will help us refine the experience and make it even better!
-                    </p>
-                    <div className={styles.form_container}>
-                        <div>
-                            <form onSubmit={handleSubmit}>
+          <div className={styles.left_panel}>
+            <div className={styles.logo_wrapper}>
+              <SideMenuLogo />
+            </div>
+            <div className={styles.form_wrapper}>
+              <h1 className={styles.heading}>Help Us Improve the Plugin</h1>
+              <p className={styles.description}>
+                Try out the redesigned interface and share your feedback. Your{" "}
+                <br />
+                insights will help us refine the experience and make it even
+                better!
+              </p>
+              <div className={styles.form_container}>
+                <div>
+                  {/* <form onSubmit={handleSubmit}>
                                 <div className={styles.form_group}>
                                     <label>First Name*</label>
                                     <input
@@ -150,29 +154,42 @@ const AppForm = () => {
                                 <button type="submit" className={styles.submit_button}>
                                     Submit
                                 </button>
-                            </form>
-                        </div>
-
-                        <div className={styles.footer}>
-                            <p>© 2022 Alluvium Corporation.</p>
-                            <p>
-                                <span className={styles.underline}>Terms & Conditions</span>
-                                <span className={styles.underline} style={{ marginLeft: "1rem" }}>
-                                    Privacy Policy
-                                </span>
-                            </p>
-                        </div>
-                    </div>
+                            </form> */}
+                  <LeadForm
+                    dataUrl={
+                      "https://api.leadconnectorhq.com/widget/form/hZ3CEusuKujqL3edrG7E"
+                    }
+                  />
                 </div>
-            </div>
 
-            <div className={styles.right_panel}>
-                <Image src="/assets/SidebarImg.webp" height={1008} width={712} alt="webpp" />
+                <div className={styles.footer}>
+                  <p>© 2022 Alluvium Corporation.</p>
+                  <p>
+                    <span className={styles.underline}>Terms & Conditions</span>
+                    <span
+                      className={styles.underline}
+                      style={{ marginLeft: "1rem" }}
+                    >
+                      Privacy Policy
+                    </span>
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div className={styles.right_panel}>
+            <Image
+              src="/assets/SidebarImg.webp"
+              height={1008}
+              width={712}
+              alt="webpp"
+            />
+          </div>
         </div>
-        </main>
-        </section>
-    );
+      </main>
+    </section>
+  );
 };
 
 export default AppForm;

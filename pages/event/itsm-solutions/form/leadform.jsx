@@ -24,7 +24,7 @@ const LeadForm = ({ dataUrl }) => {
           dataUrl ||
           "https://api.leadconnectorhq.com/widget/form/11k2AW90MBYdYeszQ6iD"
         }
-        style={{ minWidth: "80%", height: "700px", borderRadius: "25px" }}
+        style={{ minWidth: "100%", height: "700px", borderRadius: "25px" }}
       ></div>
     </>
   );
