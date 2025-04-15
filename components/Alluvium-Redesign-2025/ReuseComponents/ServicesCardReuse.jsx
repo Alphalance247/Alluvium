@@ -55,6 +55,9 @@ const ServicesCardReuse = ({
               removeBorder={i >= startIndexToRemove}
               isBtn={isBtn}
               imageAvailable={imageAvailable}
+              btnText={item?.btnText}
+              btnSize={item?.btnSize}
+              btnType={item?.btnType}
             />
           ))}
 

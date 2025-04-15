@@ -1,0 +1,77 @@
+.atlassian__consulting__hero {
+  background: #fcfcfc;
+
+  .hero {
+    max-width: 1272px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    margin: auto;
+    border-top: 1px solid #e0e0e0;
+
+    .hero__section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 4rem;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: left;
+
+      @media screen and (max-width: 1200px) {
+        width: 80%;
+      }
+
+      @media screen and (max-width: 992px) {
+        width: 85%;
+        padding-top: 4rem;
+      }
+
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        text-align: left;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    }
+  }
+}
+
+.empower__section {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+
+  .empower__section__container {
+    max-width: 1272px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    margin: auto;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .empower__section__content {
+    width: 45%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+    }
+
+    @media screen and (max-width: 992px) {
+      width: 85%;
+      padding-top: 4rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      text-align: left;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+}

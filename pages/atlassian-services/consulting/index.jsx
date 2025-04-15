@@ -3,10 +3,10 @@ import React from "react";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { consultingPageCards } from "data";
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
-import Link from "next/link";
-import Button from "components/atlassian-service-reuse/Button";
 import Head from "next/head";
+import AtlassianConsultingHero from "components/Alluvium-Redesign-2025/consulting/atlassianConsultingHero";
+import Empower from "components/Alluvium-Redesign-2025/consulting/empower";
+import Solutions from "components/Alluvium-Redesign-2025/consulting/solutions";
 
 const Consulting = () => {
   return (
@@ -23,7 +23,12 @@ const Consulting = () => {
           content="atlassian consulting, atlassian and confluence, agile atlassian, atlassian agile coach, atlassian jira and confluence, atlassian consulting suite, atlassian consulting services"
         />
       </Head>
-      <ServicesHero
+
+      <AtlassianConsultingHero />
+      <Empower />
+      <Solutions />
+
+      {/* <ServicesHero
         contentsheading="ATLASSIAN CONSULTANCY & STRATEGY"
         contentsheading1="Strategic Atlassian Consultancy for Optimal Results"
         contentsheading2="Are you seeking Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? Let us help you tackle your teams' challenges."
@@ -33,7 +38,7 @@ const Consulting = () => {
             <Button size="large">Schedule a Call</Button>
           </Link>
         }
-      />
+      /> */}
       <ServerToCloud
         image2={true}
         heading="Empowering Your Success with Expert Atlassian Guidance"
