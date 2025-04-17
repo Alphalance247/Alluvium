@@ -28,11 +28,13 @@
         padding-top: 4rem;
       }
 
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 768px) {
         width: 100%;
         text-align: left;
         padding-left: 18px;
         padding-right: 18px;
+        grid-template-columns: 1fr;
+        grid-gap: 0rem;
       }
     }
   }
@@ -50,21 +52,26 @@
     margin: auto;
     padding-top: 6rem;
     padding-bottom: 6rem;
+
+    @media screen and (max-width: 768px) {
+      padding-top: 3rem;
+      padding-bottom: 0rem;
+    }
   }
 
   .empower__section__content {
-    width: 45%;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
+    // // width: 45%;
+    // margin-right: auto;
+    // margin-left: auto;
+    // text-align: center;
 
-    @media screen and (max-width: 1200px) {
-      width: 80%;
-    }
+    // @media screen and (max-width: 1200px) {
+    //   width: 80%;
+    // }
 
     @media screen and (max-width: 992px) {
-      width: 85%;
-      padding-top: 4rem;
+      padding-left: 18px;
+      padding-right: 18px;
     }
 
     @media screen and (max-width: 640px) {
@@ -72,6 +79,48 @@
       text-align: left;
       padding-left: 18px;
       padding-right: 18px;
+    }
+  }
+
+  .empower__section__image__parent {
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
+    .empower_icon__1 {
+      position: absolute;
+      left: 7rem;
+      top: -3rem;
+    }
+
+    .empower_icon__2 {
+      position: absolute;
+      left: 22.5rem;
+      top: -3.2rem;
+    }
+
+    .empower_icon__3 {
+      position: absolute;
+      right: 38rem;
+      top: -2.9rem;
+    }
+
+    .empower_icon__4 {
+      position: absolute;
+      right: 22.7rem;
+      top: -2.9rem;
+    }
+    .empower_icon__5 {
+      position: absolute;
+      right: 7rem;
+      top: -2.9rem;
+    }
+
+    .empower__section__image {
+      text-align: center;
+      margin-top: 8rem;
     }
   }
 }

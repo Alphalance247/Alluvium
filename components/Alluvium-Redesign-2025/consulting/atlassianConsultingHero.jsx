@@ -19,7 +19,8 @@ const AtlassianConsultingHero = () => {
             withBtn={false}
             withLines={false}
             headSection=""
-            withParagragh={false}
+            withParagragh={true}
+            variantMargingFix=""
           />
 
           <div style={{ marginTop: "-1rem" }}>

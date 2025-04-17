@@ -7,6 +7,7 @@ import Head from "next/head";
 import AtlassianConsultingHero from "components/Alluvium-Redesign-2025/consulting/atlassianConsultingHero";
 import Empower from "components/Alluvium-Redesign-2025/consulting/empower";
 import Solutions from "components/Alluvium-Redesign-2025/consulting/solutions";
+import StreamlineServer from "components/Alluvium-Redesign-2025/data-migration/streamlineServer";
 
 const Consulting = () => {
   return (
@@ -27,8 +28,9 @@ const Consulting = () => {
       <AtlassianConsultingHero />
       <Empower />
       <Solutions />
+      <StreamlineServer />
 
-      {/* <ServicesHero
+      {/* <ServicesHerot
         contentsheading="ATLASSIAN CONSULTANCY & STRATEGY"
         contentsheading1="Strategic Atlassian Consultancy for Optimal Results"
         contentsheading2="Are you seeking Atlassian expertise to implement ITSM, optimize your current setup, migrate your data to Atlassian Cloud, or enhance your existing Atlassian configuration? Let us help you tackle your teams' challenges."
@@ -39,7 +41,7 @@ const Consulting = () => {
           </Link>
         }
       /> */}
-      <ServerToCloud
+      {/* <ServerToCloud
         image2={true}
         heading="Empowering Your Success with Expert Atlassian Guidance"
         paragraph="Unlock the full potential of Atlassian tools with our expert consulting services. Whether you're implementing new solutions, optimizing workflows, or scaling for growth, we tailor our approach to meet your unique business needs. Our certified Atlassian experts work closely with you to ensure your tools drive efficiency and support your long-term goals. From strategy to execution, we're here to help you achieve measurable results and maximize your investment."
@@ -50,7 +52,7 @@ const Consulting = () => {
         heading="Tailored Atlassian Solutions for Every Business Need"
         description=""
         data={consultingPageCards}
-      />
+      /> */}
     </Layout>
   );
 };
