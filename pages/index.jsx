@@ -43,28 +43,6 @@ const Home = () => {
         <Banner />
         <Impact />
         <MarketPlacePlugin />
-
-        <div className="container-fluid p-0 m-0">
-          <div className="container-fluid p-0" style={{ background: "" }}>
-            {/* new comment out */}
-            {/* <HeroCarousel /> */}
-            {/* <Featured /> */}
-          </div>
-
-          {/* new comment out */}
-          {/* <Services />
-          <Solutions />
-          <CaseStudies /> */}
-          {/*  new comment out */}
-          {/* <OurSolution /> */}
-          {/* <WelcomeToAlluvium /> */}
-          {/* <ToolsAndPlatforms /> */}
-          {/* <WhyAlluvium /> */}
-          {/* <OurPartners /> */}
-
-          {/* <CustomerReview /> */}
-          {/* <News /> */}
-        </div>
       </Layout>
     </>
   );
