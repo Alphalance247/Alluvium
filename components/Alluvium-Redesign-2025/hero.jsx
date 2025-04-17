@@ -18,37 +18,34 @@ const Hero = () => {
                 update="Alluvium Supports the Stanford Chambers of Commerce"
                 updateSub="NEW UPDATE"
                 updateSign={true}
-                heading="Empower Your Teams with Expert Atlassian Solutions"
-                subhead="Alluvium transforms teamwork and processes with Atlassian solutions, empowering collaboration and efficiency through Agile tools and expertise."
+                heading="Unlock High Velocity Enterprise Management"
+                subhead="Atlassian bridges the gap between Development and IT with Jira Service Management, empowering teams to work faster and adapt quickly to change."
                 variant="primary"
                 withLink={false}
                 showParagraph={false}
                 withParagragh={true}
-                // span={"$31,000+ "}
-                // headingcont={
-                //   "Atlassian AI Licenses, Implementation and Support package"
-                // }
-                // span1={"Free for Startup"}
               />
               <div className={styles.btns}>
                 <Link href="/contact-us">
-                  <Button size="mediumL">Contact Us</Button>
+                  <Button size="mediumL">Request a Demo</Button>
                 </Link>
 
                 <Link href="/why-hire-us">
                   <Button variant="redesign" size="xxlarge">
-                    Why Hire Us as Your Atlassian Partner
+                    Learn More About Our Offer
                   </Button>
                 </Link>
               </div>
             </div>
 
-            <Image
-              src="/assets/redesign-2025/collaborate.png"
-              width={494}
-              height={600}
-              alt="colllaborate"
-            />
+            <div className={styles.hero__image}>
+              <Image
+                src="/assets/redesign-2025/home/high-velocity.png"
+                width={450}
+                height={416}
+                alt="unlock high velocity enterprise management"
+              />
+            </div>
           </div>
 
           <Badges variant={"default"} badgesData={badges} />
