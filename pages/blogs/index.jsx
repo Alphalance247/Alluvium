@@ -228,8 +228,8 @@ const Blogs = () => {
                         imgAlt={item?.title}
                         width={357}
                         height={191}
-                        industry={item?.title2 || "ARTIFICIAL INTELLIGNECE"}
-                        industry1={item?.title1 || "CONFLUENCE"}
+                        // industry={item?.title2 || "ARTIFICIAL INTELLIGNECE"}
+                        // industry1={item?.title1 || "CONFLUENCE"}
                         title={item?.title}
                         imgSrc={item?.featured_image}
                         key={i}
