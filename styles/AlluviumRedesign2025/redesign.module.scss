@@ -82,9 +82,14 @@
       display: flex;
       justify-content: space-between;
       grid-gap: 2rem;
+      align-items: center;
 
       @media screen and (max-width: 640px) {
         flex-direction: column;
+      }
+
+      .hero__image {
+        height: fit-content;
       }
 
       .content {

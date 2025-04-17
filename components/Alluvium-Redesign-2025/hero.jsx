@@ -38,12 +38,14 @@ const Hero = () => {
               </div>
             </div>
 
-            <Image
-              src="/assets/redesign-2025/home/high-velocity.png"
-              width={450}
-              height={400}
-              alt="unlock high velocity enterprise management"
-            />
+            <div className={styles.hero__image}>
+              <Image
+                src="/assets/redesign-2025/home/high-velocity.png"
+                width={450}
+                height={416}
+                alt="unlock high velocity enterprise management"
+              />
+            </div>
           </div>
 
           <Badges variant={"default"} badgesData={badges} />
