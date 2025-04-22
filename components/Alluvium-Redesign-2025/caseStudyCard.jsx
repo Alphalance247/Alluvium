@@ -12,10 +12,11 @@ const CaseStudyCard = () => {
             imgAlt={item.title}
             width={357}
             height={191}
-            industry={item.title}
+            industries={item?.title}
             title={item.heading}
             imgSrc={item.img}
             key={i}
+            variant="secondary"
           />
         );
       })}

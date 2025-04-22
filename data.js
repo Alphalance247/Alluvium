@@ -2526,21 +2526,21 @@ export const aboutServices = [
 export const redesignCaseStudy = [
   {
     img: "/assets/redesign-2025/case-studies/card.png",
-    title: "SPORT",
+    title: ["SPORT", "SPORT"],
     heading: "Project Learner: ServiceNow / JSM Migration",
     btn: "Read Case Study",
     url: "/case-studies/project-varsity-servicenow-JSM-Migration",
   },
   {
     img: "/assets/redesign-2025/case-studies/card2.png",
-    title: "LOGISTICS",
+    title: ["LOGISTICS", "LOGISTICS"],
     heading: "Project Cricket: ServiceNow / Confluence Migration",
     btn: "Read Case Study",
     url: "/case-studies/Project-Cricket-ServiceNow-Confluence-Migration",
   },
   {
     img: "/assets/redesign-2025/case-studies/card1.png",
-    title: "PUBLICATION",
+    title: ["PUBLICATION", "PUBLICATION"],
     heading: "Project Omega: Incident and Asset Management Migration ",
     btn: "Read Case Study",
     url: "/case-studies/Project-Omega:-Incident-and-Asset-Management-Migration",

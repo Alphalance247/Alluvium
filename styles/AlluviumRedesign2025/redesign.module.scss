@@ -75,15 +75,21 @@
     max-width: 1272px;
     margin: auto;
     border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
     width: 100%;
 
     .hero__context {
       display: flex;
       justify-content: space-between;
       grid-gap: 2rem;
+      align-items: center;
 
       @media screen and (max-width: 640px) {
         flex-direction: column;
+      }
+
+      .hero__image {
+        height: fit-content;
       }
 
       .content {
