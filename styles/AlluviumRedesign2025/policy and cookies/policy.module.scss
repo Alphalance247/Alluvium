@@ -1,7 +1,6 @@
 .privacy__policy {
   max-width: 1272px;
   margin: auto;
-  // border-left: 1px solid #f0f0f0;
   width: 100%;
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -9,6 +8,7 @@
   padding-right: 3.5rem;
 
   @media screen and (max-width: 640px) {
+    padding-top: 4rem;
     padding-left: 18px;
     padding-right: 18px;
   }
@@ -19,9 +19,11 @@
     margin-bottom: 2rem;
     font-family: "Grotesk";
     text-align: center;
+
     @media screen and (max-width: 640px) {
-      font-size: 1.7rem;
-      line-height: 2rem;
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+      text-align: left;
     }
   }
 
@@ -103,11 +105,11 @@
 
       .boldSpan {
         font-weight: 600;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #121212;
 
         @media screen and (max-width: 640px) {
-          font-size: 1.2rem;
+          font-size: 1rem;
           line-height: 1.5rem;
         }
       }
@@ -138,7 +140,7 @@
 
       span {
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #121212;
 
         @media screen and (max-width: 640px) {
