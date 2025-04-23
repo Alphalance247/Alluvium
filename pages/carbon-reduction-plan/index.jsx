@@ -239,7 +239,7 @@ const CarbonReductionPlan = () => {
     <Layout>
       <div>
         <Head>
-          <title>Privacy Policy | Alluvium</title>
+          <title>Carbon-Reduction-Plan | Alluvium</title>
 
           <meta name="description" content="Alluvium privacy policy" />
           <link rel="icon" href="/favicon.ico" />
