@@ -14,16 +14,19 @@
 
 .containerStyle1 {
   width: 100%;
-  max-width: 694px;
-  padding: 72px 0px 66px 48px;
+  max-width: 700px;
+  padding: 72px 0px 66px 48px !important;
+  border-right: none !important;
 }
 
 .containerStyle2 {
   width: 100%;
   margin: 0 auto;
-  max-width: 673px;
+  max-width: 768px;
   text-align: center;
-  padding: 72px 0;
+  padding: 72px 0 !important;
+  border-right: none !important;
+
 }
 
 .containerStyle3 {
@@ -31,5 +34,7 @@
   margin: 0 auto;
   max-width: 746px;
   text-align: center;
-  padding: 72px 0 66px;
+  padding: 72px 0 66px !important;
+  border-right: none !important;
+
 }

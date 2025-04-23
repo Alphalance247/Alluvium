@@ -19,11 +19,11 @@ const MigrationProcess = () => {
           <AtlassianServicesCard
             title={"Alluvium Cloud Migration Process"}
             description={description}
-            useImage={false}
-            useText={false}
+            imageAvailable={false}
             headingVariant={"main"}
             subHeadingVariant={"primary"}
-            noBorderCard={"noBorderCard"}
+            removeBorder={true}
+            containerStyle={styles.containerStyle1}
           />
         </div>
         <LineWithIcons />
@@ -31,8 +31,10 @@ const MigrationProcess = () => {
           <ServicesCardReuse
             data={migrationProcess}
             gridVariant="single"
-            noBorder="noBorder"
-            noBorderCard={"noBorderCard"}
+            borderRemove={false}
+            imageAvailable={false}
+            containerStyle={styles.containerStyle2}
+            borderVariant="primary"
           />
         </div>
       </main>

@@ -14,17 +14,11 @@
     padding: 1rem;
   }
 
-  // @media screen and (max-width: 640px) {
-  //   width: 100%;
-  //   text-align: left;
-  //   padding-left: 18px;
-  // }
-
   &--noBorderCard {
     border: transparent;
   }
 
-  .mainText {
+  .numberText {
     font-family: "Grotesk";
     font-weight: 600;
     font-size: 28px;

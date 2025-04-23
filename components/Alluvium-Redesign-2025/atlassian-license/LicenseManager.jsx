@@ -18,11 +18,10 @@ const LicenseManager = () => {
           <AtlassianServicesCard
             title={"Why Choose Alluvium as Your License Manager?"}
             description={description}
-            useImage={false}
-            useText={false}
+            imageAvailable={false}
             headingVariant={"main"}
             subHeadingVariant={"primary"}
-            noBorderCard={"noBorderCard"}
+containerStyle={styles.containerStyle1}
           />
         </div>
         <div className={styles.child2}>

@@ -13,22 +13,22 @@ const ScaleServices = () => {
       <div className={styles.tablet}>
         <ServicesCardReuse
           data={scaleOptions1.slice(0, 2)}
-          useImage={false}
+          imageAvailable={false}
           containerStyle={styles.mainDiv1}
         />
         <ServicesCardReuse
           data={scaleOptions2.slice(0, 2)}
-          useImage={true}
+          imageAvailable={true}
           containerStyle={styles.mainDiv2}
         />
         <ServicesCardReuse
           data={scaleOptions1.slice(2, 4)}
-          useImage={false}
+          imageAvailable={false}
           containerStyle={styles.mainDiv1}
         />
         <ServicesCardReuse
           data={scaleOptions2.slice(2, 4)}
-          useImage={true}
+          imageAvailable={true}
           containerStyle={styles.mainDiv2}
         />
       </div>
@@ -36,7 +36,7 @@ const ScaleServices = () => {
       <div className={styles.mobile}>
         <ServicesCardReuse
           data={scaleOptions}
-          useImage={true}
+          imageAvailable={true}
           // containerStyle={styles.}
         />
       </div>

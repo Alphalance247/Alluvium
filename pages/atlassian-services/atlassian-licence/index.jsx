@@ -36,8 +36,7 @@ const AtlassianLicence = () => {
 
       <ServicesCardReuse
         data={licenseOptions}
-        useText={true}
-        useImage={false}
+        imageAvailable={false}
         showAdditionalCard={true}
         ConsultationCardServices={
           <ConsultationCardServices

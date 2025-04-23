@@ -35,11 +35,12 @@ const DevOps = () => {
               "DevOps Brings Transformative Changes to Your Business in Multiple Ways"
             }
             description={description}
-            useImage={false}
+            imageAvailable={false}
             useText={false}
             headingVariant="main"
             containerStyle={styles.containerStyle1}
             noBorderCard={"noBorderCard"}
+            removeBorder={true}
           />
         </div>
       </div>
@@ -55,8 +56,7 @@ const DevOps = () => {
           <AtlassianServicesCard
             title={"Our Comprehensive DevOps solution for seamless delivery"}
             description={description2}
-            useImage={false}
-            useText={false}
+            imageAvailable={false}
             headingVariant="main"
             containerStyle={styles.containerStyle2}
             noBorderCard={"noBorderCard"}
@@ -71,7 +71,7 @@ const DevOps = () => {
           <AtlassianServicesCard
             title={"Our Comprehensive DevOps Service Offerings"}
             description={description3}
-            useImage={false}
+            imageAvailable={false}
             useText={false}
             headingVariant="main"
             containerStyle={styles.containerStyle3}
@@ -80,7 +80,7 @@ const DevOps = () => {
         </div>
       </div>
 
-      <ServicesCardReuse data={devOpServices} useText={false} useImage={true} />
+      <ServicesCardReuse data={devOpServices} useText={false} imageAvailable={false} />
     </Layout>
   );
 };

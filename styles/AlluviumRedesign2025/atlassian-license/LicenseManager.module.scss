@@ -1,7 +1,6 @@
 .whyMigrate {
   background: #ffffff;
   width: 100%;
-  border-bottom: 1px solid #e0e0e0;
 
   main {
     max-width: 1272px;
@@ -29,4 +28,8 @@
   @media (max-width: 768px) {
     width: 100%;
   }
+}
+
+.containerStyle1 {
+  border-bottom: none ;
 }

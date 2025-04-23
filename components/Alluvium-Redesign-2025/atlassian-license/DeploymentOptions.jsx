@@ -18,15 +18,18 @@ const DeploymentOptions = () => {
           <AtlassianServicesCard
             title={"Atlassian License Deployment Options"}
             description={description}
-            useImage={false}
-            useText={false}
+            imageAvailable={false}
             headingVariant={"main"}
             subHeadingVariant={"primary"}
-            noBorderCard={"noBorderCard"}
+            removeBorder={true}
           />
         </div>
         <div className={styles.child2}>
-          <ServicesCardReuse data={deploymentOptions} gridVariant="single" />
+          <ServicesCardReuse
+            data={deploymentOptions}
+            gridVariant="single"
+            subHeadingVariant={"primary"}
+          />
         </div>
       </main>
     </div>

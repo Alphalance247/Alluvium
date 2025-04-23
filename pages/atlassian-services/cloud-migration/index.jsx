@@ -53,7 +53,7 @@ const CloudMigration = () => {
         heading="The Benefits of Migrating to Atlassian Cloud"
         subhead="Our team of Atlassian certified experts is ready to help you tackle any of your Atlassian challenges."
       />
-      <ServicesCardReuse data={CloudBenefits} useText={true} useImage={false} />
+      <ServicesCardReuse data={CloudBenefits} imageAvailable={false} />
       <div className={styles.whyMigrate}>
         <main>
           <div className={styles.imgChild}>
@@ -70,7 +70,7 @@ const CloudMigration = () => {
               heading="Streamlining Server to Atlassian Cloud Migration for an Insurance Company"
               subhead="An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution."
               titleVariant="whiteVar"
-              variant="secondary"
+              variant="full"
             />
             <div className={styles.readMore}>
               <ReadMore content={"Read More"} />
@@ -78,17 +78,16 @@ const CloudMigration = () => {
           </div>
         </main>
       </div>
-      <div className={styles.whyMigrate}>
+      <div style={{borderTop: "1px solid #f0f0f0"}} className={styles.whyMigrate}>
         <main>
           <div className={styles.child1}>
             <AtlassianServicesCard
               title={"Why Plan Your Migration With Alluvium?"}
               description={description}
-              useImage={false}
-              useText={false}
+              imageAvailable={false}
               headingVariant={"main"}
               subHeadingVariant={"primary"}
-              noBorderCard={"noBorderCard"}
+              containerStyle={styles.containerStyle1}
             />
           </div>
           <div className={styles.child2}>

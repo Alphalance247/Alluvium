@@ -14,25 +14,18 @@
 
 .containerStyle1 {
   width: 100%;
-  max-width: 694px;
-  padding: 72px 0px 66px 48px;
+  max-width: 590px;
+  padding: 72px 0px 56px 48px !important;
+  border-right: none !important;
 }
 
 .containerStyle2 {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 72px 0 66px !important;
+  padding: 72px 0 56px !important;
 
   @media screen and (max-width: 768px) {
     padding: 24px 0px !important;
   }
-}
-
-.containerStyle3 {
-  width: 100%;
-  margin: 0 auto;
-  max-width: 746px;
-  text-align: center;
-  padding: 72px 0 66px;
 }

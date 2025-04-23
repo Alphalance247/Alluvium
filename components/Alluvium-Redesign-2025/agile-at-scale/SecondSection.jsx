@@ -14,6 +14,8 @@ const SecondSection = () => {
           }
           height={174}
           width={205}
+          iconStyles={styles.iconContainer}
+          contentStyles={styles.contentStyles}
         />
       </main>
     </div>

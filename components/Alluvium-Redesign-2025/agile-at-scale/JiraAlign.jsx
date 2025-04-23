@@ -21,7 +21,7 @@ const JiraAlign = () => {
           />
         </div>
         <Image
-          src="/assets/redesign-2025/agile-at-scale/JIraAlignImage.webp"
+          src="/assets/redesign-2025/agile-at-scale/JiraImage.webp"
           alt="jira align"
           width={1278}
           height={746}

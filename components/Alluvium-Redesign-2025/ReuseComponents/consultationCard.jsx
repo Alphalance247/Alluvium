@@ -11,7 +11,7 @@ const ConsultationCardServices = ({ title, description, buttons }) => {
       </div>
 
       <div className={styles.button__group}>
-        {buttons.map((button, index) => (
+        {buttons?.map((button, index) => (
           <Link href={button.href}>
             <Button key={index} variant={button.variant} size={button.size}>
               {button.label}

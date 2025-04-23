@@ -25,8 +25,7 @@ const AgileAtScale = () => {
           <AtlassianServicesCard
             title={"Our Comprehensive Agile at Scale Services"}
             description={description}
-            useImage={false}
-            useText={false}
+            imageAvailable={false}
             headingVariant="main"
             containerStyle={styles.containerStyle1}
             noBorderCard={"noBorderCard"}
@@ -40,8 +39,7 @@ const AgileAtScale = () => {
         <div className={styles.innerContainer}>
           <AtlassianServicesCard
             title={"Why Agile at Scale Matters to Your Organization"}
-            useImage={false}
-            useText={false}
+            imageAvailable={false}
             headingVariant="main"
             containerStyle={styles.containerStyle2}
             noBorderCard={"noBorderCard"}
@@ -50,9 +48,10 @@ const AgileAtScale = () => {
       </div>
       <ServicesCardReuse
         data={agileOptions}
-        useText={false}
-        useImage={true}
+        imageAvailable={true}
         gridVariant={"primary"}
+        headingVariant="primary"
+        subHeadingVariant="primary"
       />
     </Layout>
   );
