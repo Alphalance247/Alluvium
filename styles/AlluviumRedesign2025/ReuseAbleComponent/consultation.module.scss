@@ -27,6 +27,20 @@
     font-size: 18px;
     line-height: 28px;
     color: #595959;
-    margin-bottom: 3rem;
+
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .button__group {
+    display: flex;
+    gap: 16px;
+
+    button {
+      font-size: 16px;
+      padding: 10px 16px;
+    }
   }
 }

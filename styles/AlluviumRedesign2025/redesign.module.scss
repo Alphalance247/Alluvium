@@ -461,6 +461,18 @@
       width: 90%;
     }
   }
+  &--full {
+    width: 100%;
+    text-align: left;
+
+    @media screen and (max-width: 992px) {
+      width: 85%;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 90%;
+    }
+  }
 
   .how__we__help {
     font-size: 13px;
@@ -476,6 +488,11 @@
     @media screen and (max-width: 640px) {
       font-size: 10px;
       line-height: 16px;
+    }
+
+    &--whiteVar {
+      background: #ffffff;
+      border: 1px solid #d9d9d9;
     }
   }
 

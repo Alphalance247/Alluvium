@@ -1,0 +1,31 @@
+.sectionContainer {
+  background: #ffffff;
+  width: 100%;
+
+  .innerContainer {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+}
+
+.containerStyle1 {
+  width: 100%;
+  max-width: 590px;
+  padding: 72px 0px 56px 48px !important;
+  border-right: none !important;
+}
+
+.containerStyle2 {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 72px 0 56px !important;
+
+  @media screen and (max-width: 768px) {
+    padding: 24px 0px !important;
+  }
+}

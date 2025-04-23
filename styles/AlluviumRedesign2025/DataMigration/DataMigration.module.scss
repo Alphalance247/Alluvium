@@ -1,0 +1,67 @@
+.whyMigrate {
+  background: #ffffff;
+  width: 100%;
+  main {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.section {
+  background: #ffffff;
+  width: 100%;
+  main {
+    max-width: 1272px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+  }
+}
+
+.imgChild {
+  max-width: 635px;
+  width: 100%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.infoChild {
+  padding: 75px 48px;
+  width: 50%;
+
+  @media (max-width: 768px) {
+    padding: 24px;
+    width: 100%;
+  }
+  .readMore {
+    margin-top: 1rem;
+  }
+}
+
+.child1 {
+  width: 40%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  .containerStyle1 {
+    border:none;
+  }
+}
+
+.child2 {
+  width: 62%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

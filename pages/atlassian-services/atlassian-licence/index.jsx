@@ -1,14 +1,13 @@
 import Layout from "components/layout";
-import Exceptional from "components/licence-component/exceptional";
-import DepOption from "../../../components/licence-component/depOption";
-import Purchase from "components/licence-component/purchase";
-import GetStarted from "components/atlassian-service-reuse/getStarted";
-import Button from "components/atlassian-service-reuse/Button";
-import Link from "next/link";
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
-import ChooseAlluvium from "components/atlassian-service-compo/chooseAlluvium";
-import { chooseUsAlluvium } from "data";
 import Head from "next/head";
+import HeroSection from "components/Alluvium-Redesign-2025/atlassian-license/HeroSection";
+import SecondSection from "components/Alluvium-Redesign-2025/atlassian-license/SecondSection";
+import DeploymentOptions from "components/Alluvium-Redesign-2025/atlassian-license/DeploymentOptions";
+import CloudMigrationSection from "components/Alluvium-Redesign-2025/data-migration/CloudMIgrationSection";
+import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents/ServicesCardReuse";
+import { licenseOptions } from "constants/atlassian-license";
+import LicenseManager from "components/Alluvium-Redesign-2025/atlassian-license/LicenseManager";
+import ConsultationCardServices from "components/Alluvium-Redesign-2025/ReuseComponents/consultationCard";
 
 const AtlassianLicence = () => {
   return (
@@ -25,63 +24,41 @@ const AtlassianLicence = () => {
           content="Atlassian license management, atlassian jira service management license, atlassian license types, atlassian license cost, atlassian licenses, atlassian jira license, atlassian license agreement, license atlassian, jira license management, jira license management plugin, confluence license management, atlassian software license agreement, atlassian license, license jira service management"
         />
       </Head>
-      <ServicesHero
-        contentsheading="ATLASSIAN LICENSE MANAGEMENT"
-        contentsheading1="Streamlined Atlassian License Management"
-        contentsheading2="Maximize your Atlassian license investment by gaining dedicated
-            expert advice and support for managing your licenses."
-        withSlide={false}
-        button1={
-          <Link href="/atlassian-services/atlassian-licence/licence-request">
-            <Button size="large" className="mx-md-3 my-4">
-              Request License Quote
-            </Button>
-          </Link>
-        }
-        button2={
-          <Link href="/atlassian-services/atlassian-licence/licence-request">
-            <Button size="large" variant="tertiary">
-              Get a Free Atlassian Audit
-            </Button>
-          </Link>
-        }
-      />
-      <Exceptional
-        categoryTitle="LICENSE MANAGEMENT"
-        heading="Expert Advice and Support for Streamlined Atlassian License
-            Management"
-        paragraphs={[
-          "Are you seeking an Atlassian partner to assist with purchasing Atlassian and Marketplace apps? Maximize your license investment by letting Alluvium manage your licenses.",
-          "As a certified Atlassian partner, we are committed to helping you get the most out of your Atlassian investment, offering greater  transparency and simplicity in the licensing process.",
-        ]}
-        image="/assets/licence-image/Certs.svg"
+      <HeroSection />
+      <SecondSection />
+      <DeploymentOptions />
+      <CloudMigrationSection
+        backgroundVariant={"whitBg"}
+        variant={"secondary"}
+        heading="License Purchase Options"
+        subhead="Optimize Your Atlassian Licensing with Alluvium: Tailored Solutions for Every Stage."
       />
 
-      <DepOption />
-
-      <GetStarted
-        heading="Your Atlassian Partner and Solutions Expert"
-        text="Let`s discuss your unique needs and challenges, and we`ll develop a customized solution tailored specifically for your use case."
-        button1={
-          <Link href="/atlassian-services/atlassian-licence/licence-request">
-            <Button size="large" className="mx-md-3 my-4">
-              Request License Quote
-            </Button>
-          </Link>
-        }
-        button2={
-          <Link href="/atlassian-services/atlassian-licence/licence-request">
-            <Button size="large" variant="tertiary">
-              Get a Free Atlassian Audit
-            </Button>
-          </Link>
+      <ServicesCardReuse
+        data={licenseOptions}
+        imageAvailable={false}
+        showAdditionalCard={true}
+        ConsultationCardServices={
+          <ConsultationCardServices
+            title="Your Atlassian Partner and Solutions Expert"
+            description="Let's discuss your unique needs and challenges, and we'll develop a customized solution tailored specifically for your use case."
+            buttons={[
+              {
+                label: "Request License",
+                variant: "redesign",
+                size: "medium",
+                href: "/atlassian-services/atlassian-licence/licence-request",
+              },
+              {
+                label: "Request Site Audit",
+                size: "medium",
+                href: "/contact-us",
+              },
+            ]}
+          />
         }
       />
-      <Purchase />
-      <ChooseAlluvium
-        choose="Why Choose Alluvium"
-        chooseUsAlluvium={chooseUsAlluvium}
-      />
+      <LicenseManager />
     </Layout>
   );
 };
