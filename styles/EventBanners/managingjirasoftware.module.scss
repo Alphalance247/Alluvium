@@ -5,8 +5,15 @@
   &--primary {
     background: url("/assets/events/jira-software-class/bg.png");
   }
+
   &--secondary {
     background: url("/assets/events/shadow-ai/shadowai.png");
+    background-position: center;
+    background-size: cover;
+  }
+
+  &--tertiary {
+    background: url("/assets/events/ai/eventbanner.png");
     background-position: center;
     background-size: cover;
   }
@@ -36,6 +43,25 @@
 
     &--secondary {
       padding: 8rem 1rem 15rem 1rem;
+
+      @media screen and (max-width: 1200px) {
+        padding-left: 3.5rem;
+      }
+      @media screen and (max-width: 992px) {
+        padding-left: 2rem;
+        padding-top: 7rem;
+        padding-bottom: 13rem;
+      }
+      @media screen and (max-width: 640px) {
+        padding-left: 18px;
+        padding-top: 4rem;
+        padding-bottom: 8rem;
+      }
+    }
+
+    &--tertiary {
+      padding: 8rem 1rem 15rem 1rem;
+      color: #141414;
 
       @media screen and (max-width: 1200px) {
         padding-left: 3.5rem;
@@ -92,7 +118,7 @@
       color: #f1efff;
       font-size: 21px;
       line-height: 32px;
-      width: 60%;
+      width: 50%;
       margin-bottom: 2rem;
 
       @media screen and (max-width: 992px) {
@@ -117,12 +143,18 @@
       &--secondary {
         bottom: -6.5rem;
       }
+      &--tertiary {
+        bottom: -6.5rem;
+      }
 
       @media screen and (max-width: 640px) {
         &--primary {
           bottom: -2.5rem;
         }
         &--secondary {
+          bottom: -6.5rem;
+        }
+        &--tertiary {
           bottom: -6.5rem;
         }
       }
@@ -161,6 +193,21 @@
           }
         }
 
+        &--tertiary {
+          display: flex;
+          flex-direction: column;
+          border: 9px solid #009bc0;
+          padding: 26px 33px 26px 54px;
+          row-gap: 12px;
+          text-align: left;
+          width: 80%;
+
+          @media screen and (max-width: 640px) {
+            padding: 1.5rem 12px;
+            width: 90%;
+          }
+        }
+
         .actual__time {
           &--primary {
             display: flex;
@@ -170,6 +217,12 @@
           }
 
           &--secondary {
+            display: flex;
+            column-gap: 12px;
+            align-items: center;
+            text-align: left;
+          }
+          &--tertiary {
             display: flex;
             column-gap: 12px;
             align-items: center;
@@ -223,8 +276,8 @@
       line-height: 60px;
       font-family: "Grotesk";
       color: black;
-      text-align: center;
-      width: 70%;
+      text-align: left;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 5rem;
@@ -245,6 +298,22 @@
         font-size: 1.5rem;
         line-height: 2rem;
         text-align: left;
+      }
+    }
+
+    .subheadAIsub {
+      font-size: 18px !important;
+      color: black !important;
+      line-height: 28px !important;
+      margin-top: -4rem;
+      width: 70%;
+
+      @media screen and (max-width: 640px) {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
       }
     }
 
@@ -382,9 +451,7 @@
 
     .speaker {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      column-gap: 5rem;
+      justify-content: space-between;
 
       @media screen and (max-width: 640px) {
         flex-direction: column;
@@ -393,14 +460,35 @@
         align-items: flex-start;
       }
 
+      .meet__speaker {
+        color: #595959;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 20px;
+        background: #fcf2e8;
+        border: 1px solid #e37915;
+        padding: 4px 8px;
+        margin-bottom: 2rem;
+        border-radius: 6px;
+        width: fit-content;
+      }
+
+      .speaker__details {
+        width: 45%;
+
+        @media screen and (max-width: 640px) {
+          width: 100%;
+        }
+      }
+
       .name {
         font-size: 44px;
         line-height: 64px;
         color: black;
         font-weight: 700;
-        margin-bottom: 22px;
+        margin-bottom: 15px;
         margin-top: 0.3rem;
-        text-align: center;
+        text-align: left;
 
         @media screen and (max-width: 640px) {
           font-size: 1.5rem;
@@ -410,12 +498,26 @@
         }
       }
 
+      .description {
+        font-size: 18px;
+        line-height: 28px;
+        color: #595959;
+        margin-bottom: 0px;
+        text-align: left;
+
+        @media screen and (max-width: 640px) {
+          font-size: 1rem;
+          line-height: 1.5rem;
+          text-align: left;
+        }
+      }
+
       .jobTitle {
         font-size: 27px;
         line-height: 33px;
         color: black;
         font-weight: 700;
-        text-align: center;
+        text-align: left;
 
         @media screen and (max-width: 640px) {
           font-size: 1rem;
