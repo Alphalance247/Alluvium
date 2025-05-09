@@ -9,6 +9,7 @@ import ChoosingAlluvium from "./chooseAlluvium";
 import Conclusion from "./conclusion";
 import WorkwithAtlassian from "./getintouch";
 import { useState } from "react";
+import usesticky from "../customhooks/UseSticky";
 
 const ContentTab = () => {
   const [activeTab, setActiveTab] = useState(0);
