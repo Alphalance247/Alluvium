@@ -61,10 +61,9 @@ const AtlassianApplication = ({ variant = "tertiary" }) => {
         >
           <h1>AI in Atlassian Applications</h1>
           <p className={styles.subhead} style={{ color: "#141414" }}>
-            Join us on June 12, 2025, at 3 PM UK for an exclusive virtual event
-            featuring Taiwo Ojo. Together, we will explore the future of
-            artificial intelligence in Atlassian tools such as Jira and
-            Confluence.
+            Join us on June 12, 2025, at 3 PM for an exclusive event featuring
+            Taiwo Ojo. We will explore how Rovo is changing the future of
+            Atlassian tools.
           </p>
           <Link href="#form">
             <Button size="large">Register Now</Button>
