@@ -10,7 +10,7 @@ import { badges } from "data";
 const AtlassianApplication = ({ variant = "tertiary" }) => {
   const timeData = [
     {
-      date: "12th June, 2025",
+      date: "24th June, 2025",
       icon: "/assets/events/jira-software-class/eventdate.svg",
     },
     {
@@ -61,7 +61,7 @@ const AtlassianApplication = ({ variant = "tertiary" }) => {
         >
           <h1>AI in Atlassian Applications</h1>
           <p className={styles.subhead} style={{ color: "#141414" }}>
-            Join us on June 12, 2025, at 3 PM for an exclusive event featuring
+            Join us on June 24, 2025, at 3 PM for an exclusive event featuring
             Taiwo Ojo. We will explore how Rovo is changing the future of
             Atlassian tools.
           </p>
