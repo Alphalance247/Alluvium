@@ -1,7 +1,11 @@
 # Block all crawlers for /accounts
-User-agent: *
-Disallow:/api/
+
 
 # Allow all crawlers
 User-agent: *
+Disallow:/api/
 Allow: http://localhost:3000/hidden-s-map/sitemap.xml
+
+# Allow everything for atlassian-bot
+User-agent: atlassian-bot
+Disallow:
