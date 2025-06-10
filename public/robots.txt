@@ -3,8 +3,8 @@
 
 # Allow all crawlers
 User-agent: *
-Disallow:/api/
-Allow: http://localhost:3000/hidden-s-map/sitemap.xml
+Disallow: /api/
+Allow: /hidden-s-map/sitemap.xml
 
 # Allow everything for atlassian-bot
 User-agent: atlassian-bot
