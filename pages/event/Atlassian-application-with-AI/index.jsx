@@ -18,7 +18,7 @@ const AtlassianApplication = ({ variant = "tertiary" }) => {
       icon: "/assets/events/jira-software-class/eventtime.svg",
     },
     {
-      date: "Zoom",
+      date: "LCCI 33 Queen St, London EC4R 1AP",
       icon: "/assets/events/shadow-ai/location.svg",
     },
   ];
