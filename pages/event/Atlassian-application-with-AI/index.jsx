@@ -130,7 +130,7 @@ const AtlassianApplication = ({ variant = "tertiary" }) => {
               <p className={styles.event}>Registration</p>
               <LeadForm
                 dataUrl={
-                  "https://api.leadconnectorhq.com/widget/form/XkOMSJvFcmw5xB4G96Jj"
+                  "https://crm.zohopublic.com/crm/WebFormServeServlet?rid=65252ee64f3dc156d593be8c8b3d25191fecac3fad11a7cd420672efbe84b04468ccc613d7caeb2603104cde09265c60gidc53ff48cb35c7919c04fdccfe00ab77970cab553ee11ab88032ef581e3028dcf&service=smarturl"
                 }
               />
             </div>
