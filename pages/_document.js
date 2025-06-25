@@ -65,12 +65,18 @@ export default class MyDocument extends Document {
             t=d.getElementsByTagName("script")[0];
             t.parentNode.insertBefore(s,t);
           </script> */}
-          <script
+          {/* <script
             type="text/javascript"
             src="https://salesiq.zohopublic.com/widget"
             defer={true}
             id="zsiqscript"
-          ></script>
+          ></script> */}
+          {/* <script
+            data-jsd-embedded
+            data-key="aab6d5ce-5884-41ce-aa75-1bdc148ce73e"
+            data-base-url="https://jsd-widget.atlassian.com"
+            src="https://jsd-widget.atlassian.com/assets/embed.js"
+          ></script> */}
           {/* <!-- Google Tag Manager (noscript) --> */}
           <noscript>
             <iframe
