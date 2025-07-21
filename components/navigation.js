@@ -8,6 +8,7 @@ import {
 import { ourServicesData } from "data";
 import NewNavbar from "./Alluvium-Redesign-2025/navbar/NewNavbar";
 import MobileNavbar from "./Alluvium-Redesign-2025/navbar/MobileNavbar";
+import Image from "next/image";
 
 export default function Navigation({ theme }) {
   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
@@ -59,7 +60,12 @@ export default function Navigation({ theme }) {
       >
         <div className={styles.logo}>
           <Link href="/">
-            <img src="/assets/alluvium-logo-dark.svg" alt="logo" />
+            <Image
+              width={150}
+              height={50}
+              src="/assets/alluvium-logo-dark.svg"
+              alt="logo"
+            />
           </Link>
         </div>
         {!displayMobileMenu && (
