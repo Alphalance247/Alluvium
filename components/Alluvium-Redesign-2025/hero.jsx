@@ -40,10 +40,11 @@ const Hero = () => {
 
             <div className={styles.hero__image}>
               <Image
-                src="/assets/redesign-2025/home/high-velocity.png"
+                src="/assets/redesign-2025/home/high-velocity.webp"
                 width={450}
                 height={416}
                 alt="unlock high velocity enterprise management"
+                priority
               />
             </div>
           </div>
