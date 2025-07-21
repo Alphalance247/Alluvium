@@ -228,9 +228,9 @@ const Footer = () => {
               <div className={styles.showcase}>
                 {text.map((item, i) => {
                   return (
-                    <a href={item?.url} target="_blank" key={i}>
+                    <Link href={item?.url} target="_blank" key={i}>
                       <HighLight text={item?.text} i={i} />
-                    </a>
+                    </Link>
                   );
                 })}
               </div>
@@ -301,7 +301,7 @@ const Footer = () => {
                       cursor: "pointer",
                     }}
                   >
-                    <a aria-label={el?.label}>{el?.name}</a>
+                    <span className={styles.linkspolicy}>{el?.name}</span>
                     <span
                       style={{
                         width: "2px",
