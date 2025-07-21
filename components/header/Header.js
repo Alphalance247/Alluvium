@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Dropdown from "./Dropdown";
 import styles from "../../styles/header/header.module.scss";
+import Image from "next/image";
 
 const dropdownItems = [
   {
@@ -54,7 +55,12 @@ const Header = () => {
       <div className={styles.container}>
         <div className={styles.logo}>
           <Link href="/">
-            <img src="/assets/alluvium-logo-dark.svg" alt="logo" />
+            <Image
+              width={150}
+              height={30}
+              src="/assets/alluvium-logo-dark.svg"
+              alt="logo"
+            />
           </Link>
         </div>
         <nav className={styles.nav}>

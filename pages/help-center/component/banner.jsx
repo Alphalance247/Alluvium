@@ -23,7 +23,7 @@ const Banner = () => {
           src="/assets/help-center/nil.png"
           width={450}
           height={250}
-          alt=""
+          alt="bannerImg"
         />
       </div>
     </section>
