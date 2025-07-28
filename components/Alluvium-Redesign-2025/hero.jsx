@@ -18,16 +18,16 @@ const Hero = () => {
                 update="Alluvium Supports the Stanford Chambers of Commerce"
                 updateSub="NEW UPDATE"
                 updateSign={true}
-                heading="Unlock High Velocity Enterprise Management"
-                subhead="Atlassian bridges the gap between Development and IT with Jira Service Management, empowering teams to work faster and adapt quickly to change."
+                heading="Deliver exceptional HR service with Jira Service Management"
+                subhead="From hiring to exit, manage every HR request on one powerful platform. Improve response times, foster collaboration, and deliver consumer-grade service to every employee."
                 variant="primary"
                 withLink={false}
                 showParagraph={false}
                 withParagragh={true}
               />
               <div className={styles.btns}>
-                <Link href="/contact-us">
-                  <Button size="mediumL">Request a Demo</Button>
+                <Link href="/campaigns/high-velocity-hr">
+                  <Button size="mediumL">Explore the Guide</Button>
                 </Link>
 
                 <Link href="/why-hire-us">
@@ -40,9 +40,9 @@ const Hero = () => {
 
             <div className={styles.hero__image}>
               <Image
-                src="/assets/redesign-2025/home/high-velocity.webp"
-                width={450}
-                height={416}
+                src="/assets/redesign-2025/home/hr-velocity.webp"
+                width={400}
+                height={356}
                 alt="unlock high velocity enterprise management"
                 priority
               />
