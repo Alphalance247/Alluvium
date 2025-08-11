@@ -21,7 +21,7 @@ const CaseCard = ({
   return (
     <Link href={url}>
       <div className={`${styles.card} ${styles[`card--${variant}`]}`}>
-        <Image
+        <img
           src={imgSrc}
           alt={imgAlt}
           width={width}
