@@ -7,7 +7,6 @@ import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSoluti
 import Impact from "components/Alluvium-Redesign-2025/ourImpact";
 import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
 import Banner from "./help-center/component/banner";
-import Team25Banner from "components/EventBanner/team25Banner";
 
 const Home = () => {
   return (
@@ -32,7 +31,6 @@ const Home = () => {
         </Head>
         <Hero />
         <Expertise />
-        <Team25Banner />
         <AtlassianSolution />
         <Banner />
         <Impact />

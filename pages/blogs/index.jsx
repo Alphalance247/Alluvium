@@ -12,6 +12,7 @@ import { useState } from "react";
 import LoadingScreen from "components/loading";
 import { environment } from "env/env.local";
 import Button from "components/atlassian-service-reuse/Button";
+import Image from "next/image";
 
 const Blogs = () => {
   const [data, setData] = useState([]);
@@ -53,7 +54,19 @@ const Blogs = () => {
     fetchData();
   }, []);
 
-  console.log(data, postOfTheWeek);
+  const postWeek = [
+    {
+      id: "",
+      tag: "Artificial Intelligence",
+      title: "The Invisible Threat: Shadow AI",
+      summary:
+        "Unmanaged AI use is not just a compliance issue; it's a direct threat to your data, intellectual property, and reputation. The rapid, uncontrolled adoption of consumer-grade AI tools by employees creates significant, often hidden, vulnerabilities.",
+      featured_image: "/assets/blogImages/strategic-ai.png",
+      author: "Taiwo Ojo",
+      formatted_published_at: "11-8-2025",
+      read_time: "2",
+    },
+  ];
 
   return (
     <Layout>
@@ -108,12 +121,13 @@ const Blogs = () => {
                 />
               </div>
 
-              {Object.keys(postOfTheWeek).length > 0 && (
+              {postWeek.map((postOfTheWeek, i) => (
                 <div className={styles.article__hero}>
-                  <Link href={`/blogs/${postOfTheWeek?.slug}`} passHref>
+                  {/* ${postOfTheWeek?.slug} */}
+                  <Link href={`/blogs/strategic-ai`} passHref>
                     <div className={styles.dhcs__main}>
                       <div style={{ width: "100%" }}>
-                        <img
+                        <Image
                           src={postOfTheWeek?.featured_image}
                           width={600}
                           height={420}
@@ -127,11 +141,14 @@ const Blogs = () => {
                       </div>
                       <div>
                         <div className={styles.indusrty__heading}>
-                          {postOfTheWeek?.tag_names?.map((tag, i) => (
+                          {/* {postOfTheWeek?.tag_names?.map((tag, i) => (
                             <p className={styles.industry} key={i}>
                               {tag}
                             </p>
-                          ))}
+                          ))} */}
+                          <p className={styles.industry} key={i}>
+                            {postOfTheWeek?.tag}
+                          </p>
                         </div>
 
                         <h4>
@@ -145,10 +162,7 @@ const Blogs = () => {
                           />
                         </div>
                         <CardBlogDetails
-                          name={
-                            `${postOfTheWeek?.author?.first_name} ${postOfTheWeek?.author?.last_name}` ||
-                            "James Akinlabi"
-                          }
+                          name={`${postOfTheWeek?.author}` || "James Akinlabi"}
                           blogDate={postOfTheWeek?.formatted_published_at}
                           minRead={postOfTheWeek?.read_time + " mins read"}
                         />
@@ -162,7 +176,7 @@ const Blogs = () => {
                     </div>
                   </Link>
                 </div>
-              )}
+              ))}
             </div>
           </section>
 
