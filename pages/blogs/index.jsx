@@ -124,7 +124,7 @@ const Blogs = () => {
               {postWeek.map((postOfTheWeek, i) => (
                 <div className={styles.article__hero}>
                   {/* ${postOfTheWeek?.slug} */}
-                  <Link href={`/blogs/strategic-ai`} passHref>
+                  <Link href={`/blogs/aipolicy`} passHref>
                     <div className={styles.dhcs__main}>
                       <div style={{ width: "100%" }}>
                         <Image
