@@ -1,0 +1,145 @@
+.hr__vertical {
+  background: #ededed;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media screen and (max-width: 992px) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hr__vertical__subhead {
+    max-width: 1272px;
+    margin: auto;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .hr__hero {
+      width: 55%;
+
+      @media screen and (max-width: 992px) {
+        width: 80%;
+      }
+      @media screen and (max-width: 700px) {
+        width: 100%;
+      }
+
+      .hr__p {
+        font-size: 14px;
+        font-weight: 500;
+        color: #595959;
+        line-height: 20px;
+        border: 1px solid #e37915;
+        background: #fcf2e8;
+        border-radius: 10px;
+        width: fit-content;
+        padding: 4px 8px 4px 4px;
+        cursor: pointer;
+        margin-bottom: 1.2rem;
+      }
+
+      .hr__h2 {
+        font-size: 45px;
+        color: #141414;
+        letter-spacing: -2%;
+        font-weight: 700;
+        font-family: "Grotesk";
+        @media screen and (max-width: 992px) {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+      }
+      .hr__para {
+        font-size: 18px;
+        color: #595959;
+        line-height: 28px;
+        margin-top: 2rem;
+      }
+    }
+
+    .video__section {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.7rem;
+      margin-top: 4rem;
+
+      @media screen and (max-width: 992px) {
+        grid-template-columns: 1fr;
+      }
+
+      .book__call {
+        border-radius: 0.5rem;
+        border: 1px solid #f0f0f0;
+        background: white;
+        height: fit-content;
+
+        .book__call__text {
+          padding: 1.5rem;
+
+          .book__p {
+            letter-spacing: -2%;
+            font-family: "Grotesk";
+            font-size: 18px;
+            margin-bottom: 1rem;
+          }
+
+          .book__question {
+            color: #595959;
+            font-size: 15px;
+            line-height: 1.5rem;
+          }
+        }
+
+        .btn__call {
+          border: 1px solid #f0f0f0;
+          padding: 24px;
+        }
+      }
+
+      .video__encap {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        &.sticky {
+          position: sticky;
+          top: 10px;
+          height: fit-content;
+
+          @media screen and (max-width: 576px) {
+            position: relative;
+          }
+        }
+
+        .video__1 {
+          border-radius: 0.5rem;
+          border: 1px solid #f0f0f0;
+          background: white;
+          padding: 24px;
+          //   box-shadow: ;
+
+          .video__caption {
+            margin-top: 1rem;
+            background: #e6f5f9;
+            padding: 1rem 1.5rem;
+            border-radius: 6px;
+
+            p {
+              color: #141414;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 24px;
+              font-family: "Grotesk";
+            }
+          }
+        }
+      }
+    }
+  }
+}
