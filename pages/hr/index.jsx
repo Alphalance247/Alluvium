@@ -79,10 +79,7 @@ const Home = () => {
                   />
 
                   <div className={styles?.video__caption}>
-                    <p>
-                      Information + help organised by subject, rather than
-                      departments/teams
-                    </p>
+                    <p>{video?.subtext}</p>
                   </div>
                 </div>
               ))}
