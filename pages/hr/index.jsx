@@ -13,26 +13,27 @@ import useSticky from "components/customhooks/UseSticky";
 const Home = () => {
   const { sectionRef, isSticky } = useSticky();
   const [open, setOpen] = useState(false);
+
   const data = [
     {
       loom_link: "https://www.loom.com/embed/46553fd141484421ab654cd6e1afdc9a",
-      subtext: "One Atlassian - HR - Onboarding ",
+      subtext: "Onboarding",
     },
     {
       loom_link: "https://www.loom.com/embed/b8fad43fd31d413b82b72c44387fb45e",
-      subtext: "JSM Help Centre Overview",
+      subtext: "Self-Service",
     },
     {
       loom_link: "https://www.loom.com/embed/d0fba73325cc47559f5840a2b2487bfa",
-      subtext: "Enhancing Customer Experience with Virtual Agents and AI 🤖 ",
+      subtext: "Virtual Service Agent",
     },
     {
       loom_link: "https://www.loom.com/embed/103bbe1353df42fe8d558afdc87585d3",
-      subtext: "One Atlassian - HR Raise HR Case",
+      subtext: "Request Security 1",
     },
     {
       loom_link: "https://www.loom.com/embed/64bfecff9f0f4a9b944bfa51ae17ff8c",
-      subtext: "One Atlassian - HR Questions for HR",
+      subtext: "Request Security 2",
     },
   ];
   return (
