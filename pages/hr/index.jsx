@@ -9,10 +9,80 @@ import CalendlyWidget from "components/calendlyWidget";
 import LeadForm from "pages/event/itsm-solutions/form/leadform";
 import { useRef } from "react";
 import useSticky from "components/customhooks/UseSticky";
+import Input from "components/licence-component/inputP";
+import axios from "axios";
+import { useToasts } from "react-toast-notifications";
+import { environment } from "env/env.local";
 
 const Home = () => {
   const { sectionRef, isSticky } = useSticky();
   const [open, setOpen] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [loading, setLoading] = useState(false);
+  const { addToast } = useToasts();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    axios
+      .post(
+        `https://ssswuzxlxj5rkjd4bjmkfq4aii0dkkqt.lambda-url.us-east-1.on.aws/`,
+        { ...form },
+        { timeout: 40000 }
+      )
+      .then((res) => {
+        setLoading(true);
+
+        if (res?.status >= 200 && res?.status < 300) {
+          addToast(
+            "Thanks for sharing your email! We're glad to have you here.",
+            {
+              appearance: "success",
+              autoDismiss: true, // Enable auto dismiss
+              autoDismissTimeout: 5000, // Dismiss after 5 seconds
+            }
+          );
+          setEmail("");
+        } else {
+          addToast(
+            "Unexpected response from server. Please try again or contact Admin",
+            {
+              appearance: "error",
+              autoDismiss: true, // Enable auto dismiss
+              autoDismissTimeout: 5000, // Dismiss after 5 seconds
+            }
+          );
+          setLoading(false);
+          return;
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+
+        addToast(
+          err?.message ||
+            "Unexpected response from server. Please try again or contact Admin",
+          {
+            appearance: "error",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          }
+        );
+      });
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+  };
 
   const data = [
     {
@@ -91,6 +161,64 @@ const Home = () => {
                 isSticky ? styles?.sticky : ""
               }`}
             >
+              <form action="submit" onSubmit={handleSubmit}>
+                <div className={styles.book__call__form}>
+                  <div className={styles.book__call__text}>
+                    <p className={styles.book__p}>
+                      Want Professional Headshot? Fill the Form Below
+                    </p>
+                  </div>
+
+                  <div className=" flex-column d-flex gap-3">
+                    <div>
+                      <Input
+                        id="fullname"
+                        label="fullname"
+                        text="Full Name "
+                        name="name"
+                        type="text"
+                        value={form.name || ""}
+                        placeholder=""
+                        onChange={handleChange}
+                        // errorF={formError.first_name}
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        id="email"
+                        label="email"
+                        text="Email "
+                        name="email"
+                        type="email"
+                        value={form.email || ""}
+                        placeholder=""
+                        onChange={handleChange}
+                        // errorF={formError.first_name}
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        id="phone__number"
+                        label="phone_number"
+                        text="Phone Number "
+                        name="phone"
+                        type="text"
+                        value={form.phone || ""}
+                        placeholder=""
+                        onChange={handleChange}
+                        // errorF={formError.first_name}
+                      />
+                    </div>
+
+                    <div className={styles?.btn__call}>
+                      <Button size="xxlarge" className=" w-100" type="submit">
+                        {loading ? "Submitting.." : "Submit"}
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
               <div className={styles.book__call}>
                 <div className={styles.book__call__text}>
                   <p className={styles.book__p}>Book a Meeting</p>
@@ -112,7 +240,27 @@ const Home = () => {
                 </div>
               </div>
 
-              <LeadForm dataUrl={"https://zcform.com/LluxD"} />
+              {/* <LeadForm dataUrl={"https://zcform.com/LluxD"} /> */}
+            </div>
+          </div>
+          <div className={styles.book__call_2}>
+            <div className={styles.book__call__text}>
+              <p className={styles.book__p}>Book a Meeting</p>
+              <p className={styles.book__question}>
+                Have questions or need assistance? Reach out to us for support,
+                inquiries, or feedback, and our team will get back to you
+                promptly.
+              </p>
+            </div>
+
+            <div className={styles?.btn__call}>
+              <Button
+                size="xxlarge"
+                className=" w-100"
+                onClick={() => setOpen(true)}
+              >
+                Book a Meeting
+              </Button>
             </div>
           </div>
         </div>
