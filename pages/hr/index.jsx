@@ -165,7 +165,7 @@ const Home = () => {
                 <div className={styles.book__call__form}>
                   <div className={styles.book__call__text}>
                     <p className={styles.book__p}>
-                      Want Professional Headshot? Fill the Form Below
+                      Want Free Professional Headshot? Fill the Form Below
                     </p>
                   </div>
 
