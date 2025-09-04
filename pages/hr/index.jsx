@@ -12,7 +12,6 @@ import useSticky from "components/customhooks/UseSticky";
 import Input from "components/licence-component/inputP";
 import axios from "axios";
 import { useToasts } from "react-toast-notifications";
-import { environment } from "env/env.local";
 
 const Home = () => {
   const { sectionRef, isSticky } = useSticky();
@@ -36,18 +35,18 @@ const Home = () => {
         { timeout: 40000 }
       )
       .then((res) => {
-        setLoading(true);
-
         if (res?.status >= 200 && res?.status < 300) {
           addToast(
-            "Thanks for sharing your email! We're glad to have you here.",
+            res?.data?.body ||
+              "Request submitted successfully. Please check your email for verification code",
             {
               appearance: "success",
               autoDismiss: true, // Enable auto dismiss
               autoDismissTimeout: 5000, // Dismiss after 5 seconds
             }
           );
-          setEmail("");
+          setLoading(false);
+          setForm({ name: "", email: "", phone: "" });
         } else {
           addToast(
             "Unexpected response from server. Please try again or contact Admin",
@@ -106,6 +105,7 @@ const Home = () => {
       subtext: "Request Security 2",
     },
   ];
+
   return (
     <Layout>
       <Head>
@@ -165,7 +165,7 @@ const Home = () => {
                 <div className={styles.book__call__form}>
                   <div className={styles.book__call__text}>
                     <p className={styles.book__p}>
-                      Want Professional Headshot? Fill the Form Below
+                      Want Free Professional Headshot? Fill the Form Below
                     </p>
                   </div>
 
