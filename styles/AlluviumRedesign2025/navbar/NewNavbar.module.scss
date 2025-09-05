@@ -9,3 +9,10 @@
     padding: 0;
   }
 }
+@media screen and (max-width: 912px) {
+  .navbar {
+    .navbar_list {
+      display: none;
+    }
+  }
+}
