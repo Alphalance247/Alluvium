@@ -53,3 +53,32 @@
     }
   }
 }
+.navItemButton {
+  display: grid;
+  gap: 16px;
+  padding: 0.4rem;
+  font-size: 16px;
+}
+.support {
+  width: 100%;
+  height: 40px;
+  padding: 8px 14px;
+  outline: none;
+  border-radius: 6px;
+  background-color: #009bc0;
+  color: white !important;
+}
+.support:hover {
+  opacity: 0.5;
+}
+.contactUs {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  outline: none;
+  border: 2px solid #e37915;
+  color: #e37915 !important;
+}
