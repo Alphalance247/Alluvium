@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <Layout>
         <Head>
-          <title>Home | Alluvium</title>
+          <title>Alluvium: |  Atlassian Global Solution Partner </title>
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"
@@ -22,12 +22,11 @@ const Home = () => {
           />
           <meta
             name="description"
-            content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+            content="Page Description:   Alluvium, an Atlassian Solution Partner in the United States, United Kingdom, and Nigeria. We  deliver ITSM, DevOps, Agile, Cloud Migration, and workflow automation services. "
           />
           <meta
             name="keywords"
-            content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
-          />
+            content=" Atlassian Solution Partner, Atlassian services, ITSM solutions, Jira Service Management,  Confluence, Jira Software, Bitbucket, DevOps tools, Agile workflows, Cloud migration, workflow  automation, project management tools, Atlassian partner US, Atlassian partner UK, Atlassian  partner Nigeria, ITSM Atlassian consultant, enterprise collaboration tools." />
         </Head>
         <Hero />
         <Expertise />
