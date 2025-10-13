@@ -16,7 +16,7 @@ const ServicesCardReuse = ({
   borderVariant = "default",
   imageAvailable,
   containerStyle,
-  ConsultationCardServices
+  ConsultationCardServices,
 }) => {
   const totalCards = data.length;
 
@@ -62,7 +62,7 @@ const ServicesCardReuse = ({
             />
           ))}
 
-          {showAdditionalCard && <>{ConsultationCardServices}</> }
+          {showAdditionalCard && <>{ConsultationCardServices}</>}
         </div>
       </div>
 

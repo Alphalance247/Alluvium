@@ -10,6 +10,19 @@ import LicenseManager from "components/Alluvium-Redesign-2025/atlassian-license/
 import ConsultationCardServices from "components/Alluvium-Redesign-2025/ReuseComponents/consultationCard";
 
 const AtlassianLicence = () => {
+  const btn = [
+    {
+      label: "Request License",
+      variant: "redesign",
+      size: "medium",
+      href: "/atlassian-services/atlassian-licence/licence-request",
+    },
+    {
+      label: "Request Site Audit",
+      size: "medium",
+      href: "/contact-us",
+    },
+  ];
   return (
     <Layout>
       <Head>
@@ -42,19 +55,7 @@ const AtlassianLicence = () => {
           <ConsultationCardServices
             title="Your Atlassian Partner and Solutions Expert"
             description="Let's discuss your unique needs and challenges, and we'll develop a customized solution tailored specifically for your use case."
-            buttons={[
-              {
-                label: "Request License",
-                variant: "redesign",
-                size: "medium",
-                href: "/atlassian-services/atlassian-licence/licence-request",
-              },
-              {
-                label: "Request Site Audit",
-                size: "medium",
-                href: "/contact-us",
-              },
-            ]}
+            buttons={btn}
           />
         }
       />

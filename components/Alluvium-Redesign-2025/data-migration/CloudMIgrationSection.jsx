@@ -1,6 +1,7 @@
 import React from "react";
 import HeroHeading from "../ReuseComponents/heroHeading";
-import styles from "../../../styles/AlluviumRedesign2025/DataMigration/CloudMigrationSection.module.scss";
+import styles from "../../../styles/AlluviumRedesign2025/DataMigration/CloudMIgrationSection.module.scss";
+// import styles from "../../../styles/AlluviumRedesign2025/DataMigration/CloudMigrationSection.module.scss";
 
 const CloudMigrationSection = ({
   variant,

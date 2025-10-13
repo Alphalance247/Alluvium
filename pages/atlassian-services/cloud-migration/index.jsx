@@ -1,19 +1,19 @@
 import Layout from "components/layout";
-import styles from "../../../styles/AlluviumRedesign2025/DataMigration/DataMigration.module.scss";
+import styles from "./../../../styles/AlluviumRedesign2025/DataMigration/DataMigration.module.scss";
 import Head from "next/head";
 import HeroSection from "components/Alluvium-Redesign-2025/data-migration/HeroSection";
 import CloudMigrationSection from "components/Alluvium-Redesign-2025/data-migration/CloudMIgrationSection";
 import MigrationProcess from "components/Alluvium-Redesign-2025/data-migration/MigrationProcess";
 import Checklist from "components/Alluvium-Redesign-2025/data-migration/Checklist";
 import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents/ServicesCardReuse";
-import Heading from "components/Alluvium-Redesign-2025/heading";
-import Image from "next/image";
-import ReadMore from "components/Alluvium-Redesign-2025/ReuseComponents/readmore";
 import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesCard";
 import {
   CloudBenefits,
   migrationWithAlluvium,
 } from "constants/data-migration/DataMigraton";
+import Heading from "components/Alluvium-Redesign-2025/heading";
+import Image from "next/image";
+import ReadMore from "components/Alluvium-Redesign-2025/ReuseComponents/readmore";
 
 const description = [
   {
@@ -54,29 +54,27 @@ const CloudMigration = () => {
         subhead="Our team of Atlassian certified experts is ready to help you tackle any of your Atlassian challenges."
       />
       <ServicesCardReuse data={CloudBenefits} imageAvailable={false} />
-      <div className={styles.whyMigrate}>
-        <main>
-          <div className={styles.imgChild}>
-            <Image
-              src="/assets/redesign-2025/data-migration/OurMission1.webp"
-              width={635}
-              height={523}
-              alt="hii"
-            />
+      <div className={styles.streamline__server}>
+        <div className={styles.imgChild}>
+          <Image
+            src="/assets/redesign-2025/data-migration/OurMission1.webp"
+            width={635}
+            height={523}
+            alt="hii"
+          />
+        </div>
+        <div className={styles.infoChild}>
+          <Heading
+            title="INSURANCE"
+            heading="Streamlining Server to Atlassian Cloud Migration for an Insurance Company"
+            subhead="An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution."
+            titleVariant="whiteVar"
+            variant="full"
+          />
+          <div className={styles.readMore}>
+            <ReadMore content={"Read More"} />
           </div>
-          <div className={styles.infoChild}>
-            <Heading
-              title="INSURANCE"
-              heading="Streamlining Server to Atlassian Cloud Migration for an Insurance Company"
-              subhead="An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution."
-              titleVariant="whiteVar"
-              variant="full"
-            />
-            <div className={styles.readMore}>
-              <ReadMore content={"Read More"} />
-            </div>
-          </div>
-        </main>
+        </div>
       </div>
       <div
         style={{ borderTop: "1px solid #f0f0f0" }}
