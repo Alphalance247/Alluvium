@@ -6,6 +6,7 @@ const HeroHeading = ({
   update,
   heading,
   subhead,
+  extraContent,
   updateSub,
   updateVariant,
   updateSign = false,
@@ -15,6 +16,8 @@ const HeroHeading = ({
   showParagraph = true,
   headSection = "primary",
   withParagragh = true,
+  variantMargingFix = "default",
+  variantTransform,
   span,
   headingcont,
   span1,
@@ -24,16 +27,18 @@ const HeroHeading = ({
       {withLink &&
         (showParagraph ? (
           <p
-            className={`${styles.sub__sec} ${styles[`sub__sec--${headSection}`]
-              }`}
+            className={`${styles.sub__sec} ${
+              styles[`sub__sec--${headSection}`]
+            }`}
           >
             {subsec}
           </p>
         ) : (
           <Link href="/">
             <p
-              className={`${styles.new__update} ${updateVariant ? styles[`new__update--${updateVariant}`] : ""
-                }`}
+              className={`${styles.new__update} ${
+                updateVariant ? styles[`new__update--${updateVariant}`] : ""
+              }`}
             >
               {updateSign && (
                 <span className={styles.span1}>
@@ -54,20 +59,35 @@ const HeroHeading = ({
         ))}
 
       <h1
-        className={`${styles.headings} ${styles[`headings--${variant}`]} ${withParagragh
-          ? styles.headingWithParagrapgh
-          : styles.headingWithNoParagrapgh
-          }`}
+        className={`${styles.headings} ${styles[`headings--${variant}`]} ${
+          withParagragh
+            ? styles.headingWithParagrapgh
+            : styles.headingWithNoParagrapgh
+        }`}
       >
         {heading} <span style={{ color: "#E37915" }}>{span}</span> {headingcont}{" "}
         <span style={{ color: "#E37915" }}>{span1}</span>
       </h1>
       {withParagragh && (
         <p
-          className={`${styles.paragraph__transform} ${styles[`paragraph__transform--${variant}`]
-            }`}
+          className={`${styles.paragraph__transform} ${
+            styles[`paragraph__transform--${variant}`]
+          }`}
         >
           {subhead}
+        </p>
+      )}
+      {extraContent && (
+        <p
+          style={{ marginTop: "16px" }}
+          className={`
+          ${styles.paragraph__transform} ${
+            styles[`paragraph__transform--${variant}`]
+          } ${styles[`paragraph__transform--${variantMargingFix}`]}
+          ${styles[`paragraph__transform--${variantTransform}`]}
+          `}
+        >
+          {extraContent}
         </p>
       )}
     </div>

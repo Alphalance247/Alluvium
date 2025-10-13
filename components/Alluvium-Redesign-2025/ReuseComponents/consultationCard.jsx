@@ -1,23 +1,23 @@
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/consultation.module.scss";
-const ConsultationCardServices = ({ title, description, image }) => {
+
+const ConsultationCardServices = ({ title, description, buttons }) => {
   return (
     <div className={styles.consultaion__card}>
       <div>
-        <h3>
-          Book a Free Training Consultation with Our Certified Experts Today.
-        </h3>
-        <p>
-          Discover how our experts can transform your team's efficiency with a
-          free training consultation today
-        </p>
+        <h3>{title}</h3>
+        <p>{description}</p>
       </div>
 
-      <div>
-        <Link href={"/contact-us"}>
-          <Button>Book Free Consultation</Button>
-        </Link>
+      <div className={styles.button__group}>
+        {buttons?.map((button, index) => (
+          <Link href={button.href}>
+            <Button key={index} variant={button.variant} size={button.size}>
+              {button.label}
+            </Button>
+          </Link>
+        ))}
       </div>
     </div>
   );
