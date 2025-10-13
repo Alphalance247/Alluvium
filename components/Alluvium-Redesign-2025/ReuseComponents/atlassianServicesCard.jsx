@@ -19,13 +19,17 @@ const AtlassianServicesCard = ({
   index,
   imageAvailable = true,
   btnUrl,
+  containerStyle,
+  numberText = "",
 }) => {
   return (
     <div
       className={`${styles.card} ${
         removeBorder ? styles.noBorder : styles.withBorder
-      }`}
+      } ${containerStyle}`}
     >
+      {numberText.length > 0 && (
+        <p className={styles.numberText}>{numberText}</p>)}
       {imageAvailable && (
         <Image width={width} height={height} src={img} alt="icons" />
       )}

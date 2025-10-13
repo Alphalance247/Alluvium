@@ -1,0 +1,19 @@
+.mobile {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
+
+.tablet {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+.mainDiv1 {
+  padding: 0 0 0 48px !important;
+}
+.mainDiv2 {
+  padding: 56px 48px !important;
+}

@@ -1,0 +1,37 @@
+.about__hero {
+  background: #fcfcfc;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  &--whitBg {
+    background: #ffffff;
+  }
+
+  .sub__head__hero {
+    max-width: 1272px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    margin: auto;
+  }
+
+  .hero__head {
+    padding: 6rem 0;
+    width: 53%;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 992px) {
+      width: 85%;
+      padding: 4rem 0;
+    }
+
+    @media screen and (max-width: 640px) {
+      width: 100%;
+      text-align: left;
+      padding-left: 18px;
+    }
+  }
+}

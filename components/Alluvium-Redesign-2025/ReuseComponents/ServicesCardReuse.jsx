@@ -15,6 +15,8 @@ const ServicesCardReuse = ({
   trusted = false,
   borderVariant = "default",
   imageAvailable,
+  containerStyle,
+  ConsultationCardServices
 }) => {
   const totalCards = data.length;
 
@@ -55,10 +57,12 @@ const ServicesCardReuse = ({
               removeBorder={i >= startIndexToRemove}
               isBtn={isBtn}
               imageAvailable={imageAvailable}
+              containerStyle={containerStyle}
+              numberText={item?.mainText}
             />
           ))}
 
-          {showAdditionalCard && <ConsultationCardServices />}
+          {showAdditionalCard && <>{ConsultationCardServices}</> }
         </div>
       </div>
 
