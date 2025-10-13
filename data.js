@@ -2543,7 +2543,7 @@ export const redesignCaseStudy = [
     title: ["PUBLICATION", "PUBLICATION"],
     heading: "Project Omega: Incident and Asset Management Migration ",
     btn: "Read Case Study",
-    url: "/case-studies/Project-Omega:-Incident-and-Asset-Management-Migration",
+    url: "/case-studies/project-omega-incident-and-asset-management-migration",
   },
 ];
 
@@ -2992,7 +2992,7 @@ export const CaseStudyDataRedesign2025 = [
     downloadLink:
       "/files/Server to Data Center Migration for Major Insurer.pdf",
     clientLogo: "/assets/redesign-2025/case-studies/sport2.png",
-    caseStudyPageName: "Project-Omega:-Incident-and-Asset-Management-Migration",
+    caseStudyPageName: "project-omega-incident-and-asset-management-migration",
     content: [
       {
         type: "subcontent",

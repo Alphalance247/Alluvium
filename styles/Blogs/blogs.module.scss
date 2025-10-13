@@ -470,10 +470,13 @@
   }
 
   .article__content {
-    padding: 6rem 4rem 6rem 4rem;
+    padding: 6rem 4rem 4rem 4rem;
     display: flex;
     flex-direction: column;
     row-gap: 4rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 
     @media screen and (max-width: 992px) {
       padding-left: 1rem;
@@ -483,6 +486,114 @@
     @media screen and (max-width: 640px) {
       padding-top: 1rem;
       row-gap: 2rem;
+      width: 100%;
+    }
+
+    h1 {
+      font-size: 2rem;
+      @media screen and (max-width: 640px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      @media screen and (max-width: 640px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      @media screen and (max-width: 640px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      @media screen and (max-width: 640px) {
+        font-size: 1.1rem;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      color: #595959;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+
+      @media screen and (max-width: 640px) {
+        font-size: 14px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    ul,
+    ol {
+      padding-left: 2rem;
+
+      @media screen and (max-width: 640px) {
+        padding-left: 1.5rem;
+      }
+
+      li {
+        font-size: 18px;
+        line-height: 28px;
+        color: #595959;
+
+        @media screen and (max-width: 640px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+
+    blockquote {
+      border-left: 4px solid #e37915;
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      color: #666;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+
+    code {
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+    }
+
+    pre {
+      background-color: #f5f5f5;
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+
+      code {
+        background: none;
+        padding: 0;
+      }
+    }
+
+    a {
+      color: #e37915;
+      text-decoration: underline;
+
+      &:hover {
+        color: #d16a0a;
+      }
     }
 
     .heading__with__subhead {

@@ -18,6 +18,7 @@ const Badges = ({ variant, badgesData = [] }) => {
                 width={item.width}
                 height={item.height}
                 alt={item.alt}
+                loading="lazy"
               />
             </div>
           );

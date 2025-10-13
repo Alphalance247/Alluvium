@@ -54,7 +54,6 @@ const HeroHeading = ({
               )}
 
               {update}
-              {/* {updateSign && <span className={styles.span2}>{" > "}</span>} */}
             </p>
           </Link>
         ))}
@@ -73,9 +72,7 @@ const HeroHeading = ({
         <p
           className={`${styles.paragraph__transform} ${
             styles[`paragraph__transform--${variant}`]
-          }
-          ${styles[`paragraph__transform--${variantTransform}`]}
-          `}
+          }`}
         >
           {subhead}
         </p>
