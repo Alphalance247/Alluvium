@@ -6,14 +6,14 @@ import CloudMigrationSection from "components/Alluvium-Redesign-2025/data-migrat
 import MigrationProcess from "components/Alluvium-Redesign-2025/data-migration/MigrationProcess";
 import Checklist from "components/Alluvium-Redesign-2025/data-migration/Checklist";
 import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents/ServicesCardReuse";
-import Heading from "components/Alluvium-Redesign-2025/heading";
-import Image from "next/image";
-import ReadMore from "components/Alluvium-Redesign-2025/ReuseComponents/readmore";
 import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesCard";
 import {
   CloudBenefits,
   migrationWithAlluvium,
 } from "constants/data-migration/DataMigraton";
+import Heading from "components/Alluvium-Redesign-2025/heading";
+import Image from "next/image";
+import ReadMore from "components/Alluvium-Redesign-2025/ReuseComponents/readmore";
 
 const description = [
   {
