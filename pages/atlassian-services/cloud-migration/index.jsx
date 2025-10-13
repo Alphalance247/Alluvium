@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import styles from "../../../styles/AlluviumRedesign2025/DataMigration/DataMigration.module.scss";
+import styles from "./../../../styles/AlluviumRedesign2025/DataMigration/DataMigration.module.scss";
 import Head from "next/head";
 import HeroSection from "components/Alluvium-Redesign-2025/data-migration/HeroSection";
 import CloudMigrationSection from "components/Alluvium-Redesign-2025/data-migration/CloudMIgrationSection";
