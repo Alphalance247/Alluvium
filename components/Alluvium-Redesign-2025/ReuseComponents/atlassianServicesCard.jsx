@@ -20,6 +20,9 @@ const AtlassianServicesCard = ({
   imageAvailable = true,
   btnUrl,
   containerStyle,
+  btnType,
+  btnSize,
+  btnText,
   numberText = "",
 }) => {
   return (
@@ -29,7 +32,8 @@ const AtlassianServicesCard = ({
       } ${containerStyle}`}
     >
       {numberText.length > 0 && (
-        <p className={styles.numberText}>{numberText}</p>)}
+        <p className={styles.numberText}>{numberText}</p>
+      )}
       {imageAvailable && (
         <Image width={width} height={height} src={img} alt="icons" />
       )}
@@ -62,8 +66,12 @@ const AtlassianServicesCard = ({
 
       {isBtn && (
         <Link href={btnUrl || "/support/contact#schedule-a-call"}>
-          <Button className={`${index === 0 ? styles.buttonMargin : null}`}>
-            Learn More
+          <Button
+            className={`${index === 0 ? styles.buttonMargin : null}`}
+            variant={btnType}
+            size={btnSize}
+          >
+            {btnText || "Learn More"}
           </Button>
         </Link>
       )}
