@@ -13,8 +13,8 @@ const HeroSection = () => {
             <HeroHeading
               variant="primary"
               withLink={true}
-              heading="Empower Your Enterprise with Agile at Scale"
-              subhead="Starting out with Agile or seeking assistance in scaling it throughout your enterprise? We are here to guide you every step of the way."
+              heading="Enterprise Agile Frameworks with Atlassian Solutions."
+              subhead="Alluvium enables enterprise teams to scale agile practices using Jira Align, Jira Software, and Confluence for better delivery and visibility."
               subsec={"AGILE AT SCALE"}
             />
             <Link className={styles.heroButton} href="/contact-us">

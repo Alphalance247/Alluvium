@@ -9,10 +9,23 @@ import Exceptional from "components/licence-component/exceptional";
 import TailoredSolution from "components/Alluvium-Redesign-2025/aws-solutions/TailoredSolution";
 import AwsExpert from "components/Alluvium-Redesign-2025/aws-solutions/AwsExpert";
 import AwsTraining from "components/Alluvium-Redesign-2025/aws-solutions/AwsTraining";
+import Head from "next/head";
 
 const AWSServices = () => {
   return (
     <Layout>
+      <Head>
+        <title>AWS Services | alluvium.net</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Cloud Hosting & Infrastructure by Alluvium. Alluvium provides AWS hosting, infrastructure management, and DevOps automation to help businesses deploy and scale securely across cloud environments"
+        />
+        <meta
+          name="keywords"
+          content="AWS services, cloud hosting, AWS consulting, AWS infrastructure, DevOps cloud, Alluvium AWS"
+        />
+      </Head>
       <div style={{ background: "#fcfcfc" }}>
         <div style={{ maxWidth: "1272px", margin: "auto" }}>
           <Lines variant={"secondary"} />
@@ -20,10 +33,10 @@ const AWSServices = () => {
       </div>
       <AtlassianServicesHero
         withLink={true}
-        subsec={"ATLASSIAN SUPPORT"}
-        heading={"Partner with Alluvium for AWS excellence."}
+        subsec={"AWS"}
+        heading={"Cloud Hosting & Infrastructure by Alluvium."}
         subhead={
-          "From data transformation to full cloud solutions, we help you leverage the power of AWS."
+          "Alluvium provides AWS hosting, infrastructure management, and DevOps automation to help businesses deploy and scale securely across cloud environments"
         }
         buttonText={"Schedule a Call"}
         url={"/contact-us"}

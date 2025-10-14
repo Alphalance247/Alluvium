@@ -11,8 +11,8 @@ const Hero = () => {
           <HeroHeading
             variant="primary"
             withLink={true}
-            heading="Redefining Collaboration and Efficiency Together"
-            subhead="At Alluvium, we help teams thrive with powerful Atlassian solutions. We’re here to make collaboration seamless and processes more efficient."
+            heading="Your Trusted Atlassian Solution Partner."
+            subhead="Learn about Alluvium an Atlassian Gold Partner delivering ITSM, DevOps, Agile, and cloud migration solutions across the US, UK, and Nigeria. We help teams work smarter and faster with modern tools."
             subsec={"The Alluvium Journey"}
           />
         </div>

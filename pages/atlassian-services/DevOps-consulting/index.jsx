@@ -6,6 +6,7 @@ import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents
 import { devOpServices, devOpsOptions } from "constants/devOps";
 import DevOpsSolution from "components/Alluvium-Redesign-2025/devOps/DevOpsSolution";
 import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesCard";
+import Head from "next/head";
 
 const description = [
   {
@@ -26,6 +27,18 @@ const description3 = [
 const DevOps = () => {
   return (
     <Layout>
+      <Head>
+        <title>DevOps Consulting | Alluvium | alluvium.net</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Automate, Deploy, and Scale with Alluvium. Alluvium helps organizations speed up software delivery using DevOps practices powered by Atlassian tools like Jira, Bitbucket, and Bamboo."
+        />
+        <meta
+          name="keywords"
+          content="DevOps consulting, CI/CD, Atlassian DevOps, Jira automation, deployment pipeline."
+        />
+      </Head>
       <HeroSection />
       <SecondSection />
       <div className={styles.sectionContainer}>
@@ -80,7 +93,11 @@ const DevOps = () => {
         </div>
       </div>
 
-      <ServicesCardReuse data={devOpServices} useText={false} imageAvailable={false} />
+      <ServicesCardReuse
+        data={devOpServices}
+        useText={false}
+        imageAvailable={false}
+      />
     </Layout>
   );
 };

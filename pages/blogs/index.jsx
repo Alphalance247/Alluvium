@@ -71,15 +71,15 @@ const Blogs = () => {
   return (
     <Layout>
       <Head>
-        <title>Blogs | Alluvium</title>
+        <title>Alluvium Insights | alluvium.net</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="Atlassian Best Practices, ITSM & Cloud Migration Tips. Explore the Alluvium Blog for expert insights on Atlassian solutions, ITSM, DevOps, and Agile management. Learn how to optimize Jira, Confluence, and Bitbucket for better performance."
         />
         <meta
           name="keywords"
-          content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+          content="Alluvium blog, Atlassian blog, ITSM best practices, Jira tips, DevOps automation, Agile project management, cloud migration guides"
         />
       </Head>
       {loading && (
@@ -115,8 +115,8 @@ const Blogs = () => {
                 <HeroHeading
                   variant="primary"
                   withLink={true}
-                  heading="Smart Atlassian Solutions for Seamless Cloud Migrations."
-                  subhead="Stay ahead with expert insights, best practices, and the latest trends in Atlassian migration, cloud solutions, and data management. Empower your team with seamless collaboration and smarter workflows."
+                  heading="Atlassian Best Practices, ITSM & Cloud Migration Tips."
+                  subhead="Explore the Alluvium Blog for expert insights on Atlassian solutions, ITSM, DevOps, and Agile management. Learn how to optimize Jira, Confluence, and Bitbucket for better performance."
                   subsec={"BLOG"}
                 />
               </div>
