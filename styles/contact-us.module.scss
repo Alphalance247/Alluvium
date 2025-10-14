@@ -64,7 +64,7 @@
     border-right: 1px solid #f0f0f0;
     padding: 6rem 2.5rem 6rem 2.5rem;
     display: grid;
-    grid-template-columns: 30% auto;
+    grid-template-columns: 40% auto;
     align-items: flex-start;
     grid-gap: 3rem;
 
@@ -78,7 +78,7 @@
       grid-template-columns: 1fr;
     }
 
-    h2 {
+    h1 {
       font-size: 2rem;
       line-height: 2.5rem;
       letter-spacing: -2%;

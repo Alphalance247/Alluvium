@@ -102,22 +102,22 @@ const Training = () => {
   return (
     <Layout>
       <Head>
-        <title>Atlassian-Training | Alluvium</title>
+        <title>Atlassian Training | Alluvium | allivium.net</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="Learn Jira, Confluence & ITSM from Certified Experts. Alluvium offers Atlassian-certified training for teams to master Jira, Confluence, and ITSM through practical, hands-on sessions."
         />
         <meta
           name="keywords"
-          content="Atlassian training, jira atlassian training, confluence atlassian training, bamboo atlassian training, atlassian training certification, atlassian training partner, atlassian admin training, atlassian access training, jira training and certification, atlassian jira align training, atlassian jira administrator training, atlassian jira and confluence training, atlassian bitbucket training, atlassian bamboo training, jira training basics"
+          content="Atlassian training, Jira training, Confluence training, ITSM courses, Atlassian certification."
         />
       </Head>
 
       <AtlassianServicesHero
-        heading={"Atlassian Training"}
+        heading={"Learn Jira, Confluence & ITSM from Certified Experts."}
         subhead={
-          "Upgrade your Atlassian tool skills and master the best practices for your daily work by getting trained by our certified Atlassian trainers."
+          "Alluvium offers Atlassian-certified training for teams to master Jira, Confluence, and ITSM through practical, hands-on sessions."
         }
         buttonText={"Schedule a Call"}
         url={"/contact-us"}

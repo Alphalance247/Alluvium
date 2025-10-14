@@ -13,8 +13,8 @@ const HeroSection = () => {
             <HeroHeading
               variant="primary"
               withLink={true}
-              heading="Accelerate Innovation with Seamless DevOps Solutions"
-              subhead="DevOps has reformed the way software is developed, delivered, and maintained. It fosters collaboration, efficiency, and continuous improvement by bridging the gap between development and operations teams"
+              heading="Automate, Deploy, and Scale with Alluvium."
+              subhead="Alluvium helps organizations speed up software delivery using DevOps practices powered by Atlassian tools like Jira, Bitbucket, and Bamboo."
               subsec={"DEVOPS SOLUTION"}
             />
             <Link className={styles.heroButton} href="/contact-us">

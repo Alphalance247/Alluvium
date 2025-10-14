@@ -6,10 +6,26 @@ import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { SoftwareDeveloplemtCard } from "data";
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../styles/atlassian-services-style/generalstyle.module.scss";
+import Head from "next/head";
 
 const SoftwareDevelopment = () => {
   return (
     <Layout>
+      {/*  */}
+      <Head>
+        <title>
+          Custom Software Design & Development | Alluvium | alluvium.net
+        </title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Alluvium Engineering Solutions. Alluvium delivers software development services integrated with Atlassian tools for agile and efficient project execution."
+        />
+        <meta
+          name="keywords"
+          content="software development, agile software, Atlassian integration, app development, Alluvium engineering."
+        />
+      </Head>
       <ServicesHero
         contentsheading1="Innovative Software Development & Design Services"
         contentsheading2="Our team of experts go beyond traditional software development to provide comprehensive solutions that drive efficiency, enhance customer experiences, and propel your business forward."
