@@ -6,7 +6,7 @@ import { useState } from "react";
 import { postRequest } from "pages/api/helpers/postRequest";
 import { useToasts } from "react-toast-notifications";
 import { environment } from "env/env.local";
-
+import Head from "next/head";
 const HelpCenter = () => {
   const [form, setForm] = useState({ email: "", description: "" });
   const { addToast } = useToasts();
