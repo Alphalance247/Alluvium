@@ -1,25 +1,14 @@
 import Layout from "components/layout";
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
-import Link from "next/link";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { SoftwareDeveloplemtCard } from "data";
-import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../styles/atlassian-services-style/generalstyle.module.scss";
+import SoftwareDevelopmentHero from "./SoftwareDevelopmentHero";
 
 const SoftwareDevelopment = () => {
   return (
     <Layout>
-      <ServicesHero
-        contentsheading1="Innovative Software Development & Design Services"
-        contentsheading2="Our team of experts go beyond traditional software development to provide comprehensive solutions that drive efficiency, enhance customer experiences, and propel your business forward."
-        button1={
-          <Link href="/contact-us" passHref>
-            <Button size="large">Schedule a Call</Button>
-          </Link>
-        }
-      />
-
+      <SoftwareDevelopmentHero />
       <ServerToCloud
         image2={true}
         heading="Software That Evolves with Your Business Growth"

@@ -1,0 +1,33 @@
+.atlassian_software_development_hero {
+  background: #fcfcfc;
+
+  .header {
+    max-width: 1272px;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    margin: auto;
+    border-top: 1px solid #e0e0e0;
+
+    .header_section {
+      border: 1px solid #f0f0f0;
+      margin: 0px 105px;
+      display: grid;
+      text-align: center;
+
+      @media screen and (max-width: 1200px) {
+        width: auto;
+      }
+
+      @media screen and (max-width: 992px) {
+        width: auto;
+        padding-top: 4rem;
+        margin: 0 24px;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: auto;
+        margin: 0 12px;
+      }
+    }
+  }
+}
