@@ -12,15 +12,15 @@ export default function AboutUs() {
     <Layout>
       <div className={styles.aboutUsPage}>
         <Head>
-          <title>About Us | Alluvium</title>
+          <title>About Us | Alluvium | alluvium.net</title>
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+            content="Your Trusted Atlassian Solution Partner. Learn about Alluvium an Atlassian Gold Partner delivering ITSM, DevOps, Agile, and cloud migration solutions across the US, UK, and Nigeria. We help teams work smarter and faster with modern tools."
           />
           <meta
             name="keywords"
-            content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+            content="About Alluvium, Atlassian Gold Partner, Alluvium Nigeria, Alluvium UK, Alluvium USA, ITSM experts, cloud migration company, DevOps consulting."
           />
         </Head>
         <main>

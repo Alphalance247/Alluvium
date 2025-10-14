@@ -27,15 +27,15 @@ const ItsmServices = () => {
   return (
     <Layout>
       <Head>
-        <title>ITSM Services | Alluvium</title>
+        <title>ITSM Implementation | Alluvium | alluvium.net</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="Build Smart Service Desks with Alluvium. Alluvium implements ITSM solutions using Jira Service Management to help teams manage incidents, requests, and assets efficiently."
         />
         <meta
           name="keywords"
-          content="jsm schedule, stages of implementation, implementation model example, jsm incident management, jsm insight, jsm itsm, jsm integration, jsm benefits, jsm best practices, jsm tutorial, jsm demo, jsm documentation, jsm jira, jsm kanban board, jsm knowledge base, jsm opsgenie, jsm project management, jsm problem management, what is jsm, jsm workflow"
+          content="ITSM implementation, Jira Service Management, IT support automation, Atlassian ITSM, service desk setup."
         />
       </Head>
       <div
@@ -43,91 +43,6 @@ const ItsmServices = () => {
         data-url="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983a0941717d501942bae0d304e03"
         style={{ minWidth: "100%", height: "800px", borderRadius: "25px" }}
       ></div>
-      {/* <ServicesHero
-        contentsheading1="IT SERVICE MANAGEMENT"
-        contentsheading2="Empower your service teams with industry-leading IT Service Management tool Jira Service Management to deliver exceptional service"
-        button1={
-          <Link href="/support/contact#schedule-a-call" passHref>
-            <Button size="large">Schedule a Call</Button>
-          </Link>
-        }
-      />
-
-      <ServerToCloud
-        image2={true}
-        paragraph="Over 45,000 companies use Jira Service Management. JSM unifies all service teams on a single platform, streamlining the workflow between Development and IT Operations. It empowers teams to embrace a service-oriented approach, enabling them to deliver outstanding experiences for both employees and customers."
-        heading="Deliver exceptional support with Jira Service Management"
-        text="With our Atlassian-certified consultants and ITSM expertise, we tailor Jira Service Management to meet your organization’s specific needs, ensuring the tool optimizes your processes for maximum efficiency"
-        image2Url="/assets/licence-image/itsmcampaign.svg"
-        alt2="cloudpic"
-        showWithImage={true}
-      />
-
-      <JiraService />
-
-      <div className={`container-fluid ${styles.seamlessMigration}`}>
-        <GetStarted
-          heading="Ready to Implement ITSM Into Your Organization?"
-          text={false}
-          variant="primary"
-          button1={
-            <Link href="/support/contact#schedule-a-call" passHref>
-              <Button size="large">Book a Free Demo With Us</Button>
-            </Link>
-          }
-        />
-      </div>
-
-      <JiraTools />
-
-      <ServerToCloud
-        image1={true}
-        paragraph="From initial setup and configuration to custom automations and workflow optimization, we tailor the implementation process to meet your unique needs."
-        heading="Jira Service Management, Completely Tailored to Your Needs."
-        text="By leveraging JSM’s powerful features, such as automation rules, incident management, and self-service portals, we help you enhance your service delivery, reduce response times, and improve overall customer satisfaction."
-        image1Url="/assets/licence-image/itsmtools.svg"
-        alt2="cloudpic"
-      />
-
-      <ServerToCloud
-        paragraph="We understand that each organization has distinct requirements and challenges. That's why our approach to JSM implementation is both flexible and comprehensive. We begin with a detailed analysis of your current processes and goals, crafting a customized plan that aligns with your strategic objectives. This plan will include all expected steps, timelines and costs (also including license costs)"
-        heading="Our Approach to ITSM implementation"
-        display="primary"
-        variant="primary"
-        callToAction={
-          <Link href="/atlassian-services/atlassian-licence">
-            <Button size="large">Learn More About License Management</Button>
-          </Link>
-        }
-      />
-
-      <ServerToCloud
-        image2={true}
-        paragraph="We understand that each organization has distinct requirements and challenges. That's why our approach to JSM implementation is both flexible and comprehensive. We begin with a detailed analysis of your current processes and goals, crafting a customized plan that aligns with your strategic objectives. This plan will include all expected steps, timelines and costs (also including license costs)."
-        heading="Implementation"
-        image2Url="/assets/licence-image/agileguru.svg"
-        alt2="cloudpic"
-        display="primary"
-        variant="secondary"
-      />
-      <ServerToCloud
-        image1={true}
-        paragraph="Ensuring your teams are comfortable and proficient in Jira Service Management is a cornerstone of our implementation projects. Our comprehensive tool training is designed to empower your team, equipping them with the knowledge and skills needed for seamless daily operations."
-        heading="Training"
-        image1Url="/assets/licence-image/develop.svg"
-        alt2="cloudpic"
-        variant="secondary"
-      />
-
-      <ServerToCloud
-        image2={true}
-        paragraph="At Alluvium, our commitment to your success extends beyond implementation. We offer dedicated support packages and subscriptions to provide continuous assistance and expertise, ensuring your systems run smoothly and your team remains confident long after the initial rollout."
-        heading="Post-Implementation Support"
-        image2Url="/assets/licence-image/spinneratlassian.svg"
-        alt2="cloudpic"
-        display="primary"
-        variant="secondary"
-      /> */}
     </Layout>
   );
 };

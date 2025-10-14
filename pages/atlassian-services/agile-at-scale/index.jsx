@@ -8,6 +8,7 @@ import ServicesCardReuse from "components/Alluvium-Redesign-2025/ReuseComponents
 import { agileOptions } from "constants/agile-at-scale";
 import JiraAlign from "components/Alluvium-Redesign-2025/agile-at-scale/JiraAlign";
 import ScaleServices from "components/Alluvium-Redesign-2025/agile-at-scale/ScaleServices";
+import Head from "next/head";
 
 const description = [
   {
@@ -18,6 +19,18 @@ const description = [
 const AgileAtScale = () => {
   return (
     <Layout>
+      <Head>
+        <title>Agile at Scale | Alluvium | alluvium.net</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Enterprise Agile Frameworks with Atlassian Solutions. Alluvium enables enterprise teams to scale agile practices using Jira Align, Jira Software, and Confluence for better delivery and visibility."
+        />
+        <meta
+          name="keywords"
+          content="agile at scale, Jira Align, enterprise agile, SAFe framework, agile transformation."
+        />
+      </Head>
       <HeroSection />
       <SecondSection />
       <div className={styles.sectionContainer}>
