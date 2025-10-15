@@ -8,6 +8,7 @@ import { Lines } from "./ReuseComponents/Lines";
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
 import { environment } from "env/env.local";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const contactArr = [
   {
@@ -59,6 +60,7 @@ const ContactSection = ({ withLines = true }) => {
     email: "",
     message: "",
   });
+  const [captchaValue, setCaptchaValue] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -87,6 +89,11 @@ const ContactSection = ({ withLines = true }) => {
       return;
     }
 
+    if (!captchaValue) {
+      addToast("Please verify you're not a robot.");
+      return;
+    }
+
     const newFormData = {
       fullname: `${firstName} ${lastName}`,
       email: email,
@@ -99,7 +106,7 @@ const ContactSection = ({ withLines = true }) => {
     try {
       const response = await axios.post(
         `${environment?.baseUrl}utilities/support/inquiry/`,
-        newFormData,
+        { ...newFormData, recaptcha_token: captchaValue },
         {
           headers: {
             "Content-Type": "application/json",
@@ -119,15 +126,7 @@ const ContactSection = ({ withLines = true }) => {
         addToast("Your inquiry has been submitted successfully.", {
           appearance: "success",
         });
-        // if (typeof window !== "undefined" && window.gtag) {
-        //   window.gtag({
-        //     on: "visible",
-        //     vars: {
-        //       event_name: "conversion",
-        //       send_to: ["AW-16717401169/JfbzCLmEovYZENGYvaM-"],
-        //     },
-        //   });
-        // }
+
         dataLayer.push({
           event: "ajaxFormSubmission",
         });
@@ -137,10 +136,14 @@ const ContactSection = ({ withLines = true }) => {
         });
       }
     } catch (error) {
-      console.error(error);
-      addToast("Oops something went wrong. Please try again.", {
-        appearance: "error",
-      });
+      addToast(
+        error.response?.data?.error ||
+          "Oops something went wrong. Please try again.",
+        {
+          appearance: "error",
+        }
+      );
+      console.log(error.response?.data?.error);
     } finally {
       setIsSubmitting(false);
     }
@@ -238,23 +241,6 @@ const ContactSection = ({ withLines = true }) => {
               </div>
             </div>
 
-            {/* <div className={styles.core}>
-              <p style={{ fontStyle: "italic" }}>
-                <span>
-                  "At Alluvium, we’re all about making technology work for
-                  people.{" "}
-                </span>
-                We focus on building smart solutions that make life easier, more
-                connected, and efficient."
-              </p>
-
-              <div className={styles.ceo}>
-                <p>TAIWO OJO</p>
-                <p className={styles.title}>
-                  Chief Executive Officer, Alluvium
-                </p>
-              </div>
-            </div> */}
             <div className={styles.quick__call}>
               <Image
                 src="/assets/redesign-2025/contact-us/call.svg"
@@ -361,17 +347,38 @@ const ContactSection = ({ withLines = true }) => {
                 ></textarea>
               </div>
 
+              <div className="" style={{ marginTop: "1rem" }}>
+                <ReCAPTCHA
+                  sitekey={"6LcJU-srAAAAALRX1h9OCch3tCogKyYMbyyXgtFD"}
+                  onChange={(value) => setCaptchaValue(value)}
+                />
+              </div>
+
               <p>
                 By submitting this form, you are agreeing to receive additional
-                communications from Alluvium. Please review our{" "}
+                communications from Alluvium. Please review our privacy-policy{" "}
                 <span style={{ color: "#E37915", textDecoration: "underline" }}>
-                  Privacy Policy
+                  <a
+                    href="http://alluvium.net/privacy-policy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Privacy Policy
+                  </a>
                 </span>{" "}
                 for additional information about how Alluvium protects your
                 privacy.
               </p>
 
-              <button type="submit" aria-label="submit">
+              <button
+                type="submit"
+                aria-label="submit"
+                disabled={!captchaValue}
+                style={{
+                  cursor: !captchaValue && "not-allowed",
+                  opacity: !captchaValue && "0.5",
+                }}
+              >
                 {isSubmitting ? "Submitting..." : "Contact Sales"}
               </button>
             </form>
