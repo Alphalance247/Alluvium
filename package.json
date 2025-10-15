@@ -37,6 +37,7 @@
     "react-phone-number-input": "^3.3.9",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.29.0",
+    "react-switch": "^7.1.0",
     "react-toast-notifications": "^2.5.1",
     "sass": "^1.42.1",
     "slick-carousel": "^1.8.1",
