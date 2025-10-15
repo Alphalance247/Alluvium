@@ -8,11 +8,13 @@
     border-right: 1px solid #e0e0e0;
     margin: auto;
     border-top: 1px solid #e0e0e0;
+    height: 444px;
 
     .header_section {
       margin: 0px 105px;
       display: grid;
       text-align: center;
+      height: 100%;
 
       @media screen and (max-width: 1200px) {
         width: auto;
