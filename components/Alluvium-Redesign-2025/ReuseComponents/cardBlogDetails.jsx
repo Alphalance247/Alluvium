@@ -5,7 +5,7 @@ import styles from "../../../styles/Blogs/blogs.module.scss";
 const CardBlogDetails = ({ variant = "primary", name, blogDate, minRead }) => {
   return (
     <div className={`${styles.blog__details} `}>
-      <p className={styles.author}>{name || "James Akinlabi"}</p>
+      <p className={styles.author}>{name || "Taiwo Ojo"}</p>
       <p
         className={`${styles.blog__date__time} ${
           styles[`blog__date__time--${variant}`]
