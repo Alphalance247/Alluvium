@@ -12,7 +12,7 @@ const softwarDevelopmentCard = (
     }
 ) => {
     return (
-        <div className={styles.hero_heading}>
+        <div className={styles.card_heading}>
             <p className={styles.subHead}>
                 {subhead}
             </p>
