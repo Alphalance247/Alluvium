@@ -91,11 +91,11 @@ const AtlassianService = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="Alluvium provides expert Atlassian services including cloud migration, training, support, license management, ITSM implementation, and consulting. Our certified team helps organizations optimize and scale their Atlassian tools for business success."
         />
         <meta
           name="keywords"
-          content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
+          content="Atlassian services, cloud migration, Jira, Confluence, ITSM, Atlassian consulting, license management, Atlassian support, enterprise software, business transformation"
         />
       </Head>
       <HeroSection />
