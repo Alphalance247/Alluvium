@@ -348,10 +348,10 @@ const ContactSection = ({ withLines = true }) => {
               </div>
 
               <div className="" style={{ marginTop: "1rem" }}>
-                <ReCAPTCHA
+                {/* <ReCAPTCHA
                   sitekey={"6LcJU-srAAAAALRX1h9OCch3tCogKyYMbyyXgtFD"}
                   onChange={(value) => setCaptchaValue(value)}
-                />
+                /> */}
               </div>
 
               <p>
@@ -373,11 +373,11 @@ const ContactSection = ({ withLines = true }) => {
               <button
                 type="submit"
                 aria-label="submit"
-                disabled={!captchaValue}
-                style={{
-                  cursor: !captchaValue && "not-allowed",
-                  opacity: !captchaValue && "0.5",
-                }}
+                // disabled={!captchaValue}
+                // style={{
+                //   cursor: !captchaValue && "not-allowed",
+                //   opacity: !captchaValue && "0.5",
+                // }}
               >
                 {isSubmitting ? "Submitting..." : "Contact Sales"}
               </button>
