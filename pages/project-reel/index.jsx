@@ -10,6 +10,7 @@ import Settings from "components/Alluvium-Redesign-2025/icons/Settings";
 import IntegrationIcon from "components/Alluvium-Redesign-2025/icons/IntegrationIcon";
 import MarkIcon from "components/Alluvium-Redesign-2025/icons/MarkIcon";
 import LegacyIcon from "components/Alluvium-Redesign-2025/icons/LegacyIcon";
+import Head from "next/head";
 
 const gridArray = [
   {
@@ -102,6 +103,18 @@ const accomplishments2 = [
 const ProjectReel = () => {
   return (
     <Layout>
+      <Head>
+        <title>Project Reel | Alluvium – Atlassian Case Studies</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Explore Alluvium's Project Reel showcasing successful Atlassian implementations. Discover how we helped clients achieve Agile transformation, streamline workflows, and migrate to Atlassian Cloud with real-world case studies."
+        />
+        <meta
+          name="keywords"
+          content="Alluvium, Atlassian case studies, project reel, Agile implementation, Jira migration, Confluence integration, Atlassian Cloud migration, workflow optimization, ITSM solutions, DevOps tools, enterprise collaboration."
+        />
+      </Head>
       <HeroSection />
 
       <ReelSection
