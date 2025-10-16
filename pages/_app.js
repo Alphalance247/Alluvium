@@ -33,15 +33,15 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [ticketNumbers, setTicketNumbers] = useState(eventTicket.map(() => 0));
 
-  // useEffect(() => {
-  //   const handleRouteChange = (url) => {
-  //     ga.pageview(url);
-  //   };
-  //   router.events.on("routeChangeComplete", handleRouteChange);
-  //   return () => {
-  //     router.events.off("routeChangeComplete", handleRouteChange);
-  //   };
-  // }, [router.events]);
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <ToastProvider placement="top-center">
