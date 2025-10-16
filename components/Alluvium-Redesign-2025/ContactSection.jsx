@@ -8,7 +8,7 @@ import { Lines } from "./ReuseComponents/Lines";
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
 import { environment } from "env/env.local";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const contactArr = [
   {
