@@ -13,7 +13,7 @@ const HeroSection = () => {
             <HeroHeading
               variant="primary"
               withLink={true}
-              heading="EMove Jira & Confluence with Alluvium."
+              heading="Move Jira & Confluence with Alluvium."
               subhead="Migrate your Atlassian tools to the cloud with zero downtime. Alluvium helps teams securely move Jira, Confluence, and Bitbucket from server to Atlassian Cloud."
               subsec={"ATLASSIAN MIGRATION AND CONSOLIDATION"}
             />
