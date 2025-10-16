@@ -15,13 +15,46 @@ function generateSiteMap(posts) {
        <loc>${EXTERNAL_DATA_URL}/case-studies</loc>
      </url>
      <url>
-       <loc>${EXTERNAL_DATA_URL}/#serivces</loc>
+       <loc>${EXTERNAL_DATA_URL}/contact-us</loc>
      </url>
      <url>
        <loc>${EXTERNAL_DATA_URL}/aws-services</loc>
      </url>
      <url>
+       <loc>${EXTERNAL_DATA_URL}/atlassian-services/support</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/software-development</loc>
+     </url>
+     <url>
        <loc>${EXTERNAL_DATA_URL}/atlassian-services</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/atlassian-services/DevOps-consulting</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/atlassian-services/agile-at-scale</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/atlassian-services/cloud-migration</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/atlassian-services/training</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/atlassian-services/itsm-services</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/atlassian-services/consulting</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/event/event-blog</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/case-studies</loc>
+     </url>
+     <url>
+       <loc>${EXTERNAL_DATA_URL}/project-reel</loc>
      </url>
      <url>
        <loc>${EXTERNAL_DATA_URL}/cloud-connect</loc>
