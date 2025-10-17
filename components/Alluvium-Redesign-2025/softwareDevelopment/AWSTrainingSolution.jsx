@@ -35,14 +35,13 @@ const AWSTrainingSolution = ({ title, description }) => {
                             </div>
                         </div>
                     </div>
-                    {/* <div className={styles.divider} ></div> */}
                     <div className={styles.box}>
                         {data.map((item, index) => {
                             return (
                                 <div className={`${index === 4 ? `${styles.customBorder}` : `${styles.secondColumnItems}`}`} key={index}>
                                     <div className={styles.contentItems}>
                                         <div className={styles.headTitleContainer}><h4 className={styles.headTitle}>{item.title}</h4></div>
-                                        <p>{item.description}</p>
+                                        <p className={styles.headDescription}>{item.description}</p>
                                     </div>
                                 </div>
                             )

@@ -36,21 +36,20 @@ const Services = ({ url, buttonText }) => {
         }
     ]
     return (
-        // <div className={styles.tablet}>
         <div className={styles.services}>
             <div className={styles.gridContainer}>
                 {services.map((item, index) => {
                     return (
                         <div key={index} className={`${styles.gridItem} ${index === 3 ? `${styles.highlightedDescp}` : ""}`}>
                             <div style={{ height: "76px" }}><h3 className={styles.ServiceTitle}>{item.title}</h3></div>
-                            <div className={`${index === 3 ? `${styles.specialColumn}` : `${styles.normalColumn}`}`} style={{ paddingTop: "52px" }}>
+                            <div className={`${index === 3 ? `${styles.specialColumn}` : `${styles.normalColumn}`}`} >
 
                                 <div className={styles.contentCard}>
                                     {item.rightColumn ?
-                                        <h4 className={styles.partner} style={{ height: "53px" }}>
+                                        <h4 className={styles.partner} >
                                             {item.subTitle}
                                         </h4>
-                                        : <img src={item.image} alt={item.title} style={{ height: "53px" }} />}
+                                        : <img src={item.image} alt={item.title} />}
                                     <p>{item.description}</p>
                                     <div className={styles.button}>
                                         {item.rightColumn ? <Link href={url}>
@@ -64,7 +63,6 @@ const Services = ({ url, buttonText }) => {
                     )
                 })}
             </div>
-            {/* </div> */}
         </div>
     )
 }

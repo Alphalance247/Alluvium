@@ -27,24 +27,27 @@
 
     @media (max-width: 922px) {
       display: flex;
-      padding: 20px 0;
+      padding: 0px 0;
+      gap: 50px;
     }
 
     @media (max-width: 640px) {
       display: grid;
-      padding: 20px 0;
+      padding: 0;
+      gap: 40px;
     }
 
     .firstColumn {
       display: flex;
       align-items: center;
       width: 50%;
-      height: 506px;
       @media (max-width: 922px) {
-        width: 50%;
+        width: 100%;
+        margin: 20px 0;
       }
 
       @media (max-width: 640px) {
+        padding: 50px 0;
         width: 100%;
       }
     }
@@ -55,10 +58,13 @@
       height: 506px;
       border-radius: 16px;
       @media (max-width: 922px) {
-        width: 50%;
+        width: 100%;
+        height: 506px;
       }
       @media (max-width: 640px) {
         width: 100%;
+        // height: 400px;
+        // height: 506px;
       }
     }
     .description {
