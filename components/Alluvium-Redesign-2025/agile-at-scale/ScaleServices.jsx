@@ -37,7 +37,7 @@ const ScaleServices = () => {
         <ServicesCardReuse
           data={scaleOptions}
           imageAvailable={true}
-          // containerStyle={styles.}
+        // containerStyle={styles.}
         />
       </div>
     </>

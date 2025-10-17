@@ -1,35 +1,9 @@
-.card_heading {
-  padding: 40px 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .subHead {
-    color: #595959;
-    font-size: 13px;
-    font-weight: 500;
-    background-color: #fcf2e8;
-    border: 1px solid #e37915;
-    width: 250px;
-    height: 28px;
-    padding: 4px 0;
-    border-radius: 4px;
-    text-transform: uppercase;
-  }
-  .heading {
-    font-size: 40px;
-    padding-bottom: 16px;
-    color: #141414;
-    font-weight: 700px;
-  }
-  .heading_text {
-    color: #595959;
-    font-size: 18px;
-    font-weight: 400;
-    padding-bottom: 16px;
-  }
-  @media screen and (max-width: 1200px) {
-    padding: 40px 18px;
+.container {
+  max-width: 1272px;
+  margin: 0 auto;
+  .container_growth {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
   }
 }
