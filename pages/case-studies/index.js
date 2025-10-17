@@ -9,7 +9,7 @@ export default function Support() {
   return (
     <Layout>
       <Head>
-        <title>Case Studies | Alluvium</title>
+        <title>Alluvium Success Stories | alluvium.net</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
@@ -24,9 +24,9 @@ export default function Support() {
       <div className={styles.caseStudiesSection}>
         <main>
           <CaseStudiesCard
-            agileTitle="Streamlining Server to Atlassian Cloud Migration for an Insurance Company"
-            description1="An insurance and asset management company sought to enhance Atlassian product user experiences and optimize performance across its entire organization. They turned to our team of certified experts with a profound knowledge base in Jira and Confluence to find a solution."
-            imageAlt={"Our case studies"}
+            agileTitle="Atlassian Implementation & Cloud Migration Results."
+            description1="Discover how Alluvium helps global teams implement Jira, Confluence, and ITSM solutions that improve collaboration, automation, and delivery"
+            imageAlt={"OUR SUCCESS STORIES"}
             width={635}
             height={523}
             imageSrc="/assets/redesign-2025/OurMissionCaseStudies.webp"

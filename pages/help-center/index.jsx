@@ -6,7 +6,7 @@ import { useState } from "react";
 import { postRequest } from "pages/api/helpers/postRequest";
 import { useToasts } from "react-toast-notifications";
 import { environment } from "env/env.local";
-
+import Head from "next/head";
 const HelpCenter = () => {
   const [form, setForm] = useState({ email: "", description: "" });
   const { addToast } = useToasts();
@@ -72,9 +72,20 @@ const HelpCenter = () => {
     }
   };
 
-  console.log(form);
   return (
     <Layout>
+      <Head>
+        <title>Alluvium Help Center | Alluvium | alluvium.net</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Get Support for Atlassian Tools. Visit the Alluvium Help Center for guides, FAQs, and resources on Atlassian tools like Jira, Confluence, and ITSM."
+        />
+        <meta
+          name="keywords"
+          content="Atlassian help center, Jira guides, Confluence help, ITSM support, Alluvium help"
+        />
+      </Head>
       <section className={styles.hero}>
         <div className={styles.overlay}></div>
         <h1>Got a challenge? Let’s help solve it!</h1>

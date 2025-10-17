@@ -9,6 +9,7 @@ import ContactSection from "components/Alluvium-Redesign-2025/ContactSection";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import CalendlyWidget from "components/calendlyWidget";
 import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import Head from "next/head";
 
 const ContactUs = () => {
   const data = [
@@ -78,38 +79,28 @@ const ContactUs = () => {
 
   return (
     <Layout withoutForm={true}>
-      {/* <ServicesHero
-        contentsheading1="How Can We Help You?"
-        variant="secondary"
-      /> */}
-
-      {/* <section className={`container ${styles.contact__us__card}`}>
-        <div className={`${styles.contact__us}`}>
-          {data.map((el, i) => {
-            return (
-              <div className={styles.card} id={i}>
-                <Image src={el?.icon} alt="contact" width={40} height={40} />
-                <p className={styles.contact__sales}>{el?.contact}</p>
-                <p className={styles.contact__sales_p}>{el?.subcontent}</p>
-                <Link href={el?.url}>
-                  <Button variant="outline">{el?.btn}</Button>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
-      </section> */}
+      <Head>
+        <title>Contact Alluvium | alluvium.net</title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="Speak to an Atlassian Solution Partner. Contact Alluvium in the US, UK, or Nigeria for Atlassian consulting, licensing, or cloud migration support."
+        />
+        <meta
+          name="keywords"
+          content="Contact Alluvium, Atlassian partner contact, Jira migration help, ITSM consulting, Atlassian Nigeria."
+        />
+      </Head>
       <div style={{ maxWidth: "1272px", margin: "auto" }}>
         <Lines variant={"primary"} />
       </div>
       <div className={styles.booking}>
         <div className={styles.book_a_call}>
           <div>
-            <h2>Book a Meeting</h2>
+            <h1>Speak to an Atlassian Solution Partner.</h1>
             <p>
-              Have questions or need assistance? We're here to help. Reach out
-              to us for support, inquiries, or feedback, and our team will get
-              back to you promptly.
+              Contact Alluvium in the US, UK, or Nigeria for Atlassian
+              consulting, licensing, or cloud migration support.
             </p>
           </div>
           {/* className="container-fluid my-5" */}

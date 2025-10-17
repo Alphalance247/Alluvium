@@ -25,15 +25,15 @@ const CloudMigration = () => {
   return (
     <Layout>
       <Head>
-        <title>Cloud Migration | Alluvium</title>
+        <title>Atlassian Cloud Migration Services | alluvium.net</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="Move Jira & Confluence with Alluvium. Migrate your Atlassian tools to the cloud with zero downtime. Alluvium helps teams securely move Jira, Confluence, and Bitbucket from server to Atlassian Cloud."
         />
         <meta
           name="keywords"
-          content="Why Cloud Migration, What does Cloud Migration mean?, How much does Cloud migration cost, Atlassian cloud migration, cloud migration approach, cloud migration benefits, cloud migration best practices, cloud migration case study, cloud migration companies, cloud migration checklist, cloud migration consultant, cloud migration vs data migration, cloud migration benefits and its challenges issues, cloud migration assessment, cloud migration assessment tools"
+          content="Atlassian cloud migration, Jira cloud, Confluence cloud, migrate Atlassian tools, cloud migration experts."
         />
       </Head>
       <HeroSection />

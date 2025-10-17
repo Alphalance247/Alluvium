@@ -97,15 +97,15 @@ const Support = () => {
   return (
     <Layout>
       <Head>
-        <title>Support | Alluvium</title>
+        <title>Atlassian Support Services | Alluvium | alluvium.net</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
+          content="24/7 Assistance from Alluvium Experts. Get ongoing Jira and Confluence support with Alluvium’s managed services. We help resolve issues, optimize workflows, and ensure smooth operations."
         />
         <meta
           name="keywords"
-          content="How to raise Atlassian support ticket, How to contact Atlassian support, atlassian support for jira server, atlassian support jira server, atlassian support request, Atlassian support tool, atlassian support portal, atlassian support services, atlassian support confluence, atlassian support community, atlassian support cloud, atlassian support billing, atlassian support data center, atlassian support documentations"
+          content="Atlassian support, Jira support, Confluence help, Atlassian managed services, technical support."
         />
       </Head>
       <div style={{ background: "#fcfcfc" }}>
@@ -116,9 +116,9 @@ const Support = () => {
       <AtlassianServicesHero
         withLink={true}
         subsec={"ATLASSIAN SUPPORT"}
-        heading={"Dedicated Atlassian Support"}
+        heading={"24/7 Assistance from Alluvium Experts."}
         subhead={
-          "Be assured of having technical and functional Atlassian expertise by your side with our Atlassian support packages."
+          "Get ongoing Jira and Confluence support with Alluvium’s managed services. We help resolve issues, optimize workflows, and ensure smooth operations."
         }
         buttonText={"Go to Support"}
         url={"https://support.portal.alluvium.net/servicedesk/customer/portals"}

@@ -15,7 +15,7 @@ const AtlassianConsultingHero = () => {
           <HeroHeading
             withLink={true}
             subsec={"ATLASSIAN CONSULTANCY & STRATEGY"}
-            heading={"Strategic Atlassian Consultancy for Optimal Results"}
+            heading={"Workflow Optimization by Alluvium."}
             withBtn={false}
             withLines={false}
             headSection=""
@@ -27,10 +27,7 @@ const AtlassianConsultingHero = () => {
             <HeroHeading
               withLink={false}
               withBtn={true}
-              subhead={`Are you seeking Atlassian expertise to implement ITSM, optimize
-              your current setup, migrate your data to Atlassian Cloud, or
-              enhance your existing Atlassian configuration? Let us help you
-              tackle your teams' challenges`}
+              subhead={`Alluvium provides expert Atlassian consulting to align tools like Jira, Confluence, and Bitbucket with strategic goals and operational excellence.`}
               headSection=""
               withParagragh={true}
             />
