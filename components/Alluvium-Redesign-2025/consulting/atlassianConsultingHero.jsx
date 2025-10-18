@@ -3,6 +3,7 @@ import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../../styles/AlluviumRedesign2025/consulting/consulting.module.scss";
 import HeroHeading from "../ReuseComponents/heroHeading";
+import Link from "next/link";
 
 const AtlassianConsultingHero = () => {
   return (
@@ -32,7 +33,9 @@ const AtlassianConsultingHero = () => {
               withParagragh={true}
             />
 
-            <Button size="mediumL">Schedule a Call</Button>
+            <Link href={"/contact-us"}>
+              <Button size="mediumL" >Schedule a Call</Button>
+            </Link>
           </div>
         </div>
         <Lines variant={"secondary"} />
