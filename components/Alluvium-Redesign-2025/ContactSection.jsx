@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/AlluviumRedesign2025/contactSection.module.scss";
 import Image from "next/image";
 import { useToasts } from "react-toast-notifications";
@@ -8,7 +8,6 @@ import { Lines } from "./ReuseComponents/Lines";
 import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
 import { environment } from "env/env.local";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const contactArr = [
   {
@@ -61,6 +60,20 @@ const ContactSection = ({ withLines = true }) => {
     message: "",
   });
   const [captchaValue, setCaptchaValue] = useState(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+    if (typeof window !== "undefined") {
+      window.handleCaptchaResponse = function (token) {
+        setCaptchaValue(token);
+      };
+    }
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -348,10 +361,17 @@ const ContactSection = ({ withLines = true }) => {
               </div>
 
               <div className="" style={{ marginTop: "1rem" }}>
-                <ReCAPTCHA
+                {/* <ReCAPTCHA
                   sitekey={"6LcJU-srAAAAALRX1h9OCch3tCogKyYMbyyXgtFD"}
                   onChange={(value) => setCaptchaValue(value)}
-                />
+                /> */}
+                {isClient && (
+                  <div
+                    className="g-recaptcha"
+                    data-sitekey="6LcJU-srAAAAALRX1h9OCch3tCogKyYMbyyXgtFD"
+                    data-callback="handleCaptchaResponse"
+                  ></div>
+                )}
               </div>
 
               <p>
