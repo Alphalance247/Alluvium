@@ -10,9 +10,11 @@ const MainWhitepaperHero = () => {
           <header className={styles.mainWhitepaperHeader}>
             <p className={styles.mainWhitepaperEyebrow}>White papers</p>
             <p className={styles.mainWhitepaperIntro}>
-              Lorem ipsum dolor sit amet consectetur. Felis magna ridiculus amet
-              vestibulum tristique id. Elementum senectus lorem gravida ultrices
-              eu. Metus semper in pharetra auctor nibh aliquet pulvinar id.
+              Explore our comprehensive research and insights on regulatory
+              compliance, service management, and digital transformation. Our
+              whitepapers provide strategic guidance for financial institutions
+              and enterprises navigating complex regulatory landscapes while
+              achieving operational excellence through Atlassian solutions.
             </p>
           </header>
         </div>

@@ -1,5 +1,6 @@
 import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import Image from "next/image";
+import { FaBookOpen } from "react-icons/fa";
 
 const WhitePaperHeroSection = () => {
   return (
@@ -12,7 +13,11 @@ const WhitePaperHeroSection = () => {
           <h1>Regulatory Supremacy and Competitive Edge</h1>
           <p className={styles.time}>
             {" "}
-            September 15th, 2024 | 5 mins read | Whitepaper
+            September 15th, 2024 |{" "}
+            <span>
+              <FaBookOpen color="white" fill="white" />
+            </span>{" "}
+            5 mins read | Whitepaper
           </p>
         </div>
 

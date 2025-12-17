@@ -12,21 +12,6 @@ const Publications = () => {
       handsImage: "/assets/redesign-2025/whitepaper/1a.png", // Robotic and human hands
       url: "/whitepaper/regulatory-supremacy-and-competitive-edge",
     },
-    {
-      id: 2,
-      title: "Regulatory Supremacy and Competitive Edge",
-      author: "TAIWO OJO",
-      date: "NOVEMBER 13, 2025",
-      handsImage: "/assets/redesign-2025/whitepaper/1b.png", // Video editing timeline
-      url: "",
-    },
-    {
-      id: 3,
-      title: "Building Responsible AI Systems for Real-World Impact",
-      author: "TAIWO OJO",
-      date: "NOVEMBER 13, 2025",
-      handsImage: "/assets/redesign-2025/whitepaper/1c.png", // Smart home devices
-    },
   ];
 
   return (
