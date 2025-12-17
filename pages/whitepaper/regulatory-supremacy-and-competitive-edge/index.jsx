@@ -1,12 +1,11 @@
 import CardSection from "components/Alluvium-Redesign-2025/whitepaper/cardSection";
 import ContentSection from "components/Alluvium-Redesign-2025/whitepaper/contentSetion";
-import MainWhitepaperHero from "components/Alluvium-Redesign-2025/whitepaper/mainWhitepaperHero";
+import WhitePaperHeroSection from "components/Alluvium-Redesign-2025/whitepaper/hero";
 import Layout from "components/layout";
 import styles from "styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import Head from "next/head";
-import Publications from "components/Alluvium-Redesign-2025/whitepaper/publications";
 
-const Whitepaper = () => {
+const RegulatorySupremacy = () => {
   return (
     <div>
       <Layout>
@@ -24,12 +23,13 @@ const Whitepaper = () => {
         </Head>
 
         <main className={styles?.main}>
-          <MainWhitepaperHero />
-          <Publications />
+          <WhitePaperHeroSection />
+          <ContentSection />
+          <CardSection />
         </main>
       </Layout>
     </div>
   );
 };
 
-export default Whitepaper;
+export default RegulatorySupremacy;
