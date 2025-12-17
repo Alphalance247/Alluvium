@@ -1,3 +1,4 @@
+import CardSection from "components/Alluvium-Redesign-2025/whitepaper/cardSection";
 import ContentSection from "components/Alluvium-Redesign-2025/whitepaper/contentSetion";
 import WhitePaperHeroSection from "components/Alluvium-Redesign-2025/whitepaper/hero";
 import Layout from "components/layout";
@@ -23,6 +24,7 @@ const Whitepaper = () => {
         <main>
           <WhitePaperHeroSection />
           <ContentSection />
+          <CardSection />
         </main>
       </Layout>
     </div>
