@@ -2,6 +2,7 @@ import CardSection from "components/Alluvium-Redesign-2025/whitepaper/cardSectio
 import ContentSection from "components/Alluvium-Redesign-2025/whitepaper/contentSetion";
 import WhitePaperHeroSection from "components/Alluvium-Redesign-2025/whitepaper/hero";
 import Layout from "components/layout";
+import styles from "styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import Head from "next/head";
 
 const Whitepaper = () => {
@@ -21,7 +22,7 @@ const Whitepaper = () => {
           />
         </Head>
 
-        <main>
+        <main className={styles?.main}>
           <WhitePaperHeroSection />
           <ContentSection />
           <CardSection />

@@ -14,7 +14,7 @@ const ContentSection = () => {
   const share = [
     {
       id: "",
-      content: "Share",
+      content: "Download",
       img: "/assets/redesign-2025/whitepaper/1.svg",
     },
     {
@@ -24,7 +24,7 @@ const ContentSection = () => {
     },
     {
       id: "",
-      content: "Download",
+      content: "Share",
       img: "/assets/redesign-2025/whitepaper/3.svg",
     },
   ];
@@ -77,13 +77,7 @@ const ContentSection = () => {
           <div className={styles?.content__encap}>
             <div>
               <p className={styles.summary}>Executive Summary:</p>
-              <div
-                style={{
-                  width: "80%",
-                  marginTop: "14px",
-                  marginBottom: "1.5rem",
-                }}
-              >
+              <div className={styles?.Atlassian_Alluvium}>
                 <HeadingText
                   text1={"I. The Atlassian-Alluvium Compliance Blueprint"}
                   heading={true}
@@ -369,8 +363,8 @@ const ContentSection = () => {
               subhead={true}
             />
 
-            <div className=" d-flex gap-8">
-              <div className=" " style={{ width: "60%" }}>
+            <div className="d-flex flex-column flex-lg-row">
+              <div className="" style={{ flex: "0 0 60%" }}>
                 <HeadingText
                   text3={`JSM is deployed by banks and financial institutions globally to ensure scalable governance and compliance. To meet the CBN's strict deadlines, Alluvium Solutions configures JSM's native SLA engine to the exact regulatory thresholds:`}
                   paragraph={true}
@@ -603,8 +597,8 @@ const ContentSection = () => {
                 subhead={true}
               />
 
-              <div className="d-flex gap-5 mt-4">
-                <div className=" " style={{ width: "60%" }}>
+              <div className="d-flex flex-column flex-lg-row mt-4">
+                <div className="" style={{ flex: "0 0 60%" }}>
                   <HeadingText
                     text3={`The quality of external customer service is a direct function of internal employee support. Alluvium leverages JSM’s ESM capabilities to address internal friction through HRSM:`}
                     paragraph={true}
@@ -826,8 +820,8 @@ const ContentSection = () => {
               />
             </div>
 
-            <div className=" d-flex gap-8">
-              <div className=" " style={{ width: "60%" }}>
+            <div className="d-flex flex-column flex-lg-row">
+              <div className="" style={{ flex: "0 0 60%" }}>
                 <HeadingText
                   text3={`The Atlassian Service Collection, anchored by CSM and its AI capabilities, fundamentally redefines service delivery for Nigerian financial institutions. It enables FIs to achieve the competitive advantage of high velocity while ensuring verifiable compliance with stringent mandates set by the CBN.`}
                   paragraph={true}
@@ -928,7 +922,9 @@ const ContentSection = () => {
                   >
                     <div className={styles.contact__link}>
                       <MdOutlineEmail className={styles.contact__icon} />
-                      <span>taiwo@alluvium.net</span>
+                      <u>
+                        <span>taiwo@alluvium.net</span>
+                      </u>
                     </div>
                   </Link>
                   <Link

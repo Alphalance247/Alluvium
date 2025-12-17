@@ -15,7 +15,7 @@ const WhitePaperCard = ({
             src={handsImage}
             alt="Robotic and human hands reaching towards each other"
             width={373}
-            height={480}
+            height={460}
             className={styles.handsImage}
           />
         </div>

@@ -1,4 +1,3 @@
-// import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import Image from "next/image";
 
@@ -23,6 +22,7 @@ const WhitePaperHeroSection = () => {
             alt="Whitepaper"
             width={616}
             height={617}
+            className={styles.flagImage}
           />
         </div>
       </div>

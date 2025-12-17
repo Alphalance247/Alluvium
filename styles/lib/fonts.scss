@@ -99,8 +99,24 @@
   font-family: "charlie";
   font-display: fallback;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   src: url("/assets/fonts/Charlie/charlie-display.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "charlie-text";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Charlie/charlie-display-light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "jet-brains";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/JetBrainsMono/jet-brains.ttf") format("truetype");
 }
 
 @font-face {
