@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { MdOutlineFileDownload, MdOutlineEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import Button from "components/atlassian-service-reuse/Button";
@@ -7,25 +8,80 @@ import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.m
 import HeadingText from "./heading";
 
 const ContentSection = () => {
+  const [copied, setCopied] = useState(false);
+
   const WHITEPAPER_BANNER_IMAGE =
     "/assets/redesign-2025/whitepaper/pdf-cover.png"; // TODO: swap with the provided banner asset
   const WHITEPAPER_DOWNLOAD_LINK = "/files/Alluvium brochure.pdf"; // TODO: replace with actual whitepaper link
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = WHITEPAPER_DOWNLOAD_LINK;
+    link.download = "Regulatory-Supremacy-and-Competitive-Edge.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const handlePrint = () => {
+    // Download the PDF for printing
+    const link = document.createElement("a");
+    link.href = WHITEPAPER_DOWNLOAD_LINK;
+    link.download = "Regulatory-Supremacy-and-Competitive-Edge.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Optionally open print dialog after a short delay
+    setTimeout(() => {
+      window.print();
+    }, 500);
+  };
+
+  const handleShare = async () => {
+    try {
+      const currentUrl = window.location.href;
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(currentUrl);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } else {
+        // Fallback for older browsers
+        const textArea = document.createElement("textarea");
+        textArea.value = currentUrl;
+        textArea.style.position = "fixed";
+        textArea.style.opacity = "0";
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      }
+    } catch (err) {
+      console.error("Failed to copy link:", err);
+    }
+  };
+
   const share = [
     {
-      id: "",
+      id: "download",
       content: "Download",
       img: "/assets/redesign-2025/whitepaper/1.svg",
+      action: handleDownload,
     },
     {
-      id: "",
+      id: "print",
       content: "Print",
       img: "/assets/redesign-2025/whitepaper/2.svg",
+      action: handlePrint,
     },
     {
-      id: "",
-      content: "Share",
+      id: "share",
+      content: copied ? "Copied!" : "Share",
       img: "/assets/redesign-2025/whitepaper/3.svg",
+      action: handleShare,
     },
   ];
   return (
@@ -50,6 +106,15 @@ const ContentSection = () => {
               key={i}
               className={`${styles?.icons} text-center `}
               style={{ cursor: "pointer" }}
+              onClick={el.action}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  el.action();
+                }
+              }}
             >
               <Image
                 src={el?.img || ""}
@@ -512,7 +577,7 @@ const ContentSection = () => {
                   regulatory environment for Financial Institutions (FIs)
                 </p>
                 <div className={styles.bannerCta}>
-                  <Link href={WHITEPAPER_DOWNLOAD_LINK}>
+                  <Link href={WHITEPAPER_DOWNLOAD_LINK} target="__blank">
                     <Button
                       size="mediumL"
                       withIcon={true}
@@ -988,13 +1053,18 @@ const ContentSection = () => {
           <p className={styles?.white__download__text}>
             Whitepaper: Regulatory Supremacy and Competitive Edge
           </p>
-          <div
-            className="d-flex gap-2 align-items-center"
-            style={{ cursor: "pointer" }}
-          >
-            <MdOutlineFileDownload size={20} fill="#E37915" />
-            <span className={styles?.white__text}> Download Full Report </span>
-          </div>
+          <Link href={WHITEPAPER_DOWNLOAD_LINK} target="__blank">
+            <div
+              className="d-flex gap-2 align-items-center"
+              style={{ cursor: "pointer" }}
+            >
+              <MdOutlineFileDownload size={20} fill="#E37915" />
+              <span className={styles?.white__text}>
+                {" "}
+                Download Full Report{" "}
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
     </section>

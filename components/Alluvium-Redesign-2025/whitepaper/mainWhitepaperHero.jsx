@@ -33,11 +33,11 @@ const MainWhitepaperHero = () => {
             <div className={styles.mainWhitepaperCopy}>
               <p className={styles.mainWhitepaperTag}>Whitepaper</p>
               <h2 className={styles.mainWhitepaperTitle}>
-                Building Responsible AI
+                Regulatory Supremacy
                 <br />
-                Systems for Real-World
+                and Competitive Edge
                 <br />
-                Impact
+                {/* Impact */}
               </h2>
 
               <p className={styles.mainWhitepaperMeta}>
