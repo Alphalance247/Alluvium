@@ -10,7 +10,7 @@ const CardSection = () => {
       author: "TAIWO OJO",
       link: "/whitepaper/regulatory-supremacy-and-competitive-edge",
       date: "NOVEMBER 13, 2025",
-      handsImage: "/assets/redesign-2025/whitepaper/1a.png", // Robotic and human hands
+      handsImage: "/assets/redesign-2025/whitepaper/white-paper-1.png",
     },
   ];
 
@@ -26,6 +26,7 @@ const CardSection = () => {
           {whitepapers.map((whitepaper) => (
             <WhitePaperCard
               key={whitepaper.id}
+              url={whitepaper?.link}
               title={whitepaper.title}
               author={whitepaper.author}
               date={whitepaper.date}

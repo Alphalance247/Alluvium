@@ -25,7 +25,7 @@ const MainWhitepaperHero = () => {
           <article className={styles.mainWhitepaperCard}>
             <div className={styles.mainWhitepaperImage}>
               <Image
-                src="/assets/redesign-2025/whitepaper/white.png"
+                src="/assets/redesign-2025/whitepaper/white-paper-1.png"
                 alt="Building Responsible AI Systems for Real-World Impact"
                 width={577}
                 height={588}
