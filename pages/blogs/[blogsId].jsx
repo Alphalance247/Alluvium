@@ -10,7 +10,6 @@ import { environment } from "env/env.local";
 import Button from "components/atlassian-service-reuse/Button";
 
 export default function BlogsId({ article }) {
-  console.log(article?.slog);
   // const relatedBlog = blogCards.slice(0, 3);
   const [loadingRelated, setLoadingRelated] = useState(true);
   const [errorRelated, setErrorRelated] = useState(false);

@@ -14,7 +14,7 @@ const WhitePaperCard = ({
       <Link href={url || "/"}>
         <div className={styles.cardContainer} style={{ cursor: "pointer" }}>
           <div className={styles.cardGraphic}>
-            <Image
+            <img
               src={handsImage}
               alt="Robotic and human hands reaching towards each other"
               width={373}
