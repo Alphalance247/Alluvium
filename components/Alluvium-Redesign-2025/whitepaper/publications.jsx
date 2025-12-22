@@ -1,5 +1,8 @@
 import WhitePaperCard from "./card";
 import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { environment } from "env/env.local";
 
 const Publications = () => {
   // Whitepaper data - can be moved to a data file or fetched from API
@@ -13,6 +16,41 @@ const Publications = () => {
       url: "/whitepaper/regulatory-supremacy-and-competitive-edge",
     },
   ];
+
+  const [data, setData] = useState([]);
+
+  console.log(data, "data");
+
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  const fetchData = async () => {
+    setLoading(true);
+    setError(false);
+    try {
+      const res = await axios.get(`${environment?.baseUrl}api/blog/posts/`);
+
+      const postsData = res.data;
+
+      if (res.status !== 200 || !postsData) {
+        setError(true);
+        return;
+      }
+
+      setData(postsData?.results);
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      setLoading(false);
+      setError(true);
+    } finally {
+      console.log("done");
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <section className={styles?.publication__main}>
@@ -28,6 +66,20 @@ const Publications = () => {
               author={whitepaper.author}
               date={whitepaper.date}
               handsImage={whitepaper.handsImage}
+            />
+          ))}
+          {data?.map((whitepaper) => (
+            <WhitePaperCard
+              key={whitepaper.id}
+              url={whitepaper?.slug}
+              title={whitepaper?.title}
+              author={
+                whitepaper?.author?.first_name +
+                " " +
+                whitepaper?.author?.last_name
+              }
+              date={whitepaper?.date}
+              handsImage={whitepaper?.featured_image}
             />
           ))}
         </div>

@@ -2,7 +2,6 @@ import WhitePaperCard from "./card";
 import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 
 const CardSection = () => {
-  // Whitepaper data - can be moved to a data file or fetched from API
   const whitepapers = [
     {
       id: 1,

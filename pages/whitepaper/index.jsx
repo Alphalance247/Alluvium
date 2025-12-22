@@ -1,5 +1,3 @@
-import CardSection from "components/Alluvium-Redesign-2025/whitepaper/cardSection";
-import ContentSection from "components/Alluvium-Redesign-2025/whitepaper/contentSetion";
 import MainWhitepaperHero from "components/Alluvium-Redesign-2025/whitepaper/mainWhitepaperHero";
 import Layout from "components/layout";
 import styles from "styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
