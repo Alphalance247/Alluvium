@@ -71,7 +71,7 @@ const Publications = () => {
           {data?.map((whitepaper) => (
             <WhitePaperCard
               key={whitepaper.id}
-              url={whitepaper?.slug}
+              url={"/blogs/" + whitepaper?.slug}
               title={whitepaper?.title}
               author={
                 whitepaper?.author?.first_name +
