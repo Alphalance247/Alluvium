@@ -8,8 +8,11 @@ import CardBlogDetails from "components/Alluvium-Redesign-2025/ReuseComponents/c
 import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard";
 import { environment } from "env/env.local";
 import Button from "components/atlassian-service-reuse/Button";
+import WhitePaperHeroSection from "components/Alluvium-Redesign-2025/whitepaper/hero";
+import AuthorIntroSection from "components/Alluvium-Redesign-2025/whitepaper/authorIntroSection";
+import AuthorBio from "components/Alluvium-Redesign-2025/whitepaper/authorBio";
 
-export default function BlogsId({ article }) {
+export default function WhitepaperId({ article }) {
   // const relatedBlog = blogCards.slice(0, 3);
   const [loadingRelated, setLoadingRelated] = useState(true);
   const [errorRelated, setErrorRelated] = useState(false);
@@ -69,37 +72,25 @@ export default function BlogsId({ article }) {
           content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
         />
       </Head>
-      <article className={styles.blog__main__details}>
-        <div className={styles.article__main}>
-          <div className={styles.article__hero}>
-            <h1>{article?.title}</h1>
-            <CardBlogDetails
-              name={`${article?.author?.first_name} ${article?.author?.last_name}`}
-              blogDate={article?.formatted_published_at}
-              minRead={article?.read_time + " mins read"}
-              variant="secondary"
-            />
-          </div>
-          <div className={styles.article__image__div}>
-            <img
-              src={article?.featured_image}
-              alt="imageContent"
-              width={838}
-              height={475}
-              style={{
-                borderRadius: "8px",
-              }}
-              className={styles.article__image}
-            />
-          </div>
-        </div>
-      </article>
 
+      <WhitePaperHeroSection
+        // slug={article?.slug}
+        // subhero={article?.subhero}
+        title={article?.title}
+        imageSrc={article?.featured_image}
+        readTime={article?.read_time}
+        date={article?.formatted_published_at}
+        category={"whitepaper"}
+        heightSpec={450}
+        widthSpec={650}
+      />
+
+      <AuthorIntroSection />
       <article className={styles.artcle__overview__content__heading}>
         {/* Article overview and mainContent */}
         <div className={styles.artcle__overview__content}>
           <div
-            className={`${styles.article__content__blog} ${styles.article__content}`}
+            className={`${styles.article__content__whitepaper} ${styles.article__content}`}
           >
             <div dangerouslySetInnerHTML={{ __html: article.content }} />
           </div>
@@ -112,7 +103,7 @@ export default function BlogsId({ article }) {
               </div>
             )}
 
-          <div className={`${styles.article__overview} `}>
+          {/* <div className={`${styles.article__overview} `}>
             <div className={styles.share}>
               <p>SHARE THIS STORY</p>
 
@@ -152,7 +143,8 @@ export default function BlogsId({ article }) {
                 </a>
               </div>
             </div>
-          </div>
+          </div> */}
+          <AuthorBio />
         </div>
       </article>
 
@@ -166,7 +158,7 @@ export default function BlogsId({ article }) {
               {relatedBlog.map((item, i) => (
                 <CaseCard
                   variant="secondary"
-                  url={`/blogs/${item?.slug}`}
+                  url={`/whitepaper/${item?.slug}`}
                   imgAlt={item?.title}
                   width={357}
                   height={191}
@@ -197,11 +189,9 @@ export default function BlogsId({ article }) {
 export async function getServerSideProps({ params }) {
   // Replace with your API URL for fetching a single blog post by slug
   const res = await fetch(
-    `${environment?.baseUrl}api/blog/posts/${params?.blogsId}/`
+    `${environment?.baseUrl}api/blog/posts/${params?.whitepaperId}/`
   );
   const article = await res.json();
-
-  console.log(article);
 
   // If no article is found, return a 404 page
   if (!article || !article.slug) {

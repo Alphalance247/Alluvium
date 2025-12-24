@@ -1,32 +1,39 @@
-import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import Image from "next/image";
+import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import { FaBookOpen } from "react-icons/fa";
 
-const WhitePaperHeroSection = () => {
+const WhitePaperHeroSection = ({
+  widthSpec,
+  heightSpec,
+  subhero,
+  title,
+  imageSrc,
+  readTime,
+  date,
+  category,
+}) => {
   return (
     <section className={styles.whitepaperHero}>
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <p className={styles.head}>
-            CBN Consumer Protection Regulations (2019)
-          </p>
-          <h1>Regulatory Supremacy and Competitive Edge</h1>
+          <p className={styles.head}>{subhero}</p>
+          <h1>{title}</h1>
           <p className={styles.time}>
             {" "}
-            September 15th, 2024 |{" "}
+            {date} |{" "}
             <span>
               <FaBookOpen color="white" fill="white" />
             </span>{" "}
-            5 mins read | Whitepaper
+            {readTime} | {category}
           </p>
         </div>
 
         <div className={styles.heroImage}>
           <Image
-            src="/assets/redesign-2025/whitepaper/flag.png"
+            src="https://pest.ec2.alluvium.net/media/blog_images/..."
             alt="Whitepaper"
-            width={616}
-            height={617}
+            width={widthSpec || 616}
+            height={heightSpec || 617}
             className={styles.flagImage}
           />
         </div>

@@ -67,9 +67,23 @@ module.exports = {
   images: {
     // loader:"cloudinary",
     // path:"https://res.cloudinary.com/geniesys",
-    domains: ["blog.alluvium.net"],
+    domains: ["blog.alluvium.net", "pest.ec2.alluvium.net"],
   },
 };
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "pest.ec2.alluvium.net",
+      },
+    ],
+  },
+};
+
+module.exports = nextConfig;
 
 module.exports = {
   async redirects() {
