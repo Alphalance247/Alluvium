@@ -30,7 +30,7 @@ const WhitePaperHeroSection = ({
 
         <div className={styles.heroImage}>
           <Image
-            src="https://pest.ec2.alluvium.net/media/blog_images/..."
+            src={imageSrc}
             alt="Whitepaper"
             width={widthSpec || 616}
             height={heightSpec || 617}
