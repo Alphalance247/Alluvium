@@ -10,25 +10,6 @@ module.exports = withSass({
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-  swcMinify: true,
-  env: {
-    NEXT_PUBLIC_SMTP_USERNAME: process.env.NEXT_PUBLIC_SMTP_USERNAME,
-    NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS,
-    AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE:
-      process.env.AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE,
-  },
-  images: {
-    domains: ["blog.alluvium.net", "pest.ec2.alluvium.net"],
-  },
-  async redirects() {
-    return [
-      {
-        source: "/support/contact",
-        destination: "/contact-us",
-        permanent: true,
-      },
-    ];
-  },
 });
 
 // module.exports = {
@@ -37,6 +18,10 @@ module.exports = withSass({
 //     includePaths: [path.join(__dirname, 'styles')],
 //   },
 // }
+
+module.exports = {
+  basePath: "/docs",
+};
 
 // module.exports = {
 //   webpack(config) {
@@ -67,3 +52,33 @@ module.exports = withSass({
 //     return config
 //   }
 // })
+
+module.exports = {
+  swcMinify: true,
+  env: {
+    NEXT_PUBLIC_SMTP_USERNAME: process.env.NEXT_PUBLIC_SMTP_USERNAME,
+    NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS,
+    AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE:
+      process.env.AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE,
+  },
+};
+
+module.exports = {
+  images: {
+    // loader:"cloudinary",
+    // path:"https://res.cloudinary.com/geniesys",
+    domains: ["blog.alluvium.net", "pest.ec2.alluvium.net"],
+  },
+};
+
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: "/support/contact",
+        destination: "/contact-us",
+        permanent: true, // triggers 308
+      },
+    ];
+  },
+};

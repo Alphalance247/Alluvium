@@ -29,12 +29,13 @@ const WhitePaperHeroSection = ({
         </div>
 
         <div className={styles.heroImage}>
-          <Image
+          <img
             src={imageSrc}
             alt="Whitepaper"
             width={widthSpec || 616}
             height={heightSpec || 617}
             className={styles.flagImage}
+            style={{ maxWidth: "100%", height: "100%" }}
           />
         </div>
       </div>
