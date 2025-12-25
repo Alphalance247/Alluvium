@@ -19,8 +19,6 @@ const Publications = () => {
 
   const [data, setData] = useState([]);
 
-  console.log(data, "data");
-
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -37,7 +35,7 @@ const Publications = () => {
         return;
       }
 
-      setData(postsData?.results);
+      setData(postsData?.whitepaper_posts);
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -71,7 +69,7 @@ const Publications = () => {
           {data?.map((whitepaper) => (
             <WhitePaperCard
               key={whitepaper.id}
-              url={"/blogs/" + whitepaper?.slug}
+              url={"/whitepaper/" + whitepaper?.slug}
               title={whitepaper?.title}
               author={
                 whitepaper?.author?.first_name +

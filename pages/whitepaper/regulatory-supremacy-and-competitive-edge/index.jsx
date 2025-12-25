@@ -4,6 +4,7 @@ import WhitePaperHeroSection from "components/Alluvium-Redesign-2025/whitepaper/
 import Layout from "components/layout";
 import styles from "styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import Head from "next/head";
+import { heroData } from "components/Alluvium-Redesign-2025/whitepaper/whaitPaperHeroData";
 
 const RegulatorySupremacy = () => {
   return (
@@ -23,7 +24,15 @@ const RegulatorySupremacy = () => {
         </Head>
 
         <main className={styles?.main}>
-          <WhitePaperHeroSection />
+          <WhitePaperHeroSection
+            slug={"regulatory-supremacy-and-competitive-edge"}
+            subhero={heroData.subhero}
+            title={heroData.title}
+            imageSrc={heroData.imageSrc}
+            readTime={heroData.readTime}
+            date={heroData.date}
+            category={heroData.category}
+          />
           <ContentSection />
           <CardSection />
         </main>

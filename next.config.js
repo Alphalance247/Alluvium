@@ -67,7 +67,7 @@ module.exports = {
   images: {
     // loader:"cloudinary",
     // path:"https://res.cloudinary.com/geniesys",
-    domains: ["blog.alluvium.net"],
+    domains: ["blog.alluvium.net", "pest.ec2.alluvium.net"],
   },
 };
 
