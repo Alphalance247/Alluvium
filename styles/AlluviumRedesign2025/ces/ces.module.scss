@@ -1,0 +1,498 @@
+.heroContainer {
+  width: 100%;
+  //   min-height: 600px;
+  //   background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  //   padding: 80px 60px;
+  position: relative;
+  background: radial-gradient(
+    50% 50% at 50.01% 50.01%,
+    #ffffff 0%,
+    #e7effa 100%
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   margin-top: 40px;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+  }
+}
+
+.heroContent {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: 1026px) {
+    padding: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0rem;
+  }
+}
+
+.heroTitle {
+  font-size: 60px;
+  font-weight: 800;
+  color: #02033b;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1026px) {
+    font-size: 48px;
+  }
+}
+
+.heroDescription {
+  font-size: 16px;
+  color: #0c0c0c;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 400px;
+  font-weight: 400;
+}
+
+.heroButton {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+
+  &:hover {
+    background-color: #e67e00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.heroImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  svg {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .heroContainer {
+    padding: 60px 24px;
+    min-height: auto;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .heroTitle {
+    font-size: 36px;
+  }
+
+  .heroDescription {
+    max-width: 100%;
+  }
+
+  .heroImage {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroContainer {
+    padding: 40px 16px;
+  }
+
+  .heroTitle {
+    font-size: 28px;
+  }
+
+  .heroDescription {
+    font-size: 14px;
+  }
+
+  .heroButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// How It Works Section
+.howItWorksContainer {
+  width: 100%;
+  background: radial-gradient(
+    50% 50% at 50.01% 50.01%,
+    #ffffff 0%,
+    #e7effa 100%
+  );
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.howItWorksTitle {
+  font-size: 40px;
+  font-weight: 800;
+  color: #02033b;
+  text-align: center;
+  margin: 0 0 60px 0;
+  letter-spacing: -0.5px;
+}
+
+.cardsContainer {
+  max-width: 1200px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-radius: 3rem;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+}
+
+.card {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardIcon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #02033b;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.3px;
+}
+
+.cardDescription {
+  font-size: 14px;
+  color: #0c0c0c;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+// Responsive design for How It Works
+@media (max-width: 768px) {
+  .howItWorksContainer {
+    padding: 60px 24px;
+  }
+
+  .howItWorksTitle {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .cardsContainer {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+  }
+
+  .card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .howItWorksContainer {
+    padding: 40px 16px;
+  }
+
+  .howItWorksTitle {
+    font-size: 24px;
+    margin-bottom: 32px;
+  }
+
+  .card {
+    padding: 24px 16px;
+  }
+
+  .cardIcon {
+    font-size: 40px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .cardDescription {
+    font-size: 13px;
+  }
+}
+
+// Meet Alluvium Section
+.meetAlluviumContainer {
+  width: 100%;
+  background: white;
+  padding: 80px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meetAlluviumWrapper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.meetAlluviumHeader {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.meetAlluviumTitle {
+  font-size: 48px;
+  font-weight: 800;
+  color: #02033b;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-family: "Grotesk", sans-serif;
+}
+
+.legend {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #02033b;
+}
+
+.legendDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: #02033b;
+}
+
+.legendText {
+  white-space: nowrap;
+}
+
+.featuresGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featureItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.featureBullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+
+  &[data-color="green"] {
+    background-color: #22c55e;
+  }
+
+  &[data-color="red"] {
+    background-color: #ef4444;
+  }
+
+  &[data-color="orange"] {
+    background-color: #ff8c00;
+  }
+}
+
+.galleryContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.galleryItem {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Responsive design for Meet Alluvium
+@media (max-width: 1024px) {
+  .meetAlluviumContainer {
+    padding: 60px 40px;
+  }
+
+  .blueCard {
+    padding: 40px 32px;
+  }
+
+  .cardTitle {
+    font-size: 28px;
+  }
+
+  .legend {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .meetAlluviumContainer {
+    padding: 60px 24px;
+  }
+
+  .meetAlluviumWrapper {
+    gap: 40px;
+  }
+
+  .meetAlluviumTitle {
+    font-size: 36px;
+  }
+
+  .meetAlluviumContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .legendItem {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .meetAlluviumContainer {
+    padding: 40px 16px;
+  }
+
+  .meetAlluviumTitle {
+    font-size: 28px;
+  }
+
+  .legend {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .legendItem {
+    font-size: 12px;
+  }
+
+  .blueCard {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardSubtitle {
+    font-size: 13px;
+  }
+
+  .cardFooter {
+    flex-direction: column;
+    border-top: none;
+    gap: 16px;
+  }
+
+  .savingsBox {
+    width: 100%;
+  }
+
+  .qrPlaceholder {
+    width: 70px;
+    height: 70px;
+  }
+}
