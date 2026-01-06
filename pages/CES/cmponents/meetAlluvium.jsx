@@ -2,37 +2,6 @@ import Image from "next/image";
 import styles from "styles/AlluviumRedesign2025/ces/ces.module.scss";
 
 const MeetAlluvium = () => {
-  const features = [
-    {
-      id: 1,
-      title: "Reduce unplanned tickets by 50%",
-      description:
-        "AI-powered prevention systems identify and resolve issues before they escalate",
-      color: "green",
-    },
-    {
-      id: 2,
-      title: "Eliminate resolution handoffs",
-      description:
-        "Autonomous agents handle end-to-end resolution with built-in governance",
-      color: "red",
-    },
-    {
-      id: 3,
-      title: "Cut service cost by 40%",
-      description:
-        "Automation eliminates manual touchpoints and reduces operational overhead",
-      color: "orange",
-    },
-    {
-      id: 4,
-      title: "Deploy in under 4 weeks",
-      description:
-        "Rapid implementation using our migration frameworks and best practices",
-      color: "green",
-    },
-  ];
-
   const images = [
     { id: 1, src: "/assets/ces/flyer.png", alt: "Alluvium at CES" },
     { id: 2, src: "/assets/ces/ces.png", alt: "CES Presentation" },

@@ -530,92 +530,147 @@ const CaseStudyData = [
 
   {
     title:
-      "sophos-elevates-cybersecurity,productivity,and-impact-with-atlassian-cloud",
+      "how-home-depot-brought-strategic-clarity-to-enterprise-planning-with-atlassian-focus",
     aboutAlluvium: "Alluvium are Trusted Solution Partner of Atlassian",
     caseStudyTitle:
-      "Sophos elevates cybersecurity,  productivity, and impact with  Atlassian cloud",
+      "How Home Depot brought strategic clarity to enterprise planning with Atlassian Focus",
     whyMigrate:
-      "Sophos’ migration to Atlassian Cloud enhanced service availability and streamlined IT workflows, supporting their growth as a global cybersecurity leader.",
-    imageSrc: "/assets/Cloud-Migration-Case-Study/7.png",
+      "Retail at scale meets strategic precision—Home Depot aligns goals, work, and outcomes in one place.",
+    imageSrc: "/assets/Cloud-Migration-Case-Study/9.png",
     analytics: [
       {
-        score: "300%",
-        dexcription: "increase in global workforce capacity.",
+        score: "Enterprise-wide",
+        dexcription:
+          "strategic visibility- Centralized goals, initiatives, and investments",
       },
-      {
-        score: "100%",
-        dexcription: "shift from IT maintenance to strategic enablement",
-      },
-      {
-        score: "5,000",
-        dexcription: "total users supported on Atlassian Cloud.",
-      },
+      // {
+      //   score: "100%",
+      //   dexcription: "shift from IT maintenance to strategic enablement",
+      // },
+      // {
+      //   score: "5,000",
+      //   dexcription: "total users supported on Atlassian Cloud.",
+      // },
     ],
-    industryIcon: "/assets/Cloud-Migration-Case-Study/icon6.svg",
-    width: 137,
-    height: 41,
+    industryFeedback: "Executive Summary",
     industryFeedbackSubcontent:
-      "As Sophos evolved from a regional firm to a global  cybersecurity leader, managing their on-premise   Atlassian infrastructure and processes grew more complex.  By migrating to the cloud with the help of an Atlassian  Solution Partner, Sophos has increased availability of   their services while tripling their global workforce.",
+      "As one of the world’s largest home improvement retailers, Home Depot operates at massive scale, requiring tight alignment between business strategy, technology investments, and delivery execution. However, its strategic planning process relied heavily on manual tools such as PowerPoint and Excel spreadsheets scattered across teams and folders, creating silos and limiting visibility for leadership.",
     industry: [
       {
         heading: "INDUSTRY",
-        subHead: ["Internet & Software"],
+        subHead: [" Retail / Home Improvement"],
       },
       {
         heading: "LOCATIONS",
-        subHead: ["Asia Pacific"],
-      },
-      {
-        heading: "NUMBER OF USERS",
-        subHead: ["1,001-5,000 employees"],
+        subHead: ["United States (North America, global operations)"],
       },
     ],
     paragragh: [
-      "Sophos, a global cybersecurity firm, began using Atlassian’s server-based tools for project management and collaboration in the early 2000s. As they expanded, both their workforce and reliance on these tools grew, placing significant strain on the on-premises infrastructure. IT resources became consumed by routine maintenance and troubleshooting, leaving little room for innovation. Sophos decided to migrate to Atlassian Cloud to streamline operations and align their IT infrastructure with their mission to provide top-tier cybersecurity solutions.",
+      "While adopting Jira Align helped centralize portfolio-level planning and improve data integrity, Home Depot still lacked a clear way to connect delivery work to high-level strategic goals. Through early access to Atlassian Focus, Home Depot gained a centralized hub to define, visualize, and measure strategy across the enterprise. By linking goals, initiatives, and investments in one place, leadership improved accountability, uncovered execution gaps, and accelerated speed to value, transforming how strategy is planned, tracked, and delivered.",
     ],
     quote:
-      "“By migrating to Atlassian cloud, we moved away  from being pure support to focusing on process  enablement and adding value back to the business.”",
-    quoter: "DANIEL CAVE",
-    quotename: "Senior Infrastructure Engineer",
+      "“It helped the process go smoother. Just having it in one place gave visibility and transparency into what the investments are for this and the top priorities.”",
+    quoter: "",
+    quotename: "— Cheryl Spruce, Sr. Product Manager, Home Depot",
     highlight: [
       {
-        highlightHeading:
-          "Migration Decision: Choosing Cloud for Simplicity and Enablement",
+        highlightHeading: "The Challenge",
         Highlightpargraph: [
-          "After experiencing limitations with their existing system, Sophos viewed cloud migration as an opportunity to simplify operations and improve efficiency. The guiding principle for this transformation was “simplicity and enablement.” The goal was to reduce the time spent on configuration and management, enabling teams to concentrate on delivering value. Sophos engaged an Atlassian Solution Partner and leveraged the Atlassian Migration Program, aiming to adopt a phased approach that minimized disruption and facilitated quicker returns on investment.",
+          "Home Depot operates at an enormous scale, with complex technology investments spanning teams, products, and platforms. For years, strategic planning relied heavily on manual tools such as PowerPoint presentations and Excel spreadsheets. These documents were often stored across disconnected folders, creating silos that limited visibility, transparency, and alignment across the organization.",
+          "Although the adoption of Jira Align helped centralize portfolio-level planning and improve data integrity, Home Depot still struggled to connect delivery execution with broader strategic objectives. Leadership needed a clearer way to understand how investments tied back to goals, identify gaps across teams, and ensure accountability as the organization continued to scale.",
         ],
       },
       {
-        highlightHeading:
-          "Phased Migration: Minimizing Risk, Maximizing Adoption",
+        highlightHeading: "The Solution",
         Highlightpargraph: [
-          "Sophos implemented a phased migration strategy to mitigate potential risks and ensure a smooth transition. Each wave of migration was meticulously planned, targeting different business units sequentially. This approach allowed the IT team to gather insights and refine processes, improving the migration experience for subsequent groups. Key stakeholders from each unit played a pivotal role in testing and advocating for the changes, helping to streamline adoption across the organization.",
+          "By adopting Atlassian Focus through the Early Access Program, Home Depot introduced a centralized platform for defining, managing, and visualizing strategy across the enterprise. Focus integrated seamlessly with Jira Align, enabling teams to link work directly to strategic goals and outcomes.",
+          "With customizable views and OKR-focused planning, Home Depot was able to uncover gaps between strategy and execution, align initiatives more effectively, and improve decision-making. This shift helped leadership gain greater clarity into priorities while empowering teams to execute with increased ownership and speed.",
         ],
       },
-      {
-        highlightHeading: "Partnering for Success: Collaboration and Support",
-        Highlightpargraph: [
-          "Throughout the migration, Sophos collaborated closely with their Solution Partner, which provided expertise in migration planning, testing, and technical support. The partner's insights were invaluable in addressing the specific needs of different business units and managing stakeholder expectations. Additionally, Atlassian’s APIs and migration tools, including the Jira Cloud Migration Assistant and Confluence Cloud Migration Assistant, facilitated efficient data transfer and reduced administrative overhead.",
-        ],
-      },
-      {
-        highlightHeading:
-          "Operational Transformation: From Maintenance to Strategic Enablement",
-        Highlightpargraph: [
-          "Post-migration, Sophos' IT team shifted focus from system administration to process enablement and strategic support. Tasks that previously required manual oversight were now automated, allowing IT to work on initiatives that directly impacted business outcomes. Automation features in Jira, for example, streamlined project tracking, improving response times and collaboration. This shift empowered IT to serve as a proactive business partner, enhancing both operational efficiency and employee satisfaction.",
-        ],
-      },
+    ],
 
+    list: [
       {
-        highlightHeading: "Enhanced Efficiency and Future Growth",
+        listHeading: "Benefits",
+        listSubhead: [
+          "Improved visibility into strategic priorities and technology investments",
+          "Stronger alignment between enterprise goals and delivery execution",
+          "Faster identification of gaps, driving accountability and speed to value",
+          "More informed, data-driven decision-making across leadership teams",
+        ],
+      },
+    ],
+  },
+  {
+    title:
+      "how-lloyd-banking-group-transformed-enterprise-strategy-with-focus-and-ai-powered-insight",
+    aboutAlluvium: "Alluvium are Trusted Solution Partner of Atlassian",
+    caseStudyTitle:
+      "How Lloyds Banking Group transformed enterprise strategy with Focus and AI-powered insights",
+    whyMigrate:
+      "A modern bank redefines strategic planning—secure, agile, and outcome-driven.",
+    imageSrc: "/assets/Cloud-Migration-Case-Study/8.png",
+    analytics: [
+      {
+        score: "£3B",
+        dexcription: " portfolio transitioned",
+      },
+      {
+        score: "10 weeks",
+        dexcription: "to transform planning",
+      },
+      // {
+      //   score: "5,000",
+      //   dexcription: "total users supported on Atlassian Cloud.",
+      // },
+    ],
+    industryFeedback: "Executive Summary",
+    industryFeedbackSubcontent:
+      "Lloyds Banking Group, one of Europe’s largest financial institutions, needed a more agile and outcome-driven approach to strategic planning. Their previous planning model was largely activity-based, meaning strategies became outdated almost as soon as they were written. This lack of visibility into value and outcomes made it difficult for teams to stay aligned and adapt to change.",
+    industry: [
+      {
+        heading: "INDUSTRY",
+        subHead: ["Financial Services / Banking"],
+      },
+      {
+        heading: "LOCATIONS",
+        subHead: ["United Kingdom"],
+      },
+    ],
+    paragragh: [
+      "As part of a broader shift to a product and platform operating model, Lloyds Banking Group adopted Jira Align, but still required a secure, centralized way to manage highly sensitive strategic data while maintaining regulatory compliance. Through early access to Atlassian Focus, Lloyds connected strategy, outcomes, and execution in one platform. By moving from annual to quarterly planning cycles and leveraging AI-powered insights from Rovo, the bank gained transparency, faster decision-making, and stronger alignment across business and technology teams.",
+    ],
+    quote:
+      "“ You have a business role and a tech role, and they own the strategy together. So they are driving it together”",
+    quoter: "",
+    quotename:
+      "— Becks Marron, Head of Center of Excellence for Method and Tooling, Lloyds Banking Grou",
+    highlight: [
+      {
+        highlightHeading: "The Challenge",
         Highlightpargraph: [
-          "The migration has enabled Sophos to better align its internal systems with the demands of a fast-growing organization. With cloud-based infrastructure, Sophos now benefits from increased uptime, scalable resources, and a simplified user experience. The organization is positioned to continue expanding globally while maintaining a robust, adaptable IT foundation. As they embrace automation and further integrations, Sophos remains committed to evolving its processes and delivering innovative cybersecurity solutions.",
+          "Lloyds Banking Group faced challenges with a strategic planning process that was largely activity-driven rather than focused on outcomes and customer value. Plans became outdated quickly, making it difficult for teams to adapt to change or clearly understand the impact of their work.",
+          "In addition, regulatory requirements limited the bank’s ability to store highly sensitive strategic data in existing tools. Leadership needed greater transparency across the organization while ensuring compliance, security, and stronger alignment between business and technology teams. The reliance on annual planning cycles further slowed the bank’s ability to pivot in a fast-changing environment.",
         ],
       },
       {
-        highlightHeading: "Realizing the Value of Cloud Migration",
+        highlightHeading: "The Solution",
         Highlightpargraph: [
-          "By moving to Atlassian Cloud, Sophos transformed its IT infrastructure from a maintenance-heavy system to an enabler of productivity and strategic growth. The transition has not only improved service availability and scalability but also redefined IT’s role within the company. Sophos’ journey underscores the benefits of cloud migration for organizations seeking to enhance efficiency, reduce complexity, and foster a forward-thinking work environment.",
+          "Through early access to Atlassian Focus, Lloyds Banking Group gained a secure, centralized platform for managing strategic priorities and outcomes. Focus integrated with Jira Align and the wider Atlassian ecosystem, enabling the bank to connect strategy with execution while meeting strict data residency and compliance requirements.",
+          "The bank transitioned its £3B portfolio from annual to quarterly planning cycles in just ten weeks, accelerating strategic reviews and improving adaptability. With Rovo, Atlassian’s AI-powered capabilities within Focus, leaders gained faster insights through summaries, smart suggestions, and contextual intelligence—allowing them to focus on high-level strategy rather than operational detail.",
+        ],
+      },
+    ],
+
+    list: [
+      {
+        listHeading: "Benefits",
+        listSubhead: [
+          "Increased transparency across strategy, execution, and outcomes",
+          "Faster adaptation through quarterly planning and review cycles",
+          "Secure management of sensitive strategic data with regulatory compliance",
+          "Stronger alignment between business leaders and technology teams",
+          "Improved leadership focus through AI-powered insights and summaries",
         ],
       },
     ],

@@ -503,5 +503,20 @@
         line-height: 1.8rem;
       }
     }
+
+    .list__items {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 28px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      margin-left: 1rem;
+      color: #595c61;
+
+      @media screen and (max-width: 992px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+    }
   }
 }
