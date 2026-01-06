@@ -85,7 +85,7 @@ export default function WhitepaperId({ article }) {
         widthSpec={650}
       />
 
-      <AuthorIntroSection />
+      <AuthorIntroSection dowloadLink={article?.download_link} />
       <article className={styles.artcle__overview__content__heading}>
         {/* Article overview and mainContent */}
         <div className={styles.artcle__overview__content}>
