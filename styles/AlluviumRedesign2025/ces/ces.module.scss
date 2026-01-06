@@ -23,13 +23,12 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 100;
+  z-index: 0;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.1;
   }
 }
 
@@ -40,6 +39,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .heroText {
@@ -186,7 +187,8 @@
 
 .cardsContainer {
   max-width: 1200px;
-  width: 50%;
+  width: 60%;
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
