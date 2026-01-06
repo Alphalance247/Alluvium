@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "../styles/hero-carousel.module.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-export default function () {
+export default function ({ cardList }) {
   const data = [
     {
       img: "/assets/home/yale.png",
@@ -35,11 +35,12 @@ export default function () {
       url: "/atlassian-case-studies",
     },
   ];
+  const availableCards = cardList || data;
   return (
     <div className={`${styles.customxs}`}>
       <div className={`container mx-auto ${styles.featured}`}>
         <div className={styles.featured__card}>
-          {data.map((el) => {
+          {availableCards.map((el) => {
             return (
               <Link href={el.url} passHref>
                 <div className={` ${styles.points}`}>

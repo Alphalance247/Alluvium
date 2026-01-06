@@ -11,8 +11,10 @@ const ContentSection = ({ item }) => {
       <div className={styles.case__study__feedbacks} key={item.title}>
         <div className={styles.summary__section}>
           <div style={{ marginBottom: "1rem" }}>
-            {item.title === "dhcs" ? (
-              <p className={styles.summary__head}>{item?.industryFeedback}</p>
+            {item.title === "dhcs" || !item?.industryIcon ? (
+              <p className={styles.summary__head}>
+                {item?.industryFeedback || "Executive Summary"}
+              </p>
             ) : (
               <Image
                 src={item?.industryIcon}
@@ -79,6 +81,24 @@ const ContentSection = ({ item }) => {
               </div>
             );
           })}
+
+          {item?.list &&
+            item?.list?.map((el, i) => {
+              return (
+                <div key={i}>
+                  <h5 className={styles.rest__heading}>{el?.listHeading}</h5>
+                  {el?.listSubhead?.map((item, i) => {
+                    return (
+                      <ul key={i} className={styles.list__items}>
+                        <li className={styles.paragraph__content__list}>
+                          {item}
+                        </li>
+                      </ul>
+                    );
+                  })}
+                </div>
+              );
+            })}
         </div>
       </div>
     </section>

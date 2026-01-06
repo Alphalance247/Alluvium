@@ -46,7 +46,7 @@
 .heroText {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 1rem;
 
   @media (max-width: 1026px) {
     padding: 2rem;
