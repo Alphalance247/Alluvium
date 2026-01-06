@@ -14,7 +14,7 @@ const Hero = () => {
       <div className={styles.heroBackground}>
         <Image
           src="/assets/ces/bg-circle.png"
-          width={700}
+          width={800}
           height={700}
           alt="shape"
         />
