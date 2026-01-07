@@ -10,7 +10,8 @@ import AuthorBio from "./authorBio";
 const ContentSection = () => {
   const WHITEPAPER_BANNER_IMAGE =
     "/assets/redesign-2025/whitepaper/pdf-cover.png"; // TODO: swap with the provided banner asset
-  const WHITEPAPER_DOWNLOAD_LINK = "/files/white-paper-pdf.pdf"; // TODO: replace with actual whitepaper link
+  const WHITEPAPER_DOWNLOAD_LINK =
+    "https://alluvium.net/files/white-paper-pdf.pdf"; // TODO: replace with actual whitepaper link
 
   return (
     <section className={styles.content__section}>
