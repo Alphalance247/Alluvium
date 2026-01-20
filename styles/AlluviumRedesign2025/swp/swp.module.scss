@@ -176,7 +176,7 @@
 // Meet Board Section Styles
 .meet_board {
   background: #ffffff;
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
 
   @media screen and (max-width: 768px) {
     padding: 2.5rem 1rem;
@@ -185,6 +185,9 @@
   .container {
     max-width: 1270px;
     margin: 0 auto;
+    display: grid;
+    grid-template: 34% auto;
+    gap: 4rem;
   }
 
   .title {
