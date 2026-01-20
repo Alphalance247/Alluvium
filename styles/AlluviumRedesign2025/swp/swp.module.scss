@@ -43,6 +43,7 @@
     padding-right: 18px;
     grid-template-columns: 1fr;
     grid-gap: 0rem;
+    padding-bottom: 4rem;
   }
 
   .top_container {
@@ -64,13 +65,23 @@
       font-weight: 600;
       font-family: "Grotesk", sans-serif;
       letter-spacing: -1px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+      }
     }
   }
 
   .sub_container {
     font-size: 1rem;
     line-height: 1.5rem;
-    margin: 1rem;
+    margin-top: 1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.95rem;
+      line-height: 1.4rem;
+    }
   }
 }
 
@@ -107,6 +118,10 @@
     width: 100%;
     width: full;
     box-shadow: 0 2px 8px rgba(17, 32, 45, 0.08);
+
+    @media screen and (max-width: 768px) {
+      padding: 1rem;
+    }
   }
 
   .card__title {
@@ -115,6 +130,10 @@
     font-weight: 700;
     margin-bottom: 12px;
     color: #141414;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.25rem;
+    }
   }
 
   .card__hint {
@@ -176,23 +195,28 @@
 // Meet Board Section Styles
 .meet_board {
   background: #ffffff;
-  padding: 2rem 2rem;
+  padding: 0rem 2rem;
 
-  @media screen and (max-width: 768px) {
-    padding: 2.5rem 1rem;
+  @media screen and (max-width: 992px) {
+    padding: 3rem 1rem;
   }
 
-  .container {
+  .container__meet_board {
     max-width: 1270px;
     margin: 0 auto;
     display: grid;
-    grid-template: 34% auto;
+    grid-template-columns: 34% auto;
     gap: 4rem;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 0rem;
+    }
   }
 
   .title {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     font-family: "Grotesk", sans-serif;
     color: #11202d;
     margin-bottom: 3rem;
@@ -205,16 +229,31 @@
 
   .team_grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 
     @media screen and (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 600px) {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+    }
+
+    .member_name {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: "Grotesk", sans-serif;
+      color: #141414;
+      margin-top: 1rem;
+      margin-bottom: -0.5px;
+    }
+
+    .member_role {
+      font-size: 14px;
+      color: #595959;
+      line-height: 1.5rem;
     }
   }
 
@@ -256,14 +295,15 @@
   align-items: flex-start;
   padding: 6rem 2rem;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 992px) {
     gap: 2.5rem;
+    padding: 4rem 18px;
   }
 
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 0 1rem;
+    padding: 4rem 18px;
   }
 
   .getInTouch__content {
@@ -278,6 +318,10 @@
 
       .title__highlight {
         color: #ea7a2a;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
       }
     }
 
@@ -381,7 +425,12 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 34% auto;
-  gap: 6rem;
+  gap: 4rem;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }
 
 .customerStory__heading {
