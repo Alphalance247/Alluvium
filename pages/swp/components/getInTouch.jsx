@@ -1,11 +1,14 @@
 import { useState } from "react";
 import styles from "styles/AlluviumRedesign2025/swp/swp.module.scss";
-import Input from "components/TEAM24/Input";
 import Button from "components/atlassian-service-reuse/Button";
-import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import Image from "next/image";
+import Input from "components/licence-component/inputP";
+import { useToasts } from "react-toast-notifications";
+import axios from "axios";
 
-const GetInTouch = ({ onSubmit }) => {
+const GetInTouch = () => {
+  const { addToast } = useToasts();
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -18,10 +21,55 @@ const GetInTouch = ({ onSubmit }) => {
     setForm((s) => ({ ...s, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (onSubmit) onSubmit(form);
-    setForm({ firstName: "", lastName: "", company: "", email: "" });
+    setLoading(true);
+
+    axios
+      .post(
+        `https://ssswuzxlxj5rkjd4bjmkfq4aii0dkkqt.lambda-url.us-east-1.on.aws/`,
+        { ...form },
+        { timeout: 40000 },
+      )
+      .then((res) => {
+        if (res?.status >= 200 && res?.status < 300) {
+          addToast(
+            res?.data?.body ||
+              "Request submitted successfully. Please check your email for verification code",
+            {
+              appearance: "success",
+              autoDismiss: true, // Enable auto dismiss
+              autoDismissTimeout: 5000, // Dismiss after 5 seconds
+            },
+          );
+          setLoading(false);
+          setForm({ name: "", email: "", phone: "" });
+        } else {
+          addToast(
+            "Unexpected response from server. Please try again or contact Admin",
+            {
+              appearance: "error",
+              autoDismiss: true, // Enable auto dismiss
+              autoDismissTimeout: 5000, // Dismiss after 5 seconds
+            },
+          );
+          setLoading(false);
+          return;
+        }
+      })
+      .catch((err) => {
+        setLoading(false);
+
+        addToast(
+          err?.message ||
+            "Unexpected response from server. Please try again or contact Admin",
+          {
+            appearance: "error",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          },
+        );
+      });
   };
 
   const badges = [
@@ -80,26 +128,27 @@ const GetInTouch = ({ onSubmit }) => {
 
           <form onSubmit={handleSubmit} aria-label="get-in-touch-form">
             <div className={styles.formGroup}>
-              <label>Full Name</label>
               <Input
+                text={"Full Name"}
                 name="firstName"
+                required
                 value={form.firstName}
                 onChange={handleChange}
               />
             </div>
 
             <div className={styles.formGroup}>
-              <label>Last Name</label>
               <Input
                 name="lastName"
+                text={"Last Name"}
                 value={form.lastName}
                 onChange={handleChange}
               />
             </div>
 
             <div className={styles.formGroup}>
-              <label>Company name*</label>
               <Input
+                text={"Company name"}
                 name="company"
                 value={form.company}
                 onChange={handleChange}
@@ -107,17 +156,18 @@ const GetInTouch = ({ onSubmit }) => {
             </div>
 
             <div className={styles.formGroup}>
-              <label>Work email*</label>
               <Input
+                text="Work email"
                 name="email"
                 type="email"
                 value={form.email}
                 onChange={handleChange}
-                required
               />
             </div>
 
-            <Button type="submit">I'm Interested</Button>
+            <Button type="submit">
+              {loading ? "Submitting..." : "I'm Interested"}
+            </Button>
           </form>
         </div>
       </div>

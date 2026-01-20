@@ -1,4 +1,3 @@
-import Hero from "components/Hero";
 import Layout from "components/layout";
 import Head from "next/head";
 import SwpHero from "./components/hero";

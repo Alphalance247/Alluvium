@@ -3,6 +3,12 @@ import styles from "../../../styles/AlluviumRedesign2025/swp/swp.module.scss";
 import Image from "next/image";
 
 const SwpHero = () => {
+  const handScrollToSection = () => {
+    const section = document.getElementById("alluvium-team");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <section className={styles.swp_hero}>
       <div className={styles.hero__image__bg}>
@@ -28,7 +34,9 @@ const SwpHero = () => {
             donec tempor ullamcorper lacus. Odio congue habitant purus morbi
             duis. Amet ornare ultrices diam gravida .{" "}
           </p>
-          <Button size="mediumL">Meet the Team</Button>
+          <Button size="mediumL" onClick={handScrollToSection}>
+            Meet the Team
+          </Button>
         </div>
       </div>
       <div className={styles.hero__image}>

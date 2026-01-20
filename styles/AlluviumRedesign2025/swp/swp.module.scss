@@ -48,6 +48,8 @@
 
   .top_container {
     font-family: "Grotesk", sans-serif;
+    border-left: 2px solid #d3d3d3;
+    padding-left: 1.5rem;
 
     .hero__event {
       font-size: 13px;
@@ -65,6 +67,7 @@
       font-weight: 600;
       font-family: "Grotesk", sans-serif;
       letter-spacing: -1px;
+      margin-bottom: 0;
 
       @media screen and (max-width: 768px) {
         font-size: 1.5rem;
@@ -77,6 +80,9 @@
     font-size: 1rem;
     line-height: 1.5rem;
     margin-top: 1rem;
+    border-left: 2px solid #d3d3d3;
+    border-right: 2px solid #d3d3d3;
+    padding: 0 1.5rem;
 
     @media screen and (max-width: 768px) {
       font-size: 0.95rem;
@@ -247,7 +253,7 @@
       font-family: "Grotesk", sans-serif;
       color: #141414;
       margin-top: 1rem;
-      margin-bottom: -0.5px;
+      margin-bottom: 8px;
     }
 
     .member_role {

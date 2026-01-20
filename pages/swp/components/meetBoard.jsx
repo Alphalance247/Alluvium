@@ -3,7 +3,7 @@ import styles from "../../../styles/AlluviumRedesign2025/swp/swp.module.scss";
 
 const MeetBoard = () => {
   return (
-    <section className={styles.meet_board}>
+    <section className={styles.meet_board} id="alluvium-team">
       <div className={styles.container__meet_board}>
         <div></div>
         <div>
