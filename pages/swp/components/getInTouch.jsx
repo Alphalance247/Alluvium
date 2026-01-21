@@ -27,23 +27,24 @@ const GetInTouch = () => {
 
     axios
       .post(
-        `https://ssswuzxlxj5rkjd4bjmkfq4aii0dkkqt.lambda-url.us-east-1.on.aws/`,
-        { ...form },
+        `https://site-api.alluvium.net/utilities/wps-event/`,
+        {
+          first_name_1: form.firstName,
+          last_name_4: form.lastName,
+          email_5: form?.email,
+          company_3: form?.company,
+        },
         { timeout: 40000 },
       )
       .then((res) => {
         if (res?.status >= 200 && res?.status < 300) {
-          addToast(
-            res?.data?.body ||
-              "Request submitted successfully. Please check your email for verification code",
-            {
-              appearance: "success",
-              autoDismiss: true, // Enable auto dismiss
-              autoDismissTimeout: 5000, // Dismiss after 5 seconds
-            },
-          );
+          addToast(res?.data?.message || "Request submitted successfully.", {
+            appearance: "success",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          });
           setLoading(false);
-          setForm({ name: "", email: "", phone: "" });
+          setForm({ firstName: "", lastName: "", company: "", email: "" });
         } else {
           addToast(
             "Unexpected response from server. Please try again or contact Admin",
@@ -129,7 +130,7 @@ const GetInTouch = () => {
           <form onSubmit={handleSubmit} aria-label="get-in-touch-form">
             <div className={styles.formGroup}>
               <Input
-                text={"Full Name"}
+                text={"First Name"}
                 name="firstName"
                 required
                 value={form.firstName}
