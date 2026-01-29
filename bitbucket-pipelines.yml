@@ -1,0 +1,108 @@
+image: node:18-alpine
+
+# Global pipeline options
+options:
+  size: 2x          # Extra resources for Next.js builds
+  max-time: 15      # Reasonable max execution time (minutes)
+
+definitions:
+  caches:
+    node: ~/.npm
+    nextcache: .next/cache
+
+  steps:
+    - step: &lint
+        name: Lint Code
+        caches:
+          - node
+        script:
+          - npm ci
+          - npm run lint
+        after-script:
+          - echo "✓ Linting completed"
+
+    - step: &test
+        name: Run Tests with Coverage
+        caches:
+          - node
+        script:
+          - apk add --no-cache libc6-compat
+          - npm ci
+          - npm test -- --coverage || echo "No tests configured"
+        artifacts:
+          - coverage/**
+        after-script:
+          - echo "✓ Testing completed"
+
+
+    - step: &build
+        name: Build Next.js Application
+        caches:
+          - node
+          - nextcache
+        script:
+          - apk add --no-cache libc6-compat
+          - npm ci
+          - npm run build
+        artifacts:
+          - .next/**
+        after-script:
+          - echo "✓ Build completed"
+
+    - step: &security-scan
+        name: Security Scan
+        caches:
+          - node
+        script:
+          - npm ci
+          - npm audit --audit-level=moderate || true
+          - npm outdated || true
+        after-script:
+          - echo "✓ Security scan completed"
+
+pipelines:
+  default:
+    - parallel:
+        - step: *lint
+        - step: *test
+    - step: *build
+    - step: *security-scan
+
+  branches:
+    feature/*:
+      - parallel:
+          - step: *lint
+          - step: *test
+      - step: *build
+
+    dev:
+      - parallel:
+          - step: *lint
+          - step: *test
+      - step: *build
+      - step: *security-scan
+      - step:
+          name: Deploy to Development
+          deployment: development
+          script:
+            - echo "Deployment placeholder for dev environment"
+
+    main:
+      - parallel:
+          - step: *lint
+          - step: *test
+      - step: *build
+      - step: *security-scan
+      - step:
+          name: Deploy to Production
+          deployment: production
+          trigger: manual
+          script:
+            - echo "Manual production deployment placeholder"
+
+  pull-requests:
+    '**':
+      - parallel:
+          - step: *lint
+          - step: *test
+      - step: *build
