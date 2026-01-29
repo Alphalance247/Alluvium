@@ -19,7 +19,7 @@ const MeetBoard = () => {
                 height={315}
                 className={styles.member_image}
               />
-              <h3 className={styles.member_name}>Alex Johnson</h3>
+              <h3 className={styles.member_name}>Taiwo Ojo</h3>
               <p className={styles.member_role}>Lead Migration Specialist</p>
             </div>
             {/* Team Member 2 */}
@@ -31,7 +31,7 @@ const MeetBoard = () => {
                 alt="Team Member 2"
                 className={styles.member_image}
               />
-              <h3 className={styles.member_name}>Sarah Williams</h3>
+              <h3 className={styles.member_name}>Wale Olojo</h3>
               <p className={styles.member_role}>Migration Consultant</p>
             </div>
           </div>
