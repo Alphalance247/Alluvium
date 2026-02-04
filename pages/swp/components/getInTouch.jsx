@@ -149,7 +149,7 @@ const GetInTouch = () => {
   ];
 
   return (
-    <section className={styles.getInTouch__layout}>
+    <section className={styles.getInTouch__layout} id="alluvium-team">
       <div className={styles.getInTouch}>
         <div className={styles.card}>
           <h3 className={styles.card__title}>

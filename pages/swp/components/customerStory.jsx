@@ -57,6 +57,14 @@ const CustomerStory = () => {
           bulletItem:
             "A simple language to explain skills based Strategic Workforce Planning to your stakeholders.",
         },
+        {
+          bulletItem:
+            "Checklists and questions you can use to assess your current maturity.",
+        },
+        {
+          bulletItem:
+            "A clear sense of the next 3–5 moves your organisation should make.",
+        },
       ],
     },
   ];

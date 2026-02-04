@@ -23,7 +23,7 @@ const MeetBoard = () => {
                 />
               </div>
               <div className={styles.meetBoardInfo}>
-                <h3 className={styles.meetBoardName}>Taiwo Olotu</h3>
+                <h3 className={styles.meetBoardName}>Taiwo Ojo</h3>
                 <p className={styles.meetBoardRole}>CEO, Cofounder</p>
               </div>
             </div>
