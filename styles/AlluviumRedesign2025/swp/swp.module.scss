@@ -221,7 +221,7 @@
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 28px;
     font-weight: 500;
     font-family: "Grotesk", sans-serif;
     color: #11202d;
@@ -347,6 +347,19 @@
       }
 
       margin-bottom: 2rem;
+
+      .list__style {
+        margin-left: 1.3rem;
+
+        .list__style__list {
+          font-size: 1rem;
+          color: #454545;
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
     }
 
     .badges_row {
@@ -499,5 +512,550 @@
     font-size: 0.9rem;
     color: #595959;
     line-height: 1.6;
+  }
+}
+
+// Meet Board Section
+.meetBoardSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 48px 0;
+  }
+}
+
+.meetBoardContainer {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media (max-width: 1024px) {
+    gap: 40px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 32px;
+    padding: 0 16px;
+  }
+}
+
+.meetBoardTitle {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #11202d;
+  margin: 0;
+  font-family: "Grotesk";
+  letter-spacing: -0.5px;
+  margin-bottom: 3rem;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+}
+
+.meetBoardContent {
+  display: grid;
+  grid-template-columns: 37%auto;
+  // gap: 60px;
+  width: 100%;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 32px;
+  }
+}
+
+.meetBoardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 640px) {
+    gap: 16px;
+  }
+}
+
+.meetBoardImagePlaceholder {
+  width: 100%;
+  // max-width: 100%;
+  // aspect-ratio: 4 / 5;
+  // background: #e8dff2;
+  border-radius: 12px;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    border-radius: 10px;
+  }
+}
+
+.meetBoardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meetBoardName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a0e27;
+  margin-top: 1rem;
+  margin-bottom: 4px;
+  line-height: 1.3;
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+.meetBoardRole {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 2rem;
+  font-weight: 500;
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+  }
+}
+
+.meetBoardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 640px) {
+    gap: 16px;
+  }
+}
+
+.meetBoardSessionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #0a0e27;
+  margin: 0;
+  letter-spacing: -0.3px;
+
+  @media (max-width: 1024px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+.meetBoardSessionDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.meetBoardBullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (max-width: 640px) {
+    gap: 10px;
+  }
+}
+
+.meetBoardBulletItem {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  padding-left: 24px;
+  position: relative;
+  font-weight: 400;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #0a0e27;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+    padding-left: 20px;
+
+    &::before {
+      left: 6px;
+    }
+  }
+}
+
+.meetBoardSubBullets {
+  margin: 12px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+    position: relative;
+    font-weight: 400;
+
+    // &::before {
+    //   content: "–";
+    //   position: absolute;
+    //   left: 8px;
+    //   color: #0a0e27;
+    //   font-weight: 500;
+    // }
+
+    @media (max-width: 640px) {
+      font-size: 14px;
+      line-height: 1.55;
+      padding-left: 16px;
+
+      // &::before {
+      //   left: 4px;
+      // }
+    }
+  }
+}
+
+// Customer Story - New Section
+.customerStorySection {
+  width: 100%;
+  background: #ffffff;
+  padding: 90px 0;
+  border-bottom: 1px solid #f0f0f0;
+  border-top: 1px solid #f0f0f0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 18px 0;
+  }
+}
+
+.customerStoryContainer {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 37%auto;
+
+  @media (max-width: 1024px) {
+    gap: 48px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 40px;
+    padding: 0 16px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.customerStoryHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 3rem;
+
+  @media (max-width: 640px) {
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+}
+
+.customerStoryMainHeading {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #11202d;
+  margin: 0;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+}
+
+.customerStorySubtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.planItemsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 28px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    gap: 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 20px;
+  }
+}
+
+.planItemCard {
+  background: #f9f9f9;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #e0e0e0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 1024px) {
+    padding: 28px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 24px;
+    gap: 14px;
+  }
+}
+
+.planItemIcon {
+  border-radius: 8px;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.planItemTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0a0e27;
+  margin: 0;
+  letter-spacing: -0.3px;
+
+  @media (max-width: 1024px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+.planItemDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.planItemBullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 !important;
+
+  @media (max-width: 640px) {
+    gap: 8px;
+  }
+}
+
+.planItemBullet {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  padding-left: 24px;
+  position: relative;
+  font-weight: 400;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #0a0e27;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+    padding-left: 20px;
+
+    &::before {
+      left: 6px;
+    }
+  }
+
+  span {
+    left: 8px;
+    color: #0a0e27;
+    font-weight: 600;
+  }
+}
+
+// Get in Touch Box
+.getInTouchBox {
+  background: #d4eef7;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: 1024px) {
+    padding: 32px;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 640px) {
+    padding: 24px;
+    margin-top: 2.5rem;
+    border-radius: 10px;
+  }
+}
+
+.getInTouchTitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #11202d;
+  margin: 0;
+  font-family: "Grotesk";
+  letter-spacing: -0.3px;
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+  }
+}
+
+.getInTouchDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.getInTouchDetail {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #595959;
+  margin: 0;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.getInTouchDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #595959;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.getInTouchRegister {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #595959;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.getInTouchLink {
+  color: #0a0e27;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
   }
 }

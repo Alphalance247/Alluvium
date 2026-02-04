@@ -116,6 +116,38 @@ const GetInTouch = () => {
     },
   ];
 
+  const list = [
+    {
+      sublistContent: "Co-shape the conversation ",
+      cont: "about Strategic Workforce Planning – bringing real frameworks, case studies and operating models that you can use, not just theory.",
+      content: "",
+    },
+
+    {
+      content: "Act as a  ",
+      sublistContent:
+        "guide for leaders who want to move from idea to implementation",
+      cont: "– helping you make sense of where you are and what needs to change.",
+    },
+
+    {
+      content: "Help you  ",
+      sublistContent:
+        "shift from static headcount planning to skills‑based Strategic Workforce Planning ",
+      cont: "that connects HR, Finance and the business.",
+    },
+
+    {
+      content: "Provide  ",
+      sublistContent: "the governance, workflows, architecture and tools ",
+      cont: "that make skills data usable in real planning cycles and decisions.",
+    },
+    {
+      content:
+        "Support you before, during and after the summit so that insights from London turn into sustained change in your organisation.  ",
+    },
+  ];
+
   return (
     <section className={styles.getInTouch__layout}>
       <div className={styles.getInTouch}>
@@ -175,32 +207,26 @@ const GetInTouch = () => {
 
       <div className={styles.getInTouch__content}>
         <h2 className={styles.title}>
-          Why <span className={styles.title__highlight}>meet Alluvium</span> at
-          SWP?
+          {/* Why <span className={styles.title__highlight}>meet Alluvium</span> at */}
+          Alluvium’s role: your guide and transformation partner
         </h2>
         <p className={styles.lead}>
-          Lorem ipsum dolor sit amet consectetur. Facilisis dolor consequat ut
-          donec tempor ullamcorper lacus. Odio congue habitant purus morbi duis.
-          Amet ornare ultrices diam gravida morbi elementum nulla. Velit cras
-          lacus felis risus elit dui amet nibh. Sem sit sed tristique a cursus.
-          Fermentum posuere egestas sagittis mi
+          At the summit, “transformation partner” is more than a label for
+          Alluvium.
         </p>
 
         <div className={styles.paragraphs}>
-          <p>
-            Nisi malesuada adipiscing et adipiscing ut. Sapien sed tellus
-            vulputate magna in arcu. In tellus eget libero arcu posuere
-            imperdiet. Egestas lobortis interdum vivamus tellus odio massa.
-            Faucibus interdum non nulla risus turpis egestas purus urna ligula.
-            Urna pulvinar faucibus gravida vitae amet praesent porttitor
-          </p>
+          <p>It means we:</p>
 
-          <p>
-            Habitant scelerisque morbi neque at elementum tortor etiam nulla.
-            Nec et euismod felis ornare. Tristique sed nec eu volutpat fringilla
-            metus arcu vestibulum. Vel nisl pretium ipsum cursus. Imperdiet
-            aliquet netus ridiculus
-          </p>
+          {list?.map((el, i) => (
+            <ul key={i} className={styles?.list__style}>
+              <li className={styles?.list__style__list}>
+                {el?.content}
+                <span>{el?.sublistContent}</span>
+                {el?.cont}
+              </li>
+            </ul>
+          ))}
         </div>
 
         <div className={styles.badges_row}>

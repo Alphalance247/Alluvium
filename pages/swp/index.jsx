@@ -25,8 +25,8 @@ const SWP = () => {
         <main>
           <SwpHero />
           <GetInTouch />
-          <MeetBoard />
           <CustomerStory />
+          <MeetBoard />
         </main>
       </Layout>
     </div>

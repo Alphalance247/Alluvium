@@ -30,9 +30,11 @@ const SwpHero = () => {
         </div>
         <div className={styles.sub_container}>
           <p className={styles.hero__description}>
-            Lorem ipsum dolor sit amet consectetur. Facilisis dolor consequat ut
-            donec tempor ullamcorper lacus. Odio congue habitant purus morbi
-            duis. Amet ornare ultrices diam gravida .{" "}
+            On 19 March 2026, Alluvium joins Strategic Workforce Planning Summit
+            London 2026 at The Brewery, London as a transformation partner ,
+            working with HR, Finance and business leaders to move from static
+            headcount planning to truly skills‑based Strategic Workforce
+            Planning.
           </p>
           <Button size="mediumL" onClick={handScrollToSection}>
             Meet the Team
