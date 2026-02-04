@@ -1,0 +1,1062 @@
+.swp_hero {
+  background: #fcfcfc;
+  position: relative;
+}
+
+.getInTouch__container {
+  background: #fcfcfc;
+  padding: 3rem 2rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem 1rem;
+  }
+}
+
+.container {
+  max-width: 1270px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: left;
+  color: #11202d;
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 100;
+
+  @media screen and (max-width: 1200px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 85%;
+    padding-top: 4rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    text-align: left;
+    padding-left: 18px;
+    padding-right: 18px;
+    grid-template-columns: 1fr;
+    grid-gap: 0rem;
+    padding-bottom: 4rem;
+  }
+
+  .top_container {
+    font-family: "Grotesk", sans-serif;
+    border-left: 2px solid #d3d3d3;
+    padding-left: 1.5rem;
+    color: #11202d;
+
+    .hero__event {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+
+      @media screen and (max-width: 768px) {
+        font-size: 13px;
+      }
+    }
+
+    .hero__title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      font-family: "Grotesk", sans-serif;
+      letter-spacing: -1px;
+      margin-bottom: 0;
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+        letter-spacing: 0px;
+      }
+    }
+  }
+
+  .sub_container {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+    border-left: 2px solid #d3d3d3;
+    border-right: 2px solid #d3d3d3;
+    padding: 0 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.95rem;
+      line-height: 1.4rem;
+    }
+  }
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 1392px;
+  margin: auto;
+  position: relative;
+  z-index: 100;
+}
+
+.hero__image__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 50;
+  // opacity: 0.1;
+  width: 100%;
+  max-width: 1450px;
+}
+
+/* Get In Touch / Form card styles (left column) */
+.getInTouch {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #e8e8e8;
+
+  .card {
+    border: 1px solid #f0f3f6;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 24px 20px;
+    width: 100%;
+    width: full;
+    box-shadow: 0 2px 8px rgba(17, 32, 45, 0.08);
+
+    @media screen and (max-width: 768px) {
+      padding: 1rem;
+    }
+  }
+
+  .card__title {
+    font-size: 18px;
+    font-family: "Grotesk";
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #141414;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .card__hint {
+    color: #595959;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+
+    label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #11202d;
+      margin-bottom: 6px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #e6eaee;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      background: #fff;
+      color: #11202d;
+
+      &::placeholder {
+        color: #b8bec5;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: #ea7a2a;
+      }
+    }
+  }
+
+  button {
+    background-color: #ea7a2a !important;
+    color: #ffffff !important;
+    padding: 10px 18px !important;
+    border-radius: 4px !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    margin-top: 8px;
+    cursor: pointer;
+    border: none !important;
+
+    &:hover {
+      background-color: #d46820 !important;
+    }
+  }
+}
+
+// Meet Board Section Styles
+.meet_board {
+  background: #ffffff;
+  padding: 0rem 2rem;
+
+  @media screen and (max-width: 992px) {
+    padding: 3rem 1rem;
+  }
+
+  .container__meet_board {
+    max-width: 1270px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 34% auto;
+    gap: 4rem;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 0rem;
+    }
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Grotesk", sans-serif;
+    color: #11202d;
+    margin-bottom: 3rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .team_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .member_name {
+      font-size: 18px;
+      font-weight: 500;
+      font-family: "Grotesk", sans-serif;
+      color: #141414;
+      margin-top: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .member_role {
+      font-size: 14px;
+      color: #595959;
+      line-height: 1.5rem;
+    }
+  }
+
+  .meet_board__card {
+    background: #f5e6d3;
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+      padding: 1.5rem;
+    }
+
+    .card__title {
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: "Grotesk", sans-serif;
+      color: #11202d;
+      line-height: 1.4;
+    }
+
+    .card__description {
+      font-size: 0.9rem;
+      color: #595959;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* Layout for the full hero with form on the left and content on the right */
+.getInTouch__layout {
+  max-width: 1270px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 34% auto;
+  gap: 4rem;
+  align-items: flex-start;
+  padding: 6rem 2rem;
+
+  @media screen and (max-width: 992px) {
+    gap: 2.5rem;
+    padding: 4rem 18px;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 4rem 18px;
+  }
+
+  .getInTouch__content {
+    color: #11202d;
+
+    .title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      font-family: "Grotesk", sans-serif;
+      line-height: 1.3;
+
+      .title__highlight {
+        color: #ea7a2a;
+      }
+
+      @media screen and (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .lead {
+      color: #6b7980;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .paragraphs {
+      p {
+        color: #6b7980;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      margin-bottom: 2rem;
+
+      .list__style {
+        margin-left: 1.3rem;
+
+        .list__style__list {
+          font-size: 1rem;
+          color: #454545;
+
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .badges_row {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem 1.5rem;
+      align-items: center;
+      max-width: 100%;
+
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+
+      :global(.cert__section) {
+        width: 100%;
+      }
+
+      :global(.scroll__wrapper) {
+        display: contents !important;
+      }
+
+      :global(.imageWrapper) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+/* About Alluvium Section */
+
+.aboutAlluvium__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Grotesk", sans-serif;
+  color: #11202d;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+}
+
+.aboutAlluvium__content {
+  max-width: 900px;
+
+  p {
+    color: #595959;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+
+    @media screen and (max-width: 768px) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+/* Customer Story Section */
+.customerStory__section {
+  background: #ffffff;
+  padding: 4rem 2rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 1rem;
+  }
+}
+
+.customerStory__container {
+  max-width: 1270px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 34% auto;
+  gap: 4rem;
+
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.customerStory__heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Grotesk", sans-serif;
+  color: #11202d;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  letter-spacing: -1px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.customerStory__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.customerStory__card {
+  background: #fff0e3;
+  border-radius: 16px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem;
+  }
+
+  .customerStory__card__content {
+    background: white;
+    box-shadow: 0 2px 8px rgba(17, 32, 45, 0.08);
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 1px solid #e8e8e8;
+  }
+
+  .card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: "Grotesk", sans-serif;
+    color: #11202d;
+    line-height: 1.4;
+    text-decoration: underline;
+    letter-spacing: -0.5px;
+  }
+
+  .card__description {
+    font-size: 0.9rem;
+    color: #595959;
+    line-height: 1.6;
+  }
+}
+
+// Meet Board Section
+.meetBoardSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 80px 0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 48px 0;
+  }
+}
+
+.meetBoardContainer {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media (max-width: 1024px) {
+    gap: 40px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 32px;
+    padding: 0 16px;
+  }
+}
+
+.meetBoardTitle {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #11202d;
+  margin: 0;
+  font-family: "Grotesk";
+  letter-spacing: -0.5px;
+  margin-bottom: 3rem;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+}
+
+.meetBoardContent {
+  display: grid;
+  grid-template-columns: 37%auto;
+  // gap: 60px;
+  width: 100%;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 32px;
+  }
+}
+
+.meetBoardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 640px) {
+    gap: 16px;
+  }
+}
+
+.meetBoardImagePlaceholder {
+  width: 100%;
+  // max-width: 100%;
+  // aspect-ratio: 4 / 5;
+  // background: #e8dff2;
+  border-radius: 12px;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    border-radius: 10px;
+  }
+}
+
+.meetBoardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meetBoardName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0a0e27;
+  margin-top: 1rem;
+  margin-bottom: 4px;
+  line-height: 1.3;
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+.meetBoardRole {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 2rem;
+  font-weight: 500;
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+  }
+}
+
+.meetBoardDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 640px) {
+    gap: 16px;
+  }
+}
+
+.meetBoardSessionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #0a0e27;
+  margin: 0;
+  letter-spacing: -0.3px;
+
+  @media (max-width: 1024px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+.meetBoardSessionDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.meetBoardBullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @media (max-width: 640px) {
+    gap: 10px;
+  }
+}
+
+.meetBoardBulletItem {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  padding-left: 24px;
+  position: relative;
+  font-weight: 400;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #0a0e27;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+    padding-left: 20px;
+
+    &::before {
+      left: 6px;
+    }
+  }
+}
+
+.meetBoardSubBullets {
+  margin: 12px 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+    position: relative;
+    font-weight: 400;
+
+    // &::before {
+    //   content: "–";
+    //   position: absolute;
+    //   left: 8px;
+    //   color: #0a0e27;
+    //   font-weight: 500;
+    // }
+
+    @media (max-width: 640px) {
+      font-size: 14px;
+      line-height: 1.55;
+      padding-left: 16px;
+
+      // &::before {
+      //   left: 4px;
+      // }
+    }
+  }
+}
+
+// Customer Story - New Section
+.customerStorySection {
+  width: 100%;
+  background: #ffffff;
+  padding: 90px 0;
+  border-bottom: 1px solid #f0f0f0;
+  border-top: 1px solid #f0f0f0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 18px 0;
+  }
+}
+
+.customerStoryContainer {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 37%auto;
+
+  @media (max-width: 1024px) {
+    gap: 48px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 40px;
+    padding: 0 16px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.customerStoryHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 3rem;
+
+  @media (max-width: 640px) {
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+}
+
+.customerStoryMainHeading {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #11202d;
+  margin: 0;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+}
+
+.customerStorySubtitle {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.planItemsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 28px;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    gap: 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 20px;
+  }
+}
+
+.planItemCard {
+  background: #f9f9f9;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: #e0e0e0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  @media (max-width: 1024px) {
+    padding: 28px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 24px;
+    gap: 14px;
+  }
+}
+
+.planItemIcon {
+  border-radius: 8px;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.planItemTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #0a0e27;
+  margin: 0;
+  letter-spacing: -0.3px;
+
+  @media (max-width: 1024px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 16px;
+  }
+}
+
+.planItemDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.planItemBullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 !important;
+
+  @media (max-width: 640px) {
+    gap: 8px;
+  }
+}
+
+.planItemBullet {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  padding-left: 24px;
+  position: relative;
+  font-weight: 400;
+
+  &::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    color: #0a0e27;
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+    padding-left: 20px;
+
+    &::before {
+      left: 6px;
+    }
+  }
+
+  span {
+    left: 8px;
+    color: #0a0e27;
+    font-weight: 600;
+  }
+}
+
+// Get in Touch Box
+.getInTouchBox {
+  background: #d4eef7;
+  padding: 40px;
+  border-radius: 12px;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: 1024px) {
+    padding: 32px;
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 640px) {
+    padding: 24px;
+    margin-top: 2.5rem;
+    border-radius: 10px;
+  }
+}
+
+.getInTouchTitle {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #11202d;
+  margin: 0;
+  font-family: "Grotesk";
+  letter-spacing: -0.3px;
+
+  @media (max-width: 1024px) {
+    font-size: 24px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 22px;
+  }
+}
+
+.getInTouchDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.getInTouchDetail {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #595959;
+  margin: 0;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.getInTouchDescription {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #595959;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.getInTouchRegister {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #595959;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.getInTouchLink {
+  color: #0a0e27;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
