@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../../styles/AtlassianWebinars/webinars.module.scss";
 import Image from "next/image";
+import Button from "components/atlassian-service-reuse/Button";
 
 export default function AttendeeQuotes() {
   const [currentSlide, setCurrentSlide] = useState(1);
@@ -62,6 +63,13 @@ export default function AttendeeQuotes() {
     quotes[currentSlide],
     quotes[(currentSlide + 1) % quotes.length],
   ];
+
+  const handleScroll = () => {
+    const section = document.getElementById("claim-access");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className={styles.attendeeQuotesContainer}>
@@ -126,7 +134,13 @@ export default function AttendeeQuotes() {
             ))}
           </div>
 
-          <button className={styles.quotesCta}>Claim free Access</button>
+          <Button
+            onClick={handleScroll}
+            className={styles.quotesCta}
+            size="mediumL"
+          >
+            Claim free access
+          </Button>
         </div>
       </div>
     </div>

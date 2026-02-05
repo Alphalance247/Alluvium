@@ -4,7 +4,7 @@ import { FaTicketSimple } from "react-icons/fa6";
 import LeadForm from "pages/event/itsm-solutions/form/leadform";
 export default function WebinarHero() {
   return (
-    <div className={styles.webinarHeroWrapper}>
+    <div className={styles.webinarHeroWrapper} id="claim-access">
       <div className={styles.backgroundOverlay}></div>
       <div className={styles.webinarHeroContainer}>
         {/* Left Section */}

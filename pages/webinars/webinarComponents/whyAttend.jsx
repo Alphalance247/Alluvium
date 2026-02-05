@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../styles/AtlassianWebinars/webinars.module.scss";
 import { GoDatabase } from "react-icons/go";
+import Button from "components/atlassian-service-reuse/Button";
 export default function WhyAttend() {
   const attendReasons = [
     {
@@ -26,6 +27,13 @@ export default function WhyAttend() {
     },
   ];
 
+  const handleScroll = () => {
+    const section = document.getElementById("claim-access");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className={styles.whyAttendContainer}>
       <div className={styles.whyAttendWrapper}>
@@ -38,7 +46,16 @@ export default function WhyAttend() {
             agendas and tech-enhanced sessions, leaving you informed and
             inspired
           </p>
-          <button className={styles.whyAttendButton}>Claim free access</button>
+          <Button
+            onClick={handleScroll}
+            className={styles.whyAttendButton}
+            size="mediumL"
+          >
+            Claim free access
+          </Button>
+          {/* <button className={styles.whyAttendButton} onClick={handleScroll}>
+         
+          </button> */}
         </div>
 
         {/* Right Section */}
