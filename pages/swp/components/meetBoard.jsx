@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const MeetBoard = () => {
   return (
-    <section className={styles.meetBoardSection}>
+    <section className={styles.meetBoardSection} id="alluvium-team">
       <div className={styles.meetBoardContainer}>
         <div className={styles.meetBoardContent}>
           {/* Left Section - Image */}
