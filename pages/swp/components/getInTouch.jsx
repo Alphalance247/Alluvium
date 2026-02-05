@@ -149,7 +149,7 @@ const GetInTouch = () => {
   ];
 
   return (
-    <section className={styles.getInTouch__layout} id="alluvium-team">
+    <section className={styles.getInTouch__layout}>
       <div className={styles.getInTouch}>
         <div className={styles.card}>
           <h3 className={styles.card__title}>
@@ -211,7 +211,7 @@ const GetInTouch = () => {
           Alluvium’s role: your guide and transformation partner
         </h2>
         <p className={styles.lead}>
-          At the summit, “transformation partner” is more than a label for
+          At the summit, “Transformation partner” is more than a label for
           Alluvium.
         </p>
 
