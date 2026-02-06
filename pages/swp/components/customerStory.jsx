@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import styles from "styles/AlluviumRedesign2025/swp/swp.module.scss";
+import useSticky from "components/customhooks/UseSticky";
 
 const CustomerStory = () => {
+  const { sectionRef } = useSticky();
   const planItems = [
     {
       id: 1,
@@ -70,7 +72,7 @@ const CustomerStory = () => {
   ];
 
   return (
-    <section className={styles.customerStorySection}>
+    <section className={styles.customerStorySection} ref={sectionRef}>
       <div className={styles.customerStoryContainer}>
         <div></div>
         <div>
