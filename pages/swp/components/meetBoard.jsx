@@ -8,7 +8,6 @@ const MeetBoard = () => {
       <div className={styles.meetBoardContainer}>
         <div className={styles.meetBoardContent}>
           {/* Left Section - Image */}
-          <div></div>
           <div>
             <h2 className={styles.meetBoardTitle}>
               Hear from Taiwo Ojo, CEO, Alluvium

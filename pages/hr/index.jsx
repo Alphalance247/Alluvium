@@ -32,7 +32,7 @@ const Home = () => {
       .post(
         `https://ssswuzxlxj5rkjd4bjmkfq4aii0dkkqt.lambda-url.us-east-1.on.aws/`,
         { ...form },
-        { timeout: 40000 }
+        { timeout: 40000 },
       )
       .then((res) => {
         if (res?.status >= 200 && res?.status < 300) {
@@ -43,7 +43,7 @@ const Home = () => {
               appearance: "success",
               autoDismiss: true, // Enable auto dismiss
               autoDismissTimeout: 5000, // Dismiss after 5 seconds
-            }
+            },
           );
           setLoading(false);
           setForm({ name: "", email: "", phone: "" });
@@ -54,7 +54,7 @@ const Home = () => {
               appearance: "error",
               autoDismiss: true, // Enable auto dismiss
               autoDismissTimeout: 5000, // Dismiss after 5 seconds
-            }
+            },
           );
           setLoading(false);
           return;
@@ -70,7 +70,7 @@ const Home = () => {
             appearance: "error",
             autoDismiss: true, // Enable auto dismiss
             autoDismissTimeout: 5000, // Dismiss after 5 seconds
-          }
+          },
         );
       });
   };
