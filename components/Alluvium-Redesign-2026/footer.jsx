@@ -79,7 +79,7 @@ const Footer = () => {
             <div className={styles.footer_container}>
                 <div className={styles.left_content}>
                     <div className={styles.mobile_container}>
-                        <img src='/assets/Alluvium-Redesign-2026/home/AlluviumLogo.png' alt='Alluvium Logo' />
+                        <Image src='/assets/Alluvium-Redesign-2026/home/AlluviumLogo.png' alt='Alluvium Logo' width={149} height={30} />
                         <div className={styles.mobile_phone}>
                             {mobilePhones.map((item) => (
                                 <div key={item.id} >
