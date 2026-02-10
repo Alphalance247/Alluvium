@@ -12,6 +12,7 @@ import AboutSection from "components/Alluvium-Redesign-2026/about";
 import SeamlessAtlassian from "components/Alluvium-Redesign-2026/seamlessAtlassian";
 import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 import Service from "components/Alluvium-Redesign-2026/service";
+import StartScaling from "components/Alluvium-Redesign-2026/StartScaling";
 
 const Home = () => {
   return (
@@ -46,6 +47,7 @@ const Home = () => {
         <Banner />
         <Impact />
         <MarketPlacePlugin /> */}
+        <StartScaling />
       </Layout>
     </>
   );

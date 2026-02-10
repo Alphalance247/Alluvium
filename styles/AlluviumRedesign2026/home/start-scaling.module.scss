@@ -1,0 +1,46 @@
+.start_scaling {
+  background-color: #00556a;
+  height: 396px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .startScaling_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 396px;
+    width: 1272px;
+    border-left: 1px solid #006e88;
+    border-right: 1px solid #006e88;
+    .start_scaling_title {
+      color: white;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: capitalize;
+      font-family:
+        Mena Grotesk,
+        sans-serif;
+    }
+    .start_scaling_desc {
+      color: #fcfcfc;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 16px;
+      font-family: Graphik;
+    }
+    .start_scaling_btn {
+      margin-top: 32px;
+    }
+  }
+  @media screen and (max-width: 430px) {
+    .startScaling_container {
+      padding: 0 16px;
+      border: none;
+      .start_scaling_title {
+        font-size: 24px;
+      }
+    }
+  }
+}
