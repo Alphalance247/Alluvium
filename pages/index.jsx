@@ -7,6 +7,11 @@ import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSoluti
 import Impact from "components/Alluvium-Redesign-2025/ourImpact";
 import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
 import Banner from "./help-center/component/banner";
+import CaseStudies from "components/Alluvium-Redesign-2026/caseStudies";
+import AboutSection from "components/Alluvium-Redesign-2026/about";
+import SeamlessAtlassian from "components/Alluvium-Redesign-2026/seamlessAtlassian";
+import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
+import Service from "components/Alluvium-Redesign-2026/service";
 
 const Home = () => {
   return (
@@ -30,11 +35,17 @@ const Home = () => {
           />
         </Head>
         <Hero />
-        <Expertise />
+        <CaseStudies />
+        <AboutSection />
+        <SeamlessAtlassian />
+        <Service />
+        <SuccessStory />
+
+        {/* <Expertise />
         <AtlassianSolution />
         <Banner />
         <Impact />
-        <MarketPlacePlugin />
+        <MarketPlacePlugin /> */}
       </Layout>
     </>
   );

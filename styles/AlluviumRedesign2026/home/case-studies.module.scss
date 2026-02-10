@@ -1,0 +1,140 @@
+.csSection {
+  /* TODO: Confirm exact section background color if different globally. */
+  background: #ffffff;
+}
+
+.csContainer {
+  /* TODO: Confirm exact max-width from layout grid. */
+  margin: 0 auto;
+  max-width: 1200px;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  width: 100%;
+  padding: 88px 24px 78px;
+}
+
+.csTitle {
+  margin: 0;
+  text-align: center;
+  color: #141414;
+  font-weight: 600;
+  font-size: 2rem;
+  font-family: "Grotesk";
+  line-height: 1.15;
+  letter-spacing: -2%;
+}
+
+.csCards {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  align-items: stretch;
+}
+
+.csCard {
+  border-radius: 14px;
+  /* TODO: Confirm exact card height from design. */
+  min-height: 240px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+}
+
+.csCardContent {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.csCardTitle {
+  font-weight: 700;
+  /* TODO: Confirm exact card title size from design tokens. */
+  font-size: 14px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.csCardBody {
+  /* TODO: Confirm exact card body size/line-height from design tokens. */
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+// .csIconPlaceholder {
+//   width: 24px;
+//   height: 24px;
+//   border-radius: 6px;
+//   background: #cfcfcf;
+// }
+
+.csCardDark {
+  /* TODO: Confirm exact dark teal fill color. */
+  background: #003f4a;
+  color: #ffffff;
+}
+
+.csCardDark .csCardBody {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.csCardLight {
+  /* TODO: Confirm exact light card fill color. */
+  background: #f3f4f5;
+  color: #0f1a1d;
+}
+
+.csCardLight .csCardBody {
+  color: rgba(15, 26, 29, 0.62);
+}
+
+.csCardTint {
+  /* TODO: Confirm exact tinted card fill color. */
+  background: #eaf8ff;
+  color: #0f1a1d;
+}
+
+.csCardTint .csCardBody {
+  color: rgba(15, 26, 29, 0.62);
+}
+
+@media (max-width: 1024px) {
+  .csSection {
+    padding: 72px 0 64px;
+  }
+
+  .csTitle {
+    font-size: 32px;
+  }
+
+  .csCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+}
+
+@media (max-width: 640px) {
+  .csSection {
+    padding: 54px 0 48px;
+  }
+
+  .csContainer {
+    padding: 0 18px;
+  }
+
+  .csTitle {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+  }
+
+  .csCards {
+    margin-top: 36px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .csCard {
+    min-height: 220px;
+    padding: 22px;
+  }
+}

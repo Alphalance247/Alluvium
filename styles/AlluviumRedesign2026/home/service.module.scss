@@ -1,0 +1,112 @@
+.serviceSection {
+  /* TODO: Confirm exact section background color if different globally. */
+  background: #f9fafb;
+  border-top: 1px solid #f0f0f0;
+}
+
+.serviceContainer {
+  /* TODO: Confirm exact max-width from layout grid. */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 4rem 96px;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.serviceColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 40px;
+}
+
+.serviceColumn {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    #f9f9f9 77.97%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  box-shadow: 0 18px 50px rgba(15, 26, 29, 0.08);
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  border: 1px solid #e7e7e7;
+}
+
+.serviceLabel {
+  /* TODO: Confirm exact label size/letter spacing from design tokens. */
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #595959;
+  margin-bottom: 10px;
+}
+
+.serviceHeading {
+  margin: 0 0 10px;
+  color: #000000;
+  font-family: "Grotesk";
+  font-weight: 500;
+  /* TODO: Confirm exact heading size/line-height from design tokens. */
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+.serviceBody {
+  margin: 0 0 60px;
+  color: #262626;
+  /* TODO: Confirm exact body size/line-height from design tokens. */
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.serviceIllustrationPlaceholder {
+  width: 100%;
+  /* TODO: Confirm exact illustration aspect ratio. */
+  aspect-ratio: 16 / 11;
+  border-radius: 18px;
+  background: #e5e7eb;
+}
+
+.serviceIllustrationPlaceholderStacked {
+  /* Slightly different proportion to hint stacked cards while staying a solid placeholder. */
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 1024px) {
+  .serviceContainer {
+    padding: 80px 24px 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviceContainer {
+    padding: 72px 18px 72px;
+  }
+
+  .serviceColumns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .serviceBody {
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .serviceContainer {
+    padding: 64px 16px 64px;
+  }
+
+  .serviceHeading {
+    font-size: 1.15rem;
+  }
+
+  .serviceIllustrationPlaceholder {
+    border-radius: 16px;
+  }
+}

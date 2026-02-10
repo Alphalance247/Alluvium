@@ -1,0 +1,141 @@
+.successSection {
+  /* TODO: Confirm exact section background color if different globally. */
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.successContainer {
+  /* TODO: Confirm exact max-width from layout grid. */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 4rem 96px;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.successHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  column-gap: 56px;
+  align-items: flex-start;
+}
+
+.successHeadingBlock {
+  text-align: left;
+}
+
+.successTitle {
+  margin: 0;
+  color: #141414;
+  font-weight: 700;
+  /* TODO: Confirm exact heading size/line-height from design tokens. */
+  font-size: 2rem;
+  line-height: 1.25;
+  font-family: "Grotesk";
+}
+
+.successSubtextBlock {
+  text-align: left;
+}
+
+.successSubtitle {
+  margin: 0;
+  color: #6b7280;
+  /* TODO: Confirm exact body size/line-height from design tokens. */
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.successCards {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 32px;
+}
+
+.successCard {
+  background: #ffffff;
+  border-radius: 18px;
+  /* TODO: Confirm exact card border/shadow values from design system. */
+  border: 2px solid #f0f0f0;
+  box-shadow: 0 8px 26px rgba(15, 26, 29, 0.04);
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 290px;
+}
+
+.successQuote {
+  margin: 0 0 40px;
+  color: #595959;
+  /* TODO: Confirm exact quote text size/line-height from design tokens. */
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.successAuthor {
+  margin-top: auto;
+}
+
+.successAuthorName {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1d2026;
+}
+
+.successAuthorRole {
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: #595959;
+}
+
+@media (max-width: 1024px) {
+  .successContainer {
+    padding: 80px 24px 80px;
+  }
+
+  .successHeader {
+    column-gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .successContainer {
+    padding: 72px 18px 72px;
+  }
+
+  .successHeader {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 16px;
+  }
+
+  .successSubtitle {
+    max-width: none;
+  }
+
+  .successCards {
+    grid-template-columns: 1fr;
+  }
+
+  .successCard {
+    min-height: 210px;
+  }
+}
+
+@media (max-width: 480px) {
+  .successContainer {
+    padding: 64px 16px 64px;
+  }
+
+  .successTitle {
+    font-size: 1.75rem;
+  }
+
+  .successQuote {
+    font-size: 0.9rem;
+  }
+}
