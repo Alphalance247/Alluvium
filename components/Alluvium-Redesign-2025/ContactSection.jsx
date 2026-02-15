@@ -151,7 +151,7 @@ const ContactSection = ({ withLines = true }) => {
     } catch (error) {
       addToast(
         error.response?.data?.error ||
-          "Oops something went wrong. Please try again.",
+        "Oops something went wrong. Please try again.",
         {
           appearance: "error",
         }
