@@ -13,6 +13,10 @@ import SeamlessAtlassian from "components/Alluvium-Redesign-2026/seamlessAtlassi
 import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 import Service from "components/Alluvium-Redesign-2026/service";
 import StartScaling from "components/Alluvium-Redesign-2026/StartScaling";
+import SWPHero from "components/Alluvium-Redesign-2026/SWPHero";
+import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
+import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import { badges } from "data";
 
 const Home = () => {
   return (
@@ -35,7 +39,10 @@ const Home = () => {
             content="Atlassian Solution Partner, Atlassian services, ITSM solutions, Jira Service Management,  Confluence, Jira Software, Bitbucket, DevOps tools, Agile workflows, Cloud migration, workflow  automation, project management tools, Atlassian partner US, Atlassian partner UK, Atlassian  partner Nigeria, ITSM Atlassian consultant, enterprise collaboration tools."
           />
         </Head>
-        <Hero />
+        {/* <Hero /> */}
+        <SWPHero />
+        <Badges variant={"default"} badgesData={badges} />
+        <Lines variant="default" />
         <CaseStudies />
         <AboutSection />
         <SeamlessAtlassian />

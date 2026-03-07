@@ -15,7 +15,7 @@ export default function Service() {
                 Zero-Downtime Transitions
               </h3>
 
-              <p className={styles.serviceBody}>
+              <p className={styles.serviceBodyNil}>
                 Move to the cloud with total data integrity and zero disruption
                 to your daily operations.
               </p>
@@ -42,8 +42,8 @@ export default function Service() {
               {/* TODO: Replace placeholder with final ITSM flow asset when available. */}
               <Image
                 src="/assets/Alluvium-Redesign-2026/home/down.png"
-                width={509}
-                height={248}
+                width={300}
+                height={258}
                 alt="downtown"
               />
             </article>
