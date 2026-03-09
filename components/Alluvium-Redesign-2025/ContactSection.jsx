@@ -124,7 +124,7 @@ const ContactSection = ({ withLines = true }) => {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       if (response.status === 200 || response.status === 201) {
@@ -151,10 +151,10 @@ const ContactSection = ({ withLines = true }) => {
     } catch (error) {
       addToast(
         error.response?.data?.error ||
-        "Oops something went wrong. Please try again.",
+          "Oops something went wrong. Please try again.",
         {
           appearance: "error",
-        }
+        },
       );
       console.log(error.response?.data?.error);
     } finally {
@@ -275,6 +275,7 @@ const ContactSection = ({ withLines = true }) => {
               </div>
             </div>
           </div>
+
           <div className={styles.section2}>
             <form onSubmit={onsubmit} action="">
               <div className={styles.contact_form}>

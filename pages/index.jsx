@@ -41,8 +41,10 @@ const Home = () => {
         </Head>
         {/* <Hero /> */}
         <SWPHero />
-        <Badges variant={"default"} badgesData={badges} />
-        <Lines variant="default" />
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <Badges variant={"sub-default"} badgesData={badges} />
+        </div>
+        <Lines variant="sub-default" />
         <CaseStudies />
         <AboutSection />
         <SeamlessAtlassian />

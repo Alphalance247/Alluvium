@@ -2,9 +2,6 @@ import React from "react";
 import styles from "../../styles/AlluviumRedesign2026/swp/hero.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
-import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
-import { badges } from "data";
 
 export default function SWPHero() {
   return (
@@ -37,8 +34,8 @@ export default function SWPHero() {
         <div className={styles.swpHeroRight}>
           <Image
             src="/assets/Alluvium-Redesign-2026/home/shapes.png"
-            width={1030}
-            height={900}
+            width={941}
+            height={800}
             alt=""
           />
         </div>

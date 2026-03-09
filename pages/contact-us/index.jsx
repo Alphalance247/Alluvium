@@ -1,15 +1,11 @@
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
 import Layout from "components/layout";
 import styles from "../../styles/contact-us.module.scss";
-import Image from "next/image";
-import Button from "components/atlassian-service-reuse/Button";
-import ConsutomerConsultation from "components/consutomerConsultation";
-import Link from "next/link";
 import ContactSection from "components/Alluvium-Redesign-2025/ContactSection";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import CalendlyWidget from "components/calendlyWidget";
 import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 import Head from "next/head";
+import FormSection from "components/Alluvium-Redesign-2026/formSection";
 
 const ContactUs = () => {
   const data = [
@@ -96,13 +92,14 @@ const ContactUs = () => {
       </div>
       <div className={styles.booking}>
         <div className={styles.book_a_call}>
-          <div>
+          {/* <div>
             <h1>Speak to an Atlassian Solution Partner.</h1>
             <p>
               Contact Alluvium in the US, UK, or Nigeria for Atlassian
               consulting, licensing, or cloud migration support.
             </p>
-          </div>
+          </div> */}
+          <FormSection />
           {/* className="container-fluid my-5" */}
           <section id="schedule-a-call" className={styles.widget}>
             <CalendlyWidget />

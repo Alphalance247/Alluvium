@@ -12,7 +12,7 @@ export default function AboutSection() {
               {/* TODO: Replace placeholder with Tishe & Babs image from the 2026 route when the final asset path is confirmed. */}
 
               <Image
-                src="/assets/Alluvium-Redesign-2026/home/tishe&babs.png"
+                src="/assets/Alluvium-Redesign-2026/home/HrTools.png"
                 alt="Alluvium team members collaborating"
                 width={562}
                 height={434}
