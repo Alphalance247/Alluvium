@@ -35,7 +35,7 @@ const Home = () => {
         </Head>
         {/* <Hero /> */}
         <SWPHero />
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1260px", margin: "0 auto" }}>
           <Badges variant={"sub-default"} badgesData={badges} />
         </div>
         <Lines variant="sub-default" />

@@ -11,6 +11,11 @@
     border-right: 1px solid #f0f0f0;
   }
 
+  &--sub-default {
+    border-left: 1px solid #f0f0f0;
+    border-right: 1px solid #f0f0f0;
+  }
+
   @media screen and (max-width: 768px) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

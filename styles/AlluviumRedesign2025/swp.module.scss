@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   //   background: linear-gradient(135deg, #003d82 0%, #0a5ba8 100%);
-  background: url("/assets/Alluvium-Redesign-2026/home/hero.png") no-repeat;
+  background: url("/assets/redesign-2025/home/hero.png") no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -16,7 +16,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("/assets/Alluvium-Redesign-2026/home/eclipse.png");
+  background: url("/assets/redesign-2025/home/eclipse.png");
   background-size: cover;
   background-position: center;
 }
@@ -36,13 +36,14 @@
   align-items: center;
 
   @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 48px;
     padding: 0 24px;
   }
 
   @media (max-width: 640px) {
     gap: 32px;
+    flex-direction: column;
     padding: 0 16px;
   }
 }

@@ -33,7 +33,7 @@ export default function SWPHero() {
         {/* Right Images Grid */}
         <div className={styles.swpHeroRight}>
           <Image
-            src="/assets/Alluvium-Redesign-2026/home/shapes.png"
+            src="/assets/redesign-2025/home/shapes.png"
             width={941}
             height={800}
             alt=""
