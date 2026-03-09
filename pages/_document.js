@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
             data-public-key="pk_fd206eefacbe3bc36ef10b8742ef49b0"
           ></script>
 
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
                 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
                 })();
               `,
             }}
-          />
+          /> */}
         </Head>
         <body>
           <Main />

@@ -7,6 +7,10 @@ import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSoluti
 import Impact from "components/Alluvium-Redesign-2025/ourImpact";
 import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
 import Banner from "./help-center/component/banner";
+import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
+import { badges } from "data";
+import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import SWPHero from "components/Alluvium-Redesign-2025/swpHero";
 
 const Home = () => {
   return (
@@ -29,7 +33,12 @@ const Home = () => {
             content="Atlassian Solution Partner, Atlassian services, ITSM solutions, Jira Service Management,  Confluence, Jira Software, Bitbucket, DevOps tools, Agile workflows, Cloud migration, workflow  automation, project management tools, Atlassian partner US, Atlassian partner UK, Atlassian  partner Nigeria, ITSM Atlassian consultant, enterprise collaboration tools."
           />
         </Head>
-        <Hero />
+        {/* <Hero /> */}
+        <SWPHero />
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <Badges variant={"sub-default"} badgesData={badges} />
+        </div>
+        <Lines variant="sub-default" />
         <Expertise />
         <AtlassianSolution />
         <Banner />
