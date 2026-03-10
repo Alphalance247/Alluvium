@@ -47,7 +47,7 @@ const FormSection = () => {
     e.preventDefault();
     const { firstName, lastName, phone, jobTitle, email, message } = formData;
 
-    if (!firstName || !lastName || !phone) {
+    if (!firstName || !phone) {
       addToast("All fields marked with asterisks are required", {
         appearance: "error",
       });
