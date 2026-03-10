@@ -2,8 +2,6 @@ import Layout from "components/layout";
 import Head from "next/head";
 import SwpHero from "./components/hero";
 import GetInTouch from "./components/getInTouch";
-import CustomerStory from "./components/customerStory";
-import MeetBoard from "./components/meetBoard";
 
 const SWP = () => {
   return (
