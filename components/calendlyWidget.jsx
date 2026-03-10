@@ -55,8 +55,7 @@
 import { useEffect, useRef } from "react";
 import Script from "next/script";
 
-const CALENDLY_URL =
-  "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3pMmWAmChSLCMaEk_8VEJodFhMSuY7hYTCqIVTeORIKpO4Z9aGHDbDAjz7_Q4Sd2J4lJy5Fz2i?gv=true"; // replace with your Calendly link
+const CALENDLY_URL = "https://calendly.com/taiwoojo"; // replace with your Calendly link
 
 const CalendlyWidget = () => {
   const containerRef = useRef(null);
@@ -82,7 +81,10 @@ const CalendlyWidget = () => {
         strategy="afterInteractive"
         onLoad={init}
       />
-      <div ref={containerRef} style={{ minWidth: "320px", height: "700px" }} />
+      <div
+        ref={containerRef}
+        style={{ minWidth: "320px", height: "700px", marginTop: "-3rem" }}
+      />
     </>
   );
 };

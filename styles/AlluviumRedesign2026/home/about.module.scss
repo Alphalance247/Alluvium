@@ -1,0 +1,113 @@
+.aboutSection {
+  /* TODO: Confirm exact section background color if different globally. */
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.aboutContainer {
+  /* TODO: Confirm exact max-width from layout grid. */
+  max-width: 1200px;
+  margin: 0 auto;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  width: 100%;
+  padding: 80px 24px;
+}
+
+.aboutLayout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.aboutImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.aboutHeading {
+  margin: 0 0 16px;
+  color: #141414;
+  font-weight: 600;
+  /* TODO: Confirm exact heading size/line-height from design tokens. */
+  font-size: 2rem;
+  font-family: "Grotesk";
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.aboutBody {
+  margin: 0;
+  color: #4b5563;
+  /* TODO: Confirm exact body text size/line-height from design tokens. */
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.aboutBody .aboutBodyStrong {
+  font-weight: 500;
+  color: #1f1f1f;
+}
+
+@media (max-width: 1024px) {
+  .aboutContainer {
+    padding: 64px 24px;
+  }
+
+  .aboutContentColumn {
+    padding-right: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 56px 18px;
+  }
+
+  .aboutCard {
+    border-radius: 18px;
+  }
+
+  .aboutLayout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .aboutImageColumn {
+    padding: 24px 24px 0;
+  }
+
+  .aboutContentColumn {
+    padding: 24px 24px 32px;
+  }
+
+  .aboutHeading {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutContainer {
+    padding: 48px 16px;
+  }
+
+  .aboutImageColumn {
+    padding: 20px 20px 0;
+  }
+
+  .aboutContentColumn {
+    padding: 20px 20px 28px;
+  }
+
+  .aboutHeading {
+    font-size: 22px;
+  }
+
+  .aboutBody {
+    font-size: 13px;
+  }
+}
