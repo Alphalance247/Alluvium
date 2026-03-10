@@ -13,10 +13,9 @@ const GetInTouch = () => {
   const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    company: "",
+    name: "",
     email: "",
+    phone: "",
   });
   const { isSticky, sectionRef } = useSticky();
 
@@ -31,12 +30,9 @@ const GetInTouch = () => {
 
     axios
       .post(
-        `https://site-api.alluvium.net/utilities/wps-event/`,
+        `https://ssswuzxlxj5rkjd4bjmkfq4aii0dkkqt.lambda-url.us-east-1.on.aws/`,
         {
-          first_name_1: form.firstName,
-          last_name_4: form.lastName,
-          email_5: form?.email,
-          company_3: form?.company,
+          ...form,
         },
         { timeout: 40000 },
       )
@@ -160,38 +156,23 @@ const GetInTouch = () => {
         >
           <div className={styles.card}>
             <h3 className={styles.card__title}>
-              Let's grab a coffee <span>😉</span>
+              Want Free Professional Headshot? Fill the Form Below{" "}
+              <span>😉</span>
             </h3>
-            <p className={styles.card__hint}>
-              Can't go? Sign up here and let's have a virtual coffee chat!
-            </p>
+            <p className={styles.card__hint}></p>
 
             <form onSubmit={handleSubmit} aria-label="get-in-touch-form">
               <div className={styles.formGroup}>
                 <Input
-                  text={"First Name"}
-                  name="firstName"
-                  required
-                  value={form.firstName}
+                  id="fullname"
+                  label="fullname"
+                  text="Full Name "
+                  name="name"
+                  type="text"
+                  value={form.name || ""}
+                  placeholder=""
                   onChange={handleChange}
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <Input
-                  name="lastName"
-                  text={"Last Name"}
-                  value={form.lastName}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <Input
-                  text={"Company name"}
-                  name="company"
-                  value={form.company}
-                  onChange={handleChange}
+                  // errorF={formError.first_name}
                 />
               </div>
 
@@ -202,6 +183,20 @@ const GetInTouch = () => {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <Input
+                  id="phone__number"
+                  label="phone_number"
+                  text="Phone Number "
+                  name="phone"
+                  type="text"
+                  value={form.phone || ""}
+                  placeholder=""
+                  onChange={handleChange}
+                  // errorF={formError.first_name}
                 />
               </div>
 

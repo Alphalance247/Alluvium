@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "components/layout";
-import Hero from "components/Alluvium-Redesign-2025/hero";
 import Expertise from "components/Alluvium-Redesign-2025/expertise";
 import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSolution";
 import Impact from "components/Alluvium-Redesign-2025/ourImpact";
