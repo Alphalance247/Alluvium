@@ -43,7 +43,7 @@ const Home = () => {
         <AboutSection />
         <SeamlessAtlassian />
         <Service />
-        <SuccessStory />
+        {/* <SuccessStory /> */}
 
         {/* <Expertise />
         <AtlassianSolution />

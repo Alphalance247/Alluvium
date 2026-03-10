@@ -156,14 +156,14 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <section className={styles.discovery}>
+      {/* <section className={styles.discovery}>
         <div className={styles.discovery__content}>
           <h2>
             Ready to Modernize Your Service <br /> Environment?
           </h2>
           <Button>Schedule a Discovery Call</Button>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className={`${styles.badges}`}>
         <div className={`${styles.badges__border}`}>

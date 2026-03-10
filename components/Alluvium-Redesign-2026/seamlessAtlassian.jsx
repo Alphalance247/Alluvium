@@ -1,6 +1,7 @@
 // components/Alluvium-Redesign-2026/seamlessAtlassian.tsx
 import React from "react";
 import styles from "../../styles/AlluviumRedesign2026/home/atlassianSeamless.module.scss";
+import Link from "next/link";
 
 export default function SeamlessAtlassian() {
   return (
@@ -55,9 +56,11 @@ export default function SeamlessAtlassian() {
         </div>
 
         <div className={styles.seamlessCta}>
-          <button type="button" className={styles.seamlessButton}>
-            Get Started Today
-          </button>
+          <Link href="/contact-us">
+            <button type="button" className={styles.seamlessButton}>
+              Get Started Today
+            </button>
+          </Link>
         </div>
       </div>
     </section>
