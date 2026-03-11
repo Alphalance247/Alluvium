@@ -49,7 +49,7 @@ const ConsutomerConsultation = ({ variant = "default" }) => {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(formData),
-        }
+        },
       );
 
       let result = await response.json();
@@ -74,7 +74,7 @@ const ConsutomerConsultation = ({ variant = "default" }) => {
 
   return (
     <ToastProvider>
-      <div>
+      <div id="consultation-form">
         <div className={`${styles.content} ${styles[`content--${variant}`]}`}>
           <div>
             <h2>Let’s get in touch!</h2>

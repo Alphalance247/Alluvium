@@ -1,0 +1,439 @@
+.followUpHeroWrapper {
+  width: 1440px;
+  height: 826px;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 1440px) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1440 / 826;
+  }
+}
+
+.followUpHeroOverlay {
+  width: 1440px;
+  height: 826px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: rgba(5, 31, 73, 0.2);
+
+  @media (max-width: 1440px) {
+    width: 100%;
+  }
+}
+
+.followUpHeroBlurBg1 {
+  width: 978px;
+  height: 956px;
+  left: -80px;
+  top: -91px;
+  position: absolute;
+  background: rgba(59, 130, 246, 0.6);
+  border-radius: 9999px;
+  filter: blur(165px);
+
+  @media (max-width: 1440px) {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+.followUpHeroCircle1 {
+  width: 384px;
+  height: 463px;
+  left: 1469px;
+  top: 523px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+
+  @media (max-width: 1440px) {
+    left: auto;
+    display: none;
+  }
+}
+
+.followUpHeroCircle2 {
+  width: 384px;
+  height: 384px;
+  left: 1495px;
+  top: 550px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+
+  @media (max-width: 1440px) {
+    left: auto;
+    display: none;
+  }
+}
+
+.followUpHeroCircle3 {
+  width: 320px;
+  height: 320px;
+  left: 1523px;
+  top: 590px;
+  position: absolute;
+  border-radius: 9999px;
+  border: 3px solid rgba(255, 255, 255, 0.6);
+
+  @media (max-width: 1440px) {
+    left: auto;
+    display: none;
+  }
+}
+
+.followUpHeroCard {
+  width: 1349px;
+  height: 742px;
+  left: 45px;
+  top: 42px;
+  position: absolute;
+  background: rgb(30, 58, 138);
+  border-radius: 35px;
+  overflow: hidden;
+
+  @media (max-width: 1440px) {
+    width: calc(100% - 90px);
+    left: 45px;
+    height: auto;
+    aspect-ratio: 1349 / 742;
+  }
+
+  @media (max-width: 768px) {
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+}
+
+.followUpHeroCardBlur1 {
+  width: 778px;
+  height: 757px;
+  left: 1290px;
+  top: 316px;
+  position: absolute;
+  background: rgba(59, 130, 246, 0.9);
+  border-radius: 9999px;
+  filter: blur(165px);
+
+  @media (max-width: 1440px) {
+    display: none;
+  }
+}
+
+.followUpHeroCardBlur2 {
+  width: 535px;
+  height: 531px;
+  left: -106px;
+  top: -203px;
+  position: absolute;
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 9999px;
+  filter: blur(165px);
+
+  @media (max-width: 1440px) {
+    display: none;
+  }
+}
+
+.followUpHeroImage {
+  width: 629px;
+  height: 550px;
+  left: 676px;
+  top: 60px;
+  position: absolute;
+  border-radius: 32px;
+  object-fit: cover;
+
+  @media (max-width: 1440px) {
+    width: 100%;
+    left: auto;
+    right: 0;
+    width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: auto;
+  }
+}
+
+.followUpHeroImageGallery {
+  width: 619px;
+  height: 208px;
+  padding: 20px 14px;
+  left: 680px;
+  top: 428px;
+  position: absolute;
+  background: white;
+  border-radius: 47px;
+  border-bottom: 5px solid #000;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  @media (max-width: 1440px) {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    padding: 16px 12px;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    border-bottom: 3px solid #000;
+  }
+}
+
+.followUpHeroGalleryContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 12px;
+  }
+}
+
+.followUpHeroGalleryImage {
+  width: 176px;
+  height: 160px;
+  border-radius: 24px;
+  object-fit: cover;
+
+  @media (max-width: 1024px) {
+    width: 150px;
+    height: 140px;
+  }
+
+  @media (max-width: 768px) {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 640px) {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+  }
+}
+
+.followUpHeroContent {
+  width: 666px;
+  left: 48px;
+  top: 189px;
+  position: absolute;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+
+  @media (max-width: 1440px) {
+    width: 45%;
+    left: 40px;
+    gap: 24px;
+  }
+
+  @media (max-width: 768px) {
+    width: calc(100% - 80px);
+    left: 40px;
+    top: 40px;
+    gap: 20px;
+  }
+
+  @media (max-width: 640px) {
+    left: 20px;
+    width: calc(100% - 40px);
+    gap: 16px;
+  }
+}
+
+.followUpHeroContentGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.followUpHeroTextGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.followUpHeroHeading {
+  font-size: 56px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: white;
+  margin: 0;
+  letter-spacing: -1px;
+  font-family: "Mena Grotesk", sans-serif;
+
+  @media (max-width: 1440px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 28px;
+  }
+}
+
+.followUpHeroLocationBox {
+  padding: 28px 28px;
+  background: white;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  min-width: fit-content;
+}
+
+.followUpHeroLocationText {
+  font-size: 40px;
+  font-weight: 800;
+  color: rgb(30, 58, 138);
+  margin: 0;
+  font-family: "Mena Grotesk", sans-serif;
+  line-height: 1.2;
+
+  @media (max-width: 1024px) {
+    font-size: 32px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 24px;
+  }
+}
+
+.followUpHeroDescription {
+  width: 100%;
+  max-width: 547px;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+
+  @media (max-width: 1024px) {
+    font-size: 17px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.followUpHeroNote {
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+
+  @media (max-width: 640px) {
+    font-size: 11px;
+  }
+}
+
+.followUpHeroButtonGroup {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}
+
+.followUpHeroButton {
+  padding: 12px 24px;
+  background: rgb(217, 119, 6);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 -2px 4px 0 rgba(255, 255, 255, 0.2),
+    0 1px 2px 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.05),
+    inset 0 2px 1px 0 rgba(255, 255, 255, 0.2);
+  outline: 1px solid rgba(255, 255, 255, 0.1);
+  outline-offset: -1px;
+  font-family: "Graphik", sans-serif;
+  line-height: 1.5;
+
+  &:hover {
+    background: rgb(180, 83, 9);
+    box-shadow:
+      0 -2px 4px 0 rgba(255, 255, 255, 0.25),
+      0 8px 16px 0 rgba(217, 119, 6, 0.3),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.1),
+      inset 0 2px 1px 0 rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow:
+      0 -2px 4px 0 rgba(255, 255, 255, 0.2),
+      0 1px 2px 0 rgba(0, 0, 0, 0.1),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.05),
+      inset 0 2px 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+}

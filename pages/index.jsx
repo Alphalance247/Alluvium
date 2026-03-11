@@ -1,16 +1,16 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "components/layout";
-import CaseStudies from "components/Alluvium-Redesign-2026/caseStudies";
-import AboutSection from "components/Alluvium-Redesign-2026/about";
-import SeamlessAtlassian from "components/Alluvium-Redesign-2026/seamlessAtlassian";
-import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
-import Service from "components/Alluvium-Redesign-2026/service";
-import StartScaling from "components/Alluvium-Redesign-2026/StartScaling";
-import SWPHero from "components/Alluvium-Redesign-2026/SWPHero";
+import Expertise from "components/Alluvium-Redesign-2025/expertise";
+import AtlassianSolution from "components/Alluvium-Redesign-2025/atlassianSolution";
+import Impact from "components/Alluvium-Redesign-2025/ourImpact";
+import MarketPlacePlugin from "components/Alluvium-Redesign-2025/marketPlacePlugin";
+import Banner from "./help-center/component/banner";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
-import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 import { badges } from "data";
+import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import SWPHero from "components/Alluvium-Redesign-2025/swpHero";
+import FollowUpHero from "components/swpBanner/followUpHero";
 
 const Home = () => {
   return (
@@ -34,18 +34,13 @@ const Home = () => {
           />
         </Head>
         {/* <Hero /> */}
+        {/* <FollowUpHero /> */}
         <SWPHero />
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "1260px", margin: "0 auto" }}>
           <Badges variant={"sub-default"} badgesData={badges} />
         </div>
         <Lines variant="sub-default" />
-        <CaseStudies />
-        <AboutSection />
-        <SeamlessAtlassian />
-        <Service />
-        {/* <SuccessStory /> */}
-
-        {/* <Expertise />
+        <Expertise />
         <AtlassianSolution />
         <Banner />
         <Impact />
