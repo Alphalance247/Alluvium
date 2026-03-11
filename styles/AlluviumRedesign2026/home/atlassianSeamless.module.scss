@@ -1,0 +1,203 @@
+/* styles/AlluviumRedesign2026/home/atlassianSeamless.module.scss */
+
+.seamlessSection {
+  /* TODO: Confirm exact section background color if different globally. */
+  background: #ffffff;
+  border-top: 1px solid #f0f0f0;
+}
+
+.seamlessContainer {
+  /* TODO: Confirm exact max-width from layout grid. */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 96px 4rem 96px;
+  border-left: 1px solid #f0f0f0;
+  border-right: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.seamlessHeader {
+  text-align: center;
+}
+
+.seamlessBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  /* TODO: Confirm exact badge border and fill colors. */
+  border: 1px solid #f3b270;
+  background: #fff7ed;
+  color: #9a5a1b;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.seamlessTitle {
+  margin: 0;
+  color: #141414;
+  font-weight: 500;
+  /* TODO: Confirm exact heading size/line-height from design tokens. */
+  font-size: 2rem;
+  font-family: "Grotesk";
+  line-height: 1.25;
+}
+
+.seamlessTitleEmphasis {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.seamlessSteps {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 56px;
+  row-gap: 40px;
+  /* Align cards visually with text starting at the same height. */
+  align-items: flex-start;
+}
+
+.seamlessStep {
+  text-align: left;
+  position: relative;
+  padding: 0 0 0 2rem;
+  border-left: 1px solid #e5e7eb;
+}
+
+// .seamlessStep:not(:last-child)::after {
+//   content: "";
+//   position: absolute;
+//   top: 6px;
+//   right: 0;
+//   bottom: 6px;
+//   /* TODO: Confirm exact divider color. */
+//   border-right: 1px solid #e5e7eb;
+// }
+
+.seamlessStepNumber {
+  /* TODO: Confirm exact number color and size. */
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #009bc0;
+  margin-bottom: 24px;
+}
+
+.seamlessStepContent {
+  max-width: 260px;
+}
+
+.seamlessStepTitle {
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.seamlessStepBody {
+  margin: 0;
+  /* TODO: Confirm exact body text size/line-height from design tokens. */
+  font-size: 14px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.seamlessCta {
+  margin-top: 72px;
+  text-align: center;
+}
+
+.seamlessButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  /* TODO: Confirm exact button color and radius. */
+  background: #ea7a2a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.seamlessButton:hover {
+  /* TODO: Confirm exact hover color. */
+  background: #d9681e;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+  .seamlessContainer {
+    padding: 80px 24px 80px;
+  }
+
+  .seamlessSteps {
+    column-gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .seamlessContainer {
+    padding: 72px 18px 72px;
+  }
+
+  .seamlessTitle {
+    font-size: 26px;
+  }
+
+  .seamlessSteps {
+    grid-template-columns: 1fr;
+    row-gap: 32px;
+  }
+
+  .seamlessStep {
+    padding-right: 0;
+  }
+
+  .seamlessStep:not(:last-child)::after {
+    border-right: none;
+    bottom: auto;
+    width: 100%;
+    right: auto;
+    left: 0;
+    /* TODO: Confirm exact mobile divider behavior (if any). */
+    border-bottom: 1px solid #e5e7eb;
+    margin-top: 24px;
+  }
+
+  .seamlessStepContent {
+    max-width: none;
+  }
+
+  .seamlessCta {
+    margin-top: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seamlessContainer {
+    padding: 64px 16px 64px;
+  }
+
+  .seamlessTitle {
+    font-size: 24px;
+  }
+
+  .seamlessStepNumber {
+    font-size: 28px;
+  }
+
+  .seamlessButton {
+    width: 100%;
+    max-width: 260px;
+  }
+}
