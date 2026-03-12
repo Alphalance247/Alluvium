@@ -55,7 +55,7 @@
 import { useEffect, useRef } from "react";
 import Script from "next/script";
 
-const CALENDLY_URL = "https://calendly.com/taiwoojo"; // replace with your Calendly link
+const CALENDLY_URL = "https://calendly.com/taiwoojo/30min?back=1&month=2026-03"; // replace with your Calendly link
 
 const CalendlyWidget = () => {
   const containerRef = useRef(null);
