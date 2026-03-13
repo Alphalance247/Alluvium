@@ -24,9 +24,58 @@ const GetInTouch = () => {
     setForm((s) => ({ ...s, [name]: value }));
   };
 
+  const isWorkEmail = (email) => {
+    const value = (email || "").trim().toLowerCase();
+    if (!value) return false;
+    const atIndex = value.lastIndexOf("@");
+    if (atIndex <= 0) return false;
+
+    const domain = value.slice(atIndex + 1);
+    if (!domain || domain.includes(" ")) return false;
+
+    const personalDomains = new Set([
+      "gmail.com",
+      "googlemail.com",
+      "yahoo.com",
+      "yahoo.co.uk",
+      "yahoo.ca",
+      "outlook.com",
+      "hotmail.com",
+      "live.com",
+      "msn.com",
+      "aol.com",
+      "icloud.com",
+      "me.com",
+      "mac.com",
+      "protonmail.com",
+      "proton.me",
+      "pm.me",
+      "gmx.com",
+      "gmx.net",
+      "yandex.com",
+      "yandex.ru",
+      "mail.com",
+      "fastmail.com",
+      "hey.com",
+      "zoho.com",
+    ]);
+
+    return !personalDomains.has(domain);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (!isWorkEmail(form.email)) {
+      addToast("Please use your work email address (no personal emails).", {
+        appearance: "error",
+        autoDismiss: true,
+        autoDismissTimeout: 5000,
+      });
+      setLoading(false);
+      return;
+    }
 
     axios
       .post(
@@ -44,7 +93,7 @@ const GetInTouch = () => {
             autoDismissTimeout: 5000, // Dismiss after 5 seconds
           });
           setLoading(false);
-          setForm({ firstName: "", lastName: "", company: "", email: "" });
+          setForm({ name: "", email: "", phone: "" });
         } else {
           addToast(
             "Unexpected response from server. Please try again or contact Admin",
