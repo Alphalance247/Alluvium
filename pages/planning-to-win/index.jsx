@@ -1,4 +1,5 @@
 import Layout from "components/layout";
+import Head from "next/head";
 import LeadForm from "pages/event/itsm-solutions/form/leadform";
 const InfoStrategyMirror = () => {
   return (
