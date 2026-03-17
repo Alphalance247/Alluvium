@@ -1,0 +1,129 @@
+// Variables
+$color-zinc-300: rgba(212, 212, 216, 0.8);
+$color-zinc-600: #52525b;
+$color-slate-900: #0f172a;
+$color-amber-600: #d97706;
+$color-sky-200: #bae6fd;
+$color-white: #ffffff;
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 1280px;
+  margin: 0 auto;
+  outline: 1px solid $color-zinc-300;
+  outline-offset: -1px;
+  overflow: hidden;
+  background: $color-white;
+}
+
+.contentSide {
+  flex: 1;
+  padding: 96px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: 1px solid $color-zinc-300;
+
+  span {
+    color: $color-zinc-600;
+    font-family: "Geist Mono", monospace;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.title {
+  max-width: 600px;
+  color: $color-slate-900;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.description {
+  max-width: 540px;
+  color: $color-zinc-600;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: $color-amber-600;
+  color: $color-white;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background-color: darken($color-amber-600, 5%);
+  }
+}
+
+.visualSide {
+  position: relative;
+  width: 482px;
+  background-color: $color-sky-200;
+  overflow: hidden;
+}
+
+.bgImage {
+  position: absolute;
+  width: 862px;
+  left: -190px;
+  top: -212px;
+  opacity: 0.7;
+}
+
+.blurOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba($color-sky-200, 0.8);
+  backdrop-filter: blur(100px);
+}
+
+.partnerCard {
+  position: absolute;
+  background: $color-white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  &.bottomLogo {
+    left: 40px;
+    bottom: 40px;
+    padding: 16px;
+  }
+
+  &.topRightBadge {
+    right: 40px;
+    top: 40px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #fafafa;
+  }
+}
+
+.verticalDivider {
+  width: 1px;
+  height: 40px;
+  background: #cbd5e1;
+}
