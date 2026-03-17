@@ -6,8 +6,6 @@ import Button from "components/atlassian-service-reuse/Button";
 import Modal from "./modal";
 import { useState } from "react";
 import CalendlyWidget from "components/calendlyWidget";
-import LeadForm from "pages/event/itsm-solutions/form/leadform";
-import { useRef } from "react";
 import useSticky from "components/customhooks/UseSticky";
 import Input from "components/licence-component/inputP";
 import axios from "axios";
@@ -24,9 +22,58 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const { addToast } = useToasts();
 
+  const isWorkEmail = (email) => {
+    const value = (email || "").trim().toLowerCase();
+    if (!value) return false;
+    const atIndex = value.lastIndexOf("@");
+    if (atIndex <= 0) return false;
+
+    const domain = value.slice(atIndex + 1);
+    if (!domain || domain.includes(" ")) return false;
+
+    const personalDomains = new Set([
+      "gmail.com",
+      "googlemail.com",
+      "yahoo.com",
+      "yahoo.co.uk",
+      "yahoo.ca",
+      "outlook.com",
+      "hotmail.com",
+      "live.com",
+      "msn.com",
+      "aol.com",
+      "icloud.com",
+      "me.com",
+      "mac.com",
+      "protonmail.com",
+      "proton.me",
+      "pm.me",
+      "gmx.com",
+      "gmx.net",
+      "yandex.com",
+      "yandex.ru",
+      "mail.com",
+      "fastmail.com",
+      "hey.com",
+      "zoho.com",
+    ]);
+
+    return !personalDomains.has(domain);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (!isWorkEmail(form.email)) {
+      addToast("Please use your work email address (no personal emails).", {
+        appearance: "error",
+        autoDismiss: true,
+        autoDismissTimeout: 5000,
+      });
+      setLoading(false);
+      return;
+    }
 
     axios
       .post(
@@ -128,11 +175,14 @@ const Home = () => {
         </Modal>
         <div className={styles?.hr__vertical__subhead}>
           <div className={styles?.hr__hero}>
-            <p className={styles.hr__p}>ATLASSIAN HR DEMO</p>
-            <h2 className={styles.hr__h2}>Optimizing HR Workflows</h2>
+            <p className={styles.hr__p}>SWP DEMO</p>
+            <h2 className={styles.hr__h2}>Meet Us at SWP Summit 2026</h2>
             <p className={styles.hr__para}>
-              Leverage insights across onboarding, employee engagement, assets
-              management and retention with Atlassian’s HR Analytics solutions.
+              Discover how to build a Strategic Workforce Planning model that
+              tracks the positions, timeline, and costs needed to deliver your
+              strategy. Visit us for a live demo and complimentary workforce
+              planning health check, plus get your free professional headshot by
+              registering below!
             </p>
           </div>
 
