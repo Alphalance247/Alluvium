@@ -1,0 +1,148 @@
+$color-zinc-100: #f4f4f5;
+$color-zinc-300: #d4d4d8;
+$color-slate-900: #0f172a;
+$color-cyan-600: #0891b2;
+$color-orange-200: #fed7aa;
+
+.discoverySection {
+  max-width: 1280px;
+  width: 100%;
+  margin: auto;
+  padding: 80px 60px;
+  border-left: 1px solid rgba($color-zinc-300, 0.8);
+  border-right: 1px solid rgba($color-zinc-300, 0.8);
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    border: none;
+    padding: 40px 16px;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 64px;
+  align-items: flex-start;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Left Side: Visual / Graphic */
+.visualSide {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  max-width: 506px;
+  height: 540px;
+  background-color: $color-orange-200;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 640px) {
+    height: 400px;
+  }
+}
+
+.blurLayer {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(100px);
+  background: rgba($color-orange-200, 0.4);
+}
+
+.graphicPlaceholder {
+  position: relative;
+  z-index: 2;
+  width: 384px;
+  height: 384px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  color: $color-cyan-600;
+}
+
+/* Right Side: Content & Steps */
+.contentSide {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  color: $color-slate-900;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 48px;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepCard {
+  display: flex;
+  gap: 24px;
+  padding: 16px 24px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid $color-zinc-100;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+  transition: all 0.3s ease;
+
+  &.alternate {
+    background: #f8fafc; // slate-50
+  }
+
+  &:hover {
+    border-color: $color-cyan-600;
+    transform: translateX(5px);
+  }
+}
+
+.stepNumber {
+  color: $color-cyan-600;
+  font-family: "Geist Mono", monospace;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.stepInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  h3 {
+    color: $color-slate-900;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  p {
+    color: $color-slate-900;
+    opacity: 0.8;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Inter", sans-serif;
+  }
+}

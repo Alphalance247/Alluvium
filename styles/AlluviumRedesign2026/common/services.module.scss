@@ -5,37 +5,51 @@ $color-slate-900: #0f172a;
 $color-amber-600: #d97706;
 $color-sky-200: #bae6fd;
 $color-white: #ffffff;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 640px;
 
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  width: 1280px;
+  flex-direction: row; // Side-by-side on desktop
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
   outline: 1px solid $color-zinc-300;
   outline-offset: -1px;
   overflow: hidden;
   background: $color-white;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-direction: column; // Stack on tablets/phones
+    max-width: 100%;
+  }
 }
 
 .contentSide {
   flex: 1;
-  padding: 96px 80px;
+  padding: 80px 60px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 24px;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: 40px 24px;
+    gap: 20px;
+  }
 }
 
 .badge {
   display: inline-flex;
-  padding: 4px 8px;
+  align-self: flex-start;
+  padding: 4px 10px;
   border-radius: 4px;
   outline: 1px solid $color-zinc-300;
 
   span {
     color: $color-zinc-600;
     font-family: "Geist Mono", monospace;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -46,7 +60,7 @@ $color-white: #ffffff;
   max-width: 600px;
   color: $color-slate-900;
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 36px;
+  font-size: clamp(1.8rem, 5vw, 2.25rem); // Fluid typography
   font-weight: 700;
   line-height: 1.2;
 }
@@ -60,7 +74,6 @@ $color-white: #ffffff;
 }
 
 .ctaButton {
-  display: inline-block;
   padding: 12px 24px;
   background-color: $color-amber-600;
   color: $color-white;
@@ -70,60 +83,81 @@ $color-white: #ffffff;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  transition: background 0.2s ease;
+  white-space: nowrap;
 
-  &:hover {
-    background-color: darken($color-amber-600, 5%);
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%; // Full width button on small phones
   }
 }
 
 .visualSide {
   position: relative;
-  width: 482px;
+  flex-basis: 482px; // Fixed basis for desktop side
+  min-height: 500px;
   background-color: $color-sky-200;
   overflow: hidden;
+
+  @media (max-width: $breakpoint-tablet) {
+    flex-basis: auto;
+    height: 450px;
+  }
 }
 
 .bgImage {
   position: absolute;
-  width: 862px;
-  left: -190px;
-  top: -212px;
+  width: 180%; // Scaled up to cover area
+  left: -20%;
+  top: -10%;
   opacity: 0.7;
 }
 
 .blurOverlay {
   position: absolute;
   inset: 0;
-  background-color: rgba($color-sky-200, 0.8);
-  backdrop-filter: blur(100px);
+  background-color: rgba($color-sky-200, 0.6);
+  backdrop-filter: blur(80px);
 }
 
+// Floating Elements
 .partnerCard {
   position: absolute;
   background: $color-white;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 
   &.bottomLogo {
-    left: 40px;
+    left: 10%;
     bottom: 40px;
-    padding: 16px;
+    padding: 12px;
+    img {
+      max-width: 180px;
+      height: auto;
+    }
   }
 
   &.topRightBadge {
-    right: 40px;
+    right: 10%;
     top: 40px;
     padding: 8px 16px;
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #fafafa;
+
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #050b2e;
+    }
   }
 }
 
-.verticalDivider {
-  width: 1px;
-  height: 40px;
-  background: #cbd5e1;
+.featureThumb {
+  position: absolute;
+  left: 10%;
+  top: 40px;
+  border-radius: 8px;
+  width: 140px;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
