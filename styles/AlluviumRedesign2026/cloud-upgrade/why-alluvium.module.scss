@@ -74,20 +74,17 @@ $color-orange-300: #fdba74;
 
 /* Glassmorphism Icon Styles */
 .iconBox {
-  width: 56px;
-  height: 56px;
-  padding: 12px;
-  background: linear-gradient(
-    135deg,
-    rgba($color-orange-300, 0.3),
-    rgba($color-orange-300, 0.1)
-  );
+  //   background: linear-gradient(
+  //     135deg,
+  //     rgba($color-orange-300, 0.3),
+  //     rgba($color-orange-300, 0.1)
+  //   );
   border-radius: 8px;
-  border: 2px solid rgba($color-orange-300, 0.3);
+  //   border: 2px solid rgba($color-orange-300, 0.3);
   backdrop-filter: blur(30px);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
   overflow: hidden;
 }
 
