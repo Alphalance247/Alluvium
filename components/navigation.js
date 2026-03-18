@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/navigation.module.scss";
-import style from "../styles/AlluviumRedesign2025/navbar/MobileNavbar.module.scss"
+import style from "../styles/AlluviumRedesign2025/navbar/MobileNavbar.module.scss";
 import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
@@ -71,81 +71,6 @@ export default function Navigation({ theme }) {
         </div>
         {!displayMobileMenu && (
           <nav className={styles.navigation}>
-
-            {/* <ul
-              className={
-                theme === "dark" ? styles.desktopMenuDark : styles.desktopMenu
-              }
-            >
-              <li>
-                <div>
-                  <p
-                    onClick={() => toggleDropdown("company")}
-                    className={
-                      dropdownActive && currentDropdown === "company"
-                        ? styles.dropdownActive
-                        : styles.dropdownToggler
-                    }
-                  >
-                    <span>Company</span>
-                    {dropdownActive && currentDropdown === "company" ? (
-                      <MdOutlineKeyboardArrowUp
-                        size={"1.5em"}
-                        className="fw-bold text-dark"
-                      />
-                    ) : (
-                      <MdOutlineKeyboardArrowDown
-                        size={"1.5em"}
-                        className="fw-bold text-dark"
-                      />
-                    )}
-                  </p>
-                  <div
-                    className={
-                      dropdownActive && currentDropdown === "company"
-                        ? styles.dropdownDiv
-                        : styles.dropdownHidden
-                    }
-                  >
-                    <ul>
-                      <li>
-                        <a
-                          href="http://university.alluvium.net"
-                          target="_blank"
-                        >
-                          Alluvium University (AU)
-                        </a>
-                      </li>
-                      <li>
-                        <Link href="/showing-interest">Show Interest (AU)</Link>
-                      </li>
-                      <li>
-                        <Link href="/project-reel">Project Reel</Link>
-                      </li>
-                      <li>
-                        <Link href="/blogs">blogs</Link>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <Link href="/about">About Us</Link>
-              </li>
-              <li>
-                <Link href="/atlassian-services">Services</Link>
-              </li>
-
-              <li>
-                <a
-                  href="https://marketplace.atlassian.com/vendors/1218751/alluvium"
-                  target="_blank"
-                >
-                  Our Products
-                </a>
-              </li>
-            </ul> */}
             <NewNavbar />
             <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
               <Link href="/atlassian-services/support">
@@ -181,7 +106,6 @@ export default function Navigation({ theme }) {
               : styles.hideMobileMenu
           }
         >
-
           {/* <ul>
             <li>
               <Link href="/">+ Home</Link>
@@ -257,7 +181,6 @@ export default function Navigation({ theme }) {
           </Link>
         </div> */}
       </div>
-
     </div>
   );
 }

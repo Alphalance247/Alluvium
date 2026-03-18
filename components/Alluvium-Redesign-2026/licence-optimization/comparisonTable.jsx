@@ -60,7 +60,7 @@ const ComparisonTable = () => {
               const rowClass = isLast ? styles.lastRow : "";
 
               return (
-                <React.Fragment key={index}>
+                <React.Fragment key={row.feature}>
                   <div
                     className={`${styles.cell} ${styles.featureCol} ${rowClass}`}
                   >
