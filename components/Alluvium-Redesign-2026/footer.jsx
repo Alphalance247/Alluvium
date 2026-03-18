@@ -12,9 +12,18 @@ const mobilePhones = [
   { id: "", location: "Orlando", num: "+1(567)331-0070" },
 ];
 const services = [
-  { url: "atlassian-services", id: "1", name: "atlassian services" },
-  { url: "/aws-services", id: "2", name: "AWS services" },
-  { url: "/software-development", id: "3", name: "design & development" },
+  { url: "/cloud-upgrade", id: "1", name: "Cloud Upgrade" },
+  { url: "/license-optimization", id: "2", name: "License Optimization" },
+  {
+    url: "/enterprise-service-management",
+    id: "3",
+    name: "Enterprise Service Management (ESM)",
+  },
+  {
+    url: "/strategic-partnerships",
+    id: "4",
+    name: "Strategic Partnerships",
+  },
 ];
 const company = [
   { url: "/about", id: "1", name: "about us" },
@@ -138,7 +147,7 @@ const Footer = () => {
           <div className={styles.bottom_content_container}>
             <div className={styles.bottom_content}>
               {badges.map((item) => (
-                <div key={item.id} className={styles.partners}>
+                <div key={item.alt} className={styles.partners}>
                   <div className={styles.col_1}>
                     <Image
                       src={item.img}

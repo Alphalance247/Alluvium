@@ -94,6 +94,7 @@ $breakpoint-mobile: 640px;
 
   @media (max-width: $breakpoint-mobile) {
     width: 100%; // Full width button on small phones
+    font-size: 13px;
   }
 }
 
