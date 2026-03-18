@@ -114,7 +114,7 @@ const Footer = () => {
         <div className={styles.right_content}>
           <div className={styles.top_content}>
             <div className={styles.col_1}>
-              <div className={styles.col_1_title}>Services</div>
+              <div className={styles.col_1_title}>Solutions</div>
               <div className={styles.col_1_services}>
                 {services.map((item) => (
                   <Link key={item.id} href={item.url}>
