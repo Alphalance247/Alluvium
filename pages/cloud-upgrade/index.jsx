@@ -5,14 +5,16 @@ import ServicesHero from "components/Alluvium-Redesign-2026/common/servicesHero"
 import ServicesCardsSection from "components/Alluvium-Redesign-2026/common/servicesCardsSection";
 import DiscoverySection from "components/Alluvium-Redesign-2026/common/discoverySection";
 import WhyAlluvium from "components/Alluvium-Redesign-2026/cloud-upgrade/whyAlluvium";
+import SecurityCompliance from "components/Alluvium-Redesign-2026/cloud-upgrade/security";
+import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 
-const Home = () => {
+const CloudUpgrade = () => {
   const triadData = [
     {
       id: 1,
-      title: "Unified Employee Experience",
+      title: "Zero-Data-Loss Integrity",
       description:
-        "Give employees one single portal to request everything—from a new laptop (IT) to a contract review (Legal) or a payroll query (Finance).",
+        'We use a "Clean-First" protocol to ensure every attachment, comment, and link is preserved and searchable.',
       // Replace these placeholder divs with your actual SVGs
       icon: "/assets/Alluvium-Redesign-2026/services/chart2.svg",
       width: 64,
@@ -20,18 +22,18 @@ const Home = () => {
     },
     {
       id: 2,
-      title: "Eliminate Manual Bottlenecks",
+      title: "Compliance & Governance",
       description:
-        "Replace messy email chains and spreadsheets with automated workflows, SLAs, and clear accountability for every department.",
+        "Specialized experience in regulated sectors (Finance, Insurance, Higher Ed) ensuring GDPR and DORA standards.",
       icon: "/assets/Alluvium-Redesign-2026/services/chart1.svg",
       width: 64,
       height: 64,
     },
     {
       id: 3,
-      title: "Data-Driven Decisions",
+      title: "Cost Rationalization",
       description:
-        "Gain visibility into how every team is performing with unified reporting, identifying bottlenecks across the entire organization in real-time.",
+        "We audit your seat counts and app sprawl during the move, often reducing annual licensing overhead by 15–30%.",
       icon: "/assets/Alluvium-Redesign-2026/services/chart.svg",
       width: 64,
       height: 64,
@@ -75,7 +77,7 @@ const Home = () => {
     <>
       <Layout>
         <Head>
-          <title>Alluvium | Atlassian Global Solution Partner </title>
+          <title>Alluvium | Cloud Upgrade </title>
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"
@@ -91,7 +93,16 @@ const Home = () => {
             content="Atlassian Solution Partner, Atlassian services, ITSM solutions, Jira Service Management,  Confluence, Jira Software, Bitbucket, DevOps tools, Agile workflows, Cloud migration, workflow  automation, project management tools, Atlassian partner US, Atlassian partner UK, Atlassian  partner Nigeria, ITSM Atlassian consultant, enterprise collaboration tools."
           />
         </Head>
-        <ServicesHero />
+        <ServicesHero
+          badge={"CLOUD UPGRADE"}
+          heading={
+            "Strategic Atlassian Cloud Migration: Secure. Scalable. Seamless."
+          }
+          subhead={
+            "We don’t just move data; we migrate your business logic. Alluvium provides the strategic technical bench for high-stakes migrations, ensuring security, compliance, and optimized performance from Day one."
+          }
+          btnName={"SCHEDULE A STRATEGY SESSION"}
+        />
         <ServicesCardsSection triadData={triadData} />
         <DiscoverySection
           heading="The Migration Blueprint"
@@ -99,9 +110,11 @@ const Home = () => {
           img="/assets/Alluvium-Redesign-2026/services/large.png"
         />
         <WhyAlluvium />
+        <SecurityCompliance />
+        <CtaSection />
       </Layout>
     </>
   );
 };
 
-export default Home;
+export default CloudUpgrade;

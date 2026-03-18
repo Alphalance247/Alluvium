@@ -1,0 +1,85 @@
+$color-sky-300: #bae6fd;
+$color-teal-400: #2dd4bf;
+$color-slate-900: #0f172a;
+$color-zinc-700: #3f3f46;
+$color-amber-600: #d97706;
+$color-white: #ffffff;
+
+.section {
+  width: 100%;
+  background-color: $color-sky-300;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  // border matching your design specs
+  border-left: 1px solid $color-teal-400;
+  border-right: 1px solid $color-teal-400;
+  padding: 96px 20px; // py-24
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+
+  @media (max-width: 768px) {
+    padding: 64px 24px;
+    border: none;
+  }
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 600px; // Constrain text width for readability
+}
+
+.title {
+  color: $color-slate-900;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.description {
+  color: $color-zinc-700;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.button {
+  background-color: $color-amber-600;
+  color: $color-white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: darken($color-amber-600, 5%);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 480px) {
+    width: 100%; // Full width button on small phones
+  }
+}
