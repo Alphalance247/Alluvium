@@ -77,7 +77,7 @@ const EnterpriseManagement = () => {
     <>
       <Layout>
         <Head>
-          <title>Alluvium | Cloud Upgrade </title>
+          <title>Alluvium | Enterprise Service Management </title>
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preload"
