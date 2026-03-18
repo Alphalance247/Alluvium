@@ -114,7 +114,11 @@ const LicenseOptimization = () => {
           img="/assets/Alluvium-Redesign-2026/services/large3.png"
         />
         <ComparisonTable />
-        <CtaSection />
+        <CtaSection
+          heading={"Ready to Reduce Your Atlassian Overhead?"}
+          subhead={"Book a 30-minute review of your current licensing stack."}
+          btnText={"Get a Preferred Quote"}
+        />
       </Layout>
     </>
   );

@@ -41,12 +41,12 @@ const resources = [
 ];
 
 const badges = [
-  {
-    img: "/assets/redesign-2025/Solution partner.svg",
-    width: 219,
-    height: 67,
-    alt: "solution partner",
-  },
+  // {
+  //   img: "/assets/redesign-2025/Solution partner.svg",
+  //   width: 219,
+  //   height: 67,
+  //   alt: "solution partner",
+  // },
   {
     img: "/assets/redesign-2025/Certs.svg",
     width: 227,
@@ -76,12 +76,12 @@ const badges = [
 ];
 const Footer = () => {
   return (
-    <div style={{ background: "#F5F5F5" }}>
+    <div style={{ background: "#0f172a" }}>
       <div className={styles.footer_container}>
         <div className={styles.left_content}>
           <div className={styles.mobile_container}>
             <Image
-              src="/assets/Alluvium-Redesign-2026/home/AlluviumLogo.png"
+              src="/assets/Alluvium-Redesign-2026/home/AlluviumLogoWhite.svg"
               alt="Alluvium Logo"
               width={149}
               height={30}

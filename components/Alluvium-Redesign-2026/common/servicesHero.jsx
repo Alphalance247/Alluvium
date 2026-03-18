@@ -45,7 +45,7 @@ const ServicesHero = ({
 
         {/* Visual Composition Area */}
         <div className={styles.visualSide}>
-          <Image
+          <img
             src={
               serviceImage ||
               "/assets/Alluvium-Redesign-2026/services/hero2.png"
