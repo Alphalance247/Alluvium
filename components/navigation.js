@@ -73,9 +73,9 @@ export default function Navigation({ theme }) {
           <nav className={styles.navigation}>
             <NewNavbar />
             <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
-              <Link href="/atlassian-services/support">
+              {/* <Link href="/atlassian-services/support">
                 <a className={styles.contactUsButton}>Support</a>
-              </Link>
+              </Link> */}
               <Link href="/contact-us">
                 <a className={styles.scheduleButton}>Contact Us Today</a>
               </Link>
