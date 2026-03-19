@@ -20,6 +20,7 @@ const Home = () => {
     phone: "",
   });
   const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
   const { addToast } = useToasts();
 
   const isWorkEmail = (email) => {
@@ -83,15 +84,19 @@ const Home = () => {
       )
       .then((res) => {
         if (res?.status >= 200 && res?.status < 300) {
-          addToast(
+          const successMessage =
             res?.data?.body ||
-              "Request submitted successfully. Please check your email for verification code",
-            {
-              appearance: "success",
-              autoDismiss: true, // Enable auto dismiss
-              autoDismissTimeout: 5000, // Dismiss after 5 seconds
-            },
-          );
+            res?.data?.message ||
+            res?.data ||
+            "Request submitted successfully. Please check your email for verification code";
+
+          addToast(successMessage, {
+            appearance: "success",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          });
+
+          setResponseMessage(successMessage);
           setLoading(false);
           setForm({ name: "", email: "", phone: "" });
         } else {
@@ -128,6 +133,10 @@ const Home = () => {
       ...prevForm,
       [name]: value,
     }));
+    // Clear success message when user starts typing
+    if (responseMessage) {
+      setResponseMessage("");
+    }
   };
 
   const data = [
@@ -156,7 +165,7 @@ const Home = () => {
   return (
     <Layout>
       <Head>
-        <title>HR-vertical | Alluvium</title>
+        <title>SWP | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
 
         <meta
@@ -217,8 +226,16 @@ const Home = () => {
                     <p className={styles.book__p}>
                       Want Free Professional Headshot? Fill the Form Below
                     </p>
-                  </div>
 
+                    {responseMessage && (
+                      <div className={styles.success__message}>
+                        <div className={styles.success__checkmark}>✓</div>
+                        <p className={styles.success__text}>
+                          {responseMessage}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                   <div className=" flex-column d-flex gap-3">
                     <div>
                       <Input
