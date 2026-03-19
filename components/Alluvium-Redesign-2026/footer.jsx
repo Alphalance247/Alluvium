@@ -41,15 +41,15 @@ const company = [
     { url: "/contact-us", id: "6", name: "contact us" },
 ];
 const resources = [
-    { url: "", id: "1", name: "success stories" },
-    { url: "/blogs", id: "2", name: "blog" },
+    { url: "https://alluvium.net/blogs", id: "1", name: "success stories", },
+    { url: "https://alluvium.net/blogs", id: "2", name: "blog", },
     {
         url: "/atlassian-cloud-migration-case-studies",
         id: "3",
         name: "migration case study",
     },
     { url: "atlassian-case-studies", id: "4", name: "ITSM/JST case study" },
-    { url: "", id: "5", name: "events" },
+    { url: "https://alluvium.net/blogs", id: "5", name: "events" },
 ];
 
 const badges = [
