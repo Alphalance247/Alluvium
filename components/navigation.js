@@ -57,7 +57,8 @@ export default function Navigation({ theme }) {
       onMouseLeave={() => toggleDropdown("")}
     >
       <div
-        className={`d-flex gap-5 justify-content-between align-items-center ${styles.heading__new}`}
+
+        className={`d-flex  justify-content-between align-items-center ${styles.heading__new}`}
       >
         <div className={styles.logo}>
           <Link href="/">
@@ -69,19 +70,21 @@ export default function Navigation({ theme }) {
             />
           </Link>
         </div>
-        {!displayMobileMenu && (
-          <nav className={styles.navigation}>
-            <NewNavbar />
-            <div className="ms-auto d-flex align-items-center justify-content-between gap-3">
-              <Link href="/atlassian-services/support">
-                <a className={styles.contactUsButton}>Support</a>
-              </Link>
-              <Link href="/contact-us">
-                <a className={styles.scheduleButton}>Contact Us Today</a>
-              </Link>
-            </div>
-          </nav>
-        )}
+        <div>
+          {!displayMobileMenu && (
+            <nav className={styles.navigation}>
+              <NewNavbar />
+            </nav>
+          )}
+        </div>
+        <div className=" d-flex align-items-center  gap-3" >
+          <Link href="/atlassian-services/support">
+            <a className={styles.contactUsButton}>Support</a>
+          </Link>
+          <Link href="/contact-us">
+            <a className={styles.scheduleButton}>Contact Us Today</a>
+          </Link>
+        </div>
         <button
           onClick={() => toggleMenu()}
           className={
@@ -106,6 +109,8 @@ export default function Navigation({ theme }) {
               : styles.hideMobileMenu
           }
         >
+          <MobileNavbar />
+
           {/* <ul>
             <li>
               <Link href="/">+ Home</Link>
@@ -157,7 +162,6 @@ export default function Navigation({ theme }) {
               </a>
             </li>
           </ul> */}
-          <MobileNavbar />
           {/* <div className={style.navItemButton}>
             <button className={style.support}>
               <Link href="/atlassian-services/support" >

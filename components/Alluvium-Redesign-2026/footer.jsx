@@ -104,7 +104,7 @@ const badges = [
     //     alt: "aws partner",
     // },
 ];
-const socialMedias = [{ icon: <IoLogoLinkedin />, url: "" }, { icon: <FaFacebookSquare />, url: "" }, { icon: <FaXTwitter />, url: "" }, { icon: <FaYoutube />, url: "" }]
+const socialMedias = [{ icon: <IoLogoLinkedin />, url: "https://www.linkedin.com/company/alluvium-hq/" }, { icon: <FaFacebookSquare />, url: "https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#" }, { icon: <FaXTwitter />, url: "https://x.com/alluviumhq?s=08" }, { icon: <FaYoutube />, url: "" }]
 const Footer = () => {
     return (
         <div style={{ background: "#0F1D29" }}>
