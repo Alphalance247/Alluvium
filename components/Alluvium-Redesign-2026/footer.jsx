@@ -83,6 +83,7 @@ const badges = [
     alt: "aws partner",
   },
 ];
+
 const Footer = () => {
   return (
     <div style={{ background: "#0f172a" }}>
@@ -123,6 +124,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
+
             <div className={styles.col_2}>
               <div className={styles.col_2_title}>Company</div>
               <div className={styles.col_2_services}>
@@ -133,6 +135,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
+
             <div className={styles.col_3}>
               <div className={styles.col_3_title}>Resources</div>
               <div className={styles.col_3_services}>
