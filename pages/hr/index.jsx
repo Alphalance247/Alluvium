@@ -132,25 +132,25 @@ const Home = () => {
 
   const data = [
     {
-      loom_link: "https://www.loom.com/embed/46553fd141484421ab654cd6e1afdc9a",
-      subtext: "Onboarding",
+      loom_link: "https://play.goconsensus.com/s185e6185",
+      subtext: "Talent",
     },
     {
-      loom_link: "https://www.loom.com/embed/b8fad43fd31d413b82b72c44387fb45e",
-      subtext: "Self-Service",
+      loom_link: "https://play.goconsensus.com/u86fb8108",
+      subtext: "Focus",
     },
-    {
-      loom_link: "https://www.loom.com/embed/d0fba73325cc47559f5840a2b2487bfa",
-      subtext: "Virtual Service Agent",
-    },
-    {
-      loom_link: "https://www.loom.com/embed/103bbe1353df42fe8d558afdc87585d3",
-      subtext: "Request Security 1",
-    },
-    {
-      loom_link: "https://www.loom.com/embed/64bfecff9f0f4a9b944bfa51ae17ff8c",
-      subtext: "Request Security 2",
-    },
+    // {
+    //   loom_link: "https://www.loom.com/embed/d0fba73325cc47559f5840a2b2487bfa",
+    //   subtext: "Virtual Service Agent",
+    // },
+    // {
+    //   loom_link: "https://www.loom.com/embed/103bbe1353df42fe8d558afdc87585d3",
+    //   subtext: "Request Security 1",
+    // },
+    // {
+    //   loom_link: "https://www.loom.com/embed/64bfecff9f0f4a9b944bfa51ae17ff8c",
+    //   subtext: "Request Security 2",
+    // },
   ];
 
   return (
