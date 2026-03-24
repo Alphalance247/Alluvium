@@ -22,7 +22,12 @@ const EventBlog = () => {
             content="Alluvium, Atlassian partner, Cloud Connect, technology events, remote work, collaboration, digital transformation, Jira, Confluence, industry expo, team Alluvium, event blog."
           />
         </Head>
-        <EventsBanner />
+        <EventsBanner
+          backgroundImage={
+            "/assets/Alluvium-Redesign-2026/Events/heroBanner.png"
+          }
+        />
+
         <UpcomingEvents />
         <UpcomingWebinars />
         <OnDemandWebinars />

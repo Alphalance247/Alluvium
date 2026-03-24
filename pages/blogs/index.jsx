@@ -13,6 +13,7 @@ import LoadingScreen from "components/loading";
 import { environment } from "env/env.local";
 import Button from "components/atlassian-service-reuse/Button";
 import Image from "next/image";
+import EventsBanner from "components/Alluvium-Redesign-2026/events/hero";
 
 const Blogs = () => {
   const [data, setData] = useState([]);
@@ -82,12 +83,21 @@ const Blogs = () => {
           content="Alluvium blog, Atlassian blog, ITSM best practices, Jira tips, DevOps automation, Agile project management, cloud migration guides"
         />
       </Head>
-      {loading && (
+      {/* {loading && (
         <LoadingScreen
           message={"Please wait while we fetch the list of blogs available"}
         />
-      )}
-
+      )} */}
+      <EventsBanner
+        heading={"The Alluvium blog"}
+        title={"Latest articles"}
+        subhead={
+          "Stay informed on industry trends and the future of work with insights and updates from thought leaders at Atlassian and Alluvium."
+        }
+        backgroundImage={
+          "/assets/Alluvium-Redesign-2026/Blogs/hero-section.png"
+        }
+      />
       {error && (
         <section className="">
           <div

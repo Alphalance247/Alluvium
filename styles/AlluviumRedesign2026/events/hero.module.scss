@@ -12,7 +12,7 @@ $color-zinc-100: #f4f4f5;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("/assets/Alluvium-Redesign-2026/Events/heroBanner.png");
+  background: url("/assets/Alluvium-Redesign-2026/Blogs/hero-section.png");
   background-size: cover;
   background-position: center;
 
@@ -27,6 +27,15 @@ $color-zinc-100: #f4f4f5;
     filter: blur(120px);
     z-index: 1;
     pointer-events: none;
+  }
+
+  .heading {
+    color: #d9d9d9;
+    font-family: "Geist Mono", monospace;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   &::before {
@@ -69,7 +78,9 @@ $color-zinc-100: #f4f4f5;
   z-index: 2;
   width: 100%;
   max-width: 1280px;
-  padding: 80px 20px;
+  padding: 80px 60px;
+  border-right: 1px dashed rgba(255, 255, 255, 0.1);
+  border-left: 1px dashed rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   gap: 24px;

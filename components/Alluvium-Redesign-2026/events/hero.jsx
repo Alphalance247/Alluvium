@@ -1,9 +1,13 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/hero.module.scss";
 
-const EventsBanner = () => {
+const EventsBanner = ({ title, heading, subhead, backgroundImage }) => {
+  const sectionStyle = backgroundImage
+    ? { backgroundImage: `url("${backgroundImage}")` }
+    : {};
+
   return (
-    <section className={styles.section}>
+    <section className={styles.section} style={sectionStyle}>
       {/* Texture/Pattern Overlay */}
       {/* <img
         className={styles.overlayImage}
@@ -12,10 +16,11 @@ const EventsBanner = () => {
       /> */}
 
       <div className={styles.container}>
-        <h1 className={styles.title}>Webinars & Events</h1>
+        {title && <p className={styles.heading}>{title}</p>}
+        <h1 className={styles.title}>{heading || "Webinars & Events"}</h1>
         <p className={styles.description}>
-          Explore thought-provoking roundtables, in-depth customer support
-          discussions, case studies, Atlassian product demos, and more.
+          {subhead ||
+            "Explore thought-provoking roundtables, in-depth customer support discussions, case studies, Atlassian product demos, and more."}
         </p>
       </div>
     </section>
