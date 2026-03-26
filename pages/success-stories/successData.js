@@ -101,6 +101,57 @@ const successData = [
       },
     ],
   },
+  {
+    slug: "rapid-cloud-migration-cost-optimization",
+    title: "Rapid Cloud Migration & Cost Optimization",
+    backgroundImage: "/assets/Alluvium-Redesign-2026/SuccessStory/hero4.png",
+    client: "Managed Service Client (3rd-Party Hosted)",
+    solutionPillar: "License Optimization / Cloud Upgrade",
+    industry: "Managed Services / IT Services",
+    toolsUsed:
+      "Jira, Confluence, Jira Service Management (Service Desk), Atlassian Cloud",
+    servicesProvided:
+      "Cloud Migration, Cost-Benefit Analysis & Feasibility Study, License Optimization, Security & Compliance Advisory, Service Desk Implementation (customer portal), Migration Strategy (“Zero-Double-Bill” execution).",
+    challengeTitle: "The Challenge",
+    challengeDescription:
+      "The client was trapped in a costly 3rd-party hosting agreement with an upcoming renewal deadline. They faced high overhead costs and technical inefficiencies but were wary of the security implications of moving to the cloud.",
+    solutionTitle: "The Alluvium Solution",
+    solutionDescription:
+      "Alluvium conducted a comprehensive Cost-Benefit Analysis and feasibility report comparing on-premise vs. cloud hosting. After resolving all security and compliance concerns, we executed a 'Zero-Double-Bill' migration, moving Jira, Confluence, and Jira Service Desk to the Atlassian Cloud just days before their legacy renewal.",
+    solutionImage: "/assets/Alluvium-Redesign-2026/SuccessStory/cloud.png",
+    stats: [
+      {
+        value: "£",
+        description: "Significant cost reduction",
+      },
+      {
+        value: "100%",
+        description: "migration before renewal deadline",
+      },
+      {
+        value: "3",
+        description: "core platforms migrated (Jira, Confluence, JSM)",
+      },
+    ],
+    results: [
+      {
+        title: "Significant Cost Reduction",
+        description: " by eliminating 3rd-party hosting fees.",
+        img: "/assets/Alluvium-Redesign-2026/SuccessStory/trend.svg",
+      },
+      {
+        title: "Deployed a new, customer-centric Jira Service Desk portal",
+        description: " to improve external support.",
+        img: "/assets/Alluvium-Redesign-2026/SuccessStory/card1.svg",
+      },
+      {
+        title: "Achieved a 'Just-in-Time' migration ",
+        description:
+          "  that prevented unnecessary double-billing for the client.",
+        img: "/assets/Alluvium-Redesign-2026/SuccessStory/card.svg",
+      },
+    ],
+  },
 ];
 
 export default successData;
