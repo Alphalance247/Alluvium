@@ -20,8 +20,8 @@ $zinc-300: #d4d4d8;
   display: flex;
   flex-direction: column;
   padding: 40px 0;
-  outline: 1px solid #374151; // gray-700
-  outline-offset: -1px;
+  border: 1px dashed #374151; // gray-700
+  align-items: center;
 
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -76,6 +76,7 @@ $zinc-300: #d4d4d8;
   @media (min-width: 768px) {
     padding-right: 32px;
     margin-right: 32px;
+    align-items: center;
 
     // The Vertical Divider
     &:not(:last-child)::after {
@@ -97,6 +98,7 @@ $zinc-300: #d4d4d8;
     font-size: 30px;
     font-weight: 800;
     line-height: 40px;
+    margin-bottom: 0;
   }
 
   p {
@@ -106,5 +108,6 @@ $zinc-300: #d4d4d8;
     font-size: 14px;
     font-weight: 600;
     line-height: 16px;
+    margin-bottom: 0;
   }
 }

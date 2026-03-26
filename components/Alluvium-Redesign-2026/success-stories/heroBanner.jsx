@@ -3,23 +3,15 @@ import styles from "../../../styles/AlluviumRedesign2026/success-stories/hero-ba
 
 const HeroBanner = ({
   title = "Strategic Agile Transformation & Cloud Migration",
+  backgroundImage = "/assets/Alluvium-Redesign-2026/SuccessStory/hero1.png",
 }) => {
   return (
-    <section className={styles.heroWrapper}>
-      {/* Background Layers */}
-      {/* <img
-        className={styles.baseLayer}
-        src="https://placehold.co/1440x900"
-        alt="Background base"
-      />
-      <img
-        className={styles.blendLayer}
-        src="https://placehold.co/1440x537"
-        alt="Overlay blend"
-      />
-      <div className={styles.gradientOverlay} /> */}
-
-      {/* Visible Content */}
+    <section
+      className={styles.heroWrapper}
+      style={{
+        backgroundImage: `url("${backgroundImage}")`,
+      }}
+    >
       <div className={styles.contentContainer}>
         <div className={styles.innerContent}>
           <h1 className={styles.title}>{title}</h1>

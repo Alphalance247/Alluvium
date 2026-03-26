@@ -10,11 +10,12 @@ $gray-700: #374151;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  background: url("/assets/Alluvium-Redesign-2026/SuccessStory/hero.png") center
-    center/cover no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   @media (max-width: 768px) {
     height: auto;
-    min-height: 450px;
+    min-height: 250px;
   }
 }
 
@@ -63,29 +64,32 @@ $gray-700: #374151;
   width: 100%;
   display: flex;
   align-items: flex-end; // items-end from your code
-  outline: 1px solid $gray-700;
-  outline-offset: -1px;
+  border-left: 1px dashed #414d57;
+  border-right: 1px dashed #414d57;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px 96px 80px; // px-20
 
   @media (max-width: 768px) {
     align-items: center;
-    padding: 40px 20px;
+    padding: 60px 20px 40px 20px;
   }
 }
 
-.innerContent {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 80px 96px 80px; // px-20 pb-24
+// .innerContent {
+//   width: 100%;
+//   max-width: 1280px;
+//   margin: 0 auto;
+//   padding: 0 80px 96px 80px; // px-20 pb-24
 
-  @media (max-width: 768px) {
-    padding: 0 20px;
-    text-align: center;
-  }
-}
+//   @media (max-width: 768px) {
+//     padding: 0 20px;
+//     text-align: center;
+//   }
+// }
 
 .title {
-  max-width: 610px; // w-[609.19px]
+  max-width: 750px; // w-[609.19px]
   color: #ffffff;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 600;

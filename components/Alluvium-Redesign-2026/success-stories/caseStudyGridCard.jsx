@@ -30,10 +30,18 @@ const caseStudies = [
   },
 ];
 
-const CaseStudyGrid = () => {
+const CaseStudyGrid = ({ backgroundColor, showHeading = false }) => {
   return (
-    <section className={styles.wrapper}>
+    <section 
+      className={styles.wrapper}
+      style={{ backgroundColor }}
+    >
       <div className={styles.innerContainer}>
+        {showHeading && (
+          <div className={styles.headingContainer}>
+            <h2>More Customer Stories</h2>
+          </div>
+        )}
         <div className={styles.grid}>
           {caseStudies.map((study) => (
             <Link href={`/success-stories/${study.id}`}>
