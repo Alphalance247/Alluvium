@@ -121,7 +121,8 @@ const successData = [
     solutionImage: "/assets/Alluvium-Redesign-2026/SuccessStory/cloud.png",
     stats: [
       {
-        value: "£",
+        valueImage:
+          "/assets/Alluvium-Redesign-2026/SuccessStory/trend-white.svg",
         description: "Significant cost reduction",
       },
       {

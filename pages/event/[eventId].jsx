@@ -2,6 +2,7 @@ import Layout from "components/layout";
 import Head from "next/head";
 import EventDetail from "components/Alluvium-Redesign-2026/events/eventDetails";
 import MainStageHero from "components/Alluvium-Redesign-2026/events/mainStageHero";
+import UpcomingWebinars from "components/Alluvium-Redesign-2026/events/upcomingWebinars";
 
 export default function EventId({ article }) {
   return (
@@ -20,6 +21,12 @@ export default function EventId({ article }) {
       </Head>
       <MainStageHero />
       <EventDetail />
+      <UpcomingWebinars
+        heading={"Explore More Upcoming Webinars"}
+        subtitle={
+          "Join upcoming live sessions and learn directly from experts in real time."
+        }
+      />
     </Layout>
   );
 }

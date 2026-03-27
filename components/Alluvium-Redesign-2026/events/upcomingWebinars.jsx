@@ -78,15 +78,15 @@ const WebinarCard = ({ webinar }) => (
   </div>
 );
 
-const UpcomingWebinars = () => {
+const UpcomingWebinars = ({ heading, subtitle }) => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <header className={styles.header}>
-          <h2 className={styles.titleMain}>Upcoming Webinars</h2>
+          <h2 className={styles.titleMain}>{heading || "Upcoming Webinars"}</h2>
           <p className={styles.subtitle}>
-            Join upcoming live sessions and learn directly from experts in real
-            time.
+            {subtitle ||
+              "Join upcoming live sessions and learn directly from experts in real time."}
           </p>
         </header>
 

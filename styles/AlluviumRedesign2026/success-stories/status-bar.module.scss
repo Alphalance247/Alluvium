@@ -101,6 +101,12 @@ $zinc-300: #d4d4d8;
     margin-bottom: 0;
   }
 
+  .valueImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   p {
     max-width: 192px; // w-48
     color: #fff;

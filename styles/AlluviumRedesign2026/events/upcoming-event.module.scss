@@ -19,7 +19,7 @@ $color-white: #ffffff;
   border-right: 1px dashed $color-zinc-300;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 40px;
 
   @media (max-width: 1024px) {
     border: none;
@@ -29,8 +29,6 @@ $color-white: #ffffff;
 }
 
 .sectionHeader {
-  //   border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 24px;
   width: 100%;
 }
 

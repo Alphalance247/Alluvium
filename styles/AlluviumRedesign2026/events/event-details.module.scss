@@ -17,7 +17,8 @@ $dark-bg: #111827; // gray-900
   width: 100%;
   max-width: 1280px;
   height: 551px;
-  background-color: $orange-hero;
+  background: url("/assets/Alluvium-Redesign-2026/Events/hero2.png") no-repeat
+    center center;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -36,7 +37,7 @@ $dark-bg: #111827; // gray-900
 .logo {
   max-width: 531px;
   height: auto;
-  z-index: 10;
+  // z-index: 10;
 }
 
 .bgTextContainer {

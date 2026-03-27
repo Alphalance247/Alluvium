@@ -35,7 +35,8 @@ $color-amber-600: #d97706;
 }
 
 .header {
-  padding-bottom: 24px;
+  // padding-bottom: 24px;
+  margin-bottom: 0px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -52,6 +53,7 @@ $color-amber-600: #d97706;
   color: $color-zinc-600;
   font-family: "Inter", sans-serif;
   font-size: 16px;
+  margin-bottom: 0px;
 }
 
 /* Grid Layout */
