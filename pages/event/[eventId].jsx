@@ -3,8 +3,7 @@ import Head from "next/head";
 import EventDetail from "components/Alluvium-Redesign-2026/events/eventDetails";
 import MainStageHero from "components/Alluvium-Redesign-2026/events/mainStageHero";
 import UpcomingWebinars from "components/Alluvium-Redesign-2026/events/upcomingWebinars";
-import eventData from "./eventData";
-
+import { eventData } from "../../data/eventData";
 export default function EventId({ eventInfo }) {
   if (!eventInfo) {
     return (

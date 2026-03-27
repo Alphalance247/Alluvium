@@ -1,4 +1,4 @@
-const successData = [
+export const successData = [
   {
     slug: "strategic-agile-transformation-&-cloud-migration",
     title: "Strategic Agile Transformation & Cloud Migration",
@@ -154,5 +154,3 @@ const successData = [
     ],
   },
 ];
-
-export default successData;

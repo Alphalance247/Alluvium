@@ -3,7 +3,7 @@ import HeroBanner from "components/Alluvium-Redesign-2026/success-stories/heroBa
 import StatsBar from "components/Alluvium-Redesign-2026/success-stories/statusBar";
 import Layout from "components/layout";
 import Head from "next/head";
-import successData from "./successData";
+import { successData } from "../../data/successData";
 import CaseStudyGrid from "components/Alluvium-Redesign-2026/success-stories/caseStudyGridCard";
 
 export default function SuccessStoryId({ storyData }) {
