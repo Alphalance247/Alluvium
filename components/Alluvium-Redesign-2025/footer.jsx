@@ -21,7 +21,7 @@ const Footer = () => {
       content:
         "Need help? Raise a ticket, and our team will get back to you very soon.",
       btn: "Raise a Ticket",
-      url: "https://support.portal.alluvium.net/servicedesk/customer/portals",
+      url: "https://alluvium.atlassian.net/servicedesk/customer/portals",
     },
   ];
 

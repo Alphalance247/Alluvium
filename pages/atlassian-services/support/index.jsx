@@ -46,10 +46,10 @@ const Support = () => {
       height: 40,
       description: [
         {
-          text: "Looking for guidance on managing your licenses? Our expertise has helped clients save significant time and money on licensing. Discover more on our ",
-          withLink: true,
+          text: "Looking for guidance on managing your licenses? Our expertise has helped clients save significant time and money on licensing. ",
+          withLink: false,
           url: "#",
-          urlText: "License Management page",
+          urlText: "",
         },
       ],
     },
@@ -75,7 +75,7 @@ const Support = () => {
         {
           text: "Planning to migrate or consolidate your data into a new Atlassian instance? Whether you need support during the migration process or prefer a full-service data migration, we're here to help. Learn more about our migration services ",
           withLink: true,
-          url: "#",
+          url: "/contact-us",
           urlText: "here",
         },
       ],

@@ -1,0 +1,131 @@
+$stone-300: #d6d3d1;
+$zinc-600: #52525b;
+$gray-700: #3f3f46;
+$neutral-800: #262626;
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 0 0px;
+
+  @media (min-width: 1024px) {
+    padding: 0 80px;
+  }
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px;
+  padding: 96px 60px;
+  border-left: 1px dashed rgba(212, 212, 216, 0.8);
+  border-right: 1px dashed rgba(212, 212, 216, 0.8);
+
+  @media (max-width: 768px) {
+    padding: 48px 0;
+    border: none;
+  }
+
+  .headingContainer {
+    margin-bottom: 2rem;
+
+    h2 {
+      color: #11202d;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 40px;
+      padding-left: 24px;
+
+      @media (min-width: 1024px) {
+        font-size: 30px;
+        padding-left: 24px;
+        line-height: 48px;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1fr; // Mobile first
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Tablet
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr); // Desktop
+  }
+}
+
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fcfcfc;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  height: 192px; // h-48
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // filter: blur(2px); // Implementation of the blur from your code
+  }
+}
+
+.categoryTag {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: 1px solid $stone-300;
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: $zinc-600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.title {
+  color: $gray-700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.statsRow {
+  margin-top: auto; // Pushes to bottom
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 20px;
+
+  .highlight {
+    color: $neutral-800;
+    font-weight: 500;
+  }
+
+  .subtext {
+    color: $zinc-600;
+    font-weight: 500;
+  }
+}

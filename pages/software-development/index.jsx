@@ -1,42 +1,50 @@
 import Layout from "components/layout";
-import ServicesHero from "components/atlassian-service-reuse/servicesHero";
-import Link from "next/link";
 import ServerToCloud from "components/atlassian-service-reuse/serverToCloud";
 import WhyMigrate from "components/cloud-migration-compo/whymigrate";
 import { SoftwareDeveloplemtCard } from "data";
-import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../styles/atlassian-services-style/generalstyle.module.scss";
-import Head from "next/head";
-
+import style from "styles/AlluviumRedesign2025/SoftwareDevelopment/softwareDevelopment.module.scss";
+import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import AtlassianServicesHero from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesHero";
+import HeroHeading from "components/Alluvium-Redesign-2025/ReuseComponents/heroHeading";
+import AtlassianServicesCard from "components/Alluvium-Redesign-2025/ReuseComponents/atlassianServicesCard";
+import BusinessGrowth from "components/Alluvium-Redesign-2025/softwareDevelopment/BusinessGrowth";
+import Services from "components/Alluvium-Redesign-2025/softwareDevelopment/Services.jsx";
+import ServiceTextCard from "components/Alluvium-Redesign-2025/softwareDevelopment/ServiceTextCard";
+import Solutions from "components/Alluvium-Redesign-2025/softwareDevelopment/Solutions";
+import AWSTrainingSolution from "components/Alluvium-Redesign-2025/softwareDevelopment/AWSTrainingSolution";
 const SoftwareDevelopment = () => {
   return (
     <Layout>
-      {/*  */}
-      <Head>
-        <title>
-          Custom Software Design & Development | Alluvium | alluvium.net
-        </title>
-        <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="Alluvium Engineering Solutions. Alluvium delivers software development services integrated with Atlassian tools for agile and efficient project execution."
-        />
-        <meta
-          name="keywords"
-          content="software development, agile software, Atlassian integration, app development, Alluvium engineering."
-        />
-      </Head>
-      <ServicesHero
-        contentsheading1="Innovative Software Development & Design Services"
-        contentsheading2="Our team of experts go beyond traditional software development to provide comprehensive solutions that drive efficiency, enhance customer experiences, and propel your business forward."
-        button1={
-          <Link href="/contact-us" passHref>
-            <Button size="large">Schedule a Call</Button>
-          </Link>
+      <div style={{ background: "#fcfcfc" }}>
+        <div style={{ maxWidth: "1272px", margin: "auto" }}>
+          <Lines variant={"secondary"} />
+        </div>
+      </div>
+      <AtlassianServicesHero
+        withLink={true}
+        subsec={"SOFTWARE DEVELOPMENT & Design"}
+        heading={"Alluvium Engineering Solutions."}
+        subhead={
+          "Alluvium delivers software development services integrated with Atlassian tools for agile and efficient project execution"
         }
+        buttonText={"Schedule a Call"}
+        url={"/contact-us"}
       />
-
-      <ServerToCloud
+      <BusinessGrowth
+        title={"Software That Evolves with Your Business Growth"}
+        description={"At Alluvium, we understand that one-size-fits-all solutions don't work for every business. That's why we specialize in crafting custom software solutions that perfectly align with your unique needs and goals. we specialize in crafting custom software solutions that perfectlyalign with your unique needs. Our team of skilled developers and designers will work closely with you to create innovative solutions that streamline your operations, enhance efficiency, and provide a competitive edge. "}
+        imageUrl={"/assets/licence-image/softwarepic.svg"}
+      />
+      <ServiceTextCard text={"How We Can Help You"} />
+      <Services url={"/contact-us"} buttonText={"Book a Session"} />
+      <ServiceTextCard text={"Tailored AWS Solutions for Every Business Need"} />
+      <Solutions />
+      <AWSTrainingSolution
+        title={"AWS Training & Certification"}
+        description={"AWS Training and Certification provides a comprehensive learning path for mastering Amazon Web Services (AWS) and gaining recognition for your cloud expertise. Whether you’re new to AWS or an experienced cloud professional, AWS training helps you build skills to effectively manage AWS services and solutions."}
+      />
+      {/* <ServerToCloud
         image2={true}
         heading="Software That Evolves with Your Business Growth"
         paragraph="At Alluvium, we understand that one-size-fits-all solutions don't work for every business. That's why we specialize in crafting custom software solutions that perfectly align with your unique needs and goals. we specialize in crafting custom software solutions that perfectly align with your unique needs. Our team of skilled developers and designers will work closely with you to create innovative solutions that streamline your operations, enhance efficiency, and provide a competitive edge."
@@ -130,7 +138,7 @@ const SoftwareDevelopment = () => {
             "We provide ongoing support and maintenance for API integrations.",
           ]}
         />
-      </div>
+      </div> */}
     </Layout>
   );
 };

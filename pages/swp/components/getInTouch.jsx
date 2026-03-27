@@ -12,43 +12,104 @@ import MeetBoard from "./meetBoard";
 const GetInTouch = () => {
   const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
   const [form, setForm] = useState({
-    firstName: "",
-    lastName: "",
-    company: "",
+    name: "",
     email: "",
+    phone: "",
   });
   const { isSticky, sectionRef } = useSticky();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((s) => ({ ...s, [name]: value }));
+    // Clear success message when user starts typing
+    if (responseMessage) {
+      setResponseMessage("");
+    }
+  };
+
+  const isWorkEmail = (email) => {
+    const value = (email || "").trim().toLowerCase();
+    if (!value) return false;
+    const atIndex = value.lastIndexOf("@");
+    if (atIndex <= 0) return false;
+
+    const domain = value.slice(atIndex + 1);
+    if (!domain || domain.includes(" ")) return false;
+
+    const personalDomains = new Set([
+      "gmail.com",
+      "googlemail.com",
+      "yahoo.com",
+      "yahoo.co.uk",
+      "yahoo.ca",
+      "outlook.com",
+      "hotmail.com",
+      "live.com",
+      "msn.com",
+      "aol.com",
+      "icloud.com",
+      "me.com",
+      "mac.com",
+      "protonmail.com",
+      "proton.me",
+      "pm.me",
+      "gmx.com",
+      "gmx.net",
+      "yandex.com",
+      "yandex.ru",
+      "mail.com",
+      "fastmail.com",
+      "hey.com",
+      "zoho.com",
+    ]);
+
+    return !personalDomains.has(domain);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
+    if (!isWorkEmail(form.email)) {
+      addToast("Please use your work email address (no personal emails).", {
+        appearance: "error",
+        autoDismiss: true,
+        autoDismissTimeout: 5000,
+      });
+      setLoading(false);
+      return;
+    }
+
     axios
       .post(
-        `https://site-api.alluvium.net/utilities/wps-event/`,
+        `https://ssswuzxlxj5rkjd4bjmkfq4aii0dkkqt.lambda-url.us-east-1.on.aws/`,
         {
-          first_name_1: form.firstName,
-          last_name_4: form.lastName,
-          email_5: form?.email,
-          company_3: form?.company,
+          ...form,
         },
         { timeout: 40000 },
       )
       .then((res) => {
         if (res?.status >= 200 && res?.status < 300) {
-          addToast(res?.data?.message || "Request submitted successfully.", {
+          // Log to see actual response structure
+          console.log("API Response:", res.data);
+
+          const successMessage =
+            res?.data?.body ||
+            res?.data?.message ||
+            res?.data ||
+            "Request submitted successfully.";
+
+          addToast(successMessage, {
             appearance: "success",
             autoDismiss: true, // Enable auto dismiss
             autoDismissTimeout: 5000, // Dismiss after 5 seconds
           });
+
+          setResponseMessage(successMessage);
           setLoading(false);
-          setForm({ firstName: "", lastName: "", company: "", email: "" });
+          setForm({ name: "", email: "", phone: "" });
         } else {
           addToast(
             "Unexpected response from server. Please try again or contact Admin",
@@ -160,38 +221,30 @@ const GetInTouch = () => {
         >
           <div className={styles.card}>
             <h3 className={styles.card__title}>
-              Let's grab a coffee <span>😉</span>
+              Want Free Professional Headshot? Fill the Form Below{" "}
+              <span>😉</span>
             </h3>
-            <p className={styles.card__hint}>
-              Can't go? Sign up here and let's have a virtual coffee chat!
-            </p>
+            <p className={styles.card__hint}></p>
+
+            {responseMessage && (
+              <div className={styles.success__message}>
+                <div className={styles.success__checkmark}>✓</div>
+                <p className={styles.success__text}>{responseMessage}</p>
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} aria-label="get-in-touch-form">
               <div className={styles.formGroup}>
                 <Input
-                  text={"First Name"}
-                  name="firstName"
-                  required
-                  value={form.firstName}
+                  id="fullname"
+                  label="fullname"
+                  text="Full Name "
+                  name="name"
+                  type="text"
+                  value={form.name || ""}
+                  placeholder=""
                   onChange={handleChange}
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <Input
-                  name="lastName"
-                  text={"Last Name"}
-                  value={form.lastName}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className={styles.formGroup}>
-                <Input
-                  text={"Company name"}
-                  name="company"
-                  value={form.company}
-                  onChange={handleChange}
+                  // errorF={formError.first_name}
                 />
               </div>
 
@@ -202,6 +255,20 @@ const GetInTouch = () => {
                   type="email"
                   value={form.email}
                   onChange={handleChange}
+                />
+              </div>
+
+              <div className={styles.formGroup}>
+                <Input
+                  id="phone__number"
+                  label="phone_number"
+                  text="Phone Number "
+                  name="phone"
+                  type="text"
+                  value={form.phone || ""}
+                  placeholder=""
+                  onChange={handleChange}
+                  // errorF={formError.first_name}
                 />
               </div>
 

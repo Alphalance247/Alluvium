@@ -6,8 +6,6 @@ import Button from "components/atlassian-service-reuse/Button";
 import Modal from "./modal";
 import { useState } from "react";
 import CalendlyWidget from "components/calendlyWidget";
-import LeadForm from "pages/event/itsm-solutions/form/leadform";
-import { useRef } from "react";
 import useSticky from "components/customhooks/UseSticky";
 import Input from "components/licence-component/inputP";
 import axios from "axios";
@@ -22,11 +20,61 @@ const Home = () => {
     phone: "",
   });
   const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
   const { addToast } = useToasts();
+
+  const isWorkEmail = (email) => {
+    const value = (email || "").trim().toLowerCase();
+    if (!value) return false;
+    const atIndex = value.lastIndexOf("@");
+    if (atIndex <= 0) return false;
+
+    const domain = value.slice(atIndex + 1);
+    if (!domain || domain.includes(" ")) return false;
+
+    const personalDomains = new Set([
+      "gmail.com",
+      "googlemail.com",
+      "yahoo.com",
+      "yahoo.co.uk",
+      "yahoo.ca",
+      "outlook.com",
+      "hotmail.com",
+      "live.com",
+      "msn.com",
+      "aol.com",
+      "icloud.com",
+      "me.com",
+      "mac.com",
+      "protonmail.com",
+      "proton.me",
+      "pm.me",
+      "gmx.com",
+      "gmx.net",
+      "yandex.com",
+      "yandex.ru",
+      "mail.com",
+      "fastmail.com",
+      "hey.com",
+      "zoho.com",
+    ]);
+
+    return !personalDomains.has(domain);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (!isWorkEmail(form.email)) {
+      addToast("Please use your work email address (no personal emails).", {
+        appearance: "error",
+        autoDismiss: true,
+        autoDismissTimeout: 5000,
+      });
+      setLoading(false);
+      return;
+    }
 
     axios
       .post(
@@ -36,15 +84,19 @@ const Home = () => {
       )
       .then((res) => {
         if (res?.status >= 200 && res?.status < 300) {
-          addToast(
+          const successMessage =
             res?.data?.body ||
-              "Request submitted successfully. Please check your email for verification code",
-            {
-              appearance: "success",
-              autoDismiss: true, // Enable auto dismiss
-              autoDismissTimeout: 5000, // Dismiss after 5 seconds
-            },
-          );
+            res?.data?.message ||
+            res?.data ||
+            "Request submitted successfully. Please check your email for verification code";
+
+          addToast(successMessage, {
+            appearance: "success",
+            autoDismiss: true, // Enable auto dismiss
+            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+          });
+
+          setResponseMessage(successMessage);
           setLoading(false);
           setForm({ name: "", email: "", phone: "" });
         } else {
@@ -81,35 +133,39 @@ const Home = () => {
       ...prevForm,
       [name]: value,
     }));
+    // Clear success message when user starts typing
+    if (responseMessage) {
+      setResponseMessage("");
+    }
   };
 
   const data = [
     {
-      loom_link: "https://www.loom.com/embed/46553fd141484421ab654cd6e1afdc9a",
-      subtext: "Onboarding",
+      loom_link: "https://play.goconsensus.com/s185e6185",
+      subtext: "Talent",
     },
     {
-      loom_link: "https://www.loom.com/embed/b8fad43fd31d413b82b72c44387fb45e",
-      subtext: "Self-Service",
+      loom_link: "https://play.goconsensus.com/u86fb8108",
+      subtext: "Focus",
     },
-    {
-      loom_link: "https://www.loom.com/embed/d0fba73325cc47559f5840a2b2487bfa",
-      subtext: "Virtual Service Agent",
-    },
-    {
-      loom_link: "https://www.loom.com/embed/103bbe1353df42fe8d558afdc87585d3",
-      subtext: "Request Security 1",
-    },
-    {
-      loom_link: "https://www.loom.com/embed/64bfecff9f0f4a9b944bfa51ae17ff8c",
-      subtext: "Request Security 2",
-    },
+    // {
+    //   loom_link: "https://www.loom.com/embed/d0fba73325cc47559f5840a2b2487bfa",
+    //   subtext: "Virtual Service Agent",
+    // },
+    // {
+    //   loom_link: "https://www.loom.com/embed/103bbe1353df42fe8d558afdc87585d3",
+    //   subtext: "Request Security 1",
+    // },
+    // {
+    //   loom_link: "https://www.loom.com/embed/64bfecff9f0f4a9b944bfa51ae17ff8c",
+    //   subtext: "Request Security 2",
+    // },
   ];
 
   return (
     <Layout>
       <Head>
-        <title>HR-vertical | Alluvium</title>
+        <title>SWP | Alluvium</title>
         <link rel="icon" href="/favicon.ico" />
 
         <meta
@@ -128,11 +184,14 @@ const Home = () => {
         </Modal>
         <div className={styles?.hr__vertical__subhead}>
           <div className={styles?.hr__hero}>
-            <p className={styles.hr__p}>ATLASSIAN HR DEMO</p>
-            <h2 className={styles.hr__h2}>Optimizing HR Workflows</h2>
+            <p className={styles.hr__p}>SWP DEMO</p>
+            <h2 className={styles.hr__h2}>Meet Us at SWP Summit 2026</h2>
             <p className={styles.hr__para}>
-              Leverage insights across onboarding, employee engagement, assets
-              management and retention with Atlassian’s HR Analytics solutions.
+              Discover how to build a Strategic Workforce Planning model that
+              tracks the positions, timeline, and costs needed to deliver your
+              strategy. Visit us for a live demo and complimentary workforce
+              planning health check, plus get your free professional headshot by
+              registering below!
             </p>
           </div>
 
@@ -167,8 +226,16 @@ const Home = () => {
                     <p className={styles.book__p}>
                       Want Free Professional Headshot? Fill the Form Below
                     </p>
-                  </div>
 
+                    {responseMessage && (
+                      <div className={styles.success__message}>
+                        <div className={styles.success__checkmark}>✓</div>
+                        <p className={styles.success__text}>
+                          {responseMessage}
+                        </p>
+                      </div>
+                    )}
+                  </div>
                   <div className=" flex-column d-flex gap-3">
                     <div>
                       <Input

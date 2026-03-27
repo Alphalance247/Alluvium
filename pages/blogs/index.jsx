@@ -9,10 +9,13 @@ import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
-import LoadingScreen from "components/loading";
 import { environment } from "env/env.local";
 import Button from "components/atlassian-service-reuse/Button";
 import Image from "next/image";
+import EventsBanner from "components/Alluvium-Redesign-2026/events/hero";
+import FeaturedPost from "components/Alluvium-Redesign-2026/blogs/featuredPost";
+import ArticleGrid from "components/Alluvium-Redesign-2026/blogs/artcleGrid";
+import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 
 const Blogs = () => {
   const [data, setData] = useState([]);
@@ -57,7 +60,7 @@ const Blogs = () => {
   const postWeek = [
     {
       id: "",
-      tag: "Artificial Intelligence",
+      tag: ["Artificial Intelligence"],
       title: "The Invisible Threat: Shadow AI",
       summary:
         "Unmanaged AI use is not just a compliance issue; it's a direct threat to your data, intellectual property, and reputation. The rapid, uncontrolled adoption of consumer-grade AI tools by employees creates significant, often hidden, vulnerabilities.",
@@ -82,11 +85,37 @@ const Blogs = () => {
           content="Alluvium blog, Atlassian blog, ITSM best practices, Jira tips, DevOps automation, Agile project management, cloud migration guides"
         />
       </Head>
-      {loading && (
+      {/* {loading && (
         <LoadingScreen
           message={"Please wait while we fetch the list of blogs available"}
         />
-      )}
+      )} */}
+      <EventsBanner
+        heading={"The Alluvium blog"}
+        title={"Latest articles"}
+        subhead={
+          "Stay informed on industry trends and the future of work with insights and updates from thought leaders at Atlassian and Alluvium."
+        }
+        backgroundImage={
+          "/assets/Alluvium-Redesign-2026/Blogs/hero-section.png"
+        }
+      />
+
+      {postWeek?.map((postOfTheWeek, i) => (
+        <FeaturedPost
+          img={postOfTheWeek?.featured_image}
+          tags={postOfTheWeek?.tag}
+          date={postOfTheWeek?.formatted_published_at}
+          readTime={postOfTheWeek?.read_time + " mins read"}
+          title={postOfTheWeek?.title}
+          summary={postOfTheWeek?.summary}
+          author={postOfTheWeek?.author}
+        />
+      ))}
+
+      <ArticleGrid articles={data?.results} />
+
+      <CtaSection />
 
       {error && (
         <section className="">
@@ -146,9 +175,11 @@ const Blogs = () => {
                               {tag}
                             </p>
                           ))} */}
-                          <p className={styles.industry} key={i}>
-                            {postOfTheWeek?.tag}
-                          </p>
+                          {postOfTheWeek?.tag?.map((tag, i) => (
+                            <p className={styles.industry} key={i}>
+                              <span key={i}>{tag}</span>
+                            </p>
+                          ))}
                         </div>
 
                         <h4>
@@ -179,56 +210,6 @@ const Blogs = () => {
               ))}
             </div>
           </section>
-
-          {/* <section className={styles.search__blog}>
-            <div className={styles.search__blog__grid}>
-              <FilterComponent
-                onSelect={handleSelected}
-                options={[
-                  "insurance",
-                  "agriculture",
-                  "business",
-                  "academics",
-                  "hospitality",
-                ]}
-                title="THEME"
-              />
-              <FilterComponent
-                onSelect={handleSelected}
-                options={[
-                  "insurance",
-                  "agriculture",
-                  "business",
-                  "academics",
-                  "hospitality",
-                  "",
-                ]}
-                title="INDUSTRY"
-              />
-              <FilterComponent
-                onSelect={handleSelected}
-                options={[
-                  "insurance",
-                  "agriculture",
-                  "business",
-                  "academics",
-                  "hospitality",
-                  "",
-                ]}
-                title="SERVICE"
-              />
-
-              <div className={styles.search}>
-                <p>SEARCH</p>
-                <input
-                  type="text"
-                  id=""
-                  placeholder="Search projects"
-                  value={""}
-                />
-              </div>
-            </div>
-          </section> */}
 
           <section className={styles.cards}>
             <div className={styles.cards__details}>

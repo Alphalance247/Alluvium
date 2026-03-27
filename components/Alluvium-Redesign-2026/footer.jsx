@@ -12,9 +12,18 @@ const mobilePhones = [
   { id: "", location: "Orlando", num: "+1(567)331-0070" },
 ];
 const services = [
-  { url: "atlassian-services", id: "1", name: "atlassian services" },
-  { url: "/aws-services", id: "2", name: "AWS services" },
-  { url: "/software-development", id: "3", name: "design & development" },
+  { url: "/cloud-upgrade", id: "1", name: "Cloud Upgrade" },
+  { url: "/license-optimization", id: "2", name: "License Optimization" },
+  {
+    url: "/enterprise-service-management",
+    id: "3",
+    name: "Enterprise Service Management (ESM)",
+  },
+  {
+    url: "/strategic-partnerships",
+    id: "4",
+    name: "Strategic Partnerships",
+  },
 ];
 const company = [
   { url: "/about", id: "1", name: "about us" },
@@ -41,12 +50,12 @@ const resources = [
 ];
 
 const badges = [
-  {
-    img: "/assets/redesign-2025/Solution partner.svg",
-    width: 219,
-    height: 67,
-    alt: "solution partner",
-  },
+  // {
+  //   img: "/assets/redesign-2025/Solution partner.svg",
+  //   width: 219,
+  //   height: 67,
+  //   alt: "solution partner",
+  // },
   {
     img: "/assets/redesign-2025/Certs.svg",
     width: 227,
@@ -74,14 +83,15 @@ const badges = [
     alt: "aws partner",
   },
 ];
+
 const Footer = () => {
   return (
-    <div style={{ background: "#F5F5F5" }}>
+    <div style={{ background: "#0f172a" }}>
       <div className={styles.footer_container}>
         <div className={styles.left_content}>
           <div className={styles.mobile_container}>
             <Image
-              src="/assets/Alluvium-Redesign-2026/home/AlluviumLogo.png"
+              src="/assets/Alluvium-Redesign-2026/home/AlluviumLogoWhite.svg"
               alt="Alluvium Logo"
               width={149}
               height={30}
@@ -105,7 +115,7 @@ const Footer = () => {
         <div className={styles.right_content}>
           <div className={styles.top_content}>
             <div className={styles.col_1}>
-              <div className={styles.col_1_title}>Services</div>
+              <div className={styles.col_1_title}>Solutions</div>
               <div className={styles.col_1_services}>
                 {services.map((item) => (
                   <Link key={item.id} href={item.url}>
@@ -114,6 +124,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
+
             <div className={styles.col_2}>
               <div className={styles.col_2_title}>Company</div>
               <div className={styles.col_2_services}>
@@ -124,6 +135,7 @@ const Footer = () => {
                 ))}
               </div>
             </div>
+
             <div className={styles.col_3}>
               <div className={styles.col_3_title}>Resources</div>
               <div className={styles.col_3_services}>
@@ -138,7 +150,7 @@ const Footer = () => {
           <div className={styles.bottom_content_container}>
             <div className={styles.bottom_content}>
               {badges.map((item) => (
-                <div key={item.id} className={styles.partners}>
+                <div key={item.alt} className={styles.partners}>
                   <div className={styles.col_1}>
                     <Image
                       src={item.img}

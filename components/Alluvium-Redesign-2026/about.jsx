@@ -30,6 +30,7 @@ export default function AboutSection() {
               <p className={styles.aboutBody}>
                 With
                 <span className={styles.aboutBodyStrong}>
+                  {" "}
                   over 10,000 hours of Atlassian implementation experience,
                 </span>{" "}
                 we've helped global enterprises across the US, UK, and Nigeria
