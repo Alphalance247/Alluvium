@@ -2,7 +2,7 @@ export const eventData = [
   {
     slug: "modern-itsm-with-atlassians-service-collection",
     title: "Modern ITSM with Atlassian's Service Collection",
-    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/content.png",
+    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/Content.png",
     dateTime: "THU, MAR 26, 2026 7:00 PM WAT",
     startsIn: "STARTS IN 9 DAYS",
     descriptionParagraphs: [
