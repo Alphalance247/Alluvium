@@ -97,7 +97,7 @@ const Blogs = () => {
           "Stay informed on industry trends and the future of work with insights and updates from thought leaders at Atlassian and Alluvium."
         }
         backgroundImage={
-          "/assets/Alluvium-Redesign-2026/Blogs/hero-section.png"
+          "/assets/Alluvium-Redesign-2026/blogs/hero-section.png"
         }
       />
 
