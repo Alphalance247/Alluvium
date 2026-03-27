@@ -1,10 +1,15 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/event-details.module.scss";
 
-const MainStageHero = () => {
+const MainStageHero = ({ backgroundImage = "" }) => {
   return (
     <section className={styles.heroWrapper}>
-      <div className={styles.banner}></div>
+      <div
+        className={styles.banner}
+        style={{
+          backgroundImage: `url("${backgroundImage}")`,
+        }}
+      ></div>
     </section>
   );
 };

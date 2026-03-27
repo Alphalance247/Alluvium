@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/event-details.module.scss";
 
-const Person = ({ name, role }) => (
+const Person = ({ name, role, image }) => (
   <div className={styles.personCard}>
-    <img src="/assets/Alluvium-Redesign-2026/Events/1a.png" alt={name} />
+    <img src={image} alt={name} />
     <div>
       <div className={styles.name}>{name}</div>
       <div className={styles.role}>{role}</div>
@@ -11,68 +11,75 @@ const Person = ({ name, role }) => (
   </div>
 );
 
-const EventDetail = () => {
+const EventDetail = ({
+  dateTime = "THU, MAR 26, 2026 7:00 PM WAT",
+  startsIn = "STARTS IN 9 DAYS",
+  title = "Modern ITSM with Atlassian's Service Collection",
+  descriptionParagraphs = [],
+  coverPoints = [],
+  hosts = [],
+  speakers = [],
+}) => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         {/* Left Column: Info */}
         <main>
           <div className={styles.badgeContainer}>
-            <span>THU, MAR 26, 2026 7:00 PM WAT</span>
+            <span>{dateTime}</span>
             <span style={{ opacity: 0.5 }}>|</span>
-            <span>STARTS IN 9 DAYS</span>
+            <span>{startsIn}</span>
           </div>
 
-          <h1 className={styles.title}>
-            Modern ITSM with Atlassian's Service Collection
-          </h1>
+          <h1 className={styles.title}>{title}</h1>
 
           <div className={styles.description}>
-            <p className="text-lg font-medium">
-              In this free 1-hour advanced webinar, Alluvium, Atlassian
-              Certified Experts demonstrate Atlassian’s full suite of ITSM
-              tools.
-            </p>
-            <p>
-              Atlassian Team'26 is back in Anaheim, CA - This unique event will
-              drive into how AI, teamwork, and transformative technologies can
-              maximize team impact.
-            </p>
+            {descriptionParagraphs.map((paragraph, index) => (
+              <p
+                key={index}
+                className={index === 0 ? "text-lg font-medium" : ""}
+              >
+                {paragraph}
+              </p>
+            ))}
 
-            <strong>In this session, we’ll cover:</strong>
-            <ul>
-              <li>The biggest shifts shaping research in 2026</li>
-              <li>How researchers are stepping into strategic roles</li>
-              <li>Where human judgment becomes your edge in an AI era</li>
-              <li>What it takes to scale research with the right systems</li>
-            </ul>
+            {coverPoints.length > 0 && (
+              <>
+                <strong>In this session, we'll cover:</strong>
+                <ul>
+                  {coverPoints.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              </>
+            )}
           </div>
 
           <div className={styles.personSection}>
             <h3>Hosts</h3>
             <div className={styles.personGrid}>
-              <Person
-                name="Rachel Brown"
-                role="Atlassian Certified Expert and Presales Solution Engineer"
-              />
-              <Person
-                name="Rachel Brown"
-                role="Atlassian Certified Expert and Presales Solution Engineer"
-              />
+              {hosts.map((host, index) => (
+                <Person
+                  key={index}
+                  name={host.name}
+                  role={host.role}
+                  image={host.image}
+                />
+              ))}
             </div>
           </div>
 
           <div className={styles.personSection}>
             <h3>Speakers</h3>
             <div className={styles.personGrid}>
-              <Person
-                name="Rachel Brown"
-                role="Atlassian Certified Expert and Presales Solution Engineer"
-              />
-              <Person
-                name="Rachel Brown"
-                role="Atlassian Certified Expert and Presales Solution Engineer"
-              />
+              {speakers.map((speaker, index) => (
+                <Person
+                  key={index}
+                  name={speaker.name}
+                  role={speaker.role}
+                  image={speaker.image}
+                />
+              ))}
             </div>
           </div>
         </main>
