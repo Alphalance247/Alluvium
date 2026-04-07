@@ -6,6 +6,12 @@ import AboutAlluvium from "components/Alluvium-Redesign-2025/AboutUs/aboutAlluvi
 import OurMission from "components/Alluvium-Redesign-2025/AboutUs/ourMission";
 import HowItStarted from "components/Alluvium-Redesign-2025/AboutUs/howItStarted";
 import CoreValueAbout from "components/Alluvium-Redesign-2025/AboutUs/coreValueAbout";
+import AboutHero from "components/Alluvium-Redesign-2026/about/hero";
+import MissionSection from "components/Alluvium-Redesign-2026/about/ourMission";
+import AboutGrid from "components/Alluvium-Redesign-2026/about/aboutAlluvium";
+import AwardsSection from "components/Alluvium-Redesign-2026/about/awardsNomination";
+import ImpactStory from "components/Alluvium-Redesign-2026/about/ourImpact";
+import ValuesGrid from "components/Alluvium-Redesign-2026/about/coreValue";
 
 export default function AboutUs() {
   return (
@@ -24,6 +30,12 @@ export default function AboutUs() {
           />
         </Head>
         <main>
+          <AboutHero />
+          <MissionSection />
+          <AboutGrid />
+          <AwardsSection />
+          <ImpactStory />
+          <ValuesGrid />
           <Hero />
           <AboutAlluvium />
           <OurMission />

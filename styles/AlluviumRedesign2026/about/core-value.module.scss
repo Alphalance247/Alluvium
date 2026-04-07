@@ -1,0 +1,117 @@
+$zinc-100: #f4f4f5;
+$zinc-300: #d4d4d8;
+$zinc-600: #52525b;
+$slate-900: #0f172a;
+$cyan-600: #0891b2;
+
+.wrapper {
+  width: 100%;
+  background-color: $zinc-100;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px;
+  padding: 96px 0; // py-24
+  border-left: 1px solid rgba($zinc-300, 0.8);
+  border-right: 1px solid rgba($zinc-300, 0.8);
+  border-bottom: 1px solid rgba($zinc-300, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @media (min-width: 1024px) {
+    padding: 96px 80px;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+
+  .badge {
+    padding: 4px 10px;
+    border: 1px solid $zinc-300;
+    border-radius: 4px;
+    font-family: "Geist Mono", monospace;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $zinc-600;
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    max-width: 559px;
+    font-family: "Domine", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: $slate-900;
+  }
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.valueCard {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  .iconBox {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    background-color: $cyan-600; // Default background for Leadership
+
+    &.outlineOnly {
+      background-color: transparent;
+      border: 2px solid $cyan-600;
+    }
+
+    // Decorative inner elements to match your code
+    .innerSquare {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h3 {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: $slate-900;
+    }
+
+    p {
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      color: $zinc-600;
+    }
+  }
+}

@@ -150,3 +150,19 @@
   font-weight: 700;
   src: url("/assets/fonts/Geist_Mono/geist.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Inter";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Inter/inter-normal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Italic";
+  font-display: fallback;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/Inter/inter-italic.ttf") format("truetype");
+}
