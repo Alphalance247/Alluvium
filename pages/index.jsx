@@ -11,6 +11,7 @@ import SWPHero from "components/Alluvium-Redesign-2026/SWPHero";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 import { badges } from "data";
+import Team26Hero from "components/Alluvium-Redesign-2026/home-hero/team26Hero";
 
 const Home = () => {
   return (
@@ -34,7 +35,8 @@ const Home = () => {
           />
         </Head>
         {/* <Hero /> */}
-        <SWPHero />
+        {/* <SWPHero /> */}
+        <Team26Hero />
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <Badges variant={"sub-default"} badgesData={badges} />
         </div>
