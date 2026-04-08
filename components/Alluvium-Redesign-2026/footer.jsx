@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../../styles/AlluviumRedesign2026/home/footer.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+
 const mobilePhones = [
   // {
   //     id: "", location: "Lagos", num: ""
@@ -25,6 +26,7 @@ const services = [
     name: "Strategic Partnerships",
   },
 ];
+
 const company = [
   { url: "/about", id: "1", name: "about us" },
   {
@@ -37,6 +39,7 @@ const company = [
   { url: "https://alluvium.net/booth53#hero", id: "5", name: "booth 53" },
   { url: "/contact-us", id: "6", name: "contact us" },
 ];
+
 const resources = [
   { url: "", id: "1", name: "success stories" },
   { url: "/blogs", id: "2", name: "blog" },

@@ -21,7 +21,7 @@ const AboutHero = () => {
           <div className={styles.visualContent}>
             {/* <div className={styles.blueBlock} /> */}
             <img
-              src="/assets/Alluvium-Redesign-2026/about/hero.png"
+              src="/assets/Alluvium-Redesign-2026/about/hero1.png"
               alt="Atlassian Partnership"
               className={styles.mainImage}
             />
