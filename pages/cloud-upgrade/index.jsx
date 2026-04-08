@@ -73,6 +73,33 @@ const CloudUpgrade = () => {
     },
   ];
 
+  const complianceData = [
+    {
+      id: 1,
+      src: "/assets/Alluvium-Redesign-2026/services/gdpr.png",
+      alt: "Compliance Cert 1",
+      size: styles.large,
+      width: 264,
+      height: 168,
+    },
+    {
+      id: 2,
+      src: "/assets/Alluvium-Redesign-2026/services/iso.png",
+      alt: "Compliance Cert 2",
+      size: styles.medium,
+      width: 205,
+      height: 205,
+    },
+    {
+      id: 3,
+      src: "/assets/Alluvium-Redesign-2026/services/soc.png",
+      alt: "Compliance Cert 3",
+      size: styles.small,
+      width: 190,
+      height: 189,
+    },
+  ];
+
   return (
     <>
       <Layout>
@@ -110,7 +137,7 @@ const CloudUpgrade = () => {
           img="/assets/Alluvium-Redesign-2026/services/large.png"
         />
         <WhyAlluvium />
-        <SecurityCompliance />
+        <SecurityCompliance data={complianceData} />
         <CtaSection />
       </Layout>
     </>

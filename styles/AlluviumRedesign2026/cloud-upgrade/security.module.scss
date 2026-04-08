@@ -12,9 +12,9 @@ $color-zinc-600: #52525b;
   width: 100%;
   max-width: 1280px;
   padding: 96px 20px; // py-24
-  border-left: 1px solid $color-zinc-300;
-  border-right: 1px solid $color-zinc-300;
-  border-bottom: 1px solid $color-zinc-300;
+  border-left: 1px dashed $color-zinc-300;
+  border-right: 1px dashed $color-zinc-300;
+  border-bottom: 1px dashed $color-zinc-300;
   display: flex;
   flex-direction: column;
   align-items: center;

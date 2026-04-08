@@ -1,19 +1,48 @@
 import Head from "next/head";
 import styles from "../../styles/about.module.scss";
 import Layout from "components/layout";
-import Hero from "components/Alluvium-Redesign-2025/AboutUs/hero";
-import AboutAlluvium from "components/Alluvium-Redesign-2025/AboutUs/aboutAlluvium";
-import OurMission from "components/Alluvium-Redesign-2025/AboutUs/ourMission";
-import HowItStarted from "components/Alluvium-Redesign-2025/AboutUs/howItStarted";
-import CoreValueAbout from "components/Alluvium-Redesign-2025/AboutUs/coreValueAbout";
 import AboutHero from "components/Alluvium-Redesign-2026/about/hero";
 import MissionSection from "components/Alluvium-Redesign-2026/about/ourMission";
 import AboutGrid from "components/Alluvium-Redesign-2026/about/aboutAlluvium";
 import AwardsSection from "components/Alluvium-Redesign-2026/about/awardsNomination";
 import ImpactStory from "components/Alluvium-Redesign-2026/about/ourImpact";
 import ValuesGrid from "components/Alluvium-Redesign-2026/about/coreValue";
+import SecurityCompliance from "components/Alluvium-Redesign-2026/cloud-upgrade/security";
 
 export default function AboutUs() {
+  const complianceData = [
+    {
+      id: 1,
+      src: "/assets/Alluvium-Redesign-2026/services/gdpr.png",
+      alt: "Compliance Cert 1",
+      size: styles.large,
+      width: 264,
+      height: 168,
+    },
+    {
+      id: 2,
+      src: "/assets/Alluvium-Redesign-2026/home/commerce.png",
+      alt: "Compliance Cert 2",
+      size: styles.medium,
+      width: 212,
+      height: 107,
+    },
+    {
+      id: 3,
+      src: "/assets/Alluvium-Redesign-2026/home/chamber.png",
+      alt: "Compliance Cert 3",
+      size: styles.small,
+      width: 330,
+      height: 112,
+    },
+
+    // {
+    //   img: "/assets/redesign-2025/awscerts.svg",
+    //   width: 107,
+    //   height: 100,
+    //   alt: "aws partner",
+    // },
+  ];
   return (
     <Layout>
       <div className={styles.aboutUsPage}>
@@ -35,12 +64,17 @@ export default function AboutUs() {
           <AboutGrid />
           <AwardsSection />
           <ImpactStory />
+          <SecurityCompliance
+            data={complianceData}
+            withSubhead={false}
+            heading={"Industry Accolades"}
+          />
           <ValuesGrid />
-          <Hero />
+          {/* <Hero />
           <AboutAlluvium />
           <OurMission />
           <HowItStarted />
-          <CoreValueAbout />
+          <CoreValueAbout /> */}
         </main>
       </div>
     </Layout>
