@@ -73,6 +73,23 @@ const CloudUpgrade = () => {
     },
   ];
 
+  const badges = [
+    {
+      id: "01",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+      alt: "Cloud Partner",
+      width: "201",
+      height: "134",
+    },
+    {
+      id: "02",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+      alt: "Gold Partner",
+      width: "278",
+      height: "74",
+    },
+  ];
+
   return (
     <>
       <Layout>
@@ -94,10 +111,8 @@ const CloudUpgrade = () => {
           />
         </Head>
         <ServicesHero
-          badge={"CLOUD UPGRADE"}
-          heading={
-            "Strategic Atlassian Cloud Migration: Secure. Scalable. Seamless."
-          }
+          badges={badges}
+          heading={"Cloud Upgrade: Secure. Scalable. Seamless."}
           subhead={
             "We don’t just move data; we migrate your business logic. Alluvium provides the strategic technical bench for high-stakes migrations, ensuring security, compliance, and optimized performance from Day one."
           }

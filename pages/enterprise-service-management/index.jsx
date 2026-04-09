@@ -73,6 +73,23 @@ const EnterpriseManagement = () => {
     },
   ];
 
+  const badges = [
+    {
+      id: "01",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+      alt: "Cloud Partner",
+      width: "201",
+      height: "134",
+    },
+    {
+      id: "02",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/itsm.png",
+      alt: "Gold Partner",
+      width: "201",
+      height: "134",
+    },
+  ];
+
   return (
     <>
       <Layout>
@@ -94,7 +111,7 @@ const EnterpriseManagement = () => {
           />
         </Head>
         <ServicesHero
-          badge={"Enterprise Service Management"}
+          badges={badges}
           heading={
             "Enterprise Service Management (ESM): Velocity for Every Department."
           }
