@@ -20,8 +20,13 @@ const AboutHero = () => {
           {/* Right Side: Layered Visuals */}
           <div className={styles.visualContent}>
             {/* <div className={styles.blueBlock} /> */}
+            {/* <img
+              src="/assets/Alluvium-Redesign-2026/about/shape.png"
+              alt="Atlassian Partnership"
+              className={styles.mainImage2}
+            /> */}
             <img
-              src="/assets/Alluvium-Redesign-2026/about/hero1.png"
+              src="/assets/Alluvium-Redesign-2026/about/hero.png"
               alt="Atlassian Partnership"
               className={styles.mainImage}
             />
