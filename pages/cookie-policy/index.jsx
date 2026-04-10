@@ -1,4 +1,3 @@
-import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 import EventsBanner from "components/Alluvium-Redesign-2026/events/hero";
 import Layout from "components/layout";
 import List from "components/privacy_policy/List";
