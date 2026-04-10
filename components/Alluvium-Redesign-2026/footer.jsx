@@ -177,7 +177,7 @@ const Footer = () => {
             Terms & Conditions
           </Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
-          <Link href="/alluvium.net/cookie-policy">Cookies Preferences</Link>
+          <Link href="/cookie-policy">Cookies Preferences</Link>
         </div>
       </div>
     </div>

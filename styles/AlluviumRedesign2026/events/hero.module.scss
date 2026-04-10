@@ -93,11 +93,15 @@ $color-zinc-100: #f4f4f5;
 
 .title {
   color: $color-white;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Domine", sans-serif;
   font-size: clamp(2rem, 5vw, 2.5rem); // text-4xl fluid
   font-weight: 600;
   line-height: 1.2;
   max-width: 600px;
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem; // text-3xl
+  }
 }
 
 .description {

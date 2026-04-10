@@ -8,6 +8,7 @@ import styles from "../../styles/Privacypolicy.module.scss";
 import List from "../../components/privacy_policy/List";
 import { productData } from "../../data";
 import Layout from "components/layout";
+import EventsBanner from "components/Alluvium-Redesign-2026/events/hero";
 
 const PrivacyPolicy = ({ products }) => {
   const policyContent = [
@@ -620,11 +621,18 @@ your request to speed up our response.`,
 
         <main>
           <section>
-            <BannerRotate
+            <EventsBanner
+              heading={"Privacy policy"}
+              // title={"Latest articles"}
+              subhead={"Last updated: 18 June 2025."}
+              backgroundImage={"/assets/Alluvium-Redesign-2026/policy/hero.png"}
+            />
+
+            {/* <BannerRotate
               bg="url(assets/privacy-policy/banner.png)"
               title="Privacy Policy"
               text=""
-            />
+            /> */}
             <List content={policyContent} heading={"PRIVACY NOTICE"} />
           </section>
         </main>
