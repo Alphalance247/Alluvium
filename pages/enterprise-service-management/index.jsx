@@ -130,7 +130,7 @@ const EnterpriseManagement = () => {
         <DiscoverySection
           heading="The 5-Step ESM Implementation Journey"
           data={blueprintSteps}
-          img="/assets/Alluvium-Redesign-2026/services/large2.png"
+          img="/assets/Alluvium-Redesign-2026/services/lage12.png"
         />
         <ExpertiseBridge />
 

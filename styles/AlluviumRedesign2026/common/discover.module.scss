@@ -91,6 +91,11 @@ $color-orange-200: #fed7aa;
   font-weight: 600;
   font-family: "Domine", sans-serif;
   margin-bottom: 48px;
+
+  @media (max-width: 640px) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
 }
 
 .stepsList {
