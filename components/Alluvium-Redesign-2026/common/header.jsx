@@ -51,7 +51,7 @@ const Navbar = () => {
               width={150}
               height={50}
               src="/assets/alluvium-logo-dark.svg"
-              alt="logo"
+              alt="Alluvium logo"
             />
           </Link>
         </div>
@@ -99,7 +99,9 @@ const Navbar = () => {
 
         {/* Action Button */}
         <div className={styles.actions}>
-          <button className={styles.btnContact}>CONTACT US</button>
+          <Link href="/contact-us">
+            <button className={styles.btnContact}>CONTACT US</button>
+          </Link>
         </div>
       </div>
     </nav>

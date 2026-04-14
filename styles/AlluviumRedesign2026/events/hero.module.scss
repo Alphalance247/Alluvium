@@ -97,7 +97,7 @@ $color-zinc-100: #f4f4f5;
   font-size: clamp(2rem, 5vw, 2.5rem); // text-4xl fluid
   font-weight: 600;
   line-height: 1.2;
-  max-width: 600px;
+  max-width: 700px;
 
   @media (max-width: 768px) {
     font-size: 1.75rem; // text-3xl
@@ -110,5 +110,5 @@ $color-zinc-100: #f4f4f5;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 700px;
 }

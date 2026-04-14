@@ -8,34 +8,34 @@ const caseStudies = [
     id: 1,
     category: "finance",
     title: "Strategic Agile Transformation & Cloud Migration",
+    link: "strategic-agile-transformation-&-cloud-migration",
     statHighlight: "2 Jira Server instances",
     statSubtext: " migrated to cloud",
     image: "/assets/Alluvium-Redesign-2026/SuccessStory/card.png",
   },
   {
     id: 2,
-    category: "finance",
-    title: "Strategic Agile Transformation & Cloud Migration",
-    statHighlight: "2 Jira Server instances",
-    statSubtext: " migrated to cloud",
+    category: "Telecommunications",
+    title: "Seamless Cloud Migration & Workflow Automation",
+    link: "rapid-cloud-migration-cost-optimization/",
+    statHighlight: "multi-million ",
+    statSubtext: " transformation program supported",
     image: "/assets/Alluvium-Redesign-2026/SuccessStory/card.png",
   },
   {
     id: 3,
-    category: "finance",
-    title: "Strategic Agile Transformation & Cloud Migration",
-    statHighlight: "2 Jira Server instances",
-    statSubtext: " migrated to cloud",
+    category: "Managed Services / IT Services",
+    title: "Rapid Cloud Migration & Cost Optimization",
+    link: "multimillion-pound-enterprise-agile-framework",
+    statHighlight: "Significant cost ",
+    statSubtext: " reduction",
     image: "/assets/Alluvium-Redesign-2026/SuccessStory/card.png",
   },
 ];
 
 const CaseStudyGrid = ({ backgroundColor, showHeading = false }) => {
   return (
-    <section 
-      className={styles.wrapper}
-      style={{ backgroundColor }}
-    >
+    <section className={styles.wrapper} style={{ backgroundColor }}>
       <div className={styles.innerContainer}>
         {showHeading && (
           <div className={styles.headingContainer}>
@@ -44,7 +44,7 @@ const CaseStudyGrid = ({ backgroundColor, showHeading = false }) => {
         )}
         <div className={styles.grid}>
           {caseStudies.map((study) => (
-            <Link href={`/success-stories/${study.id}`}>
+            <Link href={`/success-stories/${study.link}`} key={study.id}>
               <article key={study.id} className={styles.card}>
                 <div className={styles.imageContainer}>
                   <Image

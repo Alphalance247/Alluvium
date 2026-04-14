@@ -62,9 +62,11 @@
 }
 
 .itemDescription {
-  color: #3f3f46; // zinc-700
-  font-size: 14px;
-  line-height: 1.4;
+  color: #595959; // zinc-700
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: "Inter";
 }
 
 .divider {
@@ -100,15 +102,20 @@
 }
 
 .cardButton {
-  background: #fed7aa; // orange-200
-  color: #27272a;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 6px;
+  background-color: #fed7aa; // orange-200
+  color: #1f2937;
   font-size: 12px;
   font-weight: 700;
-  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  // outline: none;
+  border: none;
+  align-items: center;
+  gap: 6px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .cardGraphic {

@@ -1,12 +1,18 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/common/dropdown/solutionNav.module.scss";
+import Link from "next/link";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 
 const SolutionNav = () => {
   const services = [
-    "Cloud Upgrade",
-    "ESM",
-    "License Optimization",
-    "Partnerships",
+    {
+      name: "Cloud Upgrade",
+      link: "/cloud-upgrade",
+    },
+    { name: "ESM", link: "/enterprise-service-management" },
+    { name: "License Optimization", link: "/license-optimization" },
+    { name: "Partnerships", link: "/strategic-partnerships" },
   ];
 
   return (
@@ -15,10 +21,12 @@ const SolutionNav = () => {
       <div className={styles.linksColumn}>
         <div className={styles.columnTitle}>Alluvium Solutions</div>
         {services.map((service, index) => (
-          <div key={index} className={styles.navLink}>
-            {service}
-            <span className={styles.chevron} />
-          </div>
+          <Link href={service?.link} key={index}>
+            <div key={index} className={styles.navLink}>
+              {service.name}
+              <span className={styles.chevron} />
+            </div>
+          </Link>
         ))}
       </div>
 
@@ -33,42 +41,21 @@ const SolutionNav = () => {
             It argues that mastering regulation can be turned into a competitive
             advantage.
           </p>
-          <div className={styles.badgeBtn}>
-            Get The Report
-            <span style={{ fontSize: "14px" }}>→</span>
-          </div>
+          <Link href="/whitepaper/regulatory-supremacy-and-competitive-edge/">
+            <button className={styles.badgeBtn}>
+              Get The Report
+              <FaArrowRight color="#E37915" size={14} />
+            </button>
+          </Link>
         </div>
 
         {/* The Graphic Preview */}
-        <div className={styles.bookPreview}>
-          <div className={styles.bookTitle}>
-            Regulatory Supremacy and Competitive Edge
-          </div>
-          {/* Overlay color blocks from your snippet */}
-          <div
-            style={{
-              position: "absolute",
-              bottom: "10px",
-              right: "10px",
-              display: "grid",
-              gridTemplateColumns: "repeat(2, 1fr)",
-              gap: "2px",
-            }}
-          >
-            <div
-              style={{ width: "12px", height: "12px", background: "#ef4444" }}
-            />
-            <div
-              style={{ width: "12px", height: "12px", background: "#ec4899" }}
-            />
-            <div
-              style={{ width: "12px", height: "12px", background: "#6366f1" }}
-            />
-            <div
-              style={{ width: "12px", height: "12px", background: "#3b82f6" }}
-            />
-          </div>
-        </div>
+        <Image
+          width={141}
+          height={270}
+          src="/assets/Alluvium-Redesign-2026/nav/cover.png"
+          alt=""
+        />
       </div>
     </div>
   );

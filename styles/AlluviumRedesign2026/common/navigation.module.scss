@@ -27,7 +27,7 @@ $amber-600: #d97706;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 80px;
+  padding: 0 62px;
 
   @media (max-width: 1024px) {
     padding: 0 20px;
@@ -42,6 +42,7 @@ $amber-600: #d97706;
   position: relative;
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   .cyanBlock {
     width: 16px;

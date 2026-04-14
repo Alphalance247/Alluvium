@@ -66,7 +66,7 @@ $neutral-800: #262626;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
   overflow: hidden;
   transition: background-color 0.2s ease;
   cursor: pointer;
@@ -106,7 +106,7 @@ $neutral-800: #262626;
 
 .title {
   color: $gray-700;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 18px;
   font-weight: 600;
   line-height: 28px;
@@ -118,6 +118,8 @@ $neutral-800: #262626;
   font-size: 12px;
   text-transform: uppercase;
   line-height: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   .highlight {
     color: $neutral-800;

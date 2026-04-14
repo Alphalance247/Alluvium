@@ -1,20 +1,45 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/common/dropdown/resourcesNav.module.scss";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import Link from "next/link";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 
 const ResourcesNav = () => {
   const resourceLinks = [
     {
       title: "Success Stories",
-      desc: "Case studies of workforce transformation.",
+      desc: "Explore how we’ve helped organizations deliver successful cloud migrations, optimize costs, and scale with Atlassian.",
+      link: "/success-stories",
     },
-    { title: "Blog", desc: "Latest insights on strategic planning." },
-    { title: "Whitepapers", desc: "In-depth research and industry reports." },
+    {
+      title: "Blog",
+      desc: "Insights, best practices, and expert perspectives on cloud, Agile, and enterprise transformation.",
+      link: "/blogs",
+    },
+    {
+      title: "Whitepapers",
+      desc: "Insights, best practices, and expert perspectives on cloud, Agile, and enterprise transformation.",
+      link: "/whitepaper",
+    },
   ];
 
   const companyLinks = [
-    { title: "Webinars & Events", desc: "Join our upcoming live sessions." },
-    { title: "About us", desc: "Our mission and the team behind it." },
-    { title: "Contact & Support", desc: "We are here to help you succeed." },
+    {
+      title: "Webinars & Events",
+      desc: "Join our sessions to learn from experts, discover new trends, and explore practical solutions.",
+      link: "/event",
+    },
+    {
+      title: "About us",
+      desc: "Learn who we are, what we stand for, and how we help organizations succeed with Atlassian.",
+      link: "/about",
+    },
+    {
+      title: "Contact & Support",
+      desc: "Get in touch with our team or access support for your products and services.",
+      link: "/contact-us",
+    },
   ];
 
   return (
@@ -23,13 +48,15 @@ const ResourcesNav = () => {
       <div className={styles.navColumn}>
         <h3 className={styles.columnHeader}>Resources</h3>
         {resourceLinks.map((link, i) => (
-          <div key={i} className={styles.menuItem}>
-            <div className={styles.itemTitleRow}>
-              <span>{link.title}</span>
-              <div className={styles.arrowIcon}>→</div>
+          <Link href={link.link} key={i}>
+            <div key={i} className={styles.menuItem}>
+              <div className={styles.itemTitleRow}>
+                <span>{link.title}</span>
+                <MdOutlineKeyboardArrowRight color="#8C8C8C" />
+              </div>
+              <p className={styles.itemDescription}>{link.desc}</p>
             </div>
-            <p className={styles.itemDescription}>{link.desc}</p>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -39,13 +66,15 @@ const ResourcesNav = () => {
       <div className={styles.navColumn}>
         <h3 className={styles.columnHeader}>Company</h3>
         {companyLinks.map((link, i) => (
-          <div key={i} className={styles.menuItem}>
-            <div className={styles.itemTitleRow}>
-              <span>{link.title}</span>
-              <div className={styles.arrowIcon}>→</div>
+          <Link href={link.link} key={i}>
+            <div key={i} className={styles.menuItem}>
+              <div className={styles.itemTitleRow}>
+                <span>{link.title}</span>
+                <MdOutlineKeyboardArrowRight color="#8C8C8C" />
+              </div>
+              <p className={styles.itemDescription}>{link.desc}</p>
             </div>
-            <p className={styles.itemDescription}>{link.desc}</p>
-          </div>
+          </Link>
         ))}
       </div>
 
@@ -61,10 +90,20 @@ const ResourcesNav = () => {
             The contemporary business landscape is defined by a persistent and
             widening gap...
           </p>
-          <button className={styles.cardButton}>GET THE REPORT</button>
+          <Link href="/success-stories/strategic-agile-transformation-&-cloud-migration">
+            <button className={styles.cardButton}>
+              GET THE REPORT
+              <FaArrowRight color="#E37915" size={14} />
+            </button>
+          </Link>
         </div>
         <div className={styles.cardGraphic}>
-          <img src="https://placehold.co/136x192" alt="Report Cover" />
+          <Image
+            width={191}
+            height={213}
+            src="/assets/Alluvium-Redesign-2026/nav/strategic.png"
+            alt="Report Cover"
+          />
         </div>
       </div>
     </div>
