@@ -3,9 +3,24 @@ import Head from "next/head";
 import Layout from "components/layout";
 import ServicesHero from "components/Alluvium-Redesign-2026/common/servicesHero";
 import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
-import ComparisonTable from "components/Alluvium-Redesign-2026/licence-optimization/comparisonTable";
 
 const StrategicPartnership = () => {
+  const badges = [
+    {
+      id: "01",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+      alt: "Cloud Partner",
+      width: "201",
+      height: "134",
+    },
+    {
+      id: "02",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+      alt: "Gold Partner",
+      width: "278",
+      height: "74",
+    },
+  ];
   return (
     <>
       <Layout>
@@ -27,7 +42,7 @@ const StrategicPartnership = () => {
           />
         </Head>
         <ServicesHero
-          badge={"Strategic Ecosystem Partnerships"}
+          badges={badges}
           heading={
             "The Strategic Technical Bench for Global Atlassian Partners."
           }

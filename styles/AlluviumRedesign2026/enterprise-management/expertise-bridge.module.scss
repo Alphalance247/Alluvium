@@ -33,7 +33,7 @@ $color-text: #52525b; // zinc-600
 
 .content {
   flex: 1;
-  max-width: 480px;
+  max-width: 380px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -46,8 +46,8 @@ $color-text: #52525b; // zinc-600
 
 .title {
   color: $color-title;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 30px;
+  font-family: "Domine", sans-serif;
+  font-size: 34px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -55,7 +55,7 @@ $color-text: #52525b; // zinc-600
 .description {
   color: $color-text;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
 }
 

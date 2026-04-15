@@ -28,6 +28,7 @@ const services = [
         name: "Strategic Partnerships",
     },
 ];
+
 const company = [
     { url: "/about", id: "1", name: "about us" },
     {
@@ -40,6 +41,7 @@ const company = [
     { url: "https://alluvium.net/booth53#hero", id: "5", name: "booth 53" },
     { url: "/contact-us", id: "6", name: "contact us" },
 ];
+
 const resources = [
     { url: "https://alluvium.net/blogs", id: "1", name: "success stories", },
     { url: "https://alluvium.net/blogs", id: "2", name: "blog", },

@@ -1,172 +1,130 @@
-// Variables
-$color-zinc-300: rgba(212, 212, 216, 0.8);
-$color-zinc-600: #52525b;
-$color-slate-900: #0f172a;
-$color-amber-600: #d97706;
-$color-sky-200: #bae6fd;
-$color-white: #ffffff;
-$color-gray-100: #f0f0f0;
-$breakpoint-tablet: 1024px;
-$breakpoint-mobile: 640px;
+$gray-900: #111827;
+$amber-600: #d97706;
+$zinc-100: #f4f4f5;
+$zinc-300: #d4d4d8;
 
-.sectionHeading {
-  background: $color-slate-900;
-}
-
-.container {
-  display: flex;
-  flex-direction: row; // Side-by-side on desktop
+.wrapper {
   width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  outline: 1px solid $color-zinc-300;
-  outline-offset: -1px;
+  background-color: $gray-900;
+  display: flex;
+  justify-content: center;
+  padding: 0 0px;
   overflow: hidden;
-
-  @media (max-width: $breakpoint-tablet) {
-    flex-direction: column; // Stack on tablets/phones
-    max-width: 100%;
-  }
 }
 
-.contentSide {
-  flex: 1;
-  padding: 96px 60px;
+.innerContainer {
+  width: 100%;
+  max-width: 1283px; // Consistent site-wide grid
+  padding: 96px 0; // py-24
+  outline: 1px solid rgba($zinc-300, 0.8);
+  outline-offset: -1px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    padding: 64px 20px;
+    outline: none;
+  }
+}
+
+.textContent {
+  max-width: 970px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 24px;
 
-  @media (max-width: $breakpoint-mobile) {
-    padding: 40px 24px;
-    gap: 20px;
+  h2 {
+    color: #fff;
+    font-family: "Domine", serif;
+    font-size: clamp(2rem, 6vw, 3rem); // text-5xl responsive
+    font-weight: 700;
+    line-height: 1.1;
+
+    @media (max-width: 768px) {
+      font-size: 2rem; // text-4xl
+    }
   }
-}
 
-.badge {
-  display: inline-flex;
-  align-self: flex-start;
-  padding: 4px 10px;
-  // border-radius: 4px;
-  // outline: 1px solid $color-zinc-300;
+  p {
+    color: $zinc-100;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
 
-  span {
-    color: #d9d9d9;
-    font-family: "Geist Mono", monospace;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 28px;
+    }
   }
-}
-
-.title {
-  max-width: 600px;
-  color: $color-white;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(1.8rem, 5vw, 2.5rem); // Fluid typography
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -1px;
-  margin-bottom: 0;
-}
-
-.description {
-  max-width: 540px;
-  color: #f0f0f0;
-  font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 0;
 }
 
 .ctaButton {
-  padding: 12px 24px;
-  background-color: $color-amber-600;
-  color: $color-white;
+  background-color: $amber-600;
+  color: #fff;
+  padding: 10px 24px;
   border-radius: 8px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
+  font-size: 14px;
   text-transform: uppercase;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  white-space: nowrap;
+  transition: transform 0.2s ease;
 
-  @media (max-width: $breakpoint-mobile) {
-    width: 100%; // Full width button on small phones
-    font-size: 13px;
+  &:hover {
+    transform: translateY(-2px);
   }
 }
 
-.visualSide {
-  position: relative;
-  flex-basis: 482px; // Fixed basis for desktop side
-  max-height: 700px;
-  // margin-bottom: -0.5rem;
-  // background-color: $color-sky-200;
-  // overflow: hidden;
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
 
-  @media (max-width: $breakpoint-tablet) {
-    flex-basis: auto;
-    height: 450px;
+  @media (max-width: 768px) {
+    gap: 24px;
   }
 }
 
-.bgImage {
-  position: absolute;
-  width: 180%; // Scaled up to cover area
-  left: -20%;
-  top: -10%;
-  opacity: 0.7;
-}
+/* Specific styling for the Gold Partner Badge */
+.goldPartnerBadge {
+  background-color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-.blurOverlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba($color-sky-200, 0.6);
-  backdrop-filter: blur(80px);
-}
-
-// Floating Elements
-.partnerCard {
-  position: absolute;
-  background: $color-white;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-
-  &.bottomLogo {
-    left: 10%;
-    bottom: 40px;
-    padding: 12px;
-    img {
-      max-width: 180px;
-      height: auto;
-    }
+  .badgeIcon {
+    width: 54px;
+    height: 54px;
   }
 
-  &.topRightBadge {
-    right: 10%;
-    top: 40px;
-    padding: 8px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .divider {
+    width: 1px;
+    height: 56px;
+    background-color: #9ca3af; // gray-400
+  }
 
-    span {
-      font-size: 16px;
-      font-weight: 500;
-      color: #050b2e;
-    }
+  .badgeText {
+    color: #001a41; // blue-950
+    font-family: "Charlie Display", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.1;
   }
 }
 
-.featureThumb {
-  position: absolute;
-  left: 10%;
-  top: 40px;
-  border-radius: 8px;
-  width: 140px;
+.secondaryLogo {
+  width: 201px;
   height: auto;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0.9;
 }

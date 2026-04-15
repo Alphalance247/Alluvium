@@ -6,11 +6,13 @@ import { ConsultationForm } from "./Consultation";
 import ContactSection from "./Alluvium-Redesign-2025/ContactSection";
 import Footer from "./Alluvium-Redesign-2026/footer";
 import CookieConsent from "./Alluvium-Redesign-2025/CookieConsent";
+import Navbar from "./Alluvium-Redesign-2026/common/header";
 
 export default function Layout({ children, withoutForm }) {
   return (
     <div>
-      <Navigation />
+      {/* <Navigation /> */}
+      <Navbar />
       <div className={styles.layoutBody}>{children}</div>
       {/* {<ConsultationForm />} */}
 
