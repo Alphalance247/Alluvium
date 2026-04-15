@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/success-stories/case-study-details.module.scss";
 import Image from "next/image";
+import FormSection from "../formSection";
 
 const CaseStudyDetail = ({
   client = "Client Name",
@@ -117,7 +118,8 @@ const CaseStudyDetail = ({
             <h2 className={styles.formTitle}>
               Want to see Alluvium in action?
             </h2>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <FormSection color="#F2F2F3" />
+            {/* <form onSubmit={(e) => e.preventDefault()}>
               <div className={styles.formField}>
                 <label>First name*</label>
                 <input type="text" required />
@@ -144,7 +146,7 @@ const CaseStudyDetail = ({
               <button type="submit" className={styles.submitBtn}>
                 Contact Sales
               </button>
-            </form>
+            </form> */}
           </div>
         </aside>
       </main>

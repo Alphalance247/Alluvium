@@ -34,7 +34,7 @@ $color-white: #ffffff;
 
 .titleMain {
   color: $color-slate-900;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Domine", sans-serif;
   font-size: 30px;
   font-weight: 600;
 }
@@ -52,7 +52,7 @@ $color-white: #ffffff;
 .eventRow {
   display: flex;
   align-items: center;
-  gap: 48px;
+  // gap: 48px;
 
   // Logic for alternating layout
   &.reverse {
@@ -82,7 +82,7 @@ $color-white: #ffffff;
 
 .eventTitle {
   color: $color-slate-900;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Domine", sans-serif;
   font-size: 24px;
   font-weight: 600;
   margin-top: 8px;
