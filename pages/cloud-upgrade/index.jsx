@@ -73,30 +73,20 @@ const CloudUpgrade = () => {
     },
   ];
 
-  const complianceData = [
+  const badges = [
     {
-      id: 1,
-      src: "/assets/Alluvium-Redesign-2026/services/gdpr.png",
-      alt: "Compliance Cert 1",
-      // size: styles.large,
-      width: 264,
-      height: 168,
+      id: "01",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+      alt: "Cloud Partner",
+      width: "201",
+      height: "134",
     },
     {
-      id: 2,
-      src: "/assets/Alluvium-Redesign-2026/services/iso.png",
-      alt: "Compliance Cert 2",
-      // size: styles.medium,
-      width: 205,
-      height: 205,
-    },
-    {
-      id: 3,
-      src: "/assets/Alluvium-Redesign-2026/services/soc.png",
-      alt: "Compliance Cert 3",
-      // size: styles.small,
-      width: 190,
-      height: 189,
+      id: "02",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+      alt: "Gold Partner",
+      width: "278",
+      height: "74",
     },
   ];
 
@@ -121,10 +111,8 @@ const CloudUpgrade = () => {
           />
         </Head>
         <ServicesHero
-          badge={"CLOUD UPGRADE"}
-          heading={
-            "Strategic Atlassian Cloud Migration: Secure. Scalable. Seamless."
-          }
+          badges={badges}
+          heading={"Cloud Upgrade: Secure. Scalable. Seamless."}
           subhead={
             "We don’t just move data; we migrate your business logic. Alluvium provides the strategic technical bench for high-stakes migrations, ensuring security, compliance, and optimized performance from Day one."
           }

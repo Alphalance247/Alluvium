@@ -87,10 +87,15 @@ $color-orange-200: #fed7aa;
 
 .header {
   color: $color-slate-900;
-  font-size: 30px;
+  font-size: 34px;
   font-weight: 600;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Domine", sans-serif;
   margin-bottom: 48px;
+
+  @media (max-width: 640px) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
 }
 
 .stepsList {
@@ -135,7 +140,7 @@ $color-orange-200: #fed7aa;
     color: $color-slate-900;
     font-size: 18px;
     font-weight: 600;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Domine", sans-serif;
   }
 
   p {

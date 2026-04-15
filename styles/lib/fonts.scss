@@ -152,6 +152,14 @@
 }
 
 @font-face {
+  font-family: "Domine";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Domine/domine.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Inter";
   font-display: fallback;
   font-style: normal;
