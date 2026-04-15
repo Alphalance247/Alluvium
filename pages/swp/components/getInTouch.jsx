@@ -12,6 +12,7 @@ import MeetBoard from "./meetBoard";
 const GetInTouch = () => {
   const { addToast } = useToasts();
   const [loading, setLoading] = useState(false);
+  const [responseMessage, setResponseMessage] = useState("");
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -22,6 +23,10 @@ const GetInTouch = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((s) => ({ ...s, [name]: value }));
+    // Clear success message when user starts typing
+    if (responseMessage) {
+      setResponseMessage("");
+    }
   };
 
   const isWorkEmail = (email) => {
@@ -87,11 +92,22 @@ const GetInTouch = () => {
       )
       .then((res) => {
         if (res?.status >= 200 && res?.status < 300) {
-          addToast(res?.data?.message || "Request submitted successfully.", {
+          // Log to see actual response structure
+          console.log("API Response:", res.data);
+
+          const successMessage =
+            res?.data?.body ||
+            res?.data?.message ||
+            res?.data ||
+            "Request submitted successfully.";
+
+          addToast(successMessage, {
             appearance: "success",
             autoDismiss: true, // Enable auto dismiss
             autoDismissTimeout: 5000, // Dismiss after 5 seconds
           });
+
+          setResponseMessage(successMessage);
           setLoading(false);
           setForm({ name: "", email: "", phone: "" });
         } else {
@@ -209,6 +225,13 @@ const GetInTouch = () => {
               <span>😉</span>
             </h3>
             <p className={styles.card__hint}></p>
+
+            {responseMessage && (
+              <div className={styles.success__message}>
+                <div className={styles.success__checkmark}>✓</div>
+                <p className={styles.success__text}>{responseMessage}</p>
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} aria-label="get-in-touch-form">
               <div className={styles.formGroup}>

@@ -21,7 +21,7 @@ const StreamlineServer = () => {
           variant="tertiary"
         />
         <div className={styles.readMore}>
-          <ReadMore content={"Read More"} />
+          {/* <ReadMore content={"Read More"} /> */}
         </div>
       </div>
     </div>

@@ -78,11 +78,11 @@ export default function Navigation({ theme }) {
           )}
         </div>
         <div className=" d-flex align-items-center  gap-3" >
-          <Link href="/atlassian-services/support">
+          {/* <Link href="/atlassian-services/support">
             <a className={styles.contactUsButton}>Support</a>
-          </Link>
+          </Link> */}
           <Link href="/contact-us">
-            <a className={styles.scheduleButton}>Contact Us Today</a>
+            <a className={styles.scheduleButton}>Contact Us</a>
           </Link>
         </div>
         <button

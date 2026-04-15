@@ -26,30 +26,40 @@ const CookieConsent = () => {
   return (
     <div className={styles.cookieOverlay}>
       <div className={styles.cookieModal}>
-        <img
+        {/* <img
           src="/assets/redesign-2025/cookiesLogo.svg"
           alt="Cookie Icon"
           className={styles.icon}
-        />
-        <h2>Cookie consent</h2>
+        /> */}
+        <h2 >We value your privacy</h2>
         <p>
           We use cookies to improve your experience and analyze site usage.
           Cookies help us understand what content you find useful so we can
           enhance your experience. You can disable cookies in your browser
           settings, but some parts of our site may not function properly.{" "}
-          <a
-            href="/cookie-policy
+          <div className={styles.linkContainer}>
+            <a
+              href="/privacy-policy
           "
-          >
-            Read cookies policies.
-          </a>
+            >
+              Privacy policy
+            </a>
+            <div>|</div>
+            <a
+              href="/cookie-policy
+          "
+            >
+              cookies policies.
+            </a>
+          </div>
         </p>
         <div className={styles.buttonContainer}>
-          <button onClick={handleAccept} className={styles.acceptButton}>
-            Accept & continue
-          </button>
+
           <button onClick={handleDecline} className={styles.declineButton}>
-            Decline cookies
+            I disagree
+          </button>
+          <button onClick={handleAccept} className={styles.acceptButton}>
+            I agree
           </button>
         </div>
       </div>

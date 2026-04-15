@@ -104,7 +104,7 @@ const badges = [
     //     alt: "aws partner",
     // },
 ];
-const socialMedias = [{ icon: <IoLogoLinkedin />, url: "https://www.linkedin.com/company/alluvium-hq/" }, { icon: <FaFacebookSquare />, url: "https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#" }, { icon: <FaXTwitter />, url: "https://x.com/alluviumhq?s=08" }, { icon: <FaYoutube />, url: "" }]
+const socialMedias = [{ icon: <IoLogoLinkedin />, url: "https://www.linkedin.com/company/alluvium-hq/" }, { icon: <FaFacebookSquare />, url: "https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#" }, { icon: <FaXTwitter />, url: "https://x.com/alluviumhq?s=08" }, { icon: <FaYoutube />, url: "https://www.youtube.com/@AlluviumConsulting-b3o" }]
 const Footer = () => {
     return (
         <div style={{ background: "#0F1D29" }}>
@@ -202,6 +202,7 @@ const Footer = () => {
                             Terms & Conditions
                         </Link>
                         <Link href="/privacy-policy">Privacy Policy</Link>
+                        <Link href="https://alluvium.net/cookie-policy">Cookies Settings</Link>
                         <div className={styles.socialMedia}>
                             {socialMedias.map((icon, index) => (<Link href={icon.url} key={index} >
                                 {icon.icon}
