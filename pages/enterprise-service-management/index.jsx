@@ -17,8 +17,8 @@ const EnterpriseManagement = () => {
         "Give employees one single portal to request everything—from a new laptop (IT) to a contract review (Legal) or a payroll query (Finance).",
       // Replace these placeholder divs with your actual SVGs
       icon: "/assets/Alluvium-Redesign-2026/services/unified.svg",
-      width: 98,
-      height: 68,
+      width: 166,
+      height: 117,
     },
     {
       id: 2,
@@ -26,8 +26,8 @@ const EnterpriseManagement = () => {
       description:
         "Replace messy email chains and spreadsheets with automated workflows, SLAs, and clear accountability for every department.",
       icon: "/assets/Alluvium-Redesign-2026/services/bottle.svg",
-      width: 68,
-      height: 68,
+      width: 116,
+      height: 114,
     },
     {
       id: 3,
@@ -35,8 +35,8 @@ const EnterpriseManagement = () => {
       description:
         "Gain visibility into how every team is performing with unified reporting, identifying bottlenecks across the entire organization in real-time.",
       icon: "/assets/Alluvium-Redesign-2026/services/illus.svg",
-      width: 79,
-      height: 67,
+      width: 140,
+      height: 119,
     },
   ];
 

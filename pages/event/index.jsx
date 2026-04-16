@@ -31,16 +31,6 @@ const EventBlog = () => {
         <UpcomingEvents />
         <UpcomingWebinars />
         <OnDemandWebinars />
-        {/* <EventHero />
-        <DateVen />
-        <Gitex24 />
-        <GitexAfricaCarousel />
-        <Team24 />
-        <AtlassianTeam24Carousel />
-        <Connect />
-        <CloudConnectCarousel />
-        <Expo />
-        <LagosExpoCarousel /> */}
       </Layout>
     </>
   );

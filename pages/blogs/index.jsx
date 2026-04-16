@@ -117,7 +117,7 @@ const Blogs = () => {
 
       <CtaSection />
 
-      {error && (
+      {/* {error && (
         <section className="">
           <div
             className=" text-center py-5"
@@ -134,9 +134,9 @@ const Blogs = () => {
             <Button onClick={() => fetchData()}>Refresh</Button>
           </div>
         </section>
-      )}
+      )} */}
 
-      {!error && !loading && (
+      {/* {!error && !loading && (
         <>
           <section className={styles.hero__blog__heading}>
             <div className={styles.sub__head__hero}>
@@ -152,7 +152,6 @@ const Blogs = () => {
 
               {postWeek.map((postOfTheWeek, i) => (
                 <div className={styles.article__hero}>
-                  {/* ${postOfTheWeek?.slug} */}
                   <Link href={`/blogs/aipolicy`} passHref>
                     <div className={styles.dhcs__main}>
                       <div style={{ width: "100%" }}>
@@ -170,11 +169,6 @@ const Blogs = () => {
                       </div>
                       <div>
                         <div className={styles.indusrty__heading}>
-                          {/* {postOfTheWeek?.tag_names?.map((tag, i) => (
-                            <p className={styles.industry} key={i}>
-                              {tag}
-                            </p>
-                          ))} */}
                           {postOfTheWeek?.tag?.map((tag, i) => (
                             <p className={styles.industry} key={i}>
                               <span key={i}>{tag}</span>
@@ -242,7 +236,7 @@ const Blogs = () => {
             </div>
           </section>
         </>
-      )}
+      )} */}
     </Layout>
   );
 };
