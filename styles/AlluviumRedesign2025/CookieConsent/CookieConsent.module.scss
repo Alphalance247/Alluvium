@@ -34,27 +34,34 @@
       color: #595959;
       line-height: 24px;
       margin-bottom: 24px;
+
       .linkContainer {
         margin-top: 8px;
         display: flex;
         align-items: center;
+        flex-direction: row;
         gap: 8px;
-        div {
+
+        .divider {
           color: #b5babe;
+          font-size: 12px;
+        }
+        a {
+          color: #606a72;
+          text-transform: capitalize;
+          font-size: 12px;
+          font-weight: 500;
+          text-decoration: underline !important
+        ;
         }
       }
-      a {
-        color: #606a72;
-        text-decoration: none;
-        text-transform: capitalize;
-      }
     }
-
     .buttonContainer {
       display: flex;
       flex-direction: row;
       align-items: center;
       gap: 12px;
+      width: 100%;
       @media screen and (max-width: 640px) {
         display: flex;
         flex-direction: column;
@@ -77,11 +84,14 @@
         font-weight: 700;
         cursor: pointer;
         transition: 0.2s;
+        width: 50%;
         &:hover {
           background-color: #e37915;
         }
+        @media screen and (max-width: 640px) {
+          width: 100%;
+        }
       }
-
       .declineButton {
         border: 1px solid #d3d3d6;
         background: transparent;
@@ -93,6 +103,10 @@
         line-height: 20px;
         color: #71717a;
         cursor: pointer;
+        width: 50%;
+        @media screen and (max-width: 640px) {
+          width: 100%;
+        }
       }
     }
   }

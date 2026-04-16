@@ -4,7 +4,7 @@
   border-top: 1px dashed #414d57;
   background: #0f1d29;
   border: 1px dashed #414d57;
-  padding: 0px 80px;
+  padding: 48px 80px;
   .footer_container_content {
     display: flex;
     flex-direction: row;
@@ -147,10 +147,10 @@
         font-family: "Graphik", sans-serif;
         color: #bfbfbf;
         cursor: pointer;
-        @media screen and (max-width: 430px) {
+        @media screen and (max-width: 640px) {
           margin-left: 0px;
           padding-bottom: 20px;
-
+          padding: 0px;
           // padding-bottom: 16px;
           font-size: 14px;
         }
