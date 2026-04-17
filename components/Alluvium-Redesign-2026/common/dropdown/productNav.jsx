@@ -8,14 +8,15 @@ const ProductNav = () => {
   const products = [
     {
       title: "Export & Count",
-      description: "Lorem ipsum dolor sit amet consectetur. Vitae malesuada",
+      description:
+        "A powerful tool for Jira Cloud that allows you to export your data and get detailed insights into your projects, issues, and workflows.",
       image: "/assets/Alluvium-Redesign-2026/nav/export-count.png",
       theme: styles.skyTheme,
       link: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion?tab=overview&hosting=cloud",
     },
     {
       title: "Resource Compare",
-      description: "Lorem ipsum dolor sit amet consectetur. Vitae malesuada",
+      description: "Compare resources across your Jira projects with ease. ",
       image: "/assets/Alluvium-Redesign-2026/nav/compare.png",
       theme: styles.orangeTheme,
       link: "https://marketplace.atlassian.com/apps/1223507/resource-compare-for-jira?tab=overview&hosting=cloud",
