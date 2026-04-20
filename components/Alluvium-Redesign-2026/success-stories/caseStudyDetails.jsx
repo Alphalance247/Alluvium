@@ -69,7 +69,11 @@ const CaseStudyDetail = ({
             {/* Social media icons would go here */}
             <div className={styles.socialIcons}>
               {/* Example social media icons */}
-              <a href="#" aria-label="Share on Twitter">
+              <a
+                href="https://x.com/alluviumhq?s=08"
+                aria-label="Share on Twitter"
+                target="_blank"
+              >
                 <Image
                   width={24}
                   height={24}
@@ -77,7 +81,11 @@ const CaseStudyDetail = ({
                   alt="Twitter"
                 />
               </a>
-              <a href="#" aria-label="Share on LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/alluvium-hq/"
+                target="_blank"
+                aria-label="Share on LinkedIn"
+              >
                 <Image
                   width={24}
                   height={24}
@@ -85,7 +93,11 @@ const CaseStudyDetail = ({
                   alt="LinkedIn"
                 />
               </a>
-              <a href="#" aria-label="Share on Facebook">
+              <a
+                href="https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#"
+                target="_blank"
+                aria-label="Share on Facebook"
+              >
                 <Image
                   width={24}
                   height={24}
