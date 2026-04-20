@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/about/about.module.scss";
+import Link from "next/link";
 
 const AboutHero = () => {
   return (
@@ -14,7 +15,9 @@ const AboutHero = () => {
               DevOps, Agile, and cloud migration solutions across the US, UK,
               and Nigeria.
             </p>
-            <button className={styles.ctaButton}>Talk to us</button>
+            <Link href={"/contact-us"}>
+              <button className={styles.ctaButton}>Talk to us</button>
+            </Link>
           </div>
 
           {/* Right Side: Layered Visuals */}
