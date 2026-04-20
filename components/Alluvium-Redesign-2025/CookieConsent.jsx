@@ -36,22 +36,20 @@ const CookieConsent = () => {
           We use cookies to improve your experience and analyze site usage.
           Cookies help us understand what content you find useful so we can
           enhance your experience. You can disable cookies in your browser
-          settings, but some parts of our site may not function properly.{" "}
-          <div className={styles.linkContainer}>
+          settings, but some parts of our site may not function properly.
+          <span className={styles.linkContainer}>
             <a
-              href="/privacy-policy
-          "
+              href="/privacy-policy"
             >
               Privacy policy
             </a>
-            <div>|</div>
+            <span className={styles.divider}>|</span>
             <a
-              href="/cookie-policy
-          "
+              href="/cookie-policy"
             >
               cookies policies.
             </a>
-          </div>
+          </span>
         </p>
         <div className={styles.buttonContainer}>
 
