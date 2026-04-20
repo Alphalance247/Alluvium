@@ -206,9 +206,9 @@ const Footer = () => {
                         <Link href="/privacy-policy">Privacy Policy</Link>
                         <Link href="https://alluvium.net/cookie-policy">Cookies Settings</Link>
                         <div className={styles.socialMedia}>
-                            {socialMedias.map((icon, index) => (<Link href={icon.url} key={index} >
-                                {icon.icon}
-                            </Link >))}</div>
+                            {socialMedias.map((icon, index) => (<a href={icon.url} key={index} rel="noopener" >
+                                {icon.icon}</a>
+                            ))}</div>
                         {/* <Link href="/alluvium.net/cookie-policy">Cookies Preferences</Link> */}
                     </div>
                 </div>
