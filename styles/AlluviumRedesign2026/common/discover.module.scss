@@ -9,8 +9,8 @@ $color-orange-200: #fed7aa;
   width: 100%;
   margin: auto;
   padding: 80px 60px;
-  border-left: 1px solid rgba($color-zinc-300, 0.8);
-  border-right: 1px solid rgba($color-zinc-300, 0.8);
+  border-left: 1px dashed rgba($color-zinc-300, 0.8);
+  border-right: 1px dashed rgba($color-zinc-300, 0.8);
   width: 100%;
 
   @media (max-width: 1024px) {
@@ -86,11 +86,16 @@ $color-orange-200: #fed7aa;
 }
 
 .header {
-  color: $color-slate-900;
-  font-size: 30px;
+  color: #11202d;
+  font-size: 34px;
   font-weight: 600;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: "Domine", sans-serif;
   margin-bottom: 48px;
+
+  @media (max-width: 640px) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
 }
 
 .stepsList {
@@ -132,14 +137,14 @@ $color-orange-200: #fed7aa;
   gap: 4px;
 
   h3 {
-    color: $color-slate-900;
-    font-size: 18px;
+    color: #11202d;
+    font-size: 20px;
     font-weight: 600;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: "Domine", sans-serif;
   }
 
   p {
-    color: $color-slate-900;
+    color: #262626;
     opacity: 0.8;
     font-size: 16px;
     line-height: 1.5;

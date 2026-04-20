@@ -17,8 +17,8 @@ const CloudUpgrade = () => {
         'We use a "Clean-First" protocol to ensure every attachment, comment, and link is preserved and searchable.',
       // Replace these placeholder divs with your actual SVGs
       icon: "/assets/Alluvium-Redesign-2026/services/chart2.svg",
-      width: 64,
-      height: 64,
+      width: 111,
+      height: 114,
     },
     {
       id: 2,
@@ -26,8 +26,8 @@ const CloudUpgrade = () => {
       description:
         "Specialized experience in regulated sectors (Finance, Insurance, Higher Ed) ensuring GDPR and DORA standards.",
       icon: "/assets/Alluvium-Redesign-2026/services/chart1.svg",
-      width: 64,
-      height: 64,
+      width: 105,
+      height: 112,
     },
     {
       id: 3,
@@ -35,8 +35,8 @@ const CloudUpgrade = () => {
       description:
         "We audit your seat counts and app sprawl during the move, often reducing annual licensing overhead by 15–30%.",
       icon: "/assets/Alluvium-Redesign-2026/services/chart.svg",
-      width: 64,
-      height: 64,
+      width: 199,
+      height: 120,
     },
   ];
 
@@ -73,6 +73,50 @@ const CloudUpgrade = () => {
     },
   ];
 
+  const badges = [
+    {
+      id: "01",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+      alt: "Cloud Partner",
+      width: "201",
+      height: "134",
+    },
+    {
+      id: "02",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+      alt: "Gold Partner",
+      width: "278",
+      height: "74",
+    },
+  ];
+
+  const complianceData = [
+    {
+      id: 1,
+      src: "/assets/Alluvium-Redesign-2026/services/gdpr.png",
+      alt: "Compliance Cert 1",
+      // size: styles.large,
+      width: 264,
+      height: 168,
+    },
+    {
+      id: 2,
+      src: "/assets/Alluvium-Redesign-2026/services/iso.png",
+      alt: "Compliance Cert 2",
+      // size: styles.medium,
+      width: 205,
+      height: 205,
+    },
+    {
+      id: 3,
+      src: "/assets/Alluvium-Redesign-2026/services/soc.png",
+      alt: "Compliance Cert 3",
+      // size: styles.small,
+      width: 190,
+      height: 189,
+    },
+  ];
+
   return (
     <>
       <Layout>
@@ -94,10 +138,8 @@ const CloudUpgrade = () => {
           />
         </Head>
         <ServicesHero
-          badge={"CLOUD UPGRADE"}
-          heading={
-            "Strategic Atlassian Cloud Migration: Secure. Scalable. Seamless."
-          }
+          badges={badges}
+          heading={"Cloud Upgrade: Secure. Scalable. Seamless."}
           subhead={
             "We don’t just move data; we migrate your business logic. Alluvium provides the strategic technical bench for high-stakes migrations, ensuring security, compliance, and optimized performance from Day one."
           }
@@ -110,7 +152,7 @@ const CloudUpgrade = () => {
           img="/assets/Alluvium-Redesign-2026/services/large.png"
         />
         <WhyAlluvium />
-        <SecurityCompliance />
+        <SecurityCompliance data={complianceData} />
         <CtaSection />
       </Layout>
     </>

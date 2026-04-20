@@ -1,0 +1,114 @@
+$color-gray-900: #111827;
+$color-cyan-500: #06b6d4;
+$color-orange-400: #fb923c;
+$color-white: #ffffff;
+$color-zinc-100: #f4f4f5;
+
+.section {
+  width: 100%;
+  min-height: 320px; // h-80
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+
+  // Recreating the "glow" blobs with gradients for better performance
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .heading {
+    color: #d9d9d9;
+    font-family: "Geist Mono", monospace;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  &::before {
+    background: radial-gradient(
+      circle,
+      rgba($color-cyan-500, 0.4) 0%,
+      transparent 70%
+    );
+    bottom: -30%;
+    left: -20%;
+    mix-blend-mode: color-dodge;
+  }
+
+  &::after {
+    background: radial-gradient(
+      circle,
+      rgba($color-orange-400, 0.3) 0%,
+      transparent 70%
+    );
+    bottom: -40%;
+    right: -20%;
+    mix-blend-mode: hard-light;
+  }
+}
+
+.overlayImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  z-index: 0;
+  mix-blend-mode: color-dodge;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1280px;
+  padding: 80px 60px;
+  border-right: 1px dashed rgba(255, 255, 255, 0.1);
+  border-left: 1px dashed rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    padding: 60px 24px;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.title {
+  color: $color-white;
+  font-family: "Domine", sans-serif;
+  font-size: clamp(2rem, 5vw, 2.5rem); // text-4xl fluid
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 700px;
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem; // text-3xl
+  }
+}
+
+.description {
+  color: $color-zinc-100;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 700px;
+}

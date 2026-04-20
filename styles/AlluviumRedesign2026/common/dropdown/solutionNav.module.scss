@@ -1,0 +1,160 @@
+$zinc-700: #3f3f46;
+$zinc-400: #a1a1aa;
+$zinc-100: #f4f4f5;
+$sky-900: #00556a;
+$amber-600: #d97706;
+
+.dropdownCard {
+  position: absolute;
+  top: 120%; // Sits right below the trigger
+  left: 35rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 20px 40px -8px rgba(16, 24, 40, 0.1);
+  display: flex;
+  overflow: hidden;
+  z-index: 1000;
+  justify-content: center;
+  padding: 20px;
+  gap: 32px;
+  animation: slideIn 0.2s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* LEFT COLUMN: LINKS */
+.linksColumn {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  .columnTitle {
+    padding: 12px;
+    color: $zinc-400;
+    font-family: "Geist Mono", monospace;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+.navLink {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  color: $zinc-700;
+  font-family: "Graphik", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background-color: $zinc-100;
+    .chevron {
+      transform: translateX(2px);
+    }
+  }
+
+  .chevron {
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid $zinc-400;
+    border-right: 2px solid $zinc-400;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+  }
+}
+
+/* VERTICAL DIVIDER */
+.divider {
+  width: 1px;
+  background-color: $zinc-100;
+  align-self: stretch;
+}
+
+/* RIGHT COLUMN: FEATURED CARD */
+.featuredCard {
+  width: 288px;
+  background-color: $sky-900;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #ffffff;
+
+  .cardHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h4 {
+      font-family: "Domine", serif;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    p {
+      font-family: "Inter", sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+  }
+}
+
+.badgeBtn {
+  background-color: #fed7aa; // orange-200
+  color: #1f2937;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  // outline: none;
+  border: none;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* The Book/Report Visual */
+.bookPreview {
+  width: 128px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  // Grid pattern simulation
+  background-image:
+    linear-gradient(#e2e8f0 1px, transparent 1px),
+    linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+  background-size: 10px 10px;
+
+  .bookTitle {
+    padding: 10px;
+    color: #1e293b;
+    font-family: "Charlie Display", sans-serif;
+    font-size: 10px;
+    font-weight: 800;
+  }
+}

@@ -12,8 +12,8 @@ const DropdownNavItem = ({ title, links }) => {
   return (
     <li
       className={styles.dropdown_nav_item}
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseOver={() => setOpen(true)}
+      onMouseOut={() => setOpen(false)}
     >
       <span className={styles.nav_link}>
         {title}

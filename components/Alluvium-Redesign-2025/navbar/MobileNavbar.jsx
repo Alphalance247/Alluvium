@@ -6,6 +6,7 @@ import {
   MdOutlineKeyboardArrowDown,
   MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
+import { FaChevronRight } from "react-icons/fa6";
 
 const MobileNavbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -30,7 +31,7 @@ const MobileNavbar = () => {
               onClick={() => toggleDropdown(item.title)}
               className={styles.nav_button}
             >
-              <p>{item.title}</p>
+              <p className={styles.navItemTitle}>{item.title}</p>
               <span>
                 {openDropdown == item.title ? (
                   <MdOutlineKeyboardArrowUp
@@ -47,62 +48,85 @@ const MobileNavbar = () => {
             </button>
 
             {openDropdown === item.title && item.links && (
-              <ul
-                style={{ marginLeft: "24px" }}
-                className={`dropdown ${openDropdown === item.title ? "open" : ""
-                  }`}
-              >
-                {item.links.map((link) => {
-                  if (link.children) {
-                    return (
-                      <li key={link.label} className={styles.nav_subitem}>
-                        <button
-                          onClick={() => toggleSubDropdown(link.label)}
-                          className={styles.nav_sublink}
-                        >
-                          {link.label}
-                        </button>
+              <>
+                <div className={styles.dropdownTitle}>{item.header}</div>
+                <div
+                  style={{}}
+                  className={`dropdown ${openDropdown === item.title ? "open" : ""
+                    }`}
+                >
+                  {/* <li>helo</li>
+                  <li>helo</li> */}
+                  {item.links.map((link) => {
+                    if (link.children) {
+                      return (
+                        <li key={link.label} className={styles.nav_subitem}>
+                          <button
+                            onClick={() => toggleSubDropdown(link.label)}
+                            className={styles.nav_sublink}
 
-                        <ul
-                          className={`${styles.sub_dropdown} ${openSubDropdowns[link.label] ? "open" : ""
-                            }`}
-                        >
-                          {link.children.map((child) => (
-                            <li key={child.href}>
-                              <Link href={child.href}>
-                                <span>{child.label}</span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    );
-                  } else {
-                    return (
-                      <li key={link.label}>
-                        <Link href={link.href}>
-                          <span>{link.label}</span>
-                        </Link>
-                      </li>
-                    );
-                  }
-                })}
-              </ul>
+                          >
+                            {link.label}
+                          </button>
 
+                          <div
+                            className={`${styles.sub_dropdown} ${openSubDropdowns[link.label] ? "open" : ""
+                              }`}
+                          >
+                            {link.children.map((child) => (
+                              <div key={child.href} className={styles.childrenContainerParent}>
+                                <div className={styles.childrenContainer}
+                                >
+                                  <div className={styles.childrenImageContainer}
+                                  >
+                                    <img src={child.image} alt={child.label} className={styles.childrenImage}
+                                    />
+                                  </div>
+                                  <div
+                                    className={child.label === 'Export & Count' ? styles.exportCount : styles.resourceCompare}>
+                                    <Link href={child.href} >
+                                      <div className={styles.childrenLinkTitle}>{child.label}
+                                        <span> <FaChevronRight className={styles.childrenLinkIcon} /></span></div>
+                                    </Link>
+                                    <p className={styles.childrenDescription}>
+                                      {child.description}
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </li>
+                      );
+                    } else {
+                      return (
+                        <li key={link.label}>
+                          <Link href={link.href}>
+                            <div className={styles.linkContainer}>{link.label}
+                              <span> <FaChevronRight className={styles.linkIcon} /></span></div>
+                          </Link>
+                          <div className={styles.linkDescription}>{link.description}</div>
+                        </li>
+                      );
+                    }
+                  })}
+                </div>
+              </>
             )}
           </li>
-        ))}
+        ))
+        }
         <li className={styles.navItemButton}>
-          <button className={styles.support}>
-            <Link href="/atlassian-services/support">
+          {/* <button className={styles.support}> */}
+          {/* <Link href="/atlassian-services/support">
               <a className={styles.support}>Support</a>
-            </Link>
-          </button>
+            </Link> */}
+          {/* </button> */}
           <Link href="/contact-us">
-            <a className={styles.contactUs}>Contact Us Today</a>
+            <p className={styles.contactUs}>Contact Us Today</p>
           </Link>
         </li>
-      </ul>
+      </ul >
     </div >
   );
 };
