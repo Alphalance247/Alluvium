@@ -1,14 +1,11 @@
 import Layout from "components/layout";
 import styles from "../../styles/contact-us.module.scss";
-import ContactSection from "components/Alluvium-Redesign-2025/ContactSection";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import CalendlyWidget from "components/calendlyWidget";
-import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
 import Head from "next/head";
 import FormSection from "components/Alluvium-Redesign-2026/formSection";
 import { badges } from "data";
 import Image from "next/image";
-import Button from "components/atlassian-service-reuse/Button";
 
 const ContactUs = () => {
   const data = [
@@ -71,14 +68,6 @@ const ContactUs = () => {
       url: "tel:+254742090807",
       icon: "/assets/Alluvium-Redesign-2026/contact-us/nairobi.png",
     },
-
-    // {
-    //   country: "Lagos",
-    //   location:
-    //     "Dominion Plaza, 140/141 Lekki - Epe Expressway, Lekki, Lagos 106104, Nigeria.",
-    //   // tel: "+442035762028",
-    //   url: "",
-    // },
   ];
 
   return (

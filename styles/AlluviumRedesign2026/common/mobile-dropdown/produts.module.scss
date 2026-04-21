@@ -1,3 +1,7 @@
+.dropdownContainer {
+  height: auto;
+  // padding-bottom: 20px;
+}
 .dropdownTitle {
   font-size: 14px;
   font-weight: 600;
@@ -12,68 +16,48 @@
   align-items: center;
   font-family: "Geist Mono", monospace;
 }
-.childrenContainerParent a {
+.childrenContainerParent {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  background-color: white;
-  padding-bottom: 20px;
+  height: 100%;
+
   .childrenContainer {
-    display: flex;
-    flex-direction: column;
-    border-radius: 8px;
-    margin-bottom: 16px;
-    background-color: #d9d9d9;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
     position: relative;
-    height: 251px;
-    flex-shrink: 0;
-
-    //height: 251px;
-    //max-width: 100%;
-    //border-radius: 8px;
-    //position: relative;
+    height: 300px;
+    margin-bottom: 16px;
     .childrenImageContainer {
-      max-width: 100%;
-      padding: 16px;
-      height: 230px;
-      .childrenImage {
-        width: 100%;
-        object-fit: cover;
-        height: 230px;
-        border-radius: 4px;
-      }
+      width: 100%;
+      height: 251px;
+      border: 10px solid #d9d9d9;
+      border-radius: 12px;
     }
-  }
+    .childrenImage {
+      width: 311px;
+      object-fit: cover;
+      height: auto;
+    }
 
-  .childrenLabel {
-    position: absolute;
-    top: 60.2%;
-    width: 100%;
-  }
-  .exportCount {
-    background-color: #e6f5f9;
-    height: auto;
-    border-radius: 8px;
-    max-width: 100%;
-    padding: 16px;
-    position: absolute;
-    top: 135px;
-    width: 100%;
-  }
-  .resourceCompare {
-    background: linear-gradient(
-      137.29deg,
-      rgba(236, 165, 98, 0.3) 3.63%,
-      rgba(236, 165, 98, 0.15) 97.15%
-    );
-    height: auto;
-    border-radius: 8px;
-    max-width: 100%;
-    background-color: #f8edea;
-    padding: 16px;
-    position: absolute;
-    top: 135px;
-    width: 100%;
+    .exportCount {
+      background-color: #e0f2fe;
+      height: auto;
+      border-radius: 8px;
+      padding: 16px;
+      position: absolute;
+      width: 100%;
+      top: 135px;
+    }
+    .resourceCompare {
+      height: auto;
+      border-radius: 8px;
+      background-color: #fff7ed;
+      padding: 16px;
+      position: absolute;
+      top: 135px;
+      width: 100%;
+    }
   }
   .childrenLinkTitle {
     font-size: 16px;
@@ -94,7 +78,7 @@
     padding-top: 4px;
     font-size: 14px;
     color: #454545;
-    padding-bottom: 16px;
+    // padding-bottom: 16px;
     font-family: "Inter", sans-serif;
   }
 }

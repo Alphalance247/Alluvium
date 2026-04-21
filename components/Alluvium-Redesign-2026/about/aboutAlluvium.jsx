@@ -13,8 +13,8 @@ const AboutGrid = () => {
             height={580}
             width={543}
             //   className={styles.img1}
-            src="/assets/Alluvium-Redesign-2026/about/swp-throwback.png"
-            alt="Team working"
+            src="/assets/Alluvium-Redesign-2026/about/ceo.png"
+            alt="Team Working"
           />
           {/* </div> */}
 

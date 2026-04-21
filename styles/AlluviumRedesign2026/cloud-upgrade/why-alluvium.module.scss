@@ -1,6 +1,6 @@
 $color-zinc-100: #f4f4f5;
 $color-zinc-300: #d4d4d8;
-$color-slate-900: #0f172a;
+$color-slate-900: #11202d;
 $color-zinc-600: #52525b;
 $color-amber-600: #d97706;
 $color-orange-300: #fdba74;
@@ -15,8 +15,8 @@ $color-orange-300: #fdba74;
 .innerBorder {
   width: 100%;
   max-width: 1280px;
-  border-left: 1px solid rgba($color-zinc-300, 0.8);
-  border-right: 1px solid rgba($color-zinc-300, 0.8);
+  border-left: 1px dashed rgba($color-zinc-300, 0.8);
+  border-right: 1px dashed rgba($color-zinc-300, 0.8);
   padding: 80px 60px;
 
   @media (max-width: 768px) {
@@ -74,17 +74,11 @@ $color-orange-300: #fdba74;
 
 /* Glassmorphism Icon Styles */
 .iconBox {
-  //   background: linear-gradient(
-  //     135deg,
-  //     rgba($color-orange-300, 0.3),
-  //     rgba($color-orange-300, 0.1)
-  //   );
   border-radius: 8px;
-  //   border: 2px solid rgba($color-orange-300, 0.3);
   backdrop-filter: blur(30px);
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   overflow: hidden;
 }
 
@@ -109,7 +103,7 @@ $color-orange-300: #fdba74;
 .cardTitle {
   color: $color-slate-900;
   font-family: "Domine", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -120,7 +114,7 @@ $color-orange-300: #fdba74;
 }
 
 .cardDescription {
-  color: $color-zinc-600;
+  color: #262626;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 1.6;

@@ -5,7 +5,7 @@ import axios from "axios";
 import { environment } from "env/env.local";
 import { useState, useEffect } from "react";
 
-const FormSection = () => {
+const FormSection = ({ color = "white" }) => {
   const { addToast } = useToasts();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
@@ -119,7 +119,7 @@ const FormSection = () => {
     }
   };
   return (
-    <div className={styles.section2}>
+    <div className={styles.section2} style={{ background: color }}>
       <form onSubmit={onsubmit} action="">
         <div className={styles.contact_form}>
           <div style={{ width: "100%" }}>

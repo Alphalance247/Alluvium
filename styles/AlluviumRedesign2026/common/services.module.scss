@@ -14,10 +14,10 @@ $zinc-300: #d4d4d8;
 
 .innerContainer {
   width: 100%;
-  max-width: 1283px; // Consistent site-wide grid
+  max-width: 1280px; // Consistent site-wide grid
   padding: 96px 0; // py-24
-  outline: 1px solid rgba($zinc-300, 0.8);
-  outline-offset: -1px;
+  border-right: 1px dashed #d9d9d9cc;
+  border-left: 1px dashed #d9d9d9cc;
   display: flex;
   flex-direction: column;
   align-items: center;

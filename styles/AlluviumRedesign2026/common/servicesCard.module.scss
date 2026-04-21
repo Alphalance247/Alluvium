@@ -1,13 +1,13 @@
 $color-bg-light: #f4f4f5; // zinc-100
 $color-border: #d4d4d8; // zinc-300
-$color-text-main: #0f172a; // slate-900
-$color-text-sub: #52525b; // zinc-600
+$color-text-main: #11202d; // slate-900
+$color-text-sub: #262626; // zinc-600
 $color-white: #ffffff;
 
 .sectionWrapper {
   width: 100%;
   background-color: $color-bg-light;
-  border-bottom: 1px solid $color-border;
+  border-bottom: 1px dashed $color-border;
   display: flex;
   justify-content: center;
 }
@@ -16,8 +16,8 @@ $color-white: #ffffff;
   width: 100%;
   max-width: 1280px;
   padding: 96px 20px; // py-24
-  border-left: 1px solid $color-border;
-  border-right: 1px solid $color-border;
+  border-left: 1px dashed $color-border;
+  border-right: 1px dashed $color-border;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,10 +67,10 @@ $color-white: #ffffff;
     transform 0.2s ease,
     box-shadow 0.2s ease;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  }
+  // &:hover {
+  //   transform: translateY(-5px);
+  //   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  // }
 
   @media (max-width: 640px) {
     max-width: 100%;
@@ -91,6 +91,7 @@ $color-white: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 16px;
 }
 
 .cardTitle {
@@ -106,5 +107,5 @@ $color-white: #ffffff;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 24px;
 }

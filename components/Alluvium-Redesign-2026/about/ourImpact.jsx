@@ -3,9 +3,9 @@ import styles from "../../../styles/AlluviumRedesign2026/about/our-impact.module
 import Image from "next/image";
 
 const stats = [
-  { value: "80+", label: "Projects Completed", color: "cyan" },
-  { value: "80+", label: "Happy Clients", color: "amber" },
-  { value: "100%", label: "Success Rate", color: "dark" },
+  { value: "100+", label: "Successful Migrations", color: "cyan" },
+  { value: "24/7", label: "Dedicated Support", color: "amber" },
+  { value: "15%–45%", label: "Average License Savings", color: "dark" },
 ];
 
 const ImpactStory = () => {
@@ -29,7 +29,7 @@ const ImpactStory = () => {
         </div>
 
         {/* Story Block */}
-        <div className={styles.storyBlock}>
+        {/* <div className={styles.storyBlock}>
           <div className={styles.storyContent}>
             <h3>How it All started</h3>
             <p>
@@ -68,7 +68,7 @@ const ImpactStory = () => {
             </p>
           </div>
 
-          {/* Author Footer */}
+        
           <div className={styles.author}>
             <Image
               src="/assets/Alluvium-Redesign-2026/about/taiwo.svg"
@@ -81,7 +81,7 @@ const ImpactStory = () => {
               <span className={styles.role}>CEO & Technical Lead</span>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -76,10 +76,10 @@ const LicenseOptimization = () => {
   const badges = [
     {
       id: "01",
-      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
-      alt: "Cloud Partner",
-      width: "201",
-      height: "134",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/marketplace.png",
+      alt: "Marketplace Partner",
+      width: "239",
+      height: "74",
     },
     {
       id: "02",

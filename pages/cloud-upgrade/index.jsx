@@ -17,8 +17,8 @@ const CloudUpgrade = () => {
         'We use a "Clean-First" protocol to ensure every attachment, comment, and link is preserved and searchable.',
       // Replace these placeholder divs with your actual SVGs
       icon: "/assets/Alluvium-Redesign-2026/services/chart2.svg",
-      width: 64,
-      height: 64,
+      width: 111,
+      height: 114,
     },
     {
       id: 2,
@@ -26,8 +26,8 @@ const CloudUpgrade = () => {
       description:
         "Specialized experience in regulated sectors (Finance, Insurance, Higher Ed) ensuring GDPR and DORA standards.",
       icon: "/assets/Alluvium-Redesign-2026/services/chart1.svg",
-      width: 64,
-      height: 64,
+      width: 105,
+      height: 112,
     },
     {
       id: 3,
@@ -35,8 +35,8 @@ const CloudUpgrade = () => {
       description:
         "We audit your seat counts and app sprawl during the move, often reducing annual licensing overhead by 15–30%.",
       icon: "/assets/Alluvium-Redesign-2026/services/chart.svg",
-      width: 64,
-      height: 64,
+      width: 199,
+      height: 120,
     },
   ];
 

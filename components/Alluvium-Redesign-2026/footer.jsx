@@ -43,8 +43,8 @@ const company = [
 ];
 
 const resources = [
-    { url: "https://alluvium.net/blogs", id: "1", name: "success stories", },
-    { url: "https://alluvium.net/blogs", id: "2", name: "blog", },
+    { url: "https://alluvium.net/blogs", id: "1", name: "success stories" },
+    { url: "https://alluvium.net/blogs", id: "2", name: "blog" },
     {
         url: "/atlassian-cloud-migration-case-studies",
         id: "3",
@@ -78,35 +78,24 @@ const badges = [
         width: 175,
         height: 60,
         alt: "marketplace partner",
-    }
-    // {
-    //     img: "/assets/redesign-2025/Certs.svg",
-    //     width: 227,
-    //     height: 84,
-    //     alt: "marketplace partner",
-    // },
-
-    // {
-    //     img: "/assets/redesign-2025/Chamber of Commerce.svg",
-    //     width: 148,
-    //     height: 87,
-    //     alt: "stamford chamber of commerce",
-    // },
-
-    // {
-    //     img: "/assets/Alluvium-Redesign-2026/home/image72.png",
-    //     width: 272,
-    //     height: 92,
-    //     alt: "london chamber of commerce",
-    // },
-    // {
-    //     img: "/assets/redesign-2025/awscerts.svg",
-    //     width: 107,
-    //     height: 100,
-    //     alt: "aws partner",
-    // },
+    },
 ];
-const socialMedias = [{ icon: <IoLogoLinkedin />, url: "https://www.linkedin.com/company/alluvium-hq/" }, { icon: <FaFacebookSquare />, url: "https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#" }, { icon: <FaXTwitter />, url: "https://x.com/alluviumhq?s=08" }, { icon: <FaYoutube />, url: "https://www.youtube.com/@AlluviumConsulting-b3o" }]
+const socialMedias = [
+    {
+        icon: <IoLogoLinkedin />,
+        url: "https://www.linkedin.com/company/alluvium-hq/",
+    },
+    {
+        icon: <FaFacebookSquare />,
+        url: "https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#",
+    },
+    { icon: <FaXTwitter />, url: "https://x.com/alluviumhq?s=08" },
+    {
+        icon: <FaYoutube />,
+        url: "https://www.youtube.com/@AlluviumConsulting-b3o",
+    },
+];
+
 const Footer = () => {
     return (
         <div style={{ background: "#0F1D29" }}>
@@ -120,21 +109,10 @@ const Footer = () => {
                                 width={152}
                                 height={48}
                             />
-                            <div className={styles.location}>You'll find us London, Stamford, Orlando, <br /> Lagos and Nairobi</div>
-                            {/* <div className={styles.mobile_phone}>
-              {mobilePhones.map((item) => (
-                <div key={item.id}>
-                  <div>
-                    {item.location} :{" "}
-                    <a href={`tel:${item.num}`}> {item.num}</a>
-                  </div>
-                </div>
-              ))}
-              <div>
-                Sales Team :
-                <a href="mailto:contact@alluvium.net"> contact@alluvium.net</a>
-              </div>
-            </div> */}
+                            <div className={styles.location}>
+                                You'll find us London, Stamford, Orlando, <br /> Lagos and
+                                Nairobi
+                            </div>
                         </div>
                     </div>
                     <div className={styles.right_content}>
@@ -170,30 +148,18 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className={styles.bottom_content_container}>
-                            <div className={styles.bottom_content}>
-                                {badges.map((item) => (
-                                    <div key={item.alt} className={styles.partners}>
-                                        <div className={styles.col_1}>
-                                            <Image
-                                                src={item.img}
-                                                width={item.width}
-                                                height={item.height}
-                                                alt={item.alt}
-                                            />
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div> */}
                     </div>
-
                 </div>
                 <div className={styles.footer_badges}>
                     {badges.map((item, index) => (
-                        <Image key={index} src={item.img} alt={item.alt} height={item.height} width={item.width} />))}
-
-
+                        <Image
+                            key={index}
+                            src={item.img}
+                            alt={item.alt}
+                            height={item.height}
+                            width={item.width}
+                        />
+                    ))}
                 </div>
                 <div className={styles.footer_copyright}>
                     <div className={styles.copyright_text}>
@@ -204,11 +170,16 @@ const Footer = () => {
                             Terms & Conditions
                         </Link>
                         <Link href="/privacy-policy">Privacy Policy</Link>
-                        <Link href="https://alluvium.net/cookie-policy">Cookies Settings</Link>
+                        <Link href="https://alluvium.net/cookie-policy">
+                            Cookies Settings
+                        </Link>
                         <div className={styles.socialMedia}>
-                            {socialMedias.map((icon, index) => (<a href={icon.url} key={index} rel="noopener" >
-                                {icon.icon}</a>
-                            ))}</div>
+                            {socialMedias.map((icon, index) => (
+                                <a href={icon.url} key={index} target="_blank">
+                                    {icon.icon}
+                                </a>
+                            ))}
+                        </div>
                         {/* <Link href="/alluvium.net/cookie-policy">Cookies Preferences</Link> */}
                     </div>
                 </div>
@@ -244,8 +215,7 @@ const Footer = () => {
                     <Link href="/alluvium.net/cookie-policy">Cookies Preferences</Link>
                 </div>
             </div> */}
-
-        </div >
+        </div>
     );
 };
 
