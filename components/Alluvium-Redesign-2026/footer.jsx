@@ -5,15 +5,14 @@ import Link from "next/link";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
+
 const mobilePhones = [
-  // {
-  //     id: "", location: "Lagos", num: ""
-  // },
   { id: "", location: "London", num: "+442035762028" },
   { id: "", location: "Stamford", num: "+1(207)360-7252" },
   { id: "", location: "Nairobi", num: "+254742090807" },
   { id: "", location: "Orlando", num: "+1(567)331-0070" },
 ];
+
 const services = [
   { url: "/cloud-upgrade", id: "1", name: "Cloud Upgrade" },
   { url: "/license-optimization", id: "2", name: "License Optimization" },

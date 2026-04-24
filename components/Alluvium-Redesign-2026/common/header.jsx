@@ -8,12 +8,7 @@ import ResourcesNav from "./dropdown/resourcesNav";
 import ProductNav from "./dropdown/productNav";
 import { GoChevronDown } from "react-icons/go";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-import {
-  MdOutlineKeyboardArrowDown,
-  MdOutlineKeyboardArrowUp,
-} from "react-icons/md";
 import MobileSolutionNav from "./mobile-dropdown/mobileSolutionNav";
-import { FaChevronCircleDown, FaChevronCircleUp } from "react-icons/fa";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import MobileProductsNav from "./mobile-dropdown/mobileProductsNav";
 import MobileResourcesNav from "./mobile-dropdown/mobileResourcesNav";
@@ -24,7 +19,6 @@ const Navbar = () => {
   const navRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
-  const [openSubMenu, setOpenSubMenu] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState(null);
 
   useEffect(() => {
