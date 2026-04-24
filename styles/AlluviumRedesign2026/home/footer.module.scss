@@ -4,7 +4,7 @@
   border-top: 1px dashed #414d57;
   background: #0f1d29;
   border: 1px dashed #414d57;
-  padding: 48px 80px;
+  padding: 0px 80px;
   .footer_container_content {
     display: flex;
     flex-direction: row;
@@ -49,7 +49,7 @@
     .mobile_container {
       margin-top: 40px;
       @media screen and (max-width: 640px) {
-        margin-top: 20px;
+        margin-top: 48px;
       }
     }
     // .mobile_phone {
@@ -93,7 +93,7 @@
           width: 100%;
           height: auto;
           border-bottom: 1px dashed #414d57;
-          padding: 16px 0px;
+          // padding: 16px 0px;
         }
       }
       .col_1 {
@@ -112,7 +112,7 @@
           width: 100%;
           height: auto;
           border-bottom: 1px dashed #414d57;
-          padding: 16px 0px;
+          // padding: 16px 0px;
         }
       }
       .col_1_title,
@@ -136,7 +136,7 @@
       .col_1_services,
       .col_2_services,
       .col_3_services {
-        padding: 0px 16px;
+        padding: 0 0 24px 0;
         text-transform: capitalize;
         display: flex;
         flex-direction: column;
@@ -145,12 +145,13 @@
         font-size: 14px;
         line-height: 20px;
         font-family: "Graphik", sans-serif;
+        margin-left: 16px;
         color: #bfbfbf;
         cursor: pointer;
         @media screen and (max-width: 640px) {
           margin-left: 0px;
-          padding-bottom: 20px;
-          padding: 0px;
+          // padding-bottom: 20px;
+          // padding: 0px;
           // padding-bottom: 16px;
           font-size: 14px;
         }
@@ -217,13 +218,13 @@
   height: 88px;
   max-width: 1280px;
   color: #bfbfbf;
-  margin: 0 auto;
+  margin: 0 0 48px 0;
   @media screen and (max-width: 640px) {
     flex-direction: column;
     align-items: start;
     height: auto;
-    gap: 16px;
-    padding: 20px 0px;
+    gap: 24px;
+    padding-top: 20px;
   }
   .copyright_text {
     color: #bfbfbf;
@@ -243,7 +244,7 @@
     font-family: "Graphik", sans-serif;
     cursor: pointer;
     @media screen and (max-width: 640px) {
-      gap: 12px;
+      gap: 16px;
       flex-direction: column;
       align-items: start;
     }
