@@ -12,7 +12,7 @@ const AnnouncementBar = () => {
         </p>
 
         <a
-          href="#tickets"
+          href="https://events.atlassian.com/team"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.ticketLink}
