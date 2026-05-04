@@ -150,10 +150,10 @@ const CloudUpgrade = () => {
         <DiscoverySection
           heading="The Migration Blueprint"
           data={blueprintSteps}
-          img="/assets/Alluvium-Redesign-2026/services/large.png"
+          img="/assets/Alluvium-Redesign-2026/services/discovery.png"
         />
         <WhyAlluvium />
-        {/* <CJRAdvantage /> */}
+        <CJRAdvantage />
         <SecurityCompliance data={complianceData} />
         <CtaSection />
       </Layout>

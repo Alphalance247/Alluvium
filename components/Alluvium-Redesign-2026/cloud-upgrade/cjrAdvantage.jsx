@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/cloud-upgrade/cjr.module.scss";
+import Image from "next/image";
 
 const CJRAdvantage = () => {
   return (
@@ -7,13 +8,13 @@ const CJRAdvantage = () => {
       <div className={styles.container}>
         <div className={styles.contentLayout}>
           {/* Image Side */}
-          <div className={styles.imageWrapper}>
-            <img
-              src="/assets/Alluvium-Redesign-2026/services/cjr-tool.png"
-              alt="CJR Tool Interface"
-              className={styles.featureImage}
-            />
-          </div>
+          <Image
+            src="/assets/Alluvium-Redesign-2026/services/cjr-tool.png"
+            alt="CJR Tool Interface"
+            //   className={styles.feature8Image}
+            width={547}
+            height={382}
+          />
 
           {/* Text Side */}
           <div className={styles.textColumn}>
