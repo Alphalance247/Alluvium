@@ -7,6 +7,7 @@ import DiscoverySection from "components/Alluvium-Redesign-2026/common/discovery
 import WhyAlluvium from "components/Alluvium-Redesign-2026/cloud-upgrade/whyAlluvium";
 import SecurityCompliance from "components/Alluvium-Redesign-2026/cloud-upgrade/security";
 import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
+import CJRAdvantage from "components/Alluvium-Redesign-2026/cloud-upgrade/cjrAdvantage";
 
 const CloudUpgrade = () => {
   const triadData = [
@@ -152,6 +153,7 @@ const CloudUpgrade = () => {
           img="/assets/Alluvium-Redesign-2026/services/large.png"
         />
         <WhyAlluvium />
+        {/* <CJRAdvantage /> */}
         <SecurityCompliance data={complianceData} />
         <CtaSection />
       </Layout>

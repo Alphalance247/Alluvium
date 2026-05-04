@@ -9,14 +9,29 @@
 .container {
   width: 100%;
   max-width: 1280px; // Matching your project standard
-  height: 48px; // h-12
-  padding: 0 80px; // px-20
+  min-height: 48px; // h-12 — allows expansion on small screens
+  padding: 8px 80px; // px-20
   border-left: 1px dashed rgba(212, 212, 216, 0.8); // zinc-300/80
   border-right: 1px dashed rgba(212, 212, 216, 0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
+
+  @media (max-width: 1024px) {
+    padding: 8px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 10px 24px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px 16px;
+    flex-direction: column;
+    gap: 6px;
+  }
 }
 
 .message {
@@ -26,6 +41,16 @@
   font-family: "Graphik", sans-serif;
   line-height: 24px;
   margin-bottom: 0px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 13px;
+  }
 }
 
 .ticketLink {
@@ -36,6 +61,7 @@
   border-bottom: 2px solid #ffffff;
   text-decoration: none;
   transition: opacity 0.2s ease;
+  flex-shrink: 0;
 
   &:hover {
     opacity: 0.9;
