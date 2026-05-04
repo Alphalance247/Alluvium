@@ -33,9 +33,9 @@ const EventHero = () => {
             May 5 - 7 | Anaheim, California
           </div>
 
-          <Link href={"https://events.atlassian.com/team"} target="_blank">
+          <a href={"https://events.atlassian.com/team"} target="_blank">
             <button className={styles.registerBtn}>Register Now</button>
-          </Link>
+          </a>
         </div>
       </div>
     </section>

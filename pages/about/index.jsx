@@ -35,13 +35,6 @@ export default function AboutUs() {
       width: 330,
       height: 112,
     },
-
-    // {
-    //   img: "/assets/redesign-2025/awscerts.svg",
-    //   width: 107,
-    //   height: 100,
-    //   alt: "aws partner",
-    // },
   ];
   return (
     <Layout>
