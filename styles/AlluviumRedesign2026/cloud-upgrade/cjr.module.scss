@@ -8,19 +8,41 @@
 .container {
   width: 100%;
   max-width: 1280px;
-  padding: 96px 80px; // py-24 px-20
-  border-left: 1px solid rgba(212, 212, 216, 0.8); // zinc-300/80
-  border-right: 1px solid rgba(212, 212, 216, 0.8);
-  border-bottom: 1px solid rgba(212, 212, 216, 0.8);
+  padding: 96px 60px;
+  border-left: 1px dashed rgba(212, 212, 216, 0.8);
+  border-right: 1px dashed rgba(212, 212, 216, 0.8);
+  border-bottom: 1px dashed rgba(212, 212, 216, 0.8);
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 1024px) {
+    padding: 72px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 56px 24px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 40px 16px;
+  }
 }
 
 .contentLayout {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
-  gap: 112px; // gap-28
+  gap: 112px;
+
+  @media (max-width: 1024px) {
+    gap: 56px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
 }
 
 .imageWrapper {
@@ -28,40 +50,74 @@
 
   .featureImage {
     width: 547px;
-    height: 384px; // h-96
+    height: 384px;
     object-fit: cover;
-    border-radius: 4px; // Optional: adds a bit of polish
+    border-radius: 4px;
   }
 }
+
+// // Next.js <Image> renders an img — constrain it directly
+// :global(img[alt="CJR Tool Interface"]) {
+//   width: 100% !important;
+//   height: auto !important;
+//   border-radius: 4px;
+//   display: block;
+// }
 
 .textColumn {
   display: flex;
   flex-direction: column;
-  gap: 24px; // gap-6
-  max-width: 384px; // w-96
+  gap: 24px;
+  max-width: 470px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 }
 
 .heading {
   font-family: "Domine", serif;
-  font-size: 36px; // text-4xl
+  font-size: 36px;
   font-weight: 700;
   line-height: 40px;
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
   .highlight {
-    color: #6b7280; // gray-500
+    color: #6b7280;
+    font-family: "Domine", serif;
   }
 
   .mainTitle {
-    color: #0f172a; // slate-900
+    color: #0f172a;
+    font-family: "Domine", serif;
   }
 }
 
 .description {
-  color: #52525b; // zinc-600
+  color: #52525b;
   font-family: "Inter", sans-serif;
-  font-size: 18px; // text-lg
+  font-size: 18px;
   line-height: 28px;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 15px;
+    line-height: 24px;
+  }
 }
