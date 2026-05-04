@@ -1,0 +1,70 @@
+.wrapper {
+  width: 100%;
+  background-color: #0891b2; // cyan-600
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px; // Matching your project standard
+  height: 48px; // h-12
+  padding: 0 80px; // px-20
+  border-left: 1px dashed rgba(212, 212, 216, 0.8); // zinc-300/80
+  border-right: 1px dashed rgba(212, 212, 216, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.message {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Graphik", sans-serif;
+  line-height: 24px;
+  margin-bottom: 0px;
+}
+
+.ticketLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 1px;
+  border-bottom: 2px solid #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.linkText {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0px;
+}
+
+.iconWrapper {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowIcon {
+  width: 10px;
+  height: 8px;
+  background-color: #1c1917; // stone-900 (as per your snippet)
+  outline: 2px solid #ffffff;
+  //   outline-offset: -1px;
+}
