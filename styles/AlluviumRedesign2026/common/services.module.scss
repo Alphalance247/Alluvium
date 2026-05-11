@@ -5,7 +5,7 @@ $zinc-300: #d4d4d8;
 
 .wrapper {
   width: 100%;
-  background-color: $gray-900;
+  // background-color: $gray-900;
   display: flex;
   justify-content: center;
   padding: 0 0px;
@@ -63,9 +63,9 @@ $zinc-300: #d4d4d8;
   }
 }
 
-.ctaButton {
-  background-color: $amber-600;
-  color: #fff;
+.ctaButton2 {
+  background-color: #fff;
+  color: #e37915;
   padding: 10px 24px;
   border-radius: 8px;
   font-family: "Inter", sans-serif;

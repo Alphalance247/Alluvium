@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
             data-public-key="pk_fd206eefacbe3bc36ef10b8742ef49b0"
           ></script>
 
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.csmWidgetSettings = {
@@ -40,9 +40,9 @@ export default class MyDocument extends Document {
                 }
               `,
             }}
-          />
+          /> */}
 
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
                 (function(){
@@ -54,7 +54,14 @@ export default class MyDocument extends Document {
                 })()
               `,
             }}
-          />
+          /> */}
+
+          <script
+            data-jsd-embedded
+            data-key="b50c8cc2-fc35-4d76-bf22-f2059710a8d4"
+            data-base-url="https://jsd-widget.atlassian.com"
+            src="https://jsd-widget.atlassian.com/assets/embed.js"
+          ></script>
 
           {/* <script
             dangerouslySetInnerHTML={{
@@ -71,8 +78,6 @@ export default class MyDocument extends Document {
               `,
             }}
           /> */}
-
-    
         </Head>
         <body>
           <Main />
