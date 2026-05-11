@@ -1,6 +1,6 @@
 $color-sky-100: #e0f2fe;
-$color-slate-900: #0f172a;
-$color-zinc-600: #52525b;
+$color-slate-900: #11202d;
+$color-zinc-600: #262626;
 $color-zinc-300: rgba(212, 212, 216, 0.8);
 $color-amber-600: #d97706;
 
@@ -15,8 +15,8 @@ $color-amber-600: #d97706;
   width: 100%;
   max-width: 1280px;
   padding: 96px 20px; // py-24
-  border-left: 1px solid $color-zinc-300;
-  border-right: 1px solid $color-zinc-300;
+  border-left: 1px dashed $color-zinc-300;
+  border-right: 1px dashed $color-zinc-300;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,18 +41,22 @@ $color-amber-600: #d97706;
 
 .header {
   color: $color-slate-900;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: clamp(1.75rem, 4vw, 2.25rem); // Responsive fluid font
+  font-family: "Domine", sans-serif;
+  font-size: clamp(1.75rem, 4vw, 2.125rem); // Responsive fluid font
   font-weight: 600;
   line-height: 1.2;
-  max-width: 500px;
+  max-width: 600px;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem; // text-3xl
+  }
 }
 
 .description {
   color: $color-zinc-600;
   font-family: "Inter", sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .button {

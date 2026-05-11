@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/success-stories/case-study-details.module.scss";
 import Image from "next/image";
+import FormSection from "../formSection";
 
 const CaseStudyDetail = ({
   client = "Client Name",
@@ -68,7 +69,11 @@ const CaseStudyDetail = ({
             {/* Social media icons would go here */}
             <div className={styles.socialIcons}>
               {/* Example social media icons */}
-              <a href="#" aria-label="Share on Twitter">
+              <a
+                href="https://x.com/alluviumhq?s=08"
+                aria-label="Share on Twitter"
+                target="_blank"
+              >
                 <Image
                   width={24}
                   height={24}
@@ -76,7 +81,11 @@ const CaseStudyDetail = ({
                   alt="Twitter"
                 />
               </a>
-              <a href="#" aria-label="Share on LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/alluvium-hq/"
+                target="_blank"
+                aria-label="Share on LinkedIn"
+              >
                 <Image
                   width={24}
                   height={24}
@@ -84,7 +93,11 @@ const CaseStudyDetail = ({
                   alt="LinkedIn"
                 />
               </a>
-              <a href="#" aria-label="Share on Facebook">
+              <a
+                href="https://web.facebook.com/alluviumhq/?ti=as&_rdc=1&_rdr#"
+                target="_blank"
+                aria-label="Share on Facebook"
+              >
                 <Image
                   width={24}
                   height={24}
@@ -117,7 +130,8 @@ const CaseStudyDetail = ({
             <h2 className={styles.formTitle}>
               Want to see Alluvium in action?
             </h2>
-            <form onSubmit={(e) => e.preventDefault()}>
+            <FormSection color="#F2F2F3" />
+            {/* <form onSubmit={(e) => e.preventDefault()}>
               <div className={styles.formField}>
                 <label>First name*</label>
                 <input type="text" required />
@@ -144,7 +158,7 @@ const CaseStudyDetail = ({
               <button type="submit" className={styles.submitBtn}>
                 Contact Sales
               </button>
-            </form>
+            </form> */}
           </div>
         </aside>
       </main>

@@ -4,13 +4,33 @@ import Layout from "components/layout";
 import CaseStudies from "components/Alluvium-Redesign-2026/caseStudies";
 import AboutSection from "components/Alluvium-Redesign-2026/about";
 import SeamlessAtlassian from "components/Alluvium-Redesign-2026/seamlessAtlassian";
-import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 import Service from "components/Alluvium-Redesign-2026/service";
 import StartScaling from "components/Alluvium-Redesign-2026/StartScaling";
-import SWPHero from "components/Alluvium-Redesign-2026/SWPHero";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import ServiceHero from "components/Alluvium-Redesign-2026/common/servicesHero";
 import { badges } from "data";
+import PillarsSection from "components/Alluvium-Redesign-2026/home/pillarSection";
+import WhyUs from "components/Alluvium-Redesign-2026/home/whyUs";
+import SuccessStories from "components/Alluvium-Redesign-2026/home/caseStudyCard";
+import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
+
+const badgesImages = [
+  {
+    id: "01",
+    imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+    alt: "Cloud Partner",
+    width: "201",
+    height: "134",
+  },
+  {
+    id: "02",
+    imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+    alt: "Gold Partner",
+    width: "278",
+    height: "74",
+  },
+];
 
 const Home = () => {
   return (
@@ -34,11 +54,39 @@ const Home = () => {
           />
         </Head>
         {/* <Hero /> */}
-        <SWPHero />
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
-          <Badges variant={"sub-default"} badgesData={badges} />
+        {/* <SWPHero /> */}
+        {/* <Team26Hero /> */}
+
+        <ServiceHero
+          badges={badgesImages}
+          serviceImage="/assets/Alluvium-Redesign-2026/home/hero-section-background.png"
+          heading={
+            "The Strategic Partner for Enterprise Atlassian Transformations."
+          }
+          serviceImageIsAvailable={true}
+          subhead={
+            "From high-stakes Cloud Upgrades to optimized Licensing and ESM, we bridge the gap between your tools and your business goals. Unlock Human-AI Collaboration at Scale."
+          }
+          btnName2={"BOOK A 15-MIN STARTEGY CONSULT"}
+          isBtn2={true}
+          btnName={"REQUEST A FREE CLOUD AUDIT"}
+        />
+
+        <div style={{ borderBottom: "1px " }}>
+          <div
+            style={{
+              maxWidth: "1280px",
+              margin: "0 auto",
+              borderBottom: "1px dashed rgba(217, 217, 217, 0.80)",
+            }}
+          >
+            <Badges variant={"sub-default"} badgesData={badges} />
+          </div>
         </div>
-        <Lines variant="sub-default" />
+        {/* <PillarsSection />
+        <WhyUs />
+        <SuccessStories />
+        <CtaSection /> */}
         <CaseStudies />
         <AboutSection />
         <SeamlessAtlassian />

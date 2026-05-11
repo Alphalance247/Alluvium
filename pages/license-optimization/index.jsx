@@ -17,8 +17,8 @@ const LicenseOptimization = () => {
         " We don't just renew; we audit. We identify inactive users and redundant apps, typically saving clients 15–45% on their annual bill.",
       // Replace these placeholder divs with your actual SVGs
       icon: "/assets/Alluvium-Redesign-2026/services/cost.svg",
-      width: 98,
-      height: 68,
+      width: 81,
+      height: 92,
     },
     {
       id: 2,
@@ -26,8 +26,8 @@ const LicenseOptimization = () => {
       description:
         " Skip the standard queue. Our clients receive around-the-clock technical support and a dedicated account manager who knows your instance inside out.",
       icon: "/assets/Alluvium-Redesign-2026/services/chat.svg",
-      width: 68,
-      height: 68,
+      width: 206,
+      height: 83,
     },
     {
       id: 3,
@@ -35,8 +35,8 @@ const LicenseOptimization = () => {
       description:
         "We simplify your procurement by managing multiple Atlassian products and Marketplace apps under a single, predictable local currency invoice.",
       icon: "/assets/Alluvium-Redesign-2026/services/folder.svg",
-      width: 79,
-      height: 67,
+      width: 86,
+      height: 88,
     },
   ];
 
@@ -73,6 +73,23 @@ const LicenseOptimization = () => {
     },
   ];
 
+  const badges = [
+    {
+      id: "01",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/marketplace.png",
+      alt: "Marketplace Partner",
+      width: "239",
+      height: "74",
+    },
+    {
+      id: "02",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+      alt: "Gold Partner",
+      width: "278",
+      height: "74",
+    },
+  ];
+
   return (
     <>
       <Layout>
@@ -94,7 +111,7 @@ const LicenseOptimization = () => {
           />
         </Head>
         <ServicesHero
-          badge={"License Optimization"}
+          badges={badges}
           heading={"Optimize Your Atlassian Spend. Maximize Your ROI."}
           subhead={
             "Stop overpaying for seats you don't use. As a Gold Solution Partner, Alluvium rationalizes your licensing footprint and provides 24/7 dedicated support that keeps your mission-critical tools running."

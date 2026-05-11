@@ -1,8 +1,8 @@
 $color-neutral-100: #f5f5f5;
 $color-stone-300: #d6d3d1;
 $color-zinc-300: #d4d4d8;
-$color-slate-900: #0f172a;
-$color-zinc-700: #3f3f46;
+$color-slate-900: #11202d;
+$color-zinc-700: #454545;
 $color-sky-100: #e0f2fe;
 $color-sky-200: #bae6fd;
 $color-cyan-600: #0891b2;
@@ -30,10 +30,15 @@ $color-cyan-600: #0891b2;
 .title {
   text-align: center;
   color: $color-slate-900;
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: 30px;
+  font-family: "Domine", sans-serif;
+  font-size: 34px;
   font-weight: 600;
   margin-bottom: 48px;
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+    margin-bottom: 32px;
+  }
 }
 
 /* Table Wrapper for Horizontal Scroll on Mobile */

@@ -17,7 +17,7 @@ export default function Teammate({ teamMate, products }) {
         <Head>
           <title>
             {`${capitalizeFirstLetter(firstName)} ${capitalizeFirstLetter(
-              lastName
+              lastName,
             )}`}{" "}
             | Alluvium{" "}
           </title>
@@ -29,10 +29,11 @@ export default function Teammate({ teamMate, products }) {
           <meta
             name="keywords"
             content={`${capitalizeFirstLetter(firstName)} ${capitalizeFirstLetter(
-              lastName
+              lastName,
             )} Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira`}
           />
         </Head>
+
         <main className={styles.teammatePage}>
           <section className={styles.teammate}>
             <div className={styles.teammateFavorites}>
@@ -68,7 +69,7 @@ export default function Teammate({ teamMate, products }) {
 
 export const getStaticProps = async ({ params }) => {
   const teamArr = teamData.filter(
-    (alluvian) => alluvian.alluvianTag.toString() === params.alluvianTag
+    (alluvian) => alluvian.alluvianTag.toString() === params.alluvianTag,
   );
   return {
     props: {

@@ -1,65 +1,80 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/common/services.module.scss";
-import Image from "next/image";
-import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
+import Button from "components/atlassian-service-reuse/Button";
+import Image from "next/image";
 
-const ServicesHero = ({
-  badge,
+const ServiceHero = ({
+  badges,
   heading,
   subhead,
   btnName,
+  serviceImageIsAvailable = false,
   serviceImage,
-  alt,
+  btnName2,
+  isBtn2 = false,
 }) => {
   return (
-    <section className={styles.sectionHeading}>
-      <div className={styles.container}>
-        {/* Text Content Area */}
-        <div className={styles.contentSide}>
-          <div className={styles.badge}>
-            <span>{badge || "Strategic Ecosystem Partnerships"}</span>
-          </div>
-
-          <h1 className={styles.title}>
-            {heading ||
-              "The Strategic Technical Bench for Global Atlassian Partners."}{" "}
-          </h1>
-
-          <p className={styles.description}>
+    <section
+      className={styles.wrapper}
+      style={
+        serviceImageIsAvailable
+          ? { backgroundImage: `url(${serviceImage})` }
+          : { backgroundColor: "#111827" }
+      }
+    >
+      <div className={styles.innerContainer}>
+        {/* Main Content Area */}
+        <div className={styles.textContent}>
+          <h2>{heading || "Cloud Upgrade: Secure. Scalable. Seamless."}</h2>
+          <p>
             {subhead ||
-              "We collaborate with Solution Partners and Global Consultancies to execute high-stakes Atlassian transformations. From complex Cloud    Migrations to Enterprise Service Management, Alluvium provides the technical depth to ensure your project`s success."}
+              "We don’t just move data; we migrate your business logic. Alluvium provides the strategic technical bench for high-stakes migrations, ensuring security, compliance, and optimized performance from Day one."}
           </p>
 
-          <div>
-            {/* < className={styles.ctaButton}>
-            Explore Collaborative Opportunities
-          </button> */}
+          <div className="d-flex flex-column flex-sm-row gap-3">
+            {isBtn2 && (
+              <Link href="/contact-us">
+                <Button className={styles.ctaButton2} variant="secondary">
+                  {btnName2 || "Schedule a Strategy Session"}
+                </Button>
+              </Link>
+            )}
+
             <Link href="/contact-us">
-              <Button className={styles.ctaButton} variant="primary">
-                {btnName || "Explore Collaborative Opportunities"}
-              </Button>
+              <Button>{btnName || "Schedule a Strategy Session"}</Button>
             </Link>
           </div>
         </div>
 
-        {/* Visual Composition Area */}
-        <div className={styles.visualSide}>
-          <img
-            src={
-              serviceImage ||
-              "/assets/Alluvium-Redesign-2026/services/hero2.png"
-            }
-            alt={
-              alt || "Abstract background with feature image and partner logos"
-            }
-            width={511}
-            height={620}
-          />
+        {/* Logos & Trust Badges */}
+        <div className={styles.logoGrid}>
+          {badges.map((item) => (
+            <Image
+              src={item.imgSrc}
+              key={item?.id}
+              alt={item.alt}
+              width={item.width}
+              height={item.height}
+              className={styles.secondaryLogo}
+            />
+          ))}
+
+          {/* <img
+              src="https://placehold.co/54x54"
+              alt="Atlassian Gold Icon"
+              className={styles.badgeIcon}
+            /> */}
+          {/* <div className={styles.divider} />
+            <div className={styles.badgeText}>
+              Gold
+              <br />
+              Solution Partner
+            </div> */}
         </div>
       </div>
     </section>
   );
 };
 
-export default ServicesHero;
+export default ServiceHero;

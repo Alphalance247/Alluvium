@@ -3,27 +3,135 @@
   padding: 0;
 
   .nav_item {
-    margin-bottom: 10px !important;
+    // margin-bottom: 10px !important;
     padding: 0 !important;
+    .navItemTitle {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      color: #595959;
+    }
 
+    .dropdownTitle {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 16px;
+      color: #8c8c8c;
+      text-transform: uppercase;
+      padding: 0.4rem !important;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 20px;
+    }
+    .childrenContainerParent {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 16px;
+      .childrenContainer {
+        background-color: #d9d9d9;
+        height: 251px;
+        max-width: 100%;
+        border-radius: 8px;
+        position: relative;
+      }
+      .childrenImageContainer {
+        position: absolute;
+        top: 16px;
+        .childrenImage {
+          max-width: 100%;
+          max-height: 100%;
+          padding: 0px 16px;
+        }
+      }
+      .childrenLabel {
+        position: absolute;
+        top: 60.2%;
+        width: 100%;
+      }
+      .exportCount {
+        background-color: #e6f5f9;
+        height: auto;
+        border-radius: 8px;
+        max-width: 100%;
+        padding: 16px;
+        position: absolute;
+        top: 60.2%;
+        width: 100%;
+      }
+      .resourceCompare {
+        background: linear-gradient(
+          137.29deg,
+          rgba(236, 165, 98, 0.3) 3.63%,
+          rgba(236, 165, 98, 0.15) 97.15%
+        );
+        height: auto;
+        border-radius: 8px;
+        max-width: 100%;
+        background-color: #f8edea;
+        padding: 16px;
+        position: absolute;
+        top: 60.2%;
+        width: 100%;
+      }
+      .childrenLinkTitle {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1f1f1f;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .childrenLinkIcon {
+          height: 16px;
+          width: 16px;
+          color: #8c8c8c;
+          font-weight: 500;
+        }
+      }
+      .childrenDescription {
+        padding-top: 4px;
+        font-size: 14px;
+        color: #1f1f1f;
+        padding-bottom: 16px;
+      }
+    }
+    .linkContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: #1f1f1f;
+      .linkIcon {
+        height: 16px;
+        width: 16px;
+        color: #8c8c8c;
+        font-weight: 500;
+      }
+    }
+    .linkDescription {
+      color: #454545;
+      font-size: 14px;
+      padding-top: 4px;
+    }
     .nav_button {
       background: none;
-      border-bottom: 1px solid #e5e7eb;
+      // border-bottom: 1px solid #e5e7eb;
       font-size: 16px;
       cursor: pointer;
       width: 100%;
       display: flex;
       justify-content: space-between;
-      padding: 0.4rem;
+      padding: 0.4rem !important;
     }
 
     .dropdown {
       display: none;
-      margin-top: 5px;
+      // margin-top: 5px;
 
       &.open {
         display: block;
-        margin-left: 2rem !important;
+        // margin-left: 0.4rem !important;
       }
 
       li {
@@ -34,7 +142,7 @@
           border: none;
           font-size: 14px;
           cursor: pointer;
-          padding: 5px 0;
+          // padding: 5px 0;
         }
 
         .sub_dropdown {
@@ -56,7 +164,7 @@
 .navItemButton {
   display: grid;
   gap: 16px;
-  padding: 0.4rem;
+  padding: 0.4rem !important;
   font-size: 16px;
 }
 .support {
@@ -79,6 +187,7 @@
   align-items: center;
   border-radius: 6px;
   outline: none;
-  border: 2px solid #e37915;
-  color: #e37915 !important;
+  background-color: #e37915;
+  // border: 2px solid #e37915;
+  color: white !important;
 }

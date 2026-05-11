@@ -7,7 +7,7 @@ const List = ({ heading, content }) => {
     <section style={{ borderBottom: "1px solid #f0f0f0" }}>
       <div className={styles.privacy__policy}>
         <div className={styles.privacy__policy__container}>
-          <h1 className={styles.privacy__policy__heading}>{heading}</h1>
+          {/* <h1 className={styles.privacy__policy__heading}>{heading}</h1> */}
 
           <div className={styles.privacy__policy__content}>
             {content.map((item, i) => {

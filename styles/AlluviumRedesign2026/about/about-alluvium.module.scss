@@ -1,0 +1,103 @@
+$zinc-300: #d4d4d8;
+$zinc-600: #52525b;
+$zinc-700: #3f3f46;
+$slate-900: #0f172a;
+
+.wrapper {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 0 0px;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px;
+  padding: 96px 0; // py-24
+  border-left: 1px dashed rgba($zinc-300, 0.8);
+  border-right: 1px dashed rgba($zinc-300, 0.8);
+  border-bottom: 1px dashed rgba($zinc-300, 0.8);
+
+  @media (max-width: 1024px) {
+    padding: 48px 20px;
+    border: none;
+  }
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: center;
+    gap: 96px; // gap-24
+  }
+}
+
+/* Staggered Image Grid */
+.imageMasonry {
+  //   position: relative;
+  width: 100%;
+  max-width: 543px;
+  height: 580px; // Fixed height to contain absolute images
+
+  @media (max-width: 768px) {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  img {
+    border-radius: 16px;
+    // object-fit: cover;
+
+    @media (min-width: 768px) {
+      position: absolute;
+    }
+  }
+}
+
+.textContent {
+  max-width: 474px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .badge {
+    width: fit-content;
+    padding: 4px 10px;
+    // border: 1px solid $zinc-300;
+    border-radius: 4px;
+    color: $zinc-600;
+    font-family: "Geist Mono", monospace;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    color: $slate-900;
+    font-family: "Domine", serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+
+  p {
+    color: $zinc-700;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+
+    // Handled the <br/> intent with spacing
+    & + p {
+      margin-top: 12px;
+    }
+  }
+}

@@ -2,15 +2,6 @@ import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/upcoming-event.module.scss";
 
 const eventsData = [
-  // {
-  //   id: 1,
-  //   date: "September 15th, 2024",
-  //   title: "SWP Summit | London",
-  //   description:
-  //     "Atlassian Team'26 is back in Anaheim, CA - This unique event will drive into how AI, teamwork, and transformative technologies can maximize team impact. It's the perfect opportunity to network, gain exclusive insights from peers and industry experts.",
-  //   image: "/assets/Alluvium-Redesign-2026/Events/swp.png",
-  //   link: "#",
-  // },
   {
     id: 2,
     date: "September 15th, 2024",
@@ -18,7 +9,7 @@ const eventsData = [
     description:
       "Atlassian Team'26 is back in Anaheim, CA - This unique event will drive into how AI, teamwork, and transformative technologies can maximize team impact. It's the perfect opportunity to network, gain exclusive insights from peers and industry experts.",
     image: "/assets/Alluvium-Redesign-2026/Events/team26.png",
-    link: "#",
+    link: "https://events.atlassian.com/team",
   },
 ];
 
@@ -44,7 +35,9 @@ const UpcomingEvents = () => {
                   <p className={styles.description}>{event.description}</p>
                 </div>
 
-                <button className={styles.btn}>Get Your Ticket</button>
+                <a href={event.link} target="_blank" rel="noopener noreferrer">
+                  <button className={styles.btn}>Get Your Ticket</button>
+                </a>
               </div>
 
               {/* Image Side */}

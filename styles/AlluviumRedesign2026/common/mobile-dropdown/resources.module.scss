@@ -1,0 +1,46 @@
+.mobileResourcesNav {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  .dropdownTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8c8c8c;
+    text-transform: uppercase;
+    padding: 0.4rem !important;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 20px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    font-family: "Geist Mono", monospace;
+  }
+  .mobileResourcesItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #454545;
+    height: 48px;
+    text-transform: capitalize;
+    cursor: pointer;
+    padding: 0.4rem !important;
+    font-family: "Graphik", sans-serif;
+  }
+
+  .linkIcon {
+    height: 16px;
+    width: 16px;
+    color: #8c8c8c;
+    font-weight: 500;
+  }
+  .mobileResourcesDescription {
+    color: #454545;
+    font-size: 14px;
+    padding-top: 4px;
+    padding: 0 0.4rem;
+  }
+}

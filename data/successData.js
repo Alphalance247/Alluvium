@@ -8,7 +8,7 @@ export const successData = [
     industry: "Finance",
     toolsUsed: "Jira, Confluence, SharePoint, taiga.io",
     servicesProvided:
-      "Cloud Migration, Agile Transformation Strategy, Enterprise Architecture Design",
+      "Cloud Migration, Agile Transformation Strategy, Enterprise Architecture Design, Knowledge Base Integration, Knowledge Base Integration.",
     challengeTitle: "The Challenge",
     challengeDescription:
       "A major UK bank needed to transition to a large-scale Agile way of working while maintaining compliance with stringent ISO and Audit requirements. Their data was fragmented across legacy tools like taiga.io and multiple on-premise Jira servers.",

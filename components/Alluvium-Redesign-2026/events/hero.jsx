@@ -8,13 +8,6 @@ const EventsBanner = ({ title, heading, subhead, backgroundImage }) => {
 
   return (
     <section className={styles.section} style={sectionStyle}>
-      {/* Texture/Pattern Overlay */}
-      {/* <img
-        className={styles.overlayImage}
-        src="/assets/Alluvium-Redesign-2026/events/heroBanner.png"
-        alt="Background Pattern"
-      /> */}
-
       <div className={styles.container}>
         {title && <p className={styles.heading}>{title}</p>}
         <h1 className={styles.title}>{heading || "Webinars & Events"}</h1>
