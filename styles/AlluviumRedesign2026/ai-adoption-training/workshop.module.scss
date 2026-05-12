@@ -13,9 +13,9 @@
   margin: 0 auto;
   padding: 96px 64px; // py-24 px-16
   background-color: #111827; // gray-900
-  border-left: 1px solid #374151; // gray-700
-  border-right: 1px solid #374151;
-  border-bottom: 1px solid #374151;
+  border-left: 1px dashed #374151; // gray-700
+  border-right: 1px dashed #374151;
+  border-bottom: 1px dashed #374151;
 
   @media (max-width: 1024px) {
     padding: 64px 32px;
@@ -29,7 +29,7 @@
 }
 
 .contentBox {
-  outline: 1px solid #374151;
+  outline: 1px dashed #374151;
   display: flex;
   flex-direction: column;
 }

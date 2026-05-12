@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/hero.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 const TrainingHero = () => {
   return (
@@ -44,9 +45,11 @@ const TrainingHero = () => {
 
           {/* Call to Action */}
           <div className={styles.actionArea}>
-            <button className={styles.primaryBtn}>
-              Enquire About Training
-            </button>
+            <Link href={"/contact-us"}>
+              <button className={styles.primaryBtn}>
+                Enquire About Training
+              </button>
+            </Link>
           </div>
         </div>
       </div>

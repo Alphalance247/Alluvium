@@ -9,6 +9,8 @@ import PatternSeparator from "components/Alluvium-Redesign-2026/AI-Adoption-Trai
 import Image from "next/image";
 import WorkshopSection from "components/Alluvium-Redesign-2026/AI-Adoption-Training/workSection";
 import CaseStudyTabs from "components/Alluvium-Redesign-2026/AI-Adoption-Training/caseStudy";
+import ComplementaryCTA from "components/Alluvium-Redesign-2026/AI-Adoption-Training/complimentarySection";
+import AboutAlluvium from "components/Alluvium-Redesign-2026/AI-Adoption-Training/aboutAlluvium";
 
 const AIAdoptionTraining = () => {
   return (
@@ -40,10 +42,13 @@ const AIAdoptionTraining = () => {
           </div>
         </div>
         <Benefits />
+        <PatternSeparator />
         <WorkshopSection />
+        <PatternSeparator />
         <CaseStudyTabs />
-
-        {/* <PatternSeparator /> */}
+        <PatternSeparator />
+        <ComplementaryCTA />
+        <AboutAlluvium />
       </Layout>
     </>
   );
