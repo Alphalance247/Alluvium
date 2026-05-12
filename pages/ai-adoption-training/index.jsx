@@ -11,6 +11,7 @@ import WorkshopSection from "components/Alluvium-Redesign-2026/AI-Adoption-Train
 import CaseStudyTabs from "components/Alluvium-Redesign-2026/AI-Adoption-Training/caseStudy";
 import ComplementaryCTA from "components/Alluvium-Redesign-2026/AI-Adoption-Training/complimentarySection";
 import AboutAlluvium from "components/Alluvium-Redesign-2026/AI-Adoption-Training/aboutAlluvium";
+import PartnerBar from "components/Alluvium-Redesign-2026/AI-Adoption-Training/partnerBadge";
 
 const AIAdoptionTraining = () => {
   return (
@@ -30,23 +31,13 @@ const AIAdoptionTraining = () => {
         </Head>
         <TrainingHero />
 
-        <div style={{ borderBottom: "1px " }}>
-          <div
-            style={{
-              maxWidth: "1280px",
-              margin: "0 auto",
-              borderBottom: "1px dashed rgba(217, 217, 217, 0.80)",
-            }}
-          >
-            <Badges variant={"sub-default"} badgesData={badges} />
-          </div>
-        </div>
+        <PartnerBar />
         <Benefits />
-        <PatternSeparator />
+        <PatternSeparator width={1280} height={67} />
         <WorkshopSection />
-        <PatternSeparator />
+        <PatternSeparator width={1280} height={67} />
         <CaseStudyTabs />
-        <PatternSeparator />
+        <PatternSeparator width={1280} height={67} />
         <ComplementaryCTA />
         <AboutAlluvium />
       </Layout>

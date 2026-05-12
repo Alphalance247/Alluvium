@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/workshop.module.scss";
+import PatternSeparator from "./patternSeperator";
 
 const WorkshopSection = () => {
   const workshopDetails = [
@@ -37,28 +38,13 @@ const WorkshopSection = () => {
             <h2 className={styles.title}>Our Programmes</h2>
           </div>
 
-          {/* Decorative Pattern Bar */}
-          <div className={styles.patternBar}>
-            <div className={styles.patternInner}>
-              {Array.from({ length: 20 }).map((_, i) => (
-                <div key={i} className={styles.diamond} />
-              ))}
-            </div>
-          </div>
+          <PatternSeparator width={1280} height={67} />
 
           {/* Workshop Details Area */}
           <div>
             {workshopDetails?.map((workshop, i) => (
               <React.Fragment key={i}>
-                {i > 0 && (
-                  <div className={styles.patternBar}>
-                    <div className={styles.patternInner}>
-                      {Array.from({ length: 20 }).map((_, j) => (
-                        <div key={j} className={styles.diamond} />
-                      ))}
-                    </div>
-                  </div>
-                )}
+                {i > 0 && <PatternSeparator width={1280} height={67} />}
                 <div
                   className={
                     i === 1

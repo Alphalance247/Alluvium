@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/hero.module.scss";
 import Image from "next/image";
-import Link from "next/link";
+import EnquiryModal from "./enquiryModal";
 
 const TrainingHero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section className={styles.main}>
+      <EnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <div className={styles.wrapper}>
         <div className={styles.container}>
           {/* Partnership / Integration Badge */}
@@ -45,11 +50,12 @@ const TrainingHero = () => {
 
           {/* Call to Action */}
           <div className={styles.actionArea}>
-            <Link href={"/contact-us"}>
-              <button className={styles.primaryBtn}>
-                Enquire About Training
-              </button>
-            </Link>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => setIsModalOpen(true)}
+            >
+              Enquire About Training
+            </button>
           </div>
         </div>
       </div>
