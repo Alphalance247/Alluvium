@@ -1,0 +1,94 @@
+.wrapper {
+  width: 100%;
+  background-color: #030712; // gray-950
+  padding: 0 20px;
+
+  @media (min-width: 1024px) {
+    padding: 0 80px; // px-20
+  }
+}
+
+.innerContainer {
+  background-color: #111827; // gray-900
+  border-left: 1px dashed rgba(212, 212, 216, 0.1); // border-zinc-300/10
+  border-right: 1px dashed rgba(212, 212, 216, 0.1);
+  padding: 64px 24px;
+  max-width: 1280px;
+  margin: 0 auto;
+
+  @media (min-width: 1024px) {
+    padding: 96px 64px; // py-24 px-16
+  }
+}
+
+.contentStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  @media (min-width: 1024px) {
+    gap: 64px; // gap-16
+  }
+}
+
+.mainTitle {
+  color: white;
+  font-family: "Domine", serif;
+  font-size: 2.25rem; // 4xl
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+// The Grid logic
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr; // Single column on mobile
+  gap: 1px; // Creates the "border" effect
+  width: 100%;
+  border: 4px solid #374151;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); // 3 columns on tablet/desktop
+  }
+}
+
+.statCard {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  border-right: 4px solid #374151; // gray-700
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 24px;
+  }
+}
+
+.cardContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; // Aligns header top and text bottom
+  gap: 24px;
+}
+
+.statHeader {
+  color: white;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.25rem; // xl
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+.statDescription {
+  color: #e5e7eb; // gray-200
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem; // lg
+  font-weight: 400;
+  line-height: 1.75rem;
+}

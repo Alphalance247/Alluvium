@@ -1,0 +1,131 @@
+.wrapper {
+  width: 100%;
+  background-color: #070d13; // gray-950
+  padding: 0 20px; // Reduced padding for mobile
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    padding: 0 80px; // px-20
+  }
+}
+
+.container {
+  position: relative;
+  border: 1px dashed rgba(212, 212, 216, 0.2); // border-zinc-300/20
+  border-top: none;
+  padding: 60px 24px; // Mobile padding
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 400px;
+  max-width: 1280px;
+  margin: auto;
+  background-color: #606a72; // gray-500
+
+  @media (min-width: 1024px) {
+    padding: 96px 80px; // py-24 px-20
+  }
+}
+
+// .bgImage {
+//   position: absolute;
+//   background-color: url("/assets/Alluvium-Redesign-2026/ai-adoption/pillars.png"); // gray-500
+//   top: -361px;
+//   left: 0;
+//   width: 100%;
+
+//   height: auto;
+//   margin: auto;
+//   opacity: 0.2;
+//   pointer-events: none;
+//   object-fit: cover;
+// }
+
+.content {
+  position: relative; // Keeps content above absolute image
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+
+  gap: 40px; // gap-10
+}
+
+.textStack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; // gap-6
+  max-width: 806px;
+}
+
+.title {
+  color: #ffffff;
+  font-family: "Domine", serif;
+  font-size: 2rem; // Base mobile size
+  font-weight: 700;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 2.25rem; // 4xl
+  }
+}
+
+.description {
+  font-family: "Inter", sans-serif;
+  line-height: 1.4;
+
+  .highlight {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+
+  .bodyText {
+    color: #e5e7eb; // gray-200
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  @media (min-width: 768px) {
+    line-height: 2.5rem; // matching leading-10
+
+    .highlight,
+    .bodyText {
+      font-size: 1.5rem; // 2xl
+    }
+  }
+}
+
+.desktopBreak {
+  display: none;
+  @media (min-width: 1024px) {
+    display: block;
+  }
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ctaButton {
+  background-color: #d97706; // amber-600
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #b45309; // amber-700
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}

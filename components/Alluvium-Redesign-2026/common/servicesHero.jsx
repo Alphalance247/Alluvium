@@ -9,11 +9,20 @@ const ServiceHero = ({
   heading,
   subhead,
   btnName,
+  serviceImageIsAvailable = false,
   serviceImage,
-  alt,
+  btnName2,
+  isBtn2 = false,
 }) => {
   return (
-    <section className={styles.wrapper}>
+    <section
+      className={styles.wrapper}
+      style={
+        serviceImageIsAvailable
+          ? { backgroundImage: `url(${serviceImage})` }
+          : { backgroundColor: "#111827" }
+      }
+    >
       <div className={styles.innerContainer}>
         {/* Main Content Area */}
         <div className={styles.textContent}>
@@ -23,11 +32,19 @@ const ServiceHero = ({
               "We don’t just move data; we migrate your business logic. Alluvium provides the strategic technical bench for high-stakes migrations, ensuring security, compliance, and optimized performance from Day one."}
           </p>
 
-          <Link href="/contact-us">
-            <Button className={styles.ctaButton} variant="primary">
-              {btnName || "Schedule a Strategy Session"}
-            </Button>
-          </Link>
+          <div className="d-flex flex-column flex-sm-row gap-3">
+            {isBtn2 && (
+              <Link href="/contact-us">
+                <Button className={styles.ctaButton2} variant="secondary">
+                  {btnName2 || "Schedule a Strategy Session"}
+                </Button>
+              </Link>
+            )}
+
+            <Link href="/contact-us">
+              <Button>{btnName || "Schedule a Strategy Session"}</Button>
+            </Link>
+          </div>
         </div>
 
         {/* Logos & Trust Badges */}

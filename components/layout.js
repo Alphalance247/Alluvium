@@ -14,7 +14,7 @@ export default function Layout({ children, withoutForm }) {
     <div>
       {/* <Navigation /> */}
       <Navbar />
-      <AnnouncementBar />
+      {/* <AnnouncementBar /> */}
       <div className={styles.layoutBody}>{children}</div>
       {/* {<ConsultationForm />} */}
 

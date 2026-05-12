@@ -1,0 +1,154 @@
+// Variables
+$gray-900: #111827;
+$gray-500: #6b7280;
+$amber-600: #d97706;
+$sky-400: #54bcd5;
+
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 825px;
+  background: url("/assets/Alluvium-Redesign-2026/home/hero-ai-adoption.png");
+  //   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  border-right: 1px dashed #606a72;
+  border-left: 1px dashed #606a72;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Center Content
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+
+  .heroTitle {
+    font-family: "Domine", serif;
+    font-size: clamp(2.5rem, 8vw, 3rem); // Responsive fluid font
+    font-weight: 700;
+    color: white;
+    max-width: 600px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+
+    .accent {
+      color: $sky-400;
+    }
+  }
+
+  .heroSubtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.25rem;
+    color: #f4f4f5; // zinc-100
+    max-width: 664px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+}
+
+.ctaButton {
+  background-color: $amber-600;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+// Bottom Feature Grid
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr; // Mobile
+  border-top: 1px dashed $gray-500;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // Tablet
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr); // Desktop
+  }
+}
+
+.featureCard {
+  padding: 32px 48px;
+  border-bottom: 1px dashed $gray-500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media (min-width: 1024px) {
+    border-bottom: none;
+    border-right: 1px dashed $gray-500;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+// Icon Refactoring (from your absolute divs to clean CSS)
+.iconWrapper {
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+
+.icon {
+  border: 3px solid white;
+  width: 100%;
+  height: 100%;
+
+  &.outline {
+    width: 28px;
+    height: 28px;
+    margin: 2px;
+  }
+
+  &.solid {
+    background: white;
+  }
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+
+  .featureTitle {
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .featureDesc {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+}
