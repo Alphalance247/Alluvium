@@ -30,6 +30,32 @@ export default class MyDocument extends Document {
             data-public-key="pk_fd206eefacbe3bc36ef10b8742ef49b0"
           ></script>
 
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.csmWidgetSettings = {
+                  widgetId: "1b9fdca4-3c1c-4ad6-8cb2-d8cdd3f5b758",
+                  site: "one-atlas-tmwv.atlassian.net",
+                  cloudId: "884720a9-0ef3-4650-82ee-aa5a9dfc6965",
+                }
+              `,
+            }}
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(){
+                  if (typeof window.CSM === "undefined") {
+                    var CSM = function(){CSM.__q__.push(arguments);};CSM.__q__=[];window.CSM=CSM;
+                    var l = function() {var s = document.createElement('script');s.type="text/javascript";s.async=true;s.src="https://one-atlas-tmwv.atlassian.net/csm/widget/script.js?widgetId=1b9fdca4-3c1c-4ad6-8cb2-d8cdd3f5b758&site=one-atlas-tmwv.atlassian.net&cloudId=884720a9-0ef3-4650-82ee-aa5a9dfc6965";document.body.appendChild(s);}
+                    if(document.readyState==="complete"){l();}else{window.addEventListener('load',l);}
+                  }
+                }())
+              `,
+            }}
+          />
+
           {/* <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -56,12 +82,12 @@ export default class MyDocument extends Document {
             }}
           /> */}
 
-          <script
+          {/* <script
             data-jsd-embedded
             data-key="b50c8cc2-fc35-4d76-bf22-f2059710a8d4"
             data-base-url="https://jsd-widget.atlassian.com"
             src="https://jsd-widget.atlassian.com/assets/embed.js"
-          ></script>
+          ></script> */}
 
           {/* <script
             dangerouslySetInnerHTML={{
