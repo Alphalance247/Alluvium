@@ -1,23 +1,41 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/enquiry-modal.module.scss";
 import { LiaTimesSolid } from "react-icons/lia";
 import axios from "axios";
-import { isWorkEmail } from "lib/ga";
+import { validateEmail } from "lib/validation";
 import { useToasts } from "react-toast-notifications";
+import { environment } from "env/env.local";
 
 const EnquiryModal = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
   const { addToast } = useToasts();
-
-  const [form, setForm] = React.useState({
+  const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
+    company: "",
     message: "",
   });
-  const [loading, setLoading] = React.useState(false);
+  const [loading, setLoading] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
+  const [isClient, setIsClient] = useState(false);
 
-  // Close modal when clicking on the backdrop
+  useEffect(() => {
+    setIsClient(true);
+    if (typeof window !== "undefined") {
+      window.handleEnquiryCaptchaResponse = function (token) {
+        setCaptchaValue(token);
+      };
+    }
+    if (!document.querySelector('script[src*="recaptcha/api.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://www.google.com/recaptcha/api.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
+  if (!isOpen) return null;
+
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) onClose();
   };
@@ -29,72 +47,68 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
 
-    if (!isWorkEmail(form.email)) {
-      addToast("Please use your work email address (no personal emails).", {
+    if (!validateEmail(form.email)) {
+      addToast("Please enter a valid email address.", {
         appearance: "error",
         autoDismiss: true,
         autoDismissTimeout: 5000,
       });
-      setLoading(false);
       return;
     }
 
-    axios
-      .post(
-        `https://ssswuzxlxj5rkjd4bjmkfq4aii0dkkqt.lambda-url.us-east-1.on.aws/`,
+    if (!captchaValue) {
+      addToast("Please verify you're not a robot.", {
+        appearance: "error",
+        autoDismiss: true,
+        autoDismissTimeout: 5000,
+      });
+      return;
+    }
+
+    setLoading(true);
+    try {
+      const response = await axios.post(
+        `${environment?.baseUrl}utilities/support/inquiry/`,
         {
-          ...form,
+          fullname: form.name,
+          email: form.email,
+          phone_number: form.phone,
+          company: form.company,
+          how_we_can_help: form.message,
+          recaptcha_token: captchaValue,
         },
-        { timeout: 40000 },
-      )
-      .then((res) => {
-        if (res?.status >= 200 && res?.status < 300) {
-          // Log to see actual response structure
-          console.log("API Response:", res.data);
+        { headers: { "Content-Type": "application/json" } },
+      );
 
-          const successMessage =
-            res?.data?.body ||
-            res?.data?.message ||
-            res?.data ||
-            "Request submitted successfully.";
-
-          addToast(successMessage, {
-            appearance: "success",
-            autoDismiss: true, // Enable auto dismiss
-            autoDismissTimeout: 5000, // Dismiss after 5 seconds
-          });
-
-          setResponseMessage(successMessage);
-          setLoading(false);
-          setForm({ name: "", email: "", phone: "" });
-        } else {
-          addToast(
-            "Unexpected response from server. Please try again or contact Admin",
-            {
-              appearance: "error",
-              autoDismiss: true, // Enable auto dismiss
-              autoDismissTimeout: 5000, // Dismiss after 5 seconds
-            },
-          );
-          setLoading(false);
-          return;
-        }
-      })
-      .catch((err) => {
-        setLoading(false);
-
+      if (response.status === 200 || response.status === 201) {
+        addToast("Your enquiry has been submitted successfully.", {
+          appearance: "success",
+          autoDismiss: true,
+          autoDismissTimeout: 5000,
+        });
+        setForm({ name: "", email: "", phone: "", company: "", message: "" });
+        setCaptchaValue(null);
+        onClose();
+      } else {
         addToast(
-          err?.message ||
-            "Unexpected response from server. Please try again or contact Admin",
+          "There was an issue submitting your enquiry. Please try again.",
           {
-            appearance: "error",
-            autoDismiss: true, // Enable auto dismiss
-            autoDismissTimeout: 5000, // Dismiss after 5 seconds
+            appearance: "info",
+            autoDismiss: true,
+            autoDismissTimeout: 5000,
           },
         );
-      });
+      }
+    } catch (err) {
+      addToast(
+        err.response?.data?.error ||
+          "Oops something went wrong. Please try again.",
+        { appearance: "error", autoDismiss: true, autoDismissTimeout: 5000 },
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -163,6 +177,20 @@ const EnquiryModal = ({ isOpen, onClose }) => {
 
           <div className={styles.inputGroup}>
             <label>
+              Company <span>*</span>
+            </label>
+            <input
+              type="text"
+              name="company"
+              value={form.company}
+              onChange={handleChange}
+              required
+              placeholder="Acme Inc."
+            />
+          </div>
+
+          <div className={styles.inputGroup}>
+            <label>
               How can we help? <span>*</span>
             </label>
             <textarea
@@ -175,7 +203,36 @@ const EnquiryModal = ({ isOpen, onClose }) => {
             />
           </div>
 
-          <button type="submit" className={styles.submitBtn}>
+          {isClient && (
+            <div
+              className="g-recaptcha"
+              data-sitekey="6LcJU-srAAAAALRX1h9OCch3tCogKyYMbyyXgtFD"
+              data-callback="handleEnquiryCaptchaResponse"
+            ></div>
+          )}
+
+          <p className={styles.privacyNote}>
+            By submitting this form, you are agreeing to receive additional
+            communications from Alluvium. Please review our{" "}
+            <a
+              href="http://alluvium.net/privacy-policy"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </a>{" "}
+            for additional information.
+          </p>
+
+          <button
+            type="submit"
+            className={styles.submitBtn}
+            disabled={!captchaValue}
+            style={{
+              cursor: !captchaValue ? "not-allowed" : undefined,
+              opacity: !captchaValue ? 0.5 : undefined,
+            }}
+          >
             {loading ? "Submitting..." : "Submit Enquiry"}
           </button>
         </form>

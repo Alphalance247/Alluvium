@@ -27,18 +27,6 @@ const AIAdoptionTraining = () => {
           />
         </Head>
         <TrainingHero />
-
-        {/* <div style={{ borderBottom: "1px " }}>
-          <div
-            style={{
-              maxWidth: "1280px",
-              margin: "0 auto",
-              borderBottom: "1px dashed rgba(217, 217, 217, 0.80)",
-            }}
-          >
-            <Badges variant={"sub-default"} badgesData={badges} />
-          </div>
-        </div> */}
         <PartnerBar />
         <Benefits />
         <PatternSeparator />
