@@ -88,20 +88,6 @@ const CaseStudyTabs = () => {
             <div className={styles.scrim} />
           </div>
 
-          {/* Top Info Overlay
-          <div className={styles.topOverlay}>
-            <div className={styles.logoPlaceholder}>
-              <div className={styles.iconBox} />
-              <div className={styles.iconBox} />
-              <div className={styles.iconBox} />
-              <div className={styles.gradientSquare} />
-            </div>
-            <div className={styles.textHeader}>
-              <h3 className={styles.companyTitle}>{activeData.title}</h3>
-              <p className={styles.companySubtitle}>{activeData.subtitle}</p>
-            </div>
-          </div> */}
-
           {/* Bottom Stats Overlay */}
           <div className={styles.statsBar}>
             {activeData.stats.map((stat, idx) => (
