@@ -33,7 +33,7 @@ const caseStudies = [
     name: "Allianz",
     title: "Allianz",
     subtitle: "Global leader in insurance and asset management",
-    image: "/assets/Alluvium-Redesign-2026/ai-adoption/course.png", // Corporate skyscraper
+    image: "/assets/Alluvium-Redesign-2026/ai-adoption/Course.png", // Corporate skyscraper
     stats: [
       {
         text: "AGlobal partnership with Anthropic to embed Claude across the business",
