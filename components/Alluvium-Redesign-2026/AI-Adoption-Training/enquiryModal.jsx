@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/enquiry-modal.module.scss";
 import { LiaTimesSolid } from "react-icons/lia";
 import axios from "axios";
@@ -18,21 +18,49 @@ const EnquiryModal = ({ isOpen, onClose }) => {
   const [loading, setLoading] = useState(false);
   const [captchaValue, setCaptchaValue] = useState(null);
   const [isClient, setIsClient] = useState(false);
+  const captchaRef = useRef(null);
+  const widgetIdRef = useRef(null);
 
   useEffect(() => {
     setIsClient(true);
-    if (typeof window !== "undefined") {
-      window.handleEnquiryCaptchaResponse = function (token) {
-        setCaptchaValue(token);
-      };
-    }
-    if (!document.querySelector('script[src*="recaptcha/api.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://www.google.com/recaptcha/api.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
+    window.handleEnquiryCaptchaResponse = (token) => setCaptchaValue(token);
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      // Modal closed — the DOM node is gone, so the widget ID is stale
+      widgetIdRef.current = null;
+      setCaptchaValue(null);
+      return;
+    }
+    if (!isClient) return;
+
+    const renderWidget = () => {
+      if (!captchaRef.current || !window.grecaptcha?.render) return;
+      widgetIdRef.current = window.grecaptcha.render(captchaRef.current, {
+        sitekey: "6LcJU-srAAAAALRX1h9OCch3tCogKyYMbyyXgtFD",
+        callback: window.handleEnquiryCaptchaResponse,
+      });
+    };
+
+    if (window.grecaptcha?.render) {
+      renderWidget();
+    } else {
+      if (!document.querySelector('script[src*="recaptcha/api.js"]')) {
+        const script = document.createElement("script");
+        script.src = "https://www.google.com/recaptcha/api.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }
+      const pollId = setInterval(() => {
+        if (window.grecaptcha?.render) {
+          clearInterval(pollId);
+          renderWidget();
+        }
+      }, 100);
+      return () => clearInterval(pollId);
+    }
+  }, [isOpen, isClient]);
 
   if (!isOpen) return null;
 
@@ -203,13 +231,7 @@ const EnquiryModal = ({ isOpen, onClose }) => {
             />
           </div>
 
-          {isClient && (
-            <div
-              className="g-recaptcha"
-              data-sitekey="6LcJU-srAAAAALRX1h9OCch3tCogKyYMbyyXgtFD"
-              data-callback="handleEnquiryCaptchaResponse"
-            ></div>
-          )}
+          {isClient && <div ref={captchaRef} />}
 
           <p className={styles.privacyNote}>
             By submitting this form, you are agreeing to receive additional
