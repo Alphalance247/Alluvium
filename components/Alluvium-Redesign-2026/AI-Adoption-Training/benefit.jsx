@@ -60,16 +60,6 @@ const Benefits = () => {
             ))}
           </div>
         </div>
-
-        {/* <div className={styles.line}>
-          <img
-            width={1280}
-            height={64}
-            src="/assets/Alluvium-Redesign-2026/ai-adoption/line.png"
-            alt="AI Adoption Training"
-            className={styles.lineImage}
-          />
-        </div> */}
       </div>
     </section>
   );

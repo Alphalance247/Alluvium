@@ -1,16 +1,14 @@
 import React from "react";
 import Head from "next/head";
 import Layout from "components/layout";
-import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
-import { badges } from "data";
 import TrainingHero from "components/Alluvium-Redesign-2026/AI-Adoption-Training/hero";
 import Benefits from "components/Alluvium-Redesign-2026/AI-Adoption-Training/benefit";
-import PatternSeparator from "components/Alluvium-Redesign-2026/AI-Adoption-Training/patternSeperator";
-import Image from "next/image";
 import WorkshopSection from "components/Alluvium-Redesign-2026/AI-Adoption-Training/workSection";
 import CaseStudyTabs from "components/Alluvium-Redesign-2026/AI-Adoption-Training/caseStudy";
 import ComplementaryCTA from "components/Alluvium-Redesign-2026/AI-Adoption-Training/complimentarySection";
 import AboutAlluvium from "components/Alluvium-Redesign-2026/AI-Adoption-Training/aboutAlluvium";
+import PartnerBar from "components/Alluvium-Redesign-2026/AI-Adoption-Training/partnerBadge";
+import PatternSeparator from "components/Alluvium-Redesign-2026/AI-Adoption-Training/patternSeperator";
 
 const AIAdoptionTraining = () => {
   return (
@@ -29,18 +27,7 @@ const AIAdoptionTraining = () => {
           />
         </Head>
         <TrainingHero />
-
-        <div style={{ borderBottom: "1px " }}>
-          <div
-            style={{
-              maxWidth: "1280px",
-              margin: "0 auto",
-              borderBottom: "1px dashed rgba(217, 217, 217, 0.80)",
-            }}
-          >
-            <Badges variant={"sub-default"} badgesData={badges} />
-          </div>
-        </div>
+        <PartnerBar />
         <Benefits />
         <PatternSeparator />
         <WorkshopSection />

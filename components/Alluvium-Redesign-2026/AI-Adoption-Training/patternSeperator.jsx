@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/pattern-seperator.module.scss";
+import Image from "next/image";
 
 const PatternSeparator = () => {
   // Creating an array to generate the repeating diamond pattern
@@ -14,6 +15,12 @@ const PatternSeparator = () => {
           ))}
         </div>
       </div>
+      {/* <Image
+        src="/assets/Alluvium-Redesign-2026/ai-adoption/line.png"
+        alt="Pattern Separator"
+        width={1280}
+        height={67}
+      /> */}
     </div>
   );
 };

@@ -33,7 +33,7 @@ const caseStudies = [
     name: "Allianz",
     title: "Allianz",
     subtitle: "Global leader in insurance and asset management",
-    image: "/assets/Alluvium-Redesign-2026/ai-adoption/course.png", // Corporate skyscraper
+    image: "/assets/Alluvium-Redesign-2026/ai-adoption/Course.png", // Corporate skyscraper
     stats: [
       {
         text: "AGlobal partnership with Anthropic to embed Claude across the business",
@@ -87,20 +87,6 @@ const CaseStudyTabs = () => {
           >
             <div className={styles.scrim} />
           </div>
-
-          {/* Top Info Overlay
-          <div className={styles.topOverlay}>
-            <div className={styles.logoPlaceholder}>
-              <div className={styles.iconBox} />
-              <div className={styles.iconBox} />
-              <div className={styles.iconBox} />
-              <div className={styles.gradientSquare} />
-            </div>
-            <div className={styles.textHeader}>
-              <h3 className={styles.companyTitle}>{activeData.title}</h3>
-              <p className={styles.companySubtitle}>{activeData.subtitle}</p>
-            </div>
-          </div> */}
 
           {/* Bottom Stats Overlay */}
           <div className={styles.statsBar}>
