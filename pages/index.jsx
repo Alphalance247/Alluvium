@@ -15,6 +15,7 @@ import WhyUs from "components/Alluvium-Redesign-2026/home/whyUs";
 import SuccessStories from "components/Alluvium-Redesign-2026/home/caseStudyCard";
 import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 import AiAdoptionHero from "components/Alluvium-Redesign-2026/common/aiAdoptionHero";
+import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 
 const badgesImages = [
   {
@@ -85,14 +86,14 @@ const Home = () => {
             <Badges variant={"sub-default"} badgesData={badges} />
           </div>
         </div>
-        {/* <PillarsSection />
+        <PillarsSection />
         <WhyUs />
         <SuccessStories />
-        <CtaSection /> */}
-        <CaseStudies />
+        <CtaSection />
+        {/* <CaseStudies />
         <AboutSection />
         <SeamlessAtlassian />
-        <Service />
+        <Service /> */}
         {/* <SuccessStory /> */}
 
         {/* <Expertise />
@@ -100,7 +101,7 @@ const Home = () => {
         <Banner />
         <Impact />
         <MarketPlacePlugin /> */}
-        <StartScaling />
+        {/* <StartScaling /> */}
       </Layout>
     </>
   );
