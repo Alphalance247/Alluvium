@@ -30,7 +30,7 @@ export default class MyDocument extends Document {
             data-public-key="pk_fd206eefacbe3bc36ef10b8742ef49b0"
           ></script>
 
-          {/* <script
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 window.csmWidgetSettings = {
@@ -54,7 +54,7 @@ export default class MyDocument extends Document {
                 }())
               `,
             }}
-          /> */}
+          />
 
           {/* <script
             dangerouslySetInnerHTML={{
@@ -66,9 +66,9 @@ export default class MyDocument extends Document {
                 }
               `,
             }}
-          /> */}
+          />
 
-          {/* <script
+          <script
             dangerouslySetInnerHTML={{
               __html: `
                 (function(){
@@ -80,7 +80,7 @@ export default class MyDocument extends Document {
                 })()
               `,
             }}
-          /> */}
+          />
 
           {/* <script
             data-jsd-embedded

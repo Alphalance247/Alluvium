@@ -14,6 +14,7 @@ import PillarsSection from "components/Alluvium-Redesign-2026/home/pillarSection
 import WhyUs from "components/Alluvium-Redesign-2026/home/whyUs";
 import SuccessStories from "components/Alluvium-Redesign-2026/home/caseStudyCard";
 import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
+import AiAdoptionHero from "components/Alluvium-Redesign-2026/common/aiAdoptionHero";
 import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 
 const badgesImages = [
@@ -57,8 +58,9 @@ const Home = () => {
         {/* <Hero /> */}
         {/* <SWPHero /> */}
         {/* <Team26Hero /> */}
+        <AiAdoptionHero />
 
-        <ServiceHero
+        {/* <ServiceHero
           badges={badgesImages}
           serviceImage="/assets/Alluvium-Redesign-2026/home/hero-section-background.png"
           heading={
@@ -71,7 +73,7 @@ const Home = () => {
           btnName2={"BOOK A 15-MIN STARTEGY CONSULT"}
           isBtn2={true}
           btnName={"REQUEST A FREE CLOUD AUDIT"}
-        />
+        /> */}
 
         <div style={{ borderBottom: "1px " }}>
           <div
@@ -92,14 +94,14 @@ const Home = () => {
         <AboutSection />
         <SeamlessAtlassian />
         <Service /> */}
-        <SuccessStory />
+        {/* <SuccessStory /> */}
 
         {/* <Expertise />
         <AtlassianSolution />
         <Banner />
         <Impact />
         <MarketPlacePlugin /> */}
-        <StartScaling />
+        {/* <StartScaling /> */}
       </Layout>
     </>
   );
