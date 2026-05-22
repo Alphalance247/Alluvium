@@ -71,7 +71,7 @@ const EventDetail = ({
           </div>
 
           <div className={styles.personSection}>
-            <h3>Speakers</h3>
+            {/* <h3>Speakers</h3> */}
             <div className={styles.personGrid}>
               {speakers.map((speaker, index) => (
                 <Person
