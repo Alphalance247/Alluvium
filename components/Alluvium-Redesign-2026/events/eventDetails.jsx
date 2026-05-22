@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/event-details.module.scss";
+import LeadForm from "pages/event/itsm-solutions/form/leadform";
 
 const Person = ({ name, role, image }) => (
   <div className={styles.personCard}>
@@ -86,7 +87,7 @@ const EventDetail = ({
 
         {/* Right Column: Sticky Form */}
         <aside>
-          <div className={styles.formCard}>
+          {/* <div className={styles.formCard}>
             <h2>Register to Join</h2>
             <form onSubmit={(e) => e.preventDefault()}>
               <div className={styles.inputGroup}>
@@ -124,7 +125,12 @@ const EventDetail = ({
                 SAVE MY SPOT
               </button>
             </form>
-          </div>
+          </div> */}
+          <LeadForm
+            dataUrl={
+              "https://lfmdec-zgpm.maillist-manage.com/ua/Optin?od=11287ecba0e4a5&zx=12ea52690&tD=1b6f519ef5ce49f1&sD=1b6f519ef5dc730f"
+            }
+          />
         </aside>
       </div>
     </section>
