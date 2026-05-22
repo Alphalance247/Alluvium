@@ -75,6 +75,7 @@ $color-amber-600: #d97706;
 .card {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   gap: 24px;
   height: 100%;
 }
