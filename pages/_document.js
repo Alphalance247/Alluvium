@@ -56,12 +56,12 @@ export default class MyDocument extends Document {
             }}
           />
 
-          <script
+          {/* <script
             data-jsd-embedded
             data-key="b50c8cc2-fc35-4d76-bf22-f2059710a8d4"
             data-base-url="https://jsd-widget.atlassian.com"
             src="https://jsd-widget.atlassian.com/assets/embed.js"
-          ></script>
+          ></script> */}
         </Head>
         <body>
           <Main />
