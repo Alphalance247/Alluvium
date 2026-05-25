@@ -4,7 +4,7 @@ export const eventData = [
     title: "Exploring Atlassian’s CSM Telephony",
     backgroundImage: "/assets/Alluvium-Redesign-2026/Events/csm-telephony.png",
     dateTime: "TUE, MaY 26, 2026 1:00 PM WAT",
-    startsIn: "Starts in 4 days",
+    startsIn: "Starts tomorrow",
     descriptionParagraphs: [
       "Tired of waiting days for ticket resolution? Atlassian Customer Service Management now lets your customers pick up the phone, speak to a live agent, and get help in real time.",
     ],
