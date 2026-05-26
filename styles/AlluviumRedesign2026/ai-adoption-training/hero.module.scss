@@ -1,0 +1,127 @@
+.main {
+  background: url("/assets/Alluvium-Redesign-2026/ai-adoption/hero.png");
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1282px;
+  padding: 96px 20px; // py-24
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  border: 1px dashed #d9d9d9; // zinc-700
+}
+
+.container {
+  max-width: 800px; // Replacing the px-96 for better layout
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px; // gap-8
+}
+
+.badgeBar {
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+
+  .logoGroup {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .dividerText {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    color: #52525b; // zinc-600
+    font-weight: 400;
+  }
+}
+
+.alluviumLogo {
+  width: 96px;
+  height: 20px;
+  position: relative;
+  // This mimics your complex absolute logo shapes
+  background: linear-gradient(to bottom, #0891b2, #0284c7);
+  mask-image: linear-gradient(to right, black 20%, transparent 20%);
+}
+
+.partnerLogo {
+  width: 96px;
+  height: 20px;
+  background: #000;
+  border-radius: 2px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background: #f87171; // red-400
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+
+  .title {
+    font-family: "Domine", serif;
+    font-size: clamp(32px, 5vw, 48px); // text-5xl with responsiveness
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    max-width: 600px;
+  }
+
+  .description {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #ffffff;
+    opacity: 0.9;
+  }
+}
+
+.actionArea {
+  display: flex;
+  justify-content: center;
+}
+
+.primaryBtn {
+  padding: 12px 24px;
+  background-color: #d97706; // amber-600
+  border-radius: 8px;
+  border: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+
+  &:hover {
+    background-color: #b45309;
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}

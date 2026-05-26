@@ -1,44 +1,38 @@
 export const eventData = [
   {
-    slug: "modern-itsm-with-atlassians-service-collection",
-    title: "Modern ITSM with Atlassian's Service Collection",
-    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/Content.png",
-    dateTime: "THU, MAR 26, 2026 7:00 PM WAT",
-    startsIn: "STARTS IN 9 DAYS",
+    slug: "exploring-atlassian’s-csm-telephony",
+    title: "Exploring Atlassian’s CSM Telephony",
+    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/csm-telephony.png",
+    dateTime: "TUE, MaY 26, 2026 1:00 PM WAT",
+    startsIn: "Starts tomorrow",
     descriptionParagraphs: [
-      "In this free 1-hour advanced webinar, Alluvium, Atlassian Certified Experts demonstrate Atlassian's full suite of ITSM tools.",
-      "Atlassian Team'26 is back in Anaheim, CA - This unique event will drive into how AI, teamwork, and transformative technologies can maximize team impact.",
+      "Tired of waiting days for ticket resolution? Atlassian Customer Service Management now lets your customers pick up the phone, speak to a live agent, and get help in real time.",
     ],
     coverPoints: [
-      "The biggest shifts shaping research in 2026",
-      "How researchers are stepping into strategic roles",
-      "Where human judgment becomes your edge in an AI era",
-      "What it takes to scale research with the right systems",
+      "How to set up CSM's voice channel from scratch",
+      "Configuring your AWS Connect integration step by step",
+      "Creating service accounts, phone numbers, and agent routing",
+      "Attaching call recordings to service requests automatically.",
     ],
     hosts: [
       {
-        name: "Rachel Brown",
-        role: "Atlassian Certified Expert and Presales Solution Engineer",
-        image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
-      },
-      {
-        name: "Rachel Brown",
-        role: "Atlassian Certified Expert and Presales Solution Engineer",
-        image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
+        name: "BAbade Adewole",
+        role: "Speaker",
+        image: "/assets/Alluvium-Redesign-2026/Events/babs.jpg",
       },
     ],
-    speakers: [
-      {
-        name: "Rachel Brown",
-        role: "Atlassian Certified Expert and Presales Solution Engineer",
-        image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
-      },
-      {
-        name: "Rachel Brown",
-        role: "Atlassian Certified Expert and Presales Solution Engineer",
-        image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
-      },
-    ],
+    // speakers: [
+    //   {
+    //     name: "Rachel Brown",
+    //     role: "Atlassian Certified Expert and Presales Solution Engineer",
+    //     image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
+    //   },
+    //   {
+    //     name: "Rachel Brown",
+    //     role: "Atlassian Certified Expert and Presales Solution Engineer",
+    //     image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
+    //   },
+    // ],
   },
 
   {
