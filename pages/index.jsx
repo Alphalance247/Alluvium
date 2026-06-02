@@ -16,7 +16,8 @@ import SuccessStories from "components/Alluvium-Redesign-2026/home/caseStudyCard
 import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 import AiAdoptionHero from "components/Alluvium-Redesign-2026/common/aiAdoptionHero";
 import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
-
+import GifHero from "components/Alluvium-Redesign-2026/home-hero/GifHero";
+import Hero from "components/Alluvium-Redesign-2026/home/Hero";
 const badgesImages = [
   {
     id: "01",
@@ -58,7 +59,9 @@ const Home = () => {
         {/* <Hero /> */}
         {/* <SWPHero /> */}
         {/* <Team26Hero /> */}
-        <AiAdoptionHero />
+        <Hero />
+        {/* <GifHero /> */}
+        {/* <AiAdoptionHero /> */}
 
         {/* <ServiceHero
           badges={badgesImages}
