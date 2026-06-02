@@ -1,7 +1,7 @@
 import React from "react";
 
 const GifHero = ({
-    gifUrl = "/assets/Alluvium-Redesign-2026/home/Last-GIFF.gif",
+    gifUrl = "/assets/Alluvium-Redesign-2026/home/newGIF.gif",
     altText = "Hero Animation",
 }) => {
     return (
@@ -9,7 +9,7 @@ const GifHero = ({
             style={{
                 position: "relative",
                 width: "100%",
-                minHeight: "100vh",
+                minHeight: "620px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -24,7 +24,7 @@ const GifHero = ({
                     top: 0,
                     left: 0,
                     width: "100%",
-                    height: "100%",
+                    height: "620px",
                     overflow: "hidden",
                     zIndex: 1,
                 }}
@@ -34,7 +34,7 @@ const GifHero = ({
                     alt={altText}
                     style={{
                         width: "100%",
-                        height: "100%",
+                        height: "620px",
                         objectFit: "cover",
                         objectPosition: "center",
                         display: "block",
@@ -69,10 +69,11 @@ const GifHero = ({
                     alignItems: "center",
                     justifyContent: "center",
                     textAlign: "center",
-                    minHeight: "100vh",
+                    maxHeight: "620px",
                 }}
             >
                 {/* You can add your hero content here */}
+
             </div>
         </section>
     );
