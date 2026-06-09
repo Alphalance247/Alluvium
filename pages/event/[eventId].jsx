@@ -36,6 +36,7 @@ export default function EventId({ eventInfo }) {
         coverPoints={eventInfo.coverPoints}
         hosts={eventInfo.hosts}
         speakers={eventInfo.speakers}
+        subtitle={eventInfo.subtitle}
       />
       <UpcomingWebinars
         heading={"Explore More Upcoming Webinars"}
