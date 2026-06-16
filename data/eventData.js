@@ -1,5 +1,26 @@
 export const eventData = [
   {
+    slug: "dashboard-advantage-what-you-do-not-get-with-email",
+    title: "Dashboard Advantage: What You Do Not Get With Email",
+    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/Yusuf banner.jpg",
+    dateTime: "WED, 10TH JUNE, 2026 1:00 PM WAT",
+    descriptionParagraphs: ["Email is a powerful communication tool, but it wasn't built to provide real-time visibility, performance tracking, or actionable insights.",
+      "Join Braimoh Yusuf as he explores how dashboards help organizations improve decision-making, increase accountability, and gain a clearer view of operations."
+    ],
+    coverPoints: ["Provide real-time visibility into projects and processes",
+      "Improve team accountability and collaboration",
+      "Simplify reporting and performance tracking",
+      "Enable faster, data-driven decisions"
+    ],
+    subtitle: "Learn how dashboards can",
+    hosts: [{
+      name: "Yusuf Braimoh",
+      role: "Speaker",
+      image: "/assets/Alluvium-Redesign-2026/Events/yusuf.png"
+    }],
+
+  },
+  {
     slug: "exploring-atlassian’s-csm-telephony",
     title: "Exploring Atlassian’s CSM Telephony",
     backgroundImage: "/assets/Alluvium-Redesign-2026/Events/csm-telephony.png",
@@ -14,6 +35,7 @@ export const eventData = [
       "Creating service accounts, phone numbers, and agent routing",
       "Attaching call recordings to service requests automatically.",
     ],
+    subtitle: "In this session, we'll cover",
     hosts: [
       {
         name: "BAbade Adewole",
