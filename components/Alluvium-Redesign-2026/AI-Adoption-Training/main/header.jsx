@@ -7,8 +7,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "HOME", href: "/" },
-    { label: "AGENT ECONOMICS", href: "/ai/" },
+    { label: "HOME", href: "/ai" },
+    { label: "AGENT ECONOMICS", href: "/ai/ai-agent-economics" },
     { label: "AI ADOPTION", href: "/ai-adoption-training" },
   ];
 

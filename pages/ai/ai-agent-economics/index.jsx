@@ -1,18 +1,20 @@
+import AICostProblem from "components/Alluvium-Redesign-2026/AI-Adoption-Training/ai-economic-agent/AICostProblem";
+import AssessmentCTA from "components/Alluvium-Redesign-2026/AI-Adoption-Training/ai-economic-agent/assesmentCta";
+import HowWeHelp from "components/Alluvium-Redesign-2026/AI-Adoption-Training/ai-economic-agent/howWeHelp";
+import TheOutcome from "components/Alluvium-Redesign-2026/AI-Adoption-Training/ai-economic-agent/outCome";
+import SeatToCredits from "components/Alluvium-Redesign-2026/AI-Adoption-Training/ai-economic-agent/seatToCredit";
+import ServiceHero from "components/Alluvium-Redesign-2026/AI-Adoption-Training/ai-economic-agent/serviceHero";
+import WhyAlluvium from "components/Alluvium-Redesign-2026/AI-Adoption-Training/ai-economic-agent/whyAlluvium";
 import FooterBar from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/footerBar";
 import Header from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/header";
-import ImpactCards from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/ImpactCards";
-import MetricsCounter from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/metricsCard";
-import PartnershipGrid from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/PartnershipGrid";
-import SolutionsGrid from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/solutions";
-import TrustBanner from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/trustBanner";
 import PartnerBar from "components/Alluvium-Redesign-2026/AI-Adoption-Training/partnerBadge";
 import Head from "next/head";
 
-const AI = () => {
+const AIAgentEconomics = () => {
   return (
     <>
       <Head>
-        <title>Alluvium | Atlassian Global Solution Partner </title>
+        <title>Alluvium | Atlassian Global Solution Partner</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="preload"
@@ -29,15 +31,17 @@ const AI = () => {
         />
       </Head>
       <Header />
-      <TrustBanner />
+      <ServiceHero />
       <PartnerBar />
-      <PartnershipGrid />
-      <SolutionsGrid />
-      <ImpactCards />
-      <MetricsCounter />
+      <SeatToCredits />
+      <AICostProblem />
+      <HowWeHelp />
+      <TheOutcome />
+      <WhyAlluvium />
+      <AssessmentCTA />
       <FooterBar />
     </>
   );
 };
 
-export default AI;
+export default AIAgentEconomics;

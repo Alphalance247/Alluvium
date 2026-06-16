@@ -1,0 +1,157 @@
+// Brand Theme Color Tokens
+$gray-400: #9ca3af;
+$gray-200: #e5e7eb;
+$gray-900: #111827;
+$neutral-800: #262626;
+$zinc-600: #52525b;
+$slate-900: #0f172a;
+
+.sectionWrapper {
+  width: 100%;
+  background-color: $gray-400;
+  overflow: hidden;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; // gap-12
+  // Emulates bounding container lines from the original framework setup
+  padding: 3rem 18px;
+
+  @media (min-width: 1024px) {
+    padding: 0;
+    padding: 96px 80px;
+    border: 1px dashed rgba(17, 24, 39, 0.2);
+  }
+}
+
+.headerBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; // gap-4
+  text-align: center;
+  width: 100%;
+}
+
+.overline {
+  color: $gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.05em; // tracking-wide
+}
+
+.mainHeading {
+  color: $gray-900;
+  font-family: "Domine", serif;
+  font-size: clamp(2rem, 5vw, 2.25rem); // Fluid scale matching text-4xl
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+// Fluid Grid Track Layout
+.problemsGrid {
+  display: grid;
+  grid-template-columns: 1fr; // Single column cards stack vertically on mobile
+  gap: 24px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // 2 columns for medium tablets
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    ); // Clean horizontal 3-column layout row on desktop split
+  }
+}
+
+// Card Containers
+.problemCard {
+  background-color: $gray-200;
+  border-radius: 8px;
+  padding: 24px; // p-6
+  display: flex;
+  flex-direction: column;
+  gap: 12px; // gap-2.5 refinement
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px; // gap-3
+}
+
+.iconContainer {
+  position: relative;
+  width: 24px; // size-6
+  height: 24px;
+  flex-shrink: 0;
+}
+
+// Pure CSS UI Shapes to cleanly represent old absolute placeholder items
+.baseIcon {
+  position: absolute;
+  border: 2px solid $slate-900;
+}
+
+.spendIcon {
+  width: 16px;
+  height: 16px;
+  left: 4px;
+  top: 4px;
+}
+
+.attributionIcon {
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  background-color: $slate-900;
+}
+
+.engineIcon {
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 5px;
+    top: 5px;
+    border: 2px solid $slate-900;
+  }
+}
+
+.cardTitle {
+  color: $neutral-800;
+  font-family: "Domine", serif;
+  font-size: 1.125rem; // text-lg
+  font-weight: 700;
+  line-height: 1.55; // leading-7
+  margin-bottom: 0;
+}
+
+.cardDescription {
+  color: $zinc-600;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem; // text-base
+  font-weight: 500;
+  line-height: 1.5;
+  width: 100%;
+}

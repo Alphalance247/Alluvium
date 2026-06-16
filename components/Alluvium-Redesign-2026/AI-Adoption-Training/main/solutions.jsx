@@ -19,7 +19,7 @@ const SolutionsGrid = () => {
         "Understand how AI agents consume credits, where costs accumulate, and how to design workflows that maximise value.",
       image: "/assets/Alluvium-Redesign-2026/ai-adoption/ai-adoption-2.png",
       alt: "Agent Economics",
-      link: "/ai-adoption-training",
+      link: "/ai/ai-agent-economics",
       linkText: "Explore Training",
     },
   ];
