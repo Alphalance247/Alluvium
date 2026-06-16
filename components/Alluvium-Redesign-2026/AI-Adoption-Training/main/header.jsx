@@ -7,9 +7,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: "HOME", href: "#home" },
-    { label: "AGENT ECONOMICS", href: "#economics" },
-    { label: "AI ADOPTION", href: "#adoption" },
+    { label: "HOME", href: "/" },
+    { label: "AGENT ECONOMICS", href: "/ai-adoption-training/" },
+    { label: "AI ADOPTION", href: "/ai-adoption-training" },
   ];
 
   return (
@@ -45,9 +45,9 @@ const Header = () => {
         >
           <div className={styles.linksList}>
             {navLinks.map((link, index) => (
-              <a key={index} href={link.href} className={styles.navLink}>
-                {link.label}
-              </a>
+              <Link key={index} href={link.href}>
+                <div className={styles.navLink}>{link.label}</div>
+              </Link>
             ))}
           </div>
 
