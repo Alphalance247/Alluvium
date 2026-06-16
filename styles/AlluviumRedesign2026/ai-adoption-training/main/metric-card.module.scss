@@ -7,12 +7,7 @@ $neutral-400: #a3a3a3;
 .metricsSection {
   width: 100%;
   background-color: $gray-400; // Preserves container background canvas tone
-  padding: 60px 16px;
   overflow: hidden;
-
-  @media (min-width: 1024px) {
-    padding: 96px 80px; // Maps the exact py-24 px-20 layout composition
-  }
 }
 
 .outerFrame {
@@ -22,15 +17,12 @@ $neutral-400: #a3a3a3;
   display: flex;
   flex-direction: column;
   gap: 48px; // gap-12 layout spacing
-
   // Replicates outer alignment lines from your original component
-  border: 1px solid rgba(115, 115, 115, 0.4);
-  border-radius: 16px;
-  padding: 32px 16px;
+  padding: 3rem 18px;
 
   @media (min-width: 1024px) {
-    padding: 0;
-    border: none; // Safe drop-off container borders for large screen consistency
+    padding: 96px 80px; // Maps the exact py-24 px-20 layout composition
+    border: 1px dashed rgba(115, 115, 115, 0.4);
   }
 }
 
