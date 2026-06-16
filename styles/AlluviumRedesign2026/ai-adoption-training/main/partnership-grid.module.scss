@@ -1,0 +1,185 @@
+// Theme Tokens
+$gray-900: #111827;
+$gray-200: #e5e7eb;
+$neutral-800: #262626;
+$zinc-600: #52525b;
+$slate-900: #0f172a;
+
+.wrapper {
+  width: 100%;
+  background-color: $gray-900;
+  padding: 60px 20px; // Smooth, safe baseline mobile margins
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    padding: 96px 80px; // Remaps your py-24 px-20 layout accurately
+  }
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  // Outer frame separator layout from original outline lines
+  border: 1px solid rgba(163, 163, 163, 0.2);
+  border-radius: 16px;
+  padding: 32px 24px;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 64px;
+    padding: 0;
+    border: none; // Offload box frame boundaries safely on widescreen
+  }
+}
+
+// Left Intro Header Mechanics
+.introColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    max-width: 384px; // Replaces broken fixed pixel restraints fluidly
+    position: sticky;
+    top: 40px; // Sticks header alongside grid content scrolling on desktop layouts
+  }
+}
+
+.headerStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overline {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.05em; // tracking-wide
+}
+
+.title {
+  color: white;
+  font-family: "Domine", serif;
+  font-size: clamp(
+    2rem,
+    5vw,
+    2.25rem
+  ); // Fluid scale down from text-4xl boundary safely
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.leadParagraph {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem; // text-lg
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+// Right Feature Grid Container
+.gridColumn {
+  display: grid;
+  grid-template-columns: 1fr; // Single stacked block default on mobile screens
+  gap: 24px;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); // Transitions cleanly to 2x2 grid on standard tablets
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 680px;
+  }
+}
+
+// Individual Value Cards
+.valueCard {
+  background-color: $gray-200;
+  border-radius: 8px;
+  padding: 24px; // p-6 mapping
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.iconContainer {
+  position: relative;
+  width: 24px; // size-6
+  height: 24px;
+}
+
+// Reconstructed Inline Mock Vectors cleanly with CSS
+.baseIcon {
+  background-color: $slate-900;
+  position: absolute;
+}
+
+.expertiseIcon {
+  width: 16px;
+  height: 14px;
+  left: 4px;
+  top: 5px;
+  background: transparent;
+  border: 2px solid $slate-900;
+}
+
+.responsibleIcon {
+  width: 16px;
+  height: 20px;
+  left: 4px;
+  top: 2px;
+}
+
+.adoptionIcon {
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  border-radius: 4px;
+}
+
+.deliveryIcon {
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+}
+
+.cardTitle {
+  color: $neutral-800;
+  font-family: "Domine", serif;
+  font-size: 1.125rem; // text-lg
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.cardDesc {
+  color: $zinc-600;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem; // text-base
+  font-weight: 500;
+  line-height: 1.5;
+}
