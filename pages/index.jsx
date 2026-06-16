@@ -64,21 +64,6 @@ const Home = () => {
         {/* <GifHero /> */}
         {/* <AiAdoptionHero /> */}
 
-        {/* <ServiceHero
-          badges={badgesImages}
-          serviceImage="/assets/Alluvium-Redesign-2026/home/hero-section-background.png"
-          heading={
-            "The Strategic Partner for Enterprise Atlassian Transformations."
-          }
-          serviceImageIsAvailable={true}
-          subhead={
-            "From high-stakes Cloud Upgrades to optimized Licensing and ESM, we bridge the gap between your tools and your business goals. Unlock Human-AI Collaboration at Scale."
-          }
-          btnName2={"BOOK A 15-MIN STARTEGY CONSULT"}
-          isBtn2={true}
-          btnName={"REQUEST A FREE CLOUD AUDIT"}
-        /> */}
-
         <div style={{ borderBottom: "1px " }}>
           <div
             style={{
