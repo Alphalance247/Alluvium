@@ -3,9 +3,9 @@ import { useEffect } from "react";
 export default function JiraWidget() {
   useEffect(() => {
     window.csmWidgetSettings = {
-      widgetId: "09e960f0-aa19-4250-9c9e-13727cb70d3a",
-      site: "alluviumdemo.atlassian.net",
-      cloudId: "8b3f9314-316c-4b9a-8470-8b9298e51d38",
+      widgetId: "4aaa65b4-ad5b-4f2c-b41a-38e519a10d51",
+      site: "one-atlas-smoc.atlassian.net",
+      cloudId: "eb13ffce-9d54-49c5-a977-62129a36700b",
     };
 
     if (!document.getElementById("jira-csm-script")) {
@@ -14,7 +14,7 @@ export default function JiraWidget() {
       script.id = "jira-csm-script";
 
       script.src =
-        "https://alluviumdemo.atlassian.net/csm/widget/script.js?widgetId=09e960f0-aa19-4250-9c9e-13727cb70d3a&site=alluviumdemo.atlassian.net&cloudId=8b3f9314-316c-4b9a-8470-8b9298e51d38";
+        "https://one-atlas-smoc.atlassian.net/csm/widget/script.js?widgetId=4aaa65b4-ad5b-4f2c-b41a-38e519a10d51&site=one-atlas-smoc.atlassian.net&cloudId=eb13ffce-9d54-49c5-a977-62129a36700b";
 
       script.async = true;
 
