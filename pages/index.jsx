@@ -17,6 +17,7 @@ import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 import AiAdoptionHero from "components/Alluvium-Redesign-2026/common/aiAdoptionHero";
 import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 import GifHero from "components/Alluvium-Redesign-2026/home-hero/gifHero";
+import FeaturedProgramme from "components/Alluvium-Redesign-2026/featuredProgramme/featuredBanner";
 
 const badgesImages = [
   {
@@ -88,6 +89,7 @@ const Home = () => {
             <Badges variant={"sub-default"} badgesData={badges} />
           </div>
         </div>
+        <FeaturedProgramme />
         <PillarsSection />
         <WhyUs />
         <SuccessStories />
