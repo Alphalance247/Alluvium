@@ -29,7 +29,7 @@ const FeaturedProgramme = () => {
 
           {/* Right Side: Action Button */}
           <div className={styles.actionGroup}>
-            <Link href="/ai-adoption-training">
+            <Link href="/ai">
               <button className={styles.ctaButton}>EXPLORE TRAINING</button>
             </Link>
           </div>
