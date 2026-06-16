@@ -1,0 +1,122 @@
+// Theme Tokens
+$gray-950: #030712;
+$gray-500: #6b7280;
+$amber-600: #d97706;
+$amber-700: #b45309;
+$zinc-light: rgba(228, 228, 231, 0.2); // zinc-300/20 mix remapping
+
+.ctaWrapper {
+  width: 100%;
+  background-color: $gray-950;
+  padding: 40px 16px;
+  overflow: hidden;
+
+  @media (min-width: 1024px) {
+    padding: 0 80px; // Maps the exact original outer px-20 composition layout
+  }
+}
+
+.innerBox {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: $gray-500;
+  padding: 60px 24px;
+  overflow: hidden;
+
+  // Replicates original wireframe edge highlights
+  border-left: 1px dashed $zinc-light;
+  border-right: 1px dashed $zinc-light;
+  border-bottom: 1px dashed $zinc-light;
+
+  @media (min-width: 1024px) {
+    padding: 96px 80px; // Replicates target desktop internal px-20 py-24 settings
+  }
+}
+
+// Fluid Ambient Graphical Layer (Replacing brittle absolute img placement)
+.ambientGraphic {
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 100%;
+  max-width: 1280px;
+  aspect-ratio: 1 / 1;
+  opacity: 0.2;
+  background: #606a72;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 1;
+
+  @media (min-width: 1024px) {
+    top: -464.45px; // Retains exact spatial offset layout on high-res monitors
+  }
+}
+
+.contentStack {
+  position: relative;
+  z-index: 5; // Brings interaction layers cleanly over the graphic element canvas
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 40px; // gap-10 layout pacing
+  width: 100%;
+}
+
+.ctaHeading {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(
+    1.25rem,
+    4vw,
+    1.5rem
+  ); // Fluid text-2xl scaling response engine
+  font-weight: 500;
+  line-height: 1.5; // Optimized text-leading tracking ratio
+  width: 100%;
+  text-align: left;
+
+  @media (min-width: 1024px) {
+    max-width: 806px; // Replaces rigid width limits with smooth semantic alignment boundaries
+    line-height: 2.5rem; // Maps leading-10 precisely
+  }
+}
+
+// CTA Button Layout Systems
+.actionBlock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  max-width: 280px;
+}
+
+.primaryButton {
+  width: 100%;
+  background-color: $amber-600;
+  color: white; // Maps text-White
+  font-family: "Inter", sans-serif;
+  font-size: 1rem; // text-base
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5; // leading-6
+  padding: 12px 24px; // Upgraded padding scale optimization for clean mobile fingertip activation zones
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15);
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+
+  &:hover {
+    background-color: $amber-700;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

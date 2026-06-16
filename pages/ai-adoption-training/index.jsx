@@ -9,34 +9,36 @@ import ComplementaryCTA from "components/Alluvium-Redesign-2026/AI-Adoption-Trai
 import AboutAlluvium from "components/Alluvium-Redesign-2026/AI-Adoption-Training/aboutAlluvium";
 import PartnerBar from "components/Alluvium-Redesign-2026/AI-Adoption-Training/partnerBadge";
 import PatternSeparator from "components/Alluvium-Redesign-2026/AI-Adoption-Training/patternSeperator";
+import Header from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/header";
+import FooterBar from "components/Alluvium-Redesign-2026/AI-Adoption-Training/main/footerBar";
 
 const AIAdoptionTraining = () => {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Alluvium | Atlassian Global Solution Partner </title>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="AI Adoption Training at Alluvium: Empowering teams to harness the full potential of AI in their workflows. Our expert-led training programs are designed to seamlessly integrate AI tools into your existing processes, enhancing productivity and driving innovation. Whether you're new to AI or looking to optimize your current usage, our tailored training solutions will help your team unlock new possibilities and stay ahead in the rapidly evolving digital landscape."
-          />
-          <meta
-            name="keywords"
-            content="AI adoption, AI training, Atlassian AI, enterprise AI, AI integration, workflow automation, AI tools training, AI for business, AI in the workplace, AI strategy, AI implementation, AI education, AI workshops, AI consulting, AI solutions, AI transformation"
-          />
-        </Head>
-        <TrainingHero />
-        <PartnerBar />
-        <Benefits />
-        <PatternSeparator />
-        <WorkshopSection />
-        <PatternSeparator />
-        <CaseStudyTabs />
-        <PatternSeparator />
-        <ComplementaryCTA />
-        <AboutAlluvium />
-      </Layout>
+      <Header />
+      <Head>
+        <title>Alluvium | Atlassian Global Solution Partner </title>
+        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content="AI Adoption Training at Alluvium: Empowering teams to harness the full potential of AI in their workflows. Our expert-led training programs are designed to seamlessly integrate AI tools into your existing processes, enhancing productivity and driving innovation. Whether you're new to AI or looking to optimize your current usage, our tailored training solutions will help your team unlock new possibilities and stay ahead in the rapidly evolving digital landscape."
+        />
+        <meta
+          name="keywords"
+          content="AI adoption, AI training, Atlassian AI, enterprise AI, AI integration, workflow automation, AI tools training, AI for business, AI in the workplace, AI strategy, AI implementation, AI education, AI workshops, AI consulting, AI solutions, AI transformation"
+        />
+      </Head>
+      <TrainingHero />
+      <PartnerBar />
+      <Benefits />
+      <PatternSeparator />
+      <WorkshopSection />
+      <PatternSeparator />
+      <CaseStudyTabs />
+      <PatternSeparator />
+      <ComplementaryCTA />
+      <AboutAlluvium />
+      <FooterBar />
     </>
   );
 };
