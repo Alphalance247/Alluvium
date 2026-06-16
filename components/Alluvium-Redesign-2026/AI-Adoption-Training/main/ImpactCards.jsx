@@ -1,27 +1,31 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/ai-adoption-training/main/impact-card.module.scss";
+import { LuBookOpen } from "react-icons/lu";
+import { FiUser } from "react-icons/fi";
+import { IoShieldOutline } from "react-icons/io5";
+import { LuBadgeCheck } from "react-icons/lu";
 
 const ImpactCards = () => {
   const useCases = [
     {
       title: "Knowledge Management",
       description: "Find and use institutional knowledge instantly.",
-      iconType: styles.knowledgeIcon,
+      iconType: <LuBookOpen />,
     },
     {
       title: "Customer Experience",
       description: "Improve response times and customer satisfaction.",
-      iconType: styles.cxIcon,
+      iconType: <FiUser />,
     },
     {
       title: "Underwriting",
       description: "Smarter risk assessment and policy evaluation.",
-      iconType: styles.underwritingIcon,
+      iconType: <IoShieldOutline />,
     },
     {
       title: "Compliance",
       description: "Streamline reviews, reduce risk and stay audit ready.",
-      iconType: styles.complianceIcon,
+      iconType: <LuBadgeCheck />,
     },
   ];
 
@@ -42,7 +46,7 @@ const ImpactCards = () => {
             <div key={index} className={styles.impactCard}>
               <div className={styles.cardHeader}>
                 <div className={styles.iconBox}>
-                  <div className={`${styles.iconBase} ${item.iconType}`} />
+                  <div className={`${styles.iconBase}`}>{item?.iconType}</div>
                 </div>
                 <h3 className={styles.cardTitle}>{item.title}</h3>
               </div>

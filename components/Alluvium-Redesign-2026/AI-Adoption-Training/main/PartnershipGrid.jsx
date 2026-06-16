@@ -1,27 +1,31 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/ai-adoption-training/main/partnership-grid.module.scss";
+import { FiUsers } from "react-icons/fi";
+import { GoShieldCheck } from "react-icons/go";
+import { TbTargetArrow } from "react-icons/tb";
+import { AiOutlineBank } from "react-icons/ai";
 
 const PartnershipGrid = () => {
   const valueCards = [
     {
       title: "Claude Expertise",
       desc: "Direct access to Anthropic insights, best practices and Claude expertise.",
-      iconClass: styles.expertiseIcon,
+      iconClass: <FiUsers />,
     },
     {
       title: "Responsible AI",
       desc: "Built on trust, security and responsible AI principles.",
-      iconClass: styles.responsibleIcon,
+      iconClass: <GoShieldCheck />,
     },
     {
       title: "Practical Adoption",
       desc: "Real-world frameworks that drive adoption and measurable results.",
-      iconClass: styles.adoptionIcon,
+      iconClass: <TbTargetArrow />,
     },
     {
       title: "Enterprise Delivery",
       desc: "Scalable delivery across training, transformation and implementation.",
-      iconClass: styles.deliveryIcon,
+      iconClass: <AiOutlineBank />,
     },
   ];
 
@@ -47,7 +51,7 @@ const PartnershipGrid = () => {
             <div key={idx} className={styles.valueCard}>
               <div className={styles.cardHeader}>
                 <div className={styles.iconContainer}>
-                  <div className={`${styles.baseIcon} ${card.iconClass}`} />
+                  <div className={`${styles.baseIcon}`}>{card.iconClass}</div>
                 </div>
                 <h3 className={styles.cardTitle}>{card.title}</h3>
               </div>

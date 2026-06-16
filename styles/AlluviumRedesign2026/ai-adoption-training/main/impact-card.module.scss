@@ -8,12 +8,7 @@ $neutral-400: #a3a3a3;
 .sectionWrapper {
   width: 100%;
   background-color: $gray-900;
-  padding: 60px 16px;
   overflow: hidden;
-
-  @media (min-width: 1024px) {
-    padding: 96px 80px; // Maps px-20 py-24 gracefully
-  }
 }
 
 .innerContainer {
@@ -25,13 +20,12 @@ $neutral-400: #a3a3a3;
   gap: 48px; // gap-12
 
   // Emulates structural bounding box borders from the raw markup
-  border: 1px solid rgba(163, 163, 163, 0.3);
-  border-radius: 16px;
-  padding: 32px 16px;
+  padding: 3rem 18px;
 
   @media (min-width: 1024px) {
     padding: 0;
-    border: none; // Offload framework boundaries safely on wide views
+    padding: 96px 80px; // Maps px-20 py-24 gracefully
+    border: 1px dashed rgba(163, 163, 163, 0.3);
   }
 }
 
@@ -108,13 +102,15 @@ $neutral-400: #a3a3a3;
   position: relative;
   width: 24px; // size-6
   height: 24px;
+  color: #11202d;
+  font-weight: 700;
 }
 
 // Native pure CSS mock-up shapes replacing raw nested absolute pixel sets
-.iconBase {
-  background-color: $slate-900;
-  position: absolute;
-}
+// .iconBase {
+//   background-color: $slate-900;
+//   position: absolute;
+// }
 
 .knowledgeIcon {
   width: 20px;

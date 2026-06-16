@@ -9,10 +9,8 @@ $amber-600: #d97706;
 .showcaseWrapper {
   width: 100%;
   background-color: $gray-400; // Matches your canvas container gray background
-  padding: 60px 16px;
 
   @media (min-width: 1024px) {
-    padding: 96px 80px; // Maps your py-24 px-20 layouts perfectly
   }
 }
 
@@ -23,15 +21,13 @@ $amber-600: #d97706;
   display: flex;
   flex-direction: column;
   gap: 48px; // gap-12
-
-  // Replicates structural bounding frame layout from original outer lines
-  border: 1px solid rgba(115, 115, 115, 0.4);
-  border-radius: 16px;
-  padding: 32px 16px;
+  padding: 3rem 18px;
 
   @media (min-width: 1024px) {
     padding: 0;
     border: none;
+    border: 1px dashed #92989e;
+    padding: 96px 80px; // Maps your py-24 px-20 layouts perfectly
   }
 }
 
