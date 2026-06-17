@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/hero.module.scss";
-import Image from "next/image";
 import EnquiryModal from "./enquiryModal";
 import PartnershipBadge from "./partnershipbadge";
 

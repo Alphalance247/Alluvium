@@ -10,7 +10,7 @@ const SolutionsGrid = () => {
         "Practical programmes that turn AI curiosity into measurable productivity for insurance teams.",
       image: "/assets/Alluvium-Redesign-2026/ai-adoption/ai-adoption-1.png",
       alt: "AI Adoption Training",
-      link: "/ai-adoption-training",
+      link: "/ai/ai-adoption-training",
       linkText: "Explore Training",
     },
     {

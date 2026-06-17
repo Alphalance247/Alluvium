@@ -8,12 +8,7 @@ $zinc-300: #d4d4d8;
 .propositionSection {
   width: 100%;
   background-color: $gray-950;
-  padding: 60px 16px;
   overflow: hidden;
-
-  @media (min-width: 1024px) {
-    padding: 96px 80px; // Maps your precise py-24 px-20 layout metrics
-  }
 }
 
 .outerBorderFrame {
@@ -23,15 +18,11 @@ $zinc-300: #d4d4d8;
   display: flex;
   flex-direction: column;
   gap: 48px; // gap-12 layout pacing
-
-  // Replicates outer frame accents safely from your original layout markup
-  border: 1px solid rgba(163, 163, 163, 0.2); // outline-neutral-400
-  border-radius: 24px;
-  padding: 32px 16px;
+  padding: 3rem 18px;
 
   @media (min-width: 1024px) {
-    padding: 0;
-    border: none; // Offloads decorative structural boxes safely on clean widescreen layouts
+    padding: 96px 80px; // Maps your precise py-24 px-20 layout metrics
+    border: 1px dotted rgba(163, 163, 163, 0.2); // outline-neutral-400
   }
 }
 

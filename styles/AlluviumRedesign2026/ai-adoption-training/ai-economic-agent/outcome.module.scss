@@ -8,12 +8,7 @@ $slate-900: #0f172a;
 .outcomeSection {
   width: 100%;
   background-color: $gray-400;
-  padding: 60px 16px;
   overflow: hidden;
-
-  @media (min-width: 1024px) {
-    padding: 96px 80px; // Maps the exact py-24 px-20 layout metrics
-  }
 }
 
 .containerFrame {
@@ -23,15 +18,13 @@ $slate-900: #0f172a;
   display: flex;
   flex-direction: column;
   gap: 48px; // gap-12 layout spacing
-
-  // Replicates original outline frame variables cleanly
-  border: 1px solid rgba(17, 24, 39, 0.2); // outline-neutral-400
-  border-radius: 16px;
-  padding: 32px 16px;
+  padding: 3rem 18px;
 
   @media (min-width: 1024px) {
     padding: 0;
     border: none; // Drops container boundaries safely on large displays
+    border: 1px dotted rgba(17, 24, 39, 0.2); // outline-neutral-400
+    padding: 96px 80px; // Maps the exact py-24 px-20 layout metrics
   }
 }
 
