@@ -9,7 +9,7 @@ const Header = () => {
   const navLinks = [
     { label: "HOME", href: "/ai" },
     { label: "AGENT ECONOMICS", href: "/ai/ai-agent-economics" },
-    { label: "AI ADOPTION", href: "/ai-adoption-training" },
+    { label: "AI ADOPTION", href: "/ai/ai-adoption-training" },
   ];
 
   return (
@@ -53,7 +53,9 @@ const Header = () => {
 
           {/* Action Callout Button */}
           <div className={styles.actionGroup}>
-            <button className={styles.contactBtn}>CONTACT US</button>
+            <Link href="/contact-us">
+              <button className={styles.contactBtn}>CONTACT US</button>
+            </Link>
           </div>
         </nav>
       </div>

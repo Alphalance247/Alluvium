@@ -1,10 +1,16 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/ai-adoption-training/ai-economic-agent/service-hero.module.scss";
+import EnquiryModal from "../enquiryModal";
 
 const ServiceHero = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
   return (
     <section className={styles.heroWrapper}>
       {/* Main Structural Content Grid Box */}
+      <EnquiryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
       <div className={styles.contentFrame}>
         <div className={styles.centerStack}>
           {/* Header Typography Content */}
@@ -24,7 +30,12 @@ const ServiceHero = () => {
 
           {/* Interactive Call-To-Action Element Group */}
           <div className={styles.actionGroup}>
-            <button className={styles.ctaButton}>Enquire About Training</button>
+            <button
+              className={styles.ctaButton}
+              onClick={() => setIsModalOpen(true)}
+            >
+              Enquire About Training
+            </button>
           </div>
         </div>
       </div>
