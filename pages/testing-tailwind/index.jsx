@@ -1,7 +1,7 @@
 export default function TestingTailwind() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100">
-      <h1 className="text-5xl font-bold text-blue-600 mb-6">
+      <h1 className="text-5xl font-bold text-blue-600 mb-6 bg-zinc-800 p-4 rounded-lg shadow-lg">
         Tailwind is Working! 🎉
       </h1>
       <p className="text-lg text-gray-700 mb-6 text-center max-w-md">
