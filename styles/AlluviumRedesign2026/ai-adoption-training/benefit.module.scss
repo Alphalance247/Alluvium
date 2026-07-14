@@ -1,0 +1,125 @@
+.main {
+  background-color: #030712; // gray-950
+}
+
+.wrapper {
+  width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  padding: 0 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 96px 0; // py-24
+  margin: auto;
+  border-left: 1px solid rgba(212, 212, 216, 0.15);
+  border-right: 1px solid rgba(212, 212, 216, 0.15);
+  background-color: #111827; // gray-900
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+}
+
+.header {
+  text-align: center;
+  max-width: 700px;
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .title {
+    font-family: "Domine", serif;
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  .subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    color: #f9fafb; // neutral-50
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px; // gap-2 from original
+  width: 100%;
+  padding: 0 24px;
+}
+
+.card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  background-color: #111827;
+  outline: 1px solid #00556a; // sky-900
+  outline-offset: -1px;
+  padding: 24px 24px 40px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 48px;
+  backdrop-filter: blur(20px);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    outline-color: #0ea5e9; // Brighter sky for hover
+  }
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+}
+
+.lineImage {
+  margin: auto;
+}
+
+.imageBox {
+  width: 100%;
+  height: 176px;
+  overflow: hidden;
+  border-radius: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .cardTitle {
+    font-family: "Inter Tight", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.5;
+  }
+
+  .cardDescription {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    opacity: 0.7;
+    line-height: 1.4;
+  }
+}

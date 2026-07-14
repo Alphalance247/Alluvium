@@ -1,0 +1,123 @@
+$color-amber-600: #d97706;
+$color-white: #ffffff;
+.innerContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  .heroContents {
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+    // gap: 64px;
+    // padding: 0 62px;
+    border-left: 1px dashed #d9d9d9cc;
+    border-right: 1px dashed #d9d9d9cc;
+    // @media (max-width: 1024px) {
+    //   flex-direction: column-reverse;
+    //   justify-content: start;
+    //   align-items: start;
+    //   text-align: start;
+    //   gap: 40px;
+    //   border: none;
+    //   padding: 0;
+    // }
+  }
+  .heroTextContainer {
+    width: 60%;
+    .heroTitle {
+      font-size: 52px;
+      font-weight: bold;
+      color: #ffffff;
+      @media (max-width: 480px) {
+        width: 100%;
+        font-size: 32px;
+      }
+    }
+    .heroDescription {
+      font-size: 20px;
+      color: #f0f0f0;
+      font-weight: 500;
+      padding: 24px 0;
+      @media (max-width: 480px) {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+    .heroButtonsContainer {
+      display: flex;
+      gap: 16px;
+      @media (max-width: 480px) {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+      padding: 0 24px 24px 24px;
+    }
+  }
+  .leftButton {
+    background-color: $color-white;
+    color: $color-amber-600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: darken($color-white, 5%);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      width: 100%; // Full width button on small phones
+    }
+  }
+  .button {
+    background-color: $color-amber-600;
+    color: $color-white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: darken($color-amber-600, 5%);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      width: 100%; // Full width button on small phones
+    }
+  }
+  .GifHeroContainer {
+    width: 40%;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}

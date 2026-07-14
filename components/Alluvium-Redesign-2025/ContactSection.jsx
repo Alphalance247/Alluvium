@@ -90,7 +90,7 @@ const ContactSection = ({ withLines = true }) => {
     e.preventDefault();
     const { firstName, lastName, phone, jobTitle, email, message } = formData;
 
-    if (!firstName || !lastName || !phone) {
+    if (!firstName || !phone) {
       addToast("All fields marked with asterisks are required", {
         appearance: "error",
       });
@@ -124,7 +124,7 @@ const ContactSection = ({ withLines = true }) => {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       if (response.status === 200 || response.status === 201) {
@@ -154,7 +154,7 @@ const ContactSection = ({ withLines = true }) => {
           "Oops something went wrong. Please try again.",
         {
           appearance: "error",
-        }
+        },
       );
       console.log(error.response?.data?.error);
     } finally {
@@ -275,12 +275,13 @@ const ContactSection = ({ withLines = true }) => {
               </div>
             </div>
           </div>
+
           <div className={styles.section2}>
             <form onSubmit={onsubmit} action="">
               <div className={styles.contact_form}>
                 <div style={{ width: "100%" }}>
                   <label htmlFor="firstName">
-                    First Name <span className="text-required">*</span>
+                    Full Name <span className="text-required">*</span>
                   </label>
                   <input
                     type="text"
@@ -291,7 +292,7 @@ const ContactSection = ({ withLines = true }) => {
                     onChange={handleInputChange}
                   />
                 </div>
-                <div style={{ width: "100%" }}>
+                {/* <div style={{ width: "100%" }}>
                   <label htmlFor="lastName">
                     Last Name <span className="text-required">*</span>
                   </label>
@@ -303,7 +304,7 @@ const ContactSection = ({ withLines = true }) => {
                     value={formData.lastName}
                     onChange={handleInputChange}
                   />
-                </div>
+                </div> */}
               </div>
 
               <div className={styles.contact_form}>

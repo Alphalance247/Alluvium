@@ -48,10 +48,6 @@ const Hero = () => {
               />
             </div>
           </div>
-
-          <Badges variant={"default"} badgesData={badges} />
-
-          <Lines variant="default" />
         </div>
       </div>
     </section>

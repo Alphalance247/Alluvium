@@ -126,3 +126,51 @@
   font-weight: 700;
   src: url("/assets/fonts/Mena__Grotesk/MenaGrotesk.otf") format("opentype");
 }
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Jakarta_Sans/jakarta.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Jakarta Italic";
+  font-display: fallback;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/Jakarta_Sans/jakarta_italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Geist_Mono/geist.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Domine";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Domine/domine.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-display: fallback;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Inter/inter-normal.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter-Italic";
+  font-display: fallback;
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/Inter/inter-italic.ttf") format("truetype");
+}

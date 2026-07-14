@@ -1,0 +1,974 @@
+.webinarHeroWrapper {
+  width: 100%;
+  //   background: #000;
+  padding: 40px 0;
+  background: url("../../public/assets/webinar/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  @media (max-width: 640px) {
+    padding: 32px 0;
+  }
+}
+
+.webinarHeroContainer {
+  display: flex;
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    min-height: auto;
+  }
+}
+
+.leftSection {
+  flex: 1;
+  position: relative;
+  display: flex;
+  padding: 2rem 1rem;
+  overflow: hidden;
+
+  @media (max-width: 1024px) {
+    min-height: 350px;
+    padding: 40px 24px;
+  }
+
+  @media (max-width: 640px) {
+    min-height: 320px;
+    padding: 32px 16px;
+  }
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+
+.backgroundPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1e 100%);
+  z-index: 0;
+}
+
+.contentOverlay {
+  position: relative;
+  z-index: 2;
+  color: white;
+  max-width: 100%;
+}
+
+.liveIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+.clockIcon {
+  display: inline-block;
+  font-size: 16px;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+  }
+}
+
+.liveText {
+  text-transform: capitalize;
+}
+
+.mainHeading {
+  font-size: 67px;
+  font-weight: 700;
+  line-height: 1.15;
+  font-family: "Grotesk";
+  margin: 0 0 34px 0;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1024px) {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  max-width: 480px;
+  font-weight: 600;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+    max-width: 400px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    max-width: 100%;
+    line-height: 1.55;
+  }
+}
+
+// Right Section - Form Image
+.rightSection {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //   padding: 60px 10px;
+  position: relative;
+  z-index: 100;
+
+  @media (max-width: 1024px) {
+    padding: 40px 24px;
+    background: rgba(240, 240, 240, 0.3);
+  }
+
+  @media (max-width: 640px) {
+    padding: 32px 16px;
+  }
+}
+
+.formImagePlaceholder {
+  width: 100%;
+  max-width: 460px;
+  height: 560px;
+  background: #d9d9d9;
+  border-radius: 12px;
+
+  @media (max-width: 1024px) {
+    max-width: 400px;
+    height: 500px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 380px;
+    height: 480px;
+  }
+
+  @media (max-width: 640px) {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    border-radius: 10px;
+  }
+}
+
+// Countdown Section
+.countdownContainer {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    padding: 50px 24px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 40px 16px;
+  }
+}
+
+.countdownContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 640px) {
+    gap: 32px;
+  }
+}
+
+.eventStartsLabel {
+  background: #f5e6d3;
+  color: #8b6f47;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+
+  @media (max-width: 640px) {
+    font-size: 11px;
+    padding: 5px 12px;
+  }
+}
+
+.countdownGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1250px;
+
+  @media (max-width: 1024px) {
+    gap: 32px;
+    max-width: 750px;
+  }
+
+  @media (max-width: 768px) {
+    gap: 24px;
+    max-width: 600px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 16px;
+    max-width: 100%;
+  }
+}
+
+.countdownItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0px 4px 40px 0px #e3791514;
+  background: white;
+  padding: 16px 0;
+  border-radius: 20px;
+
+  @media (max-width: 640px) {
+    gap: 8px;
+  }
+}
+
+.countdownNumber {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  color: #1a1a1a;
+  letter-spacing: -1px;
+
+  @media (max-width: 1024px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 48px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 36px;
+  }
+}
+
+.countdownLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666666;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+}
+
+// Why Attend Section
+.whyAttendContainer {
+  width: 100%;
+  background: linear-gradient(90deg, #ffffff 0%, #f5f6f7 40.63%, #f5f6f7 100%);
+  padding: 92px 0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 48px 0;
+  }
+}
+
+.whyAttendWrapper {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  padding: 0 40px;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    gap: 50px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 40px;
+    padding: 0 16px;
+  }
+}
+
+.whyAttendLeft {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    flex: 1;
+  }
+
+  @media (max-width: 640px) {
+    gap: 20px;
+  }
+}
+
+.whyAttendHeading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0a0e27;
+  font-family: "Grotesk";
+  margin: 0;
+  letter-spacing: -0.5px;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+}
+
+.whyAttendDescription {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.whyAttendButton {
+  align-self: flex-start;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+
+  &:hover {
+    background: #ff7a1f;
+    box-shadow: 0 6px 24px rgba(255, 140, 66, 0.35);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 12px rgba(255, 140, 66, 0.25);
+  }
+
+  @media (max-width: 640px) {
+    padding: 11px 24px;
+    font-size: 13px;
+  }
+}
+
+.whyAttendRight {
+  flex: 1;
+}
+
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @media (max-width: 1024px) {
+    gap: 18px;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.reasonCard {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+  //   height: fit-content;
+
+  &:nth-child(2) {
+    margin-top: 4rem;
+  }
+  &:nth-child(3) {
+    margin-bottom: 4rem;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 640px) {
+    padding: 20px;
+    gap: 14px;
+    border-radius: 10px;
+
+    &:nth-child(2) {
+      margin: 0;
+    }
+
+    &:nth-child(3) {
+      margin: 0;
+    }
+  }
+}
+
+.reasonIcon {
+  width: 48px;
+  height: 48px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 640px) {
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+  }
+}
+
+.reasonTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0a0e27;
+  margin: 0;
+  line-height: 1.3;
+
+  @media (max-width: 640px) {
+    font-size: 15px;
+  }
+}
+
+.reasonText {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666666;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+
+// Our Speaker Section
+.ourSpeakerContainer {
+  width: 100%;
+  background: #ffffff;
+  padding: 92px 0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 48px 0;
+  }
+}
+
+.ourSpeakerWrapper {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    gap: 48px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 40px;
+    padding: 0 16px;
+  }
+}
+
+.ourSpeakerMainHeading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0a0e27;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-family: "Grotesk";
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+}
+
+.speakerName {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0a0e27;
+  font-family: "Grotesk";
+  margin: 0;
+  letter-spacing: -0.3px;
+  margin-bottom: 40px;
+
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 24px;
+  }
+}
+
+.speakerContent {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 640px) {
+    gap: 32px;
+  }
+}
+
+.speakerImagePlaceholder {
+  width: 182px;
+  height: 182px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  @media (max-width: 1024px) {
+    width: 200px;
+    height: 200px;
+  }
+
+  @media (max-width: 640px) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.speakerInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.speakerTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: #0a0e27;
+  margin: 0;
+  line-height: 1.3;
+  font-family: "Grotesk";
+  margin-top: 10px;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 15px;
+  }
+}
+
+.speakerBio {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+  margin-top: 10px;
+
+  @media (max-width: 1024px) {
+    font-size: 15px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+// Attendee Quotes Section
+.attendeeQuotesContainer {
+  width: 100%;
+  background: #fcfcfc;
+  padding: 92px 0;
+
+  @media (max-width: 1024px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 48px 0;
+  }
+}
+
+.attendeeQuotesWrapper {
+  width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+
+  @media (max-width: 1024px) {
+    gap: 40px;
+    padding: 0 24px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 32px;
+    padding: 0 16px;
+  }
+}
+
+.quotesHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    gap: 40px;
+  }
+
+  @media (max-width: 640px) {
+    gap: 24px;
+  }
+}
+
+.quoteNavButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  //   font-size: 28px;
+  //   color: #ff8c42;
+  //   cursor: pointer;
+  //   padding: 8px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   transition: all 0.3s ease;
+  //   flex-shrink: 0;
+
+  &:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+
+  //   @media (max-width: 640px) {
+  //     font-size: 24px;
+  //   }
+}
+
+.quotesTitle {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0a0e27;
+  margin: 0;
+  letter-spacing: -0.5px;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 32px;
+  }
+}
+
+.quotesCarousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.quotesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.quoteCard {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+
+  &:hover {
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (max-width: 640px) {
+    padding: 24px;
+    gap: 16px;
+  }
+}
+
+.quoteAuthor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quoteAvatarPlaceholder {
+  width: 48px;
+  height: 48px;
+  background: #a9a9a9;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.quoteAuthorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quoteAuthorName {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0a0e27;
+  margin: 0;
+  line-height: 1.3;
+
+  @media (max-width: 640px) {
+    font-size: 13px;
+  }
+}
+
+.quoteAuthorCompany {
+  font-size: 12px;
+  color: #888888;
+  margin: 0;
+  font-weight: 500;
+
+  @media (max-width: 640px) {
+    font-size: 11px;
+  }
+}
+
+.quoteText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+  font-weight: 400;
+
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.quotesFooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 28px;
+
+  @media (max-width: 640px) {
+    gap: 24px;
+  }
+}
+
+.quotesPagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  @media (max-width: 640px) {
+    gap: 8px;
+  }
+}
+
+.paginationDot {
+  width: 10px;
+  height: 10px;
+  border: none;
+  border-radius: 50%;
+  background: #d0d0d0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  flex-shrink: 0;
+
+  &:hover {
+    background: #b0b0b0;
+  }
+
+  @media (max-width: 640px) {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.paginationDotActive {
+  background: #ff8c42;
+  width: 24px;
+  border-radius: 5px;
+
+  @media (max-width: 640px) {
+    width: 20px;
+  }
+}
+
+.quotesCta {
+  color: white;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+
+  &:hover {
+    background: #ff7a1f;
+    box-shadow: 0 6px 24px rgba(255, 140, 66, 0.35);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 12px rgba(255, 140, 66, 0.25);
+  }
+
+  @media (max-width: 640px) {
+    padding: 11px 28px;
+    font-size: 13px;
+  }
+}

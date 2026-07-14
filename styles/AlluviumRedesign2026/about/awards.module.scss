@@ -1,0 +1,237 @@
+// $slate-900: #0f172a;
+// $gray-500: #6b7280;
+// $gray-700: #374151;
+// $neutral-100: #f5f5f5;
+
+// .wrapper {
+//   width: 100%;
+//   background-color: $slate-900;
+//   display: flex;
+//   justify-content: center;
+//   padding: 0 20px;
+//   overflow: hidden;
+// }
+
+// .innerContainer {
+//   width: 100%;
+//   max-width: 1280px;
+//   padding: 96px 0; // py-24
+
+//   display: flex;
+//   flex-direction: column;
+//   gap: 64px; // gap-16
+
+//   @media (min-width: 1024px) {
+//     padding: 96px 80px;
+//     border-left: 1px solid $gray-700;
+//     border-right: 1px solid $gray-700;
+//     border-bottom: 1px solid $gray-700;
+//   }
+// }
+
+// .title {
+//   width: 100%;
+//   text-align: center;
+//   color: #fff;
+//   font-family: "Domine", serif;
+//   font-size: 30px;
+//   font-weight: 700;
+//   line-height: 1.2;
+
+//   @media (min-width: 768px) {
+//     font-size: 36px; // text-3xl
+//   }
+// }
+
+// .awardsList {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 32px;
+// }
+
+// .awardItem {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 16px;
+//   padding-bottom: 24px;
+//   border-bottom: 1px solid $gray-500;
+
+//   &:last-child {
+//     border-bottom: none;
+//   }
+
+//   @media (min-width: 768px) {
+//     flex-direction: row;
+//     gap: 24px;
+//     align-items: flex-start;
+//   }
+
+//   .awardLabel {
+//     flex: 1;
+//     color: #fff;
+//     font-family: "Plus Jakarta Sans", sans-serif;
+//     font-size: 18px;
+//     font-weight: 600;
+//     line-height: 28px;
+//     text-align: left;
+//   }
+
+//   .awardDescription {
+//     flex: 1;
+//     color: $neutral-100;
+//     font-family: "Inter", sans-serif;
+//     font-size: 18px;
+//     font-weight: 400;
+//     line-height: 28px;
+//   }
+// }
+
+.sectionWrapper {
+  width: 100%;
+  background-color: #0f172a;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 96px 80px;
+  border-left: 1px dashed #374151;
+  border-right: 1px dashed #374151;
+  border-bottom: 1px dashed #374151;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @media (max-width: 1024px) {
+    padding: 40px 20px;
+    border: none;
+  }
+}
+
+.header {
+  text-align: center;
+  .title {
+    color: #fff;
+    font-size: 36px;
+    font-family: "Domine", serif;
+    margin-bottom: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+  .subtitle {
+    color: #f5f5f5;
+    font-size: 18px;
+    max-width: 650px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.contentGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.partnerRow,
+.specializationRow {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap; // Responsive fallback
+}
+
+// Shared Badge Logic
+.badgeContent {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  img {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.verticalLine {
+  width: 1px;
+  height: 56px;
+  background-color: #9ca3af;
+  &.lineLight {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+.badgeText {
+  color: #030712;
+  font-size: 24px;
+  line-height: 1;
+  font-family: "Charlie Display", sans-serif;
+  &.textWhite {
+    color: #fff;
+  }
+}
+
+// Variant Classes
+.partnerBadgeLight {
+  @extend .partnerBadgeWhite;
+  background-color: #f9fafb;
+}
+.partnerBadgeWhite {
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.partnerBadgeBlue {
+  padding: 10px 20px;
+  background-color: #1d4ed8;
+  border-radius: 6px;
+}
+
+// ITSM Card Specifics
+.itsmCard {
+  width: 192px;
+  height: 128px;
+  background-color: #f4f4f5;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .itsmHeaderLine {
+    position: absolute;
+    top: 24px;
+    width: 80%;
+    height: 1px;
+    background: #111827;
+  }
+
+  .itsmContent {
+    text-align: center;
+    color: #111827;
+    .itsmTitle {
+      display: block;
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .itsmSub {
+      font-size: 18px;
+    }
+  }
+}
+
+.placeholderImg {
+  width: 200px;
+  height: 128px;
+  object-fit: cover;
+}

@@ -1,0 +1,130 @@
+$gray-900: #111827;
+$amber-600: #d97706;
+$zinc-100: #f4f4f5;
+$zinc-300: #d4d4d8;
+
+.wrapper {
+  width: 100%;
+  // background-color: $gray-900;
+  display: flex;
+  justify-content: center;
+  padding: 0 0px;
+  overflow: hidden;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px; // Consistent site-wide grid
+  padding: 96px 0; // py-24
+  border-right: 1px dashed #d9d9d9cc;
+  border-left: 1px dashed #d9d9d9cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    padding: 64px 20px;
+    outline: none;
+  }
+}
+
+.textContent {
+  max-width: 970px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+
+  h2 {
+    color: #fff;
+    font-family: "Domine", serif;
+    font-size: clamp(2rem, 6vw, 3rem); // text-5xl responsive
+    font-weight: 700;
+    line-height: 1.1;
+
+    @media (max-width: 768px) {
+      font-size: 2rem; // text-4xl
+    }
+  }
+
+  p {
+    color: $zinc-100;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}
+
+.ctaButton2 {
+  background-color: #fff;
+  color: #e37915;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+}
+
+.logoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
+}
+
+/* Specific styling for the Gold Partner Badge */
+.goldPartnerBadge {
+  background-color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .badgeIcon {
+    width: 54px;
+    height: 54px;
+  }
+
+  .divider {
+    width: 1px;
+    height: 56px;
+    background-color: #9ca3af; // gray-400
+  }
+
+  .badgeText {
+    color: #001a41; // blue-950
+    font-family: "Charlie Display", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+}
+
+.secondaryLogo {
+  width: 201px;
+  height: auto;
+  opacity: 0.9;
+}

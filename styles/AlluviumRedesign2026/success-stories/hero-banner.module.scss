@@ -1,0 +1,91 @@
+$slate-900: #0f172a;
+$gray-700: #374151;
+
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  height: 537px; // Default desktop height
+  background-color: #111827; // gray-900
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    height: auto;
+    min-height: 250px;
+  }
+}
+
+/* Layer 1: Base Image */
+.baseLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  z-index: 1;
+}
+
+/* Layer 2: Blend Image */
+.blendLayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mix-blend-mode: color-dodge;
+  z-index: 2;
+}
+
+/* Layer 3: Gradient Overlay */
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  opacity: 0.8;
+  mix-blend-mode: multiply;
+  background: linear-gradient(
+    to right,
+    $slate-900 0%,
+    rgba(15, 23, 42, 0.2) 50%,
+    $slate-900 100%
+  );
+}
+
+/* Content Container */
+.contentContainer {
+  position: relative;
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end; // items-end from your code
+  border-left: 1px dashed #414d57;
+  border-right: 1px dashed #414d57;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 80px 96px 80px; // px-20
+
+  @media (max-width: 768px) {
+    align-items: center;
+    padding: 60px 20px 40px 20px;
+  }
+}
+
+.title {
+  max-width: 730px; // w-[609.19px]
+  color: #ffffff;
+  font-family: "Domine", sans-serif;
+  font-weight: 600;
+  font-size: 32px; // Mobile smaller
+  line-height: 1.2;
+
+  @media (min-width: 1024px) {
+    font-size: 48px; // text-5xl
+    line-height: 56px;
+  }
+}

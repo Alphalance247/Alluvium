@@ -1,6 +1,7 @@
 import Layout from "components/layout";
 import Link from "next/link";
 import styles from "../../../styles/atlassian-services-style/generalTermsandCondtion.module.scss";
+import EventsBanner from "components/Alluvium-Redesign-2026/events/hero";
 
 const data = [
   {
@@ -31,8 +32,14 @@ const data = [
 const AtlassianTermsAndConditions = () => {
   return (
     <Layout>
+      <EventsBanner
+        heading={"Terms and Conditions"}
+        // title={"Latest articles"}
+        subhead={"Last updated: 18 June 2025."}
+        backgroundImage={"/assets/Alluvium-Redesign-2026/policy/hero.png"}
+      />
       <section className={`${styles.terms} container mx-auto`}>
-        <h1>Terms and Conditions</h1>
+        {/* <h1>Terms and Conditions</h1> */}
         <div className={styles.services}>
           {data.map((el) => {
             return (

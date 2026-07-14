@@ -1,0 +1,130 @@
+.megaMenu {
+  position: absolute;
+  top: 100%;
+  left: 15rem;
+  margin-top: 10px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 20px 40px -8px rgba(16, 24, 40, 0.1);
+  border: 1px solid #f4f4f5;
+  display: flex;
+  padding: 24px;
+  gap: 32px;
+  z-index: 1000;
+  min-width: 850px;
+}
+
+.navColumn {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.columnHeader {
+  padding: 12px;
+  color: #a3a3a3; // neutral-400
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: "Geist Mono", monospace;
+}
+
+.menuItem {
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #f8fafc;
+    .arrowIcon {
+      transform: translateX(4px);
+      color: #262626;
+    }
+  }
+}
+
+.itemTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #1c1917; // stone-900
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.arrowIcon {
+  color: #a3a3a3;
+  transition: transform 0.2s ease;
+}
+
+.itemDescription {
+  color: #595959; // zinc-700
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  font-family: "Inter";
+}
+
+.divider {
+  width: 1px;
+  align-self: stretch;
+  background: #f1f1f2;
+}
+
+.featuredCard {
+  width: 288px;
+  background: #00556a; // sky-900
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.cardText {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.cardButton {
+  background-color: #fed7aa; // orange-200
+  color: #1f2937;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  // outline: none;
+  border: none;
+  align-items: center;
+  gap: 6px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cardGraphic {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+
+  img {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+}

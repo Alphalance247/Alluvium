@@ -1,0 +1,126 @@
+// Layout Brand Token Palettes
+$gray-900: #111827;
+$gray-400: #9ca3af;
+$slate-900: #0f172a;
+$neutral-400: #a3a3a3;
+
+.metricsSection {
+  width: 100%;
+  background-color: $gray-400; // Preserves container background canvas tone
+  overflow: hidden;
+}
+
+.outerFrame {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; // gap-12 layout spacing
+  // Replicates outer alignment lines from your original component
+  padding: 3rem 18px;
+
+  @media (min-width: 1024px) {
+    padding: 96px 80px; // Maps the exact py-24 px-20 layout composition
+    border: 1px dashed rgba(115, 115, 115, 0.4);
+  }
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.captionTag {
+  color: $gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.05em; // tracking-wide
+}
+
+.titleText {
+  color: $gray-900;
+  font-family: "Domine", serif;
+  font-size: clamp(
+    1.85rem,
+    4.5vw,
+    2.25rem
+  ); // Fluid title scaling to match text-4xl boundary
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+// Adaptive Metric Layout Track
+.metricsLayoutRow {
+  display: grid;
+  grid-template-columns: 1fr; // Standard linear stack layout default on mobile viewports
+  gap: 24px;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); // Transitions to 2x2 grid structure on small tablet layouts
+    gap: 32px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); // Smooth flat desktop row line alignment
+    gap: 24px;
+  }
+}
+
+// Metric Element Layout Cards
+.metricCard {
+  background-color: transparent; // Clean fluid cell footprint
+  padding: 16px; // p-6 balance remapping
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.metricContentStack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; // Dynamic centered alignment balances presentation layouts smoothly
+  text-align: center;
+  gap: 8px; // gap-1 layout refinement
+
+  @media (min-width: 640px) {
+    align-items: flex-start; // Clean structured layout alignment resets for larger screen rows
+    text-align: left;
+  }
+}
+
+.statFigure {
+  color: $slate-900;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 1.5rem); // text-2xl
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.statLabel {
+  color: $gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem; // text-base
+  font-weight: 400;
+  line-height: 1.5;
+  width: 100%;
+
+  // Replaces fixed layout constraints seamlessly across media queries
+  @media (min-width: 1024px) {
+    max-width: 260px;
+  }
+}

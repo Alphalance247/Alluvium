@@ -1,0 +1,182 @@
+// Style Tokens
+$gray-900: #111827;
+$gray-400: #9ca3af;
+$gray-200: #e5e7eb;
+$neutral-800: #262626;
+$zinc-600: #52525b;
+$amber-600: #d97706;
+
+.showcaseWrapper {
+  width: 100%;
+  background-color: $gray-400; // Matches your canvas container gray background
+
+  @media (min-width: 1024px) {
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; // gap-12
+  padding: 3rem 18px;
+
+  @media (min-width: 1024px) {
+    padding: 0;
+    border: none;
+    border: 1px dashed #92989e;
+    padding: 96px 80px; // Maps your py-24 px-20 layouts perfectly
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.overline {
+  color: $gray-900;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.05em; // tracking-wide
+}
+
+.mainTitle {
+  color: $gray-900;
+  font-family: "Domine", serif;
+  font-size: clamp(1.85rem, 4.5vw, 2.25rem); // Fluid text-4xl responsive clamp
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 476px; // Preserves intended typographic wrap composition on desktop screens
+}
+
+// Cards Grid Engine
+.cardsGrid {
+  display: grid;
+  grid-template-columns: 1fr; // Stacked linear profile on mobile viewports
+  gap: 24px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); // Balanced split column on desktop screens
+  }
+}
+
+.solutionCard {
+  background-color: $gray-200;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 256px; // h-64
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // Eliminates arbitrary offset absolute positions securely
+}
+
+.cardContent {
+  padding: 24px; // px-6 pb-6 wrapper
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.textStack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; // gap-2
+}
+
+.cardTitle {
+  color: $neutral-800;
+  font-family: "Domine", serif;
+  font-size: 1.125rem; // text-lg
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+.cardDescription {
+  color: $zinc-600;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem; // text-base
+  font-weight: 500;
+  line-height: 1.5;
+  width: 100%;
+}
+
+// Action Navigation Link Styling
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.ctaText {
+  color: $amber-600;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.15;
+  letter-spacing: 0.05em; // tracking-wide
+}
+
+// Arrow Vector Icon Built Native
+.arrowIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 8px;
+    left: 3px;
+    top: 4px;
+    background-color: $amber-600;
+    clip-path: polygon(
+      0% 40%,
+      60% 40%,
+      60% 0%,
+      100% 50%,
+      60% 100%,
+      60% 60%,
+      0% 60%
+    );
+  }
+}

@@ -1,0 +1,95 @@
+$color-zinc-300: rgba(212, 212, 216, 0.8);
+$color-slate-900: #11202d;
+$color-zinc-600: #262626;
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 96px 20px; // py-24
+  border-left: 1px dashed $color-zinc-300;
+  border-right: 1px dashed $color-zinc-300;
+  border-bottom: 1px dashed $color-zinc-300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+
+  @media (max-width: 768px) {
+    padding: 60px 24px;
+    border: none;
+    gap: 32px;
+  }
+}
+
+.headerGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.title {
+  color: $color-slate-900;
+  font-family: "Domine", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: $color-zinc-600;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.logoGrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  @media (max-width: 640px) {
+    gap: 32px;
+  }
+}
+
+.complianceLogo {
+  object-fit: contain;
+  //   filter: grayscale(100%);
+  //   opacity: 0.7;
+  transition: all 0.3s ease;
+
+  &:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  // Maintaining the varied sizes from your original classes
+  &.large {
+    width: 256px;
+    height: auto;
+  }
+  &.medium {
+    width: 208px;
+    height: auto;
+  }
+  &.small {
+    width: 192px;
+    height: auto;
+  }
+
+  @media (max-width: 640px) {
+    width: 150px !important; // Standardize size on small mobile
+  }
+}

@@ -1,0 +1,137 @@
+$amber-600: #d97706;
+$blue-glow: rgba(30, 64, 175, 0.6);
+$zinc-300: #d4d4d8;
+
+.wrapper {
+  width: 100%;
+  background: url("/assets/Alluvium-Redesign-2026/home/hero-banner-2.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 0px;
+  overflow: hidden;
+  height: 692px;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    padding: 0 0px;
+    height: 600px; // Allow height to adjust based on content
+  }
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1283px; // Matching your specific constraint
+  //   min-height: 692px;
+  padding: 40px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+
+  @media (min-width: 1024px) {
+    padding: 96px 40px;
+  }
+}
+
+/* Background Visuals - Absolute but relative to the wrapper */
+.blueGlow {
+  position: absolute;
+  width: 1336px;
+  height: 1239px;
+  left: -390px;
+  top: -251px;
+  background: $blue-glow;
+  border-radius: 50%;
+  filter: blur(165px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+  max-width: 811px;
+
+  .logo {
+    width: 112px;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    color: #fff;
+    font-family: "Grotesk", sans-serif;
+    font-size: clamp(
+      2.5rem,
+      8vw,
+      4.5rem
+    ); // Responsive: scales between 40px and 72px
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+
+    @media (max-width: 1024px) {
+      font-size: clamp(2rem, 6vw, 3.5rem); // Scales between 32px and 56px
+    }
+  }
+
+  .subheading {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.1rem, 3vw, 1.5rem); // Scales to 24px
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .eventDate {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(1.2rem, 4vw, 1.875rem); // Scales to 30px
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.registerBtn {
+  background-color: $amber-600;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-family: "Graphik", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+  cursor: pointer;
+  box-shadow:
+    0px -2px 4px rgba(255, 255, 255, 0.2),
+    0px 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.credits {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.9px;
+  text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    position: static;
+    margin-top: 40px;
+  }
+}
