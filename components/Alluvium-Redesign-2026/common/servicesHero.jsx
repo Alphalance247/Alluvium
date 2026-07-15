@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/common/services.module.scss";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ServiceHero = ({
   badges,

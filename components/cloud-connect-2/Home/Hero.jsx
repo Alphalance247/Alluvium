@@ -1,7 +1,7 @@
 import Button from "../Button";
 import styles from "../../../styles/cloud-connect-2/Home/hero.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Hero = () => {
   return (

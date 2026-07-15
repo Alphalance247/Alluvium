@@ -5,7 +5,7 @@ import CalendlyWidget from "components/calendlyWidget";
 import Head from "next/head";
 import FormSection from "components/Alluvium-Redesign-2026/formSection";
 import { badges } from "data";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ContactUs = () => {
   const data = [

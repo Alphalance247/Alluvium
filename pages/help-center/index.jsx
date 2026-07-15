@@ -4,7 +4,7 @@ import Input from "components/licence-component/inputP";
 import Button from "components/atlassian-service-reuse/Button";
 import { useState } from "react";
 import { postRequest } from "pages/api/helpers/postRequest";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import { environment } from "env/env.local";
 import Head from "next/head";
 const HelpCenter = () => {

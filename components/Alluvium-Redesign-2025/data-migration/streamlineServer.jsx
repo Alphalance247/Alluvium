@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Heading from "../heading";
 import ReadMore from "../ReuseComponents/readmore";
 import styles from "../../../styles/AlluviumRedesign2025/DataMigration/DataMigration.module.scss";

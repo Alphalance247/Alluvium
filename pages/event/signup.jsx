@@ -2,12 +2,12 @@ import React, { useEffect, useState, useMemo, useCallback } from "react";
 
 import Layout from "components/layout";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import countries, { NG } from "country-flag-icons/react/3x2";
 import { getCountryByCode } from "country-phonenumber";
 import { Country, State } from 'country-state-city';
 import axios from "axios";
-import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { ToastProvider, useToasts } from "lib/toast";
 import LoadingScreen from "components/loading";
 import { lockEventsFollowUpForm, currentEventName } from "config/index";
 

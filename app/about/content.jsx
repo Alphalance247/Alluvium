@@ -1,4 +1,4 @@
-import Head from "next/head";
+"use client";
 import styles from "../../styles/about.module.scss";
 import Layout from "components/layout";
 import AboutHero from "components/Alluvium-Redesign-2026/about/hero";
@@ -39,18 +39,6 @@ export default function AboutUs() {
   return (
     <Layout>
       <div className={styles.aboutUsPage}>
-        <Head>
-          <title>About Us | Alluvium | alluvium.net</title>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Your Trusted Atlassian Solution Partner. Learn about Alluvium an Atlassian Gold Partner delivering ITSM, DevOps, Agile, and cloud migration solutions across the US, UK, and Nigeria. We help teams work smarter and faster with modern tools."
-          />
-          <meta
-            name="keywords"
-            content="About Alluvium, Atlassian Gold Partner, Alluvium Nigeria, Alluvium UK, Alluvium USA, ITSM experts, cloud migration company, DevOps consulting."
-          />
-        </Head>
         <main>
           <AboutHero />
           <MissionSection />

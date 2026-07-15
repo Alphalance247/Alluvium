@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/common/ai-adoption.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const AiAdoptionHero = () => {
   const features = [

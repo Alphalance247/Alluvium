@@ -45,14 +45,13 @@ const DropdownLink = ({ item }) => {
           {item.label}
         </Link>
       )}
-
       {hasChildren && open && (
         <ul className={styles.dropdown_submenu}>
           {item.children.map((child, idx) => (
             // <DropdownLink key={idx} item={child} />
-            <Link style={{ cursor: "pointer" }} href={child.href}>
+            (<Link style={{ cursor: "pointer" }} href={child.href}>
               {child.label}
-            </Link>
+            </Link>)
           ))}
         </ul>
       )}

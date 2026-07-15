@@ -1,7 +1,7 @@
 import React, { useCallback, useState, useMemo } from "react";
 // import dynamic from "next/dynamic";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { MdDownload } from "react-icons/md";
 import { InView } from "react-intersection-observer";

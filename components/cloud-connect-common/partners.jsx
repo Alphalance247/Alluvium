@@ -1,5 +1,5 @@
 import styles from "../../styles/cloud2.4/general.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { cloudatad24 } from "data";
 
 const Partners = ({ showheadSponsor = false }) => {

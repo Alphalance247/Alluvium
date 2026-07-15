@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../../../styles/AtlassianWebinars/webinars.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Button from "components/atlassian-service-reuse/Button";
 
 export default function AttendeeQuotes() {

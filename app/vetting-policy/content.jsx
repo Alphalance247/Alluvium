@@ -1,5 +1,5 @@
+"use client";
 import Layout from "components/layout";
-import Head from "next/head";
 import List from "components/privacy_policy/List";
 
 const VettingPolicy = () => {
@@ -126,12 +126,6 @@ professional conduct and reputation.`,
   return (
     <Layout>
       <div>
-        <Head>
-          <title>Vetting Policy | Alluvium</title>
-
-          <meta name="description" content="Alluvium Vetting policy" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
 
         <main>
           <section>

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/common/dropdown/resourcesNav.module.scss";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { FaArrowRight } from "react-icons/fa6";
 
 const ResourcesNav = () => {

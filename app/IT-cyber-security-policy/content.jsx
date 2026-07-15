@@ -1,3 +1,4 @@
+"use client";
 import Layout from "components/layout";
 import List from "components/privacy_policy/List";
 const ITCyberSecurityPolicy = () => {

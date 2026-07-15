@@ -17,7 +17,7 @@ import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 import AiAdoptionHero from "components/Alluvium-Redesign-2026/common/aiAdoptionHero";
 import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 import FeaturedProgramme from "components/Alluvium-Redesign-2026/featuredProgramme/featuredBanner";
-import GifHero from "components/Alluvium-Redesign-2026/home-hero/GifHero";
+import GifHero from "components/Alluvium-Redesign-2026/home-hero/gifHero";
 import Hero from "components/Alluvium-Redesign-2026/home/Hero";
 const badgesImages = [
   {

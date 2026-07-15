@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 
 import Layout from "components/layout";
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import axios from "axios";
 import moment from "moment";
-import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { ToastProvider, useToasts } from "lib/toast";
 
 
 import logo from 'public/assets/techpoint-startup-expo/logo.png';
@@ -131,24 +131,24 @@ const LagosStartUpExpoPage = () => {
                             </div>
                             <div className={`row ${styles.gallery_content}`}>
                                 {news.length > 0 &&
-                                    news.map(info => (<Link href={info?.link} key={info?.id}>
-                                        <a target="_blank" rel="norefferer">
-                                            <div className={styles.trend} key={info?.id}>
-                                                <div className={styles.trend_image}>
-                                                    {
-                                                        (info?.jetpack_featured_media_url == "") ? "" : <Image priority loading="eager" layout="fill" src={info?.jetpack_featured_media_url} alt={info?.slug} />
-                                                    }
-                                                </div>
-                                                <div className={styles.trend_content}>
-                                                    <div>
-                                                        <p className={styles.trend_month}>{moment(info?.date).format("MMM")}</p>
-                                                        <p className={styles.trend_day}>{moment(info?.date).format("DD")}</p>
+                                    news.map(info => (<Link href={info?.link} key={info?.id} target="_blank" rel="norefferer">
 
-                                                    </div>
-                                                    <span className={styles.trend_title}>{info?.title.rendered}</span>
-                                                </div>
+                                        <div className={styles.trend} key={info?.id}>
+                                            <div className={styles.trend_image}>
+                                                {
+                                                    (info?.jetpack_featured_media_url == "") ? "" : <Image priority loading="eager" layout="fill" src={info?.jetpack_featured_media_url} alt={info?.slug} />
+                                                }
                                             </div>
-                                        </a>
+                                            <div className={styles.trend_content}>
+                                                <div>
+                                                    <p className={styles.trend_month}>{moment(info?.date).format("MMM")}</p>
+                                                    <p className={styles.trend_day}>{moment(info?.date).format("DD")}</p>
+
+                                                </div>
+                                                <span className={styles.trend_title}>{info?.title.rendered}</span>
+                                            </div>
+                                        </div>
+
                                     </Link>))}
                             </div>
                         </div>
@@ -156,7 +156,7 @@ const LagosStartUpExpoPage = () => {
                 </Layout>
             </ToastProvider>
         </>
-    )
+    );
 };
 
 export default LagosStartUpExpoPage;

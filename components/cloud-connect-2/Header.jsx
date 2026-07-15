@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/cloud-connect-2/cloudconnect.module.scss";
 import Link from "next/link";
 import Button from "./Button";

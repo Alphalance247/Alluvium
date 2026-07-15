@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Button from "components/atlassian-service-reuse/Button";

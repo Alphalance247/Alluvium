@@ -4,7 +4,7 @@ import Button from "./Button";
 import { useState } from "react";
 import axios from "axios";
 import { environment } from "env/env.local";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 
 const Footer = () => {
   const [email, setEmail] = useState("");

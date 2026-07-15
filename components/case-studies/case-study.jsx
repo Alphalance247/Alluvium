@@ -2,7 +2,7 @@ import React from "react";
 import { MdDoubleArrow } from "react-icons/md";
 import styles from "../../styles/case-studies.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const CaseStudy = ({ caseStudy }) => {
   return (

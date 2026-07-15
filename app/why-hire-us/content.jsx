@@ -1,3 +1,4 @@
+"use client";
 import Layout from "components/layout";
 import ContentTab from "components/blog-component/contentInfo";
 import Potential from "components/blog-component/unlockquote";

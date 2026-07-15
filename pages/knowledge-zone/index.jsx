@@ -3,7 +3,7 @@ import styles from "../../styles/Knowledge-Zone/kz.module.scss";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import Input from "components/licence-component/inputP";
 import { useState } from "react";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import ImageUpload from "./imageUpload";
 import Button from "components/atlassian-service-reuse/Button";
 import { environment } from "env/env.local";

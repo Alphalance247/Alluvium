@@ -26,7 +26,7 @@ const DiscoverAtlassian = () => {
         <div ref={sectionRef} className={`${styles.discoverdropdown}`}>
           {discoverAtlassiansServ.map((item, i) => (
             <div key={item?.id}>
-              <Link href={"/atlassian-services/" + item?.servicepage} passHref>
+              <Link href={"/atlassian-services/" + item?.servicepage}>
                 <div className={`${styles.questionsSection}`}>
                   <p className={`${styles.idstyle}`}>0{item?.id}</p>
                   <div className={`${styles.questcontent}`}>

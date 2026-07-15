@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../../styles/eventpage.module.scss";
 import LeadForm from "./form/leadform";
 

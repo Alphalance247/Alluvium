@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/team.module.scss";
 
 const Team24Banner = () => {
@@ -40,15 +40,15 @@ const Team24Banner = () => {
               </h1>
 
               <div className="d-flex gap-3">
-              <Link href="/event/team24">
-                <a className={`d-block btn ${styles.btn}`}>
+              <Link href="/event/team24" className={`d-block btn ${styles.btn}`}>
+                
                 Order here
-                </a>
+                
               </Link>
-              <Link href="/booth53#hero">
-                <a className={`d-block btn ${styles.btn}`}>
+              <Link href="/booth53#hero" className={`d-block btn ${styles.btn}`}>
+                
                 Booth 53
-                </a>
+                
               </Link>
               </div>
               <div style={{ position: "absolute", bottom: "-7px", right: "0" }} className={`d-md-none w-100`}>

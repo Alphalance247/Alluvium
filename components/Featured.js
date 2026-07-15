@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from "../styles/hero-carousel.module.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -42,7 +42,7 @@ export default function ({ cardList }) {
         <div className={styles.featured__card}>
           {availableCards.map((el) => {
             return (
-              <Link href={el.url} passHref>
+              <Link href={el.url}>
                 <div className={` ${styles.points}`}>
                   <div>
                     <Image

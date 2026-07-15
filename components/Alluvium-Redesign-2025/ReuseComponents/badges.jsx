@@ -1,5 +1,5 @@
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/badges.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Badges = ({ variant, badgesData = [] }) => {
   return (

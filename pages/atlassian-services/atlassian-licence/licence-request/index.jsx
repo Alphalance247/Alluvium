@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import axios from "axios";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { ToastProvider, useToasts } from "lib/toast";
 import LoadingScreen from "components/loading";
 import styles from "../../../../styles/licence.module.scss";
 import { environment } from "env/env.local";

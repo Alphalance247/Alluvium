@@ -1,9 +1,9 @@
 import { useState } from "react";
 import styles from "styles/AlluviumRedesign2025/swp/swp.module.scss";
 import Button from "components/atlassian-service-reuse/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Input from "components/licence-component/inputP";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import axios from "axios";
 import useSticky from "components/customhooks/UseSticky";
 import CustomerStory from "./customerStory";

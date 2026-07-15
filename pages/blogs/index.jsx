@@ -11,7 +11,7 @@ import axios from "axios";
 import { useState } from "react";
 import { environment } from "env/env.local";
 import Button from "components/atlassian-service-reuse/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import EventsBanner from "components/Alluvium-Redesign-2026/events/hero";
 import FeaturedPost from "components/Alluvium-Redesign-2026/blogs/featuredPost";
 import ArticleGrid from "components/Alluvium-Redesign-2026/blogs/artcleGrid";

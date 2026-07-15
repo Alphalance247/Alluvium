@@ -1,5 +1,5 @@
+"use client";
 import Layout from "components/layout";
-import Head from "next/head";
 import List from "components/privacy_policy/List";
 
 const AntiModernSlaveryPolicy = () => {
@@ -218,12 +218,6 @@ trafficking and exploitation.`,
   return (
     <Layout>
       <div>
-        <Head>
-          <title>Anti Modern Slavery Policy | Alluvium</title>
-
-          <meta name="description" content="Alluvium Vetting policy" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
 
         <main>
           <section>

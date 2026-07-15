@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "../../../styles/AlluviumRedesign2026/common/hero.module.scss";
-import GifHero from '../home-hero/GifHero';
+import GifHero from '../home-hero/gifHero';
 import Link from 'next/link';
 const Hero = ({ btnText }) => {
     return (

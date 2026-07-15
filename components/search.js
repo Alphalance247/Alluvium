@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import styles from '../styles/search.module.scss';
 import Link from 'next/link';
 

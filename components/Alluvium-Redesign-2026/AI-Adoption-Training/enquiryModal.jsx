@@ -3,7 +3,7 @@ import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/en
 import { LiaTimesSolid } from "react-icons/lia";
 import axios from "axios";
 import { validateEmail } from "lib/validation";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import { environment } from "env/env.local";
 
 const EnquiryModal = ({ isOpen, onClose }) => {
