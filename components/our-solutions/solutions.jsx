@@ -1,5 +1,5 @@
 import styles from "../../styles/solution.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { atlassianTraining } from "data";
 
 const Solutions = () => {

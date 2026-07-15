@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { ToastProvider, useToasts } from "lib/toast";
 import { validateEmail } from "lib/validation";
 import Link from "next/link";
 import styles from "../styles/booking.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ConsutomerConsultation from "./consutomerConsultation";
 
 const socialButton = [
@@ -33,10 +33,12 @@ export const BookingCTA = () => {
   return (
     <div className={styles.booking}>
       <h3>Talk to an Expert About Your Project</h3>
-      <Link href="#consultationForm">
-        <a className={`${styles.button} ${styles.defaultButton}`}>
+      <Link
+        href="#consultationForm"
+        className={`${styles.button} ${styles.defaultButton}`}>
+        
           Book Consultation
-        </a>
+        
       </Link>
     </div>
   );

@@ -3,7 +3,7 @@ import HeroHeading from "../ReuseComponents/heroHeading";
 import styles from "../../../styles/AlluviumRedesign2025/projectReel/heroSection.module.scss";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Lines } from "../ReuseComponents/Lines";
 
 const HeroSection = () => {

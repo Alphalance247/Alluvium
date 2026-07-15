@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/common/dropdown/solutionNav.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { FaArrowRight } from "react-icons/fa6";
 
 const SolutionNav = () => {

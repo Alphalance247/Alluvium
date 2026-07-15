@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/common/dropdown/productMenu.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
 

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/cloud-connect-2/Home/whyAttend.module.scss";
 
 const AttendCloud = ({ data }) => {

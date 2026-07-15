@@ -2,7 +2,7 @@ import HeroHeading from "./heroHeading";
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/hero-section.module.scss";
 import Link from "next/link";
 import Button from "components/atlassian-service-reuse/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { HiMiniSpeakerWave } from "react-icons/hi2";
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../../styles/Knowledge-Zone/kz.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { FiUpload } from "react-icons/fi";
 // import { UploadCloud } from "lucide-react"; // or any upload icon
 

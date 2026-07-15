@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../../styles/AlluviumRedesign2025/Atlassian-Services/atlassianservices.module.scss";
 import HeroHeading from "../ReuseComponents/heroHeading";
 import Link from "next/link";

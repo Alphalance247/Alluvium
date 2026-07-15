@@ -1,7 +1,7 @@
-import Head from "next/head";
+"use client";
 import Link from "next/link";
 import styles from "../../styles/project.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { BookingCTA } from "components/Consultation";
 import Layout from "components/layout";
 
@@ -11,18 +11,6 @@ export default function OurProject() {
   return (
     <Layout>
       <div className={styles.ourProject}>
-        <Head>
-          <title>Our Projects | Alluvium</title>
-          <link rel="icon" href="/favicon.ico" />
-          <meta
-            name="description"
-            content="Alluvium is an Atlassian Products Migration Lab. We produce Tools, Systems and Services that delivers complete data migration in half the time for half the cost."
-          />
-          <meta
-            name="keywords"
-            content="Alluvium, alluvium, team alluvium, atlassian products migration lab, migration, about alluvium, alluvians, cloud counter, Migration Experts, Software Consulting atlassian, confluence, jira"
-          />
-        </Head>
         <main>
           <section className={styles.welcome}>
             <div className={styles.content}>
@@ -32,7 +20,7 @@ export default function OurProject() {
                 We want you to know you are in safe hands, here’s a preview of <br/> previously done projects.
                 </p>
                 <Link href="#case-studies" className="m-5">
-                    <a className={`btn btn-pri`}>View our case studies</a>
+                    View our case studies
                 </Link>
               </div>
             </div>

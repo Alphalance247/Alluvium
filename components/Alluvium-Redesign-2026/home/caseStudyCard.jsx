@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/home/case-study-card-carousel.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const SuccessStories = () => {

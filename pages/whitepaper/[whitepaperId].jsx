@@ -2,7 +2,7 @@ import Layout from "components/layout";
 import styles from "../../styles/Blogs/blogs.module.scss";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Head from "next/head";
 import CardBlogDetails from "components/Alluvium-Redesign-2025/ReuseComponents/cardBlogDetails";
 import CaseCard from "components/Alluvium-Redesign-2025/ReuseComponents/CaseCard";

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/partner-badge.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const PartnerBar = () => {
   const partners = [

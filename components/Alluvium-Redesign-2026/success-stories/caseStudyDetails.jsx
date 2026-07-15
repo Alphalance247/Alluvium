@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/success-stories/case-study-details.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import FormSection from "../formSection";
 
 const CaseStudyDetail = ({

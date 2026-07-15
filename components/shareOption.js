@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/shareoptions.module.scss'
-import { useToasts } from 'react-toast-notifications'
+import { useToasts } from "lib/toast"
 
 export default function ShareOption ({server,router,shareOptions, setShareOptions}){
     const { addToast } = useToasts()

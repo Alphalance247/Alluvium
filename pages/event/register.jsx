@@ -7,7 +7,7 @@ import CountdownTimer from 'components/cloud-connect/CountdownTimer';
 import LoadingScreen from "components/loading";
 import { currentEventName } from "config";
 import axios from "axios";
-import { ToastProvider, useToasts } from 'react-toast-notifications';
+import { ToastProvider, useToasts } from "lib/toast";
 import { Country } from 'country-state-city';
 import { getCountryByCode } from "country-phonenumber";
 import countries, { NG } from "country-flag-icons/react/3x2";

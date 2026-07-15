@@ -1,12 +1,12 @@
 import Head from "next/head";
 import styles from "../../../styles/gitex24.module.scss";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Layout from "components/layout";
 import { useCallback, useMemo, useState } from "react";
 import axios from "axios";
 import { Country } from "country-state-city";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 
@@ -174,7 +174,6 @@ export default function Gitex24() {
                     />
                 </Head>
             </div>
-
             <div id="hero" className={`${styles.herosec}`}>
                 <div className="container">
                     <div className="row my-5 my-md-0">
@@ -198,9 +197,7 @@ export default function Gitex24() {
                     </div>
                 </div>
             </div>
-
             {/* choose souvenir */}
-
             <div className={`mx-auto row justify-content-between align-items-center py-5 ${styles.chooseSourve}`}>
                 <h1 className="text-white fw-bold font-weight-bold display-5 text-center">Choose your souvenir</h1>
                 <p className="text-white text-center">Congratulations! proceed to order your fila or gele by filling out the form below.</p>
@@ -245,7 +242,7 @@ export default function Gitex24() {
                                 defaultCountry="US"
                                 value={form.phone_number ?? ""}
                                 onChange={handleNumber}
-                                className={`${styles.PhoneInput, styles.transparentinput} ${phoneError ? styles.error : ""}`}
+                                className={`${(styles.PhoneInput, styles.transparentinput)} ${phoneError ? styles.error : ""}`}
                                 required
                                 numberInputProps={{
                                     className: phoneError ? styles.error : "",
@@ -310,11 +307,7 @@ export default function Gitex24() {
                 </div>
 
             </div>
-
-
-
             {/* Africa Style */}
-
             <div className={`container mx-auto row justify-content-between align-items-center py-5 ${styles.africanStyle}`}>
 
 
@@ -348,7 +341,6 @@ export default function Gitex24() {
 
 
             </div>
-
             {/* More at our stand */}
             <div className={`mx-auto justify-content-between py-5 ${styles.standbg}`}>
                 <div className={`container mx-auto row justify-content-between py-5`}>
@@ -417,7 +409,6 @@ export default function Gitex24() {
 
                 </div>
             </div>
-
             {/* remarkable */}
             <div className={`mx-auto justify-content-between ${styles.remarkable}`} >
                 <div className={`container mx-auto row justify-content-between`}>
@@ -452,9 +443,6 @@ export default function Gitex24() {
                     </div>
                 </div>
             </div>
-
-
-
         </Layout>
     );
 }

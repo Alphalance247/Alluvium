@@ -1,5 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import Head from "next/head";
+"use client";
 import List from "../../components/privacy_policy/List";
 import Layout from "components/layout";
 
@@ -238,12 +237,6 @@ const CarbonReductionPlan = () => {
   return (
     <Layout>
       <div>
-        <Head>
-          <title>Carbon-Reduction-Plan | Alluvium</title>
-
-          <meta name="description" content="Alluvium privacy policy" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
 
         <main>
           <section>

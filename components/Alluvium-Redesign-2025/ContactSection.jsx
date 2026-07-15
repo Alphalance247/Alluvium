@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../styles/AlluviumRedesign2025/contactSection.module.scss";
-import Image from "next/image";
-import { useToasts } from "react-toast-notifications";
+import Image from "next/legacy/image";
+import { useToasts } from "lib/toast";
 import { validateEmail } from "lib/validation";
 import axios from "axios";
 import { Lines } from "./ReuseComponents/Lines";

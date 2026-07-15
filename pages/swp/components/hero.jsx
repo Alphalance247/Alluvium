@@ -1,6 +1,6 @@
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../../styles/AlluviumRedesign2025/swp/swp.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const SwpHero = () => {
   const handScrollToSection = () => {

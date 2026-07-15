@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import LoadingScreen from "components/loading";
 import Layout from "components/cloud-connect-2/Layout";
 import Head from "next/head";
 import styles from "../../../styles/cloud2.4/successscreen.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Button from "components/cloud-connect-2/Button";
 import Link from "next/link";
 

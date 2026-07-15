@@ -5,7 +5,7 @@ import styles from "../../styles/cloud2.4/volunteering.module.scss";
 import Input from "components/licence-component/inputP";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import axios from "axios";
 import LoadingScreen from "components/loading";
 import { useEffect } from "react";

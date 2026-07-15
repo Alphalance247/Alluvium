@@ -1,5 +1,5 @@
 import styles from "../../styles/AlluviumRedesign2025/redesign.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Heading from "./heading";
 import { PluginData } from "data";
 

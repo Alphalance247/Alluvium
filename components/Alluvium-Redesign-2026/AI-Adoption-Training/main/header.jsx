@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/ai-adoption-training/main/header.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
