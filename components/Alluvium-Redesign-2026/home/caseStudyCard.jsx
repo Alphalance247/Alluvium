@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/home/case-study-card-carousel.module.scss";
-import Image from "next/image";
 import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+import Image from "next/image";
 
 const SuccessStories = () => {
   const scrollRef = useRef(null);
@@ -104,25 +105,7 @@ const SuccessStories = () => {
 
                   <div className={styles.readMore}>
                     <span className={styles.linkText}>READ MORE</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                    >
-                      <path
-                        d="M12.6667 8L8.66671 4L12.6667 8ZM12.6667 8L8.66671 12L12.6667 8ZM12.6667 8H3.33337H12.6667Z"
-                        fill="#1F1F1F"
-                      />
-                      <path
-                        d="M12.6667 8L8.66671 4M12.6667 8L8.66671 12M12.6667 8H3.33337"
-                        stroke="#262626"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
+                    <FaArrowRight className="text-[#1F1F1F]" />
                   </div>
                 </div>
 

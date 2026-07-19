@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/toolsAndPlatforms.module.scss";
 import { toolsAndPlatforms } from "data";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const Hexagon = ({ children }) => {
   return (

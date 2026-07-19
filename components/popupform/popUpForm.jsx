@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/popupform/popup.module.scss";
 import { useState } from "react";
 import axios from "axios";
 import { environment } from "env/env.local";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 
 const PopUpForm = ({ onSubmit }) => {
   const [email, setEmail] = useState("");

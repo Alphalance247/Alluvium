@@ -1,5 +1,5 @@
 import Button from "components/atlassian-service-reuse/Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from "../../../styles/AlluviumRedesign2025/startup/SupportPackage.module.scss";
 

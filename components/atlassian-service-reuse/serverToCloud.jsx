@@ -1,5 +1,5 @@
 import styles from "../../styles/licence.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ServerToCloud = ({
   image1 = false,

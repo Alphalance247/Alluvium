@@ -1,5 +1,5 @@
 import styles from "../../styles/corevalues.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const values = [
   {

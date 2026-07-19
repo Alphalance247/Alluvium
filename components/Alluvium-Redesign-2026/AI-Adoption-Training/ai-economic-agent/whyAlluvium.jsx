@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/ai-adoption-training/ai-economic-agent/why-alluvium.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 const WhyAlluvium = () => {
   return (
     <section

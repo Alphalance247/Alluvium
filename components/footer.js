@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
-import Switch from "react-input-switch";
 import styles from "../styles/footer.module.scss";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import { ImFacebook, ImLinkedin2 } from "react-icons/im";
 import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
 
@@ -58,15 +57,15 @@ export function AltFooter() {
                 <Link href="#">Leadership</Link>
               </li> */}
               <li className={styles.contactListItem}>
-                <Link href="https://blog.alluvium.net/">
-                  <a target="_blank" rel="norefferer">
+                <Link href="https://blog.alluvium.net/" target="_blank" rel="norefferer">
+                  
                     Blog
-                  </a>
+                  
                 </Link>
               </li>
               <li className={styles.contactListItem}>
                 <Link href="/support/contact">
-                  <a>Contact us</a>
+                  Contact us
                 </Link>
               </li>
               <li className={styles.contactListItem}>
@@ -215,13 +214,16 @@ export function AltFooter() {
             </p>
           </div>
           <div className={styles.extralinks}>
-            <Link href="/atlassian-services/terms-conditions">
-              <a aria-label="privacy-policy" className="px-3">
+            <Link
+              href="/atlassian-services/terms-conditions"
+              aria-label="privacy-policy"
+              className="px-3">
+              
                 Terms & Conditions
-              </a>
+              
             </Link>
-            <Link href={"/privacy-policy"}>
-              <a aria-label="privacy-policy">Privacy Policy</a>
+            <Link href={"/privacy-policy"} aria-label="privacy-policy">
+              Privacy Policy
             </Link>
           </div>
         </div>

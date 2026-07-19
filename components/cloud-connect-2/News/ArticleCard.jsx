@@ -1,6 +1,6 @@
 import styles from "../../../styles/cloud-connect-2/News/news.module.scss";
 import BlogCover from "public/assets/cloud-connect/images/BlogCoverFallback.png";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ArticleCard = ({ article }) => (
   <a href={`/cloud-connect/news/${article.id}`}>

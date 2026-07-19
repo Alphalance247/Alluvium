@@ -9,7 +9,7 @@ import CalendlyWidget from "components/calendlyWidget";
 import useSticky from "components/customhooks/UseSticky";
 import Input from "components/licence-component/inputP";
 import axios from "axios";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 
 const Home = () => {
   const { sectionRef, isSticky } = useSticky();

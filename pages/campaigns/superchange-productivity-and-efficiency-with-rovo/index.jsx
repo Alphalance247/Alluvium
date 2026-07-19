@@ -1,5 +1,5 @@
 import Layout from "components/layout";
-import LeadForm from "pages/event/itsm-solutions/form/leadform";
+import LeadForm from "components/leadform";
 const SuperchangeProductivity = () => {
   return (
     <Layout>

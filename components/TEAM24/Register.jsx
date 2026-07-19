@@ -4,10 +4,10 @@ import Input from "./Input";
 import { Country } from "country-state-city";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import IncentiveData from "./IncentiveData";
 import axios from "axios";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { ToastProvider, useToasts } from "lib/toast";
 import { IoIosGift } from "react-icons/io";
 
 const Register = ({ setRegistrationLimitExceeded }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { industries, ourSolutions } from "data";
 import styles from "../styles/ourSolutions.module.scss";
 

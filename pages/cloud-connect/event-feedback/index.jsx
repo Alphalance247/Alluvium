@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import styles from "../../../styles/cloud-connect-2/event-feedback/eventFeedback.module.scss";
 import Button from "components/cloud-connect-2/Button";
 import axios from "axios";
-import { useToasts } from "react-toast-notifications";
-import Image from "next/image";
+import { useToasts } from "lib/toast";
+import Image from "next/legacy/image";
 
 const option = {
   very_satisfied: "Very satisfied",

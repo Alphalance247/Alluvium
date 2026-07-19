@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "../../../styles/cloud-connect-2/Home/aboutAlluvium.module.scss";
 import Button from "../Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const AboutAlluvium = () => {
   const listItems = [

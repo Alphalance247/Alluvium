@@ -1,6 +1,6 @@
 import styles from "../../../styles/AlluviumRedesign2025/consulting/consulting.module.scss";
 import HeroHeading from "../ReuseComponents/heroHeading";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Empower = () => {
   return (

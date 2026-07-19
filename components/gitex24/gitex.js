@@ -1,12 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/gitex24.module.scss";
 
 const Gitex24 = () => {
   return (
     <>
-
       <div className={` ${styles.gitexbanner}`}>
 
         <div className="row container mx-auto">
@@ -26,10 +25,10 @@ const Gitex24 = () => {
 
           <div className="col-md-6">
             <Image width={443} height={147} src="/assets/gitex24/visit.png" />
-            <Link href={'/event/gitex24'}>
-              <a className="btn btn-warning">
+            <Link href={'/event/gitex24'} className="btn btn-warning">
+              
                 CLAIM SOUVENIRS
-              </a>
+              
             </Link>
           </div>
           <div className="col-md-6">

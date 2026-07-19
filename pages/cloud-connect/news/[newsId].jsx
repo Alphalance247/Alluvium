@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useRouter } from "next/router";
 import Layout from "../../../components/cloud-connect-2/Layout";
 import styles from "../../../styles/cloud-connect-2/News/news.module.scss";

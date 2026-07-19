@@ -4,7 +4,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import { useState } from "react";
 import { Country } from "country-state-city";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import axios from "axios";
 import LoadingScreen from "components/loading";
 import styles from "../../../styles/cloud2.4/sponsor.module.scss";

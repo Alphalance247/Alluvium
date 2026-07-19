@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import styles from "../styles/hero-carousel.module.scss";
 export default function () {
@@ -15,19 +15,20 @@ export default function () {
             </p>
             <div className={`${styles.atbtn}`}>
               <div>
-                <Link href="/why-hire-us">
-                  <a className={`text-white mr-4 ${styles.hirebtn}`}>
-                    {/* <p className={` ${styles.hiretext}`}>Why hire us as your Atlassian partner</p> */}
-                    Why hire us as your Atlassian partner
-                  </a>
+                <Link href="/why-hire-us" className={`text-white mr-4 ${styles.hirebtn}`}>
+
+                  {/* <p className={` ${styles.hiretext}`}>Why hire us as your Atlassian partner</p> */}Why hire us as your Atlassian partner
+                                    
                 </Link>
               </div>
 
               <div>
-                <Link href="https://alluvium.net/support/contact#schedule-a-call">
-                  <a className={`${styles.callbtn} text-white mr-4 border`}>
+                <Link
+                  href="https://alluvium.net/support/contact#schedule-a-call"
+                  className={`${styles.callbtn} text-white mr-4 border`}>
+                  
                     Schedule a call
-                  </a>
+                  
                 </Link>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import SectionHeader from "../SectionHeader";
 import Button from "../Button";
 import styles from "../../../styles/cloud-connect-2/Home/aboutCloudConnect.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const images = [

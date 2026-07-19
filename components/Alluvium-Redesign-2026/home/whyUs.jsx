@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/home/why-us.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const WhyUs = () => {
   const values = [

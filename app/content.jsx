@@ -1,0 +1,83 @@
+"use client";
+import React from "react";
+import Layout from "components/layout";
+import CaseStudies from "components/Alluvium-Redesign-2026/caseStudies";
+import AboutSection from "components/Alluvium-Redesign-2026/about";
+import SeamlessAtlassian from "components/Alluvium-Redesign-2026/seamlessAtlassian";
+import Service from "components/Alluvium-Redesign-2026/service";
+import StartScaling from "components/Alluvium-Redesign-2026/StartScaling";
+import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
+import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
+import ServiceHero from "components/Alluvium-Redesign-2026/common/servicesHero";
+import { badges } from "data";
+import PillarsSection from "components/Alluvium-Redesign-2026/home/pillarSection";
+import WhyUs from "components/Alluvium-Redesign-2026/home/whyUs";
+import SuccessStories from "components/Alluvium-Redesign-2026/home/caseStudyCard";
+import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
+import AiAdoptionHero from "components/Alluvium-Redesign-2026/common/aiAdoptionHero";
+import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
+import FeaturedProgramme from "components/Alluvium-Redesign-2026/featuredProgramme/featuredBanner";
+import GifHero from "components/Alluvium-Redesign-2026/home-hero/gifHero";
+import Hero from "components/Alluvium-Redesign-2026/home/Hero";
+const badgesImages = [
+  {
+    id: "01",
+    imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+    alt: "Cloud Partner",
+    width: "201",
+    height: "134",
+  },
+  {
+    id: "02",
+    imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+    alt: "Gold Partner",
+    width: "278",
+    height: "74",
+  },
+];
+
+const Home = () => {
+  return (
+    <>
+      <Layout>
+        {/* <Hero /> */}
+        {/* <SWPHero /> */}
+        {/* <Team26Hero /> */}
+        <Hero />
+        {/* <GifHero /> */}
+        {/* <AiAdoptionHero /> */}
+
+        <div style={{ borderBottom: "1px " }}>
+          <div
+            style={{
+              maxWidth: "1280px",
+              margin: "0 auto",
+              borderBottom: "1px dashed rgba(217, 217, 217, 0.80)",
+            }}
+          >
+            <Badges variant={"sub-default"} badgesData={badges} />
+          </div>
+        </div>
+        <FeaturedProgramme />
+        <PillarsSection />
+        <WhyUs />
+        <SuccessStories />
+        <CtaSection />
+        {/* <CaseStudies />
+        <AboutSection />
+        <SeamlessAtlassian />
+        <Service /> */}
+        {/* <SuccessStory /> */}
+
+        {/* <Expertise />
+        <AtlassianSolution />
+        <Banner />
+        <Impact />
+        <MarketPlacePlugin /> */}
+        {/* <StartScaling /> */}
+      </Layout>
+    </>
+  );
+};
+
+export default Home;

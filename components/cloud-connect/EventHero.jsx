@@ -35,12 +35,14 @@ const EventHero = ({ showCountdown = true }) => {
                   </p>
                   <div className="d-flex flex-wrap">
                   <a href="https://support.portal.alluvium.net/servicedesk/customer/portal/41/group/130/create/479" className="btn btn-outline-warning mt-4 me-3 py-3" target="_blank" rel="noopener noreferrer">GIVE FEEDBACK</a>
-                  <Link href="/event/cloud-connect#recap">
-                    <a className="btn btn-warning mt-4 me-3 py-3">WATCH RECAP</a>
+                  <Link
+                    href="/event/cloud-connect#recap"
+                    className="btn btn-warning mt-4 me-3 py-3">
+                    WATCH RECAP
                   </Link>
                   { !showCountdown &&
-                    <Link href="/event/cloud-connect">
-                    <a className="btn btn-warning mt-4 py-3">LEARN MORE</a>
+                    <Link href="/event/cloud-connect" className="btn btn-warning mt-4 py-3">
+                    LEARN MORE
                   </Link>}
                   </div>
                 </div>
@@ -60,7 +62,6 @@ const EventHero = ({ showCountdown = true }) => {
           </div>
         </section>
       </div>
-
       {showCountdown && <div className={`container-fluid pb-4 ${styles.countdownCard}`}>
         {/* <div className="container mx-auto">
           <div className="row">

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/cloud-migration-case-study/migartionmain.module.scss";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
@@ -54,11 +54,7 @@ const CaseStudyCard = () => {
       <div className={styles.study__card}>
         {data.map((el, i) => {
           return (
-            <Link
-              href={`/atlassian-cloud-migration-case-studies/${el?.pageTitle}`}
-              passHref
-              key={i}
-            >
+            <Link href={`/atlassian-cloud-migration-case-studies/${el?.pageTitle}`} key={i}>
               <div className={styles.card}>
                 <Image
                   src={el?.imgSrc}

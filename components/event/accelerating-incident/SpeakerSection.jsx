@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2025/accelerating-incident/SpeakerSection.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const SpeakerSection = () => {
   const speakerData = [
