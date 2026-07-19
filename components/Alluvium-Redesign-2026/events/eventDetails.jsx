@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/event-details.module.scss";
-import LeadForm from "pages/event/itsm-solutions/form/leadform";
+import LeadForm from "components/leadform";
 
 const Person = ({ name, role, image }) => (
   <div className={styles.personCard}>
