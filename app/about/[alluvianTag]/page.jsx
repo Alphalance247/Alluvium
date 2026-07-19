@@ -16,7 +16,7 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { alluvianTag } = await params;
+  const alluvianTag = decodeURIComponent((await params).alluvianTag);
   const teamMate = findTeamMate(alluvianTag);
   const fullName = `${capitalize(teamMate.firstName)} ${capitalize(teamMate.lastName)}`;
   return {
@@ -28,6 +28,6 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function Page({ params }) {
-  const { alluvianTag } = await params;
+  const alluvianTag = decodeURIComponent((await params).alluvianTag);
   return <Content teamMate={findTeamMate(alluvianTag)} />;
 }

@@ -9,11 +9,12 @@ export default function TestingTailwindPage() {
         Tailwind is Working! 🎉
       </h1>
       <p className="text-lg text-gray-700 mb-6 text-center max-w-md">
-        This page is served by the App Router — Tailwind CSS and the app/
-        directory are working side by side with the Pages Router.
+        {/* This page is served by the App Router — Tailwind CSS and the app/
+        directory are working side by side with the Pages Router.  */}
+        This is a testing page going forward
       </p>
       <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
-        Click Me and test
+        Click Me
       </button>
     </div>
   );

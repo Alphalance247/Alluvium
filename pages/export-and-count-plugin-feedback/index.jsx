@@ -3,7 +3,7 @@ import axios from "axios";
 import styles from "../../styles/appForm.module.scss";
 import SideMenuLogo from "components/icons/SideMenuLogo";
 import Image from "next/legacy/image";
-import LeadForm from "pages/event/itsm-solutions/form/leadform";
+import LeadForm from "components/leadform";
 
 const AppForm = () => {
   const [formData, setFormData] = useState({
