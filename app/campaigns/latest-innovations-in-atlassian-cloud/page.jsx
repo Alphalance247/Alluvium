@@ -1,9 +1,10 @@
+"use client";
 // components/CalendlyWidget.jsx
 
 import { useEffect } from "react";
 import Layout from "components/layout";
 
-const HighVelocityServiceManagement = () => {
+const LatestInnovationInAtlassianCloud = () => {
   useEffect(() => {
     // Load Calendly script
     const script = document.createElement("script");
@@ -21,11 +22,11 @@ const HighVelocityServiceManagement = () => {
     <Layout>
       <div
         className="calendly-inline-widget"
-        data-url="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9993789c7765d3019c7b94d623733c"
+        data-url="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a999784951ede96019522b12d6609b5"
         style={{ minWidth: "80%", height: "700px", borderRadius: "25px" }}
       ></div>
     </Layout>
   );
 };
 
-export default HighVelocityServiceManagement;
+export default LatestInnovationInAtlassianCloud;
