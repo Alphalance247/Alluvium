@@ -1,5 +1,7 @@
+"use client";
 import Layout from "components/layout";
 import LeadForm from "components/leadform";
+
 const AIpoweredServiceManagement = () => {
   return (
     <Layout>

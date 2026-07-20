@@ -14,7 +14,7 @@ export default function TestingTailwindPage() {
         This is a testing page going forward
       </p>
       <button className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
-        Click Me
+        Click Me and go
       </button>
     </div>
   );
