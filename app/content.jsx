@@ -1,24 +1,17 @@
 "use client";
 import React from "react";
 import Layout from "components/layout";
-import CaseStudies from "components/Alluvium-Redesign-2026/caseStudies";
-import AboutSection from "components/Alluvium-Redesign-2026/about";
-import SeamlessAtlassian from "components/Alluvium-Redesign-2026/seamlessAtlassian";
-import Service from "components/Alluvium-Redesign-2026/service";
-import StartScaling from "components/Alluvium-Redesign-2026/StartScaling";
 import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
-import { Lines } from "components/Alluvium-Redesign-2025/ReuseComponents/Lines";
-import ServiceHero from "components/Alluvium-Redesign-2026/common/servicesHero";
 import { badges } from "data";
-import PillarsSection from "components/Alluvium-Redesign-2026/home/pillarSection";
-import WhyUs from "components/Alluvium-Redesign-2026/home/whyUs";
-import SuccessStories from "components/Alluvium-Redesign-2026/home/caseStudyCard";
-import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
-import AiAdoptionHero from "components/Alluvium-Redesign-2026/common/aiAdoptionHero";
-import SuccessStory from "components/Alluvium-Redesign-2026/successStory";
 import FeaturedProgramme from "components/Alluvium-Redesign-2026/featuredProgramme/featuredBanner";
 import GifHero from "components/Alluvium-Redesign-2026/home-hero/gifHero";
 import Hero from "components/Alluvium-Redesign-2026/home/Hero";
+import WhitepaperSection from "components/Alluvium-Redesign-2026/home/whitepaperSection";
+import ImpactMetricsSection from "components/Alluvium-Redesign-2026/home/impactMetric";
+import EnterpriseSolutionsSection from "components/Alluvium-Redesign-2026/home/services";
+import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
+import LogoCloudSection from "components/Alluvium-Redesign-2026/home/badges";
+
 const badgesImages = [
   {
     id: "01",
@@ -47,7 +40,7 @@ const Home = () => {
         {/* <GifHero /> */}
         {/* <AiAdoptionHero /> */}
 
-        <div style={{ borderBottom: "1px " }}>
+        {/* <div style={{ borderBottom: "1px " }}>
           <div
             style={{
               maxWidth: "1280px",
@@ -57,12 +50,17 @@ const Home = () => {
           >
             <Badges variant={"sub-default"} badgesData={badges} />
           </div>
-        </div>
+        </div> */}
+        <LogoCloudSection />
+        <WhitepaperSection />
+        <EnterpriseSolutionsSection />
+        <ImpactMetricsSection />
         <FeaturedProgramme />
-        <PillarsSection />
+        <CtaBannerSection />
+        {/* <PillarsSection />
         <WhyUs />
         <SuccessStories />
-        <CtaSection />
+        <CtaSection /> */}
         {/* <CaseStudies />
         <AboutSection />
         <SeamlessAtlassian />

@@ -8,6 +8,7 @@ module.exports = {
   images: {
     remotePatterns: [
       { hostname: "blog.alluvium.net" },
+      { hostname: "d38rkvi67t4lhi.cloudfront.net" },
       { hostname: "pest.ec2.alluvium.net" },
     ],
   },
