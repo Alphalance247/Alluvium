@@ -14,12 +14,16 @@ const mobilePhones = [
 ];
 
 const services = [
-  { url: "/cloud-upgrade", id: "1", name: "Cloud Upgrade" },
-  { url: "/license-optimization", id: "2", name: "License Optimization" },
+  { url: "/cloud-upgrade", id: "1", name: "Migration" },
+  {
+    url: "/license-optimization",
+    id: "2",
+    name: "License & token optimization",
+  },
   {
     url: "/enterprise-service-management",
     id: "3",
-    name: "Enterprise Service Management (ESM)",
+    name: "Service Management",
   },
   {
     url: "/strategic-partnerships",
