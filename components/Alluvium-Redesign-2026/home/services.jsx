@@ -1,31 +1,32 @@
 import React from "react";
 import Container from "../common/container";
 import Image from "next/image";
+import Link from "next/link";
 
 const EnterpriseSolutionsSection = () => {
   const services = [
     {
-      title: "Cloud migration",
+      title: "Migration",
       description:
-        "Move to Cloud without stalling delivery. We plan the migration, govern the cutover, and stay through adoption.",
-      actionText: "Explore cloud upgrade",
-      href: "#cloud-migration",
-      icon: "/assets/Alluvium-Redesign-2026/home/cloud-migration.svg",
+        "Move to Atlassian Cloud and roll out Claude without stalling delivery. We plan, govern, and stay through adoption.",
+      actionText: "Explore cloud migration",
+      href: "/cloud-upgrade",
+      icon: "/assets/Alluvium-Redesign-2026/home/database.svg",
     },
     {
       title: "Service management",
       description:
-        "Modern ITSM powered by Atlassian's Jira Service Management and intelligent AI workflows.",
+        "Modern service delivery built on Jira Service Management, with Claude and Rovo working alongside.",
       actionText: "Explore service management",
-      href: "#service-management",
-      icon: "/assets/Alluvium-Redesign-2026/home/service-management.svg",
+      href: "/enterprise-service-management",
+      icon: "/assets/Alluvium-Redesign-2026/home/box.svg",
     },
     {
-      title: "Token optimization",
+      title: "License & token optimization",
       description:
-        "Reduce licensing costs while maximizing adoption across your Atlassian and Claude environment.",
-      actionText: "Optimize your licenses",
-      href: "#token-optimization",
+        "Reduce license and token spend while maximizing adoption across both ecosystems.",
+      actionText: "Explore license & token optimization",
+      href: "/ai",
       icon: "/assets/Alluvium-Redesign-2026/home/token-optimization.svg",
     },
   ];
@@ -45,14 +46,14 @@ const EnterpriseSolutionsSection = () => {
         </div>
 
         {/* Services Cards Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
               className="flex flex-col justify-between items-start gap-8"
             >
               {/* Service Icon Box */}
-              <div className="w-[72px] h-[72px] mb-14 bg-white rounded-xl border border-slate-200 flex items-center justify-center shadow-xs">
+              <div className="w-[72px] h-[72px] mb-8 bg-white rounded-xl border border-slate-200 flex items-center justify-center shadow-xs">
                 <Image
                   src={service.icon}
                   width={48}
@@ -73,9 +74,9 @@ const EnterpriseSolutionsSection = () => {
                 </div>
 
                 {/* Action Link Button */}
-                <a
+                <Link
                   href={service.href}
-                  className="group py-2 inline-flex items-center gap-2 text-[#344054] font-bold font-sans text-base hover:text-indigo-700 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 rounded-md"
+                  className="group py-2 inline-flex items-center gap-2 text-[#344054] font-bold font-sans text-base transition-colors duration-150 rounded-md"
                 >
                   <span>{service.actionText}</span>
                   <svg
@@ -91,7 +92,7 @@ const EnterpriseSolutionsSection = () => {
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

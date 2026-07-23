@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../common/container";
+import Link from "next/link";
 
 const CtaBannerSection = () => {
   return (
@@ -17,10 +18,10 @@ const CtaBannerSection = () => {
         </div>
 
         {/* Action Callout Button */}
-        <div className="flex flex-col justify-center items-start shrink-0">
+        <Link href="/contact-us" className=" w-full md:w-fit">
           <button
             type="button"
-            className="group px-6 py-3.5 bg-slate-900 text-white text-base md:text-lg font-bold font-sans rounded-lg focus:outline-none focus:ring-2 focus:ring-white/20 inline-flex items-center gap-3 transition-all duration-150"
+            className="group px-6 py-3.5  bg-slate-900 flex items-center justify-center text-white text-base md:text-lg font-bold font-sans rounded-lg focus:outline-none focus:ring-2 focus:ring-white/20 gap-3 transition-all duration-150  w-full md:w-fit"
           >
             <span>Contact us</span>
             <svg
@@ -37,7 +38,7 @@ const CtaBannerSection = () => {
               />
             </svg>
           </button>
-        </div>
+        </Link>
       </Container>
     </section>
   );

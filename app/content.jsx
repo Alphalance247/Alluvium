@@ -11,6 +11,7 @@ import ImpactMetricsSection from "components/Alluvium-Redesign-2026/home/impactM
 import EnterpriseSolutionsSection from "components/Alluvium-Redesign-2026/home/services";
 import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
 import LogoCloudSection from "components/Alluvium-Redesign-2026/home/badges";
+import CaseStudiesCarousel from "components/Alluvium-Redesign-2026/home/caseStudyCard";
 
 const badgesImages = [
   {
@@ -56,10 +57,12 @@ const Home = () => {
         <EnterpriseSolutionsSection />
         <ImpactMetricsSection />
         <FeaturedProgramme />
+        <CaseStudiesCarousel />
         <CtaBannerSection />
+
         {/* <PillarsSection />
         <WhyUs />
-        <SuccessStories />
+       
         <CtaSection /> */}
         {/* <CaseStudies />
         <AboutSection />

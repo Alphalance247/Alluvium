@@ -1,15 +1,17 @@
 import React from "react";
 import Container from "../common/container";
+import Button from "components/atlassian-service-reuse/Button";
+import Link from "next/link";
 
 const AiAdoptionSection = () => {
   return (
-    <section className="w-full bg-[#F2F4F7] overflow-hidden">
-      <Container className=" flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16">
+    <section className="w-full bg-[#E6F5F9] overflow-hidden">
+      <Container className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
         {/* Content Column */}
         <div className="w-full lg:max-w-xl flex flex-col items-start gap-8">
           <div className="flex flex-col items-start gap-4">
             {/* Category / Eyebrow Tag */}
-            <span className="text-[#009BC0] text-sm md:text-base font-bold font-sans uppercase tracking-wider">
+            <span className="text-[#667085] text-sm md:text-base font-bold font-sans uppercase tracking-wider">
               AI Adoption & Training
             </span>
 
@@ -28,12 +30,9 @@ const AiAdoptionSection = () => {
           </div>
 
           {/* Action Button */}
-          <button
-            type="button"
-            className="px-5 py-3 bg-white text-[#1D2939] text-base font-bold font-sans rounded-lg border border-[#D0D5DD] shadow-sm hover:bg-[#F2F4F7] hover:border-[#C6CBD6] focus:outline-none focus:ring-2 focus:ring-[#635BFF]/20 transition-all duration-150"
-          >
-            Learn more
-          </button>
+          <Link href="/ai" className=" w-full md:w-fit">
+            <Button className=" w-full md:w-fit">Learn more</Button>
+          </Link>
         </div>
 
         {/* Media Showcase Image */}

@@ -12,11 +12,11 @@ const ImpactMetricsSection = () => {
     <section className="w-full bg-[#101828] overflow-hidden">
       <Container className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0">
         {/* Header Column */}
-        <div className="flex flex-col justify-start items-start gap-4 pb-6 lg:pb-0 lg:pr-8 border-b sm:border-b-0 lg:border-r border-slate-700">
+        <div className="flex flex-col justify-start items-start gap-4 pb-6 lg:pb-0 lg:pr-8  sm:border-b-0 lg:border-r border-slate-700">
           <span className="text-[#E37915] text-sm md:text-base font-bold font-sans uppercase tracking-wide">
             Our Impact
           </span>
-          <h2 className="text-white text-3xl md:text-4xl font-bold font-serif leading-tight">
+          <h2 className="text-white text-2xl md:text-4xl font-bold font-serif leading-tight">
             Alluvium in numbers
           </h2>
         </div>
@@ -29,9 +29,7 @@ const ImpactMetricsSection = () => {
             <div
               key={index}
               className={`flex flex-col justify-start items-start gap-4 pb-6 lg:pb-0 lg:px-8 ${
-                !isLast
-                  ? "border-b sm:border-b-0 lg:border-r border-[#475467]"
-                  : ""
+                !isLast ? " sm:border-b-0 lg:border-r border-[#475467]" : ""
               }`}
             >
               {/* Highlight Badge */}
