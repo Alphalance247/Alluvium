@@ -9,7 +9,7 @@ const EnterpriseSolutionsSection = () => {
       title: "Migration",
       description:
         "Move to Atlassian Cloud and roll out Claude without stalling delivery. We plan, govern, and stay through adoption.",
-      actionText: "Explore cloud migration",
+      actionText: "Explore migration",
       href: "/cloud-upgrade",
       icon: "/assets/Alluvium-Redesign-2026/home/database.svg",
     },
@@ -26,7 +26,7 @@ const EnterpriseSolutionsSection = () => {
       description:
         "Reduce license and token spend while maximizing adoption across both ecosystems.",
       actionText: "Explore license & token optimization",
-      href: "/ai",
+      href: "/license-optimization",
       icon: "/assets/Alluvium-Redesign-2026/home/token-optimization.svg",
     },
   ];

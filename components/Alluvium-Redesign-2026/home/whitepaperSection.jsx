@@ -34,7 +34,7 @@ const WhitepaperSection = () => {
           </div>
 
           {/* Action Button */}
-          <Link href={"/"} className="w-full lg:w-fit">
+          <Link href={"/whitepaper"} className="w-full lg:w-fit">
             <div className="w-full lg:w-fit">
               <button
                 type="button"
