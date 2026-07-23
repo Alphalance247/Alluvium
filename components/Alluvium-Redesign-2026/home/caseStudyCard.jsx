@@ -1,129 +1,282 @@
-import React, { useRef } from "react";
-import styles from "../../../styles/AlluviumRedesign2026/home/case-study-card-carousel.module.scss";
+import React, { useState, useEffect } from "react";
+import Container from "../common/container";
 import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa6";
-import Image from "next/image";
 
-const SuccessStories = () => {
-  const scrollRef = useRef(null);
+const caseStudies = [
+  {
+    id: 1,
+    category: "Finance",
+    quote: "100% compliance achieved for a Tier-1 UK Bank migration.",
+    // '"What stood out wasn\'t just their technical expertise—it was their ability to simplify a highly complex transformation."',
+    stats: [
+      { value: "100%", label: "decommissioning of tools" },
+      {
+        value: "100%",
+        label: "compliance with ISO and national audit standards",
+      },
+    ],
+    author: "James Anderson",
+    role: "Head of Enterprise Technology",
+    company: "Global Financial Services Organization",
+    image: "/assets/Alluvium-Redesign-2026/home/compliance-achiver.png",
+    link: "/success-stories/strategic-agile-transformation-&-cloud-migration",
+  },
+  {
+    id: 2,
+    category: "Telecommunications",
+    quote: "Multimillion-Pound Enterprise Agile Framework",
+    // '"What stood out wasn\'t just their technical expertise—it was their ability to simplify a highly complex transformation."',
+    stats: [
+      { value: "10+", label: "custom training workshops delivered" },
+      { value: "3", label: "major tools implemented" },
+    ],
+    author: "James Anderson",
+    role: "Head of Enterprise Technology",
+    company: "Global Financial Services Organization",
+    image: "/assets/Alluvium-Redesign-2026/home/multi-million.png",
+    link: "/success-stories/multimillion-pound-enterprise-agile-framework",
+  },
+  {
+    id: 3,
+    category: "Finance",
+    quote: "Rapid Cloud Migration & Cost Optimization",
+    // '"What stood out wasn\'t just their technical expertise—it was their ability to simplify a highly complex transformation."',
+    stats: [
+      { value: "100%", label: "migration before renewal deadline" },
+      { value: "3", label: "core platforms migrated (Jira, Confluence, JSM)" },
+    ],
+    author: "James Anderson",
+    role: "Head of Enterprise Technology",
+    company: "Global Financial Services Organization",
+    image: "/assets/Alluvium-Redesign-2026/home/rapid-cloud.png",
+    link: "/success-stories/rapid-cloud-migration-cost-optimization/",
+  },
+];
 
-  const stories = [
-    {
-      sector: "Financial Sector",
-      title: "100% compliance achieved for a Tier-1 UK Bank migration.",
-      image: "/assets/Alluvium-Redesign-2026/home/compliance-achiver.png", // Larger placeholder for better quality
-      link: "strategic-agile-transformation-&-cloud-migration",
-    },
-    {
-      sector: "Telecommunications",
-      title: "Multimillion-pound Enterprise Agile Framework.",
-      image: "/assets/Alluvium-Redesign-2026/home/multi-million.png",
-      link: "multimillion-pound-enterprise-agile-framework",
-    },
-    {
-      sector: " IT Services",
-      title: "Rapid Cloud Migration & Cost Optimization",
-      image: "/assets/Alluvium-Redesign-2026/home/rapid-cloud.png",
-      link: "rapid-cloud-migration-cost-optimization",
-    },
-  ];
+// Quadrupled buffer to ensure edge cards never run out on wide screens
+const extendedStudies = [
+  ...caseStudies,
+  ...caseStudies,
+  ...caseStudies,
+  ...caseStudies,
+];
 
-  const scroll = (direction) => {
-    const { current } = scrollRef;
-    if (current) {
-      const firstCard = current.firstElementChild;
-      const cardWidth = firstCard ? firstCard.offsetWidth + 24 : 612;
-      current.scrollBy({
-        left: direction === "left" ? -cardWidth : cardWidth,
-        behavior: "smooth",
-      });
+const CaseStudiesCarousel = () => {
+  // Start at index 3 (first item of the second set)
+  const [currentIndex, setCurrentIndex] = useState(3);
+  const [isAnimated, setIsAnimated] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
+  const [cardWidth, setCardWidth] = useState(880);
+  const [gapWidth, setGapWidth] = useState(32);
+
+  // Responsive dimensions
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setCardWidth(width - 48);
+        setGapWidth(16);
+      } else if (width < 1024) {
+        setCardWidth(680);
+        setGapWidth(24);
+      } else {
+        setCardWidth(880);
+        setGapWidth(32);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // 1. Auto-scroll mechanism (runs every 4s, pauses on hover)
+  useEffect(() => {
+    if (isHovered) return;
+
+    const interval = setInterval(() => {
+      setIsAnimated(true);
+      setCurrentIndex((prev) => prev + 1);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isHovered]);
+
+  // 2. Seamless infinite reset boundary check
+  const handleTransitionEnd = (e) => {
+    // FIX: Only trigger when the main track transform ends, ignoring child scale/opacity transitions
+    if (e.target !== e.currentTarget) return;
+    if (e.propertyName !== "transform") return;
+
+    // When reaching the end of set 2 (index >= 6), silently jump back to set 1 equivalent (index 3)
+    if (currentIndex >= caseStudies.length * 2) {
+      setIsAnimated(false);
+      setCurrentIndex((prev) => prev - caseStudies.length);
+    }
+    // When going before set 1 (index < 3), silently jump forward to set 2 equivalent
+    else if (currentIndex < caseStudies.length) {
+      setIsAnimated(false);
+      setCurrentIndex((prev) => prev + caseStudies.length);
     }
   };
 
+  // Center alignment math
+  const translateXOffset = `calc(50vw - ${cardWidth / 2}px - ${currentIndex * (cardWidth + gapWidth)}px)`;
+
+  // Normalized active index (0, 1, or 2) for indicator dots
+  const activeRealIndex = currentIndex % caseStudies.length;
+
+  const handleDotClick = (targetRealIndex) => {
+    setIsAnimated(true);
+    const diff = targetRealIndex - activeRealIndex;
+    setCurrentIndex((prev) => prev + diff);
+  };
+
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.container}>
-        {/* Header with Navigation Controls */}
-        <div className={styles.header}>
-          <h2 className={styles.sectionTitle}>Our Success Stories</h2>
-          <div className={styles.controls}>
-            <button
-              className={styles.navBtn}
-              onClick={() => scroll("left")}
-              aria-label="Previous"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  d="M15 18L9 12L15 6"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <button
-              className={`${styles.navBtn} ${styles.active}`}
-              onClick={() => scroll("right")}
-              aria-label="Next"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-              >
-                <path
-                  d="M9 18L15 12L9 6"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+    <section className="w-full bg-slate-50 pb-16 md:pb-24 overflow-hidden">
+      {/* Header Container */}
+      <Container className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div className="flex flex-col gap-6 max-w-xl">
+          <span className="text-[#667085] text-xs md:text-sm font-bold font-sans uppercase tracking-widest">
+            The results speak for themselves
+          </span>
+          <h2 className="text-[#1D2939] text-2xl md:text-4xl lg:text-5xl font-bold font-serif leading-tight">
+            Real challenges. Measurable outcomes.
+          </h2>
         </div>
 
-        {/* Stories Horizontal List */}
-        <div className={styles.carouselTrack} ref={scrollRef}>
-          {stories.map((story, index) => (
-            <Link href={`/success-stories/${story.link}`} key={index}>
-              <div key={index} className={styles.storyCard}>
-                <div className={styles.textContent}>
-                  <div className={styles.topContent}>
-                    <div className={styles.badgeWrapper}>
-                      <span className={styles.badge}>{story.sector}</span>
+        <Link href="/success-stories">
+          <button className="self-start w-full block md:w-fit md:self-auto px-5 py-3 text-[#344054] text-sm md:text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white transition-colors">
+            View all case studies
+          </button>
+        </Link>
+      </Container>
+
+      {/* Overflow Carousel Container */}
+      <div
+        className="relative w-full overflow-hidden pb-4"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {/* Continuous Horizontal Track */}
+        <div
+          className={`flex ${
+            isAnimated ? "transition-transform duration-500 ease-out" : ""
+          }`}
+          style={{
+            transform: `translateX(${translateXOffset})`,
+            gap: `${gapWidth}px`,
+          }}
+          onTransitionEnd={handleTransitionEnd}
+        >
+          {extendedStudies.map((study, index) => {
+            const isActive = index === currentIndex;
+
+            return (
+              <article
+                key={`${study.id}-${index}`}
+                onClick={() => {
+                  setIsAnimated(true);
+                  setCurrentIndex(index);
+                }}
+                style={{ width: `${cardWidth}px` }}
+                className={`shrink-0 rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden transition-all duration-300 cursor-pointer ${
+                  isActive
+                    ? "opacity-100 shadow-xl scale-100"
+                    : "opacity-60 hover:opacity-85 scale-95"
+                }`}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-12 min-h-[480px]">
+                  {/* Left Side: Dark Image & Quote Overlay */}
+                  <div className="relative md:col-span-7 p-8 md:p-10 flex flex-col justify-end text-white overflow-hidden min-h-[320px] md:min-h-full">
+                    <img
+                      src={study.image}
+                      alt={study.category}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent" />
+
+                    <div className="relative z-10 flex flex-col gap-4">
+                      <span className="text-xs md:text-sm font-bold uppercase tracking-widest text-slate-200">
+                        {study.category}
+                      </span>
+                      <blockquote className="text-xl md:text-2xl font-serif font-bold leading-snug text-white">
+                        {study.quote}
+                      </blockquote>
                     </div>
-                    <h3 className={styles.storyTitle}>{story.title}</h3>
                   </div>
 
-                  <div className={styles.readMore}>
-                    <span className={styles.linkText}>READ MORE</span>
-                    <FaArrowRight className="text-[#1F1F1F]" />
+                  {/* Right Side: Metrics & Author Info */}
+                  <div className="md:col-span-5 p-8 md:p-10 flex flex-col justify-between bg-white gap-8">
+                    <div className="flex flex-col gap-6">
+                      {study.stats.map((stat, sIndex) => (
+                        <div key={sIndex} className="flex flex-col gap-1">
+                          <div className="text-slate-900 text-3xl md:text-4xl font-bold font-serif">
+                            {stat.value}
+                          </div>
+                          <div className="text-slate-500 text-sm md:text-base font-medium font-sans">
+                            {stat.label}
+                          </div>
+                          {sIndex < study.stats.length - 1 && (
+                            <hr className="mt-4 border-slate-100" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-col gap-4 pt-4 border-t border-slate-100">
+                      <div className="text-slate-800 font-sans text-sm md:text-base leading-snug">
+                        <span className="font-bold">{study.author}, </span>
+                        <span className="text-slate-500 font-medium">
+                          {study.role} {study.company}
+                        </span>
+                      </div>
+
+                      <Link
+                        href={study.link}
+                        className="group inline-flex items-center gap-2 text-slate-900 font-bold font-sans text-sm hover:text-indigo-600 transition-colors"
+                      >
+                        <span>Read case study</span>
+                        <svg
+                          className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"
+                          />
+                        </svg>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                <div className={styles.imageWrapper}>
-                  <Image
-                    src={story.image}
-                    width={223}
-                    height={284}
-                    alt={story.sector}
-                  />
-                </div>
-              </div>
-            </Link>
-          ))}
+              </article>
+            );
+          })}
         </div>
+      </div>
+
+      {/* Indicator Pill Bar Navigation */}
+      <div className="flex justify-center items-center gap-2 mt-8">
+        {caseStudies.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => handleDotClick(index)}
+            aria-label={`Go to case study ${index + 1}`}
+            className={`h-2 rounded-full transition-all duration-300 focus:outline-none ${
+              index === activeRealIndex
+                ? "w-10 bg-slate-900"
+                : "w-8 bg-slate-200 hover:bg-slate-300"
+            }`}
+          />
+        ))}
       </div>
     </section>
   );
 };
 
-export default SuccessStories;
+export default CaseStudiesCarousel;
