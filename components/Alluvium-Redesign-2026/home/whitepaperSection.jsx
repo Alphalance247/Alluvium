@@ -9,26 +9,26 @@ const WhitepaperSection = () => {
       <Container className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-20">
         {/* Content Column */}
         <div className="w-full lg:max-w-xl flex flex-col items-start gap-8">
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col items-start">
             {/* Tag / Category */}
-            <span className="text-[#667085] text-sm md:text-base font-bold font-sans uppercase tracking-wider">
+            <span className="text-[#667085] text-sm md:text-base font-bold font-sans uppercase tracking-[1px]">
               White paper
             </span>
 
             {/* Main Section Title */}
-            <h2 className="text-[#1D2939] w-[107%] text-2xl md:text-3xl lg:text-4xl font-bold font-serif leading-tight">
+            <h2 className="text-[#1D2939] w-[100%] mt-4 mb-3 text-2xl md:text-3xl  font-bold font-serif leading-tight">
               The Cloud migration readiness checklist for enterprise Atlassian
               estates
             </h2>
 
             {/* Description Subtext */}
-            <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed">
+            <p className="text-[#344054] text-base mb-3 md:text-lg font-medium font-sans leading-relaxed">
               Where Atlassian licence spend actually goes. A framework for
               auditing your licence position and reclaiming the waste.
             </p>
 
             {/* Date Tag */}
-            <time className="text-[#344054] text-sm font-bold font-sans uppercase tracking-wide pt-1">
+            <time className="text-[#344054] text-sm font-bold font-sans uppercase tracking-wide">
               April 7, 2025
             </time>
           </div>

@@ -4,8 +4,11 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="w-full bg-slate-100 overflow-hidden">
-      <div className=" w-full grid grid-cols-1 lg:grid-cols-2">
+    <section
+      className="w-full overflow-hidden"
+      style={{ background: "linear-gradient(90deg, #EFD7C6 50%, #C2D8F8 50%)" }}
+    >
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2">
         {/* ==========================================
             1. CLAUDE SECTION (LEFT)
         ========================================== */}
@@ -96,7 +99,7 @@ const Hero = () => {
           <div className="relative z-10 flex flex-col items-start gap-6 max-w-xl">
             {/* Brand Logo */}
             <Image
-              src="/assets/Alluvium-Redesign-2026/badges/atlassian-rovo-icon.svg"
+              src="/assets/Alluvium-Redesign-2026/badges/rovo-logo.svg"
               width={48}
               height={48}
               alt="Rovo Logo"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Container from "../common/container";
 import Link from "next/link";
 
@@ -7,7 +7,6 @@ const caseStudies = [
     id: 1,
     category: "Finance",
     quote: "100% compliance achieved for a Tier-1 UK Bank migration.",
-    // '"What stood out wasn\'t just their technical expertise—it was their ability to simplify a highly complex transformation."',
     stats: [
       { value: "100%", label: "decommissioning of tools" },
       {
@@ -25,7 +24,6 @@ const caseStudies = [
     id: 2,
     category: "Telecommunications",
     quote: "Multimillion-Pound Enterprise Agile Framework",
-    // '"What stood out wasn\'t just their technical expertise—it was their ability to simplify a highly complex transformation."',
     stats: [
       { value: "10+", label: "custom training workshops delivered" },
       { value: "3", label: "major tools implemented" },
@@ -40,7 +38,6 @@ const caseStudies = [
     id: 3,
     category: "Finance",
     quote: "Rapid Cloud Migration & Cost Optimization",
-    // '"What stood out wasn\'t just their technical expertise—it was their ability to simplify a highly complex transformation."',
     stats: [
       { value: "100%", label: "migration before renewal deadline" },
       { value: "3", label: "core platforms migrated (Jira, Confluence, JSM)" },
@@ -62,6 +59,8 @@ const extendedStudies = [
 ];
 
 const CaseStudiesCarousel = () => {
+  const trackRef = useRef(null);
+
   // Start at index 3 (first item of the second set)
   const [currentIndex, setCurrentIndex] = useState(3);
   const [isAnimated, setIsAnimated] = useState(true);
@@ -90,6 +89,21 @@ const CaseStudiesCarousel = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Handle instant DOM state sync when loop resets
+  useEffect(() => {
+    if (!isAnimated) {
+      if (trackRef.current) {
+        // Force synchronous layout reflow so browser commits instant position/scale
+        void trackRef.current.offsetHeight;
+      }
+      // Re-enable transition state on next frame so future auto-scrolls animate smoothly
+      const raf = requestAnimationFrame(() => {
+        setIsAnimated(true);
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+  }, [isAnimated]);
+
   // 1. Auto-scroll mechanism (runs every 4s, pauses on hover)
   useEffect(() => {
     if (isHovered) return;
@@ -104,16 +118,18 @@ const CaseStudiesCarousel = () => {
 
   // 2. Seamless infinite reset boundary check
   const handleTransitionEnd = (e) => {
-    // FIX: Only trigger when the main track transform ends, ignoring child scale/opacity transitions
+    // Only trigger when the main track transform ends
     if (e.target !== e.currentTarget) return;
     if (e.propertyName !== "transform") return;
 
-    // When reaching the end of set 2 (index >= 6), silently jump back to set 1 equivalent (index 3)
+    // When reaching or passing set 2, silently jump back to set 1 equivalent
     if (currentIndex >= caseStudies.length * 2) {
       setIsAnimated(false);
-      setCurrentIndex((prev) => prev - caseStudies.length);
+      setCurrentIndex(
+        (prev) => (prev % caseStudies.length) + caseStudies.length,
+      );
     }
-    // When going before set 1 (index < 3), silently jump forward to set 2 equivalent
+    // When going before set 1, silently jump forward to set 2 equivalent
     else if (currentIndex < caseStudies.length) {
       setIsAnimated(false);
       setCurrentIndex((prev) => prev + caseStudies.length);
@@ -160,12 +176,14 @@ const CaseStudiesCarousel = () => {
       >
         {/* Continuous Horizontal Track */}
         <div
-          className={`flex ${
-            isAnimated ? "transition-transform duration-500 ease-out" : ""
-          }`}
+          ref={trackRef}
+          className="flex"
           style={{
             transform: `translateX(${translateXOffset})`,
             gap: `${gapWidth}px`,
+            transition: isAnimated
+              ? "transform 500ms cubic-bezier(0.25, 1, 0.5, 1)"
+              : "none",
           }}
           onTransitionEnd={handleTransitionEnd}
         >
@@ -180,7 +198,9 @@ const CaseStudiesCarousel = () => {
                   setCurrentIndex(index);
                 }}
                 style={{ width: `${cardWidth}px` }}
-                className={`shrink-0 rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden transition-all duration-300 cursor-pointer ${
+                className={`shrink-0 rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden cursor-pointer ${
+                  isAnimated ? "transition-all duration-300" : "transition-none"
+                } ${
                   isActive
                     ? "opacity-100 shadow-xl scale-100"
                     : "opacity-60 hover:opacity-85 scale-95"

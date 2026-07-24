@@ -36,7 +36,7 @@ const EnterpriseSolutionsSection = () => {
       {/* Section Header */}
       <Container className="py-16 md:py-20 lg:pb-24 flex flex-col justify-start items-center gap-12 lg:gap-20">
         <div className="w-full flex flex-col items-start gap-4">
-          <h2 className="text-[#344054] text-3xl md:text-4xl font-bold font-serif leading-tight">
+          <h2 className="text-[#344054] text-3xl md:text-[36px] leading-[44px] font-bold font-serif ">
             How we help enterprises evolve
           </h2>
           <p className="max-w-2xl text-[#344054] text-lg md:text-xl font-medium font-sans leading-relaxed">
@@ -76,9 +76,9 @@ const EnterpriseSolutionsSection = () => {
                 {/* Action Link Button */}
                 <Link
                   href={service.href}
-                  className="group py-2 inline-flex items-center gap-2 text-[#344054] font-bold font-sans text-base transition-colors duration-150 rounded-md"
+                  className="group py-2 inline-flex items-center gap-2 text-[#344054] font-bold text-base transition-colors duration-150 rounded-md"
                 >
-                  <span>{service.actionText}</span>
+                  <span className="font-manrope">{service.actionText}</span>
                   <svg
                     className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-150"
                     fill="none"

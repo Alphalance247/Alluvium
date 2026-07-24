@@ -11,12 +11,12 @@ const AiAdoptionSection = () => {
         <div className="w-full lg:max-w-xl flex flex-col items-start gap-8">
           <div className="flex flex-col items-start gap-4">
             {/* Category / Eyebrow Tag */}
-            <span className="text-[#667085] text-sm md:text-base font-bold font-sans uppercase tracking-wider">
+            <span className="text-[#667085] text-sm md:text-base font-bold font-sans uppercase tracking-[1px]">
               AI Adoption & Training
             </span>
 
             {/* Main Section Title */}
-            <h2 className="text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-tight">
+            <h2 className="text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-[44px]">
               Bring AI into everyday work
             </h2>
 

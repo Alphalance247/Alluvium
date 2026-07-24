@@ -48,7 +48,7 @@ const LogoCloudSection = () => {
         {clientLogos.map((client, index) => (
           <div
             key={index}
-            className="flex items-center justify-center h-16 md:h-20 grayscale  transition-all duration-200"
+            className="flex items-center justify-center h-16 md:h-20  transition-all duration-200"
           >
             <Image
               src={client.logo}
