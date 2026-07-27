@@ -1,7 +1,8 @@
 import React from "react";
 import Container from "../common/container";
-import Button from "components/atlassian-service-reuse/Button";
+// import Button from "components/atlassian-service-reuse/Button";
 import Link from "next/link";
+import Button from "../common/button";
 
 const AiAdoptionSection = () => {
   return (
@@ -29,14 +30,15 @@ const AiAdoptionSection = () => {
             </p>
           </div>
 
-          <Link href={"/ai"} className="w-full lg:w-fit">
+          <Link href={"/ai"} className="w-full lg:w-fit group">
             <div className="w-full lg:w-fit">
-              <button
+              {/* <button
                 type="button"
                 className="px-[20px] py-[12px]  text-[#344054] w-full block lg:w-fit text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] shadow-sm hover:text-white hover:bg-[#091219] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
               >
                 Explore training
-              </button>
+              </button> */}
+              <Button type="button" size="md" variant="secondary">Explore training</Button>
             </div>
           </Link>
         </div>
