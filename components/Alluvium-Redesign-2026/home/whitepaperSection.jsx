@@ -17,14 +17,14 @@ const WhitepaperSection = () => {
 
             {/* Main Section Title */}
             <h2 className="text-[#1D2939] w-[100%] mt-4 mb-3 text-2xl md:text-3xl  font-bold font-serif leading-tight">
-              The Cloud migration readiness checklist for enterprise Atlassian
-              estates
+              Regulatory Supremacy and Competitive Edge
             </h2>
 
             {/* Description Subtext */}
             <p className="text-[#344054] text-base mb-3 md:text-lg font-medium font-sans leading-relaxed">
-              Where Atlassian licence spend actually goes. A framework for
-              auditing your licence position and reclaiming the waste.
+              How Nigerian financial institutions turn CBN compliance into a
+              competitive advantage, with audit trails, mandated SLAs, and
+              change control built into the Atlassian platform.
             </p>
 
             {/* Date Tag */}
@@ -34,20 +34,23 @@ const WhitepaperSection = () => {
           </div>
 
           {/* Action Button */}
-          <Link href={"/whitepaper"} className="w-full lg:w-fit">
+          <Link
+            href={"/whitepaper/regulatory-supremacy-and-competitive-edge/"}
+            className="w-full lg:w-fit"
+          >
             <div className="w-full lg:w-fit">
               <button
                 type="button"
                 className="px-6 py-3  text-[#344054] w-full block lg:w-fit text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] shadow-sm hover:text-white hover:bg-[#091219] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
               >
-                Read the guide
+                Read the whitepaper
               </button>
             </div>
           </Link>
         </div>
 
         <Image
-          src="https://d38rkvi67t4lhi.cloudfront.net/assets/1784628976286-Image-5.png"
+          src="https://d38rkvi67t4lhi.cloudfront.net/assets/1785137011627-Image-8.png"
           alt="Atlassian Cloud Migration Readiness Checklist"
           // className="w-full h-full object-cover object-center"
           width={587}
