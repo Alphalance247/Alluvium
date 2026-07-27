@@ -163,7 +163,6 @@ const CaseStudiesCarousel = () => {
         </div>
 
         <Link href="/success-stories" className="group">
-          {/* <button className="self-start w-full block md:w-fit md:self-auto px-[20px] py-[12px] text-[#344054] text-sm md:text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white transition-colors"> */}
           <Button type="button" size="md" variant="secondary">
             View all case studies
           </Button>
@@ -172,14 +171,14 @@ const CaseStudiesCarousel = () => {
 
       {/* Overflow Carousel Container */}
       <div
-        className="relative w-full overflow-hidden pb-4"
+        className="relative w-full overflow-hidden py-6 pb-8"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Continuous Horizontal Track */}
         <div
           ref={trackRef}
-          className="flex"
+          className="flex items-center"
           style={{
             transform: `translateX(${translateXOffset})`,
             gap: `${gapWidth}px`,
@@ -200,11 +199,13 @@ const CaseStudiesCarousel = () => {
                   setCurrentIndex(index);
                 }}
                 style={{ width: `${cardWidth}px` }}
-                className={`shrink-0 rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden cursor-pointer ${isAnimated ? "transition-all duration-300" : "transition-none"
-                  } ${isActive
-                    ? "opacity-100 shadow-xl scale-100"
-                    : "opacity-60 hover:opacity-85 scale-95"
-                  }`}
+                className={`shrink-0 rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden cursor-pointer ${
+                  isAnimated ? "transition-all duration-300" : "transition-none"
+                } ${
+                  isActive
+                    ? "opacity-100 shadow-2xl scale-100 md:scale-105 z-10 relative"
+                    : "opacity-50 hover:opacity-75 scale-85 md:scale-90 z-0"
+                }`}
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 min-h-[480px]">
                   {/* Left Side: Dark Image & Quote Overlay */}
@@ -287,10 +288,11 @@ const CaseStudiesCarousel = () => {
             key={index}
             onClick={() => handleDotClick(index)}
             aria-label={`Go to case study ${index + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 focus:outline-none ${index === activeRealIndex
-              ? "w-10 bg-slate-900"
-              : "w-8 bg-slate-200 hover:bg-slate-300"
-              }`}
+            className={`h-2 rounded-full transition-all duration-300 focus:outline-none ${
+              index === activeRealIndex
+                ? "w-10 bg-slate-900"
+                : "w-8 bg-slate-200 hover:bg-slate-300"
+            }`}
           />
         ))}
       </div>
