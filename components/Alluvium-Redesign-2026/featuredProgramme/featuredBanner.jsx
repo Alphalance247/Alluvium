@@ -6,7 +6,7 @@ import Link from "next/link";
 const AiAdoptionSection = () => {
   return (
     <section className="w-full bg-[#E6F5F9] overflow-hidden">
-      <Container className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-16">
+      <Container className=" flex flex-col-reverse lg:flex-row items-center justify-between gap-12 lg:gap-24">
         {/* Content Column */}
         <div className="w-full lg:max-w-xl flex flex-col items-start gap-8">
           <div className="flex flex-col items-start gap-4">
@@ -22,16 +22,22 @@ const AiAdoptionSection = () => {
 
             {/* Body Copy */}
             <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed">
-              Adopting AI is a change programme, not a licence purchase. We
+              Adopting AI is a change programme, not a license purchase. We
               choose the right models for the job, deploy them inside your
               security boundary, and design the governance before the rollout,
               not after the incident.
             </p>
           </div>
 
-          {/* Action Button */}
-          <Link href="/ai" className=" w-full md:w-fit">
-            <Button className=" w-full md:w-fit">Learn more</Button>
+          <Link href={"/ai"} className="w-full lg:w-fit">
+            <div className="w-full lg:w-fit">
+              <button
+                type="button"
+                className="px-[20px] py-[12px]  text-[#344054] w-full block lg:w-fit text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] shadow-sm hover:text-white hover:bg-[#091219] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
+              >
+                Explore training
+              </button>
+            </div>
           </Link>
         </div>
 

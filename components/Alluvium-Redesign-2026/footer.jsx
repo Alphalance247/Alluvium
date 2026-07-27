@@ -23,38 +23,38 @@ const services = [
   {
     url: "/enterprise-service-management",
     id: "3",
-    name: "Service Management",
+    name: "Service management",
   },
   {
     url: "/strategic-partnerships",
     id: "4",
-    name: "Strategic Partnerships",
+    name: "Strategic partnerships",
   },
 ];
 
 const company = [
-  { url: "/about", id: "1", name: "about us" },
+  { url: "/about", id: "1", name: "About us" },
   {
     url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
     id: "2",
-    name: "marketplace plugins",
+    name: "Marketplace plugins",
   },
-  { url: "https://alluvium.net/cloud-connect", id: "3", name: "cloud connect" },
-  { url: "https://alluvium.net/event/team24", id: "4", name: "team 24" },
-  { url: "https://alluvium.net/booth53#hero", id: "5", name: "booth 53" },
-  { url: "/contact-us", id: "6", name: "contact us" },
+  { url: "https://alluvium.net/cloud-connect", id: "3", name: "Cloud connect" },
+  { url: "https://alluvium.net/event/team24", id: "4", name: "Team 24" },
+  { url: "https://alluvium.net/booth53#hero", id: "5", name: "Booth 53" },
+  { url: "/contact-us", id: "6", name: "Contact us" },
 ];
 
 const resources = [
-  { url: "https://alluvium.net/blogs", id: "1", name: "success stories" },
-  { url: "https://alluvium.net/blogs", id: "2", name: "blog" },
+  { url: "/success-stories", id: "1", name: "Success stories" },
+  { url: "/blogs", id: "2", name: "Blog" },
   {
     url: "/atlassian-cloud-migration-case-studies",
     id: "3",
-    name: "migration case study",
+    name: "Migration case study",
   },
   { url: "atlassian-case-studies", id: "4", name: "ITSM/JST case study" },
-  { url: "https://alluvium.net/blogs", id: "5", name: "events" },
+  { url: "/event", id: "5", name: "Events" },
 ];
 
 const badges = [
@@ -68,7 +68,7 @@ const badges = [
     img: "/assets/Alluvium-Redesign-2026/badges/GDPR.png",
     width: 68,
     height: 64,
-    alt: "marketplace partner",
+    alt: "Marketplace partner",
   },
   {
     img: "/assets/Alluvium-Redesign-2026/badges/Chamber_of_commer.png",
@@ -113,7 +113,7 @@ const Footer = () => {
                 height={48}
               />
               <div className={styles.location}>
-                You'll find us London, Stamford, Orlando, <br /> Lagos and
+                You'll find us in London, Stamford, Orlando, <br /> Lagos and
                 Nairobi
               </div>
             </div>
