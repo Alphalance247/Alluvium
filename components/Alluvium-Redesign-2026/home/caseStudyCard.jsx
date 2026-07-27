@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Container from "../common/container";
 import Link from "next/link";
+import Button from "../common/button";
 
 const caseStudies = [
   {
@@ -161,10 +162,11 @@ const CaseStudiesCarousel = () => {
           </h2>
         </div>
 
-        <Link href="/success-stories">
-          <button className="self-start w-full block md:w-fit md:self-auto px-[20px] py-[12px] text-[#344054] text-sm md:text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white transition-colors">
+        <Link href="/success-stories" className="group">
+          {/* <button className="self-start w-full block md:w-fit md:self-auto px-[20px] py-[12px] text-[#344054] text-sm md:text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white transition-colors"> */}
+          <Button type="button" size="md" variant="secondary">
             View all case studies
-          </button>
+          </Button>
         </Link>
       </Container>
 
@@ -198,13 +200,11 @@ const CaseStudiesCarousel = () => {
                   setCurrentIndex(index);
                 }}
                 style={{ width: `${cardWidth}px` }}
-                className={`shrink-0 rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden cursor-pointer ${
-                  isAnimated ? "transition-all duration-300" : "transition-none"
-                } ${
-                  isActive
+                className={`shrink-0 rounded-2xl bg-white border border-slate-200 shadow-md overflow-hidden cursor-pointer ${isAnimated ? "transition-all duration-300" : "transition-none"
+                  } ${isActive
                     ? "opacity-100 shadow-xl scale-100"
                     : "opacity-60 hover:opacity-85 scale-95"
-                }`}
+                  }`}
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 min-h-[480px]">
                   {/* Left Side: Dark Image & Quote Overlay */}
@@ -287,11 +287,10 @@ const CaseStudiesCarousel = () => {
             key={index}
             onClick={() => handleDotClick(index)}
             aria-label={`Go to case study ${index + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 focus:outline-none ${
-              index === activeRealIndex
-                ? "w-10 bg-slate-900"
-                : "w-8 bg-slate-200 hover:bg-slate-300"
-            }`}
+            className={`h-2 rounded-full transition-all duration-300 focus:outline-none ${index === activeRealIndex
+              ? "w-10 bg-slate-900"
+              : "w-8 bg-slate-200 hover:bg-slate-300"
+              }`}
           />
         ))}
       </div>
