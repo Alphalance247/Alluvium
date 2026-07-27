@@ -17,7 +17,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -31,7 +31,11 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
         <script
           defer
           async
