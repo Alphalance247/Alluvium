@@ -39,9 +39,9 @@ const company = [
     id: "2",
     name: "Marketplace plugins",
   },
-  { url: "https://alluvium.net/cloud-connect", id: "3", name: "Cloud connect" },
-  { url: "https://alluvium.net/event/team24", id: "4", name: "Team 24" },
-  { url: "https://alluvium.net/booth53#hero", id: "5", name: "Booth 53" },
+  { url: "/cloud-connect", id: "3", name: "Cloud connect" },
+  { url: "/event/team24", id: "4", name: "Team 24" },
+  { url: "/booth53#hero", id: "5", name: "Booth 53" },
   { url: "/contact-us", id: "6", name: "Contact us" },
 ];
 

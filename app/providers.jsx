@@ -4,14 +4,13 @@
 // bootstrap JS, Zoho SalesIQ bootstrap, and GA pageview tracking on
 // client-side navigation.
 import { useEffect, useRef } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import AOS from "aos";
 import { ToastProvider } from "lib/toast";
 import * as ga from "lib/ga";
 
 export default function Providers({ children }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const isFirstLoad = useRef(true);
 
   useEffect(() => {
@@ -26,31 +25,6 @@ export default function Providers({ children }) {
     window.$zoho = { ...window?.$zoho, ...$zoho };
     AOS.init();
   }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
-    }
-
-    const resetScrollPosition = () => {
-      window.requestAnimationFrame(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-        document.documentElement.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "instant",
-        });
-        document.body.scrollTo({ top: 0, left: 0, behavior: "instant" });
-      });
-    };
-
-    resetScrollPosition();
-    const timeoutId = window.setTimeout(resetScrollPosition, 50);
-
-    return () => window.clearTimeout(timeoutId);
-  }, [pathname, searchParams?.toString()]);
 
   // The initial pageview is reported by the inline gtag('config') script in
   // the root layout; only client-side route changes are reported here.
