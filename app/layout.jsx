@@ -9,6 +9,7 @@ import "../styles/globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Providers from "./providers";
+import { ScrollToTop } from "components/Alluvium-Redesign-2026/common/auto-scroll-to-top";
 
 export const metadata = {
   title: "Alluvium",
@@ -68,6 +69,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <ScrollToTop />
         <Providers>{children}</Providers>
       </body>
     </html>
