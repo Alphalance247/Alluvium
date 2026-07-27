@@ -42,6 +42,22 @@ module.exports = {
           800: "var(--color-primary-800)",
           900: "var(--color-primary-900)",
         },
+        default: {
+          25: "#FCF2E8",
+          50: "#F6D5B6",
+          100: "#E37915",
+          200: "#CF6E13",
+          300: "#A1560F",
+
+        },
+        secondary: {
+          100: "#F2F4F7",
+          200: "#091219",
+          900: "#0C111D"
+        },
+        tertiary: {
+          100: "#D0D5DD"
+        }
       },
     },
   },

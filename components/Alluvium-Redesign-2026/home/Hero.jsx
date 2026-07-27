@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Button from "../common/button";
 
 const Hero = () => {
   return (
@@ -61,9 +62,12 @@ const Hero = () => {
 
           {/* CTA Link Button */}
           <Link href="/ai/" className="relative z-10 group w-full md:w-fit">
-            <button className="px-[20px] py-[12px] text-[#344054] block font-bold font-sans text-base rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white  items-center gap-2 transition-all duration-150 w-full md:w-fit">
+            {/* <button className="px-[20px] py-[12px] text-[#344054] block font-bold font-sans text-base rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white  items-center gap-2 transition-all duration-150 w-full md:w-fit">
               <span>Explore Claude services</span>
-            </button>
+            </button> */}
+
+            <Button type="button" className=" " size="md" variant="secondary" >Explore Claude services</Button>
+
           </Link>
         </div>
 
@@ -119,13 +123,19 @@ const Hero = () => {
             </div>
           </div>
 
-          <Link
+          {/* <Link
             href="/cloud-upgrade/"
             className="relative z-10 group w-full md:w-fit"
           >
             <button className="px-[20px] py-[12px] text-[#344054] block font-bold font-sans text-base rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white  items-center gap-2 transition-all duration-150 w-full md:w-fit">
               <span>Explore Atlassian services</span>
             </button>
+          </Link> */}
+          <Link
+            href="/cloud-upgrade/"
+            className="relative z-10 group w-full md:w-fit"
+          >
+            <Button type="button" className=" " size="md" variant="secondary" >Explore Atlassian services</Button>
           </Link>
         </div>
       </div>

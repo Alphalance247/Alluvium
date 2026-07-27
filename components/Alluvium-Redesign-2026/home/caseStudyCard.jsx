@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Container from "../common/container";
 import Link from "next/link";
+import Button from "../common/button";
 
 const caseStudies = [
   {
@@ -161,23 +162,23 @@ const CaseStudiesCarousel = () => {
           </h2>
         </div>
 
-        <Link href="/success-stories">
-          <button className="self-start w-full block md:w-fit md:self-auto px-[20px] py-[12px] text-[#344054] text-sm md:text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white transition-colors">
+        <Link href="/success-stories" className="group">
+          <Button type="button" size="md" variant="secondary">
             View all case studies
-          </button>
+          </Button>
         </Link>
       </Container>
 
       {/* Overflow Carousel Container */}
       <div
-        className="relative w-full overflow-hidden pb-4"
+        className="relative w-full overflow-hidden py-6 pb-8"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {/* Continuous Horizontal Track */}
         <div
           ref={trackRef}
-          className="flex"
+          className="flex items-center"
           style={{
             transform: `translateX(${translateXOffset})`,
             gap: `${gapWidth}px`,
@@ -202,8 +203,8 @@ const CaseStudiesCarousel = () => {
                   isAnimated ? "transition-all duration-300" : "transition-none"
                 } ${
                   isActive
-                    ? "opacity-100 shadow-xl scale-100"
-                    : "opacity-60 hover:opacity-85 scale-95"
+                    ? "opacity-100 shadow-2xl scale-100 md:scale-105 z-10 relative"
+                    : "opacity-50 hover:opacity-75 scale-85 md:scale-90 z-0"
                 }`}
               >
                 <div className="grid grid-cols-1 md:grid-cols-12 min-h-[480px]">
@@ -245,12 +246,12 @@ const CaseStudiesCarousel = () => {
                     </div>
 
                     <div className="flex flex-col gap-4 pt-4 border-t border-slate-100">
-                      <div className="text-slate-800 font-sans text-sm md:text-base leading-snug">
+                      {/* <div className="text-slate-800 font-sans text-sm md:text-base leading-snug">
                         <span className="font-bold">{study.author}, </span>
                         <span className="text-slate-500 font-medium">
                           {study.role} {study.company}
                         </span>
-                      </div>
+                      </div> */}
 
                       <Link
                         href={study.link}
