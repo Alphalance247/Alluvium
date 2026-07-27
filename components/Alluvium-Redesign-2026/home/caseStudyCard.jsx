@@ -156,13 +156,13 @@ const CaseStudiesCarousel = () => {
           <span className="text-[#667085] text-xs md:text-sm font-bold font-sans uppercase tracking-widest">
             The results speak for themselves
           </span>
-          <h2 className="text-[#1D2939] text-2xl md:text-4xl lg:text-5xl font-bold font-serif leading-tight">
+          <h2 className="text-[#1D2939] text-2xl md:text-4xl w-full lg:w-[500px] font-bold font-serif leading-tight">
             Real challenges. Measurable outcomes.
           </h2>
         </div>
 
         <Link href="/success-stories">
-          <button className="self-start w-full block md:w-fit md:self-auto px-5 py-3 text-[#344054] text-sm md:text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white transition-colors">
+          <button className="self-start w-full block md:w-fit md:self-auto px-[20px] py-[12px] text-[#344054] text-sm md:text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white transition-colors">
             View all case studies
           </button>
         </Link>

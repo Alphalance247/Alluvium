@@ -28,9 +28,9 @@ const WhitepaperSection = () => {
             </p>
 
             {/* Date Tag */}
-            <time className="text-[#344054] text-sm font-bold font-sans uppercase tracking-wide">
+            {/* <time className="text-[#344054] text-sm font-bold font-sans uppercase tracking-wide">
               April 7, 2025
-            </time>
+            </time> */}
           </div>
 
           {/* Action Button */}
@@ -41,7 +41,7 @@ const WhitepaperSection = () => {
             <div className="w-full lg:w-fit">
               <button
                 type="button"
-                className="px-6 py-3  text-[#344054] w-full block lg:w-fit text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] shadow-sm hover:text-white hover:bg-[#091219] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
+                className="px-[20px] py-[12px] text-[#344054] w-full block lg:w-fit text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] shadow-sm hover:text-white hover:bg-[#091219] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
               >
                 Read the whitepaper
               </button>

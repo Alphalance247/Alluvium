@@ -33,7 +33,7 @@ const ImpactMetricsSection = () => {
               }`}
             >
               {/* Highlight Badge */}
-              <div className="px-3 py-1 bg-[#F9FAFB] inline-block">
+              <div className="px-[12px] py-[12px] bg-[#F9FAFB] inline-block">
                 <span className="text-slate-900 text-4xl lg:text-5xl font-bold font-serif leading-tight">
                   {metric.value}
                 </span>

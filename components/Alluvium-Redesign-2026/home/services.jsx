@@ -37,7 +37,7 @@ const EnterpriseSolutionsSection = () => {
       <Container className="py-16 md:py-20 lg:pb-24 flex flex-col justify-start items-center gap-12 lg:gap-20">
         <div className="w-full flex flex-col items-start gap-4">
           <h2 className="text-[#344054] text-3xl md:text-[36px] leading-[44px] font-bold font-serif ">
-            How we help enterprises evolve
+            Helping enterprises evolve
           </h2>
           <p className="max-w-2xl text-[#344054] text-lg md:text-xl font-medium font-sans leading-relaxed">
             From cloud modernization to AI-powered operations, we build
