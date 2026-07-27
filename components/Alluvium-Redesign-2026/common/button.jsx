@@ -28,8 +28,8 @@ const Button = ({
     xs: "px-3.5 py-2 text-xs rounded-lg font-bold font-manrope",
     sm: "px-4 py-2.5 rounded-lg text-sm font-bold font-manrope",
     base: "px-4.5 py-2.5 text-base font-bold rounded-lg font-manrope",
-    md: "px-5 py-3 text-base rounded-xl font-bold font-manrope",
-    "semi-lg": "px-6 py-3 text-lg rounded-lg font-bold font-manrope",
+    md: "px-[20px] py-[12px] text-base rounded-xl font-bold font-manrope",
+    "semi-lg": "px-6 py-[10px] text-lg rounded-lg font-bold font-manrope",
     lg: "px-7 py-4 text-lg rounded-2xl font-bold font-manrope",
   };
   const variants = {
