@@ -9,6 +9,7 @@ import "../styles/globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Providers from "./providers";
+import { ScrollToTop } from "components/Alluvium-Redesign-2026/common/auto-scroll-to-top";
 
 export const metadata = {
   title: "Alluvium",
@@ -17,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <script
           dangerouslySetInnerHTML={{
@@ -31,7 +32,11 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script
+          src="https://www.google.com/recaptcha/api.js"
+          async
+          defer
+        ></script>
         <script
           defer
           async
@@ -64,6 +69,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <ScrollToTop />
         <Providers>{children}</Providers>
       </body>
     </html>
