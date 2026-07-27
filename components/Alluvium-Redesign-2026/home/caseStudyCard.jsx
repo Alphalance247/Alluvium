@@ -245,12 +245,12 @@ const CaseStudiesCarousel = () => {
                     </div>
 
                     <div className="flex flex-col gap-4 pt-4 border-t border-slate-100">
-                      <div className="text-slate-800 font-sans text-sm md:text-base leading-snug">
+                      {/* <div className="text-slate-800 font-sans text-sm md:text-base leading-snug">
                         <span className="font-bold">{study.author}, </span>
                         <span className="text-slate-500 font-medium">
                           {study.role} {study.company}
                         </span>
-                      </div>
+                      </div> */}
 
                       <Link
                         href={study.link}
