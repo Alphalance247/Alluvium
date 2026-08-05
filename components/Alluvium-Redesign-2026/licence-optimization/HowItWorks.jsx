@@ -31,7 +31,7 @@ const HowItWorks = () => {
         <div className="bg-white">
             {/* <div className="max-w-7xl mx-auto w-full"> */}
             <Container>
-                <div className=" h-full lg:h-[527px] ">
+                <div className=" h-full  ">
                     <div className="grid gap-12">
                         <div className="">
                             <h5 className="text-4xl leading-[44px] font-bold text-tertiary-300 font-merriweather ">
