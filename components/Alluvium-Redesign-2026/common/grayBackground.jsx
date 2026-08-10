@@ -13,8 +13,8 @@ const GrayBackground = ({ title, description, children, imageUrl, className }) =
                 </div>
                 <div className="flex flex-col lg:flex-row justify-between gap-16 xl:gap-[77px] pt-12">
 
-                    <div className="bg-grey-150 w-full md:w-1/2 lg:w-[575px] rounded-2xl h-[368px] ">
-                        {/* <Image src={imageUrl} alt="image" width={575} height={368} className="rounded-2xl bg-grey-150 w-full h-full" /> */}
+                    <div className=" w-full md:w-1/2 lg:w-[575px] rounded-2xl h-[368px] ">
+                        <Image src={imageUrl} alt="image" width={575} height={368} className="rounded-2xl bg-grey-150 w-full h-full" />
                     </div>
                     <div className='w-full md:w-1/2'>{children}</div>
                 </div>
