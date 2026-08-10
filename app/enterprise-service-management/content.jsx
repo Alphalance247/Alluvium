@@ -7,6 +7,9 @@ import DiscoverySection from "components/Alluvium-Redesign-2026/common/discovery
 import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 import BeyondIT from "components/Alluvium-Redesign-2026/enterprise-management/beyondIT";
 import ExpertiseBridge from "components/Alluvium-Redesign-2026/enterprise-management/expertiseBridge";
+import Hero from "components/Alluvium-Redesign-2026/enterprise-management/hero";
+import ServiceBreakdownSection from "components/Alluvium-Redesign-2026/enterprise-management/serviceSectionBreakdwon";
+import BuildBusinessSection from "components/Alluvium-Redesign-2026/enterprise-management/buildBusiness";
 
 const EnterpriseManagement = () => {
   const triadData = [
@@ -40,60 +43,60 @@ const EnterpriseManagement = () => {
     },
   ];
 
-  const blueprintSteps = [
-    {
-      id: "01",
-      title: "Service Discovery",
-      description:
-        "We map existing departmental workflows, identifying manual 'hidden' processes that cause friction and slow down your internal service delivery.",
-    },
-    {
-      id: "02",
-      title: "Portal Design",
-      description:
-        "We create a user-centric Service Portal that provides a single, intuitive point of entry for employees to access all services.",
-    },
-    {
-      id: "03",
-      title: "Workflow Automation",
-      description:
-        "Our experts build intelligent automation and custom SLAs, ensuring requests are routed to the right team members instantly and accurately.",
-    },
-    {
-      id: "04",
-      title: "Knowledge Integration",
-      description:
-        "We develop self-service Knowledge Bases, empowering your employees to find answers quickly and reducing the ticket volume for your teams.",
-    },
-    {
-      id: "05",
-      title: "Performance Optimization",
-      description:
-        "We implement advanced reporting dashboards, providing leadership with clear visibility into team performance, workload distribution, and overall service health.",
-    },
-  ];
+  // const blueprintSteps = [
+  //   {
+  //     id: "01",
+  //     title: "Service Discovery",
+  //     description:
+  //       "We map existing departmental workflows, identifying manual 'hidden' processes that cause friction and slow down your internal service delivery.",
+  //   },
+  //   {
+  //     id: "02",
+  //     title: "Portal Design",
+  //     description:
+  //       "We create a user-centric Service Portal that provides a single, intuitive point of entry for employees to access all services.",
+  //   },
+  //   {
+  //     id: "03",
+  //     title: "Workflow Automation",
+  //     description:
+  //       "Our experts build intelligent automation and custom SLAs, ensuring requests are routed to the right team members instantly and accurately.",
+  //   },
+  //   {
+  //     id: "04",
+  //     title: "Knowledge Integration",
+  //     description:
+  //       "We develop self-service Knowledge Bases, empowering your employees to find answers quickly and reducing the ticket volume for your teams.",
+  //   },
+  //   {
+  //     id: "05",
+  //     title: "Performance Optimization",
+  //     description:
+  //       "We implement advanced reporting dashboards, providing leadership with clear visibility into team performance, workload distribution, and overall service health.",
+  //   },
+  // ];
 
-  const badges = [
-    {
-      id: "01",
-      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
-      alt: "Cloud Partner",
-      width: "201",
-      height: "134",
-    },
-    {
-      id: "02",
-      imgSrc: "/assets/Alluvium-Redesign-2026/services/itsm.png",
-      alt: "Gold Partner",
-      width: "201",
-      height: "134",
-    },
-  ];
+  // const badges = [
+  //   {
+  //     id: "01",
+  //     imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
+  //     alt: "Cloud Partner",
+  //     width: "201",
+  //     height: "134",
+  //   },
+  //   {
+  //     id: "02",
+  //     imgSrc: "/assets/Alluvium-Redesign-2026/services/itsm.png",
+  //     alt: "Gold Partner",
+  //     width: "201",
+  //     height: "134",
+  //   },
+  // ];
 
   return (
     <>
       <Layout>
-        <ServicesHero
+        {/* <ServicesHero
           badges={badges}
           heading={
             "Enterprise Service Management (ESM): Velocity for Every Department."
@@ -104,20 +107,23 @@ const EnterpriseManagement = () => {
           btnName={"Book a Service Design Consultation"}
           serviceImage={"/assets/Alluvium-Redesign-2026/services/hero3.png"}
           alt={"Abstract background with feature image and partner logos"}
-        />
-        <ServicesCardsSection
+        /> */}
+        <Hero />
+        <ServiceBreakdownSection />
+        <BuildBusinessSection />
+        {/* {/* <ServicesCardsSection
           triadData={triadData}
           heading="Why Enterprise Service Management (ESM)?"
-        />
-        <BeyondIT />
-        <DiscoverySection
+        /> */}
+        {/* <BeyondIT /> */}
+        {/* <DiscoverySection
           heading="The 5-Step ESM Implementation Journey"
           data={blueprintSteps}
           img="/assets/Alluvium-Redesign-2026/services/lage12.png"
         />
         <ExpertiseBridge />
 
-        <CtaSection />
+        <CtaSection />  */}
       </Layout>
     </>
   );

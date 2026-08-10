@@ -11,7 +11,6 @@ export const metadata = {
 export default function Page() {
   return (
     <>
-      <link rel="preload" as="image" href="/assets/redesign-2025/home/high-velocity.webp" />
       <Content />
     </>
   );
