@@ -150,7 +150,7 @@ const LicenseOptimization = () => {
             </Link>
             {/* <div className="lg:w-[420px] w-[250px] md:w-[650px] h-[250px] md:h-[420px] rounded-[16px] bg-[#D9D9D9]"></div> */}
             <div className="w-full h-[634px]">
-              <Image src="https://d38rkvi67t4lhi.cloudfront.net/assets/1786357486427-Image-21.png" alt="hero image" width={644} height={634} className=" object-fill w-full h-full" />
+              <Image src="https://d38rkvi67t4lhi.cloudfront.net/assets/1786357486427-Image-21.png" alt="hero image" width={644} height={634} className=" object-fit h-[400px] w-full lg:w-full lg:h-full " />
             </div>
           </Hero>
           <PlatformOptimisation />
