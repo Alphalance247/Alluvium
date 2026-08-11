@@ -20,6 +20,7 @@ module.exports = {
           25: "var(--color-grey-25)",
           50: "var(--color-grey-50)",
           100: "var(--color-grey-100)",
+          150: "#D9D9D9",
           200: "var(--color-grey-200)",
           300: "var(--color-grey-300)",
           400: "var(--color-grey-400)",
@@ -48,6 +49,7 @@ module.exports = {
           100: "#E37915",
           200: "#CF6E13",
           300: "#A1560F",
+          400: "#EFD7C6"
 
         },
         secondary: {
@@ -56,7 +58,16 @@ module.exports = {
           900: "#0C111D"
         },
         tertiary: {
-          100: "#D0D5DD"
+          100: "#D0D5DD",
+          150: "#F2F4F7",
+          175: "#667085",
+          200: "#344054",
+          300: "#1D2939",
+          400: "#11202D",
+        },
+        lightBlue: {
+          50: "#FFFFFF4D",
+          100: "#C2D8F8"
         }
       },
     },
