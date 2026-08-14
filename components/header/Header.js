@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Dropdown from "./Dropdown";
 import styles from "../../styles/header/header.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const dropdownItems = [
   {

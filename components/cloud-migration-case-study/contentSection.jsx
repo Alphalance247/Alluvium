@@ -1,6 +1,6 @@
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../styles/cloud-migration-case-study/migartionmain.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const ContentSection = ({ item }) => {

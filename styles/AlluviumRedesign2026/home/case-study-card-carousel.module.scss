@@ -74,7 +74,7 @@
 }
 
 .storyCard {
-  flex: 0 0 588px; // Fixed width for desktop
+  // flex:; // Fixed width for desktop
   scroll-snap-align: start;
   height: 320px;
   padding: 16px;
@@ -86,6 +86,7 @@
   gap: 24px;
   transition: border-color 0.3s ease;
   cursor: pointer;
+  gap: 2rem;
 
   &:hover {
     border-color: #d4d4d8;
@@ -104,6 +105,12 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 8px 0 8px 8px;
+  width: 300px;
+
+  @media (max-width: 768px) {
+    width: 250px;
+    padding: 0;
+  }
 }
 
 .badge {

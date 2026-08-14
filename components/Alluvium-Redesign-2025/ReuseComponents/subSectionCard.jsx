@@ -1,5 +1,5 @@
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/sub-section-card.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const SubSectionCard = ({
   gridArray,

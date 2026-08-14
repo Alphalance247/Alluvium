@@ -9,7 +9,7 @@ import {
 import { ourServicesData } from "data";
 import NewNavbar from "./Alluvium-Redesign-2025/navbar/NewNavbar";
 import MobileNavbar from "./Alluvium-Redesign-2025/navbar/MobileNavbar";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Navigation({ theme }) {
   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
@@ -81,8 +81,8 @@ export default function Navigation({ theme }) {
           {/* <Link href="/atlassian-services/support">
             <a className={styles.contactUsButton}>Support</a>
           </Link> */}
-          <Link href="/contact-us">
-            <a className={styles.scheduleButton}>Contact Us</a>
+          <Link href="/contact-us" className={styles.scheduleButton}>
+            Contact Us
           </Link>
         </div>
         <button

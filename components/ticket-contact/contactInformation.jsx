@@ -6,7 +6,7 @@ import DetailsContact from "components/cloud-connect-common/details";
 import { useState, useEffect, useRef } from "react";
 import OrderSummary from "components/cloud-connect-common/orderSummary";
 import axios from "axios";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import { useRouter } from "next/router";
 import { environment } from "env/env.local";
 

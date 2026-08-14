@@ -1,7 +1,7 @@
 "use client";
 import React, { Component } from "react";
 import Slider from "react-slick";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/eventblog.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

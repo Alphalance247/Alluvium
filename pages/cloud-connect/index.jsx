@@ -9,7 +9,7 @@ import WhyAttend from "components/cloud-connect-2/Home/WhyAttend";
 import Head from "next/head";
 import Layout from "../../components/cloud-connect-2/Layout";
 import Partners from "components/cloud-connect-common/partners";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function Home() {
   return (

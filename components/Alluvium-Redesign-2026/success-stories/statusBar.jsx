@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../../styles/AlluviumRedesign2026/success-stories/status-bar.module.scss";
 
 const StatsBar = ({ stats = [] }) => {

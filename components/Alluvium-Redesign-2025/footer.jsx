@@ -1,5 +1,5 @@
 import styles from "../../styles/AlluviumRedesign2025/footer.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import HighLight from "./ReuseComponents/highlight";
 import ReadMore from "./ReuseComponents/readmore";
@@ -268,7 +268,7 @@ const Footer = () => {
 
                           {showreadmore === i && (
                             // <div data-aos-delay="300" data-aos="fade-up">
-                            <ReadMore content="Read More" />
+                            (<ReadMore content="Read More" />)
                             // </div>
                           )}
                         </div>

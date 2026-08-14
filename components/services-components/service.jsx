@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import { MdDoubleArrow } from "react-icons/md";
 import styles from "../../styles/services.module.scss";

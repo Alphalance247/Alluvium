@@ -1,5 +1,5 @@
 import styles from "../../styles/AlluviumRedesign2025/contactSection.module.scss";
-import { useToasts } from "react-toast-notifications";
+import { useToasts } from "lib/toast";
 import { validateEmail } from "lib/validation";
 import axios from "axios";
 import { environment } from "env/env.local";

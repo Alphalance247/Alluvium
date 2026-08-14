@@ -1,7 +1,7 @@
 import Button from "components/cloud-connect-2/Button";
 import styles from "../../styles/cloud2.4/general.module.scss";
 import { useRouter } from "next/router";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState, useEffect } from "react";
 
 const OrderSummary = ({

@@ -1,5 +1,31 @@
 @import "./lib/fonts.scss";
 
+:root {
+  --color-grey-25: #FCFCFD;
+  --color-grey-50: #F9FAFB;
+  --color-grey-100: #F2F4F7;
+  --color-grey-200: #EAECF0;
+  --color-grey-300: #D0D5DD;
+  --color-grey-400: #98A2B3;
+  --color-grey-500: #667085;
+  --color-grey-600: #475467;
+  --color-grey-700: #344054;
+  --color-grey-800: #1D2939;
+  --color-grey-900: #101828;
+
+  --color-primary-25: #FCFAFF;
+  --color-primary-50: #F9F5FF;
+  --color-primary-100: #F4EBFF;
+  --color-primary-200: #E9D7FE;
+  --color-primary-300: #D6BBFB;
+  --color-primary-400: #B692F6;
+  --color-primary-500: #9E77ED;
+  --color-primary-600: #7F56D9;
+  --color-primary-700: #6941C6;
+  --color-primary-800: #53389E;
+  --color-primary-900: #42307D;
+}
+
 *,
 html,
 body {

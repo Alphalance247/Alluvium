@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/AlluviumRedesign2026/swp/hero.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 export default function SWPHero() {

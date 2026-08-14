@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "../../../styles/cloud-connect-2/Home/speakers.module.scss";
 import Button from "../Button";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const speakers = [
   {

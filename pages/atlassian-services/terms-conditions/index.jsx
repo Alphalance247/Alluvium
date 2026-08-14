@@ -44,7 +44,7 @@ const AtlassianTermsAndConditions = () => {
           {data.map((el) => {
             return (
               <div key={el.id}>
-                <Link href={`/atlassian-services/${el?.url}`} passHref>
+                <Link href={`/atlassian-services/${el?.url}`}>
                   <div className={styles.migration__services}>
                     <h2>{el?.heading}</h2>
                     <p>{el?.lastUpdated}</p>

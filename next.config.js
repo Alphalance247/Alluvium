@@ -1,24 +1,17 @@
-const path = require("path");
-
+/** @type {import('next').NextConfig} */
 module.exports = {
-  // basePath: "/docs",
-  swcMinify: true,
-
-  env: {
-    NEXT_PUBLIC_SMTP_USERNAME: process.env.NEXT_PUBLIC_SMTP_USERNAME,
-    NEXT_PUBLIC_SMTP_PASS: process.env.NEXT_PUBLIC_SMTP_PASS,
-    AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE:
-      process.env.AMPLIFY_NEXTJS_EXPERIMENTAL_TRACE,
+  // Don't emit server source maps in production builds — they added ~95MB to
+  // .next/server, pushing the deploy bundle over Amplify's 220 MiB limit.
+  experimental: {
+    serverSourceMaps: false,
   },
-
   images: {
-    domains: ["blog.alluvium.net", "pest.ec2.alluvium.net"],
+    remotePatterns: [
+      { hostname: "blog.alluvium.net" },
+      { hostname: "d38rkvi67t4lhi.cloudfront.net" },
+      { hostname: "pest.ec2.alluvium.net" },
+    ],
   },
-
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
-
   async redirects() {
     return [
       {

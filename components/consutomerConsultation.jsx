@@ -1,4 +1,4 @@
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { ToastProvider, useToasts } from "lib/toast";
 import { validateEmail } from "lib/validation";
 import styles from "../styles/booking.module.scss";
 import React, { useState } from "react";

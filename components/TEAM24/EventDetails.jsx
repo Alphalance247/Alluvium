@@ -1,5 +1,5 @@
 import styles from "../../styles/team.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import CountryCode from "./countryInput";
 
 const EventDetails = () => {

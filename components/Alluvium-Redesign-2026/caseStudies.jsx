@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../styles/AlluviumRedesign2026/home/case-studies.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export default function CaseStudies() {
   return (

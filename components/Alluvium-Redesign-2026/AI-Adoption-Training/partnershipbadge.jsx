@@ -1,5 +1,5 @@
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/hero.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const PartnershipBadge = () => {
   return (

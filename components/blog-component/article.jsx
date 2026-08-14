@@ -1,5 +1,5 @@
 import styles from "../../styles/blogpost.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Articledata } from "./informationItem";
 import Link from "next/link";
 import BlogCard from "./blogCard";
