@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="w-full bg-secondary-900 overflow-hidden">
       <div className="flex flex-col lg:flex-row items-stretch">
         {/* Content */}
-        <div className="w-full lg:max-w-xl xl:max-w-2xl mx-auto flex-shrink-0 flex flex-col items-start gap-8 px-6 py-16 md:px-12 md:py-20 lg:pl-28 lg:pr-10 lg:py-24">
+        <div className="w-full lg:max-w-xl 2xl:max-w-2xl mx-auto flex-shrink-0 flex flex-col items-start gap-8 px-6 py-16 md:px-12 md:py-20 lg:pl-28 lg:pr-10 lg:py-24">
           <div className="flex flex-col items-start gap-4">
             <h1 className="text-white text-4xl md:text-5xl font-bold font-merriweather leading-tight md:leading-[68px]">
               Service management
