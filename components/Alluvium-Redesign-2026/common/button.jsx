@@ -39,7 +39,7 @@ const Button = ({
       "border-[1px] border-secondary-900  inline-flex items-center gap-2 transition-all duration-150 ",
     defaultSecondary: "bg-secondary-900 text-white inline-flex items-center gap-2 transition-all duration-150 font-manrope",
     secondary:
-      "border-[1px] border-secondary-900 bg-white hover:bg-secondary-900 text-[#344054] group-hover:bg-secondary-900 group-hover:text-white inline-flex items-center gap-2 transition-all duration-150 group-hover:font-sans",
+      "border-[1px] border-secondary-900 bg-white hover:bg-secondary-900 text-[#344054] group-hover:bg-secondary-900  inline-flex items-center gap-2 transition-all duration-150 group-hover:font-sans",
     tertiary: "border-[1px] border-tertiary",
   };
   return (

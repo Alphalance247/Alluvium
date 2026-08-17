@@ -38,10 +38,7 @@ const WhitepaperSection = () => {
           </div>
 
           {/* Action Button */}
-          <Link
-            href={"/whitepaper/regulatory-supremacy-and-competitive-edge/"}
-            className="w-full lg:w-fit group"
-          >
+          <Link href={"/contact-us/"} className="w-full lg:w-fit group">
             {/* <div className="w-full lg:w-fit">
               <button
                 type="button"
