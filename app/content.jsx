@@ -57,11 +57,12 @@ const Home = () => {
         </div> */}
         <WhitepaperSection />
         <EnterpriseSolutionsSection />
+        <CaseStudyNew />
         <LogoCloudSection />
         {/* <ImpactMetricsSection /> */}
         {/* <FeaturedProgramme /> */}
         {/* <CaseStudiesCarousel /> */}
-        <CaseStudyNew />
+
         <CtaBannerSection />
 
         {/* <PillarsSection />
