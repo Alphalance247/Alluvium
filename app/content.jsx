@@ -6,12 +6,14 @@ import { badges } from "data";
 import FeaturedProgramme from "components/Alluvium-Redesign-2026/featuredProgramme/featuredBanner";
 import GifHero from "components/Alluvium-Redesign-2026/home-hero/gifHero";
 import Hero from "components/Alluvium-Redesign-2026/home/Hero";
+import HeroCallToAction from "components/Alluvium-Redesign-2026/home/heroCallToAction";
 import WhitepaperSection from "components/Alluvium-Redesign-2026/home/whitepaperSection";
 import ImpactMetricsSection from "components/Alluvium-Redesign-2026/home/impactMetric";
 import EnterpriseSolutionsSection from "components/Alluvium-Redesign-2026/home/services";
 import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
 import LogoCloudSection from "components/Alluvium-Redesign-2026/home/badges";
 import CaseStudiesCarousel from "components/Alluvium-Redesign-2026/home/caseStudyCard";
+import CaseStudyNew from "components/Alluvium-Redesign-2026/home/caseStudyNew";
 
 const badgesImages = [
   {
@@ -38,6 +40,7 @@ const Home = () => {
         {/* <SWPHero /> */}
         {/* <Team26Hero /> */}
         <Hero />
+        <HeroCallToAction />
         {/* <GifHero /> */}
         {/* <AiAdoptionHero /> */}
 
@@ -52,12 +55,13 @@ const Home = () => {
             <Badges variant={"sub-default"} badgesData={badges} />
           </div>
         </div> */}
-        <LogoCloudSection />
         <WhitepaperSection />
         <EnterpriseSolutionsSection />
-        <ImpactMetricsSection />
-        <FeaturedProgramme />
-        <CaseStudiesCarousel />
+        <LogoCloudSection />
+        {/* <ImpactMetricsSection /> */}
+        {/* <FeaturedProgramme /> */}
+        {/* <CaseStudiesCarousel /> */}
+        <CaseStudyNew />
         <CtaBannerSection />
 
         {/* <PillarsSection />

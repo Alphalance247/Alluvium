@@ -1,24 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
-import Button from "../common/button";
 
 const Hero = () => {
   return (
     <section
       className="w-full overflow-hidden relative"
-      style={{ background: "linear-gradient(90deg, #EFD7C6 50%, #C2D8F8 50%)" }}
+      style={{ background: "linear-gradient(90deg, #EFD7C6 50%, #F2F4F7 50%)" }}
     >
-      <div className="absolute top-0 left-0 w-28 md:w-36 pointer-events-none select-none z-0 hidden md:block">
-        <Image
-          src="/assets/Alluvium-Redesign-2026/badges/claude-descrip.png"
-          alt="Claude Top Left Decoration"
-          width={200}
-          height={200}
-          priority
-          className="w-full h-auto object-contain"
-        />
-      </div>
       <div className="absolute top-0 right-0 w-36 md:w-48 pointer-events-none select-none z-[100] hidden md:block">
         <Image
           src="/assets/Alluvium-Redesign-2026/badges/cloud-illus-c.svg"
@@ -34,10 +22,20 @@ const Hero = () => {
             1. CLAUDE SECTION (LEFT)
         ========================================== */}
         <div className="relative flex flex-col justify-between items-start gap-8 px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-28 bg-[#EFD7C6] border-b lg:border-b-0 lg:border-r border-slate-200 overflow-hidden">
-          {/* Top-Left Corner Illustration (Constellation / Hand Node) */}
+          {/* Top-Right Corner Illustration (Constellation / Hand Node) */}
+          <div className="absolute top-0 right-0 w-28 md:w-[163px] pointer-events-none select-none z-0 hidden md:block">
+            <Image
+              src="/assets/Alluvium-Redesign-2026/badges/claude-descrip.svg"
+              alt="Claude Top Left Decoration"
+              width={163}
+              height={228}
+              priority
+              className="w-full h-auto object-contain"
+            />
+          </div>
 
           {/* Header Content */}
-          <div className="relative z-10 flex flex-col items-start gap-6 max-w-xl">
+          <div className="relative z-10 flex flex-col items-start gap-8 max-w-xl">
             {/* Brand Logo */}
             <Image
               src="/assets/Alluvium-Redesign-2026/badges/claude-logo.svg"
@@ -49,36 +47,28 @@ const Hero = () => {
 
             {/* Title & Description */}
             <div className="flex flex-col items-start gap-4">
-              <h1 className="text-[#1D2939] text-3xl  md:text-4xl font-bold font-serif leading-tight">
-                Claude works where the thinking happens.
+              <h1 className="text-[#1D2939] text-2xl md:text-3xl font-bold font-serif leading-tight">
+                Claude
               </h1>
-              <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed">
+              <div className="w-12 h-[2px] bg-[#D97757]" />
+              <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed w-[full] md:w-[400px]">
                 Claude reasons across email, Slack, documents and the web to
-                handle the work that has no template. Alluvium deploys it
-                securely and builds the agents your teams need.
+                handle the work that has no template.{" "}
+                <span className="font-bold">
+                  Alluvium deploys it securely and builds the agents your teams
+                  need.
+                </span>
               </p>
             </div>
           </div>
-
-          {/* CTA Link Button */}
-          <Link href="/ai/" className="relative z-10 group w-full md:w-fit">
-            {/* <button className="px-[20px] py-[12px] text-[#344054] block font-bold font-sans text-base rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white  items-center gap-2 transition-all duration-150 w-full md:w-fit">
-              <span>Explore Claude services</span>
-            </button> */}
-
-            <Button type="button" className=" " size="md" variant="secondary" >Explore Claude services</Button>
-
-          </Link>
         </div>
 
         {/* ==========================================
             2. ROVO SECTION (RIGHT)
         ========================================== */}
-        <div className="relative flex flex-col justify-between items-start gap-8 px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-28 bg-[#C2D8F8] overflow-hidden">
-          {/* ICON 1: Top-Right Corner Cloud Illustration */}
-
-          {/* ICON 2: Middle/Bottom-Left Paper Plane Vector */}
-          <div className="absolute top-1/4 -left-3 md:-left-4 w-12 md:w-16 pointer-events-none select-none z-20 hidden md:block">
+        <div className="relative flex flex-col justify-between items-start gap-8 px-6 py-16 md:px-12 md:py-20 lg:px-20 lg:py-28 bg-[#F2F4F7] overflow-hidden">
+          {/* Bottom-Left Paper Plane Vector */}
+          <div className="absolute bottom-0 left-0 w-12 md:w-16 pointer-events-none select-none z-20 hidden md:block">
             <Image
               src="/assets/Alluvium-Redesign-2026/badges/Illustration.svg"
               alt="Rovo Paper Plane Vector"
@@ -88,19 +78,8 @@ const Hero = () => {
             />
           </div>
 
-          {/* ICON 3: Bottom-Left Cloud Illustration */}
-          <div className="absolute bottom-0 left-0 w-44 md:w-56 pointer-events-none select-none z-0 hidden md:block">
-            <Image
-              src="/assets/Alluvium-Redesign-2026/badges/cloud-illus-clear.svg"
-              alt="Rovo Bottom Cloud"
-              width={220}
-              height={140}
-              className="w-full h-auto object-contain"
-            />
-          </div>
-
           {/* Header Content */}
-          <div className="relative z-10 flex flex-col items-start gap-6 max-w-xl">
+          <div className="relative z-10 flex flex-col items-start gap-8 max-w-xl">
             {/* Brand Logo */}
             <Image
               src="/assets/Alluvium-Redesign-2026/badges/rovo-logo.svg"
@@ -112,31 +91,17 @@ const Hero = () => {
 
             {/* Title & Description */}
             <div className="flex flex-col items-start gap-4">
-              <h1 className="text-[#1D2939] w-full text-3xl md:text-4xl font-bold font-serif leading-tight">
-                Rovo works where the work already lives.
+              <h1 className="text-[#1D2939] w-full text-2xl md:text-3xl font-bold font-serif leading-tight">
+                Rovo
               </h1>
-              <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed">
+              <div className="w-12 h-[2px] bg-[#1868DB]" />
+              <p className="text-[#344054] text-base md:text-lg font-medium font-sans  w-[full] md:w-[400px] leading-relaxed">
                 Rovo is native to Jira, Confluence and JSM, governed by the
                 permissions you already trust. Alluvium builds the Rovo agents
                 that carry repeatable work at scale.
               </p>
             </div>
           </div>
-
-          {/* <Link
-            href="/cloud-upgrade/"
-            className="relative z-10 group w-full md:w-fit"
-          >
-            <button className="px-[20px] py-[12px] text-[#344054] block font-bold font-sans text-base rounded-lg border-[1px] border-[#091219] hover:bg-[#091219] hover:text-white  items-center gap-2 transition-all duration-150 w-full md:w-fit">
-              <span>Explore Atlassian services</span>
-            </button>
-          </Link> */}
-          <Link
-            href="/cloud-upgrade/"
-            className="relative z-10 group w-full md:w-fit"
-          >
-            <Button type="button" className=" " size="md" variant="secondary" >Explore Atlassian services</Button>
-          </Link>
         </div>
       </div>
     </section>
