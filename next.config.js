@@ -17,7 +17,7 @@ module.exports = {
       {
         source: "/support/contact",
         destination: "/contact-us",
-        permanent: true, // triggers 308
+        permanent: true,
       },
     ];
   },

@@ -1,99 +1,96 @@
 import React from "react";
-import Container from "../common/container";
 import Image from "next/image";
 import Link from "next/link";
+import Container from "../common/container";
+import { FaArrowRight } from "react-icons/fa6";
+
+const services = [
+  {
+    title: "Atlassian cloud upgrade",
+    description: "Move off Server or Data Center with zero data loss.",
+    href: "/cloud-upgrade",
+    icon: "/assets/Alluvium-Redesign-2026/home/carbon_cloud-infra-migration.svg",
+  },
+  {
+    title: "ESM & ITSM consulting",
+    description: "One service platform for IT, HR, Finance, Legal, and Ops.",
+    href: "/enterprise-service-management",
+    icon: "/assets/Alluvium-Redesign-2026/home/ESM.svg",
+  },
+  {
+    title: "License & token optimization",
+    description: "Every Atlassian seat and Claude token earning its place.",
+    href: "/license-optimization",
+    icon: "/assets/Alluvium-Redesign-2026/home/licence-token.svg",
+  },
+  {
+    title: "AI solutions — Claude & Rovo",
+    description: "AI embedded in the tools your teams already use.",
+    href: "/ai",
+    icon: "/assets/Alluvium-Redesign-2026/home/ai-solutions.svg",
+  },
+  {
+    title: "Strategic partnerships",
+    description:
+      "Delivery capacity for consultancies and ISVs who need an Atlassian or AI bench.",
+    href: "/strategic-partnerships",
+    icon: "/assets/Alluvium-Redesign-2026/home/strategic-partner.svg",
+  },
+];
 
 const EnterpriseSolutionsSection = () => {
-  const services = [
-    {
-      title: "Migration",
-      description:
-        "Move to Atlassian Cloud and roll out Claude without stalling delivery. We plan, govern, and stay through adoption.",
-      actionText: "Explore migration",
-      href: "/cloud-upgrade",
-      icon: "/assets/Alluvium-Redesign-2026/home/database.svg",
-    },
-    {
-      title: "Service management",
-      description:
-        "Modern service delivery built on Jira Service Management, with Claude and Rovo working alongside.",
-      actionText: "Explore service management",
-      href: "/enterprise-service-management",
-      icon: "/assets/Alluvium-Redesign-2026/home/box.svg",
-    },
-    {
-      title: "License & token optimization",
-      description:
-        "Reduce license and token spend while maximizing adoption across both ecosystems.",
-      actionText: "Explore license & token optimization",
-      href: "/license-optimization",
-      icon: "/assets/Alluvium-Redesign-2026/home/token-optimization.svg",
-    },
-  ];
-
   return (
-    <section className="w-full bg-[#FCF2E8]">
-      {/* Section Header */}
-      <Container className="py-16 md:py-20 lg:pb-24 flex flex-col justify-start items-center gap-12 lg:gap-20">
-        <div className="w-full flex flex-col items-start gap-4">
-          <h2 className="text-[#344054] text-3xl md:text-[36px] leading-[44px] font-bold font-serif ">
-            Helping enterprises evolve
+    <section className="w-full bg-[#F2F4F7] overflow-hidden">
+      <Container className="flex flex-col items-start gap-12 lg:gap-20">
+        {/* Section Header */}
+        <div className="flex flex-col items-start gap-6 max-w-xl">
+          <div className="flex items-center gap-2">
+            <span className="w-5 h-1 bg-[#E37915]" />
+            <span className="text-[#1D2939] text-sm font-bold font-sans uppercase">
+              Our services
+            </span>
+          </div>
+          <h2 className="text-[#1D2939] text-3xl md:text-[2.5rem] font-bold font-serif leading-tight">
+            One platform. Five ways in.
           </h2>
-          <p className="max-w-2xl text-[#344054] text-lg md:text-xl font-medium font-sans leading-relaxed">
-            From cloud modernization to AI-powered operations, we build
-            connected systems that are secure and scalable.
-          </p>
         </div>
 
-        {/* Services Cards Grid */}
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-8">
+        {/* Services List */}
+        <div className="w-full flex flex-col">
           {services.map((service, index) => (
             <div
-              key={index}
-              className="flex flex-col justify-between items-start gap-8"
+              key={service.title}
+              className={`w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 py-6 border-b border-slate-200 ${
+                index === 0 ? "border-t" : ""
+              }`}
             >
-              {/* Service Icon Box */}
-              <div className="w-[72px] h-[72px] mb-8 bg-white rounded-xl border border-slate-200 flex items-center justify-center shadow-xs">
-                <Image
-                  src={service.icon}
-                  width={48}
-                  height={48}
-                  alt={service.title}
-                />
-              </div>
-
-              {/* Card Content & CTA */}
-              <div className="w-full flex flex-col items-start gap-6">
-                <div className="flex flex-col items-start gap-3">
-                  <h3 className="text-[#344054] text-2xl font-bold font-serif leading-snug">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 shrink-0 flex items-center justify-center">
+                  <Image
+                    src={service.icon}
+                    width={40}
+                    height={40}
+                    alt={service.title}
+                    className="w-10 h-10 object-contain"
+                  />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-[#1D2939] text-xl font-semibold font-sans">
                     {service.title}
                   </h3>
                   <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed">
                     {service.description}
                   </p>
                 </div>
-
-                {/* Action Link Button */}
-                <Link
-                  href={service.href}
-                  className="group py-2 inline-flex items-center gap-2 text-[#344054] font-bold text-base transition-colors duration-150 rounded-md"
-                >
-                  <span className="font-manrope">{service.actionText}</span>
-                  <svg
-                    className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-150"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </Link>
               </div>
+
+              <Link
+                href={service.href}
+                className="group shrink-0 inline-flex items-center gap-2 py-2 text-[#344054] font-bold text-base font-sans transition-colors duration-150 self-start sm:self-center"
+              >
+                <span>Explore solution</span>
+                <FaArrowRight className="w-4 h-4 transition-transform duration-150 group-hover:translate-x-1" />
+              </Link>
             </div>
           ))}
         </div>
