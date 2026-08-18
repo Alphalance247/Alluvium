@@ -28,10 +28,8 @@ const WhitepaperSection = () => {
             <p className="text-[#667085] text-base mb-0 md:text-lg font-medium font-sans leading-relaxed">
               3 September, 155 Bishopsgate, London, Our CEO, Taiwo Ojo, is
               speaking on the main stage. See you there or{" "}
-              <Link href="/contact-us/" className="text-[#344054] font-bold">
-                contact us
-              </Link>{" "}
-              if you’d like to be part of the conversation.
+              <span className="text-[#344054] font-bold">contact us</span> if
+              you’d like to be part of the conversation.
             </p>
 
             {/* Date Tag */}
@@ -51,7 +49,7 @@ const WhitepaperSection = () => {
 
         <div>
           <Image
-            src="https://d38rkvi67t4lhi.cloudfront.net/assets/1786701308245-Image-9.png"
+            src="https://d38rkvi67t4lhi.cloudfront.net/assets/1787058794370-Image-9.png"
             alt="Hr Analytics Summit, London - Alluvium"
             // className="w-full h-full object-cover object-center"
             width={587}
