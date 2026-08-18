@@ -107,7 +107,7 @@ const CaseStudyNew = () => {
           {caseStudies.map((study) => (
             <div
               key={study.id}
-              className="snap-start shrink-0 w-[85%] sm:w-[70%] lg:w-[80%] bg-[#F2F4F7] rounded-lg p-8 md:p-10 flex flex-col justify-between gap-10 min-h-[360px] md:min-h-[420px]"
+              className="case-study-card snap-start shrink-0 w-[85%] sm:w-[70%] lg:w-[80%] rounded-lg p-8 md:p-10 flex flex-col justify-between gap-10 min-h-[360px] md:min-h-[420px]"
             >
               <h3 className="text-[#1D2939] max-w-xl text-2xl md:text-3xl font-bold font-serif leading-snug">
                 {study.title}
@@ -155,24 +155,26 @@ const CaseStudyNew = () => {
         </div>
 
         {/* Pagination & Controls */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center">
+          <div />
+
+          <div className="flex items-center gap-2 justify-self-center">
             {caseStudies.map((study, index) => (
               <button
                 key={study.id}
                 type="button"
                 aria-label={`Go to case study ${index + 1}`}
                 onClick={() => goTo(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 rounded-full transition-colors duration-300 ${
                   index === currentIndex
-                    ? "w-8 bg-[#091219]"
-                    : "w-2 bg-white/40 hover:bg-white/60"
+                    ? "bg-[#091219]"
+                    : "bg-white/40 hover:bg-white/60"
                 }`}
               />
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 justify-self-end">
             <button
               type="button"
               aria-label="Previous case study"
@@ -218,6 +220,23 @@ const CaseStudyNew = () => {
           </div>
         </div>
       </Container>
+
+      <style jsx>{`
+        .case-study-card {
+          background-color: #f2f4f7;
+          transition: background-color 0.3s ease;
+        }
+        .case-study-card:hover {
+          background-color: #f6d5b6;
+          background-image: repeating-linear-gradient(
+            to right,
+            rgba(29, 41, 57, 0.06) 0px,
+            rgba(29, 41, 57, 0.06) 1px,
+            transparent 1px,
+            transparent 12px
+          );
+        }
+      `}</style>
     </section>
   );
 };

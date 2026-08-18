@@ -30,11 +30,6 @@ const services = [
     id: "4",
     name: "Strategic partnerships",
   },
-  {
-    url: "/ai",
-    id: "5",
-    name: "AI solutions",
-  },
 ];
 
 const company = [

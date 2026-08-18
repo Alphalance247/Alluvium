@@ -53,11 +53,8 @@ const Hero = () => {
               <div className="w-12 h-[2px] bg-[#D97757]" />
               <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed w-[full] md:w-[400px]">
                 Claude reasons across email, Slack, documents and the web to
-                handle the work that has no template.{" "}
-                <span className="font-bold">
-                  Alluvium deploys it securely and builds the agents your teams
-                  need.
-                </span>
+                handle the work that has no template. Alluvium deploys it
+                securely and builds the agents your teams need.
               </p>
             </div>
           </div>

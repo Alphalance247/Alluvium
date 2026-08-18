@@ -13,7 +13,6 @@ const AtlassianTokenCredentialSecurity = () => {
             className=" "
             title="Atlassian Token & Credential Security"
             description="Licences aren't the only risk. Unmanaged API tokens and credentials create security gaps."
-            imageUrl="https://d38rkvi67t4lhi.cloudfront.net/assets/1786366585947-image-1-1.png"
         >
             <div className="flex flex-col gap-4 ">
                 <div>

@@ -32,7 +32,12 @@ const CtaBannerSection = () => {
 
           {/* CTA Button */}
           <Link href="/contact-us" className="w-full md:w-fit">
-            <Button size="md" variant="secondary" type="button">
+            <Button
+              size="md"
+              variant="secondary"
+              type="button"
+              className="!bg-white hover:!bg-black hover:!text-white text-black"
+            >
               <span>Contact us</span>
             </Button>
           </Link>

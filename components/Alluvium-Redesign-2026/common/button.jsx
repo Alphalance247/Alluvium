@@ -37,9 +37,10 @@ const Button = ({
     default: "border-[1px] border-default-100",
     plainSecondary:
       "border-[1px] border-secondary-900  inline-flex items-center gap-2 transition-all duration-150 ",
-    defaultSecondary: "bg-secondary-900 text-white inline-flex items-center gap-2 transition-all duration-150 font-manrope",
+    defaultSecondary:
+      "bg-secondary-900 text-white inline-flex items-center gap-2 transition-all duration-150 font-manrope",
     secondary:
-      "border-[1px] border-secondary-900 bg-white hover:bg-secondary-900 text-[#344054] group-hover:bg-secondary-900  inline-flex items-center gap-2 transition-all duration-150 group-hover:font-sans",
+      "border-[1px] border-secondary-900 hover:bg-secondary-900 text-[#344054] group-hover:bg-secondary-900 group-hover:text-white inline-flex items-center gap-2 transition-all duration-150 group-hover:font-sans",
     tertiary: "border-[1px] border-tertiary",
   };
   return (
@@ -51,7 +52,6 @@ const Button = ({
         ${sizes[size]}
         transition-all
         duration-300
-        
         disabled:opacity-50
         disabled:cursor-not-allowed
         w-full md:w-fit flex items-center text-center justify-center

@@ -22,7 +22,6 @@ import ClaudeTokenCostControl from "components/Alluvium-Redesign-2026/licence-op
 import CuriousSection from "components/Alluvium-Redesign-2026/licence-optimization/curiousSection";
 import PlatformOptimisation from "components/Alluvium-Redesign-2026/licence-optimization/PlatformOptimisation";
 import ReadyToCut from "components/Alluvium-Redesign-2026/licence-optimization/ReadyToCut";
-import Image from "next/image";
 const LicenseOptimization = () => {
   // const triadData = [
   //   {
@@ -139,7 +138,7 @@ const LicenseOptimization = () => {
             heroTitle="Licence & Token Optimisation"
             heroDescription="Atlassian licences and Claude AI tokens are two different cost centres but waste looks the same in both: unused seats, wrong tiers, no governance. We audit, right-size, and set controls across your entire instance."
           >
-            <Link href="/contact-us">
+            <Link href="">
               <Button
                 className="text-white flex items-center gap-3 hover:bg-default-200"
                 size="sm"
@@ -148,10 +147,7 @@ const LicenseOptimization = () => {
                 Request a licence request <FaArrowRight />{" "}
               </Button>
             </Link>
-            {/* <div className="lg:w-[420px] w-[250px] md:w-[650px] h-[250px] md:h-[420px] rounded-[16px] bg-[#D9D9D9]"></div> */}
-            <div className="w-full h-[634px]">
-              <Image src="https://d38rkvi67t4lhi.cloudfront.net/assets/1786357486427-Image-21.png" alt="hero image" width={644} height={634} className=" object-fit h-[400px] w-full lg:w-full lg:h-full " />
-            </div>
+            <div className="lg:w-[420px] w-[250px] md:w-[650px] h-[250px] md:h-[420px] rounded-[16px] bg-[#D9D9D9]"></div>
           </Hero>
           <PlatformOptimisation />
           <WhereWasteHappens />
@@ -169,7 +165,7 @@ const LicenseOptimization = () => {
             hours="800"
             name="James Anderson"
             role="Head of Enterprise Technology Global Financial Services Organization"
-            linkUrl="#"
+            linkUrl=""
           />
           <ReadyToCut />
         </div>

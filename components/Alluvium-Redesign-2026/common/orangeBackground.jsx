@@ -4,7 +4,7 @@ import Link from "next/link";
 import Container from "./container";
 import Button from "./button";
 
-const OrangeBackground = ({ className, title, btnText, description, linkUrl }) => {
+const OrangeBackground = ({ className, title, btnText, description }) => {
   return (
     <div className={`bg-default-100  ${className} `}>
       <Container>

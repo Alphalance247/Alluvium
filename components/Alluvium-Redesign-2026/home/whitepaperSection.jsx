@@ -27,8 +27,11 @@ const WhitepaperSection = () => {
             {/* Description Subtext */}
             <p className="text-[#667085] text-base mb-0 md:text-lg font-medium font-sans leading-relaxed">
               3 September, 155 Bishopsgate, London, Our CEO, Taiwo Ojo, is
-              speaking on the main stage. See you there or contact us if you’d
-              like to be part of the conversation.
+              speaking on the main stage. See you there or{" "}
+              <Link href="/contact-us/" className="text-[#344054] font-bold">
+                contact us
+              </Link>{" "}
+              if you’d like to be part of the conversation.
             </p>
 
             {/* Date Tag */}
@@ -39,14 +42,6 @@ const WhitepaperSection = () => {
 
           {/* Action Button */}
           <Link href={"/contact-us/"} className="w-full lg:w-fit group">
-            {/* <div className="w-full lg:w-fit">
-              <button
-                type="button"
-                className="px-[20px] py-[12px] text-[#344054] w-full block lg:w-fit text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] shadow-sm hover:text-white hover:bg-[#091219] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
-              >
-                Read the whitepaper
-              </button>
-            </div> */}
             <Button size="md" variant="secondary" type="button">
               {" "}
               Contact us{" "}

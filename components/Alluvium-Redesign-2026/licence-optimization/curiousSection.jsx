@@ -8,7 +8,6 @@ const CuriousSection = () => {
                 className="  "
                 title="Curious what an audit would find on your bill?"
                 btnText="Request a licence audit"
-                linkUrl=""
             />
         </div>
     );
