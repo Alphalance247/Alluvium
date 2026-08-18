@@ -114,7 +114,7 @@ const EnterpriseSolutionsSection = () => {
                     }`}
                     style={{ animationDelay: delay }}
                   >
-                    <h3 className="text-[#1D2939] text-xl font-semibold font-sans">
+                    <h3 className="text-[#1D2939] text-xl font-semibold font-manrope ">
                       {service.title}
                     </h3>
                     <p className="text-[#344054] text-base md:text-lg font-medium font-sans leading-relaxed">
@@ -125,9 +125,9 @@ const EnterpriseSolutionsSection = () => {
 
                 <Link
                   href={service.href}
-                  className="shrink-0 inline-flex items-center gap-2 py-2 text-[#344054] font-bold text-base font-sans transition-colors duration-150 self-start sm:self-center"
+                  className="shrink-0 inline-flex items-center gap-2 py-2 text-[#344054] font-bold text-base font-manrope transition-colors duration-150 self-start sm:self-center"
                 >
-                  <span>Explore solution</span>
+                  <span className="font-manrope">Explore solution</span>
                   <FaArrowRight className="w-4 h-4 text-[#98A2B3] transition-all duration-300 group-hover:text-[#344054] group-hover:translate-x-1" />
                 </Link>
               </div>

@@ -91,9 +91,9 @@ const CaseStudyNew = () => {
           <h2 className="text-white max-w-xl text-3xl md:text-4xl font-bold font-serif leading-tight">
             Built for complex environments.
           </h2>
-          <p className="max-w-md text-white text-base md:text-lg font-semibold font-sans leading-relaxed">
+          <p className="max-w-xl text-white text-base md:text-lg font-semibold font-sans leading-relaxed">
             Trusted by teams across private equity, technology, agriculture,
-            fire protection, and commodities trading.
+            fire protection, commodities trading, and much more.
           </p>
         </div>
 
@@ -118,12 +118,12 @@ const CaseStudyNew = () => {
                   {study.stats.map((stat, index) => (
                     <div
                       key={index}
-                      className="pl-6 border-l border-slate-300 flex flex-col gap-2"
+                      className="stat-divider pl-6 border-l border-slate-300 flex flex-col gap-2 transition-colors duration-300"
                     >
                       <span className="text-[#1D2939] text-2xl md:text-3xl font-bold font-serif">
                         {stat.value}
                       </span>
-                      <span className="text-[#667085] text-sm md:text-base font-medium font-sans">
+                      <span className="stat-label text-[#667085] text-sm md:text-base font-medium font-sans transition-colors duration-300">
                         {stat.label}
                       </span>
                     </div>
@@ -235,6 +235,12 @@ const CaseStudyNew = () => {
             transparent 1px,
             transparent 12px
           );
+        }
+        .case-study-card:hover .stat-label {
+          color: #1d2939;
+        }
+        .case-study-card:hover .stat-divider {
+          border-color: #1d2939;
         }
       `}</style>
     </section>
