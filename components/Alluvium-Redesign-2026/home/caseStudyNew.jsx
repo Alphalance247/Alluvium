@@ -155,24 +155,26 @@ const CaseStudyNew = () => {
         </div>
 
         {/* Pagination & Controls */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center">
+          <div />
+
+          <div className="flex items-center gap-2 justify-self-center">
             {caseStudies.map((study, index) => (
               <button
                 key={study.id}
                 type="button"
                 aria-label={`Go to case study ${index + 1}`}
                 onClick={() => goTo(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
+                className={`w-2 h-2 rounded-full transition-colors duration-300 ${
                   index === currentIndex
-                    ? "w-8 bg-[#091219]"
-                    : "w-2 bg-white/40 hover:bg-white/60"
+                    ? "bg-[#091219]"
+                    : "bg-white/40 hover:bg-white/60"
                 }`}
               />
             ))}
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 justify-self-end">
             <button
               type="button"
               aria-label="Previous case study"
