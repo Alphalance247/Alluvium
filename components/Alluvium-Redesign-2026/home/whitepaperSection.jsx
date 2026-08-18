@@ -9,7 +9,7 @@ const WhitepaperSection = () => {
     <section className="w-full bg-white  overflow-hidden">
       <Container className="grid lg:grid-cols-2 items-center justify-between gap-10 lg:gap-28">
         {/* Content Column */}
-        <div className="w-full lg:max-w-[27rem] flex flex-col items-start gap-8">
+        <div className="w-full lg:max-w-[32rem] flex flex-col items-start gap-8">
           <div className="flex flex-col items-start ">
             {/* Tag / Category */}
             <div className="flex items-center gap-2">
@@ -21,7 +21,8 @@ const WhitepaperSection = () => {
 
             {/* Main Section Title */}
             <h2 className="text-[#344054] w-[100%] mt-4 mb-6 text-2xl md:text-4xl  font-bold font-serif leading-tight">
-              Alluvium is exhibiting at HR Analytics Summit, London.
+              Alluvium is Exhibiting and Speaking at the HR Analytics Summit,
+              London{" "}
             </h2>
 
             {/* Description Subtext */}
