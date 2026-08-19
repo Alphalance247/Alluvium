@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import { atlassianToolsImage } from "data";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/atlassian-services-style/atlassianlicenceservices.module.scss";
 
 function AutoPlay() {

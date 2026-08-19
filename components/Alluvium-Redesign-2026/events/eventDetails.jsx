@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/event-details.module.scss";
-import LeadForm from "pages/event/itsm-solutions/form/leadform";
+import LeadForm from "components/leadform";
 
 const Person = ({ name, role, image }) => (
   <div className={styles.personCard}>
@@ -17,6 +17,7 @@ const EventDetail = ({
   startsIn = "STARTS IN 9 DAYS",
   title = "Modern ITSM with Atlassian's Service Collection",
   descriptionParagraphs = [],
+  subtitle = "",
   coverPoints = [],
   hosts = [],
   speakers = [],
@@ -46,7 +47,8 @@ const EventDetail = ({
 
             {coverPoints.length > 0 && (
               <>
-                <strong>In this session, we'll cover:</strong>
+                <strong>{subtitle}:</strong>
+                {/* <strong>In this session, we'll cover:</strong> */}
                 <ul>
                   {coverPoints.map((point, index) => (
                     <li key={index}>{point}</li>
@@ -127,9 +129,10 @@ const EventDetail = ({
             </form>
           </div> */}
           <LeadForm
-            dataUrl={
-              "https://lfmdec-zgpm.maillist-manage.com/ua/Optin?od=11287ecba0e4a5&zx=12ea52690&tD=1b6f519ef5ce49f1&sD=1b6f519ef5dc730f"
-            }
+            // dataUrl={
+            //   "https://lfmdec-zgpm.maillist-manage.com/ua/Optin?od=11287ecba0e4a5&zx=12ea52690&tD=1b6f519ef5ce49f1&sD=1b6f519ef5dc730f"
+            // }
+            dataUrl={"https://lfmdec-zgph.maillist-manage.net/ua/Optin?od=11287ecba0e4a5&zx=135756be4&tD=1b6f519ef5ce49f1&sD=1b6f519ef5de6722"}
           />
         </aside>
       </div>

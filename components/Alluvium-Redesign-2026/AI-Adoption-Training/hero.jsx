@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/ai-adoption-training/hero.module.scss";
-import Image from "next/image";
 import EnquiryModal from "./enquiryModal";
+import PartnershipBadge from "./partnershipbadge";
 
 const TrainingHero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -14,9 +14,8 @@ const TrainingHero = () => {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           {/* Partnership / Integration Badge */}
-          <div className={styles.badgeBar}>
+          {/* <div className={styles.badgeBar}>
             <div className={styles.logoGroup}>
-              {/* Alluvium Logo Placeholder */}
               <Image
                 width={100}
                 height={20}
@@ -26,7 +25,6 @@ const TrainingHero = () => {
 
               <span className={styles.dividerText}>X</span>
 
-              {/* Partner Logo Placeholder */}
               <Image
                 width={93}
                 height={20}
@@ -34,7 +32,9 @@ const TrainingHero = () => {
                 alt="Claude Logo"
               />
             </div>
-          </div>
+          </div> */}
+
+          <PartnershipBadge />
 
           {/* Content Section */}
           <div className={styles.content}>

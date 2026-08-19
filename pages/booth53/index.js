@@ -2,13 +2,13 @@ import Head from "next/head";
 import styles from "../../styles/boot53.module.scss";
 // import styles from "../../styles/team.module.scss";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import CaseStudies from "components/case-studies/case-studies";
 import Layout from "components/layout";
 import { useCallback, useMemo, useState } from "react";
 import axios from "axios";
 import { Country } from "country-state-city";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { ToastProvider, useToasts } from "lib/toast";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import { IoIosGift } from "react-icons/io";

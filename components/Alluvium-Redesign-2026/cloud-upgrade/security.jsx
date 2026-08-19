@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/cloud-upgrade/security.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const SecurityCompliance = ({ data, withSubhead = true, heading }) => {
   return (

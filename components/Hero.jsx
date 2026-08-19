@@ -16,7 +16,7 @@ const Hero = () => {
                   We supply the highest quality remote and onsite engineers AND We deliver some of the highest quality Jira, Confluence and Bitbucket migrations, faster and at much lower cost, for some of the biggest Atlassian partners and Enterprise companies.{" "}
                 </p>
                 <Link href={'#consultationForm'}>
-                  <a>Schedule a Call</a>
+                  Schedule a Call
                 </Link>
                 <div className={`${styles.badges_container} mt-5 mt-sm-4 d-none d-sm-block`}>
                   <Badges />

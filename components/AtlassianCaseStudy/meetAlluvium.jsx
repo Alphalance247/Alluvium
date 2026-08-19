@@ -1,6 +1,6 @@
 import Button from "components/atlassian-service-reuse/Button";
 import styles from "../../styles/Atlassian-Case-Study/meetAlluvium.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const MeetAlluvium = () => {

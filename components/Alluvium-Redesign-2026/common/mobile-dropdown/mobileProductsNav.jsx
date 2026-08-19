@@ -1,7 +1,7 @@
 import React from "react";
 import { FaChevronRight } from "react-icons/fa6";
 import styles from "../../../../styles/AlluviumRedesign2026/common/mobile-dropdown/produts.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const MobileProductsNav = () => {

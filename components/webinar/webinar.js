@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/webinar.module.scss";
 
 const Webinar = () => {
@@ -30,13 +30,13 @@ const Webinar = () => {
                 in-depth insights, expert tips, live demos, and more. Click here
                 to learn more!
               </p>
-              <Link href="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8">
-                <a
-                  className="btn text-white"
-                  style={{ backgroundColor: "#E37915" }}
-                >
+              <Link
+                href="https://sites.ziftsolutions.com/atlassian.ziftsolutions.com/8a9983108fc086ab018fc109022335b8"
+                className="btn text-white"
+                style={{ backgroundColor: "#E37915" }}>
+                
                   Watch webinars
-                </a>
+                
               </Link>
             </div>
           </div>

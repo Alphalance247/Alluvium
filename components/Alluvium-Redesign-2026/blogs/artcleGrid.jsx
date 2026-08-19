@@ -3,7 +3,7 @@ import styles from "../../../styles/AlluviumRedesign2026/blogs/article-grid.modu
 import Link from "next/link";
 
 const ArticleCard = ({ article }) => (
-  <Link href={`/blogs/${article.slug}`} passHref>
+  <Link href={`/blogs/${article.slug}`}>
     <div className={styles.articleCard}>
       <div className={styles.topContent}>
         <div className={styles.imageContainer}>

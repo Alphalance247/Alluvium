@@ -1,5 +1,5 @@
 import styles from "../../styles/eventpage.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const Schedule = () => {
   return (

@@ -1,5 +1,5 @@
 import HeroHeading from "../ReuseComponents/heroHeading";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../../styles/AlluviumRedesign2025/AboutUs/about-us.module.scss";
 import { Lines } from "../ReuseComponents/Lines";
 

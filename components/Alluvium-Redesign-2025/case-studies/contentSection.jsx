@@ -1,5 +1,5 @@
 import styles from "../../../styles/AlluviumRedesign2025/CaseStudy/content-section.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const ContentSection = ({ caseStudy }) => {
   const data = [

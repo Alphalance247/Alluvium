@@ -1,0 +1,175 @@
+// Theme Variables
+$gray-900: #111827;
+$gray-200: #e5e7eb;
+$slate-900: #0f172a;
+$gray-700: #374151;
+$neutral-400: #a3a3a3;
+
+.sectionWrapper {
+  width: 100%;
+  background-color: $gray-900;
+  overflow: hidden;
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px; // gap-12
+
+  // Emulates structural bounding box borders from the raw markup
+  padding: 3rem 18px;
+
+  @media (min-width: 1024px) {
+    padding: 0;
+    padding: 96px 80px; // Maps px-20 py-24 gracefully
+    border: 1px dashed rgba(163, 163, 163, 0.3);
+  }
+}
+
+.headerStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.overline {
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.05em; // tracking-wide
+}
+
+.mainHeading {
+  color: white;
+  font-family: "Domine", serif;
+  font-size: clamp(
+    1.75rem,
+    4.5vw,
+    2.25rem
+  ); // Fluid text-4xl scaling down cleanly
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 440px; // Retains beautiful balanced heading break wrapping safely
+}
+
+// Fluid Columns System
+.cardsLayoutGrid {
+  display: grid;
+  grid-template-columns: 1fr; // Single stacked block default on mobile phones
+  gap: 24px;
+  width: 100%;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr); // 2x2 structure for medium tablets
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); // Flat 4-column lineup restored for desktop monitors
+  }
+}
+
+// Individual Use Case Cards
+.impactCard {
+  background-color: $gray-200;
+  border-radius: 16px; // rounded-2xl
+  padding: 24px; // p-6
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.iconBox {
+  position: relative;
+  width: 24px; // size-6
+  height: 24px;
+  color: #11202d;
+  font-weight: 700;
+}
+
+// Native pure CSS mock-up shapes replacing raw nested absolute pixel sets
+// .iconBase {
+//   background-color: $slate-900;
+//   position: absolute;
+// }
+
+.knowledgeIcon {
+  width: 20px;
+  height: 16px;
+  left: 2px;
+  top: 3px;
+  border-radius: 2px;
+}
+
+.cxIcon {
+  width: 14px;
+  height: 6px;
+  left: 5px;
+  top: 15px;
+  background: transparent;
+  border: 2px solid $slate-900;
+  border-radius: 1px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    left: 1px;
+    top: -12px;
+    border: 2px solid $slate-900;
+    border-radius: 50%;
+  }
+}
+
+.underwritingIcon {
+  width: 16px;
+  height: 20px;
+  left: 3px;
+  top: 1px;
+}
+
+.complianceIcon {
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  background: transparent;
+  border: 2px solid $slate-900;
+  border-radius: 4px;
+}
+
+.cardTitle {
+  color: $slate-900;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem; // text-base
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cardDescription {
+  color: $gray-700;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem; // text-base
+  font-weight: 400;
+  line-height: 1.5;
+}

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { getStaffUrls, getStaffData, fruits } from "../../lib/staff.ts";
 import { productData } from "data";
 import Services from "components/services-components/services";

@@ -12,7 +12,7 @@ import {
   migrationWithAlluvium,
 } from "constants/data-migration/DataMigraton";
 import Heading from "components/Alluvium-Redesign-2025/heading";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import ReadMore from "components/Alluvium-Redesign-2025/ReuseComponents/readmore";
 
 const description = [

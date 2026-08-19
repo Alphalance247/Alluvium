@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "../../styles/boot53.module.scss";
 
 const Booth53Banner = () => {
@@ -40,10 +40,10 @@ const Booth53Banner = () => {
               <div className={styles.textContainer}>
                 <h1 className="" style={{ color: "#fff", fontWeight: "bold" }}>Unlock full Potential of your Atlassian product at <span style={{ color: "#E37915" }}>Booth 53</span></h1>
 
-                <Link href={'/booth53'}>
-                  <a className="btn btn-warning">
+                <Link href={'/booth53'} className="btn btn-warning">
+                  
                     Visit Booth
-                  </a>
+                  
                 </Link>
               </div>
 

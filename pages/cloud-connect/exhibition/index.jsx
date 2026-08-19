@@ -4,7 +4,7 @@ import Head from "next/head";
 import Button from "components/cloud-connect-2/Button";
 import styles from "../../../styles/cloud-connect-2/Exhibition/exhibition.module.scss";
 import Hero from "components/cloud-connect-2/Home/Hero";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import AttendCloud from "components/cloud-connect-2/AttendCloud";
 import Packages from "components/cloud-connect-2/Packages";
 import ExhibitionForm from "components/cloud-connect-2/Exhibition/ExhibitionForm";

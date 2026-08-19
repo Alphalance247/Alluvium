@@ -26,13 +26,13 @@ const WelcomeToAlluvium = () => {
                 us apart as a brand.{" "}
               </p>
 
-              <Link href={"/about"} aria-label="Learn more about Alluvium">
-                <a
-                  aria-label="Learn more about Alluvium"
-                  className={styles.learnButton}
-                >
+              <Link
+                href={"/about"}
+                aria-label="Learn more about Alluvium"
+                className={styles.learnButton}>
+                
                   Learn About Us
-                </a>
+                
               </Link>
             </div>
             <div className="col-md-6 ps-xl-5">

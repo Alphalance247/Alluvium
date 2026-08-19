@@ -6,8 +6,8 @@ const Register = () => {
     <div className="container mx-auto">
       <div className={styles.register}>
         <h1>Registration is now open for onsite and virtual attendees</h1>
-        <Link href={'/event/register'}>
-          <a className={styles.btn}>Register</a>
+        <Link href={'/event/register'} className={styles.btn}>
+          Register
         </Link>
       </div>
     </div>

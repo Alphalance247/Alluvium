@@ -1,17 +1,17 @@
 import React from "react";
 import styles from "../../../../styles/AlluviumRedesign2026/common/dropdown/solutionNav.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { FaArrowRight } from "react-icons/fa6";
 
 const SolutionNav = () => {
   const services = [
     {
-      name: "Cloud Upgrade",
+      name: "Cloud upgrade",
       link: "/cloud-upgrade",
     },
-    { name: "ESM", link: "/enterprise-service-management" },
-    { name: "License Optimization", link: "/license-optimization" },
+    { name: "Service management", link: "/enterprise-service-management" },
+    { name: "License optimization", link: "/license-optimization" },
     { name: "Partnerships", link: "/strategic-partnerships" },
   ];
 

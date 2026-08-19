@@ -18,11 +18,13 @@ const BookingCTA = ({ title, btnText, bgColor, btnClass }) => {
     return (
         <div className={styles.booking} style={customStyle}>
             <h3>{title ? title : 'Talk to an Expert About Your Project'}</h3>
-            <Link href="#consultationForm">
-                <a className={`${styles.button} ${btnClass || styles.defaultButton}`}>{btnText ? btnText : 'Book Consultation'}</a>
+            <Link
+                href="#consultationForm"
+                className={`${styles.button} ${btnClass || styles.defaultButton}`}>
+                {btnText ? btnText : 'Book Consultation'}
             </Link>
         </div>
-    )
+    );
 }
 
 export default BookingCTA;

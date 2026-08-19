@@ -1,10 +1,23 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/events/upcoming-webinars.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 const webinars = [
   {
     id: 1,
+    title: "Dashboard Advantage: What You Do Not Get With Email",
+    date: "WED, 10TH JUNE, 2026 1:00 PM WAT",
+    link: "dashboard-advantage-what-you-do-not-get-with-email",
+    thumbnailType: "exploring-atlassian’s-csm-telephony",
+    host: "Ayako Inagawa",
+    guest: "Ayodele Akinwale",
+    bg: "#60a5fa", // blue-400
+    img: "/assets/Alluvium-Redesign-2026/Events/Yusuf banner.jpg",
+    width: 600,
+    height: 285,
+  },
+  {
+    id: 2,
     title: "Exploring Atlassian’s CSM Telephony",
     date: "TUE, May 26, 2026 1:00 PM WAT",
     link: "exploring-atlassian’s-csm-telephony",

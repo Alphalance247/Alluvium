@@ -1,5 +1,5 @@
 import styles from "../../styles/cloud-migration-case-study/migartionmain.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Link from "next/link";
 
@@ -13,9 +13,7 @@ const CloudMain = () => {
         </h1>
 
         <Link
-          href="/atlassian-cloud-migration-case-studies/california-DHCS-saves-millions-with-atlassian-cloud-modernization"
-          passHref
-        >
+          href="/atlassian-cloud-migration-case-studies/california-DHCS-saves-millions-with-atlassian-cloud-modernization">
           <div className={styles.dhcs__main}>
             <div>
               <Image

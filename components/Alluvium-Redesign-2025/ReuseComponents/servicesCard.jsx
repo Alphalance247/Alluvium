@@ -1,6 +1,6 @@
 import styles from "../../../styles/AlluviumRedesign2025/ReuseAbleComponent/services_card.module.scss";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Button from "components/atlassian-service-reuse/Button";
 
 const ServicesCard = ({ content, btn = true }) => {

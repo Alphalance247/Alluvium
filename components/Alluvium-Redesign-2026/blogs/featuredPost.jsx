@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../styles/AlluviumRedesign2026/blogs/featured-post.module.scss";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 const FeaturedPost = ({
@@ -15,7 +15,7 @@ const FeaturedPost = ({
   return (
     <section className={styles.wrapper}>
       <div className={styles.innerContainer}>
-        <Link href={`/blogs/aipolicy`} passHref>
+        <Link href={`/blogs/aipolicy`}>
           <article className={styles.featuredCard}>
             <div className={styles.imageSection}>
               <Image

@@ -1,0 +1,135 @@
+// Layout Brand Colors & Tokens
+$neutral-50: #fafafa;
+$gray-900: #111827;
+$gray-700: #374151;
+$amber-600: #d97706;
+$amber-700: #b45309;
+$zinc-300: #d4d4d8;
+
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  background: url("/assets/Alluvium-Redesign-2026/ai-adoption/ai-adoption-4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 16px;
+
+  @media (min-width: 1024px) {
+    padding: 0 80px; // Maps the target outer px-20 layout composition
+  }
+}
+
+// Main Frame Boundary Container
+.contentFrame {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 48px 24px; // Replaces rigid layout locks with fluid padding space
+
+  @media (min-width: 1024px) {
+    padding: 96px 0; // Maps your py-24 setup precisely on desktop monitors
+    border: 1px dashed #d9d9d9; // zinc-700
+  }
+}
+
+.centerStack {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px; // gap-8
+}
+
+// Structural Text Processing Layer
+.textGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; // gap-5 layout scaling
+  text-align: center;
+}
+
+.headingStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px; // gap-2
+  width: 100%;
+}
+
+.overlineText {
+  color: $gray-700;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 600;
+  line-height: 1.42;
+  letter-spacing: 0.05em; // tracking-wide
+  max-width: 533px;
+}
+
+.mainTitle {
+  color: $gray-900;
+  font-family: "Domine", serif;
+  font-size: clamp(
+    2.25rem,
+    6vw,
+    3rem
+  ); // Fluid text-5xl scale response calculation
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 533px;
+}
+
+.subDescription {
+  color: $gray-700;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1.125rem, 4vw, 1.25rem); // Fluid text-xl scaling response
+  font-weight: 500;
+  line-height: 1.4;
+  max-width: 640px;
+}
+
+// CTA Interactive Action Layout Elements
+.actionGroup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 320px; // Retains button sizing layout proportions cleanly
+}
+
+.ctaButton {
+  width: 100%;
+  background-color: $amber-600;
+  color: white; // Maps text-White
+  font-family: "Inter", sans-serif;
+  font-size: 1.125rem; // text-lg
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.55; // leading-7
+  padding: 12px 24px; // px-4 py-2 layout scale mapping upgrade for high-res touch areas
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+
+  &:hover {
+    background-color: $amber-700;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

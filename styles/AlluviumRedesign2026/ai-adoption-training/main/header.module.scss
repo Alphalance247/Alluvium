@@ -1,0 +1,232 @@
+// Layout & Brand Color Schemes
+$border-zinc: rgba(212, 212, 216, 0.8);
+$zinc-600: #52525b;
+$zinc-900: #18181b;
+$amber-600: #d97706;
+$amber-700: #b45309;
+
+.headerWrapper {
+  width: 100%;
+  height: 80px; // h-20
+  background-color: white;
+  border-bottom: 1px solid #e4e4e7; // border-b
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+
+  @media (min-width: 1024px) {
+    padding: 0 80px; // px-20
+  }
+}
+
+.innerContainer {
+  width: 100%;
+  max-width: 1280px; // Centers and protects layout on ultra-wide screens
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    border-left: 1px solid $border-zinc;
+    border-right: 1px solid $border-zinc;
+    padding: 0 24px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 80px; // Desktop column alignment matching outer wrapper
+  }
+}
+
+// Cleaner CSS Logo Vector Implementation
+.logoGroup {
+  display: flex;
+  align-items: center;
+  z-index: 110;
+  cursor: pointer;
+
+  .logoLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .logoIcon {
+    position: relative;
+    width: 28px;
+    height: 24px;
+
+    .brandAccent {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 16px;
+      height: 16px;
+      background: linear-gradient(180deg, #0891b2 0%, #0284c7 100%);
+    }
+
+    .brandBase {
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 16px;
+      height: 24px;
+      background-color: #0f172a;
+    }
+  }
+
+  .logoText {
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #334155; // Replaces broken slate blocks with professional type color
+    letter-spacing: -0.02em;
+  }
+}
+
+// Mobile Menu Navigation Engine
+.navigation {
+  display: flex;
+
+  // Mobile Defaults (Hidden drawer state)
+  @media (max-width: 767px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 105;
+
+    &.menuActive {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  // Tablet and Desktop Layout restores
+  @media (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-left: 40px;
+  }
+}
+
+.linksList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 8px;
+    margin: 0 auto; // Centers menu perfectly inside available space
+  }
+}
+
+.navLink {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem; // text-xs
+  font-weight: 600;
+  color: $zinc-600;
+  text-decoration: none;
+  padding: 8px 12px; // px-3 py-2
+  cursor: pointer;
+  border-radius: 8px;
+  letter-spacing: 0.05em; // tracking-wide
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $zinc-900;
+    background-color: #f4f4f5; // Subtle background highlight tracking-wide
+  }
+}
+
+.actionGroup {
+  z-index: 110;
+  @media (max-width: 767px) {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.contactBtn {
+  width: 100%;
+  background-color: $amber-600;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem; // text-sm
+  font-weight: 700;
+  line-height: 1.42;
+  padding: 8px 16px; // px-4 py-2
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0px -2px 4px rgba(255, 255, 255, 0.2),
+    0px 1px 2px rgba(0, 0, 0, 0.1),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: $amber-700;
+  }
+}
+
+// Mobile Hamburger Icon CSS Trigger
+.mobileToggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 110;
+
+  @media (min-width: 768px) {
+    display: none; // Disappear completely on desktop/tablets
+  }
+
+  .hamburgerLine {
+    width: 100%;
+    height: 2px;
+    background-color: $zinc-900;
+    border-radius: 2px;
+    transition: all 0.25s ease-in-out;
+    transform-origin: left center;
+  }
+
+  // Morph transformation lines into an 'X' close indicator
+  &.isOpen {
+    .hamburgerLine:nth-child(1) {
+      transform: rotate(45deg) translateY(-2px);
+    }
+    .hamburgerLine:nth-child(2) {
+      opacity: 0;
+      width: 0;
+    }
+    .hamburgerLine:nth-child(3) {
+      transform: rotate(-45deg) translateY(2px);
+    }
+  }
+}
