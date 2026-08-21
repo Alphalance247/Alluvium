@@ -29,13 +29,16 @@ const Button = ({
     sm: "px-4 py-2.5 rounded-lg text-sm font-bold font-manrope",
     base: "px-4.5 py-2.5 text-base font-bold rounded-lg font-manrope",
     md: "px-[20px] py-[12px] text-base rounded-xl font-bold font-manrope",
-    "semi-lg": "px-6 py-[10px] text-lg rounded-lg font-bold font-manrope",
+    "semi-md": "px-6 py-2.5 rounded-xl font-bold font-manrope text-lg",
+    "semi-lg": "px-6 py-3 text-lg rounded-lg font-bold font-manrope",
     lg: "px-7 py-4 text-lg rounded-2xl font-bold font-manrope",
   };
   const variants = {
     default: "border-[1px] border-default-100",
     plainSecondary:
       "border-[1px] border-secondary-900  inline-flex items-center gap-2 transition-all duration-150 ",
+    defaultSecondary:
+      "bg-secondary-900 text-white inline-flex items-center gap-2 transition-all duration-150 font-manrope",
     secondary:
       "border-[1px] border-secondary-900 hover:bg-secondary-900 text-[#344054] group-hover:bg-secondary-900 group-hover:text-white inline-flex items-center gap-2 transition-all duration-150 group-hover:font-sans",
     tertiary: "border-[1px] border-tertiary",
@@ -49,7 +52,6 @@ const Button = ({
         ${sizes[size]}
         transition-all
         duration-300
-        hover:opacity-90
         disabled:opacity-50
         disabled:cursor-not-allowed
         w-full md:w-fit flex items-center text-center justify-center
