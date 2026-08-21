@@ -7,6 +7,9 @@ import DiscoverySection from "components/Alluvium-Redesign-2026/common/discovery
 import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
 import BeyondIT from "components/Alluvium-Redesign-2026/enterprise-management/beyondIT";
 import ExpertiseBridge from "components/Alluvium-Redesign-2026/enterprise-management/expertiseBridge";
+import Hero from "components/Alluvium-Redesign-2026/enterprise-management/hero";
+import ServiceBreakdownSection from "components/Alluvium-Redesign-2026/enterprise-management/serviceSectionBreakdwon";
+import BuildBusinessSection from "components/Alluvium-Redesign-2026/enterprise-management/buildBusiness";
 
 const EnterpriseManagement = () => {
   const triadData = [
@@ -105,6 +108,9 @@ const EnterpriseManagement = () => {
           serviceImage={"/assets/Alluvium-Redesign-2026/services/hero3.png"}
           alt={"Abstract background with feature image and partner logos"}
         />
+        {/* <Hero />
+        <ServiceBreakdownSection />
+        <BuildBusinessSection /> */}
         <ServicesCardsSection
           triadData={triadData}
           heading="Why Enterprise Service Management (ESM)?"

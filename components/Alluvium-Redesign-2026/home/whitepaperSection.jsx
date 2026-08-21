@@ -7,25 +7,30 @@ import Button from "../common/button";
 const WhitepaperSection = () => {
   return (
     <section className="w-full bg-white  overflow-hidden">
-      <Container className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 lg:gap-20">
+      <Container className="grid lg:grid-cols-2 items-center justify-between gap-10 lg:gap-28">
         {/* Content Column */}
-        <div className="w-full lg:max-w-xl flex flex-col items-start gap-8">
-          <div className="flex flex-col items-start">
+        <div className="w-full lg:max-w-[32rem] flex flex-col items-start gap-8">
+          <div className="flex flex-col items-start ">
             {/* Tag / Category */}
-            <span className="text-[#667085] text-sm md:text-base font-bold font-sans uppercase tracking-[1px]">
-              White paper
-            </span>
+            <div className="flex items-center gap-2">
+              <div className="w-5 h-[4px] bg-[#008DAF]" />
+              <span className="text-[#1D2939] text-sm md:text-sm font-bold font-sans uppercase tracking-[1px]">
+                CAMPAIGN
+              </span>
+            </div>
 
             {/* Main Section Title */}
-            <h2 className="text-[#1D2939] w-[100%] mt-4 mb-3 text-2xl md:text-3xl  font-bold font-serif leading-tight">
-              Regulatory Supremacy and Competitive Edge
+            <h2 className="text-[#344054] w-[100%] mt-4 mb-6 text-2xl md:text-4xl  font-bold font-serif leading-tight">
+              Alluvium is Exhibiting and Speaking at the HR Analytics Summit,
+              London{" "}
             </h2>
 
             {/* Description Subtext */}
-            <p className="text-[#344054] text-base mb-3 md:text-lg font-medium font-sans leading-relaxed">
-              How Nigerian financial institutions turn CBN compliance into a
-              competitive advantage, with audit trails, mandated SLAs, and
-              change control built into the Atlassian platform.
+            <p className="text-[#667085] text-base mb-0 md:text-lg font-medium font-sans leading-relaxed">
+              3 September, 155 Bishopsgate, London, Our CEO, Taiwo Ojo, is
+              speaking on the main stage. See you there or{" "}
+              <span className="text-[#344054] font-bold">contact us</span> if
+              you’d like to be part of the conversation.
             </p>
 
             {/* Date Tag */}
@@ -35,29 +40,23 @@ const WhitepaperSection = () => {
           </div>
 
           {/* Action Button */}
-          <Link
-            href={"/whitepaper/regulatory-supremacy-and-competitive-edge/"}
-            className="w-full lg:w-fit group"
-          >
-            {/* <div className="w-full lg:w-fit">
-              <button
-                type="button"
-                className="px-[20px] py-[12px] text-[#344054] w-full block lg:w-fit text-base font-bold font-sans rounded-lg border-[1px] border-[#091219] shadow-sm hover:text-white hover:bg-[#091219] focus:outline-none focus:ring-2 focus:ring-indigo-500/20 transition-all duration-150"
-              >
-                Read the whitepaper
-              </button>
-            </div> */}
-            <Button size="md" variant="secondary" type="button"> Read the whitepaper</Button>
+          <Link href={"/contact-us/"} className="w-full lg:w-fit group">
+            <Button size="md" variant="secondary" type="button">
+              {" "}
+              Contact us{" "}
+            </Button>
           </Link>
         </div>
 
-        <Image
-          src="https://d38rkvi67t4lhi.cloudfront.net/assets/1785137011627-Image-8.png"
-          alt="Atlassian Cloud Migration Readiness Checklist"
-          // className="w-full h-full object-cover object-center"
-          width={587}
-          height={395}
-        />
+        <div>
+          <Image
+            src="https://d38rkvi67t4lhi.cloudfront.net/assets/1787058794370-Image-9.png"
+            alt="Hr Analytics Summit, London - Alluvium"
+            // className="w-full h-full object-cover object-center"
+            width={587}
+            height={395}
+          />
+        </div>
         {/* </div> */}
       </Container>
     </section>
