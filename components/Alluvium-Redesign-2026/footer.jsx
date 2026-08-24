@@ -129,7 +129,7 @@ const Footer = () => {
       {/* <div className={styles.footer_container}> */}
       <div className="max-w-7xl mx-auto lg:px-16 md:px-12 px-6">
         <div className="flex lg:flex-row flex-col pb-10 lg:pb-[87px] mt-12 lg:mt-10">
-          <div className="w-full h-auto lg:w-[220px] xl:w-1/4 lg:h-[383px]">
+          <div className="w-full h-auto  lg:w-1/4 lg:h-[383px]">
             <div className="">
               <div className="pb-6">
                 <Image
@@ -152,9 +152,9 @@ const Footer = () => {
               </div> */}
             </div>
           </div>
-          <div className="w-full lg:w-[80%] xl:w-full">
+          <div className="w-full lg:w-[75%]">
             <div className="flex md:flex-row flex-col  gap-6 md:gap-0 pt-10 lg:pt-0">
-              <div className="lg:h-[383px] h-auto w-full md:w-[290px] lg:w-[320px] xl:w-1/3 px-4">
+              <div className="lg:h-[383px] h-auto w-full md:w-[290px] lg:w-[320px] xl:w-1/3 px-0 md:px-4">
                 <div className="text-base font-bold font-merriweather pb-4 text-[#344054]">
                   Solutions
                 </div>
@@ -172,7 +172,7 @@ const Footer = () => {
                   ))}
                 </div>
               </div>
-              <div className="lg:h-[383px] h-auto w-full md:w-[220px] lg:w-[260px] xl:w-1/3 px-4 ">
+              <div className="lg:h-[383px] h-auto w-full md:w-[220px] lg:w-[260px] xl:w-1/3 px-0 md:px-4 ">
                 <div className="text-base font-bold font-merriweather pb-4 text-[#344054]">
                   Company
                 </div>
@@ -190,7 +190,7 @@ const Footer = () => {
                   ))}
                 </div>
               </div>
-              <div className="lg:h-[383px] h-auto w-full md:w-[200px] lg:w-[220px] xl:w-1/3 px-4 ">
+              <div className="lg:h-[383px] h-auto w-full md:w-[200px] lg:w-[220px] xl:w-1/3 px-0 md:px-4 ">
                 <div className="text-base font-bold font-merriweather pb-4 text-[#344054]">
                   Resources
                 </div>
