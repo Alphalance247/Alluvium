@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
 import Layout from "components/layout";
-import ServicesHero from "components/Alluvium-Redesign-2026/common/servicesHero";
+import NewServicesHero from "components/Alluvium-Redesign-2026/common/newServicesHero";
+import WhatWeOffer from "components/Alluvium-Redesign-2026/cloud-upgrade/whatWeOffer";
+import OpsgenieMigration from "components/Alluvium-Redesign-2026/cloud-upgrade/opsgenieMigration";
 import ServicesCardsSection from "components/Alluvium-Redesign-2026/common/servicesCardsSection";
 import DiscoverySection from "components/Alluvium-Redesign-2026/common/discoverySection";
 import WhyAlluvium from "components/Alluvium-Redesign-2026/cloud-upgrade/whyAlluvium";
 import SecurityCompliance from "components/Alluvium-Redesign-2026/cloud-upgrade/security";
-import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
+import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
 import CJRAdvantage from "components/Alluvium-Redesign-2026/cloud-upgrade/cjrAdvantage";
 
 const CloudUpgrade = () => {
@@ -74,23 +76,6 @@ const CloudUpgrade = () => {
     },
   ];
 
-  const badges = [
-    {
-      id: "01",
-      imgSrc: "/assets/Alluvium-Redesign-2026/services/cloud.png",
-      alt: "Cloud Partner",
-      width: "201",
-      height: "134",
-    },
-    {
-      id: "02",
-      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
-      alt: "Gold Partner",
-      width: "278",
-      height: "74",
-    },
-  ];
-
   const complianceData = [
     {
       id: 1,
@@ -121,24 +106,39 @@ const CloudUpgrade = () => {
   return (
     <>
       <Layout>
-        <ServicesHero
-          badges={badges}
-          heading={"Cloud Upgrade: Secure. Scalable. Seamless."}
-          subhead={
-            "We don’t just move data; we migrate your business logic. Alluvium provides the strategic technical bench for high-stakes migrations, ensuring security, compliance, and optimized performance from Day one."
-          }
-          btnName={"SCHEDULE A STRATEGY SESSION"}
+        <NewServicesHero
+          heading="Move off Server or Data Center — without the downtime"
+          subheading="Atlassian's Server and Data Center products are being sunset. We run cloud migrations with zero data loss, minimal disruption, and a clear timeline — including multi-instance environments most teams are afraid to touch."
+          ctaLabel="Book a migration assessment"
+          ctaHref="/contact-us"
+          image="https://d38rkvi67t4lhi.cloudfront.net/assets/1787730881540-image-2.png"
+          imageAlt="Cloud Migration"
+          width={500}
+          height={443}
         />
-        <ServicesCardsSection triadData={triadData} />
+        <WhatWeOffer />
+        <OpsgenieMigration
+          image="https://d38rkvi67t4lhi.cloudfront.net/assets/1787731328047-image-5.png"
+          imageAlt="Opsgenie to JSM Migration"
+          width={485}
+          height={122}
+        />
+        {/* <ServicesCardsSection triadData={triadData} />
         <DiscoverySection
           heading="The Migration Blueprint"
           data={blueprintSteps}
           img="/assets/Alluvium-Redesign-2026/services/discovery.png"
-        />
-        <WhyAlluvium />
+        /> */}
+        {/* <WhyAlluvium />
         <CJRAdvantage />
-        <SecurityCompliance data={complianceData} />
-        <CtaSection />
+        <SecurityCompliance data={complianceData} /> */}
+        <CtaBannerSection
+          label="WHY MIGRATE NOW"
+          heading="The migration window is getting shorter."
+          description="Atlassian's end-of-support timeline does not wait. The later you start, the less runway you have to test before you are forced to cut over."
+          ctaLabel="Book a migration assessment"
+          ctaHref="/contact-us"
+        />
       </Layout>
     </>
   );
