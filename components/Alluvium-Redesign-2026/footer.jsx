@@ -37,7 +37,7 @@ const company = [
   { url: "/about", id: 1, name: "About us" },
   { url: "", id: 2, name: "Export & count plugin" },
   { url: "", id: 3, name: "Resource compare" },
-  { url: "", id: 4, name: "Contacts us" },
+  { url: "", id: 4, name: "Contact us" },
   // {
   //   url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
   //   id: "2",

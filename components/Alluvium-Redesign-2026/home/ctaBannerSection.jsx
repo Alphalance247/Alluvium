@@ -9,7 +9,7 @@ const CtaBannerSection = ({
   description = "Whether you're starting with Atlassian, scaling what you have, or adopting AI, we can help.",
   ctaLabel = "Contact us",
   ctaHref = "/contact-us",
-  children
+  children,
 }) => {
   return (
     <section className="w-full bg-slate-950 overflow-hidden">
@@ -46,7 +46,7 @@ const CtaBannerSection = ({
                 type="button"
                 className="!bg-white hover:!bg-black hover:!text-white text-black "
               >
-                <span>{ctaLabel}</span>
+                <span className="font-manrope">{ctaLabel}</span>
               </Button>
             </Link>
           </div>
