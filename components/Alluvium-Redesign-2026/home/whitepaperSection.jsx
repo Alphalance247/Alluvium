@@ -27,8 +27,8 @@ const WhitepaperSection = () => {
 
             {/* Description Subtext */}
             <p className="text-[#667085] text-base mb-0 md:text-lg font-medium font-sans leading-relaxed">
-              3 September, 155 Bishopsgate, London, Our CEO, Taiwo Ojo, is
-              speaking on the main stage. See you there or{" "}
+              3 September, 155 Bishopsgate, London.<br /> Our CEO, Taiwo Ojo, is
+              speaking on the main stage.<br /> See you there or{" "}
               <span className="text-[#344054] font-bold">contact us</span> if
               you’d like to be part of the conversation.
             </p>

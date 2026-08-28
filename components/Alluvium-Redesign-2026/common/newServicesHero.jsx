@@ -12,6 +12,7 @@ const NewServicesHero = ({
   imageAlt = "",
   width = 500,
   height = 443,
+  children,
 }) => {
   return (
     <section className="w-full bg-secondary-900 overflow-hidden">
@@ -35,6 +36,9 @@ const NewServicesHero = ({
               {ctaLabel}
             </button>
           </Link>
+          <div className="">
+            {children}
+          </div>
         </div>
 
         {/* Image Panel */}

@@ -23,91 +23,91 @@ import CuriousSection from "components/Alluvium-Redesign-2026/licence-optimizati
 import PlatformOptimisation from "components/Alluvium-Redesign-2026/licence-optimization/PlatformOptimisation";
 import ReadyToCut from "components/Alluvium-Redesign-2026/licence-optimization/ReadyToCut";
 const LicenseOptimization = () => {
-  // const triadData = [
-  //   {
-  //     id: 1,
-  //     title: "Cost Rationalization",
-  //     description:
-  //       " We don't just renew; we audit. We identify inactive users and redundant apps, typically saving clients 15–45% on their annual bill.",
-  //     // Replace these placeholder divs with your actual SVGs
-  //     icon: "/assets/Alluvium-Redesign-2026/services/cost.svg",
-  //     width: 81,
-  //     height: 92,
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "24/7 Dedicated Support",
-  //     description:
-  //       " Skip the standard queue. Our clients receive around-the-clock technical support and a dedicated account manager who knows your instance inside out.",
-  //     icon: "/assets/Alluvium-Redesign-2026/services/chat.svg",
-  //     width: 206,
-  //     height: 83,
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Consolidated Billing",
-  //     description:
-  //       "We simplify your procurement by managing multiple Atlassian products and Marketplace apps under a single, predictable local currency invoice.",
-  //     icon: "/assets/Alluvium-Redesign-2026/services/folder.svg",
-  //     width: 86,
-  //     height: 88,
-  //   },
-  // ];
+  const triadData = [
+    {
+      id: 1,
+      title: "Cost Rationalization",
+      description:
+        " We don't just renew; we audit. We identify inactive users and redundant apps, typically saving clients 15–45% on their annual bill.",
+      // Replace these placeholder divs with your actual SVGs
+      icon: "/assets/Alluvium-Redesign-2026/services/cost.svg",
+      width: 81,
+      height: 92,
+    },
+    {
+      id: 2,
+      title: "24/7 Dedicated Support",
+      description:
+        " Skip the standard queue. Our clients receive around-the-clock technical support and a dedicated account manager who knows your instance inside out.",
+      icon: "/assets/Alluvium-Redesign-2026/services/chat.svg",
+      width: 206,
+      height: 83,
+    },
+    {
+      id: 3,
+      title: "Consolidated Billing",
+      description:
+        "We simplify your procurement by managing multiple Atlassian products and Marketplace apps under a single, predictable local currency invoice.",
+      icon: "/assets/Alluvium-Redesign-2026/services/folder.svg",
+      width: 86,
+      height: 88,
+    },
+  ];
 
-  // const blueprintSteps = [
-  //   {
-  //     id: "01",
-  //     title: "Usage Audit",
-  //     description:
-  //       "We analyze your current user tiers and application usage to identify 'zombie' accounts and redundant Marketplace app subscriptions immediately.",
-  //   },
-  //   {
-  //     id: "02",
-  //     title: "Tier Rationalization",
-  //     description:
-  //       "Our experts recommend the optimal licensing tier (Standard, Premium, or Enterprise) based on your specific security and feature requirements.",
-  //   },
-  //   {
-  //     id: "03",
-  //     title: "Procurement Strategy",
-  //     description:
-  //       "We align your renewal dates and consolidate all Atlassian products into a single, predictable billing cycle that simplifies your budgeting.",
-  //   },
-  //   {
-  //     id: "04",
-  //     title: "Support Integration",
-  //     description:
-  //       "We onboard your team to our 24/7 dedicated support desk, ensuring your admins have an expert to call whenever needed.",
-  //   },
-  //   {
-  //     id: "05",
-  //     title: "Proactive Review",
-  //     description:
-  //       "We conduct quarterly health checks to ensure your licensing scales with your growth, preventing 'bill shock' and ensuring continuous optimization.",
-  //   },
-  // ];
+  const blueprintSteps = [
+    {
+      id: "01",
+      title: "Usage Audit",
+      description:
+        "We analyze your current user tiers and application usage to identify 'zombie' accounts and redundant Marketplace app subscriptions immediately.",
+    },
+    {
+      id: "02",
+      title: "Tier Rationalization",
+      description:
+        "Our experts recommend the optimal licensing tier (Standard, Premium, or Enterprise) based on your specific security and feature requirements.",
+    },
+    {
+      id: "03",
+      title: "Procurement Strategy",
+      description:
+        "We align your renewal dates and consolidate all Atlassian products into a single, predictable billing cycle that simplifies your budgeting.",
+    },
+    {
+      id: "04",
+      title: "Support Integration",
+      description:
+        "We onboard your team to our 24/7 dedicated support desk, ensuring your admins have an expert to call whenever needed.",
+    },
+    {
+      id: "05",
+      title: "Proactive Review",
+      description:
+        "We conduct quarterly health checks to ensure your licensing scales with your growth, preventing 'bill shock' and ensuring continuous optimization.",
+    },
+  ];
 
-  // const badges = [
-  //   {
-  //     id: "01",
-  //     imgSrc: "/assets/Alluvium-Redesign-2026/services/marketplace.png",
-  //     alt: "Marketplace Partner",
-  //     width: "239",
-  //     height: "74",
-  //   },
-  //   {
-  //     id: "02",
-  //     imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
-  //     alt: "Gold Partner",
-  //     width: "278",
-  //     height: "74",
-  //   },
-  // ];
+  const badges = [
+    {
+      id: "01",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/marketplace.png",
+      alt: "Marketplace Partner",
+      width: "239",
+      height: "74",
+    },
+    {
+      id: "02",
+      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+      alt: "Gold Partner",
+      width: "278",
+      height: "74",
+    },
+  ];
 
   return (
     <>
       <Layout>
-        {/* <ServicesHero
+        <ServicesHero
           badges={badges}
           heading={"Optimize Your Atlassian Spend. Maximize Your ROI."}
           subhead={
@@ -132,8 +132,8 @@ const LicenseOptimization = () => {
           heading={"Ready to Reduce Your Atlassian Overhead?"}
           subhead={"Book a 30-minute review of your current licensing stack."}
           btnText={"Get a Preferred Quote"}
-        /> */}
-        <div>
+        />
+        {/* <div>
           <Hero
             heroTitle="Licence & Token Optimisation"
             heroDescription="Atlassian licences and Claude AI tokens are two different cost centres but waste looks the same in both: unused seats, wrong tiers, no governance. We audit, right-size, and set controls across your entire instance."
@@ -168,7 +168,7 @@ const LicenseOptimization = () => {
             linkUrl=""
           />
           <ReadyToCut />
-        </div>
+        </div> */}
       </Layout>
     </>
   );

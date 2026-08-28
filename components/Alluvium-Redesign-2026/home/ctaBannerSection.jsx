@@ -9,6 +9,7 @@ const CtaBannerSection = ({
   description = "Whether you're starting with Atlassian, scaling what you have, or adopting AI, we can help.",
   ctaLabel = "Contact us",
   ctaHref = "/contact-us",
+  children,
 }) => {
   return (
     <section className="w-full bg-slate-950 overflow-hidden">
@@ -36,16 +37,19 @@ const CtaBannerSection = ({
           </p>
 
           {/* CTA Button */}
-          <Link href={ctaHref} className="w-full md:w-fit">
-            <Button
-              size="md"
-              variant="secondary"
-              type="button"
-              className="!bg-white hover:!bg-black hover:!text-white text-black"
-            >
-              <span>{ctaLabel}</span>
-            </Button>
-          </Link>
+          <div className="flex md:flex-row flex-col gap-4 w-full md:w-fit">
+            {children}
+            <Link href={ctaHref} className="w-full md:w-fit">
+              <Button
+                size="md"
+                variant="secondary"
+                type="button"
+                className="!bg-white hover:!bg-black hover:!text-white text-black "
+              >
+                <span className="font-manrope">{ctaLabel}</span>
+              </Button>
+            </Link>
+          </div>
         </div>
       </Container>
     </section>
