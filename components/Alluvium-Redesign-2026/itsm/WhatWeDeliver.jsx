@@ -25,8 +25,8 @@ const items = [
 
 const WhatWeDeliver = () => {
   return (
-    <div className="px-6 md:px-12 xl:px-0 lg:px-12 py-24">
-      <div className="max-w-7xl mx-auto w-full flex flex-col gap-12">
+    <div className="py-24">
+      <div className="max-w-7xl mx-auto  flex flex-col gap-12 px-6 md:px-12 lg:px-16 ">
         <div>
           <h4 className="font-bold font-merriweather text-[36px] text-tertiary-300">
             What we deliver

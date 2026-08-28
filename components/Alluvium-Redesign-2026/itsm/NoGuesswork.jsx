@@ -23,8 +23,8 @@ const works = [
 ];
 const NoGuesswork = () => {
   return (
-    <div className="bg-lightBlue-150 w-full px-6 md:px-12 ">
-      <div className="max-w-7xl mx-auto py-24">
+    <div className="bg-lightBlue-150 w-full  ">
+      <div className="max-w-7xl mx-auto py-24 px-6 md:px-12 lg:px-16">
         <div>
           <h4 className="text-tertiary-300 text-[36px] font-bold font-merriweather leading-[44px] text-center">
             A clear, phased approach — no guesswork,
@@ -97,8 +97,8 @@ const NoGuesswork = () => {
                     </div>
 
                     {/* Content */}
-                    <div className="w-full mt-4">
-                      <p className="text-tertiary-200 text-xl font-bold font-merriweather">
+                    <div className="w-full mt-4 ">
+                      <p className="text-tertiary-200 text-xl font-bold font-merriweather w-full lg:w-[280px]">
                         {work.heading}
                       </p>
 

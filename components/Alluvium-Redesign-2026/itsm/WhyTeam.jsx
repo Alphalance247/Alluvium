@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 const listItems = [
   {
@@ -30,8 +31,8 @@ const listItems = [
 
 const WhyTeam = () => {
   return (
-    <div className="bg-[#008DAF] w-full py-24">
-      <div className="max-w-7xl mx-auto ">
+    <div className="bg-[#008DAF] w-full py-24 ">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
         <div className="flex flex-col gap-12">
           <div>
             <h5 className="text-white text-[36px] leading-[44px] font-bold font-merriweather">
@@ -39,23 +40,24 @@ const WhyTeam = () => {
             </h5>
           </div>
           {/*  */}
-          <div className="flex items-center justify-between gap-10">
-            <div className=" w-full md:w-1/2">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
+            <div className=" w-full lg:w-1/2">
               <div>
                 {listItems.map((listItem, index) => (
                   <div
                     key={listItem.id}
-                    className="flex  border-t border-[#FFFFFF33] py-6"
+                    className="flex items-start border-t border-[#FFFFFF33] py-6 gap-2"
                   >
                     {/* Number */}
 
                     {/* Title */}
                     <div className="w-1/2 ">
-                      <div className="flex  gap-3">
-                        <p className="text-white opacity-70 font-merriweather text-[28px] font-bold">
-                          {index + 1}
-                        </p>
-                        <h6 className="font-bold text-white font-merriweather text-xl">
+                      <div className="">
+                        <h6 className="font-bold text-white font-merriweather text-lg lg:text-xl">
+                          <span className="text-white opacity-70 font-merriweather text-[28px] font-bold pr-3">
+                            {index + 1}
+                          </span>
+
                           {listItem.title}
                         </h6>
                       </div>
@@ -63,7 +65,7 @@ const WhyTeam = () => {
 
                     {/* Description */}
                     <div className="w-1/2">
-                      <p className="text-white text-lg font-medium font-manrope max-w-[283px]">
+                      <p className="text-white text-base lg:text-lg font-medium font-manrope max-w-[283px]">
                         {listItem.description}
                       </p>
                     </div>
@@ -71,7 +73,14 @@ const WhyTeam = () => {
                 ))}
               </div>
             </div>
-            <div className="w-full md:w-1/2"></div>
+            <div className="w-full lg:w-1/2">
+              <Image
+                src="https://d38rkvi67t4lhi.cloudfront.net/assets/1787742081657-Mask-group-4.png"
+                alt="connector image"
+                width={589}
+                height={363}
+              />
+            </div>
           </div>
         </div>
       </div>
