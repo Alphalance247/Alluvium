@@ -67,7 +67,8 @@ module.exports = {
         },
         lightBlue: {
           50: "#FFFFFF4D",
-          100: "#C2D8F8"
+          100: "#C2D8F8",
+          150: "#ECF6F9"
         }
       },
     },
