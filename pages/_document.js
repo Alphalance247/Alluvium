@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
             defer
           ></script>
 
-          <script
+          {/* <script
             defer
             async
             src="//ukbrowserspeed.com/_k/t.js"
@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
                 }
               `,
             }}
-          />
+          /> */}
 
           <script
             dangerouslySetInnerHTML={{
