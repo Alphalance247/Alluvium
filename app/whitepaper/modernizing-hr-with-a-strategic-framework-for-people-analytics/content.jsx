@@ -18,21 +18,21 @@ const ModernizingHrWhitepaper = () => {
   return (
     <>
       <Layout>
-        <WhitepaperHero
-          breadcrumbLabel={WHITEPAPER_TITLE}
-          title={
-            "The intelligent advantage:\nModernizing HR with a strategic framework for people analytics"
-          }
-          subhead="AI is only as useful as the systems and knowledge behind it. This whitepaper explores how enterprises can connect trusted knowledge, service workflows, and AI to create systems that teams actually use."
-          authorName="Taiwo Ojo"
-          authorRole="Alluvium - Atlassian Service Management Specialised Solution Partner"
-          imageAlt="Modernizing HR with a strategic framework for people analytics"
-        />
-
         <section className="w-full bg-white overflow-hidden">
           <Container className="grid grid-cols-1 lg:grid-cols-[1fr_256px] gap-12 lg:gap-20 items-start">
             {/* Left: article content */}
+
             <div className="min-w-0 max-w-3xl flex flex-col items-start gap-16">
+              <WhitepaperHero
+                breadcrumbLabel={WHITEPAPER_TITLE}
+                title={
+                  "The intelligent advantage:\nModernizing HR with a strategic framework for people analytics"
+                }
+                subhead="AI is only as useful as the systems and knowledge behind it. This whitepaper explores how enterprises can connect trusted knowledge, service workflows, and AI to create systems that teams actually use."
+                authorName="Taiwo Ojo"
+                authorRole="Alluvium - Atlassian Service Management Specialised Solution Partner"
+                imageAlt="Modernizing HR with a strategic framework for people analytics"
+              />
               <ArticleBody blocks={articleBlocks} />
               <AuthorBio
                 name="Taiwo Ojo"
