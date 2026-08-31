@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const WhitepaperHero = ({
   breadcrumbLabel,
@@ -7,13 +8,13 @@ const WhitepaperHero = ({
   subhead,
   authorName,
   authorRole,
-  authorAvatar = "https://placehold.co/40x40",
-  image = "https://placehold.co/720x586",
+  authorAvatar = "/assets/Alluvium-Redesign-2026/whitepaper/jaytee.svg",
+  image = "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector.png",
   imageAlt = "",
 }) => {
   return (
     <section className="w-full bg-white overflow-hidden">
-      <div className="max-w-3xl mx-auto w-full flex flex-col items-start gap-10 px-6 py-16 md:px-12 md:py-20 lg:py-24">
+      <div className="max-w-3xl mx-auto w-full flex flex-col items-start gap-10 ">
         {/* Breadcrumb */}
         <nav className="flex flex-wrap items-center gap-2 text-sm">
           <Link href="/" className="text-default-100 font-bold font-sans">
@@ -48,9 +49,11 @@ const WhitepaperHero = ({
               Written by
             </span>
             <div className="flex items-center gap-3">
-              <img
+              <Image
                 src={authorAvatar}
                 alt={authorName}
+                width={40}
+                height={40}
                 className="w-10 h-10 rounded-lg object-cover"
               />
               <div className="flex flex-col items-start">
@@ -66,11 +69,13 @@ const WhitepaperHero = ({
         </div>
 
         {/* Featured Image */}
-        <div className="relative w-full h-[300px] md:h-[450px] lg:h-[586px] rounded-lg overflow-hidden bg-zinc-200">
-          <img
+        <div className="w-full rounded-lg overflow-hidden bg-zinc-200">
+          <Image
             src={image}
             alt={imageAlt}
-            className="absolute inset-0 w-full h-full object-cover"
+            width={720}
+            height={400}
+            className="w-full h-auto object-cover"
           />
         </div>
       </div>

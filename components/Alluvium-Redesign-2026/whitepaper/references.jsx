@@ -7,10 +7,10 @@ const PREVIEW_COUNT = 4;
 const ReferenceEntry = ({ reference }) => {
   const content = (
     <>
-      <span className="text-[#1868DB] text-sm font-semibold font-sans underline">
+      <span className="text-[#344054] text-sm font-semibold font-sans underline">
         {reference.title}
       </span>{" "}
-      <span className="text-[#667085] text-sm font-medium font-sans">
+      <span className="text-[#344054] text-sm font-semibold font-sans underline">
         | {reference.source}
       </span>
     </>
@@ -22,14 +22,14 @@ const ReferenceEntry = ({ reference }) => {
         href={reference.href}
         target="_blank"
         rel="noreferrer"
-        className="block"
+        className="block cursor-pointer"
       >
         {content}
       </a>
     );
   }
 
-  return <span className="block">{content}</span>;
+  return <span className="block cursor-pointer">{content}</span>;
 };
 
 const References = ({ references = [], totalCount }) => {
@@ -40,7 +40,7 @@ const References = ({ references = [], totalCount }) => {
   return (
     <div className="w-full pt-10 border-t border-slate-200 flex flex-col items-start gap-6">
       <div className="flex items-center gap-2">
-        <span className="w-5 h-1 bg-default-100" />
+        <span className="w-5 h-1 bg-[#008DAF]" />
         <span className="text-[#1D2939] text-sm font-bold font-sans uppercase tracking-wide">
           References
         </span>

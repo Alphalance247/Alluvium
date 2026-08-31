@@ -13,9 +13,20 @@ export const tocItems = [
       },
     ],
   },
-  { label: "Phase 2: Enable dependable analytics" },
+  {
+    label: "Phase 2: Enable dependable analytics",
+    subItems: [
+      { label: "Measuring critical HR metrics with Atlassian analytics" },
+    ],
+  },
   { label: "Phase 3: Optimize with automation and agentic AI" },
   { label: "Rovo at the service desk: the Virtual Service Agent" },
   { label: "Where Claude Fits: A complementary layer for HR analytics" },
-  { label: "Conclusion: A quantifiable return on Investment" },
+  {
+    label: "Conclusion: A quantifiable return on Investment",
+    subItems: [
+      { label: "Other organizations validate the same pattern" },
+      { label: "Securing sensitive data and maintaining compliance" },
+    ],
+  },
 ];

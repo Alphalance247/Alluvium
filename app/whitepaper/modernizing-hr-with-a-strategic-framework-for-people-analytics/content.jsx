@@ -18,7 +18,7 @@ const ModernizingHrWhitepaper = () => {
   return (
     <>
       <Layout>
-        <section className="w-full bg-white overflow-hidden">
+        <section className="w-full bg-white">
           <Container className="grid grid-cols-1 lg:grid-cols-[1fr_256px] gap-12 lg:gap-20 items-start">
             {/* Left: article content */}
 
@@ -41,7 +41,7 @@ const ModernizingHrWhitepaper = () => {
                 email="taiwo@alluvium.net"
                 linkedin="linkedin.com/in/taiwoojo"
               />
-              <References references={references} totalCount={38} />
+              {/* <References references={references} totalCount={38} /> */}
             </div>
 
             {/* Right: sticky sidebar */}

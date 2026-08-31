@@ -21,9 +21,10 @@ export const articleBlocks = [
   },
   {
     type: "image",
-    src: "https://placehold.co/720x384",
+    src: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector-1.png",
     alt: "HR Service Management consolidation overview",
-    heightClassName: "h-96",
+    width: 720,
+    height: 384,
   },
   {
     type: "paragraph",
@@ -84,10 +85,8 @@ export const articleBlocks = [
       },
       {
         requestType: "Internal transfers & mobility",
-        dataCaptured:
-          "Origin/destination department, role change, approvals",
-        analyticsValue:
-          "Internal mobility rate, career progression patterns",
+        dataCaptured: "Origin/destination department, role change, approvals",
+        analyticsValue: "Internal mobility rate, career progression patterns",
       },
       {
         requestType: "Policy questions",
@@ -97,8 +96,7 @@ export const articleBlocks = [
       {
         requestType: "Training & development",
         dataCaptured: "Course/certification, skill category, budget",
-        analyticsValue:
-          "Skills-gap analysis, L&D spend, completion rates",
+        analyticsValue: "Skills-gap analysis, L&D spend, completion rates",
       },
     ],
   },
@@ -115,9 +113,10 @@ export const articleBlocks = [
   },
   {
     type: "image",
-    src: "https://placehold.co/720x353",
+    src: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector-2.png",
     alt: "Atlassian Data Lake and Analytics overview",
-    heightClassName: "h-96",
+    width: 720,
+    height: 353,
   },
   {
     type: "paragraph",
@@ -204,9 +203,10 @@ export const articleBlocks = [
   },
   {
     type: "image",
-    src: "https://placehold.co/720x258",
+    src: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector-3.png",
     alt: "JSM automation workflow",
-    heightClassName: "h-64",
+    width: 720,
+    height: 258,
   },
   {
     type: "rich",
@@ -235,9 +235,10 @@ export const articleBlocks = [
   },
   {
     type: "image",
-    src: "https://placehold.co/721x363",
+    src: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector-4.png",
     alt: "Rovo Virtual Service Agent",
-    heightClassName: "h-96",
+    width: 721,
+    height: 363,
   },
   {
     type: "rich",
@@ -280,9 +281,10 @@ export const articleBlocks = [
   },
   {
     type: "image",
-    src: "https://placehold.co/719x405",
+    src: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319101-Vector-5.png",
     alt: "Claude as a complementary AI layer",
-    heightClassName: "h-96",
+    width: 719,
+    height: 405,
   },
   {
     type: "paragraph",
@@ -389,7 +391,7 @@ export const articleBlocks = [
       { bold: true, text: "Edenred," },
       " a financial services firm serving ",
       { bold: true, text: "15,000+ customers," },
-      " centralized globally onto one JSM Cloud instance for IT and enterprise service and is now supporting more than a third of its business units on the platform — \"and just getting started.\" Atlassian's own HR team, as noted above, used the Workday-to-JSM integration to increase HR bandwidth and centralize tracking with measurable oversight.",
+      ' centralized globally onto one JSM Cloud instance for IT and enterprise service and is now supporting more than a third of its business units on the platform — "and just getting started." Atlassian\'s own HR team, as noted above, used the Workday-to-JSM integration to increase HR bandwidth and centralize tracking with measurable oversight.',
     ],
   },
   {
@@ -425,35 +427,35 @@ export const articleBlocks = [
   {
     type: "rich",
     runs: [
-      { lead: true, text: "Start small, iterate, and scale:" },
+      { lead: true, text: "1. Start small, iterate, and scale:" },
       " Begin with one high-impact workflow, like onboarding, to prove value before scaling to a larger initiative.",
     ],
   },
   {
     type: "rich",
     runs: [
-      { lead: true, text: "Prioritize data integrity:" },
+      { lead: true, text: "2. Prioritize data integrity:" },
       " Ensure workflows are designed to capture high-quality data from the outset to build a reliable single source of truth.",
     ],
   },
   {
     type: "rich",
     runs: [
-      { lead: true, text: "Invest in adoption and training:" },
+      { lead: true, text: "3. Invest in adoption and training:" },
       " A new technology is only as valuable as its adoption. Provide comprehensive training and change management to ensure buy-in and success.",
     ],
   },
   {
     type: "rich",
     runs: [
-      { lead: true, text: "Activate Rovo before adding anything else:" },
+      { lead: true, text: "4. Activate Rovo before adding anything else:" },
       " Turn on Search, Chat, and the Virtual Service Agent first. Rovo is the AI layer built natively for this platform, and it should be the default before any complementary tool is layered on top.",
     ],
   },
   {
     type: "rich",
     runs: [
-      { lead: true, text: "Set AI usage guardrails before scaling:" },
+      { lead: true, text: "5. Set AI usage guardrails before scaling:" },
       " Whether the AI in question is Rovo or a complementary layer like Claude, define in writing what it may read, what it may draft without review, and what always requires human sign-off.",
     ],
   },

@@ -1,5 +1,7 @@
 import React from "react";
+import Image from "next/image";
 import RichText from "./richText";
+import { IoLogoLinkedin } from "react-icons/io";
 
 const MailIcon = () => (
   <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1D2939] shrink-0">
@@ -30,7 +32,7 @@ const LinkedInIcon = () => (
 const AuthorBio = ({
   name,
   role,
-  avatar = "https://placehold.co/117x117",
+  avatar = "/assets/Alluvium-Redesign-2026/whitepaper/jaytee.svg",
   bioParagraphs = [],
   email,
   linkedin,
@@ -39,7 +41,7 @@ const AuthorBio = ({
     <div className="w-full pt-10 border-t border-slate-200">
       <div className="flex flex-col items-start gap-6">
         <div className="flex items-center gap-2">
-          <span className="w-5 h-1 bg-default-100" />
+          <span className="w-5 h-1 bg-[#008DAF]" />
           <span className="text-[#1D2939] text-sm font-bold font-sans uppercase tracking-wide">
             About the author
           </span>
@@ -47,10 +49,12 @@ const AuthorBio = ({
 
         <div className="flex flex-col sm:flex-row items-start gap-6">
           <div className="flex flex-col items-start gap-3.5 shrink-0">
-            <img
+            <Image
               src={avatar}
               alt={name}
-              className="w-28 h-28 rounded-lg object-cover"
+              width={117}
+              height={117}
+              className="w-[7.3125rem] h-[7.3125rem] rounded-lg object-cover"
             />
             {(email || linkedin) && (
               <div className="flex flex-col items-start gap-2">
@@ -59,7 +63,7 @@ const AuthorBio = ({
                     href={`mailto:${email}`}
                     className="flex items-center gap-2 text-[#344054] text-sm font-semibold font-sans"
                   >
-                    <MailIcon />
+                    <MailIcon size={16} />
                     {email}
                   </a>
                 )}
@@ -70,7 +74,7 @@ const AuthorBio = ({
                     rel="noreferrer"
                     className="flex items-center gap-2 text-[#344054] text-sm font-semibold font-sans"
                   >
-                    <LinkedInIcon />
+                    <IoLogoLinkedin size={32} />
                     {linkedin}
                   </a>
                 )}

@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { slugify } from "./slugify";
 
 const TwitterIcon = () => (
@@ -30,27 +31,64 @@ const DownloadIcon = () => (
   </svg>
 );
 
-const TocLink = ({ item, activeId }) => {
+const ChevronIcon = ({ expanded }) => (
+  <svg
+    className={`w-4 h-4 shrink-0 transition-transform duration-200 ${
+      expanded ? "rotate-180" : ""
+    }`}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth={2}
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9l6 6 6-6" />
+  </svg>
+);
+
+const TocLink = ({ item, activeId, overrideValue, onToggle }) => {
   const id = slugify(item.label);
   const isActive = id === activeId;
   const hasActiveChild = item.subItems?.some(
     (sub) => slugify(sub.label) === activeId,
   );
-  const expanded = isActive || hasActiveChild;
+  const hasSubItems = Boolean(item.subItems?.length);
+  const naturallyExpanded = isActive || hasActiveChild;
+  // Follow scroll position until the user explicitly toggles this item —
+  // after that, their choice sticks regardless of scroll.
+  const expanded =
+    overrideValue === undefined ? naturallyExpanded : overrideValue;
+  // The left border is only a "you collapsed this" marker, shown after an
+  // explicit click — not a default/active-section indicator.
+  const showCollapsedMarker = hasSubItems && overrideValue === false;
 
   return (
     <div className="w-full flex flex-col items-start">
-      <a
-        href={`#${id}`}
-        className={`w-full py-2 pl-4 border-l-2 text-sm leading-5 font-sans transition-colors ${
-          isActive
-            ? "border-default-100 text-default-100 font-bold"
-            : "border-slate-200 text-[#344054] font-medium hover:border-slate-400"
+      <div
+        className={`w-full flex items-center gap-2 py-2  transition-colors ${
+          showCollapsedMarker ? "border-slate-300" : "border-transparent"
         }`}
       >
-        {item.label}
-      </a>
-      {expanded && item.subItems && (
+        <a
+          href={`#${id}`}
+          className={`flex-1 text-sm leading-5 font-sans ${
+            isActive ? "text-[#344054] font-bold" : "text-[#344054] font-medium"
+          }`}
+        >
+          {item.label}
+        </a>
+        {hasSubItems && (
+          <button
+            type="button"
+            onClick={() => onToggle(id, expanded)}
+            aria-label={expanded ? "Collapse section" : "Expand section"}
+            aria-expanded={expanded}
+            className="text-[#667085] hover:text-[#1D2939] transition-colors"
+          >
+            <ChevronIcon expanded={expanded} />
+          </button>
+        )}
+      </div>
+      {expanded && hasSubItems && (
         <div className="w-full flex flex-col items-start bg-default-25">
           {item.subItems.map((sub) => {
             const subId = slugify(sub.label);
@@ -83,6 +121,25 @@ const Sidebar = ({
 }) => {
   const [activeId, setActiveId] = useState("");
   const [shareUrl, setShareUrl] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard API unavailable (e.g. insecure context) — nothing to fall
+      // back to, so just leave the button state unchanged.
+    }
+  };
+  // Explicit expand/collapse choices, keyed by heading id. Undefined = follow
+  // scroll position; a stored boolean means the user has clicked that item.
+  const [overrides, setOverrides] = useState({});
+
+  const toggleExpanded = (id, currentlyExpanded) => {
+    setOverrides((prev) => ({ ...prev, [id]: !currentlyExpanded }));
+  };
 
   useEffect(() => {
     setShareUrl(window.location.href);
@@ -119,13 +176,19 @@ const Sidebar = ({
         </div>
         <nav className="w-full flex flex-col items-start">
           {tocItems.map((item) => (
-            <TocLink key={item.label} item={item} activeId={activeId} />
+            <TocLink
+              key={item.label}
+              item={item}
+              activeId={activeId}
+              overrideValue={overrides[slugify(item.label)]}
+              onToggle={toggleExpanded}
+            />
           ))}
         </nav>
       </div>
 
       {/* Download report */}
-      <div className="w-full flex flex-col items-start gap-4">
+      {/* <div className="w-full flex flex-col items-start gap-4">
         <div className="w-full pb-4 border-b border-slate-200">
           <span className="text-[#667085] text-xs font-bold font-sans uppercase tracking-wide">
             Download report
@@ -133,9 +196,11 @@ const Sidebar = ({
         </div>
         <div className="w-full flex flex-col items-start gap-6">
           <div className="w-48 h-64 relative bg-gradient-to-b from-blue-500 to-emerald-300 rounded-md overflow-hidden flex items-center justify-center">
-            <img
+            <Image
               src={reportCover}
               alt={reportTitle}
+              width={144}
+              height={208}
               className="w-36 h-52 object-cover rounded shadow-lg"
             />
           </div>
@@ -152,7 +217,7 @@ const Sidebar = ({
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Share */}
       <div className="w-full flex flex-col items-start gap-4">
@@ -162,15 +227,25 @@ const Sidebar = ({
           </span>
         </div>
         <div className="flex items-center gap-2">
-          <a
-            href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}`}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Share on X"
-            className="w-10 h-10 flex items-center justify-center rounded-sm bg-slate-100 text-[#1D2939] hover:bg-slate-200 transition-colors"
+          <button
+            type="button"
+            onClick={handleCopyLink}
+            aria-label="Copy link"
+            className="relative w-10 h-10 flex items-center justify-center rounded-sm bg-slate-100 text-[#1D2939] hover:bg-slate-200 transition-colors"
           >
-            <TwitterIcon />
-          </a>
+            <Image
+              src="/assets/Alluvium-Redesign-2026/whitepaper/copy.png"
+              alt=""
+              width={40}
+              height={40}
+              className="w-10 h-10"
+            />
+            {copied && (
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap px-2 py-1 rounded bg-[#1D2939] text-white text-xs font-sans">
+                Copied!
+              </span>
+            )}
+          </button>
           <a
             href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`}
             target="_blank"
@@ -178,7 +253,13 @@ const Sidebar = ({
             aria-label="Share on LinkedIn"
             className="w-10 h-10 flex items-center justify-center rounded-sm bg-slate-100 text-[#1D2939] hover:bg-slate-200 transition-colors"
           >
-            <LinkedInIcon />
+            <Image
+              src="/assets/Alluvium-Redesign-2026/whitepaper/reshare.png"
+              alt="LinkedIn icon"
+              width={40}
+              height={40}
+              className="w-10 h-10"
+            />
           </a>
         </div>
       </div>

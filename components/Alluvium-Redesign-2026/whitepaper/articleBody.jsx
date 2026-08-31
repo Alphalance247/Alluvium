@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import RichText from "./richText";
 import { slugify } from "./slugify";
 
@@ -37,14 +38,14 @@ const Paragraph = ({ text }) => (
   </div>
 );
 
-const ImageBlock = ({ src, alt, heightClassName = "h-96" }) => (
-  <div
-    className={`relative w-full ${heightClassName} rounded-lg overflow-hidden bg-zinc-200`}
-  >
-    <img
+const ImageBlock = ({ src, alt, width, height }) => (
+  <div className="w-full rounded-lg overflow-hidden bg-zinc-200">
+    <Image
       src={src}
       alt={alt || ""}
-      className="absolute inset-0 w-full h-full object-cover"
+      width={width}
+      height={height}
+      className="w-full h-auto object-cover"
     />
   </div>
 );
@@ -122,7 +123,8 @@ const ArticleBody = ({ blocks }) => {
                 key={index}
                 src={block.src}
                 alt={block.alt}
-                heightClassName={block.heightClassName}
+                width={block.width}
+                height={block.height}
               />
             );
           case "bulletList":

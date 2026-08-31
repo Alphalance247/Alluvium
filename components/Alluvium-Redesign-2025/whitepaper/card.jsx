@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import styles from "../../../styles/AlluviumRedesign2025/whitepaper/whitepaper.module.scss";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ const WhitePaperCard = ({
       <Link href={url || "/"}>
         <div className={styles.cardContainer} style={{ cursor: "pointer" }}>
           <div className={styles.cardGraphic}>
-            <img
+            <Image
               src={handsImage}
               alt="Robotic and human hands reaching towards each other"
               width={373}
