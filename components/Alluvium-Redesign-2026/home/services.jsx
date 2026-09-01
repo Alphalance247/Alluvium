@@ -43,7 +43,10 @@ const services = [
   },
 ];
 
-const EnterpriseSolutionsSection = () => {
+const EnterpriseSolutionsSection = ({
+  eyebrow = "Our services",
+  heading = "One platform. Five ways in.",
+}) => {
   const listRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -73,11 +76,11 @@ const EnterpriseSolutionsSection = () => {
           <div className="flex items-center gap-2">
             <span className="w-5 h-1 bg-[#E37915]" />
             <span className="text-[#1D2939] text-sm font-bold font-sans uppercase">
-              Our services
+              {eyebrow}
             </span>
           </div>
           <h2 className="text-[#1D2939] text-3xl md:text-[2.5rem] font-bold font-serif leading-tight">
-            One platform. Five ways in.
+            {heading}
           </h2>
         </div>
 
