@@ -58,7 +58,7 @@ const References = ({ references = [], totalCount }) => {
           onClick={() => setIsOpen(true)}
           className="group inline-flex items-center gap-2 text-[#1D2939] font-bold font-sans text-base"
         >
-          <span>View all {count} references</span>
+          <span>View all references</span>
           <svg
             className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-150"
             fill="none"

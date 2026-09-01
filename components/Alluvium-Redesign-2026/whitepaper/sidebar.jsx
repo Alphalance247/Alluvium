@@ -116,8 +116,8 @@ const TocLink = ({ item, activeId, overrideValue, onToggle }) => {
 const Sidebar = ({
   tocItems = [],
   reportTitle,
-  reportCover = "https://placehold.co/143x203",
-  downloadHref = "#",
+  reportCover = "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector-1.png",
+  downloadHref = "https://d38rkvi67t4lhi.cloudfront.net/assets/1788200053203-The-Intelligent-Advantage.pdf",
 }) => {
   const [activeId, setActiveId] = useState("");
   const [shareUrl, setShareUrl] = useState("");
@@ -188,7 +188,7 @@ const Sidebar = ({
       </div>
 
       {/* Download report */}
-      {/* <div className="w-full flex flex-col items-start gap-4">
+      <div className="w-full flex flex-col items-start gap-4">
         <div className="w-full pb-4 border-b border-slate-200">
           <span className="text-[#667085] text-xs font-bold font-sans uppercase tracking-wide">
             Download report
@@ -217,7 +217,7 @@ const Sidebar = ({
             </a>
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Share */}
       <div className="w-full flex flex-col items-start gap-4">
