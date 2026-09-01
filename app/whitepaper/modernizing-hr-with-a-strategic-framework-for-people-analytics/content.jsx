@@ -41,7 +41,7 @@ const ModernizingHrWhitepaper = () => {
                 email="taiwo@alluvium.net"
                 linkedin="linkedin.com/in/taiwoojo"
               />
-              {/* <References references={references} totalCount={38} /> */}
+              <References references={references} totalCount={""} />
             </div>
 
             {/* Right: sticky sidebar */}
