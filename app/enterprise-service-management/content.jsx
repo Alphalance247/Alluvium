@@ -221,14 +221,14 @@ const EnterpriseManagement = () => {
           ctaLabel="Book a discovery call"
           ctaHref="/contact-us"
         >
-          <Link href="" className="w-full md:w-fit">
+          <Link href="/contact-us" className="w-full md:w-fit">
             <Button
               size="semi-md"
               // variant="secondary"
               type="button"
-              className="hover:!bg-white hover:!text-secondary-900 text-white border border-[rgba(255, 255, 255,0.8)] shadow-[#1018280D]"
+              className="hover:!bg-white  hover:!text-secondary-900 text-white border border-[rgba(255, 255, 255,0.8)] shadow-[#1018280D]"
             >
-              <span>See our process </span>
+              <span className="font-manrope"> See our process </span>
             </Button>
           </Link>
         </CtaBannerSection>

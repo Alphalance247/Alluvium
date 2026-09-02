@@ -32,7 +32,7 @@ const OpsginieMigration = () => {
               Management Operations, with rollback planning and a live parallel
               period
             </p>
-            <Link href="" className="">
+            <Link href="/contact-us" className="">
               <Button size="md" variant="defaultSecondary">
                 See the full migration plan
               </Button>

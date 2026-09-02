@@ -1,58 +1,40 @@
 import React from "react";
-import styles from "../../../styles/AlluviumRedesign2026/about/core-value.module.scss";
-import Image from "next/legacy/image";
-
-const valuesData = [
-  {
-    title: "Leadership",
-    description:
-      "Leadership is about driving innovation and continuously improving our services and products. We believe in staying ahead of the curve and exploring new ways to enhance our offerings and deliver greater value to our clients.",
-    iconClass: "/assets/Alluvium-Redesign-2026/home/excel.svg",
-  },
-  {
-    title: "Excellence",
-    description:
-      "Excellence is about delivering top-quality results and exceeding our clients’ expectations. We are committed to delivering the best possible outcomes and consistently exceeding our clients’ goals and objectives.",
-    iconClass: "/assets/Alluvium-Redesign-2026/home/owner.svg",
-  },
-  {
-    title: "Ownership",
-    description:
-      "Ownership is about taking personal responsibility for our work and delivering results. Our team is encouraged to bring their unique skills and perspectives to each project, and we strive to create a culture of collaboration.",
-    iconClass: "/assets/Alluvium-Redesign-2026/home/leader.svg",
-  },
-];
+import Image from "next/image";
+import Container from "../common/container";
 
 const ValuesGrid = () => {
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.innerContainer}>
-        {/* Header */}
-        <div className={styles.header}>
-          <div className={styles.badge}>Our values</div>
-          <h2>
-            Our values are the driving force behind everything we do at Alluvium
+    <section className="w-full bg-secondary-900 overflow-hidden">
+      <Container className="flex flex-col lg:flex-row items-center gap-10">
+        <div className="flex-1 flex flex-col items-start gap-6">
+          <div className="flex items-center gap-2">
+            <span className="w-5 h-1 bg-default-100" />
+            <span className="text-white text-sm font-bold font-sans uppercase tracking-wide">
+              Where we operate
+            </span>
+          </div>
+          <h2 className="text-white text-3xl md:text-4xl font-bold font-serif leading-tight">
+            Built to deliver globally
           </h2>
+          <p className="max-w-lg text-white/80 text-lg font-medium font-sans leading-relaxed">
+            Wherever you&apos;re calling from, there&apos;s a team ready to
+            help. We deliver across AMER, EMEA, and Africa — with offices in
+            Orlando, Stamford, and New York, growing presence on the West Coast,
+            and teams in the UK and Nigeria, one of the few Africa practices in
+            the Atlassian partner ecosystem.
+          </p>
         </div>
 
-        {/* Values Grid */}
-        <div className={styles.valuesGrid}>
-          {valuesData.map((val, index) => (
-            <div key={index} className={styles.valueCard}>
-              <Image
-                src={val.iconClass}
-                width={40}
-                height={40}
-                alt={val.title}
-              />
-              <div className={styles.textContent}>
-                <h3>{val.title}</h3>
-                <p>{val.description}</p>
-              </div>
-            </div>
-          ))}
+        <div className="w-full lg:w-[588px] shrink-0">
+          <Image
+            src="https://d38rkvi67t4lhi.cloudfront.net/assets/1788259097847-Image-11.png"
+            alt="Map of Alluvium's global office locations"
+            width={588}
+            height={368}
+            className="w-full h-auto object-contain"
+          />
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

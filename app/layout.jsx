@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
           async
           defer
         ></script>
-        <script
+        {/* <script
           defer
           async
           src="//ukbrowserspeed.com/_k/t.js"
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
               })()
             `,
           }}
-        />
+        /> */}
       </head>
       <body>
         <ScrollToTop />

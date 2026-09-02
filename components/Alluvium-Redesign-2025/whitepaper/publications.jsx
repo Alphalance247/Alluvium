@@ -15,6 +15,15 @@ const Publications = () => {
       handsImage: "/assets/redesign-2025/whitepaper/white-paper-1.png", // Robotic and human hands
       url: "/whitepaper/regulatory-supremacy-and-competitive-edge",
     },
+    {
+      id: 2,
+      title: "Modernizing HR with a Strategic Framework for People Analytics",
+      author: "TAIWO OJO",
+      date: "May 15th, 2026: 07:00 PM (WAT)",
+      handsImage:
+        "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector-1.png", // Robotic and human hands
+      url: "/whitepaper/modernizing-hr-with-a-strategic-framework-for-people-analytics",
+    },
   ];
 
   const [data, setData] = useState([]);
