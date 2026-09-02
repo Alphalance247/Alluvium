@@ -3,8 +3,8 @@ import React from "react";
 const TheProblem = () => {
   return (
     <div className="bg-tertiary-150 py-24 ">
-      <div className="max-w-[1019px] mx-auto w-full px-6 md:px-12 lg:px-16">
-        <div className="flex flex-col md:flex-row gap-10 items-center ">
+      <div className="max-w-[1081px] mx-auto w-full px-6 md:px-12 lg:px-2">
+        <div className="flex flex-col md:flex-row gap-10 items-center">
           <div className="w-full md:w-1/2 flex flex-col gap-6 items-start">
             <div className="flex items-center gap-2">
               <div className="w-5 h-[4px] bg-[#008DAF]" />

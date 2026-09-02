@@ -1,51 +1,56 @@
 import React from "react";
-import styles from "../../../styles/AlluviumRedesign2026/about/about-alluvium.module.scss";
-import Image from "next/legacy/image";
+import Image from "next/image";
+import Container from "../common/container";
+
+const founders = [
+  {
+    name: "Wale Olojo",
+    role: "Co-Founder — technical direction and delivery.",
+    image:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788261822169-Image-14.png",
+  },
+  {
+    name: "Taiwo Ojo",
+    role: "Co-Founder — growth and partnerships.",
+    image:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788261822170-Image-13.png",
+  },
+];
 
 const AboutGrid = () => {
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.innerContainer}>
-        <div className={styles.layout}>
-          {/* Staggered Image Container */}
-          {/* <div className={styles.imageMasonry}> */}
-          <Image
-            height={580}
-            width={543}
-            //   className={styles.img1}
-            src="/assets/Alluvium-Redesign-2026/about/ceo.png"
-            alt="Team Working"
-          />
-          {/* </div> */}
+    <section className="w-full bg-[#F2F4F7] overflow-hidden">
+      <Container className="flex flex-col items-center gap-12">
+        <h2 className="text-center text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-tight">
+          Founded by practitioners
+        </h2>
 
-          {/* About Text Content */}
-          <article className={styles.textContent}>
-            <div className={styles.badge}>About Alluvium</div>
-
-            <h2>Driving Digital Transformation with Atlassian Expertise</h2>
-
-            <div className={styles.description}>
-              <p>
-                Welcome to Alluvium, where innovation meets expertise. We are a
-                team of passionate professionals dedicated to providing
-                businesses with cutting-edge solutions leveraging the Atlassian
-                suite of tools. Our aim is to simplify the complexity of digital
-                transformation and help our clients achieve their goals with
-                ease and efficiency.
-              </p>
-              <p>
-                At Alluvium, we believe in delivering more than just products
-                and services. We strive to provide a unique and personalized
-                experience for each of our clients, understanding their specific
-                needs and providing customized solutions. Our unique value
-                proposition lies in our extensive expertise in the Atlassian
-                platform, combined with a focus on innovation and a commitment
-                to excellence.
-              </p>
+        <div className="w-full flex flex-col sm:flex-row justify-center items-start gap-10">
+          {founders.map((founder) => (
+            <div
+              key={founder.name}
+              className="flex flex-col items-start gap-6 w-full sm:w-80"
+            >
+              <div className="relative w-full h-80 bg-secondary-900 rounded-lg overflow-hidden">
+                <Image
+                  src={founder.image}
+                  alt={founder.name}
+                  fill
+                  className="object-contain object-bottom"
+                />
+              </div>
+              <div className="flex flex-col items-start gap-2">
+                <span className="text-[#1D2939] text-lg font-bold font-sans">
+                  {founder.name}
+                </span>
+                <p className="w-full text-[#344054] text-base font-medium font-sans leading-relaxed">
+                  {founder.role}
+                </p>
+              </div>
             </div>
-          </article>
+          ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 };
