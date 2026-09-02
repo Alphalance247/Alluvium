@@ -83,7 +83,7 @@ const StrategicPartnership = () => {
             </>
           }
           subheading="Extend your delivery capability with an experienced Atlassian and AI team working behind the scenes, under your brand when needed."
-          ctaLabel="Talk to us about partneringl"
+          ctaLabel="Talk to us about partnering"
           ctaHref="/contact-us"
           image="https://d38rkvi67t4lhi.cloudfront.net/assets/1787920872577-Image-25.png"
           imageAlt="strategic partnerships"
