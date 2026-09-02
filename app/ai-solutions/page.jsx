@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Content from "./content";
 
 const page = () => {
-    return (
-        <div>page</div>
-    )
-}
+  return (
+    <div>
+      <Content />
+    </div>
+  );
+};
 
-export default page
+export default page;
