@@ -39,13 +39,18 @@ export default function AboutUs() {
       height: 112,
     },
   ];
+  const stats = [
+    { value: "57+", label: "Accreditations" },
+    { value: "100+", label: "Projects delivered" },
+    { value: "AMER, EMEA", label: "coverage" },
+  ];
   return (
     <Layout>
       <div className={styles.aboutUsPage}>
         <main>
           <AboutHero />
           <MissionSection />
-          <ImpactStory />
+          <ImpactStory heading="By the numbers" stats={stats} />
           <WhatWeNo eyebrow="Our services" heading="What we do" />
           <ValuesGrid />
           <WhatWeStandFor />
