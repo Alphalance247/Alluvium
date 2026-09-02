@@ -142,7 +142,28 @@ const EnterpriseManagement = () => {
   //     height: "134",
   //   },
   // ];
-
+  const items = [
+    {
+      id: 1,
+      heading: "ITSM",
+      text: "Incidents, changes, and requests, aligned to ITIL, powered by JSM",
+    },
+    {
+      id: 2,
+      heading: "Multi-department service management",
+      text: "HR, Finance, Legal, Facilities, and Operations on one platform",
+    },
+    {
+      id: 3,
+      heading: "Legacy platform displacement",
+      text: "Off ServiceNow, HubSpot, Salesforce Precursive, Opsgenie, and PagerDuty, proven with real migrations",
+    },
+    {
+      id: 4,
+      heading: "AI-powered delivery",
+      text: "Virtual Agent deflects 40–70% of routine tickets; Rovo surfaces answers before a ticket is raised; Claude drafts summaries and resolution notes",
+    },
+  ];
   return (
     <>
       <Layout>
@@ -187,7 +208,7 @@ const EnterpriseManagement = () => {
         </NewServicesHero>
         <OpsginieMigration />
         <TheProblem />
-        <WhatWeDeliver />
+        <WhatWeDeliver items={items} className="" borderColor="border-tertiary-100" />
         <NoGuesswork classname="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:gap-12" heading={<h4 className="text-tertiary-300 text-[36px] font-bold font-merriweather leading-[44px] text-center  "> A clear, phased approach — no guesswork,
           <br />no bloated timelines</h4>} works={works} />
         <WhyTeam />
