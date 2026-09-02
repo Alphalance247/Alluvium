@@ -1,11 +1,8 @@
 "use client";
 import Layout from "components/layout";
-import styles from "../../styles/contact-us.module.scss";
-import Badges from "components/Alluvium-Redesign-2025/ReuseComponents/badges";
 import CalendlyWidget from "components/calendlyWidget";
+import Container from "components/Alluvium-Redesign-2026/common/container";
 import FormSection from "components/Alluvium-Redesign-2026/formSection";
-import { badges } from "data";
-import Image from "next/legacy/image";
 
 const ContactUs = () => {
   const data = [
@@ -75,79 +72,90 @@ const ContactUs = () => {
       {/* <div style={{ maxWidth: "1272px", margin: "auto" }}>
         <Lines variant={"primary"} />
       </div> */}
-      <div className={styles.booking}>
-        <div className={styles.book_a_call}>
-          <div className={styles.booking_content}>
-            <h1>Contact us</h1>
-            <p>
-              High Velocity Service Management. Atlassian Cloud Migration.
-              Service Collection. Our team will review your submission and
-              respond within 24 hours.
+      <section className="w-full bg-secondary-900 overflow-hidden">
+        <Container className="flex flex-col lg:flex-row items-stretch gap-10 lg:gap-16">
+          <div className="flex-1 flex flex-col justify-between gap-10">
+            <div className="flex flex-col items-start gap-6">
+              <div className="flex items-center gap-2">
+                <span className="w-6 h-1 bg-default-100" />
+                <span className="text-white text-sm font-bold font-sans uppercase tracking-wide">
+                  Contact us
+                </span>
+              </div>
+              <h1 className="max-w-xl text-white text-4xl md:text-5xl font-bold font-serif leading-tight">
+                Tell us what you are trying to solve.
+              </h1>
+              <p className="max-w-xl text-white text-lg md:text-xl font-medium font-sans leading-relaxed">
+                Whether you&apos;re starting with Atlassian, scaling what you
+                have, or adopting AI across your teams, we can help.
+              </p>
+            </div>
+
+            <p className="text-white text-lg font-medium font-sans leading-relaxed">
+              Tell us about your project at{" "}
+              <a
+                href="mailto:contact@alluvium.net"
+                className="text-default-100 font-bold"
+              >
+                contact@alluvium.net
+              </a>
+              . You can also use the contact form, and we will get back to you
+              within one business day.
             </p>
           </div>
-          <div className={styles.booking_options}>
-            <FormSection />
-            {/* className="container-fluid my-5" */}
-            <section id="schedule-a-call" className={styles.widget}>
-              <CalendlyWidget />
-            </section>
-          </div>
-        </div>
-      </div>
 
-      <div style={{ maxWidth: "1270px", margin: "0 auto" }}>
-        <Badges variant={"sub-default"} badgesData={badges} />
-      </div>
+          <div
+            id="schedule-a-call"
+            className="w-full lg:w-[664px] shrink-0 bg-white rounded-2xl overflow-hidden"
+          >
+            <CalendlyWidget />
+          </div>
+        </Container>
+      </section>
+
+      <section className="w-full bg-white border-b border-slate-200 overflow-hidden">
+        <Container className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div className="flex-1 flex flex-col items-start gap-6">
+            <h2 className="max-w-xl text-[#1D2939] text-3xl font-bold font-serif leading-tight">
+              Prefer to send us a message?
+            </h2>
+            <p className="text-[#344054] text-xl font-medium font-sans leading-relaxed">
+              Whether you&apos;re starting with Atlassian, scaling what you
+              have, or adopting AI across your teams, we can help.
+            </p>
+          </div>
+
+          <div className="w-full lg:w-[562px] shrink-0 p-8 bg-white rounded-lg border border-slate-200">
+            <FormSection />
+          </div>
+        </Container>
+      </section>
 
       {/* <ContactSection withLines={false} /> */}
 
-      <section className={`${styles.office__location}`}>
-        <div className={styles.locate}>
-          <div className={styles.locate__content}>
-            <h2>Our Office Locations</h2>
-            <p>
-              You can find us in London, Stamford, Orlando, and Nairobi. We work
-              across time zones to support global service operations.
-            </p>
-          </div>
-
-          <div className={styles.office}>
-            {officeLocation.map((el, i) => {
-              return (
-                <div className={styles.location} id={i}>
-                  <Image
-                    width={258}
-                    height={191}
-                    src={el?.icon || "/assets/icons/location.svg"}
-                    alt=""
-                  />
-                  <h5>{el?.country}</h5>
-                  <p>{el?.location}</p>
-                  <p>Monday - Friday 9am - 6pm EST</p>
-                  <a href={el?.url}>{el?.tel}</a>
-                  <a href="mailto:contact@alluvium.net">contact@alluvium.net</a>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* <section className={styles.discovery}>
-        <div className={styles.discovery__content}>
-          <h2>
-            Ready to Modernize Your Service <br /> Environment?
+      <section className="w-full bg-white overflow-hidden">
+        <Container className="flex flex-col items-center gap-12">
+          <h2 className="text-center text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-tight">
+            Our Locations
           </h2>
-          <Button>Schedule a Discovery Call</Button>
-        </div>
-      </section> */}
 
-      {/* <section className={`${styles.badges}`}>
-        <div className={`${styles.badges__border}`}>
-          <h2>Alluvium are Trusted Solution Partner of Atlassian</h2>
-          <Badges />
-        </div>
-      </section> */}
+          <div className="w-full flex flex-col sm:flex-row justify-start items-start gap-6">
+            {officeLocation.map((office) => (
+              <div
+                key={office.country}
+                className="flex-1 flex flex-col items-start gap-2"
+              >
+                <span className="text-[#1D2939] text-xl font-bold font-serif leading-relaxed">
+                  {office.country}
+                </span>
+                <p className="max-w-xs text-[#344054] text-lg font-medium font-sans leading-relaxed">
+                  {office.location}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
     </Layout>
   );
 };

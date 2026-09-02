@@ -125,7 +125,7 @@ const socialMedias = [
 
 const Footer = () => {
   return (
-    <div style={{}}>
+    <div style={{}} className={"bg-[#F2F4F7]"}>
       {/* <div className={styles.footer_container}> */}
       <div className="max-w-7xl mx-auto lg:px-16 md:px-12 px-6">
         <div className="flex lg:flex-row flex-col pb-10 lg:pb-[87px] mt-12 lg:mt-10">
@@ -241,45 +241,9 @@ const Footer = () => {
             >
               Privacy Policy
             </Link>
-            {/* <Link href="https://alluvium.net/cookie-policy">
-              Cookies Settings
-            </Link> */}
-
-            {/* <Link href="/alluvium.net/cookie-policy">Cookies Preferences</Link> */}
           </div>
         </div>
-        {/* <div className={styles.bottom_content_container}>
-                    <div className={styles.bottom_content}>
-                        {badges.map((item) => (
-                            <div key={item.alt} className={styles.partners}>
-                                <div className={styles.col_1}>
-                                    <Image
-                                        src={item.img}
-                                        width={item.width}
-                                        height={item.height}
-                                        alt={item.alt}
-                                    />
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div> */}
       </div>
-      {/* <div className={styles.footer_badges}>
-                <Image />
-            </div> */}
-      {/* <div className={styles.footer_copyright}>
-                <div className={styles.copyright_text}>
-                    © 2022 Alluvium Corporation. All rights reserved.
-                </div>
-                <div className={styles.privacy_terms}>
-                    <Link href="/atlassian-services/terms-conditions">
-                        Terms & Conditions
-                    </Link>
-                    <Link href="/privacy-policy">Privacy Policy</Link>
-                    <Link href="/alluvium.net/cookie-policy">Cookies Preferences</Link>
-                </div>
-            </div> */}
     </div>
   );
 };
