@@ -6,8 +6,11 @@ import MissionSection from "components/Alluvium-Redesign-2026/about/ourMission";
 import AboutGrid from "components/Alluvium-Redesign-2026/about/aboutAlluvium";
 import AwardsSection from "components/Alluvium-Redesign-2026/about/awardsNomination";
 import ImpactStory from "components/Alluvium-Redesign-2026/about/ourImpact";
+import WhatWeNo from "components/Alluvium-Redesign-2026/home/services";
 import ValuesGrid from "components/Alluvium-Redesign-2026/about/coreValue";
+import WhatWeStandFor from "components/Alluvium-Redesign-2026/about/whatWeStandFor";
 import SecurityCompliance from "components/Alluvium-Redesign-2026/cloud-upgrade/security";
+import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
 
 export default function AboutUs() {
   const complianceData = [
@@ -42,20 +45,24 @@ export default function AboutUs() {
         <main>
           <AboutHero />
           <MissionSection />
-          <AboutGrid />
-          <AwardsSection />
           <ImpactStory />
-          <SecurityCompliance
+          <WhatWeNo eyebrow="Our services" heading="What we do" />
+          <ValuesGrid />
+          <WhatWeStandFor />
+          <AboutGrid />
+          {/* <AwardsSection /> */}
+          {/* <SecurityCompliance
             data={complianceData}
             withSubhead={false}
             heading={"Industry Accolades"}
+          /> */}
+          <CtaBannerSection
+            label="SEE WHAT IS POSSIBLE"
+            heading="See AI in action."
+            description="Explore how we apply Rovo and Claude to real workflows, from knowledge management and customer experience to underwriting and compliance."
+            ctaLabel="See AI in action"
+            ctaHref="/ai"
           />
-          <ValuesGrid />
-          {/* <Hero />
-          <AboutAlluvium />
-          <OurMission />
-          <HowItStarted />
-          <CoreValueAbout /> */}
         </main>
       </div>
     </Layout>
