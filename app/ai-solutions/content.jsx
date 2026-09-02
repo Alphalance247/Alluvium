@@ -1,10 +1,33 @@
 "use client";
 import NewServicesHero from "components/Alluvium-Redesign-2026/common/newServicesHero";
+import WhatWeDeliver from "components/Alluvium-Redesign-2026/itsm/WhatWeDeliver";
 import MigrationIntro from "components/Alluvium-Redesign-2026/opsgenie-to-jsm/migrationIntro";
 import Layout from "components/layout";
 import React from "react";
 
 const Content = () => {
+  const items = [
+    {
+      id: 1,
+      heading: "AI adoption training ",
+      text: "Practical programs turning AI curiosity into measurable productivity",
+    },
+    {
+      id: 2,
+      heading: "Agent economics",
+      text: "Understand how AI agents consume credits and where costs accumulate",
+    },
+    {
+      id: 3,
+      heading: "Rovo enablement",
+      text: "Implementation and enterprise rollout",
+    },
+    {
+      id: 4,
+      heading: "Claude in practice",
+      text: "Knowledge management, customer experience, underwriting, and compliance use cases",
+    },
+  ];
   return (
     <Layout>
       <NewServicesHero
@@ -31,7 +54,19 @@ const Content = () => {
           </Button>
         </Link> */}
       </NewServicesHero>
-      <MigrationIntro />
+      <MigrationIntro heading="AI works better when the foundation is right.">
+        <span className="text-[#344054] font-medium">
+          Rovo knows what your organization has decided and where the work sits.
+          Claude reasons over that record and drafts the next move. Most AI
+          pilots stall because they’re bolted onto tools nobody trusts —
+          <span className="font-bold">we fix the platform first.</span>
+        </span>
+      </MigrationIntro>
+      <WhatWeDeliver
+        items={items}
+        className="bg-tertiary-150"
+        borderColor="border-tertiary-100"
+      />
     </Layout>
   );
 };
