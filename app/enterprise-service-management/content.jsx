@@ -166,7 +166,8 @@ const EnterpriseManagement = () => {
         <OpsginieMigration />
         <TheProblem />
         <WhatWeDeliver />
-        <NoGuesswork />
+        <NoGuesswork classname="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:gap-12" heading={<h4 className="text-tertiary-300 text-[36px] font-bold font-merriweather leading-[44px] text-center  "> A clear, phased approach — no guesswork,
+          <br />no bloated timelines</h4>} works={works} />
         <WhyTeam />
         <ResultExpect />
         <ReadyToModernize />

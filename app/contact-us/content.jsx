@@ -114,7 +114,7 @@ const ContactUs = () => {
           <div className={styles.office}>
             {officeLocation.map((el, i) => {
               return (
-                <div className={styles.location} id={i}>
+                <div className={styles.location} id={i} key={i}>
                   <Image
                     width={258}
                     height={191}
