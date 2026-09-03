@@ -39,6 +39,28 @@ const badges = [
     height: 81,
   },
 ];
+const works = [
+  {
+    id: 1,
+    heading: "Discovery & assessment ",
+    text: "We audit your current setup, map workflows, interview stakeholders, and assess service management maturity. You get a clear report of gaps, quick wins, and a prioritized roadmap.",
+  },
+  {
+    id: 2,
+    heading: "Solution design",
+    text: "We design request types, queues, SLAs, automations, approval chains, and portal experiences around your policies and processes. Nothing is generic.",
+  },
+  {
+    id: 3,
+    heading: "Implementation & integration",
+    text: "We configure and deploy JSM, connecting it with Confluence, Slack, Teams, email, Active Directory, and your existing tools. Multi-channel support is built in from day one.",
+  },
+  {
+    id: 4,
+    heading: "Enablement & continuous improvement",
+    text: "We provide role-based training for agents, approvers, and end users, then continue with post-launch reviews, SLA tuning, automation refinement, and ongoing advisory as your business evolves.",
+  },
+];
 const EnterpriseManagement = () => {
   // const triadData = [
   //   {
@@ -120,7 +142,28 @@ const EnterpriseManagement = () => {
   //     height: "134",
   //   },
   // ];
-
+  const items = [
+    {
+      id: 1,
+      heading: "ITSM",
+      text: "Incidents, changes, and requests, aligned to ITIL, powered by JSM",
+    },
+    {
+      id: 2,
+      heading: "Multi-department service management",
+      text: "HR, Finance, Legal, Facilities, and Operations on one platform",
+    },
+    {
+      id: 3,
+      heading: "Legacy platform displacement",
+      text: "Off ServiceNow, HubSpot, Salesforce Precursive, Opsgenie, and PagerDuty, proven with real migrations",
+    },
+    {
+      id: 4,
+      heading: "AI-powered delivery",
+      text: "Virtual Agent deflects 40–70% of routine tickets; Rovo surfaces answers before a ticket is raised; Claude drafts summaries and resolution notes",
+    },
+  ];
   return (
     <>
       <Layout>
@@ -165,13 +208,14 @@ const EnterpriseManagement = () => {
         </NewServicesHero>
         <OpsginieMigration />
         <TheProblem />
-        <WhatWeDeliver />
-        <NoGuesswork />
+        <WhatWeDeliver items={items} className="" borderColor="border-tertiary-100" />
+        <NoGuesswork classname="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:gap-12" heading={<h4 className="text-tertiary-300 text-[36px] font-bold font-merriweather leading-[44px] text-center  "> A clear, phased approach — no guesswork,
+          <br />no bloated timelines</h4>} works={works} />
         <WhyTeam />
         <ResultExpect />
         <ReadyToModernize />
         <CtaBannerSection
-          label="WHY MIGRATE NOW"
+          label="LET'S TALK"
           heading="Find the right path forward."
           description="Book a discovery call. We’ll assess your setup and map a clear path forward."
           ctaLabel="Book a discovery call"

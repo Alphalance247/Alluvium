@@ -32,7 +32,7 @@ const CtaBannerSection = ({
 
         {/* Description and Button Section */}
         <div className="w-full flex flex-col justify-start items-start gap-6">
-          <p className="text-slate-200 text-lg md:text-xl font-medium font-sans leading-relaxed max-w-xl">
+          <p className="text-slate-200 text-lg md:text-xl font-medium font-sans leading-relaxed max-w-[498px]">
             {description}
           </p>
 

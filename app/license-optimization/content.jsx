@@ -22,6 +22,11 @@ import ClaudeTokenCostControl from "components/Alluvium-Redesign-2026/licence-op
 import CuriousSection from "components/Alluvium-Redesign-2026/licence-optimization/curiousSection";
 import PlatformOptimisation from "components/Alluvium-Redesign-2026/licence-optimization/PlatformOptimisation";
 import ReadyToCut from "components/Alluvium-Redesign-2026/licence-optimization/ReadyToCut";
+import NewServicesHero from "components/Alluvium-Redesign-2026/common/newServicesHero";
+import Image from "next/image";
+import MigrationIntro from "components/Alluvium-Redesign-2026/opsgenie-to-jsm/migrationIntro";
+import WhatWeDeliver from "components/Alluvium-Redesign-2026/itsm/WhatWeDeliver";
+import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
 const LicenseOptimization = () => {
   const triadData = [
     {
@@ -87,27 +92,106 @@ const LicenseOptimization = () => {
     },
   ];
 
-  const badges = [
+  // const badges = [
+  //   {
+  //     id: "01",
+  //     imgSrc: "/assets/Alluvium-Redesign-2026/services/marketplace.png",
+  //     alt: "Marketplace Partner",
+  //     width: "239",
+  //     height: "74",
+  //   },
+  //   {
+  //     id: "02",
+  //     imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
+  //     alt: "Gold Partner",
+  //     width: "278",
+  //     height: "74",
+  //   },
+  // ];
+  const items = [
     {
-      id: "01",
-      imgSrc: "/assets/Alluvium-Redesign-2026/services/marketplace.png",
-      alt: "Marketplace Partner",
-      width: "239",
-      height: "74",
+      id: 1,
+      heading: "Atlassian license audit",
+      text: "Atlassian license audit across users, apps, and marketplace add-ons",
     },
     {
-      id: "02",
-      imgSrc: "/assets/Alluvium-Redesign-2026/services/gold.png",
-      alt: "Gold Partner",
-      width: "278",
-      height: "74",
+      id: 2,
+      heading: "Claude token governance",
+      text: "Claude token usage audit and governance framework",
+    },
+    {
+      id: 3,
+      heading: "Usage right-sizing",
+      text: "Right-sizing recommendations with projected savings",
+    },
+    {
+      id: 4,
+      heading: "Continuous optimization",
+      text: "Ongoing monitoring so optimization doesn’t decay over time",
     },
   ];
-
   return (
     <>
       <Layout>
-        <ServicesHero
+        <NewServicesHero
+          heading={
+            <span>
+              Every seat and token
+              <br /> earning its place
+
+            </span>
+          }
+          subheading="Stop managing requests through email and spreadsheets. We implement Jira Service Management so IT, HR, Finance, Legal, and Operations run on one AI-ready platform."
+          ctaLabel=" Start a license & token audit"
+          ctaHref="/contact-us"
+          image="https://d38rkvi67t4lhi.cloudfront.net/assets/1788256781662-image-7-2.png"
+          imageAlt="Cloud Migration"
+          width={644}
+          height={634}
+        >
+          {/* <Link href={""} className="group">
+                  <Button
+                    className="px-6 py-2.5 rounded-lg font-bold font-manrope text-lg text-white  border border-white group-hover:bg-white  "
+                    backgroundColor="secondaryLv3"
+                  >
+                    <p className=" group-hover:text-secondary-900"> See how it works</p>
+                  </Button>
+                </Link> */}
+          {/* <div className="flex gap-6">
+            {badges.map((badge, index) => {
+              return (
+                <div key={index}>
+                  <Image
+                    src={badge.url}
+                    alt="badge image"
+                    width={badge.width}
+                    height={badge.height}
+                  />
+                </div>
+              );
+            })}
+          </div> */}
+        </NewServicesHero>
+        <MigrationIntro heading="Stop paying for what you do not use.">
+          <span className="text-[#344054] font-medium">
+
+            Unused Atlassian licenses and idle Claude tokens are money leaking out of your budget quietly.
+            <span className="font-bold">
+              We audit, right-size, and govern both — so you’re paying for what your teams actually use.
+            </span>
+          </span>
+        </MigrationIntro>
+        <WhatWeDeliver items={items} className="bg-tertiary-150 " borderColor="border-[#E4E7EC]" />
+        <CtaBannerSection
+          label="READY TO OPTIMIZE?"
+          heading="Know what you are paying for."
+          description="We will audit your Atlassian licenses and Claude token usage, identify savings opportunities, and give you a clear plan to right-size your spend."
+          ctaLabel="Start a license & token audit"
+          ctaHref="/contact-us"
+        >
+
+        </CtaBannerSection>
+        {/* <ServicesHero
           badges={badges}
           heading={"Optimize Your Atlassian Spend. Maximize Your ROI."}
           subhead={
@@ -132,7 +216,7 @@ const LicenseOptimization = () => {
           heading={"Ready to Reduce Your Atlassian Overhead?"}
           subhead={"Book a 30-minute review of your current licensing stack."}
           btnText={"Get a Preferred Quote"}
-        />
+        /> */}
         {/* <div>
           <Hero
             heroTitle="Licence & Token Optimisation"
