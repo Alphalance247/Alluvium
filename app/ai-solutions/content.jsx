@@ -45,7 +45,7 @@ const Content = () => {
         }
         subheading="Connect trusted organizational knowledge with AI that can reason, create, and act on it."
         ctaLabel="See AI in action "
-        ctaHref="/ai"
+        ctaHref="/contact-us"
         image="https://d38rkvi67t4lhi.cloudfront.net/assets/1788353413678-image-8-1.png"
         imageAlt="AI Solution"
         width={598}
@@ -90,7 +90,7 @@ const Content = () => {
         // "TFind the right path forward."
         description="Explore how we apply Rovo and Claude to real workflows, from knowledge management and customer experience to underwriting and compliance."
         ctaLabel="See AI in action "
-        ctaHref="/ai"
+        ctaHref="/contact-us"
       >
         {/* <Link href="" className="w-full md:w-fit">
             <Button
