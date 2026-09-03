@@ -246,11 +246,6 @@ const Footer = () => {
             >
               Privacy Policy
             </Link>
-            {/* <Link href="https://alluvium.net/cookie-policy">
-              Cookies Settings
-            </Link> */}
-
-            {/* <Link href="/alluvium.net/cookie-policy">Cookies Preferences</Link> */}
           </div>
         </div>
       </div>
