@@ -25,7 +25,7 @@ const services = [
     id: "3",
     name: "License & token optimization",
   },
-  { id: 4, url: "/ai", name: "AI solutions" },
+  { id: 4, url: "/ai-solutions", name: "AI solutions" },
   {
     url: "/strategic-partnerships",
     id: "5",
@@ -35,9 +35,9 @@ const services = [
 
 const company = [
   { url: "/about", id: 1, name: "About us" },
-  { url: "", id: 2, name: "Export & count plugin" },
-  { url: "", id: 3, name: "Resource compare" },
-  { url: "", id: 4, name: "Contact us" },
+  { url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion?tab=overview&hosting=cloud", id: 2, name: "Export & count plugin" },
+  { url: "https://marketplace.atlassian.com/apps/1223507/resource-compare-for-jira?tab=overview&hosting=cloud", id: 3, name: "Resource compare" },
+  { url: "/contact-us", id: 4, name: "Contact us" },
   // {
   //   url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
   //   id: "2",
@@ -52,7 +52,7 @@ const company = [
 const resources = [
   { url: "/success-stories", id: "1", name: "Success stories" },
   { url: "/blogs", id: "2", name: "Blog" },
-  { url: "", id: "", name: "White papers" },
+  { url: "/whitepaper", id: "", name: "White papers" },
   { url: "/event", id: "5", name: "Events" },
   // {
   //   url: "/atlassian-cloud-migration-case-studies",

@@ -20,7 +20,19 @@ const OpsgenieToJsm = () => {
           width={596}
           height={397}
         />
-        <MigrationIntro />
+        <MigrationIntro heading=" Migration is more than a licensing swap.">
+          <span className="text-[#1D2939] font-bold">
+            Most teams haven&apos;t started moving. Alluvium is who they call.
+          </span>
+          <br />
+          <br />
+          <span className="text-[#344054] font-medium">
+            This isn&apos;t a licensing swap — alert routing, on-call
+            rotations, escalation policies, and every integration surface
+            have to be rebuilt and proven before cutover — because the first
+            real incident after go-live is the test.
+          </span>
+        </MigrationIntro>
         <SaferPath />
         <CtaBannerSection
           label="READY TO MOVE?"
