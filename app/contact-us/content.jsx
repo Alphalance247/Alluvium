@@ -82,7 +82,7 @@ const ContactUs = () => {
                   Contact us
                 </span>
               </div>
-              <h1 className="max-w-xl text-white text-4xl md:text-5xl font-bold font-serif leading-tight">
+              <h1 className="max-w-xl text-white text-4xl md:text-5xl font-bold font-serif lg:leading-[60px]">
                 Tell us what you are trying to solve.
               </h1>
               <p className="max-w-xl text-white text-lg md:text-xl font-medium font-sans leading-relaxed">
@@ -106,7 +106,7 @@ const ContactUs = () => {
 
           <div
             id="schedule-a-call"
-            className="w-full lg:w-[664px] shrink-0 bg-white rounded-2xl overflow-hidden"
+            className="w-full lg:w-[620px] shrink-0 bg-white rounded-2xl overflow-hidden"
           >
             <CalendlyWidget />
           </div>
@@ -114,7 +114,7 @@ const ContactUs = () => {
       </section>
 
       <section className="w-full bg-white border-b border-slate-200 overflow-hidden">
-        <Container className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+        <Container className="flex flex-col lg:flex-row items-start gap-10 lg:gap-16">
           <div className="flex-1 flex flex-col items-start gap-6">
             <h2 className="max-w-xl text-[#1D2939] text-3xl font-bold font-serif leading-tight">
               Prefer to send us a message?
