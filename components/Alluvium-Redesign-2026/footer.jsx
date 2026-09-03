@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/AlluviumRedesign2026/home/footer.module.scss";
-import Image from "next/legacy/image";
 import Link from "next/link";
+import Image from "next/image";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaXTwitter, FaYoutube } from "react-icons/fa6";
@@ -125,10 +125,15 @@ const socialMedias = [
 
 const Footer = () => {
   return (
-    <div style={{}} className={"bg-[#F2F4F7]"}>
+    <div
+      className="w-full bg-[#F9FAFB] "
+      style={{
+        paddingTop: "3rem",
+      }}
+    >
       {/* <div className={styles.footer_container}> */}
-      <div className="max-w-7xl mx-auto lg:px-16 md:px-12 px-6">
-        <div className="flex lg:flex-row flex-col pb-10 lg:pb-[87px] mt-12 lg:mt-10">
+      <div className="max-w-7xl mx-auto pt-4 lg:pt-[32px] pb-4 lg:pb-4  lg:px-16 md:px-12 px-6">
+        <div className="flex lg:flex-row flex-col pb-10 lg:pb-[87px]">
           <div className="w-full h-auto  lg:w-1/4 lg:h-[383px]">
             <div className="">
               <div className="pb-6">
@@ -222,7 +227,7 @@ const Footer = () => {
             />
           ))}
         </div>
-        <div className=" flex md:flex-row flex-col items-center justify-between h-[88px] max-w-7xl mb-12 ">
+        <div className=" flex md:flex-row flex-col items-center justify-between h-[88px] max-w-7xl">
           <div className="text-sm font-medium font-manrope text-[#344054] py-6 lg:w-auto md:w-[380px] w-full">
             {/* © 2022 Alluvium Corporation. <br /> All rights reserved. */}©
             2026 Alluvium. All rights reserved. This site is protected by
