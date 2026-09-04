@@ -50,7 +50,7 @@ const WhitepaperSection = () => {
         <div>
           <Image
             src="https://d38rkvi67t4lhi.cloudfront.net/assets/1787731328047-image-5.png"
-            alt="Hr Analytics Summit, London - Alluvium"
+            alt="Opsgenie to JSM Migration"
             // className="w-full h-full object-cover object-center"
             width={587}
             height={395}
