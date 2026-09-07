@@ -35,6 +35,21 @@ const RichText = ({ runs, size = "lg", className = "" }) => {
             </span>
           );
         }
+        if (run.link) {
+          const isExternal = /^https?:\/\//.test(run.href || "");
+          return (
+            <a
+              key={index}
+              href={run.href}
+              className="text-default-100 font-medium hover:underline"
+              {...(isExternal
+                ? { target: "_blank", rel: "noreferrer" }
+                : {})}
+            >
+              {run.text}
+            </a>
+          );
+        }
         return <React.Fragment key={index}>{run.text}</React.Fragment>;
       })}
     </p>
