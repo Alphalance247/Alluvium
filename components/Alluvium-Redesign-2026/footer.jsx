@@ -216,7 +216,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-6 items-center border-t-[1px] border-b-[1px] py-6 border-[#D0D5DD]">
+        <div className="flex lg:flex-row flex-wrap lg:flex-nowrap gap-6 items-center border-t-[1px] border-b-[1px] py-6 border-[#D0D5DD]">
           {badges.map((item, index) => (
             <Image
               key={index}
