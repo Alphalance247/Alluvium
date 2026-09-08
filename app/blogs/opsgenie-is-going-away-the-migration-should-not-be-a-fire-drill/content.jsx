@@ -24,8 +24,8 @@ const OpsgenieMigrationArticle = () => {
                 title={ARTICLE_TITLE}
                 subhead="Opsgenie support ends 5 April 2027. Here is what teams need to consider beyond simply moving their data to Jira Service Management."
                 meta="JUL 22, 2026 - 5 MINS READ"
-                authorName="Muhammad Zubairu"
-                authorRole="Product lead"
+                // authorName="Muhammad Zubairu"
+                // authorRole="Product lead"
                 authorAvatar="https://placehold.co/40x40"
                 image="https://d38rkvi67t4lhi.cloudfront.net/assets/1787731328047-image-5.png"
                 imageAlt="Opsgenie to JSM Migration"

@@ -11,7 +11,7 @@ const FeaturedArticle = ({
   readTime,
   authorName,
   authorRole,
-  authorAvatar = "https://placehold.co/40x40",
+  authorAvatar = "",
   image,
   imageAlt = "",
 }) => {
@@ -54,13 +54,13 @@ const FeaturedArticle = ({
             </div>
 
             <div className="flex items-center gap-3">
-              <img
+              {/* <img
                 src={authorAvatar}
                 alt={authorName}
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-lg object-cover"
-              />
+              /> */}
               <div className="flex flex-col items-start">
                 <span className="text-[#1D2939] text-sm font-semibold font-sans">
                   {authorName}

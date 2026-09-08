@@ -75,8 +75,8 @@ const Blogs = () => {
         title="Opsgenie Is Going Away. The Migration Should Not Be a Fire Drill."
         date="Jul 22, 2026"
         readTime="5 mins read"
-        authorName="Muhammad Zubairu"
-        authorRole="Product lead"
+        // authorName="Muhammad Zubairu"
+        // authorRole="Product lead"
         image="https://d38rkvi67t4lhi.cloudfront.net/assets/1787731328047-image-5.png"
         imageAlt="Opsgenie to JSM Migration"
       />

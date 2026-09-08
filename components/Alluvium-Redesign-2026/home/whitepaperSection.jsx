@@ -12,7 +12,7 @@ const WhitepaperSection = ({
   description = "Opsgenie ends support 5 April 2027. Most teams haven’t started moving. We run a structured 10-week migration to Jira Service Management Operations, with rollback planning and a live parallel period.",
   meta,
   ctaLabel = "See the full migration plan",
-  ctaHref = "/opsgenie-to-jsm/",
+  ctaHref = "/blogs/opsgenie-is-going-away-the-migration-should-not-be-a-fire-drill",
   linkWholeCard = false,
   image = "https://d38rkvi67t4lhi.cloudfront.net/assets/1787731328047-image-5.png",
   imageAlt = "Opsgenie to JSM Migration",
