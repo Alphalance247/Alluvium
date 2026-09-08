@@ -42,9 +42,7 @@ const RichText = ({ runs, size = "lg", className = "" }) => {
               key={index}
               href={run.href}
               className="text-default-100 font-medium hover:underline"
-              {...(isExternal
-                ? { target: "_blank", rel: "noreferrer" }
-                : {})}
+              {...(isExternal ? { target: "_blank", rel: "noreferrer" } : {})}
             >
               {run.text}
             </a>

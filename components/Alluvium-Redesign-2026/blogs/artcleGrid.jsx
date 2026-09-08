@@ -1,28 +1,34 @@
 import React from "react";
-import styles from "../../../styles/AlluviumRedesign2026/blogs/article-grid.module.scss";
 import Link from "next/link";
+import Container from "../common/container";
 
 const ArticleCard = ({ article }) => (
-  <Link href={`/blogs/${article.slug}`}>
-    <div className={styles.articleCard}>
-      <div className={styles.topContent}>
-        <div className={styles.imageContainer}>
-          <img src={article.img} alt={article.title} />
-          <div className={styles.categoryTag}>{article.category}</div>
-        </div>
+  <Link
+    href={`/blogs/${article.slug}`}
+    className="flex flex-col items-start gap-6"
+  >
+    <img
+      src={article.img}
+      alt={article.title}
+      className="w-full h-48 rounded-lg object-cover"
+    />
 
-        <div className={styles.metaRow}>
-          <span>{article.date}</span>
-          <span className={styles.divider}>|</span>
-          <span>{article.readTime}</span>
-        </div>
-
-        <h4 className={styles.title}>{article.title}</h4>
+    <div className="w-full pt-4 border-t border-slate-200 flex flex-col items-start gap-4">
+      <div className="flex items-center gap-2">
+        <span className="w-5 h-1 bg-[#008DAF]" />
+        <span className="text-[#1D2939] text-sm font-bold font-sans uppercase tracking-wide">
+          {article.category}
+        </span>
       </div>
 
-      <div className={styles.authorRow}>
-        <img src="https://placehold.co/24x24" alt={article.author} />
-        <span>{article.author}</span>
+      <h4 className="text-[#1D2939] text-2xl font-bold font-serif leading-snug">
+        {article.title}
+      </h4>
+
+      <div className="text-sm font-bold font-sans">
+        <span className="text-[#667085]">{article.date}</span>
+        <span className="text-[#1D2939]"> - </span>
+        <span className="text-[#1D2939]">{article.readTime}</span>
       </div>
     </div>
   </Link>
@@ -45,20 +51,25 @@ const ArticleGrid = ({ articles = [] }) => {
   }));
 
   return (
-    <section className={styles.sectionWrapper}>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h3>Latest Articles</h3>
-        </div>
+    <section className="w-full bg-white border-b border-slate-200 overflow-hidden">
+      <Container className="flex flex-col items-start gap-12">
+        <h3 className="text-[#1D2939] text-3xl font-bold font-serif leading-tight">
+          Explore other news
+        </h3>
 
-        <div className={styles.grid}>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-20">
           {transformedArticles.map((item) => (
             <ArticleCard key={item.id} article={item} />
           ))}
         </div>
 
-        <button className={styles.loadMoreBtn}>Load More</button>
-      </div>
+        <button
+          type="button"
+          className="self-center px-6 py-2.5 border border-slate-300 rounded-lg text-[#1D2939] text-base font-bold font-sans transition-colors hover:bg-slate-50"
+        >
+          Load More
+        </button>
+      </Container>
     </section>
   );
 };

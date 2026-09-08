@@ -1,46 +1,28 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import Container from "../common/container";
+import CaseStudyCard from "../success-stories/caseStudyCard";
+import CaseStudyModal from "../success-stories/caseStudyModal";
+import { caseStudies as allCaseStudies } from "../success-stories/caseStudiesData";
 
-const caseStudies = [
-  {
-    id: 1,
-    title: "Enterprise Service Management (ESM) / Teamwork Foundations",
-    stats: [
-      { value: "100%", label: "decommissioning of tools" },
-      {
-        value: "100%",
-        label: "compliance with ISO and national audit standards",
-      },
-    ],
-    link: "/success-stories/strategic-agile-transformation-&-cloud-migration",
-  },
-  {
-    id: 2,
-    title: "Multimillion-Pound Enterprise Agile Framework",
-    stats: [
-      { value: "10+", label: "custom training workshops delivered" },
-      { value: "3", label: "major tools implemented" },
-    ],
-    link: "/success-stories/multimillion-pound-enterprise-agile-framework",
-  },
-  {
-    id: 3,
-    title: "Rapid Cloud Migration & Cost Optimization",
-    stats: [
-      { value: "100%", label: "migration before renewal deadline" },
-      {
-        value: "3",
-        label: "core platforms migrated (Jira, Confluence, JSM)",
-      },
-    ],
-    link: "/success-stories/rapid-cloud-migration-cost-optimization/",
-  },
-];
+// The homepage carousel only features 3 case studies; the full set lives on the success-stories page.
+const caseStudies = allCaseStudies.slice(0, 3);
 
 const CaseStudyNew = () => {
   const trackRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const closeModal = () => setActiveIndex(null);
+  const showPrev = () =>
+    setActiveIndex((prev) =>
+      prev === null
+        ? prev
+        : (prev - 1 + caseStudies.length) % caseStudies.length,
+    );
+  const showNext = () =>
+    setActiveIndex((prev) =>
+      prev === null ? prev : (prev + 1) % caseStudies.length,
+    );
 
   const scrollToIndex = useCallback((index) => {
     const track = trackRef.current;
@@ -104,53 +86,13 @@ const CaseStudyNew = () => {
           ref={trackRef}
           className="flex gap-6 overflow-x-auto overscroll-x-contain snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
-          {caseStudies.map((study) => (
-            <div
+          {caseStudies.map((study, index) => (
+            <CaseStudyCard
               key={study.id}
-              className="case-study-card snap-start shrink-0 w-[85%] sm:w-[70%] lg:w-[80%] rounded-lg p-8 md:p-10 flex flex-col justify-between gap-10 min-h-[360px] md:min-h-[420px]"
-            >
-              <h3 className="text-[#1D2939] max-w-xl text-2xl md:text-3xl font-bold font-serif leading-snug">
-                {study.title}
-              </h3>
-
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                <div className="flex flex-wrap gap-6">
-                  {study.stats.map((stat, index) => (
-                    <div
-                      key={index}
-                      className="stat-divider pl-6 border-l border-slate-300 flex flex-col gap-2 transition-colors duration-300"
-                    >
-                      <span className="text-[#1D2939] text-2xl md:text-3xl font-bold font-serif">
-                        {stat.value}
-                      </span>
-                      <span className="stat-label text-[#667085] text-sm md:text-base font-medium font-sans transition-colors duration-300">
-                        {stat.label}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-
-                <Link
-                  href={study.link}
-                  className="group shrink-0 inline-flex items-center gap-2 text-[#1D2939] font-bold font-sans text-base"
-                >
-                  <span>Read more</span>
-                  <svg
-                    className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-150"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </div>
+              study={study}
+              onClick={() => setActiveIndex(index)}
+              className="snap-start shrink-0 w-[95%] sm:w-[95%] lg:w-[596px]"
+            />
           ))}
         </div>
 
@@ -221,28 +163,12 @@ const CaseStudyNew = () => {
         </div>
       </Container>
 
-      <style jsx>{`
-        .case-study-card {
-          background-color: #f2f4f7;
-          transition: background-color 0.3s ease;
-        }
-        .case-study-card:hover {
-          background-color: #f6d5b6;
-          background-image: repeating-linear-gradient(
-            to right,
-            rgba(29, 41, 57, 0.06) 0px,
-            rgba(29, 41, 57, 0.06) 1px,
-            transparent 1px,
-            transparent 12px
-          );
-        }
-        .case-study-card:hover .stat-label {
-          color: #1d2939;
-        }
-        .case-study-card:hover .stat-divider {
-          border-color: #1d2939;
-        }
-      `}</style>
+      <CaseStudyModal
+        study={activeIndex === null ? null : caseStudies[activeIndex]}
+        onClose={closeModal}
+        onPrev={showPrev}
+        onNext={showNext}
+      />
     </section>
   );
 };

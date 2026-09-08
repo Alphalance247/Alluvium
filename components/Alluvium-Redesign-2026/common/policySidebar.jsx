@@ -43,8 +43,8 @@ const PolicySidebar = ({ sections = [] }) => {
               href={`#${id}`}
               className={`w-full py-2 pl-4 border-l-2 text-sm leading-5 font-sans transition-colors ${
                 isActive
-                  ? "border-default-100 text-default-100 font-bold"
-                  : "border-slate-200 text-[#344054] font-medium hover:border-slate-400"
+                  ? "border-default-100 text-[#1D2939] font-bold"
+                  : "border-transparent text-[#344054] font-medium hover:border-slate-300"
               }`}
             >
               {section.title}

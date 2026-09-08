@@ -1,11 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ImGift } from "react-icons/im";
 
 const WhitepaperHero = ({
   breadcrumbLabel,
+  breadcrumbSegmentLabel = "Whitepaper",
+  breadcrumbSegmentHref = "/whitepaper",
   title,
   subhead,
+  meta,
   authorName,
   authorRole,
   authorAvatar = "/assets/Alluvium-Redesign-2026/whitepaper/jaytee.svg",
@@ -22,10 +26,10 @@ const WhitepaperHero = ({
           </Link>
           <span className="text-gray-500 text-xs">/</span>
           <Link
-            href="/whitepaper"
+            href={breadcrumbSegmentHref}
             className="text-default-100 font-bold font-sans"
           >
-            Whitepaper
+            {breadcrumbSegmentLabel}
           </Link>
           <span className="text-gray-500 text-xs">/</span>
           <span className="text-[#667085] font-medium font-sans">
@@ -36,12 +40,17 @@ const WhitepaperHero = ({
         {/* Title, subhead, author */}
         <div className="w-full pb-6 border-b border-slate-200 flex flex-col items-start gap-10">
           <div className="flex flex-col items-start gap-6">
-            <h1 className="text-[#1D2939] text-3xl md:text-4xl lg:text-5xl font-bold font-serif leading-tight whitespace-pre-line">
+            <h1 className="text-[#1D2939] text-3xl md:text-4xl lg:text-5xl font-bold font-serif lg:leading-[60px] whitespace-pre-line">
               {title}
             </h1>
             <p className="text-[#344054] text-lg md:text-xl font-medium font-sans leading-relaxed">
               {subhead}
             </p>
+            {meta && (
+              <span className="text-[#667085] text-sm font-bold font-sans uppercase tracking-wide">
+                {meta}
+              </span>
+            )}
           </div>
 
           <div className="flex flex-col items-start gap-3">
@@ -49,13 +58,13 @@ const WhitepaperHero = ({
               Written by
             </span>
             <div className="flex items-center gap-3">
-              <Image
+              {/* <ImGift
                 src={authorAvatar}
                 alt={authorName}
                 width={40}
                 height={40}
                 className="w-10 h-10 rounded-lg object-cover"
-              />
+              /> */}
               <div className="flex flex-col items-start">
                 <span className="text-[#1D2939] text-sm font-semibold font-sans">
                   {authorName}
@@ -69,7 +78,7 @@ const WhitepaperHero = ({
         </div>
 
         {/* Featured Image */}
-        <div className="w-full rounded-lg overflow-hidden bg-zinc-200">
+        <div className="w-full rounded-lg overflow-hidden bg-zinc-200 px-8">
           <Image
             src={image}
             alt={imageAlt}

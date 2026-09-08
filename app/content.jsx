@@ -36,51 +36,13 @@ const Home = () => {
   return (
     <>
       <Layout>
-        {/* <Hero /> */}
-        {/* <SWPHero /> */}
-        {/* <Team26Hero /> */}
         <Hero />
         <HeroCallToAction />
-        {/* <GifHero /> */}
-        {/* <AiAdoptionHero /> */}
-
-        {/* <div style={{ borderBottom: "1px " }}>
-          <div
-            style={{
-              maxWidth: "1280px",
-              margin: "0 auto",
-              borderBottom: "1px dashed rgba(217, 217, 217, 0.80)",
-            }}
-          >
-            <Badges variant={"sub-default"} badgesData={badges} />
-          </div>
-        </div> */}
         <WhitepaperSection />
         <EnterpriseSolutionsSection />
         <CaseStudyNew />
         <LogoCloudSection />
-        {/* <ImpactMetricsSection /> */}
-        {/* <FeaturedProgramme /> */}
-        {/* <CaseStudiesCarousel /> */}
-
         <CtaBannerSection />
-
-        {/* <PillarsSection />
-        <WhyUs />
-       
-        <CtaSection /> */}
-        {/* <CaseStudies />
-        <AboutSection />
-        <SeamlessAtlassian />
-        <Service /> */}
-        {/* <SuccessStory /> */}
-
-        {/* <Expertise />
-        <AtlassianSolution />
-        <Banner />
-        <Impact />
-        <MarketPlacePlugin /> */}
-        {/* <StartScaling /> */}
       </Layout>
     </>
   );
