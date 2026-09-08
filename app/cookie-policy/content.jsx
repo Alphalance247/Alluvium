@@ -1,5 +1,5 @@
 "use client";
-import EventsBanner from "components/Alluvium-Redesign-2026/events/hero";
+import PolicyHero from "components/Alluvium-Redesign-2026/common/policyHero";
 import Layout from "components/layout";
 import List from "components/privacy_policy/List";
 
@@ -153,10 +153,10 @@ updated effective date.`,
   ];
   return (
     <Layout>
-      <EventsBanner
-        heading={"Cookie policy"}
-        subhead={"Last updated: 18 June 2025."}
-        backgroundImage={"/assets/Alluvium-Redesign-2026/policy/hero.png"}
+      <PolicyHero
+        title="Cookie Policy"
+        effectiveDate="August 31, 2026"
+        note="This Notice supersedes all prior versions as of the effective date above."
       />
       <List content={policyContent} heading={"ALLUVIUM’S COOKIE POLICY"} />
     </Layout>
