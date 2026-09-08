@@ -25,11 +25,11 @@ const ResourcesNav = () => {
   ];
 
   const companyLinks = [
-    {
-      title: "Webinars & Events",
-      desc: "Join our sessions to learn from experts, discover new trends, and explore practical solutions.",
-      link: "/event",
-    },
+    // {
+    //   title: "Webinars & Events",
+    //   desc: "Join our sessions to learn from experts, discover new trends, and explore practical solutions.",
+    //   link: "/event",
+    // },
     {
       title: "About us",
       desc: "Learn who we are, what we stand for, and how we help organizations succeed with Atlassian.",
