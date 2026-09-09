@@ -4,7 +4,7 @@ import Container from "./container";
 const PolicyHero = ({ title, effectiveDate, note }) => {
   return (
     <section className="w-full bg-white border-b border-slate-200 overflow-hidden">
-      <Container className="flex flex-col items-start gap-2">
+      <Container className="flex flex-col items-start gap-2 lg:!pt-[5rem] lg:!pb-10 ">
         <h1 className="text-[#1D2939] text-4xl md:text-5xl font-bold font-serif leading-tight">
           {title}
         </h1>

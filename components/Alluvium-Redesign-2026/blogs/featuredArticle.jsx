@@ -17,7 +17,7 @@ const FeaturedArticle = ({
 }) => {
   return (
     <section className="w-full bg-white border-t border-b border-slate-200 overflow-hidden">
-      <Container>
+      <Container className="lg:!pt-10">
         <Link
           href={href}
           className="w-full flex flex-col md:flex-row items-stretch gap-10"

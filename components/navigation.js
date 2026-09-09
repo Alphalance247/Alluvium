@@ -9,7 +9,7 @@ import {
 import { ourServicesData } from "data";
 import NewNavbar from "./Alluvium-Redesign-2025/navbar/NewNavbar";
 import MobileNavbar from "./Alluvium-Redesign-2025/navbar/MobileNavbar";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export default function Navigation({ theme }) {
   const [displayMobileMenu, setDisplayMobileMenu] = useState(false);
@@ -57,7 +57,6 @@ export default function Navigation({ theme }) {
       onMouseLeave={() => toggleDropdown("")}
     >
       <div
-
         className={`d-flex  justify-content-between align-items-center ${styles.heading__new}`}
       >
         <div className={styles.logo}>
@@ -77,7 +76,7 @@ export default function Navigation({ theme }) {
             </nav>
           )}
         </div>
-        <div className=" d-flex align-items-center  gap-3" >
+        <div className=" d-flex align-items-center  gap-3">
           {/* <Link href="/atlassian-services/support">
             <a className={styles.contactUsButton}>Support</a>
           </Link> */}

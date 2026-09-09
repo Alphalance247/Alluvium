@@ -68,9 +68,9 @@ const CookieSettingsModal = ({ onClose, onSave }) => {
               </span>
               <p className="w-full text-[#344054] text-sm font-medium font-sans leading-5">
                 We use cookies and similar technologies to make our website
-                work, to understand how it is used, and, with your
-                permission, for marketing. Choose how you want us to use
-                cookies below. To read more, see our{" "}
+                work, to understand how it is used, and, with your permission,
+                for marketing. Choose how you want us to use cookies below. To
+                read more, see our{" "}
                 <Link
                   href="/cookie-policy"
                   className="text-default-100 font-bold underline"
@@ -135,14 +135,22 @@ const CookieSettingsModal = ({ onClose, onSave }) => {
           <div className="w-full flex items-center gap-2">
             <button
               type="button"
-              onClick={() => onSave({ functional: false, analytics: false, performance: false })}
+              onClick={() =>
+                onSave({
+                  functional: false,
+                  analytics: false,
+                  performance: false,
+                })
+              }
               className="flex-1 h-10 px-4 py-2.5 rounded-lg border border-slate-300 shadow-sm text-[#344054] text-sm font-bold font-sans"
             >
               Reject all
             </button>
             <button
               type="button"
-              onClick={() => onSave({ functional: true, analytics: true, performance: true })}
+              onClick={() =>
+                onSave({ functional: true, analytics: true, performance: true })
+              }
               className="flex-1 h-10 px-4 py-2.5 rounded-lg bg-default-100 border border-default-100 shadow-sm text-white text-sm font-bold font-sans"
             >
               Accept all

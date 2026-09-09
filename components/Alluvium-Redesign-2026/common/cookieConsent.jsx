@@ -2,13 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import CookieSettingsModal from "./cookieSettingsModal";
-
-const savePreferences = (preferences) => {
-  localStorage.setItem(
-    "cookieConsent",
-    JSON.stringify({ necessary: true, ...preferences }),
-  );
-};
+import { savePreferences } from "./cookiePreferences";
 
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
@@ -66,7 +60,7 @@ const CookieConsent = () => {
                 onClick={() => setManageOpen(true)}
                 className="h-10 px-4 py-2.5 rounded-lg text-[#344054] text-sm font-bold font-sans"
               >
-                Manage settings
+                Manage setting
               </button>
 
               <button

@@ -59,7 +59,8 @@ const PolicySection = ({ section }) => {
               return (
                 <h3
                   key={index}
-                  className="text-[#1D2939] text-xl md:text-2xl font-bold font-serif leading-snug"
+                  id={slugify(piece.text)}
+                  className="text-[#1D2939] text-xl md:text-2xl font-bold font-serif leading-snug scroll-mt-24"
                 >
                   {piece.text}
                 </h3>
