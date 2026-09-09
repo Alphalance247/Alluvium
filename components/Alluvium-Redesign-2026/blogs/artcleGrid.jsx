@@ -62,13 +62,6 @@ const ArticleGrid = ({ articles = [] }) => {
             <ArticleCard key={item.id} article={item} />
           ))}
         </div>
-
-        <button
-          type="button"
-          className="self-center px-6 py-2.5 border border-slate-300 rounded-lg text-[#1D2939] text-base font-bold font-sans transition-colors hover:bg-slate-50"
-        >
-          Load More
-        </button>
       </Container>
     </section>
   );
