@@ -289,7 +289,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "Rovo is, and should remain, the native agentic AI for any HR function built on Atlassian — it's embedded in the platform, purpose-built for JSM and Confluence, and the right default. Some People Analytics teams choose to add second, complementary layer on top of it: Claude, Anthropic's AI assistant, used specifically for natural-language reasoning across a wider set of unstructured material than a platform-native agent typically reaches.\n\nAtlassian ships an official remote MCP (Model Context Protocol) server for Jira and Confluence, and Claude connects to it directly through Claude's own Atlassian connector under scoped, permission-gated access. In practice, that adds four things on top of what Rovo already does natively:",
+    text: "Rovo is, and should remain, the native agentic AI for any HR function built on Atlassian: it's embedded in the platform, purpose-built for JSM and Confluence, and the right default. Some People Analytics teams choose to add second, complementary layer on top of it: Claude, Anthropic's AI assistant, used specifically for natural-language reasoning across a wider set of unstructured material than a platform-native agent typically reaches.\n\nAtlassian ships an official remote MCP (Model Context Protocol) server for Jira and Confluence, and Claude connects to it directly through Claude's own Atlassian connector under scoped, permission-gated access. In practice, that adds four things on top of what Rovo already does natively:",
   },
   {
     type: "bulletList",
