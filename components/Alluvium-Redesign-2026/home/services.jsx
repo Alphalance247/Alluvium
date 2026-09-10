@@ -92,13 +92,15 @@ const EnterpriseSolutionsSection = ({
             return (
               <div
                 key={service.title}
-                className={`group w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 -mx-4 px-4 py-6  border-b border-slate-200 transition-colors duration-100 hover:bg-[#E4E7EC] ${index === 0 ? "border-t" : ""
-                  }`}
+                className={`group w-full flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 -mx-4 px-4 py-6  border-b border-slate-200 transition-colors duration-100 hover:bg-[#E4E7EC] ${
+                  index === 0 ? "border-t" : ""
+                }`}
               >
                 <div className="flex items-start gap-4 transition-transform duration-300 group-hover:translate-x-1">
                   <div
-                    className={`service-fade-in w-12 h-12 shrink-0 flex items-center justify-center ${isVisible ? "service-fade-in--active" : ""
-                      }`}
+                    className={`service-fade-in w-12 h-12 shrink-0 flex items-center justify-center ${
+                      isVisible ? "service-fade-in--active" : ""
+                    }`}
                     style={{ animationDelay: delay }}
                   >
                     <Image
@@ -110,8 +112,9 @@ const EnterpriseSolutionsSection = ({
                     />
                   </div>
                   <div
-                    className={`service-fade-in flex flex-col gap-4 ${isVisible ? "service-fade-in--active" : ""
-                      }`}
+                    className={`service-fade-in flex flex-col gap-4 ${
+                      isVisible ? "service-fade-in--active" : ""
+                    }`}
                     style={{ animationDelay: delay }}
                   >
                     <h3 className="text-[#1D2939] text-xl font-semibold font-manrope ">

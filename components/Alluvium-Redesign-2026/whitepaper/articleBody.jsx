@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaAnglesRight } from "react-icons/fa6";
 import RichText from "./richText";
 import { slugify } from "./slugify";
 
@@ -10,7 +11,7 @@ const Heading = ({ level = 2, text }) => {
     return (
       <h2
         id={id}
-        className="text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-tight scroll-mt-24"
+        className="text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-tight scroll-mt-24 !mb-[-2.5rem]"
       >
         {text}
       </h2>
@@ -19,7 +20,7 @@ const Heading = ({ level = 2, text }) => {
   return (
     <h3
       id={id}
-      className="text-[#1D2939] text-2xl font-bold font-serif leading-tight scroll-mt-24"
+      className="text-[#1D2939] text-2xl font-bold font-serif leading-tight scroll-mt-24 !mb-[-2.5rem]"
     >
       {text}
     </h3>
@@ -51,11 +52,15 @@ const ImageBlock = ({ src, alt, width, height }) => (
   </div>
 );
 
-const BulletList = ({ items }) => (
+const BulletList = ({ items, icon = "dot" }) => (
   <ul className="flex flex-col items-start gap-4">
     {items.map((item, index) => (
       <li key={index} className="flex items-start gap-3">
-        <span className="mt-2.5 w-2 h-2 shrink-0 rounded-full bg-default-100" />
+        {icon === "arrow" ? (
+          <FaAnglesRight className="mt-1.5 w-4 h-4 shrink-0 text-default-100" />
+        ) : (
+          <span className="mt-2.5 w-2 h-2 shrink-0 rounded-full bg-default-100" />
+        )}
         <RichText runs={item.runs} className="flex-1" />
       </li>
     ))}
@@ -100,7 +105,7 @@ const DataTable = ({ columns, rows }) => (
 );
 
 const Callout = ({ runs }) => (
-  <div className="w-full p-8 bg-default-25 rounded-lg">
+  <div className="w-full p-8 bg-[#ECF6F9] rounded-lg">
     <RichText runs={runs} />
   </div>
 );
@@ -183,7 +188,9 @@ const ArticleBody = ({ blocks }) => {
               />
             );
           case "bulletList":
-            return <BulletList key={index} items={block.items} />;
+            return (
+              <BulletList key={index} items={block.items} icon={block.icon} />
+            );
           case "table":
             return (
               <DataTable

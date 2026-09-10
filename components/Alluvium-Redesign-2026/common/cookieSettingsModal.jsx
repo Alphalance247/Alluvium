@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Button from "../common/button";
 
 const Toggle = ({ checked, disabled = false, onChange }) => (
   <button
@@ -12,7 +13,7 @@ const Toggle = ({ checked, disabled = false, onChange }) => (
     className={`w-9 h-5 p-0.5 rounded-xl flex items-center transition-colors ${
       checked
         ? disabled
-          ? "bg-slate-400 justify-end"
+          ? "bg-[#F6D5B6] justify-end"
           : "bg-default-100 justify-end"
         : "bg-slate-200 justify-start"
     } ${disabled ? "cursor-not-allowed" : ""}`}
@@ -24,8 +25,8 @@ const Toggle = ({ checked, disabled = false, onChange }) => (
 const CookieSettingsModal = ({ onClose, onSave }) => {
   const [preferences, setPreferences] = useState({
     functional: false,
-    analytics: true,
-    performance: true,
+    analytics: false,
+    performance: false,
   });
 
   useEffect(() => {
@@ -133,8 +134,14 @@ const CookieSettingsModal = ({ onClose, onSave }) => {
 
         <div className="w-full px-6 pt-4 pb-6 bg-white flex flex-col items-center gap-3">
           <div className="w-full flex items-center gap-2">
-            <button
+            {/* <button className="flex-1 h-10 px-4 py-2.5 rounded-lg border border-slate-300 shadow-sm text-[#344054] text-sm font-bold font-sans">
+              Reject all
+            </button> */}
+            <Button
+              size="md"
+              variant="secondary"
               type="button"
+              className="flex-1 h-10 px-4 py-2.5 !rounded-md !hover:text-white"
               onClick={() =>
                 onSave({
                   functional: false,
@@ -142,10 +149,9 @@ const CookieSettingsModal = ({ onClose, onSave }) => {
                   performance: false,
                 })
               }
-              className="flex-1 h-10 px-4 py-2.5 rounded-lg border border-slate-300 shadow-sm text-[#344054] text-sm font-bold font-sans"
             >
               Reject all
-            </button>
+            </Button>
             <button
               type="button"
               onClick={() =>

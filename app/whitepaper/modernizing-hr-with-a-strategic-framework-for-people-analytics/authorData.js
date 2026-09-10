@@ -1,12 +1,12 @@
 export const bioParagraphs = [
   [
     { bold: true, text: "Taiwo Ojo" },
-    " is a distinguished technology leader with nearly two decades of experience and ex Big Four, specializing in IT Service Management, digital transformation, and AI governance.",
+    "  is a distinguished technology leader with nearly two decades of experience and ex Big Four, specializing in IT Service Management, digital transformation, and AI governance.",
   ],
   [
     "As ",
     { bold: true, text: "CEO of Alluvium" },
-    ", he has successfully led some of the largest Atlassian tool consolidations, consistently delivering agility, scale, and significant cost savings for enterprise companies globally. Passionate about responsible AI,",
+    ",  Taiwo is dedicated to helping organizations innovate securely, protecting sensitive data, and maintaining their competitive edge in the AI-driven economy. He has also authored",
   ],
   [
     "Taiwo is dedicated to helping organizations innovate securely, protecting sensitive data, and maintaining their competitive edge in the AI-driven economy. He has also authored “",

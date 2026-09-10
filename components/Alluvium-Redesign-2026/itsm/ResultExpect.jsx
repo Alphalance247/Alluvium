@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 const results = [
-  " Faster resolution — often cut by up to 60%",
+  " Faster resolution, often cut by up to 60%",
   "Fewer repetitive tickets",
   " Lower operational overhead",
   "Full SLA visibility for leadership",
@@ -16,24 +16,7 @@ const ResultExpect = () => {
               Results you can expect
             </h5>
           </div>
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
-            {results.map((result, index) => {
-              return (
-                <div
-                  key={index}
-                  className="bg-lightBlue-150 rounded-2xl px-5 py-4 flex items-center gap-4"
-                >
-                  <Image
-                    src="https://d38rkvi67t4lhi.cloudfront.net/assets/1787742081524-carbon_cloud-infra-migration.png"
-                    alt="cloud-infra-migration"
-                    width={32}
-                    height={32}
-                  />
-                  <p>{result}</p>
-                </div>
-              );
-            })}
-          </div> */}
+
           <div className="flex flex-wrap  gap-6">
             {results.map((result, index) => (
               <div
