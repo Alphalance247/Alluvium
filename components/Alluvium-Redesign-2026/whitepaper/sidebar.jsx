@@ -116,7 +116,7 @@ const TocLink = ({ item, activeId, overrideValue, onToggle }) => {
 const Sidebar = ({
   tocItems = [],
   reportTitle,
-  reportCover = "https://d38rkvi67t4lhi.cloudfront.net/assets/1788177319102-Vector-1.png",
+  reportCover = "https://d38rkvi67t4lhi.cloudfront.net/assets/1789040730233-book-mockup-4.png",
   downloadHref = "https://d38rkvi67t4lhi.cloudfront.net/assets/1788200053203-The-Intelligent-Advantage.pdf",
 }) => {
   const [activeId, setActiveId] = useState("");
@@ -195,13 +195,13 @@ const Sidebar = ({
           </span>
         </div>
         <div className="w-full flex flex-col items-start gap-6">
-          <div className="w-48 h-64 relative bg-gradient-to-b from-blue-500 to-emerald-300 rounded-md overflow-hidden flex items-center justify-center">
+          <div className="w-48 h-64 relative overflow-hidden flex items-center justify-center">
             <Image
               src={reportCover}
               alt={reportTitle}
-              width={144}
-              height={208}
-              className="w-36 h-52 object-cover rounded shadow-lg"
+              width={260}
+              height={326}
+              className="w-64 h-80 object-cover rounded shadow-lg"
             />
           </div>
           <div className="w-full flex flex-col items-start gap-2">

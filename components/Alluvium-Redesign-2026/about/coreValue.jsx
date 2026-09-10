@@ -17,8 +17,8 @@ const ValuesGrid = () => {
             Built to deliver globally
           </h2>
           <p className="max-w-lg text-white/80 text-lg font-medium font-sans leading-relaxed">
-            Wherever you&apos;re calling from, there&apos;s a team ready to
-            help. We deliver across AMER, EMEA, and Africa — with offices in
+            Where we operate. Wherever you're calling from, there's a team ready
+            to help. We deliver across AMER, EMEA, and Africa, with offices in
             Orlando, Stamford, and New York, growing presence on the West Coast,
             and teams in the UK and Nigeria, one of the few Africa practices in
             the Atlassian partner ecosystem.

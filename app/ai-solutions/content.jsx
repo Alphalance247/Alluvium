@@ -64,8 +64,8 @@ const Content = () => {
         <span className="text-[#344054] font-medium">
           Rovo knows what your organization has decided and where the work sits.
           Claude reasons over that record and drafts the next move. Most AI
-          pilots stall because they’re bolted onto tools nobody trusts —
-          <span className="font-bold">we fix the platform first.</span>
+          pilots stall because they’re bolted onto tools nobody trusts. <br />
+          <span className="font-bold"> we fix the platform first.</span>
         </span>
       </MigrationIntro>
       <WhatWeDeliver
