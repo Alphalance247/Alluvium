@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import RichText from "./richText";
 import { slugify } from "./slugify";
 
@@ -39,7 +40,7 @@ const Paragraph = ({ text }) => (
 );
 
 const ImageBlock = ({ src, alt, width, height }) => (
-  <div className="w-full rounded-lg overflow-hidden bg-zinc-200">
+  <div className="w-full rounded-lg overflow-hidden">
     <Image
       src={src}
       alt={alt || ""}
@@ -104,6 +105,60 @@ const Callout = ({ runs }) => (
   </div>
 );
 
+const CtaButton = ({ label, href }) => (
+  <Link
+    href={href}
+    className="inline-flex items-center px-6 py-2.5 bg-default-100 rounded-lg text-white text-lg font-bold font-sans transition-colors hover:bg-default-200"
+  >
+    {label}
+  </Link>
+);
+
+const CtaBanner = ({
+  variant = "dark",
+  heading,
+  description,
+  ctaLabel,
+  ctaHref,
+}) => {
+  const isLight = variant === "light";
+  return (
+    <div
+      className={`w-full p-6 md:p-10 rounded-lg flex flex-col items-start gap-6 ${
+        isLight ? "bg-sky-100" : "bg-secondary-900"
+      }`}
+    >
+      <div className="flex flex-col items-start gap-4">
+        <h4
+          className={`max-w-xs text-xl font-bold font-serif leading-snug ${
+            isLight ? "text-[#1D2939]" : "text-white"
+          }`}
+        >
+          {heading}
+        </h4>
+        <p
+          className={`text-lg font-medium font-sans leading-relaxed ${
+            isLight ? "text-[#1D2939]" : "text-white"
+          }`}
+        >
+          {description}
+        </p>
+      </div>
+      {ctaHref && <CtaButton label={ctaLabel} href={ctaHref} />}
+    </div>
+  );
+};
+
+const KeyTakeaways = ({ label = "Key takeaways", runs, cta }) => (
+  <div className="w-full pl-7 pr-6 py-6 bg-[#F2F4F7] rounded-lg border-l-4 border-[#008DAF] flex flex-col items-start gap-4">
+    <span className="text-[#008DAF] text-base font-bold font-sans">
+      {label}
+    </span>
+    <RichText runs={runs} />
+    {cta && <CtaBanner variant="light" {...cta} />}
+  </div>
+);
+
 const ArticleBody = ({ blocks }) => {
   return (
     <div className="w-full flex flex-col items-start gap-16">
@@ -131,10 +186,38 @@ const ArticleBody = ({ blocks }) => {
             return <BulletList key={index} items={block.items} />;
           case "table":
             return (
-              <DataTable key={index} columns={block.columns} rows={block.rows} />
+              <DataTable
+                key={index}
+                columns={block.columns}
+                rows={block.rows}
+              />
             );
           case "callout":
             return <Callout key={index} runs={block.runs} />;
+          case "keyTakeaways":
+            return (
+              <KeyTakeaways
+                key={index}
+                label={block.label}
+                runs={block.runs}
+                cta={block.cta}
+              />
+            );
+          case "cta":
+            return (
+              <CtaBanner
+                key={index}
+                variant={block.variant}
+                heading={block.heading}
+                description={block.description}
+                ctaLabel={block.ctaLabel}
+                ctaHref={block.ctaHref}
+              />
+            );
+          case "button":
+            return (
+              <CtaButton key={index} label={block.label} href={block.href} />
+            );
           default:
             return null;
         }

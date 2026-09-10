@@ -5,7 +5,7 @@ import styles from "../styles/layout.module.scss";
 import { ConsultationForm } from "./Consultation";
 import ContactSection from "./Alluvium-Redesign-2025/ContactSection";
 import Footer from "./Alluvium-Redesign-2026/footer";
-import CookieConsent from "./Alluvium-Redesign-2025/CookieConsent";
+import CookieConsent from "./Alluvium-Redesign-2026/common/cookieConsent";
 import Navbar from "./Alluvium-Redesign-2026/common/header";
 import AnnouncementBar from "./Alluvium-Redesign-2026/common/banner/team26CatchUp";
 

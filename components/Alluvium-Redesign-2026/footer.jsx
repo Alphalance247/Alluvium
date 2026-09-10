@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../styles/AlluviumRedesign2026/home/footer.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { IoLogoLinkedin } from "react-icons/io";
@@ -35,8 +34,16 @@ const services = [
 
 const company = [
   { url: "/about", id: 1, name: "About us" },
-  { url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion?tab=overview&hosting=cloud", id: 2, name: "Export & count plugin" },
-  { url: "https://marketplace.atlassian.com/apps/1223507/resource-compare-for-jira?tab=overview&hosting=cloud", id: 3, name: "Resource compare" },
+  {
+    url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion?tab=overview&hosting=cloud",
+    id: 2,
+    name: "Export & count plugin",
+  },
+  {
+    url: "https://marketplace.atlassian.com/apps/1223507/resource-compare-for-jira?tab=overview&hosting=cloud",
+    id: 3,
+    name: "Resource compare",
+  },
   { url: "/contact-us", id: 4, name: "Contact us" },
   // {
   //   url: "https://marketplace.atlassian.com/apps/1224091/export-and-count-for-cloud-scrum-companion",
@@ -53,7 +60,7 @@ const resources = [
   { url: "/success-stories", id: "1", name: "Success stories" },
   { url: "/blogs", id: "2", name: "Blog" },
   { url: "/whitepaper", id: "", name: "White papers" },
-  { url: "/event", id: "5", name: "Events" },
+  // { url: "/event", id: "5", name: "Events" },
   // {
   //   url: "/atlassian-cloud-migration-case-studies",
   //   id: "3",
