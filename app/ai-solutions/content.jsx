@@ -30,6 +30,7 @@ const Content = () => {
       text: "Knowledge management, customer experience, underwriting, and compliance use cases",
     },
   ];
+
   const stats = [
     { value: "6+", label: " years delivering enterprise AI" },
     { value: "90%+", label: " client retention across AI programs" },
