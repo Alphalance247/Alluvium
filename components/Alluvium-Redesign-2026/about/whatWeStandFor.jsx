@@ -26,8 +26,8 @@ const WhatWeStandFor = () => {
             What we stand for
           </h2>
           <p className="text-center text-[#344054] text-lg font-medium font-sans leading-relaxed">
-            We treat your environment as our own — problems are ours until
-            they&apos;re resolved.
+            We treat your environment as our own; problems are ours until
+            they're resolved.
           </p>
         </div>
 

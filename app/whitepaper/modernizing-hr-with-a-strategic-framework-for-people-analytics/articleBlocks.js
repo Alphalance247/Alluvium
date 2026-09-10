@@ -54,10 +54,6 @@ export const articleBlocks = [
     text: "What each request type captures and why it matters for analytics:",
   },
   {
-    type: "paragraph",
-    text: "Atlassian's HR team feeds data from Workday into JSM via Workato. When a new hire is added in Workday, it automatically creates a JSM request that triggers the full onboarding checklist: laptop provisioning, account creation, orientation scheduling. The result: more HR bandwidth, simplified workflows, centralized tracking, and measurable oversight.",
-  },
-  {
     type: "table",
     columns: ["Request Type", "Data Captured", "Analytics Value"],
     rows: [
@@ -273,7 +269,7 @@ export const articleBlocks = [
     type: "callout",
     runs: [
       { lead: true, text: "Real-world impact: " },
-      "Vista Equity Partners, an Alluvium client, deployed the AI-powered virtual agent (Atlassian Assist via Slack) with 10–20 service request intents for conversational self-service — and saw an ",
+      " Vista Equity Partners, an Alluvium client, deployed the AI-powered virtual agent (Atlassian Assist via Slack) with 10 to 20 service request intents for conversational self-service, and saw an ",
       { bold: true, text: "80% decrease in support email volume." },
     ],
   },
@@ -414,7 +410,7 @@ export const articleBlocks = [
       { bold: true, text: "FedRAMP." },
       " compliance architecture goes deeper than certifications alone. Issue security schemes control visibility ticket-by-ticket, separate from project-level permissions, so sensitive grievance or compensation cases stay restricted to the agents who need them.",
       { break: true },
-      "A dedicated Case Management work category - now available in JSM - keeps investigations, performance concerns, and well- being matters structurally separate from standard service requests, visible only to agents with access. Every automation rule execution is logged, giving compliance teams a verifiable record of exactly what ran and what changed. ",
+      " A dedicated Case Management work category, now available in JSM, keeps investigations, performance concerns, and well-being matters structurally separate from standard service requests, visible only to agents with access. Every automation rule execution is logged, giving compliance teams a verifiable record of exactly what ran and what changed.",
       { break: true },
       "Adding Claude to the workflow means owning one further, complementary layer of governance: scoped connector permissions, a human review step before any AI-drafted communication or record update goes live, and verification of any AI-generated figure before it informs a real compensation, promotion, or hiring decision.",
     ],

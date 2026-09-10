@@ -19,7 +19,7 @@ export const caseStudies = [
         "We replaced ServiceNow with Jira Service Management, delivering full ITSM and ESM capability and integrating it with Workday to unify HR processes.",
       results: [
         "ESM capability rolled out across multiple functions.",
-        "Seamless Workday integration - HR processes now run through one connected system",
+        "Seamless Workday integration: HR processes now run through one connected system",
         "Faster service request resolution after go-live",
       ],
       stats: [
@@ -48,7 +48,7 @@ export const caseStudies = [
       solution:
         "We migrated their ITSM stack to Jira Service Management, standing up JSM Assets and workflow automation for day-to-day operations.",
       results: [
-        "Client since 2024 - ongoing partnership built on JSM",
+        "Client since 2024: ongoing partnership built on JSM",
         "Dedicated senior engineer assigned for continuous support",
         "Regular instance audits keeping the system optimized",
       ],
