@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import CookieSettingsModal from "./cookieSettingsModal";
 import { savePreferences } from "./cookiePreferences";
+import Button from "../common/button";
 
 const CookieConsent = () => {
   const [visible, setVisible] = useState(false);
@@ -63,13 +64,21 @@ const CookieConsent = () => {
                 Manage setting
               </button>
 
-              <button
+              {/* <button
                 type="button"
-                onClick={handleReject}
                 className="h-10 px-4 py-2.5 rounded-lg border border-slate-300 shadow-sm text-[#344054] text-sm font-bold font-sans"
               >
                 Reject all
-              </button>
+              </button> */}
+              <Button
+                size="md"
+                variant="secondary"
+                type="button"
+                className="h-10 !rounded-md"
+                onClick={handleReject}
+              >
+                Reject all
+              </Button>
               <button
                 type="button"
                 onClick={handleAccept}

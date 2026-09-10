@@ -6,7 +6,7 @@ const includedItems = [
   "Full audit of existing alert routing, on-call rotations, and escalation policies",
   "Integration-by-integration rebuild and testing before cutover",
   "Rollback plan, in case anything needs to reverse",
-  "Live parallel period — old and new systems run together until the new one's proven",
+  "Live parallel period: old and new systems run together until the new one's proven",
   "Structured 10-week timeline, not open-ended",
 ];
 
