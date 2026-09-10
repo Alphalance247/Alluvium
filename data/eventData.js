@@ -1,81 +1,178 @@
 export const eventData = [
   {
-    slug: "dashboard-advantage-what-you-do-not-get-with-email",
-    title: "Dashboard Advantage: What You Do Not Get With Email",
-    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/Yusuf banner.jpg",
-    dateTime: "WED, 10TH JUNE, 2026 1:00 PM WAT",
-    descriptionParagraphs: ["Email is a powerful communication tool, but it wasn't built to provide real-time visibility, performance tracking, or actionable insights.",
-      "Join Braimoh Yusuf as he explores how dashboards help organizations improve decision-making, increase accountability, and gain a clearer view of operations."
-    ],
-    coverPoints: ["Provide real-time visibility into projects and processes",
-      "Improve team accountability and collaboration",
-      "Simplify reporting and performance tracking",
-      "Enable faster, data-driven decisions"
-    ],
-    subtitle: "Learn how dashboards can",
-    hosts: [{
-      name: "Yusuf Braimoh",
-      role: "Speaker",
-      image: "/assets/Alluvium-Redesign-2026/Events/yusuf.png"
-    }],
-
-  },
-  {
-    slug: "exploring-atlassian’s-csm-telephony",
-    title: "Exploring Atlassian’s CSM Telephony",
-    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/csm-telephony.png",
-    dateTime: "TUE, MaY 26, 2026 1:00 PM WAT",
-    startsIn: "Starts tomorrow",
-    descriptionParagraphs: [
-      "Tired of waiting days for ticket resolution? Atlassian Customer Service Management now lets your customers pick up the phone, speak to a live agent, and get help in real time.",
-    ],
+    title: "Managing difficult conversations with clarity",
+    description:
+      "Practical ways to navigate tension, build trust, and turn challenging workplace conversations into meaningful progress.",
+    date: "Friday, 21 August 2026",
+    slug: "Managing difficult conversations with clarity",
+    imgUrl:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493817-Image-26.png",
     coverPoints: [
-      "How to set up CSM's voice channel from scratch",
-      "Configuring your AWS Connect integration step by step",
-      "Creating service accounts, phone numbers, and agent routing",
-      "Attaching call recordings to service requests automatically.",
+      "Join facilitator and communication strategist Rutendo Mujuru for a focused session on preparing for difficult conversations, staying grounded under pressure, and creating outcomes that move teams forward.",
+      // "Improve team accountability and collaboration",
+      // "Simplify reporting and performance tracking",
+      // "Enable faster, data-driven decisions"
     ],
-    subtitle: "In this session, we'll cover",
+    subtitle: "Make the conversation easier without avoiding what matters.",
     hosts: [
       {
         name: "BAbade Adewole",
-        role: "Speaker",
-        image: "/assets/Alluvium-Redesign-2026/Events/babs.jpg",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992600097-Image-28.png",
+      },
+      {
+        name: "Rachel Brown",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992604173-Image-29.png",
       },
     ],
-    // speakers: [
-    //   {
-    //     name: "Rachel Brown",
-    //     role: "Atlassian Certified Expert and Presales Solution Engineer",
-    //     image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
-    //   },
-    //   {
-    //     name: "Rachel Brown",
-    //     role: "Atlassian Certified Expert and Presales Solution Engineer",
-    //     image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
-    //   },
-    // ],
+    time: "11:30 AM – 12:30 PM WAT",
+    location: "Online via Google Meet",
+  },
+  {
+    title:
+      "Opsgenie is ending. Here is what your migration plan needs to cover.",
+    description: "",
+    date: "May 15th, 2026: 07:00 PM (WAT)",
+    slug: "opsgenie-ending",
+    imgUrl:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493795-Image-27.png",
+    coverPoints: [
+      "Join facilitator and communication strategist Rutendo Mujuru for a focused session on preparing for difficult conversations, staying grounded under pressure, and creating outcomes that move teams forward.",
+      // "Improve team accountability and collaboration",
+      // "Simplify reporting and performance tracking",
+      // "Enable faster, data-driven decisions"
+    ],
+    subtitle: "Make the conversation easier without avoiding what matters.",
+    hosts: [
+      {
+        name: "BAbade Adewole",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992600097-Image-28.png",
+      },
+      {
+        name: "Rachel Brown",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992604173-Image-29.png",
+      },
+    ],
+    time: "",
+    loaction: "",
+  },
+  {
+    title:
+      "Opsgenie is ending. Here is what your migration plan needs to cover.",
+    description: "",
+    date: "May 15th, 2026: 07:00 PM (WAT)",
+    slug: "opsgenie",
+    imgUrl:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493726-image-7-3.png",
+    coverPoints: [
+      "Join facilitator and communication strategist Rutendo Mujuru for a focused session on preparing for difficult conversations, staying grounded under pressure, and creating outcomes that move teams forward.",
+      // "Improve team accountability and collaboration",
+      // "Simplify reporting and performance tracking",
+      // "Enable faster, data-driven decisions"
+    ],
+    subtitle: "Make the conversation easier without avoiding what matters.",
+    hosts: [
+      {
+        name: "BAbade Adewole",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992600097-Image-28.png",
+      },
+      {
+        name: "Rachel Brown",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992604173-Image-29.png",
+      },
+    ],
+    time: "",
+    loaction: "",
   },
 
-  {
-    slug: "the-strategic-shift-why-enterprises-are-replacing-servicenow",
-    title: "The Strategic Shift: Why Enterprises are replacing ServiceNow",
-    backgroundImage: "/assets/Alluvium-Redesign-2026/Events/hero2.png",
-    dateTime: "THU, MAR 26, 2026 7:00 PM WAT",
-    startsIn: "STARTS IN 9 DAYS",
-    descriptionParagraphs: [
-      "For years, ServiceNow has been the default for enterprise service management, but times have changed. Rising costs, inflexible licensing, and slow innovation cycles have led many leaders to question whether their service platform is still serving the business.",
-      "In this executive briefing, our Head of ESM Practice, Adam Jackson, will share what your peers are already acting on: why Jira Service Management is becoming the platform of choice for modern enterprises and how they're navigating the switch successfully.",
-      "You'll hear what industry analysts are reporting, how CIOs and COOs are rethinking legacy contracts, and what measurable impact organizations are seeing post-transition.",
-      "This is not a tools talk... it's a strategy session for leaders ready to align service delivery with today's business realities.",
-    ],
-    coverPoints: [
-      "Why enterprises are reassessing ServiceNow as digital transformation accelerates",
-      "What analysts are saying about the shift to lighter, faster service management platforms",
-      "How switching to Jira Service Management can unlock agility, reduce OPEX, and accelerate time-to-value",
-      "Executive-level case studies: what leading companies changed—and how it impacted cost, delivery, and alignment",
-    ],
-    hosts: [],
-    speakers: [],
-  },
+  // {
+  //   slug: "dashboard-advantage-what-you-do-not-get-with-email",
+  //   title: "Dashboard Advantage: What You Do Not Get With Email",
+  //   backgroundImage: "/assets/Alluvium-Redesign-2026/Events/Yusuf banner.jpg",
+  //   dateTime: "WED, 10TH JUNE, 2026 1:00 PM WAT",
+  //   descriptionParagraphs: ["Email is a powerful communication tool, but it wasn't built to proval-time visibility, performance tracking, or actionable insights.",
+  //     "Join Braimoh Yusuf as he explores how dashboards help organizations improve decision-making, increase accountability, and gain a clearer view of operations."
+  //   ],
+  //   coverPoints: ["Provide real-time visibility into projects and processes",
+  //     "Improve team accountability and collaboration",
+  //     "Simplify reporting and performance tracking",
+  //     "Enable faster, data-driven decisions"
+  //   ],
+  //   subtitle: "Learn how dashboards can",
+  //   hosts: [{
+  //     name: "Yusuf Braimoh",
+  //     role: "Speaker",
+  //     image: "/assets/Alluvium-Redesign-2026/Events/yusuf.png"
+  //   }],
+
+  // },
+  // {
+  //   slug: "exploring-atlassian’s-csm-telephony",
+  //   title: "Exploring Atlassian’s CSM Telephony",
+  //   backgroundImage: "/assets/Alluvium-Redesign-2026/Events/csm-telephony.png",
+  //   dateTime: "TUE, MaY 26, 2026 1:00 PM WAT",
+  //   startsIn: "Starts tomorrow",
+  //   descriptionParagraphs: [
+  //     "Tired of waiting days for ticket resolution? Atlassian Customer Service Management now lets your customers pick up the phone, speak to a live agent, and get help in real time.",
+  //   ],
+  //   coverPoints: [
+  //     "How to set up CSM's voice channel from scratch",
+  //     "Configuring your AWS Connect integration step by step",
+  //     "Creating service accounts, phone numbers, and agent routing",
+  //     "Attaching call recordings to service requests automatically.",
+  //   ],
+  //   subtitle: "In this session, we'll cover",
+  //   hosts: [
+  //     {
+  //       name: "BAbade Adewole",
+  //       role: "Speaker",
+  //       image: "/assets/Alluvium-Redesign-2026/Events/babs.jpg",
+  //     },
+  //   ],
+  //   // speakers: [
+  //   //   {
+  //   //     name: "Rachel Brown",
+  //   //     role: "Atlassian Certified Expert and Presales Solution Engineer",
+  //   //     image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
+  //   //   },
+  //   //   {
+  //   //     name: "Rachel Brown",
+  //   //     role: "Atlassian Certified Expert and Presales Solution Engineer",
+  //   //     image: "/assets/Alluvium-Redesign-2026/Events/1a.png",
+  //   //   },
+  //   // ],
+  // },
+
+  // {
+  //   slug: "the-strategic-shift-why-enterprises-are-replacing-servicenow",
+  //   title: "The Strategic Shift: Why Enterprises are replacing ServiceNow",
+  //   backgroundImage: "/assets/Alluvium-Redesign-2026/Events/hero2.png",
+  //   dateTime: "THU, MAR 26, 2026 7:00 PM WAT",
+  //   startsIn: "STARTS IN 9 DAYS",
+  //   descriptionParagraphs: [
+  //     "For years, ServiceNow has been the default for enterprise service management, but times have changed. Rising costs, inflexible licensing, and slow innovation cycles have led many leaders to question whether their service platform is still serving the business.",
+  //     "In this executive briefing, our Head of ESM Practice, Adam Jackson, will share what your peers are already acting on: why Jira Service Management is becoming the platform of choice for modern enterprises and how they're navigating the switch successfully.",
+  //     "You'll hear what industry analysts are reporting, how CIOs and COOs are rethinking legacy contracts, and what measurable impact organizations are seeing post-transition.",
+  //     "This is not a tools talk... it's a strategy session for leaders ready to align service delivery with today's business realities.",
+  //   ],
+  //   coverPoints: [
+  //     "Why enterprises are reassessing ServiceNow as digital transformation accelerates",
+  //     "What analysts are saying about the shift to lighter, faster service management platforms",
+  //     "How switching to Jira Service Management can unlock agility, reduce OPEX, and accelerate time-to-value",
+  //     "Executive-level case studies: what leading companies changed—and how it impacted cost, delivery, and alignment",
+  //   ],
+  //   hosts: [],
+  //   speakers: [],
+  // },
 ];
