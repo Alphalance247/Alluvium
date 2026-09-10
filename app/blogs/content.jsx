@@ -70,18 +70,18 @@ const Blogs = () => {
       />
 
       <FeaturedArticle
-        href="/blogs/opsgenie-is-going-away-the-migration-should-not-be-a-fire-drill"
-        eyebrow="Opsgenie migration"
-        title="Opsgenie Is Going Away. The Migration Should Not Be a Fire Drill."
-        date="Jul 22, 2026"
-        readTime="5 mins read"
-        // authorName="Muhammad Zubairu"
-        // authorRole="Product lead"
-        image="https://d38rkvi67t4lhi.cloudfront.net/assets/1787731328047-image-5.png"
-        imageAlt="Opsgenie to JSM Migration"
+        href={`/blogs/${shadowAiArticle.slug}`}
+        eyebrow={shadowAiArticle.tag_names[0]}
+        title={shadowAiArticle.title}
+        date={shadowAiArticle.formatted_published_at}
+        readTime={`${shadowAiArticle.read_time} mins read`}
+        authorName="Taiwo Ojo"
+        authorRole="Founder/CEO of Alluvium"
+        image={shadowAiArticle.featured_image}
+        imageAlt="Shadow AI"
       />
 
-      <ArticleGrid articles={[shadowAiArticle, ...(data?.results || [])]} />
+      <ArticleGrid articles={data?.results || []} />
 
       <WhitepaperSection
         theme="dark"
