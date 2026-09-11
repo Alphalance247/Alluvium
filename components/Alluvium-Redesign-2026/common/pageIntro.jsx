@@ -4,7 +4,7 @@ import Container from "./container";
 const PageIntro = ({ title, subtitle }) => {
   return (
     <section className="w-full bg-white border-b border-slate-200 overflow-hidden">
-      <Container className="flex flex-col items-start gap-3 text-left">
+      <Container className="flex flex-col items-start gap-3 text-left lg:!pt-[5rem] lg:!pb-10">
         <h1 className="text-[#1D2939] text-4xl md:text-5xl font-bold font-serif leading-tight">
           {title}
         </h1>

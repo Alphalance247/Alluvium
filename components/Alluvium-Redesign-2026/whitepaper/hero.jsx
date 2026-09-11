@@ -78,11 +78,11 @@ const WhitepaperHero = ({
         </div>
 
         {/* Featured Image */}
-        <div className="w-full rounded-lg overflow-hidden bg-zinc-200 px-8">
+        <div className="w-full overflow-hidden">
           <Image
             src={image}
             alt={imageAlt}
-            width={720}
+            width={800}
             height={400}
             className="w-full h-auto object-cover"
           />

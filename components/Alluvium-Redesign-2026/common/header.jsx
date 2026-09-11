@@ -2,7 +2,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../../../styles/AlluviumRedesign2026/common/navigation.module.scss";
 import SolutionNav from "./dropdown/solutionNav";
-import Image from "next/legacy/image";
 import Link from "next/link";
 import ResourcesNav from "./dropdown/resourcesNav";
 import ProductNav from "./dropdown/productNav";
@@ -12,6 +11,7 @@ import MobileSolutionNav from "./mobile-dropdown/mobileSolutionNav";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import MobileProductsNav from "./mobile-dropdown/mobileProductsNav";
 import MobileResourcesNav from "./mobile-dropdown/mobileResourcesNav";
+import Image from "next/image";
 
 const Navbar = () => {
   // Track which dropdown is currently open

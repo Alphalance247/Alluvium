@@ -22,7 +22,7 @@ const CaseStudyGrid = ({ backgroundColor, showHeading = false }) => {
 
   return (
     <section className="w-full overflow-hidden" style={{ backgroundColor }}>
-      <Container className="flex flex-col items-start gap-12">
+      <Container className="flex flex-col items-start gap-12  lg:!pt-10 ">
         {showHeading && (
           <h2 className="text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-tight">
             More Customer Stories

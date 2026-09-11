@@ -47,7 +47,7 @@ const PolicySection = ({ section }) => {
       id={id}
       className="w-full pb-10 border-b border-slate-200 flex flex-col items-start gap-6 scroll-mt-24"
     >
-      <h2 className="text-[#1D2939] text-3xl font-bold font-serif leading-tight">
+      <h2 className="text-[#1D2939] text-3xl font-bold font-serif leading-tight lowercase first-letter:uppercase">
         {section.title}
       </h2>
       <div className="w-full flex flex-col items-start gap-6">
@@ -59,7 +59,8 @@ const PolicySection = ({ section }) => {
               return (
                 <h3
                   key={index}
-                  className="text-[#1D2939] text-xl md:text-2xl font-bold font-serif leading-snug"
+                  id={slugify(piece.text)}
+                  className="text-[#1D2939] text-lg md:text-xl font-bold font-serif leading-snug scroll-mt-24 lowercase first-letter:uppercase"
                 >
                   {piece.text}
                 </h3>

@@ -6,7 +6,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "The modern HR landscape is often fragmented, data scattered across a patchwork of systems, requests handled by email or spreadsheet, and no single view of the employee lifecycle. That fragmentation shows up as real cost: slower processing times, higher compliance risk, and analytics nobody fully trusts.\n\nThis white paper lays out a proven, three-phase strategic framework for modernizing HR on the Atlassian platform consolidating scattered workflows into a single source of truth, building dependable analytics on top of it, and optimizing with automation and AI.\n\nTogether, these phases give HR and People Analytics teams a clear path to operational excellence and a seat at the table as a strategic business partner. The business case is not theoretical: a commissioned Forrester study found that a composite organization deploying Jira Service Management realized a 275% ROI and a $6.97 million net present value over three years, with an average payback period of less than six months.",
+    text: "The modern HR landscape is often fragmented, data scattered across a patchwork of systems, requests handled by email or spreadsheet, and no single view of the employee lifecycle. That fragmentation shows up as real cost: slower processing times, higher compliance risk, and analytics nobody fully trusts.\n\nThis white paper lays out a proven, three-phase strategic framework for modernizing HR on the Atlassian platform consolidating scattered workflows into a single source of truth, building dependable analytics on top of it, and optimizing with automation and AI.\n\n Together, these phases give HR and People Analytics teams a clear path to operational excellence and a seat at the table as a strategic business partner. The business case is not theoretical: a commissioned Forrester study found that a composite organization deploying Jira Service Management realized a 275% ROI and a $6.97 million net present value over three years, with an average payback period of less than six months.",
   },
 
   // Phase 1
@@ -17,7 +17,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "Fragmented HR systems lead to operational risks, longer processing times, and higher potential for error. A decentralized approach also complicates compliance and makes it difficult to consistently secure sensitive employee data.\n\nThe Atlassian platform addresses this by adopting an HR Service Management (HRSM) model, centralizing all employee interactions. Jira Service Management (JSM) acts as the core, managing the entire employee lifecycle — from onboarding to offboarding — through a single, intuitive platform. This is complemented by Confluence, which serves as a centralized knowledge base for policies and documentation, empowering employees to use self-service portals and deflect common requests, freeing up HR teams.",
+    text: "Fragmented HR systems lead to operational risks, longer processing times, and higher potential for error. A decentralized approach also complicates compliance and makes it difficult to consistently secure sensitive employee data. \n\nThe Atlassian platform addresses this by adopting an HR Service Management (HRSM) model, centralizing all employee interactions. Jira Service Management (JSM) acts as the core, managing the entire employee lifecycle - from onboarding to offboarding - through a single, intuitive platform. This is complemented by Confluence, which serves as a centralized knowledge base for policies and documentation, empowering employees to use self-service portals and deflect common requests, freeing up HR teams.",
   },
   {
     type: "image",
@@ -37,7 +37,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "JSM's HR template centralizes onboarding, offboarding, benefits, payroll queries, leave, and grievances into one platform with structured request types, SLA tracking, and built-in reporting. Every employee interaction — a request, a question, a complaint — is captured as a structured ticket with metadata: request type, priority, timestamp, assignee, and resolution time.\n\nThat's what turns each interaction into a usable data point rather than an email nobody can report on. Employees reach the platform through the Help Center portal, email, Slack, or Microsoft Teams, and every channel converges into the same JSM queues, so nothing gets lost in a side conversation.\n\nCross-department orchestration means a single onboarding request can fan out into coordinated tasks across HR, IT, Security, and Facilities, each tracked against its own SLA.",
+    text: "JSM's HR template centralizes onboarding, offboarding, benefits, payroll queries, leave, and grievances into one platform with structured request types, SLA tracking, and built-in reporting. Every employee interaction, a request, a question, a complaint is captured as a structured ticket with metadata: request type, priority, timestamp, assignee, and resolution time. \n\n That's what turns each interaction into a usable data point rather than an email nobody can report on. Employees reach the platform through the Help Center portal, email, Slack, or Microsoft Teams, and every channel converges into the same JSM queues, so nothing gets lost in a side conversation. \n\nCross-department orchestration means a single onboarding request can fan out into coordinated tasks across HR, IT, Security, and Facilities, each tracked against its own SLA.",
   },
   {
     type: "heading",
@@ -102,7 +102,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "Beyond the defaults, JSM supports unlimited custom request types — grievance and complaint tracking, recognition and awards, and certification recording are common additions, each turning a previously invisible HR process into something a People Analytics team can actually report on.",
+    text: "Beyond the defaults, JSM supports unlimited custom request types grievance and complaint tracking, recognition and awards, and certification recording are common additions, each turning a previously invisible HR process into something a People Analytics team can actually report on.",
   },
 
   // Phase 2
@@ -120,7 +120,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "Dependable analytics require clean, consolidated data, a challenge in fragmented systems. The Atlassian Data Lake is the architectural solution, a secure repository that unifies operational data from JSM, Jira Software, and Confluence.\n\nWith this single source of truth, Atlassian Analytics provides powerful dashboards and reports for people analytics teams. It enables them to track critical metrics and move from reactive to proactive decision making.",
+    text: "Dependable analytics require clean, consolidated data, a challenge in fragmented systems. The Atlassian Data Lake is the architectural solution, a secure repository that unifies operational data from JSM, Jira Software, and Confluence. \n\n With this single source of truth, Atlassian Analytics provides powerful dashboards and reports for people analytics teams. It enables them to track critical metrics and move from reactive to proactive decision making.",
   },
   {
     type: "heading",
@@ -133,6 +133,7 @@ export const articleBlocks = [
   },
   {
     type: "bulletList",
+    icon: "arrow",
     items: [
       {
         runs: [
@@ -183,9 +184,9 @@ export const articleBlocks = [
     runs: [
       {
         bold: true,
-        text: "JSM's automation engine is what builds this pipeline in the background ",
+        text: "JSM's automation engine is what builds this pipeline in the background",
       },
-      "— trigger-based rules that enrich incoming tickets with department and manager data pulled from the HRIS, auto-route benefits queries to the Benefits team and payroll queries to Payroll, and auto-tag requests by category so they can be reported on across categories later.",
+      " trigger-based rules that enrich incoming tickets with department and manager data pulled from the HRIS, auto-route benefits queries to the Benefits team and payroll queries to Payroll, and auto-tag requests by category so they can be reported on across categories later. ",
       { break: true },
       "A scheduled rule can run a weekly compliance scan for overdue offboarding tasks or expired certifications; an SLA-breach rule can escalate an at-risk ticket to a manager automatically. Every one of these automations logs who triggered it, when, and what changed, creating an audit trail that matters as much for analytics data integrity as it does for compliance.",
     ],
@@ -213,8 +214,8 @@ export const articleBlocks = [
     runs: [
       "The platform's AI capabilities are multi-layered. A virtual service agent provides 24/7 self-service support, answering FAQs and deflecting routine requests to free up HR teams. For analysts, Atlassian Intelligence uses natural language to generate complex SQL queries, custom formulas, and chart insights, democratizing access to advanced analytics.",
       { break: true },
-      { bold: true, text: "For agentic use cases, there is Rovo" },
-      " — Atlassian's powerful AI-powered toolset designed to supercharge teamwork. Rovo addresses the challenge of fragmented enterprise knowledge by connecting with a wide range of platforms, including Atlassian products like Jira and Confluence, as well as third-party apps like Workday, BambooHR, Google Drive, Sharepoint, Slack, and Microsoft Teams.",
+      { bold: true, text: "For agentic , there is Rovo" },
+      "- Atlassian's powerful AI-powered toolset designed to supercharge teamwork. Rovo addresses the challenge of fragmented enterprise knowledge by connecting with a wide range of platforms, including Atlassian products like Jira and Confluence, as well as third-party apps like Workday, BambooHR, Google Drive, Sharepoint, Slack, and Microsoft Teams.",
       { break: true },
       { bold: true, text: "Search," },
       " teams can find information instantly, eliminating the need to switch between different applications.",
@@ -223,7 +224,7 @@ export const articleBlocks = [
       " acts as an intelligent assistant, providing real-time insights and helping with everything from summarizing reports to brainstorming ideas.",
       { break: true },
       { bold: true, text: "Agents" },
-      " are specialized AI teammates that automate repetitive tasks, freeing up your team to focus on more strategic, high-value work.",
+      "  are specialized AI teammates that automate repetitive tasks, freeing up your team to focus on more strategic, high-value work",
     ],
   },
 
@@ -268,7 +269,7 @@ export const articleBlocks = [
     type: "callout",
     runs: [
       { lead: true, text: "Real-world impact: " },
-      "Vista Equity Partners, an Alluvium client, deployed the AI-powered virtual agent (Atlassian Assist via Slack) with 10–20 service request intents for conversational self-service — and saw an ",
+      " Vista Equity Partners, an Alluvium client, deployed the AI-powered virtual agent (Atlassian Assist via Slack) with 10 to 20 service request intents for conversational self-service, and saw an ",
       { bold: true, text: "80% decrease in support email volume." },
     ],
   },
@@ -288,7 +289,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "Rovo is, and should remain, the native agentic AI for any HR function built on Atlassian — it's embedded in the platform, purpose-built for JSM and Confluence, and the right default. Some People Analytics teams choose to add a second, complementary layer on top of it: Claude, Anthropic's AI assistant, used specifically for natural-language reasoning across a wider set of unstructured material than a platform-native agent typically reaches.\n\nAtlassian ships an official remote MCP (Model Context Protocol) server for Jira and Confluence, and Claude connects to it directly through Claude's own Atlassian connector under scoped, permission-gated access. In practice, that adds four things on top of what Rovo already does natively:",
+    text: "Rovo is, and should remain, the native agentic AI for any HR function built on Atlassian: it's embedded in the platform, purpose-built for JSM and Confluence, and the right default. Some People Analytics teams choose to add second, complementary layer on top of it: Claude, Anthropic's AI assistant, used specifically for natural-language reasoning across a wider set of unstructured material than a platform-native agent typically reaches.\n\nAtlassian ships an official remote MCP (Model Context Protocol) server for Jira and Confluence, and Claude connects to it directly through Claude's own Atlassian connector under scoped, permission-gated access. In practice, that adds four things on top of what Rovo already does natively:",
   },
   {
     type: "bulletList",
@@ -305,7 +306,7 @@ export const articleBlocks = [
       {
         runs: [
           { bold: true, text: "Synthesizing unstructured feedback" },
-          " — reading exit interviews, open-text survey responses, and performance narratives and returning organized themes and sentiment, so a CSAT score comes with the reasons behind it.",
+          "reading exit interviews, open-text survey responses, and performance narratives and returning organized themes and sentiment, so a CSAT score comes with the reasons behind it.",
         ],
       },
       {
@@ -314,7 +315,7 @@ export const articleBlocks = [
             bold: true,
             text: "Drafting the operational content self-service depends on",
           },
-          " — job descriptions, onboarding checklists, and knowledge-base articles as a strong first draft for HR to edit, rather than a blank page to fill.",
+          " job descriptions, onboarding checklists, and knowledge-base articles as a strong first draft for HR to edit, rather than a blank page to fill.",
         ],
       },
       {
@@ -323,7 +324,7 @@ export const articleBlocks = [
             bold: true,
             text: "Human-in-the-loop decision support, never the decision-maker",
           },
-          " — flagging flight-risk patterns or summarizing a compensation review for a person to verify, not act on directly. Claude is built to decline filtering or ranking candidates by protected characteristics, and to flag uncertainty rather than assert a precise figure with false confidence.",
+          " flagging flight-risk patterns or summarizing a compensation review for a person to verify, not act on directly. Claude is built to decline filtering or ranking candidates by protected characteristics, and to flag uncertainty rather than assert a precise figure with false confidence.",
         ],
       },
     ],
@@ -331,7 +332,7 @@ export const articleBlocks = [
   {
     type: "rich",
     runs: [
-      "The rule that matters most here: read-first access by default, and no write-back to a ticket, page, or record without a person reviewing the draft first — the same audit-trail discipline JSM already applies to everything else. It's also worth noting that recruitment and candidate-assessment uses carry regulatory weight beyond internal policy: ",
+      "The rule that matters most here: read-first access by default, and no write-back to a ticket, page, or record without a person reviewing the draft first - the same audit-trail discipline JSM already applies to everything else. It's also worth noting that recruitment and candidate-assessment uses carry regulatory weight beyond internal policy: ",
       { bold: true, text: "the EU AI Act's Annex III" },
       " classifies them as high-risk, with obligations phased in through December 2027 under the Digital Omnibus agreement, and jurisdictions such as New York City add their own disclosure duties under Local Law 144.",
     ],
@@ -359,22 +360,23 @@ export const articleBlocks = [
   },
   {
     type: "bulletList",
+    icon: "arrow",
     items: [
       {
         runs: [
-          { bold: true, text: "$2.9M+" },
+          { lead: true, text: "$2.9M+" },
           " in service desk productivity gains from increased ticket deflection.",
         ],
       },
       {
         runs: [
-          { bold: true, text: "$3M" },
+          { lead: true, text: "$3M" },
           " in end-user productivity savings by reducing time spent on requests.",
         ],
       },
       {
         runs: [
-          { bold: true, text: "$2.3M+" },
+          { lead: true, text: "$2.3M+" },
           " in cost savings from retiring legacy systems.",
         ],
       },
@@ -391,7 +393,7 @@ export const articleBlocks = [
       { bold: true, text: "Edenred," },
       " a financial services firm serving ",
       { bold: true, text: "15,000+ customers," },
-      ' centralized globally onto one JSM Cloud instance for IT and enterprise service and is now supporting more than a third of its business units on the platform — "and just getting started." Atlassian\'s own HR team, as noted above, used the Workday-to-JSM integration to increase HR bandwidth and centralize tracking with measurable oversight.',
+      'centralized globally onto one JSM Cloud instance for IT and enterprise service and is now supporting more than a third of its business units on the platform - "and just getting started." Atlassian"s own HR team, as noted above, used the Workday- to-JSM integration to increase HR bandwidth and centralize tracking with measurable oversight',
     ],
   },
   {
@@ -402,13 +404,13 @@ export const articleBlocks = [
   {
     type: "rich",
     runs: [
-      "Atlassian's platform provides robust data security and privacy, essential for HR data. It features role-based permissions, audit trails, and compliance with key regulations like GDPR and HIPAA. The company's commitment is validated by certifications such as ",
+      "Atlassian’s platform provides robust data security and privacy, essential for HR data. It features role-based permissions, audit trails, and compliance with key regulations like GDPR and HIPAA. The company’s commitment is validated by certifications such as  ",
       { bold: true, text: "AICPA SOC, ISO 27001," },
       " and ",
       { bold: true, text: "FedRAMP." },
-      " JSM's compliance architecture goes deeper than certifications alone. Issue security schemes control visibility ticket-by-ticket, separate from project-level permissions, so sensitive grievance or compensation cases stay restricted to the agents who need them.",
+      " compliance architecture goes deeper than certifications alone. Issue security schemes control visibility ticket-by-ticket, separate from project-level permissions, so sensitive grievance or compensation cases stay restricted to the agents who need them.",
       { break: true },
-      "A dedicated Case Management work category — now available in JSM — keeps investigations, performance concerns, and well-being matters structurally separate from standard service requests, visible only to agents with access. Every automation rule execution is logged, giving compliance teams a verifiable record of exactly what ran and what changed.",
+      " A dedicated Case Management work category, now available in JSM, keeps investigations, performance concerns, and well-being matters structurally separate from standard service requests, visible only to agents with access. Every automation rule execution is logged, giving compliance teams a verifiable record of exactly what ran and what changed.",
       { break: true },
       "Adding Claude to the workflow means owning one further, complementary layer of governance: scoped connector permissions, a human review step before any AI-drafted communication or record update goes live, and verification of any AI-generated figure before it informs a real compensation, promotion, or hiring decision.",
     ],
@@ -422,7 +424,7 @@ export const articleBlocks = [
   },
   {
     type: "paragraph",
-    text: "The analysis confirms that the user's strategic narrative is a proven path to operational excellence and business impact. The journey — from consolidating workflows and enabling analytics to driving optimization with AI — is a cohesive progression that mitigates risk, increases efficiency, and generates significant value. To successfully navigate this journey, the following actionable roadmap is recommended:",
+    text: "The analysis confirms that the user's strategic narrative is a proven path to operational excellence and business impact. The journey - from consolidating workflows and enabling analytics to driving optimization with AI - is a cohesive progression that mitigates risk, increases efficiency, and generates significant value. To successfully navigate this journey, the following actionable roadmap is recommended",
   },
   {
     type: "rich",

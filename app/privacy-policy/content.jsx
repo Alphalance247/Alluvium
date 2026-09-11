@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
         note="This Notice supersedes all prior versions as of the effective date above."
       />
       <section className="w-full bg-white">
-        <Container className="grid grid-cols-1 lg:grid-cols-[1fr_256px] gap-12 lg:gap-20 items-start">
+        <Container className="grid grid-cols-1 lg:!pt-10 lg:grid-cols-[1fr_256px] gap-12 lg:gap-20 items-start">
           <div className="min-w-0 max-w-3xl">
             <PolicyBody sections={policySections} />
           </div>

@@ -5,13 +5,13 @@ import Container from "../common/container";
 const founders = [
   {
     name: "Wale Olojo",
-    role: "Co-Founder — technical direction and delivery.",
+    role: "Co-Founder: technical direction and delivery.",
     image:
       "https://d38rkvi67t4lhi.cloudfront.net/assets/1788261822169-Image-14.png",
   },
   {
     name: "Taiwo Ojo",
-    role: "Co-Founder — growth and partnerships.",
+    role: "Co-Founder: growth and partnerships",
     image:
       "https://d38rkvi67t4lhi.cloudfront.net/assets/1788261822170-Image-13.png",
   },
