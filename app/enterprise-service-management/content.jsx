@@ -134,7 +134,7 @@ const EnterpriseManagement = () => {
           heading={
             <h4 className="text-tertiary-300 text-[36px] font-bold font-merriweather leading-[44px] text-center  ">
               {" "}
-              A clear, phased approach — no guesswork,
+              A clear, phased approach: no guesswork,
               <br />
               no bloated timelines
             </h4>

@@ -20,7 +20,7 @@ const MissionSection = () => {
 
           <p className=" text-[#344054] text-lg font-medium font-sans leading-relaxed">
             Organizations invest in powerful tools but rarely get the full value
-            from them. We close that gap — as an Atlassian consulting partner
+            from them. We close that gap: as an Atlassian consulting partner
             across Jira, Confluence, Jira Service Management, and Bitbucket, and
             as an Anthropic partner bringing Claude and Rovo into enterprise
             workflows that actually get used.

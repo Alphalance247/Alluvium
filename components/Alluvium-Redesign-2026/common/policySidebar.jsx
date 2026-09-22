@@ -35,9 +35,9 @@ const TocLink = ({ section, activeId, overrideValue, onToggle }) => {
   return (
     <div className="w-full flex flex-col items-start">
       <div
-        className={`w-full flex items-center gap-2 py-2 pl-4 border-l-2 transition-colors ${
+        className={`w-full flex items-center gap-2 py-2 pr-4 border-l-2 transition-colors ${
           isActive
-            ? "border-default-100"
+            ? "border-transparent"
             : showCollapsedMarker
               ? "border-slate-300"
               : "border-transparent hover:border-slate-300"
@@ -46,7 +46,9 @@ const TocLink = ({ section, activeId, overrideValue, onToggle }) => {
         <a
           href={`#${id}`}
           className={`flex-1 text-sm leading-5 font-sans ${
-            isActive ? "text-[#1D2939] font-bold" : "text-[#344054] font-medium"
+            isActive
+              ? "text-default-100 font-bold"
+              : "text-[#344054] font-medium"
           }`}
         >
           {section.navLabel || section.title}
@@ -72,10 +74,10 @@ const TocLink = ({ section, activeId, overrideValue, onToggle }) => {
               <a
                 key={subId}
                 href={`#${subId}`}
-                className={`w-full py-2 pl-8 border-l-2 text-sm leading-5 font-sans transition-colors ${
+                className={`w-full py-2 pl-8 pr-2 border-l-2 text-sm leading-5 font-sans transition-colors ${
                   subActive
-                    ? "border-default-100 text-[#1D2939] font-bold"
-                    : "border-transparent text-[#344054] font-medium hover:border-slate-300"
+                    ? "border-default-100 bg-default-25 text-default-100 font-bold"
+                    : "border-slate-200 text-[#344054] font-medium"
                 }`}
               >
                 {sub.title}
@@ -121,7 +123,7 @@ const PolicySidebar = ({ sections = [] }) => {
   }, [sections]);
 
   return (
-    <aside className="w-full lg:w-64 shrink-0 flex flex-col gap-4 lg:sticky lg:top-24">
+    <aside className="w-full hidden lg:w-64 shrink-0 md:flex flex-col gap-4 lg:sticky lg:top-24 ">
       <div className="w-full pb-4 border-b border-slate-200">
         <span className="text-[#667085] text-xs font-bold font-sans uppercase tracking-wide">
           On this page

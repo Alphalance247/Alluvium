@@ -104,8 +104,8 @@ const StrategicPartnership = () => {
             Consultancies and ISVs sometimes need Atlassian or AI delivery
             capability they don’t have in-house.
             <span className="font-bold">
-              We work behind the scenes as your bench — white-labeled where
-              needed — so you can say yes to work you’d otherwise have to turn
+              We work behind the scenes as your bench, white-labeled where
+              needed, so you can say yes to work you'd otherwise have to turn
               away.
             </span>
           </span>

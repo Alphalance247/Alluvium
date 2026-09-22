@@ -37,7 +37,7 @@ const CookiePolicy = () => {
             <button
               type="button"
               onClick={() => setSettingsOpen(true)}
-              className="h-12 px-5 py-3 rounded-lg bg-default-100 border border-default-100 shadow-sm text-white text-base font-bold font-sans"
+              className="px-5 py-3 rounded-lg bg-default-100 border border-default-100 shadow-sm text-white text-base font-bold font-sans"
             >
               Cookie settings
             </button>

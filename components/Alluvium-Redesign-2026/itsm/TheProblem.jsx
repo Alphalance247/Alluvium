@@ -26,7 +26,7 @@ const TheProblem = () => {
               </p>
               <div className="border-l-4 border-[#008DAF] pl-10 py-2.5 ">
                 <h3 className="text-2xl text-tertiary-200 font-bold font-merriweather">
-                  The fix isn’t more tools — it’s one platform, built right.
+                  The fix isn't more tools: it's one platform, built right.
                 </h3>
               </div>
             </div>

@@ -19,7 +19,12 @@ const RichText = ({ runs, size = "lg", className = "" }) => {
           return <React.Fragment key={index}>{run}</React.Fragment>;
         }
         if (run.break) {
-          return <br key={index} />;
+          return (
+            <React.Fragment key={index}>
+              <br />
+              <br />
+            </React.Fragment>
+          );
         }
         if (run.lead) {
           return (

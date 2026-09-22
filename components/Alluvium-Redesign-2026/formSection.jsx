@@ -123,12 +123,15 @@ const FormSection = ({ color = "white" }) => {
       <form onSubmit={onsubmit} action="">
         <div className={styles.contact_form}>
           <div style={{ width: "100%" }}>
-            <label htmlFor="firstName">
+            <label
+              htmlFor="firstName"
+              className="font-manrope font-semibold text-[#344054]"
+            >
               Full Name <span className="text-required">*</span>
             </label>
             <input
               type="text"
-              className="form-control"
+              className="form-control font-manrope"
               name="firstName"
               id="firstName"
               value={formData.firstName}
@@ -152,7 +155,10 @@ const FormSection = ({ color = "white" }) => {
 
         <div className={styles.contact_form}>
           <div style={{ width: "100%" }}>
-            <label htmlFor="phone">
+            <label
+              htmlFor="phone"
+              className="font-manrope font-semibold text-[#344054]"
+            >
               Phone Number <span className="text-required">*</span>
             </label>
             <input
@@ -165,7 +171,12 @@ const FormSection = ({ color = "white" }) => {
             />
           </div>
           <div style={{ width: "100%" }}>
-            <label htmlFor="jobTitle">Job Title</label>
+            <label
+              htmlFor="jobTitle"
+              className="font-manrope font-semibold text-[#344054]"
+            >
+              Job Title
+            </label>
             <input
               type="text"
               className="form-control"
@@ -179,7 +190,12 @@ const FormSection = ({ color = "white" }) => {
 
         <div className={styles.contact_form}>
           <div style={{ width: "100%" }}>
-            <label htmlFor="email">Work Email</label>
+            <label
+              htmlFor="email"
+              className="font-manrope font-semibold text-[#344054]"
+            >
+              Work Email
+            </label>
             <input
               type="text"
               className="form-control"
@@ -192,7 +208,12 @@ const FormSection = ({ color = "white" }) => {
         </div>
 
         <div className="">
-          <label htmlFor="message">Your message</label>
+          <label
+            htmlFor="message"
+            className="font-manrope font-semibold text-[#344054]"
+          >
+            Your message
+          </label>
           <textarea
             style={{ height: "216px" }}
             name="message"
@@ -218,7 +239,7 @@ const FormSection = ({ color = "white" }) => {
           )}
         </div>
 
-        <p style={{ fontSize: "13px" }}>
+        <p style={{ fontSize: "13px" }} className="font-manrope font-semibold">
           By submitting this form, you are agreeing to receive additional
           communications from Alluvium. Please review our privacy-policy{" "}
           <span style={{ color: "#E37915", textDecoration: "underline" }}>

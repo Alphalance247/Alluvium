@@ -45,8 +45,8 @@ const AboutHero = () => {
             We help organizations work smarter with Atlassian and AI
           </h1>
           <p className="text-slate-300 text-base md:text-lg font-medium font-sans leading-relaxed max-w-2xl">
-            We fix the platform first, then automate on top of it — so Rovo
-            knows where the work sits, and Claude knows what to do about it.
+            We fix the platform first, then automate on top of it, so Rovo knows
+            where the work sits and Claude knows what to do about it.
           </p>
         </div>
 

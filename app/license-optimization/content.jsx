@@ -1,32 +1,12 @@
 "use client";
 import React from "react";
 import Layout from "components/layout";
-import ServicesHero from "components/Alluvium-Redesign-2026/common/servicesHero";
-import ServicesCardsSection from "components/Alluvium-Redesign-2026/common/servicesCardsSection";
-import DiscoverySection from "components/Alluvium-Redesign-2026/common/discoverySection";
-import CtaSection from "components/Alluvium-Redesign-2026/common/ctaSection";
-import OptimizeSpend from "components/Alluvium-Redesign-2026/licence-optimization/optimzedSpend";
-import ComparisonTable from "components/Alluvium-Redesign-2026/licence-optimization/comparisonTable";
-import Button from "components/Alluvium-Redesign-2026/common/button";
-import Hero from "components/Alluvium-Redesign-2026/common/hero";
-// import HowItWorks from "components/Alluvium-Redesign-2026/license-optimization/HowItWorks";
-// import WhereWasteHappens from "components/Alluvium-Redesign-2026/license-optimization/whereWasteHappens";
-import Link from "next/link";
-import { FaArrowRight } from "react-icons/fa";
-import WhereWasteHappens from "components/Alluvium-Redesign-2026/licence-optimization/WhereWasteHappens";
-import AtlassianTokenCredentialSecurity from "components/Alluvium-Redesign-2026/licence-optimization/AtlassianTokenCredentialSecurity";
-import CaseStudy from "components/Alluvium-Redesign-2026/licence-optimization/CaseStudy";
-import HowItWorks from "components/Alluvium-Redesign-2026/licence-optimization/HowItWorks";
-import OurRenewal from "components/Alluvium-Redesign-2026/licence-optimization/OurRenewal";
-import ClaudeTokenCostControl from "components/Alluvium-Redesign-2026/licence-optimization/ClaudeTokenCostControl";
-import CuriousSection from "components/Alluvium-Redesign-2026/licence-optimization/curiousSection";
-import PlatformOptimisation from "components/Alluvium-Redesign-2026/licence-optimization/PlatformOptimisation";
-import ReadyToCut from "components/Alluvium-Redesign-2026/licence-optimization/ReadyToCut";
 import NewServicesHero from "components/Alluvium-Redesign-2026/common/newServicesHero";
 import Image from "next/image";
 import MigrationIntro from "components/Alluvium-Redesign-2026/opsgenie-to-jsm/migrationIntro";
 import WhatWeDeliver from "components/Alluvium-Redesign-2026/itsm/WhatWeDeliver";
 import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
+
 const LicenseOptimization = () => {
   const triadData = [
     {
@@ -135,10 +115,9 @@ const LicenseOptimization = () => {
       <Layout>
         <NewServicesHero
           heading={
-            <span>
+            <span className=" font-merriweather">
               Every seat and token
               <br /> earning its place
-
             </span>
           }
           subheading="Stop managing requests through email and spreadsheets. We implement Jira Service Management so IT, HR, Finance, Legal, and Operations run on one AI-ready platform."
@@ -174,23 +153,26 @@ const LicenseOptimization = () => {
         </NewServicesHero>
         <MigrationIntro heading="Stop paying for what you do not use.">
           <span className="text-[#344054] font-medium">
-
-            Unused Atlassian licenses and idle Claude tokens are money leaking out of your budget quietly.
+            Unused Atlassian licenses and idle Claude tokens are money leaking
+            out of your budget quietly.
             <span className="font-bold">
-              We audit, right-size, and govern both — so you’re paying for what your teams actually use.
+              We audit, right-size, and govern both, so you're paying for what
+              your teams actually use.
             </span>
           </span>
         </MigrationIntro>
-        <WhatWeDeliver items={items} className="bg-tertiary-150 " borderColor="border-[#E4E7EC]" />
+        <WhatWeDeliver
+          items={items}
+          className="bg-tertiary-150 "
+          borderColor="border-[#E4E7EC]"
+        />
         <CtaBannerSection
           label="READY TO OPTIMIZE?"
           heading="Know what you are paying for."
           description="We will audit your Atlassian licenses and Claude token usage, identify savings opportunities, and give you a clear plan to right-size your spend."
           ctaLabel="Start a license & token audit"
           ctaHref="/contact-us"
-        >
-
-        </CtaBannerSection>
+        ></CtaBannerSection>
         {/* <ServicesHero
           badges={badges}
           heading={"Optimize Your Atlassian Spend. Maximize Your ROI."}
