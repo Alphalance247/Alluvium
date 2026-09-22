@@ -22,7 +22,7 @@ const SolutionNav = () => {
         <div className={styles.columnTitle}>Alluvium Solutions</div>
         {services.map((service, index) => (
           <Link href={service?.link} key={index}>
-            <div key={index} className={styles.navLink}>
+            <div key={index} className={`${styles.navLink} font-manrope`}>
               {service.name}
               <span className={styles.chevron} />
             </div>

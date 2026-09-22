@@ -6,6 +6,7 @@ import Image from "next/image";
 import MigrationIntro from "components/Alluvium-Redesign-2026/opsgenie-to-jsm/migrationIntro";
 import WhatWeDeliver from "components/Alluvium-Redesign-2026/itsm/WhatWeDeliver";
 import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSection";
+
 const LicenseOptimization = () => {
   const triadData = [
     {
@@ -114,7 +115,7 @@ const LicenseOptimization = () => {
       <Layout>
         <NewServicesHero
           heading={
-            <span>
+            <span className=" font-merriweather">
               Every seat and token
               <br /> earning its place
             </span>

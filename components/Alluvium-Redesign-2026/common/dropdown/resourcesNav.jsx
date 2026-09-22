@@ -51,7 +51,7 @@ const ResourcesNav = () => {
           <Link href={link.link} key={i}>
             <div key={i} className={styles.menuItem}>
               <div className={styles.itemTitleRow}>
-                <span>{link.title}</span>
+                <span className="font-manrope">{link.title}</span>
                 <MdOutlineKeyboardArrowRight color="#8C8C8C" />
               </div>
               <p className={styles.itemDescription}>{link.desc}</p>
@@ -69,7 +69,7 @@ const ResourcesNav = () => {
           <Link href={link.link} key={i}>
             <div key={i} className={styles.menuItem}>
               <div className={styles.itemTitleRow}>
-                <span>{link.title}</span>
+                <span className="font-manrope">{link.title}</span>
                 <MdOutlineKeyboardArrowRight color="#8C8C8C" />
               </div>
               <p className={styles.itemDescription}>{link.desc}</p>
