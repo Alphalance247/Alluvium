@@ -79,7 +79,7 @@ const EnterpriseSolutionsSection = ({
               {eyebrow}
             </span>
           </div>
-          <h2 className="text-[#1D2939] text-3xl md:text-[2.5rem] font-bold font-serif leading-tight">
+          <h2 className="text-[#1D2939] text-3xl md:text-4xl font-bold font-serif leading-tight">
             {heading}
           </h2>
         </div>
