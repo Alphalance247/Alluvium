@@ -4,6 +4,7 @@ import Image from "next/legacy/image";
 import Link from "next/link";
 import Container from "../common/container";
 import EventCard from "./EventCard";
+import { eventData } from "data/eventData";
 // const webinars = [
 //   {
 //     id: 1,
@@ -51,32 +52,33 @@ import EventCard from "./EventCard";
 //   //   img: "/assets/Alluvium-Redesign-2026/Events/webinar.png",
 //   // },
 // ];
-const webinarEventsData = [
-  {
-    id: 1,
-    title:
-      "Opsgenie is ending. Here is what your migration plan needs to cover.",
-    date: "May 15th, 2026: 07:00 PM (WAT)",
-    link: "",
-    img: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493828-image-7-4.png",
-  },
-  {
-    id: 2,
-    title:
-      "Opsgenie is ending. Here is what your migration plan needs to cover.",
-    date: "May 15th, 2026: 07:00 PM (WAT)",
-    link: "",
-    img: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947579995-image-7-6.png",
-  },
-  {
-    id: 3,
-    title:
-      "Opsgenie is ending. Here is what your migration plan needs to cover.",
-    date: "May 15th, 2026: 07:00 PM (WAT)",
-    link: "",
-    img: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493783-image-7-5.png",
-  },
-];
+const webinarEventsData = eventData.filter((event) => ["Opsgenie-is-ending", "Opsgenie-is-ending", "Opsgenie-is-ending"].includes(event.slug),
+);
+// {
+//   id: 1,
+//   title:
+//     "Opsgenie is ending. Here is what your migration plan needs to cover.",
+//   date: "May 15th, 2026: 07:00 PM (WAT)",
+//   link: "",
+//   img: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493828-image-7-4.png",
+// },
+// {
+//   id: 2,
+//   title:
+//     "Opsgenie is ending. Here is what your migration plan needs to cover.",
+//   date: "May 15th, 2026: 07:00 PM (WAT)",
+//   link: "",
+//   img: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947579995-image-7-6.png",
+// },
+// {
+// id: 3,
+// title:
+//   "Opsgenie is ending. Here is what your migration plan needs to cover.",
+// date: "May 15th, 2026: 07:00 PM (WAT)",
+// link: "",
+// img: "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493783-image-7-5.png",
+// },
+// ];
 // const WebinarCard = ({ webinar }) => (
 //   <Link href={`/event/${webinar?.link}`}>
 //     <div className={styles.card}>
@@ -134,10 +136,10 @@ const UpcomingWebinars = ({ heading, subtitle }) => {
           {webinarEventsData.map((e) => {
             return (
               <EventCard
+                key={e.slug}
                 title={e.title}
-                key={e.id}
-                imgUrl={e.img}
-                link={e.link}
+                imgUrl={e.imgUrl}
+                link={`/event/${e.slug}`}
                 date={e.date}
                 variant="dark"
               />

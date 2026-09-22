@@ -8,7 +8,6 @@ const NewEventDetailsHero = ({
   title,
   description,
   children,
-  //   capping,
   breadcrumbItems,
   date,
   time,

@@ -9,7 +9,9 @@ const Breadcrumbs = ({ items }) => {
             <ol className="flex flex-wrap items-center gap-1.5 text-sm font-manrope">
                 {items.map((item, index) => {
                     const isLast = index === items.length - 1;
-
+                    const label = isLast
+                        ? item.label.split(".")[0].trim()
+                        : item.label;
                     return (
                         <li key={index} className="flex items-center gap-1.5">
                             {item.href && !isLast ? (
@@ -21,7 +23,7 @@ const Breadcrumbs = ({ items }) => {
                                 </Link>
                             ) : (
                                 <span className={isLast ? "text-white/90 font-medium" : "text-[#E37915]"}>
-                                    {item.label}
+                                    {label}
                                 </span>
                             )}
                             {!isLast && <span className="text-white/30">/</span>}

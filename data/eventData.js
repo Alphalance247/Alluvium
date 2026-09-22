@@ -4,7 +4,7 @@ export const eventData = [
     description:
       "Practical ways to navigate tension, build trust, and turn challenging workplace conversations into meaningful progress.",
     date: "Friday, 21 August 2026",
-    slug: "Managing difficult conversations with clarity",
+    slug: "Managing-difficult-conversations-with-clarity",
     imgUrl:
       "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493817-Image-26.png",
     coverPoints: [
@@ -94,6 +94,102 @@ export const eventData = [
     ],
     time: "",
     loaction: "",
+  },
+  {
+    title:
+      "Opsgenie is ending. Here is what your migration plan needs to cover.",
+    date: "May 15th, 2026: 07:00 PM (WAT)",
+    description:
+      "Practical ways to navigate tension, build trust, and turn challenging workplace conversations into meaningful progress.",
+
+    slug: "Opsgenie-is-ending",
+    imgUrl:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493828-image-7-4.png",
+    coverPoints: [
+      "Join facilitator and communication strategist Rutendo Mujuru for a focused session on preparing for difficult conversations, staying grounded under pressure, and creating outcomes that move teams forward.",
+      // "Improve team accountability and collaboration",
+      // "Simplify reporting and performance tracking",
+      // "Enable faster, data-driven decisions"
+    ],
+    subtitle: "Make the conversation easier without avoiding what matters.",
+    hosts: [
+      {
+        name: "BAbade Adewole",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992600097-Image-28.png",
+      },
+      {
+        name: "Rachel Brown",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992604173-Image-29.png",
+      },
+    ],
+    time: "11:30 AM – 12:30 PM WAT",
+    location: "Online via Google Meet",
+  },
+  {
+    title:
+      "Opsgenie is ending. Here is what your migration plan needs to cover.",
+    date: "May 15th, 2026: 07:00 PM (WAT)",
+    slug: "Opsgenie-is-ending",
+    imgUrl:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947579995-image-7-6.png",
+    coverPoints: [
+      "Join facilitator and communication strategist Rutendo Mujuru for a focused session on preparing for difficult conversations, staying grounded under pressure, and creating outcomes that move teams forward.",
+      // "Improve team accountability and collaboration",
+      // "Simplify reporting and performance tracking",
+      // "Enable faster, data-driven decisions"
+    ],
+    subtitle: "Make the conversation easier without avoiding what matters.",
+    hosts: [
+      {
+        name: "BAbade Adewole",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992600097-Image-28.png",
+      },
+      {
+        name: "Rachel Brown",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992604173-Image-29.png",
+      },
+    ],
+    time: "11:30 AM – 12:30 PM WAT",
+    location: "Online via Google Meet",
+  },
+  {
+    title:
+      "Opsgenie is ending. Here is what your migration plan needs to cover.",
+    date: "May 15th, 2026: 07:00 PM (WAT)",
+    slug: "Opsgenie-is-ending",
+    imgUrl:
+      "https://d38rkvi67t4lhi.cloudfront.net/assets/1788947493783-image-7-5.png",
+    coverPoints: [
+      "Join facilitator and communication strategist Rutendo Mujuru for a focused session on preparing for difficult conversations, staying grounded under pressure, and creating outcomes that move teams forward.",
+      // "Improve team accountability and collaboration",
+      // "Simplify reporting and performance tracking",
+      // "Enable faster, data-driven decisions"
+    ],
+    subtitle: "Make the conversation easier without avoiding what matters.",
+    hosts: [
+      {
+        name: "BAbade Adewole",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992600097-Image-28.png",
+      },
+      {
+        name: "Rachel Brown",
+        role: "Atlassian Certified Expert and Presales Solution EngineerSpeaker",
+        image:
+          "https://d38rkvi67t4lhi.cloudfront.net/assets/1788992604173-Image-29.png",
+      },
+    ],
+    time: "11:30 AM – 12:30 PM WAT",
+    location: "Online via Google Meet",
   },
 
   // {

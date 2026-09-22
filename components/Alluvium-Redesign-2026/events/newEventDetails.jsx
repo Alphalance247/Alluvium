@@ -35,6 +35,19 @@ const NewEventDetails = ({
       </div>
     </div>
   );
+  const handleLinkedInShare = () => {
+    const url = window.location.href;
+
+    const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+      url,
+    )}`;
+
+    window.open(
+      linkedInUrl,
+      "_blank",
+      "width=600,height=600,noopener,noreferrer",
+    );
+  };
 
   return (
     <div>
@@ -59,17 +72,20 @@ const NewEventDetails = ({
             </Link>
           </div>
           <div>
-            <Link href="/contact-us">
-              <Button className="text-white border border-white/80  py-[14px] px-[24px]">
-                <div className="flex items-center gap-2">
-                  <FiShare color="white" size={24} />
+            {/* <Link href="/contact-us"> */}
+            <Button
+              className="text-white border border-white/80  py-[14px] px-[24px]"
+              onClick={handleLinkedInShare}
+            >
+              <div className="flex items-center gap-2">
+                <FiShare color="white" size={24} />
 
-                  <p className="text-white font-bold text-base font-manrope">
-                    Share
-                  </p>
-                </div>
-              </Button>
-            </Link>
+                <p className="text-white font-bold text-base font-manrope">
+                  Share
+                </p>
+              </div>
+            </Button>
+            {/* </Link> */}
           </div>
         </div>
       </NewEventDetailsHero>

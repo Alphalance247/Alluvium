@@ -6,7 +6,7 @@ import { eventData } from "data/eventData";
 const ExploreMoreEvent = () => {
   const eventsData = eventData.filter((event) =>
     [
-      "Managing difficult conversations with clarity",
+      "Managing-difficult-conversations-with-clarity",
       "opsgenie-ending",
       "opsgenie",
     ].includes(event.slug),
