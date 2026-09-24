@@ -289,18 +289,9 @@ const Navbar = ({ heroTheme = "light" }) => {
               />
             </Link>
           </div>
+
           <div className="flex justify-between gap-4 items-center ">
-            <Button
-              className="flex justify-between gap-4 items-center bg-default-100"
-              type="button"
-              size="sm"
-            >
-              <Link href="/contact-us" className="">
-                <p className=" text-white font-bold flex justify-center items-center font-manrope ">
-                  Contact Us
-                </p>
-              </Link>
-            </Button>
+
             <div
               className="outline-none bg-none border-none"
               onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
@@ -425,7 +416,19 @@ const Navbar = ({ heroTheme = "light" }) => {
               {/* <Link href="/contact-us">
                 <p className={styles.contactUs}>Contact Us</p>
               </Link> */}
+              {/* <Button
+                className="flex justify-between gap-4 items-center bg-default-100 "
+                type="button" */}
+              {/* // size="sm" */}
+              {/* > */}
+              <Link href="/contact-us" className="bg-default-100 px-4 py-2.5 rounded-lg text-sm  flex justify-center items-center text-white font-bold font-sans">
+                {/* <p className=" text-white font-bold  font-sans "> */}
+                Contact Us
+                {/* </p> */}
+              </Link>
+              {/* </Button> */}
             </div>
+
           )}
         </nav>
       </div>
