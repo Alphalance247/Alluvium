@@ -19,7 +19,7 @@ const SolutionNav = () => {
     <div className={styles.dropdownCard}>
       {/* Left: Navigation List */}
       <div className={styles.linksColumn}>
-        <div className={styles.columnTitle}>Alluvium Solutions</div>
+        <div className={`${styles.columnTitle} font-merriweather`}>Alluvium Solutions</div>
         {services.map((service, index) => (
           <Link href={service?.link} key={index}>
             <div key={index} className={`${styles.navLink} font-manrope`}>

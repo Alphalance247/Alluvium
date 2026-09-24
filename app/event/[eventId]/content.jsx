@@ -15,7 +15,7 @@ export default function EventId({ eventInfo }) {
   }
   console.log(eventInfo);
   return (
-    <Layout>
+    <Layout heroTheme="dark">
       <div className="">
         <NewEventDetails
           title={eventInfo.title}

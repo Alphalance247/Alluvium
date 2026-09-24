@@ -27,7 +27,7 @@ const ProductNav = () => {
     <div className={styles.dropdownContainer}>
       <div className={styles.innerWrapper}>
         <div className={styles.header}>
-          <span className={styles.headerText}>OUR products</span>
+          <span className={`${styles.headerText} font-merriweather`}>OUR products</span>
         </div>
 
         <div className={styles.cardGrid}>
@@ -49,10 +49,10 @@ const ProductNav = () => {
                 </div>
                 <div className={styles.cardBody}>
                   <div className={styles.titleRow}>
-                    <h4 className={styles.productTitle}>{product.title}</h4>
+                    <h4 className={`${styles.productTitle} font-manrope`}>{product.title}</h4>
                     <MdOutlineKeyboardArrowRight color="#8C8C8C" />
                   </div>
-                  <p className={styles.productDescription}>
+                  <p className={`${styles.productDescription} font-manrope`}>
                     {product.description}
                   </p>
                 </div>

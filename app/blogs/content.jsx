@@ -63,7 +63,7 @@ const Blogs = () => {
   };
 
   return (
-    <Layout>
+    <Layout heroTheme="light">
       <PageIntro
         title="News"
         subtitle="The latest from Alluvium: Atlassian, and the AI ecosystem."

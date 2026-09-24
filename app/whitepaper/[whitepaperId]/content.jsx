@@ -53,7 +53,7 @@ export default function WhitepaperId({ article }) {
   }
 
   return (
-    <Layout>
+    <Layout heroTheme="light">
 
       <WhitePaperHeroSection
         // slug={article?.slug}
@@ -79,7 +79,7 @@ export default function WhitepaperId({ article }) {
 
           {article &&
             article?.slog ===
-              "shadow-ai-risks-implications-and-strategic-mitigation-approaches" && (
+            "shadow-ai-risks-implications-and-strategic-mitigation-approaches" && (
               <div>
                 <Button>Download white paper</Button>
               </div>

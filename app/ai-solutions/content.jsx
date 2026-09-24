@@ -32,11 +32,11 @@ const Content = () => {
   ];
 
   const stats = [
-    { value: "6+", label: " years delivering enterprise AI" },
-    { value: "90%+", label: " client retention across AI programs" },
+    { value: "6+", label: " Years delivering enterprise AI" },
+    { value: "90%+", label: " Client retention across AI programs" },
   ];
   return (
-    <Layout>
+    <Layout heroTheme="dark">
       <NewServicesHero
         heading={
           <span>

@@ -12,7 +12,7 @@ import ExploreMoreEvent from "components/Alluvium-Redesign-2026/events/exploreMo
 const EventBlog = () => {
   return (
     <>
-      <Layout>
+      <Layout heroTheme="light">
         {/* <Container> */}
         <HeroHeader />
         <EventsBanner

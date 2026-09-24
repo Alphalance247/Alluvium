@@ -53,7 +53,7 @@ const StrategicPartnership = () => {
   ];
   return (
     <>
-      <Layout>
+      <Layout heroTheme="dark">
         {/* <ServicesHero
           badges={badges}
           heading={

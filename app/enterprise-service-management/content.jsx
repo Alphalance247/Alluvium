@@ -78,7 +78,7 @@ const EnterpriseManagement = () => {
   ];
   return (
     <>
-      <Layout>
+      <Layout heroTheme="dark">
         <NewServicesHero
           heading={
             <span>

@@ -68,7 +68,7 @@ const ContactUs = () => {
   ];
 
   return (
-    <Layout withoutForm={true}>
+    <Layout withoutForm={true} heroTheme="dark">
       {/* <div style={{ maxWidth: "1272px", margin: "auto" }}>
         <Lines variant={"primary"} />
       </div> */}
