@@ -35,7 +35,7 @@ const badgesImages = [
 const Home = () => {
   return (
     <>
-      <Layout>
+      <Layout heroTheme="dark">
         <Hero />
         <HeroCallToAction />
         <WhitepaperSection />

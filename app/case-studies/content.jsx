@@ -7,7 +7,7 @@ import CaseStudiesSection from "components/Alluvium-Redesign-2025/alluviumCaseSt
 
 export default function Support() {
   return (
-    <Layout>
+    <Layout heroTheme="light">
       <HeroSection />
       <div className={styles.caseStudiesSection}>
         <main>

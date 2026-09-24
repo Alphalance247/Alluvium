@@ -8,7 +8,7 @@ import { policySections } from "./policySections";
 
 const PrivacyPolicy = () => {
   return (
-    <Layout>
+    <Layout heroTheme="light">
       <PolicyHero
         title="Privacy Notice"
         effectiveDate="August 31, 2026"

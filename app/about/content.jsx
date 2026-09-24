@@ -42,10 +42,10 @@ export default function AboutUs() {
   const stats = [
     { value: "57+", label: "Accreditations" },
     { value: "100+", label: "Projects delivered" },
-    { value: "AMER, EMEA", label: "coverage" },
+    { value: "AMER, EMEA", label: "Coverage" },
   ];
   return (
-    <Layout>
+    <Layout heroTheme="dark">
       <div className={styles.aboutUsPage}>
         <main>
           <AboutHero />

@@ -112,7 +112,7 @@ const LicenseOptimization = () => {
   ];
   return (
     <>
-      <Layout>
+      <Layout heroTheme="dark">
         <NewServicesHero
           heading={
             <span className=" font-merriweather">

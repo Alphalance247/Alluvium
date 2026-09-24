@@ -60,7 +60,7 @@ const MobileResourcesNav = () => {
           </div>
         ))}
       </div>
-      <div className={styles.mobileResourcesNav}>
+      <div className={`${styles.mobileResourcesNav} pb-4`}>
         <div className={styles.dropdownTitle}>Company</div>
         {companyLinks.map((companyLink, index) => (
           <div>

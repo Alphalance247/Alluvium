@@ -9,7 +9,7 @@ import CtaBannerSection from "components/Alluvium-Redesign-2026/home/ctaBannerSe
 const OpsgenieToJsm = () => {
   return (
     <>
-      <Layout>
+      <Layout heroTheme="dark">
         <NewServicesHero
           heading="Opsgenie ends support 5 April 2027"
           subheading="Move to Jira Service Management Operations with a structured 10-week plan, live parallel testing, and rollback protection before cutover."

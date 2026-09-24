@@ -105,7 +105,7 @@ const CloudUpgrade = () => {
 
   return (
     <>
-      <Layout>
+      <Layout heroTheme="dark">
         <NewServicesHero
           heading="Move off Server or Data Center, without the downtime"
           subheading="Atlassian's Server and Data Center products are being sunset. We run cloud migrations with zero data loss, minimal disruption, and a clear timeline, including multi-instance environments most teams are afraid to touch."
