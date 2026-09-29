@@ -7,7 +7,7 @@ import Publications from "components/Alluvium-Redesign-2025/whitepaper/publicati
 const Whitepaper = () => {
   return (
     <div>
-      <Layout>
+      <Layout heroTheme="dark">
 
         <main className={styles?.main}>
           <MainWhitepaperHero />

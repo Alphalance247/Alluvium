@@ -24,7 +24,7 @@ export default function CaseStudy({ caseStudy }) {
   }, []);
 
   return (
-    <Layout>
+    <Layout heroTheme="light">
       <div className={styles.caseStudyPage}>
 
         <Hero caseStudy={caseStudy} />

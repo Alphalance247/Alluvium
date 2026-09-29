@@ -46,15 +46,15 @@ const ResourcesNav = () => {
     <div className={styles.megaMenu}>
       {/* COLUMN 1: RESOURCES */}
       <div className={styles.navColumn}>
-        <h3 className={styles.columnHeader}>Resources</h3>
+        <h3 className={`${styles.columnHeader} font-merriweather `}>Resources</h3>
         {resourceLinks.map((link, i) => (
           <Link href={link.link} key={i}>
             <div key={i} className={styles.menuItem}>
               <div className={styles.itemTitleRow}>
-                <span>{link.title}</span>
+                <span className="font-manrope">{link.title}</span>
                 <MdOutlineKeyboardArrowRight color="#8C8C8C" />
               </div>
-              <p className={styles.itemDescription}>{link.desc}</p>
+              <p className={`{styles.itemDescription} font-manrope`}>{link.desc}</p>
             </div>
           </Link>
         ))}
@@ -64,15 +64,15 @@ const ResourcesNav = () => {
 
       {/* COLUMN 2: COMPANY */}
       <div className={styles.navColumn}>
-        <h3 className={styles.columnHeader}>Company</h3>
+        <h3 className={`${styles.columnHeader} font-merriweather `}>Company</h3>
         {companyLinks.map((link, i) => (
           <Link href={link.link} key={i}>
             <div key={i} className={styles.menuItem}>
               <div className={styles.itemTitleRow}>
-                <span>{link.title}</span>
+                <span className="font-manrope">{link.title}</span>
                 <MdOutlineKeyboardArrowRight color="#8C8C8C" />
               </div>
-              <p className={styles.itemDescription}>{link.desc}</p>
+              <p className={`${styles.itemDescription} font-manrope`}>{link.desc}</p>
             </div>
           </Link>
         ))}

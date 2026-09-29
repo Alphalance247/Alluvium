@@ -14,7 +14,7 @@ const CookiePolicy = () => {
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   return (
-    <Layout>
+    <Layout heroTheme="light">
       <PolicyHero
         title="Cookie Policy"
         effectiveDate="August 31, 2026"

@@ -4,19 +4,19 @@ import Container from "../common/container";
 const defaultItems = [
   {
     id: "01",
-    description: "Data Center to Cloud assessment and readiness audit.",
+    description: "Data Center to Cloud assessment and readiness audit",
   },
   {
     id: "02",
-    description: "Data migration with integrity checks at every stage.",
+    description: "Data Migration with integrity checks at every stage",
   },
   {
     id: "03",
-    description: "Post-cutover optimization and performance tuning.",
+    description: "Post-cutover optimization and performance tuning",
   },
   {
     id: "04",
-    description: "Multi-instance consolidation where it makes sense.",
+    description: "Multi-Instance consolidation where it makes sense",
   },
 ];
 
@@ -32,9 +32,8 @@ const WhatWeOffer = ({ heading = "What we deliver", items = defaultItems }) => {
           {items.map((item, index) => (
             <div
               key={item.id}
-              className={`flex flex-col gap-6 py-10 px-8 lg:first:pl-0 lg:last:pr-0 border-[#D0D5DD] ${
-                index !== items.length - 1 ? "lg:border-r" : ""
-              }`}
+              className={`flex flex-col gap-6 py-10 px-8 lg:first:pl-0 lg:last:pr-0 border-[#D0D5DD] ${index !== items.length - 1 ? "lg:border-r" : ""
+                }`}
             >
               <span className="text-[#1D2939] text-xl font-bold font-serif leading-8">
                 {item.id}

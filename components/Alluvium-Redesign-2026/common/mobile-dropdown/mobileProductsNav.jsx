@@ -23,7 +23,7 @@ const MobileProductsNav = () => {
     },
   ];
   return (
-    <div className={styles.dropdownContainer}>
+    <div className={`${styles.dropdownContainer} bg-white rounded-md px-2`}>
       <div className={styles.dropdownTitle}>our products</div>
       {/* <div className={styles.cardGrid}>
         {products.map((product, index) => (
@@ -55,7 +55,7 @@ const MobileProductsNav = () => {
           </a>
         ))}
       </div> */}
-      <div className={styles.childrenContainerParent}>
+      <div className={`${styles.childrenContainerParent} flex flex-col md:flex-row gap-4 justify-between `}>
         {products.map((product) => (
           <a
             href={product.link}
@@ -70,6 +70,7 @@ const MobileProductsNav = () => {
                   height={251}
                   src={product.image}
                   alt={product.title}
+                // className="w-full  object-cover "
                 />
 
               </div>

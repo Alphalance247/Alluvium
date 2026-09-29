@@ -28,7 +28,7 @@ export default class MyDocument extends Document {
             async
             src="//ukbrowserspeed.com/_k/t.js"
             data-public-key="pk_fd206eefacbe3bc36ef10b8742ef49b0"
-          ></script>
+          ></script> */}
 
           <script
             dangerouslySetInnerHTML={{
@@ -40,7 +40,7 @@ export default class MyDocument extends Document {
                 }
               `,
             }}
-          /> */}
+          />
 
           <script
             dangerouslySetInnerHTML={{

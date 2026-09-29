@@ -68,7 +68,7 @@ const ContactUs = () => {
   ];
 
   return (
-    <Layout withoutForm={true}>
+    <Layout withoutForm={true} heroTheme="dark">
       {/* <div style={{ maxWidth: "1272px", margin: "auto" }}>
         <Lines variant={"primary"} />
       </div> */}
@@ -91,11 +91,11 @@ const ContactUs = () => {
               </p>
             </div>
 
-            <p className="text-white text-lg font-medium font-sans leading-relaxed">
+            <p className="text-white text-base font-medium font-sans leading-relaxed">
               Tell us about your project at{" "}
               <a
                 href="mailto:contact@alluvium.net"
-                className="text-default-100 font-bold"
+                className="text-default-100 font-bold font-manrope"
               >
                 contact@alluvium.net
               </a>
@@ -148,7 +148,7 @@ const ContactUs = () => {
                 <span className="text-[#1D2939] text-xl font-bold font-serif leading-relaxed">
                   {office.country}
                 </span>
-                <p className="max-w-xs text-[#344054] text-lg font-medium font-sans leading-relaxed">
+                <p className="max-w-xs text-[#344054] text-base font-medium font-sans leading-relaxed">
                   {office.location}
                 </p>
               </div>
