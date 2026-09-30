@@ -15,7 +15,7 @@ export default function FirstLook() {
         <div className="flex items-center gap-16 max-[900px]:flex-col">
           <Image
             src="https://d38rkvi67t4lhi.cloudfront.net/assets/1790777800549-BOOK-BRANDING_4-1.png"
-            alt="Compound Intelligence: Workday - Book 6 cover"
+            alt="Compound Intelligence: Atlassian and claude e-book cover"
             width={512}
             height={614}
             loading="lazy"
@@ -50,11 +50,12 @@ export default function FirstLook() {
             </div>
 
             <p className="max-w-[35rem] font-sans text-base font-medium leading-6 text-grey-500">
-              Illuminate&apos;s agents, Sana at the front door, an Agent System
-              of Record - and your leadership keeps saying &quot;Claude.&quot;
-              This is the book for the person who runs HR or finance on Workday
-              and is not an AI expert. Every platform book in the series follows
-              the same shape.
+              Rovo agents in your Jira project, Claude in every chat, and your
+              leadership keeps asking which AI to use. This is the book for the
+              person who runs work in Jira and Confluence and is not an AI
+              expert. Rovo remembers. Claude reasons. The power is in the loop
+              between them. Every platform book in the series follows the same
+              shape.
             </p>
 
             <a

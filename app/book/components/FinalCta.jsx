@@ -5,13 +5,13 @@ import Image from "next/image";
 export default function FinalCta() {
   return (
     <section className="overflow-hidden relative bg-secondary-900">
-      <Image
+      {/* <Image
         src="/book/shape.png"
         width={700}
         height={700}
         className="absolute top-0 right-0 z-0"
         alt="display shape"
-      />
+      /> */}
       <Container className="flex items-center gap-16 max-[900px]:flex-col">
         <div className="flex flex-1 flex-col gap-7">
           <div className="flex items-center gap-2">

@@ -64,7 +64,7 @@ export default function TheLoop() {
         >
           <Image
             src="https://d38rkvi67t4lhi.cloudfront.net/assets/1790778147868-Image-1.png"
-            alt=""
+            alt="platform ai and claude"
             width={592}
             height={534}
             loading="lazy"
