@@ -1,3 +1,5 @@
+import { environment } from "../../env/env.local";
+
 const WEBHOOK_URL =
   "https://api.atlassian.com/automation/sc3/o/studio/t/workspace/i/62386105-f704-4438-9f09-2d52cfe78305/webhooks/a/01a0e8ba-163c-7c1d-ac0c-eba4db8da1da";
 
@@ -18,7 +20,7 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Automation-Webhook-Token": process.env.COMPOUND_INTELLIGENCE_WEBHOOK_TOKEN,
+        "X-Automation-Webhook-Token": environment.COMPOUND_INTELLIGENCE_WEBHOOK_TOKEN,
       },
       body: JSON.stringify({
         email,
