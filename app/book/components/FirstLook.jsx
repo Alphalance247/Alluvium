@@ -31,7 +31,7 @@ export default function FirstLook() {
                 </span>
               </div>
               <h2 className="max-w-[30rem] font-serif text-4xl font-bold leading-10 text-grey-900 tracking-[-0.5px]">
-                Your Workday just hired an army of AI.
+                Your Atlassian just hired an army of AI.
               </h2>
               <p className="max-w-[35rem] font-serif text-xl font-semibold leading-8 text-default-100">
                 So who does the thinking?
