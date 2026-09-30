@@ -71,6 +71,16 @@ module.exports = {
           150: "#ECF6F9"
         }
       },
+      keyframes: {
+        ciPulse: {
+          "0%": { boxShadow: "0 0 0 0 rgba(230, 149, 121, 0.7)" },
+          "70%": { boxShadow: "0 0 0 8px rgba(230, 149, 121, 0)" },
+          "100%": { boxShadow: "0 0 0 0 rgba(230, 149, 121, 0)" },
+        },
+      },
+      animation: {
+        "ci-pulse": "ciPulse 2s infinite",
+      },
     },
   },
   plugins: [],
