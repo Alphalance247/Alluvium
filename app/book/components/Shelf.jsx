@@ -129,7 +129,7 @@ export default function Shelf() {
         </div>
 
         <div className="flex w-full flex-col gap-6">
-          <div className="grid grid-cols-4 gap-6 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
+          <div className="grid grid-cols-4 gap-6 max-[1200px]:grid-cols-3 max-[900px]:grid-cols-2 max-[560px]:grid-cols-1">
             {BOOKS.map((book) => (
               <BookCard key={book.badge} {...book} />
             ))}

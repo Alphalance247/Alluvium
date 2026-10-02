@@ -60,6 +60,7 @@ export default function SignupForm({
           email: data.get("email"),
           firstName: data.get("first_name"),
           system: data.get("platform"),
+          source: data.get("source"),
         }),
       });
 

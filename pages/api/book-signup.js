@@ -9,7 +9,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { email, firstName, system } = req.body || {};
+  const { email, firstName, system, source } = req.body || {};
 
   if (!email) {
     return res.status(400).json({ message: "Email is required" });
@@ -26,6 +26,7 @@ export default async function handler(req, res) {
         email,
         firstName: firstName || "",
         system: system || "",
+        source: source || "",
       }),
     });
 

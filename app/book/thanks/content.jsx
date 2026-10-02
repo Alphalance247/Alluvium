@@ -58,6 +58,14 @@ export default function Content() {
               Back to series
             </a>
           </div>
+          <a
+            href="https://www.youtube.com/@compound-intelligence-claude?sub_confirmation=1"
+            target="_blank"
+            rel="noopener"
+            className="flex h-11 w-full items-center justify-center gap-2 rounded-lg px-6 py-2.5 font-sans text-base font-bold text-white shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] outline outline-1 -outline-offset-1 outline-white/80"
+          >
+            Subscribe on YouTube
+          </a>
           <p className="text-center font-sans text-xs font-medium leading-4 tracking-wide text-white/80">
             Know someone who runs their work on one of these platforms? Forward them the page:{" "}
             <a href={CANONICAL_URL} className="underline">
