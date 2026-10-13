@@ -38,6 +38,10 @@ export const hiddenField = "absolute -left-[9999px] w-px h-px overflow-hidden";
 
 export const line = "rgba(245,239,230,0.1)";
 
+// TODO: replace with the real Amazon listing URL once it's available.
+// Shared so every "Buy on Amazon" CTA on the page points at one place to update.
+export const AMAZON_URL = "#";
+
 export const platformOptions = [
   "Atlassian (Jira, Confluence)",
   "ServiceNow",

@@ -48,7 +48,7 @@ export default function Header() {
           href="#signup"
           className="max-[900px]:hidden h-11 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-[#E37915] text-white text-lg font-bold font-['Manrope'] leading-7 no-underline overflow-hidden shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] outline outline-1 -outline-offset-1 outline-[rgba(0,0,0,0.08)] transition-colors duration-150 hover:bg-[#e69579]"
         >
-          Get early access
+          Buy on Amazon
         </a>
       </div>
     </header>

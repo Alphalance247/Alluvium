@@ -62,7 +62,7 @@ export default function FirstLook() {
               href="#signup"
               className="inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-default-100 px-6 py-2.5 font-sans text-base font-bold text-white shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] outline outline-1 -outline-offset-1 outline-default-200 transition-colors duration-150 hover:bg-default-200"
             >
-              Get the launch price
+              Buy on Amazon
             </a>
           </div>
         </div>
