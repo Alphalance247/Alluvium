@@ -19,7 +19,7 @@ export default function Content() {
         <Shelf />
         <Learn />
         <Author />
-        <FinalCta />
+        {/* <FinalCta /> */}
       </main>
       <Footer />
     </div>

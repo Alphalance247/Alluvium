@@ -1,6 +1,10 @@
 import Container from "components/Alluvium-Redesign-2026/common/container";
 
-const CREDS = ["Atlassian Gold Solution Partner", "Claude Partner Network - Select Partner", "alluvium.net"];
+const CREDS = [
+  "Atlassian Gold Solution Partner",
+  "Claude Partner Network - Select Partner",
+  "alluvium.net",
+];
 
 export default function Author() {
   return (
@@ -22,11 +26,15 @@ export default function Author() {
                 About the author
               </span>
             </div>
-            <h2 className="font-serif text-4xl font-bold leading-10 text-grey-900">Taiwo Ojo</h2>
+            <h2 className="font-serif text-4xl font-bold leading-10 text-grey-900">
+              Taiwo Ojo
+            </h2>
             <p className="max-w-[35rem] font-sans text-lg font-medium leading-7 text-grey-700">
-              Taiwo Ojo is the co-founder and CEO of Alluvium, an Atlassian Gold Solution Partner and a Select Partner
-              in the Claude Partner Network. He helps teams adopt AI in their workflows without breaking what already
-              works. Compound Intelligence is the book he wished his clients could hand to their teams on day one.
+              Taiwo Ojo is the co-founder and CEO of Alluvium, an Atlassian Gold
+              Solution Partner and a Select Partner in the Claude Partner
+              Network. He helps teams adopt AI in their workflows without
+              breaking what already works. Compound Intelligence is the book he
+              wished his clients could hand to their teams on day one.
             </p>
           </div>
 

@@ -1,6 +1,7 @@
 import Container from "components/Alluvium-Redesign-2026/common/container";
 import Image from "next/image";
 import { CiCircleCheck } from "react-icons/ci";
+import { AMAZON_URL } from "./shared";
 
 const CHECKS = [
   "One simple test for any task",
@@ -59,7 +60,9 @@ export default function FirstLook() {
             </p>
 
             <a
-              href="#signup"
+              href={AMAZON_URL}
+              target="_blank"
+              rel="noopener"
               className="inline-flex w-fit items-center justify-center gap-2 rounded-lg bg-default-100 px-6 py-2.5 font-sans text-base font-bold text-white shadow-[0_1px_2px_0_rgba(16,24,40,0.05)] outline outline-1 -outline-offset-1 outline-default-200 transition-colors duration-150 hover:bg-default-200"
             >
               Buy on Amazon
