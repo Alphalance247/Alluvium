@@ -1,0 +1,572 @@
+/* Scoped port of rovocredits.html's inline <style>. Every selector is
+   prefixed with .rovo-credits-page so it can't collide with the sitewide
+   bootstrap.css / Tailwind preflight loaded globally in app/layout.jsx -
+   the original used bare `:root`, `body`, `.btn`, `.col`, `.grid`, `table`
+   etc. which would otherwise fight the rest of the site for those names. */
+
+.rovo-credits-page {
+  --brand-cyan: #009dc2;
+  --brand-cyan-700: #007387;
+  --brand-orange: #d87808;
+  --brand-orange-600: #be6906;
+  --ink: #132230;
+  --slate: #303840;
+  --cyan-band: #88d0e0;
+  --bg: #f6f8fa;
+  --surface: #ffffff;
+  --fg: #132230;
+  --muted: #4a5965;
+  --line: #dce3e9;
+  --accent: #007387;
+  --accent-fill: #009dc2;
+  --accent-soft: #e9f6fa;
+  --good: #1f7a57;
+  --good-soft: #e4f4ed;
+  --warn: #9a5a06;
+  --warn-soft: #fbf0dc;
+  --crit: #b83a31;
+  --crit-soft: #fae7e5;
+  --track: #edf1f4;
+  --shadow: 0 1px 3px rgba(19, 34, 48, 0.08), 0 1px 2px rgba(19, 34, 48, 0.04);
+  --font: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Montserrat", system-ui, sans-serif;
+  --display: Georgia, "Gelasio", "Times New Roman", serif;
+
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.55;
+  padding-block: 24px 48px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+@media (prefers-color-scheme: dark) {
+  .rovo-credits-page:not([data-theme="light"]) {
+    --bg: #1c2228;
+    --surface: #283038;
+    --fg: #edf1f4;
+    --muted: #a9b6c2;
+    --line: #3a444e;
+    --accent: #4fc0d9;
+    --accent-fill: #4fc0d9;
+    --accent-soft: #1f3f4a;
+    --track: #1c2228;
+    --good: #5fd3a0;
+    --good-soft: #17382d;
+    --warn: #ebb15a;
+    --warn-soft: #3a2c13;
+    --crit: #ff9088;
+    --crit-soft: #432020;
+  }
+}
+.rovo-credits-page[data-theme="dark"] {
+  --bg: #1c2228;
+  --surface: #283038;
+  --fg: #edf1f4;
+  --muted: #a9b6c2;
+  --line: #3a444e;
+  --accent: #4fc0d9;
+  --accent-fill: #4fc0d9;
+  --accent-soft: #1f3f4a;
+  --track: #1c2228;
+  --good: #5fd3a0;
+  --good-soft: #17382d;
+  --warn: #ebb15a;
+  --warn-soft: #3a2c13;
+  --crit: #ff9088;
+  --crit-soft: #432020;
+}
+
+.rovo-credits-page * {
+  box-sizing: border-box;
+}
+.rovo-credits-page img {
+  max-width: 100%;
+}
+.rovo-credits-page [hidden] {
+  display: none !important;
+}
+
+.rovo-credits-page .wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.rovo-credits-page .hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--slate);
+  color: #fff;
+  border-radius: 12px;
+  padding: clamp(24px, 5vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+.rovo-credits-page .hero::before {
+  content: "";
+  position: absolute;
+  right: -90px;
+  top: -90px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 34px solid #1b3854;
+  opacity: 0.7;
+}
+.rovo-credits-page .hero::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--brand-cyan);
+  opacity: 0.9;
+}
+.rovo-credits-page .hero > * {
+  position: relative;
+  z-index: 1;
+}
+.rovo-credits-page .hero .logo {
+  height: 30px;
+  width: auto;
+  margin-bottom: 12px;
+}
+.rovo-credits-page .hero .eyebrow {
+  color: #88d0e0;
+}
+.rovo-credits-page .hero h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #fff;
+  text-wrap: balance;
+  max-width: 16ch;
+}
+.rovo-credits-page .hero .lead {
+  margin: 0;
+  color: #dce3e9;
+  font-size: 16px;
+  max-width: 56ch;
+}
+.rovo-credits-page .accent-word {
+  color: #4fc0d9;
+}
+.rovo-credits-page .eyebrow {
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+.rovo-credits-page .grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .rovo-credits-page .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.rovo-credits-page .col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+.rovo-credits-page .panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 0;
+  box-shadow: var(--shadow);
+}
+.rovo-credits-page .panel h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin: 0 0 14px;
+  font-weight: 600;
+  font-family: var(--font);
+}
+.rovo-credits-page .sticky {
+  position: sticky;
+  top: calc(env(safe-area-inset-top, 0px) + 16px);
+}
+@media (max-width: 860px) {
+  .rovo-credits-page .sticky {
+    position: static;
+  }
+}
+.rovo-credits-page label {
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.rovo-credits-page input[type="number"],
+.rovo-credits-page select {
+  width: 100%;
+  font: inherit;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 9px 10px;
+  min-width: 0;
+}
+.rovo-credits-page input:focus-visible,
+.rovo-credits-page select:focus-visible,
+.rovo-credits-page button:focus-visible,
+.rovo-credits-page a:focus-visible,
+.rovo-credits-page .seg label:focus-within {
+  outline: 2px solid var(--brand-cyan);
+  outline-offset: 2px;
+}
+.rovo-credits-page .row2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+}
+.rovo-credits-page .seg {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.rovo-credits-page .seg input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.rovo-credits-page .seg label {
+  margin: 0;
+  text-align: center;
+  padding: 10px 6px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--fg);
+  font-weight: 600;
+  font-size: 13px;
+  background: var(--bg);
+  transition: background 150ms ease-out, border-color 150ms ease-out;
+}
+.rovo-credits-page .seg label small {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+}
+.rovo-credits-page .seg input:checked + label {
+  background: var(--accent-soft);
+  border-color: var(--brand-cyan);
+  color: var(--accent);
+}
+.rovo-credits-page .seg input:checked + label small {
+  color: var(--accent);
+}
+.rovo-credits-page .act {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 92px 92px;
+  gap: 10px;
+  align-items: end;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+}
+.rovo-credits-page .act:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+.rovo-credits-page .act .nm {
+  font-weight: 600;
+  font-size: 14px;
+}
+.rovo-credits-page .act .tag {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.rovo-credits-page .act .tag.free {
+  color: var(--good);
+}
+.rovo-credits-page .act .nm span {
+  display: block;
+}
+.rovo-credits-page .act.head {
+  border: 0;
+  padding: 0 0 6px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+  align-items: end;
+}
+@media (max-width: 520px) {
+  .rovo-credits-page .act {
+    grid-template-columns: 1fr 1fr;
+  }
+  .rovo-credits-page .act .nm {
+    grid-column: 1 / -1;
+  }
+  .rovo-credits-page .act.head {
+    display: none;
+  }
+}
+.rovo-credits-page .act label.sr {
+  display: none;
+  margin: 0 0 4px;
+}
+@media (max-width: 520px) {
+  .rovo-credits-page .act label.sr {
+    display: block;
+  }
+}
+.rovo-credits-page .big {
+  font-variant-numeric: tabular-nums;
+  font-size: clamp(2rem, 6vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+.rovo-credits-page .status {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.rovo-credits-page .status.ok {
+  background: var(--good-soft);
+  color: var(--good);
+}
+.rovo-credits-page .status.warn {
+  background: var(--warn-soft);
+  color: var(--warn);
+}
+.rovo-credits-page .status.crit {
+  background: var(--crit-soft);
+  color: var(--crit);
+}
+.rovo-credits-page .meter {
+  height: 14px;
+  background: var(--track);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  overflow: hidden;
+  display: flex;
+  margin: 14px 0 6px;
+}
+.rovo-credits-page .meter i {
+  display: block;
+  height: 100%;
+}
+.rovo-credits-page .legend {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+  flex-wrap: wrap;
+  font-variant-numeric: tabular-nums;
+}
+.rovo-credits-page dl {
+  margin: 16px 0 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 12px;
+}
+.rovo-credits-page dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+.rovo-credits-page dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+}
+.rovo-credits-page dl .tot {
+  font-weight: 600;
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+  color: var(--fg);
+}
+.rovo-credits-page dl .tot + dd {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.rovo-credits-page .bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rovo-credits-page .bar {
+  display: grid;
+  grid-template-columns: minmax(90px, 1.2fr) 3fr auto;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+.rovo-credits-page .bar .track {
+  height: 10px;
+  background: var(--track);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.rovo-credits-page .bar .fill {
+  height: 100%;
+  background: var(--accent-fill);
+  border-radius: 5px;
+}
+.rovo-credits-page .bar b {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.rovo-credits-page .toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--fg);
+}
+.rovo-credits-page .toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--brand-cyan);
+}
+.rovo-credits-page .notes {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.rovo-credits-page .notes p {
+  margin: 0;
+  color: var(--muted);
+}
+.rovo-credits-page .notes b {
+  color: var(--fg);
+}
+.rovo-credits-page .preset {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.rovo-credits-page button.p {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--surface);
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: border-color 150ms ease-out, color 150ms ease-out;
+}
+.rovo-credits-page button.p:hover {
+  border-color: var(--brand-cyan);
+  color: var(--accent);
+}
+.rovo-credits-page table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.rovo-credits-page th,
+.rovo-credits-page td {
+  padding: 8px;
+  text-align: right;
+  border-bottom: 1px solid var(--line);
+  font-variant-numeric: tabular-nums;
+}
+.rovo-credits-page th:first-child,
+.rovo-credits-page td:first-child {
+  text-align: left;
+}
+.rovo-credits-page th {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.rovo-credits-page .scroll {
+  overflow-x: auto;
+}
+.rovo-credits-page .band {
+  background: var(--cyan-band);
+  color: var(--ink);
+  border-radius: 12px;
+  padding: clamp(22px, 4vw, 36px);
+  display: flex;
+  gap: 20px 32px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.rovo-credits-page .band h2 {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px;
+  color: var(--ink);
+  text-transform: none;
+}
+.rovo-credits-page .band p {
+  margin: 0;
+  max-width: 52ch;
+  color: #1f2d38;
+}
+.rovo-credits-page .accent-word-d {
+  color: #005f75;
+}
+.rovo-credits-page .btn {
+  display: inline-block;
+  background: var(--brand-orange);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 13px 24px;
+  border-radius: 8px;
+  transition: background 150ms ease-out, transform 150ms ease-out;
+}
+.rovo-credits-page .btn:hover {
+  background: var(--brand-orange-600);
+}
+.rovo-credits-page .btn:active {
+  transform: scale(0.98);
+}
+@media (prefers-reduced-motion: reduce) {
+  .rovo-credits-page * {
+    transition: none !important;
+  }
+}
