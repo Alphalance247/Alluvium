@@ -35,6 +35,19 @@ export function n(v) {
 
 export const nf = new Intl.NumberFormat("en-US");
 
+// TODO: replace with the real registration link once it's available.
+export const WEBINAR = {
+  registerUrl: "https://us06web.zoom.us/webinar/register/WN_gn_fE7gAS_2NJWrUwYS7kQ#/registration",
+  bannerLead: "Live webinar, 28 Oct, 12:00 PM ET.",
+  bannerBlurb: "What changes on 3 December and how to avoid surprise costs.",
+  tag: "Live webinar",
+  day: "WED",
+  dateNum: "28",
+  month: "OCT",
+  title: "Atlassian's New Usage-Based Billing: What Changes on 3 December and How to Avoid Surprise Costs",
+  when: "Wednesday 28 October 2026 · 12:00 PM ET (New York)",
+};
+
 export function usd(v) {
   return "$" + v.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }

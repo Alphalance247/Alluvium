@@ -570,3 +570,127 @@
     transition: none !important;
   }
 }
+
+/* Webinar promo: sticky top bar + the fuller event card below the hero */
+.rovo-credits-page .webinar-banner {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--cyan-band);
+  color: var(--ink);
+  text-align: center;
+  font-size: 13px;
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+.rovo-credits-page .webinar-banner-link {
+  color: var(--ink);
+  font-weight: 700;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.rovo-credits-page .webinar-card {
+  position: relative;
+  background: var(--ink);
+  border: 2px solid var(--brand-cyan);
+  border-radius: 12px;
+  padding: clamp(18px, 3vw, 28px);
+  box-shadow: 0 0 0 1px rgba(0, 157, 194, 0.25), 0 0 32px rgba(0, 157, 194, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.rovo-credits-page .webinar-card-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-cyan);
+}
+.rovo-credits-page .webinar-card-tag .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-cyan);
+  box-shadow: 0 0 0 0 rgba(0, 157, 194, 0.7);
+  animation: webinar-pulse 2s infinite;
+}
+@keyframes webinar-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 157, 194, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(0, 157, 194, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 157, 194, 0);
+  }
+}
+.rovo-credits-page .webinar-card-body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.rovo-credits-page .date-badge {
+  flex: none;
+  width: 72px;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 10px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1;
+}
+.rovo-credits-page .date-badge .d,
+.rovo-credits-page .date-badge .m {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.rovo-credits-page .date-badge .n {
+  font-family: var(--display);
+  font-size: 26px;
+  font-weight: 700;
+}
+.rovo-credits-page .webinar-card-copy {
+  flex: 1 1 320px;
+  min-width: 0;
+}
+.rovo-credits-page .webinar-card-copy h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: #fff;
+  margin: 0 0 6px;
+  text-transform: none;
+}
+.rovo-credits-page .webinar-card-copy p {
+  margin: 0;
+  color: #dce3e9;
+  font-size: 14px;
+}
+.rovo-credits-page .webinar-card .btn {
+  flex: none;
+  white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .rovo-credits-page .webinar-card-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rovo-credits-page .webinar-card .btn {
+    align-self: stretch;
+    text-align: center;
+  }
+}

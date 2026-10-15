@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import "./rovo-credits.css";
 import { ACTS, PLANS, PRESETS, n, nf } from "./data";
 import Hero from "./components/Hero";
+import WebinarBanner from "./components/WebinarBanner";
+import WebinarEventCard from "./components/WebinarEventCard";
 import PlanAndSeats from "./components/PlanAndSeats";
 import MonthlyUsage from "./components/MonthlyUsage";
 import Overage from "./components/Overage";
@@ -149,7 +151,9 @@ export default function Content() {
   return (
     <div className="rovo-credits-page">
       <div className="wrap">
+        <WebinarBanner />
         <Hero />
+        <WebinarEventCard />
 
         <div className="grid">
           <div className="col">
