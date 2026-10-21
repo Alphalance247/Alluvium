@@ -10,7 +10,7 @@ const CREDS = [
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-secondary-900">
-      <div className="pointer-events-none absolute left-[20rem] top-[-242px] h-[1052px] w-[1052px] rounded-full bg-tertiary-200 mix-blend-color-dodge" />
+      {/* <div className="pointer-events-none absolute left-[20rem] top-[-242px] h-[1052px] w-[1052px] rounded-full bg-tertiary-200 mix-blend-color-dodge" /> */}
       <Container className="relative flex flex-col items-center gap-7 text-center">
         <div className="flex flex-col items-center gap-6">
           <h1 className="font-serif text-3xl font-bold leading-[3rem] text-white lg:text-5xl lg:leading-[68px]">

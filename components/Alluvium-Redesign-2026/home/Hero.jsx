@@ -7,7 +7,7 @@ const Hero = () => {
       className="w-full overflow-hidden relative"
       style={{ background: "linear-gradient(90deg, #EFD7C6 50%, #F2F4F7 50%)" }}
     >
-      <div className="absolute top-0 right-0 w-36 md:w-48 pointer-events-none select-none z-[100] hidden md:block">
+      <div className="absolute top-0 right-0 w-36 md:w-48 pointer-events-none select-none hidden md:block">
         <Image
           src="/assets/Alluvium-Redesign-2026/badges/cloud-illus-c.svg"
           alt="Rovo Top Right Cloud"

@@ -7,6 +7,7 @@ import ContactSection from "./Alluvium-Redesign-2025/ContactSection";
 import Footer from "./Alluvium-Redesign-2026/footer";
 import CookieConsent from "./Alluvium-Redesign-2026/common/cookieConsent";
 import Navbar from "./Alluvium-Redesign-2026/common/header";
+import NavigationToggleNavBar from "./Alluvium-Redesign-2026/common/navigationToggleNavBar";
 import AnnouncementBar from "./Alluvium-Redesign-2026/common/banner/team26CatchUp";
 
 export default function Layout({ children, withoutForm, heroTheme = "light" }) {
@@ -22,7 +23,8 @@ export default function Layout({ children, withoutForm, heroTheme = "light" }) {
   return (
     <div>
       {/* <Navigation /> */}
-      <Navbar heroTheme={heroTheme} />
+      {/* <Navbar heroTheme={heroTheme} /> */}
+      <NavigationToggleNavBar />
       {/* <AnnouncementBar /> */}
       <div className={styles.layoutBody}>{children}</div>
       {/* {<ConsultationForm />} */}

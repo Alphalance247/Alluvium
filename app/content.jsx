@@ -41,7 +41,7 @@ const Home = () => {
         <WhitepaperSection />
         <EnterpriseSolutionsSection />
         <CaseStudyNew />
-        <LogoCloudSection />
+        {/* <LogoCloudSection /> */}
         <CtaBannerSection />
       </Layout>
     </>
